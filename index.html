@@ -13,43 +13,62 @@
   }
   *{box-sizing:border-box}
   body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#171a27 0,var(--bg) 60%);
-    color:var(--txt);font-family:"Segoe UI",Heebo,Arial,sans-serif;line-height:1.55;padding:22px 16px 60px}
-  .wrap{max-width:1180px;margin:0 auto}
+    color:var(--txt);font-family:"Segoe UI",Heebo,Arial,sans-serif;line-height:1.5;padding:22px 16px 60px}
+  .wrap{max-width:1280px;margin:0 auto}
   header.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between;
-    padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:22px}
+    padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:6px}
   h1{font-size:26px;margin:0;letter-spacing:.5px}
   h1 .dot{color:var(--accent)}
   .updated{color:var(--muted);font-size:13px}
-  .quick{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 26px}
-  .quick a{background:var(--panel2);border:1px solid var(--line);color:var(--txt);text-decoration:none;
-    padding:7px 13px;border-radius:999px;font-size:13px;transition:.15s}
-  .quick a:hover{border-color:var(--accent);color:var(--accent)}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .sec-title{font-size:14px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;
+    margin:26px 2px 12px;font-weight:700}
+  .stat{color:var(--muted);font-size:12px;font-weight:400;text-transform:none;letter-spacing:0}
+
+  /* projects masonry */
+  .projects{columns:2;column-gap:16px}
+  @media(max-width:880px){.projects{columns:1}}
   .card{background:linear-gradient(180deg,var(--panel),#11141d);border:1px solid var(--line);
-    border-radius:var(--r);padding:18px 18px 16px;box-shadow:var(--shadow)}
-  .card h2{font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
-    border-bottom:1px solid var(--line);padding-bottom:10px}
-  .card.full{grid-column:1/-1}
-  ul.clean{list-style:none;margin:0;padding:0}
-  ul.clean li{padding:7px 0;border-bottom:1px dashed #20243300;display:flex;gap:10px;align-items:flex-start}
-  .time{color:var(--accent2);font-variant-numeric:tabular-nums;min-width:46px;font-size:13px;font-weight:600}
-  .pill{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+    border-radius:var(--r);padding:15px 16px 13px;box-shadow:var(--shadow);
+    margin:0 0 16px;break-inside:avoid;display:inline-block;width:100%}
+  .card .hd{display:flex;align-items:center;gap:9px;margin-bottom:3px}
+  .card .em{font-size:20px;line-height:1}
+  .card .nm{font-size:16px;font-weight:700;flex:1}
+  .card .pct{font-size:12px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+  .card .desc{color:var(--muted);font-size:12.5px;margin:0 0 10px}
+  .bar{height:6px;border-radius:999px;background:#0c0f18;border:1px solid var(--line);overflow:hidden;margin-bottom:11px}
+  .bar > i{display:block;height:100%;border-radius:999px}
+  ul.tasks{list-style:none;margin:0;padding:0}
+  ul.tasks li{display:flex;gap:8px;align-items:flex-start;padding:3.5px 0;font-size:13px}
+  .mark{flex-shrink:0;width:16px;height:16px;border-radius:5px;display:inline-flex;align-items:center;
+    justify-content:center;font-size:11px;margin-top:1px;border:1px solid var(--line)}
+  .mark.done{background:rgba(74,222,128,.13);color:var(--ok);border-color:#23402f}
+  .mark.open{background:transparent;color:var(--muted)}
+  li.done .tx{color:var(--muted);text-decoration:line-through;text-decoration-color:#3a4055}
+  li.crit .tx{color:var(--hot)}
+  .tx{flex:1}
+
+  /* agents */
+  .agents{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+  .agent{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:11px 13px}
+  .agent .top2{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .agent .nm{font-weight:600;font-size:14px;flex:1}
+  .agent .what{color:var(--muted);font-size:12px;margin-bottom:6px}
+  .agent .meta{font-size:11.5px;color:var(--accent2)}
+  .pill{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
   .pill.ok{color:var(--ok);border-color:#1f3a2a}
   .pill.warn{color:var(--warn);border-color:#3a341f}
-  .pill.hot{color:var(--hot);border-color:#3a1f27}
-  .goal{display:flex;gap:10px;align-items:flex-start;padding:6px 0}
-  .goal .em{font-size:16px;min-width:22px}
-  .cats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  @media(max-width:820px){.cats{grid-template-columns:1fr}}
-  .cat h3{font-size:14px;margin:0 0 8px;color:var(--accent)}
-  .proj{padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:var(--panel2)}
-  .proj .name{font-weight:600;font-size:14px;display:flex;justify-content:space-between;gap:8px;align-items:center}
-  .proj .name a{color:var(--txt);text-decoration:none;border-bottom:1px solid var(--accent)}
-  .proj .name a:hover{color:var(--accent)}
-  .proj .st{color:var(--muted);font-size:12px;margin-top:3px}
-  .local{font-size:11px;color:var(--warn)}
-  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:30px}
+  .pill.dev{color:var(--accent2);border-color:#1f2f4a}
+
+  /* links */
+  .links{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+  @media(max-width:880px){.links{grid-template-columns:1fr}}
+  .lcol h4{font-size:13px;margin:0 0 8px;color:var(--txt)}
+  .lcol ul{list-style:none;margin:0;padding:0}
+  .lcol li{padding:4px 0;font-size:13px}
+  .lcol a{color:var(--txt);text-decoration:none;border-bottom:1px solid var(--accent)}
+  .lcol a:hover{color:var(--accent)}
+  .local{color:var(--warn);font-size:12px}
+  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:34px;border-top:1px solid var(--line);padding-top:16px}
 </style>
 </head>
 <body>
@@ -59,127 +78,272 @@
     <div class="updated" id="updated"></div>
   </header>
 
-  <div class="quick" id="quick"></div>
+  <div class="sec-title">הפרויקטים <span class="stat" id="projStat"></span></div>
+  <div class="projects" id="projects"></div>
 
-  <div class="grid">
-    <div class="card"><h2>📅 היום <span style="color:var(--muted);font-weight:400" id="todayDate"></span></h2><ul class="clean" id="today"></ul></div>
-    <div class="card"><h2>🗓️ השבוע</h2><ul class="clean" id="week"></ul></div>
-    <div class="card full"><h2>🎯 יעדי החודש — יולי 2026</h2><div id="goals"></div></div>
-    <div class="card full"><h2>🗂️ כל הפרויקטים</h2><div class="cats" id="cats"></div></div>
-  </div>
+  <div class="sec-title">🤖 סוכנים שאנחנו מפעילים</div>
+  <div class="agents" id="agents"></div>
 
-  <footer>הקוקפיט מתוחזק על ידי Claude — דניאל לא מעדכן ידנית. רענון: חודשי (1) · שבועי (א') · יומי (בוקר).</footer>
+  <div class="sec-title">🔗 קבצים ואתרים</div>
+  <div class="links" id="links"></div>
+
+  <footer>הקוקפיט מתוחזק על ידי Claude — דניאל לא מעדכן ידנית. ✓ = בוצע · ○ = פתוח. רענון: יומי / שבועי / חודשי.</footer>
 </div>
 
 <script>
 /* ============================================================
-   DATA — זה המקום היחיד לעדכן. Claude עורך פה, הדף מתרנדר לבד.
+   DATA — המקום היחיד לעדכן. Claude עורך פה; הדף מתרנדר לבד.
+   כל פרויקט: {em, nm, desc, tasks:[{t, done, crit?}]}
+   בר ההתקדמות מחושב אוטומטית מ-done/total.
    ============================================================ */
 const DATA = {
   updated: "30.6.2026 (ערב)",
 
-  quickLinks: [
-    {t:"🪨 REMNANT",            u:"https://dadahan10.github.io/diana-rafael-remnant/"},
-    {t:"💎 קולקציה חדשה (NSA+ספרינג)", u:"https://dadahan10.github.io/collection-plan/"},
-    {t:"📈 DR Growth Blueprint", u:"https://dadahan10.github.io/dr-growth-blueprint/"},
-    {t:"🎤 הצגה לעמית",          u:"https://dadahan10.github.io/amit-presentation/"},
-    {t:"🏔️ Ximus Retreat 2026", u:"https://dadahan10.github.io/ximus-retreat-2026/"},
-    {t:"🗓️ Google Calendar",    u:"https://calendar.google.com/"},
-    {t:"📁 Google Drive",        u:"https://drive.google.com/"},
+  projects: [
+    { em:"🏭", nm:"מערכת ניהול", desc:"האפליקציה שמנהלת הזמנות / תכשיטים / מלאי / לקוחות — מקור האמת של העסק.",
+      tasks:[
+        {t:"הקצאת J אוטומטית מיידית (טריגר DB)", done:true},
+        {t:"כפתור \"J הבא\" + הזנת SKU ידנית בכרטיס תכשיט", done:true},
+        {t:"עדכון סכום רכישה בכרטיס לקוח + שדה מקדמה/יתרה", done:true},
+        {t:"עלויות per-J ב-₪ (יהלום+זהב+שיבוץ+משלוח)", done:true},
+        {t:"מסך ספקים — איגוד חיובים מתעודות המשלוח", done:true},
+        {t:"מטבע לקוח אוטומטי (ישראלי ₪ / חו\"ל $)", done:true},
+        {t:"מערכת התראות (wedding bands / z-index / click-outside)", done:true},
+        {t:"כלל אבן מרכזית אחת ל-J + דדופ יהלומים", done:true},
+        {t:"דדליין Etsy בעמודה ייעודית + הזנה", done:false},
+        {t:"התראות דדליין ייצור (מתקרב ולא ready)", done:false},
+        {t:"התראת מידע לקוח חסר מיד בכניסת הזמנה", done:false},
+        {t:"מעקב שולם/לא-שולם בטבלאות עלויות", done:false},
+      ]},
+    { em:"💬", nm:"סוכן וואטסאפ", desc:"מדברים איתו בוואטסאפ והוא מפעיל את מערכת הניהול — הזמנות, יהלומים, עלויות, משלוחים.",
+      tasks:[
+        {t:"כלים: הזמנות, Trello, יהלומים (add/allocate/update)", done:true},
+        {t:"create_jewelry (חישוב J הבא נכון)", done:true},
+        {t:"add_cost (6 טבלאות) + add_payable (תזרים)", done:true},
+        {t:"דיווח דו-מטבעי ($ + ₪)", done:true},
+        {t:"update_diamond — עריכת חבילת יהלום", done:true},
+        {t:"digest — \"פתיחת יום\" (3 טריגרים)", done:true},
+        {t:"⚠️ מעבר מ-Twilio Sandbox ל-Sender מאושר (נופל כל 72ש')", done:false, crit:true},
+        {t:"template עברית + env ב-Vercel + Make יומי 08:00", done:false},
+        {t:"טריגר רביעי בדיג'סט: דדליין ייצור", done:false},
+      ]},
+    { em:"🪨", nm:"REMNANT", desc:"קולקציה חדשה בעיצוב — CAD ב-Rhino → סביבת הדמיות → השקה.",
+      tasks:[
+        {t:"דף web חי לקולקציה", done:true},
+        {t:"סגירת עיצובי הפריטים", done:false},
+        {t:"ייצור פריטים ראשונים", done:false},
+        {t:"אפיון סביבת הדמיות (3 סביבות)", done:false},
+        {t:"בחירת כלים (KeyShot טהור מול היברידי CAD+AI)", done:false},
+        {t:"הדמיות ראשונות", done:false},
+      ]},
+    { em:"💎", nm:"קולקציה חדשה — NSA + Spring", desc:"מיזם משותף: 30 עיצובים. ספרינג דיאם (יהלומים+מימון), NSA (זהב+שיווק), דניאל (מותג+ניהול).",
+      tasks:[
+        {t:"מודל עלות / רווחיות מלא", done:true},
+        {t:"אקסל תוכנית v3 (נוסחאות חיות)", done:true},
+        {t:"דף web חי לשותפים", done:true},
+        {t:"נעילת מבנה העסקה (ספרינג 20% / NSA 40% / דניאל 60% מהנותר)", done:true},
+        {t:"תזרים חודש-חודש (סבב דו-חודשי, החזר השקעת NSA)", done:false},
+        {t:"עיצוב 30 הפריטים", done:false},
+        {t:"השקה ושיווק", done:false},
+      ]},
+    { em:"🧭", nm:"טבעת \"עמית לדרך\"", desc:"טבעת המצפן — שת\"פ עם עמותת עמית לדרך לגיוס תרומות. מצגת one-pager להנהלה.",
+      tasks:[
+        {t:"מצגת one-pager חיה", done:true},
+        {t:"סקשן \"הצעות עיצוב נוספות\" (3 כיוונים)", done:true},
+        {t:"מחירים בטבלה", done:false},
+        {t:"תמונות on-body / lifestyle", done:false},
+        {t:"פק-שוטים נקיים (להחליף קרופים מאינפוגרפיקה)", done:false},
+        {t:"גרסת ילדים", done:false},
+        {t:"הצגה להנהלת העמותה", done:false},
+      ]},
+    { em:"🎨", nm:"CustomizeAI", desc:"ווידג'ט AI בדף המוצר — הלקוח מבקש שינוי (צבע/מתכת/צורה/גודל/הסרה) ורואה תצוגה מיד.",
+      tasks:[
+        {t:"שכבת prompt engineering (Claude Vision → gpt-image-1)", done:true},
+        {t:"לולאת שיפור (daily → דירוג → learn → הטמעה)", done:true},
+        {t:"Golden test + HUB למדידה שבועית", done:true},
+        {t:"שכבת היתכנות / policy (סירוב מנומס)", done:true},
+        {t:"ווידג'ט inline בדף המוצר + מובייל", done:true},
+        {t:"שכבת ORIENTATION (זווית האבן) — עובדת", done:true},
+        {t:"7 סוגי בקשה (color/metal/shape/prongs/alt/resize/remove)", done:true},
+        {t:"דף Beta לבודקים חיצוניים", done:true},
+        {t:"פתרון on-body — פייפליין 3-מסלולים (החומה הקשה)", done:false},
+        {t:"few-shot examples (שלב ב')", done:false},
+        {t:"deploy ל-HTTPS + script-tag לתבנית החיה", done:false},
+        {t:"🚀 launch 7.7", done:false},
+      ]},
+    { em:"🏔️", nm:"תליון פורום אקסימוס", desc:"תליון מותאם לפורום אקסימוס לרגל הריטריט בחלקידיקי. דף web חי.",
+      tasks:[
+        {t:"דף Ximus Retreat 2026 חי", done:true},
+        {t:"עיצוב התליון", done:false},
+        {t:"אישור הפורום", done:false},
+        {t:"ייצור", done:false},
+      ]},
+    { em:"💹", nm:"מסחר במניות", desc:"TradingAgents (כלי החלטה רב-סוכני) + תוכנית חודשית להכנסה — יעד 10K₪/חודש.",
+      tasks:[
+        {t:"TradingAgents מותקן (Haiku+Sonnet, yfinance)", done:true},
+        {t:"Playbook v1 נעול (Confluence Reversal + ניהול סיכון)", done:true},
+        {t:"ריפו trading-income-system + מבנה", done:true},
+        {t:"קריטריוני סינון (9 תנאים) + תיק", done:true},
+        {t:"watchlist ישראלי נזיל", done:false},
+        {t:"יומן טריידים (R / win-rate / P&L מול יעד)", done:false},
+        {t:"Review שבועי (יום ראשון)", done:false},
+        {t:"סריקה ראשונה לפתיחת יולי", done:false},
+        {t:"remote פרטי לריפו המסחר (מקומי בלבד כרגע)", done:false},
+      ]},
+    { em:"📦", nm:"סוכן משלוחים", desc:"מכין חשבונית מכס + תווית FedEx וסוגר לולאה (Shopify/Trello). מופעל מהוואטסאפ.",
+      tasks:[
+        {t:"make_invoice.py (חשבונית מכס)", done:true},
+        {t:"d2d_bot.py (תווית FedEx, עקיפת Cloudflare)", done:true},
+        {t:"תור ship_jobs + poller אסינכרוני", done:true},
+        {t:"retry_label (\"רק תווית\")", done:true},
+        {t:"הדפסה אוטומטית של התווית", done:true},
+        {t:"שמירת משקל סופי ל-jewelry", done:true},
+        {t:"סגירת לולאה (order=shipped, jewelry=sold, Trello)", done:true},
+        {t:"באג מספר חשבונית כפול בריצות מקבילות", done:false},
+        {t:"תמיכה בכמה פריטים בחשבונית אחת", done:false},
+        {t:"תמיכה בפלטינה", done:false},
+        {t:"ייצוב poller מול זרימה ידנית", done:false},
+      ]},
+    { em:"🧾", nm:"סוכן סגירת חודש", desc:"אוסף חשבוניות הוצאה/הכנסה מהמייל ושולח לרו\"ח. מתוזמן ל-11 בחודש.",
+      tasks:[
+        {t:"expense-bot (IMAP, dedup לפי מספר חשבונית)", done:true},
+        {t:"Task מתוזמן ה-11 בחודש 09:00", done:true},
+        {t:"Adobe אוטומטי (Chrome אמיתי, פרופיל מאומת)", done:true},
+        {t:"fetch_ravpass (רב-פס)", done:true},
+        {t:"build_draft — שליחה ל-SUMIT (פיצול לפי גודל)", done:true},
+        {t:"סקיל close-month מקצה לקצה", done:true},
+        {t:"גבול-חודש עליון + מיון idempotent (re-pollution)", done:false},
+        {t:"בוט הורדה ל-PayMe / פנדה", done:false},
+        {t:"checklist הצלבה אוטומטי (\"יש הכל\")", done:false},
+        {t:"בוט הכנסות מלא", done:false},
+      ]},
+    { em:"🌙", nm:"הסוכן הלילי", desc:"רץ אוטונומית כל לילה ב-22:00, מקדם מחקר/עיצוב על הפרויקטים ומשאיר דוח לבוקר.",
+      tasks:[
+        {t:"Task מתוזמן 22:00 + claude -p headless", done:true},
+        {t:"תור NIGHT-QUEUE + AGENT-PROMPT + LOG", done:true},
+        {t:"אוטונומיה מלאה (bypassPermissions)", done:true},
+        {t:"יכולות: yt-transcript, playwright, שליחת מייל", done:true},
+        {t:"הזנת תור משימות שוטפת מהפרויקטים", done:false},
+      ]},
+    { em:"🩺", nm:"סוכן בריאות הבוקר", desc:"כל בוקר 06:30 בודק ומתקן אוטומטית את באגי קליטת ההזמנות — לפני שדניאל מגיע.",
+      tasks:[
+        {t:"Task 06:30 יומי + דוחות", done:true},
+        {t:"auto-fix: כפילות הזמנות", done:true},
+        {t:"auto-fix: סכום פי-100", done:true},
+        {t:"auto-fix: לקוח כפול", done:true},
+        {t:"התרעת שתיקת Make (ניתוק)", done:true},
+        {t:"מעקב שהשורש ב-Make לא חוזר (connection 1554993 re-auth)", done:false},
+      ]},
+    { em:"🎯", nm:"מרכז השליטה", desc:"הקוקפיט הזה — מרכז כל הפרויקטים והמשימות, מתוחזק על ידי Claude.",
+      tasks:[
+        {t:"עיצוב נעול (web GitHub + קבצים Drive)", done:true},
+        {t:"בנייה ופרסום חי (v1)", done:true},
+        {t:"שכתוב פר-פרויקט עם משימות ובר התקדמות (v2)", done:true},
+        {t:"רענון יומי אוטומטי (Task על night-agent)", done:false},
+        {t:"ניסוי Drive מקצה-לקצה (העלאת אקסל קולר)", done:false},
+      ]},
+    { em:"📣", nm:"סוכן השיווק", desc:"מנהל קמפיינים (גוגל/מטא) + יוצר קריאייטיב — מנוע תוכן ומשפך מכירה אוטונומי.",
+      tasks:[
+        {t:"Charter + ריפו פרטי", done:true},
+        {t:"connectors LIVE: Google Ads, Meta, Klaviyo, GSC", done:true},
+        {t:"WhatsApp connector (test number)", done:true},
+        {t:"blueprint חי + 13 מודולים מאופיינים", done:true},
+        {t:"סקיל asset-studio (קריאייטיב דרך Airtable) + Brand Brain", done:true},
+        {t:"השלמת איפיון (7 שלבים) + הכרעת 6 פורקים", done:false},
+        {t:"בניית פאנל בסיסי ראשון", done:false},
+        {t:"WhatsApp production (System User token, business verification)", done:false},
+        {t:"Google Reviews (אישור Google)", done:false},
+        {t:"downloader Airtable→תיקייה + טעינת מוצרי BLACK ICE", done:false},
+        {t:"הרצת asset-studio ראשונה (סשן מלווה)", done:false},
+      ]},
+    { em:"🎓", nm:"קורס תכשיטים + Claude", desc:"קורס בתשלום לבעלי עסקי תכשיטים — לעבוד עם Claude Code (הכנסה מהצד).",
+      tasks:[
+        {t:"הכרעות נעולות (קהל, כלי, מבנה 4+2)", done:true},
+        {t:"שלד 4 המפגשים", done:true},
+        {t:"רזולוציה מלאה למפגש (דקה-אחר-דקה, תרגיל, ש\"ב, פרומפטים)", done:false},
+        {t:"החלטת סדר המפגשים", done:false},
+        {t:"פתרון Twilio sandbox ל-20 משתתפים", done:false},
+        {t:"הקלטת שיעור 0", done:false},
+      ]},
   ],
 
-  today: {
-    date:"יום ג׳, 30.6",
-    items:[
-      {time:"17:30", txt:"פגישה — רותם לוים (ים ים ים) · Google Meet", tag:{c:"warn",t:"קרוב"}},
-      {time:"20:00", txt:"מונדיאל: חוף השנהב – נורווגיה", tag:{c:"",t:"אישי"}},
-    ]
-  },
-
-  week:[
-    {time:"א׳ 28.6", txt:"פתיחת שבוע — החלטות פר-פרויקט, יומן סודר", done:true},
-    {time:"ב׳ 29.6", txt:"Ximus סודהסטרים · CustomizeAI · REMNANT ייצור+עיצובים", done:true},
-    {time:"ג׳ 30.6", txt:"CustomizeAI · REMNANT · סוכן שיווק+פאנל · בניית מרכז שליטה", done:false},
-    {time:"המשך",    txt:"מערכת מסחר: watchlist ישראלי + יומן + סריקה ראשונה ליולי", done:false},
-    {time:"המשך",    txt:"CustomizeAI on-body — אפיון פייפליין 3-מסלולים", done:false},
+  agents: [
+    {em:"💬", nm:"סוכן וואטסאפ", what:"מפעיל את מערכת הניהול מתוך וואטסאפ", meta:"Vercel webhook", pill:{c:"warn",t:"⚠️ Sandbox 72ש'"}},
+    {em:"📦", nm:"סוכן משלוחים", what:"חשבונית + תווית FedEx, poller", meta:"מקומי · דורש מחשב דלוק", pill:{c:"ok",t:"פעיל"}},
+    {em:"🧾", nm:"expense-bot", what:"אוסף חשבוניות מהמייל לרו\"ח", meta:"Task · ה-11 בחודש 09:00", pill:{c:"ok",t:"מתוזמן"}},
+    {em:"🌙", nm:"הסוכן הלילי", what:"מחקר/עיצוב אוטונומי בלילה", meta:"Task · יומי 22:00 (משרד)", pill:{c:"ok",t:"מתוזמן"}},
+    {em:"🩺", nm:"בריאות הבוקר", what:"מתקן באגי קליטת הזמנות", meta:"Task · יומי 06:30", pill:{c:"ok",t:"מתוזמן"}},
+    {em:"☀️", nm:"פתיחת יום (digest)", what:"3 טריגרים → הודעת בוקר", meta:"Make 08:00", pill:{c:"warn",t:"ממתין ל-template"}},
+    {em:"📣", nm:"סוכן השיווק", what:"קמפיינים + קריאייטיב", meta:"ענן · בבנייה", pill:{c:"dev",t:"בפיתוח"}},
+    {em:"🧠", nm:"TradingAgents", what:"ניתוח רב-סוכני BUY/SELL/HOLD", meta:"הרצה ידנית on-demand", pill:{c:"ok",t:"מותקן"}},
   ],
 
-  goals:[
-    {em:"💹", txt:"<b>מסחר</b> — רווח 10K₪ ביולי (sleeve ~75K₪, טריידים חדשים בלבד)"},
-    {em:"🎨", txt:"<b>CustomizeAI</b> — launch 7.7 + פתרון חומת on-body"},
-    {em:"🪨", txt:"<b>REMNANT</b> — סגירת עיצובים → מעבר ל-3 סביבות הדמיה"},
-    {em:"🏭", txt:"<b>תפעול</b> — re-auth: Make connection 1554993 (diana_rafael) + אצווה/Shopify"},
-    {em:"🎓", txt:"<b>קורס תכשיטים+Claude</b> — לרדת לרזולוציית מפגש"},
-    {em:"🗂️", txt:"<b>עוזר אישי</b> — מרכז שליטה חי + רענון יומי אוטומטי"},
-  ],
-
-  cats:[
-    {name:"🏭 תפעול Diana Rafael", projects:[
-      {name:"מערכת ניהול", st:"מקור האמת — חשבוניות/משלוחים/SKU, התראות מידע חסר"},
-      {name:"קליטת הזמנות (Make)", st:"תוקן 29.6 · פתוח: re-auth connection 1554993"},
-      {name:"סוכן בריאות בוקר", st:"Task יומי 06:30 — auto-fix כפילויות/סכום פי-100/ניתוק Make"},
-      {name:"סוכן WhatsApp", st:"api/whatsapp.ts · נשאר: template + Make + env"},
-      {name:"Shipping Agent", st:"make_invoice + d2d_bot · skill: ship-jewelry-order"},
-      {name:"סגירת חודש + expense-bot", st:"IMAP, מתוזמן ל-11 בחודש"},
-      {name:"מלאי יהלומים + מק\"ט", st:"Supabase · כלל BLACK ICE · ממו לפני חשבונית"},
-      {name:"Trello + Shopify maintenance", st:"Jewelry Progress Board · תיקוני כיתובים"},
-      {name:"הסוכן הלילי", st:"Task 22:00 · תור ב-~/.claude/night-agent (אוטונומי מלא)"},
-    ]},
-    {name:"🚀 צמיחה ומיזמים", projects:[
-      {name:"CustomizeAI", st:"ווידג'ט עריכת תכשיטים · חומת on-body — אפיון פייפליין", link:""},
-      {name:"REMNANT", st:"ייצור+עיצובים → סביבות הדמיה", link:"https://dadahan10.github.io/diana-rafael-remnant/"},
-      {name:"קולקציה חדשה (NSA+ספרינג)", st:"מודל עלויות v3 · נשאר תזרים חודשי", link:"https://dadahan10.github.io/collection-plan/"},
-      {name:"Marketing Agent", st:"גוגל/מטא/Klaviyo/תוכן · שלב ארכיטקטורה + פאנל", link:"https://dadahan10.github.io/dr-growth-blueprint/"},
-      {name:"asset-studio", st:"מחולל קריאייטיב דרך Airtable · ריצה בסשן מלווה"},
-      {name:"Etsy Agent", st:"קולקציה REMNANT · אסטרטגיית מוצרים"},
-      {name:"קורס תכשיטים+Claude", st:"קורס בתשלום · שלד 4+2 מפגשים"},
-    ]},
-    {name:"📊 הצגות ולקוחות", projects:[
-      {name:"הצגה לעמית", st:"one-pager חי", link:"https://dadahan10.github.io/amit-presentation/"},
-      {name:"Ximus Retreat 2026", st:"פורום עמיתים · ביקור סודהסטרים 29.6", link:"https://dadahan10.github.io/ximus-retreat-2026/"},
-      {name:"דף הערכת אצוות CustomizeAI", st:"🏠 לברר: URL חי או קובץ מקומי?", local:true},
-    ]},
-    {name:"💹 פיננסים ומסחר", projects:[
-      {name:"מערכת מסחר להכנסה חודשית", st:"🏠 ריפו מקומי (אין remote) · Playbook v1 · יעד 10K₪/יולי", local:true},
-      {name:"קולר IRDM/RKLB", st:"אקסל 20 עסקאות מ-SEC · שקול מכירת IRDM→RKLB ישיר"},
-      {name:"תיק השקעות + סינון", st:"ASTS/RKLB/NVDA/IRDM/NKE/SEDG/ONDS/URA · 9 תנאי סינון"},
-      {name:"אקסל תזרים", st:"🏠 מקומי בלבד — מקור אמת, לקריאה בלבד", local:true},
-    ]},
-    {name:"🗂️ עוזר אישי", projects:[
-      {name:"שגרת בוקר", st:"יומן + משימות אתמול + פרויקטים פתוחים (חובה כל סשן)"},
-      {name:"מרכז שליטה (הקוקפיט הזה)", st:"web GitHub + קבצים Drive · מתוחזק על ידי Claude"},
-      {name:"סנכרון דוטפיילז", st:"~/.claude ב-git פרטי · pull בפתיחה, push בסגירה"},
-    ]},
-  ]
+  links: {
+    sites: [
+      {t:"מרכז שליטה (כאן)", u:"https://dadahan10.github.io/command-center/"},
+      {t:"REMNANT", u:"https://dadahan10.github.io/diana-rafael-remnant/"},
+      {t:"קולקציה חדשה (NSA+ספרינג)", u:"https://dadahan10.github.io/collection-plan/"},
+      {t:"DR Growth Blueprint (שיווק)", u:"https://dadahan10.github.io/dr-growth-blueprint/"},
+      {t:"טבעת עמית לדרך", u:"https://dadahan10.github.io/amit-presentation/"},
+      {t:"Ximus Retreat 2026", u:"https://dadahan10.github.io/ximus-retreat-2026/"},
+    ],
+    files: [
+      {t:"אקסל תוכנית קולקציה v3", local:true},
+      {t:"אקסל קולר IRDM/RKLB", local:true},
+      {t:"אקסל תזרים מזומנים (לקריאה בלבד)", local:true},
+      {t:"ריפו מסחר trading-income-system", local:true},
+    ],
+    tools: [
+      {t:"Google Calendar", u:"https://calendar.google.com/"},
+      {t:"Google Drive", u:"https://drive.google.com/"},
+      {t:"Trello — Jewelry Board", u:"https://trello.com/"},
+      {t:"Shopify Admin", u:"https://admin.shopify.com/"},
+      {t:"GitHub — dadahan10", u:"https://github.com/dadahan10"},
+    ],
+  }
 };
 
 /* ===================== RENDER ===================== */
 const $=id=>document.getElementById(id);
 $("updated").textContent="עודכן: "+DATA.updated;
-$("todayDate").textContent="· "+DATA.today.date;
 
-$("quick").innerHTML=DATA.quickLinks.map(l=>`<a href="${l.u}" target="_blank">${l.t}</a>`).join("");
+function barColor(p){
+  if(p>=75) return "linear-gradient(90deg,#3fae6b,#4ade80)";
+  if(p>=40) return "linear-gradient(90deg,#b9892f,#fbbf24)";
+  return "linear-gradient(90deg,#b5475a,#fb7185)";
+}
 
-$("today").innerHTML=DATA.today.items.map(i=>{
-  const tag=i.tag&&i.tag.t?`<span class="pill ${i.tag.c}">${i.tag.t}</span>`:"";
-  return `<li><span class="time">${i.time}</span><span style="flex:1">${i.txt}</span>${tag}</li>`;
+let totDone=0, totTasks=0;
+$("projects").innerHTML = DATA.projects.map(p=>{
+  const done=p.tasks.filter(t=>t.done).length, tot=p.tasks.length;
+  const pct=Math.round(done/tot*100); totDone+=done; totTasks+=tot;
+  const rows=p.tasks.map(t=>{
+    const cls=(t.done?"done":"")+(t.crit?" crit":"");
+    const mk=t.done?`<span class="mark done">✓</span>`:`<span class="mark open">○</span>`;
+    return `<li class="${cls}">${mk}<span class="tx">${t.t}</span></li>`;
+  }).join("");
+  return `<div class="card">
+    <div class="hd"><span class="em">${p.em}</span><span class="nm">${p.nm}</span><span class="pct">${done}/${tot} · ${pct}%</span></div>
+    <div class="desc">${p.desc}</div>
+    <div class="bar"><i style="width:${pct}%;background:${barColor(pct)}"></i></div>
+    <ul class="tasks">${rows}</ul>
+  </div>`;
 }).join("");
+$("projStat").textContent=`· ${DATA.projects.length} פרויקטים · ${totDone}/${totTasks} משימות הושלמו`;
 
-$("week").innerHTML=DATA.week.map(w=>{
-  const tag=w.done?`<span class="pill ok">✓</span>`:"";
-  return `<li><span class="time">${w.time}</span><span style="flex:1">${w.txt}</span>${tag}</li>`;
-}).join("");
-
-$("goals").innerHTML=DATA.goals.map(g=>`<div class="goal"><span class="em">${g.em}</span><span>${g.txt}</span></div>`).join("");
-
-$("cats").innerHTML=DATA.cats.map(c=>`
-  <div class="cat"><h3>${c.name}</h3>
-  ${c.projects.map(p=>{
-    const nm=p.link?`<a href="${p.link}" target="_blank">${p.name}</a>`:p.name;
-    const loc=p.local?`<span class="local">🏠 מקומי</span>`:"";
-    return `<div class="proj"><div class="name"><span>${nm}</span>${loc}</div><div class="st">${p.st}</div></div>`;
-  }).join("")}
+$("agents").innerHTML = DATA.agents.map(a=>`
+  <div class="agent">
+    <div class="top2"><span class="em" style="font-size:16px">${a.em}</span><span class="nm">${a.nm}</span>
+      <span class="pill ${a.pill.c}">${a.pill.t}</span></div>
+    <div class="what">${a.what}</div>
+    <div class="meta">${a.meta}</div>
   </div>`).join("");
+
+const L=DATA.links;
+$("links").innerHTML = `
+  <div class="lcol"><h4>🌐 אתרים חיים</h4><ul>${L.sites.map(s=>`<li><a href="${s.u}" target="_blank">${s.t}</a></li>`).join("")}</ul></div>
+  <div class="lcol"><h4>🏠 קבצים מקומיים</h4><ul>${L.files.map(f=>`<li>${f.t} <span class="local">🏠</span></li>`).join("")}</ul></div>
+  <div class="lcol"><h4>🛠️ כלים</h4><ul>${L.tools.map(t=>`<li><a href="${t.u}" target="_blank">${t.t}</a></li>`).join("")}</ul></div>`;
 </script>
 </body>
 </html>
