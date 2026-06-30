@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מרכז שליטה — דניאל</title>
+<style>
+  :root{
+    --bg:#0c0e14; --panel:#151823; --panel2:#1c2030; --line:#262b3d;
+    --txt:#e7eaf3; --muted:#8a91a6; --accent:#c6a15b; --accent2:#6ea8fe;
+    --ok:#4ade80; --warn:#fbbf24; --hot:#fb7185;
+    --r:14px; --shadow:0 6px 24px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#171a27 0,var(--bg) 60%);
+    color:var(--txt);font-family:"Segoe UI",Heebo,Arial,sans-serif;line-height:1.55;padding:22px 16px 60px}
+  .wrap{max-width:1180px;margin:0 auto}
+  header.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between;
+    padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:22px}
+  h1{font-size:26px;margin:0;letter-spacing:.5px}
+  h1 .dot{color:var(--accent)}
+  .updated{color:var(--muted);font-size:13px}
+  .quick{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 26px}
+  .quick a{background:var(--panel2);border:1px solid var(--line);color:var(--txt);text-decoration:none;
+    padding:7px 13px;border-radius:999px;font-size:13px;transition:.15s}
+  .quick a:hover{border-color:var(--accent);color:var(--accent)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(180deg,var(--panel),#11141d);border:1px solid var(--line);
+    border-radius:var(--r);padding:18px 18px 16px;box-shadow:var(--shadow)}
+  .card h2{font-size:16px;margin:0 0 12px;display:flex;align-items:center;gap:8px;
+    border-bottom:1px solid var(--line);padding-bottom:10px}
+  .card.full{grid-column:1/-1}
+  ul.clean{list-style:none;margin:0;padding:0}
+  ul.clean li{padding:7px 0;border-bottom:1px dashed #20243300;display:flex;gap:10px;align-items:flex-start}
+  .time{color:var(--accent2);font-variant-numeric:tabular-nums;min-width:46px;font-size:13px;font-weight:600}
+  .pill{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+  .pill.ok{color:var(--ok);border-color:#1f3a2a}
+  .pill.warn{color:var(--warn);border-color:#3a341f}
+  .pill.hot{color:var(--hot);border-color:#3a1f27}
+  .goal{display:flex;gap:10px;align-items:flex-start;padding:6px 0}
+  .goal .em{font-size:16px;min-width:22px}
+  .cats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:820px){.cats{grid-template-columns:1fr}}
+  .cat h3{font-size:14px;margin:0 0 8px;color:var(--accent)}
+  .proj{padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:var(--panel2)}
+  .proj .name{font-weight:600;font-size:14px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+  .proj .name a{color:var(--txt);text-decoration:none;border-bottom:1px solid var(--accent)}
+  .proj .name a:hover{color:var(--accent)}
+  .proj .st{color:var(--muted);font-size:12px;margin-top:3px}
+  .local{font-size:11px;color:var(--warn)}
+  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1><span class="dot">◆</span> מרכז שליטה <span style="color:var(--muted);font-weight:400;font-size:16px">— דניאל</span></h1>
+    <div class="updated" id="updated"></div>
+  </header>
+
+  <div class="quick" id="quick"></div>
+
+  <div class="grid">
+    <div class="card"><h2>📅 היום <span style="color:var(--muted);font-weight:400" id="todayDate"></span></h2><ul class="clean" id="today"></ul></div>
+    <div class="card"><h2>🗓️ השבוע</h2><ul class="clean" id="week"></ul></div>
+    <div class="card full"><h2>🎯 יעדי החודש — יולי 2026</h2><div id="goals"></div></div>
+    <div class="card full"><h2>🗂️ כל הפרויקטים</h2><div class="cats" id="cats"></div></div>
+  </div>
+
+  <footer>הקוקפיט מתוחזק על ידי Claude — דניאל לא מעדכן ידנית. רענון: חודשי (1) · שבועי (א') · יומי (בוקר).</footer>
+</div>
+
+<script>
+/* ============================================================
+   DATA — זה המקום היחיד לעדכן. Claude עורך פה, הדף מתרנדר לבד.
+   ============================================================ */
+const DATA = {
+  updated: "30.6.2026 (ערב)",
+
+  quickLinks: [
+    {t:"🪨 REMNANT",            u:"https://dadahan10.github.io/diana-rafael-remnant/"},
+    {t:"💎 קולקציה חדשה (NSA+ספרינג)", u:"https://dadahan10.github.io/collection-plan/"},
+    {t:"📈 DR Growth Blueprint", u:"https://dadahan10.github.io/dr-growth-blueprint/"},
+    {t:"🎤 הצגה לעמית",          u:"https://dadahan10.github.io/amit-presentation/"},
+    {t:"🏔️ Ximus Retreat 2026", u:"https://dadahan10.github.io/ximus-retreat-2026/"},
+    {t:"🗓️ Google Calendar",    u:"https://calendar.google.com/"},
+    {t:"📁 Google Drive",        u:"https://drive.google.com/"},
+  ],
+
+  today: {
+    date:"יום ג׳, 30.6",
+    items:[
+      {time:"17:30", txt:"פגישה — רותם לוים (ים ים ים) · Google Meet", tag:{c:"warn",t:"קרוב"}},
+      {time:"20:00", txt:"מונדיאל: חוף השנהב – נורווגיה", tag:{c:"",t:"אישי"}},
+    ]
+  },
+
+  week:[
+    {time:"א׳ 28.6", txt:"פתיחת שבוע — החלטות פר-פרויקט, יומן סודר", done:true},
+    {time:"ב׳ 29.6", txt:"Ximus סודהסטרים · CustomizeAI · REMNANT ייצור+עיצובים", done:true},
+    {time:"ג׳ 30.6", txt:"CustomizeAI · REMNANT · סוכן שיווק+פאנל · בניית מרכז שליטה", done:false},
+    {time:"המשך",    txt:"מערכת מסחר: watchlist ישראלי + יומן + סריקה ראשונה ליולי", done:false},
+    {time:"המשך",    txt:"CustomizeAI on-body — אפיון פייפליין 3-מסלולים", done:false},
+  ],
+
+  goals:[
+    {em:"💹", txt:"<b>מסחר</b> — רווח 10K₪ ביולי (sleeve ~75K₪, טריידים חדשים בלבד)"},
+    {em:"🎨", txt:"<b>CustomizeAI</b> — launch 7.7 + פתרון חומת on-body"},
+    {em:"🪨", txt:"<b>REMNANT</b> — סגירת עיצובים → מעבר ל-3 סביבות הדמיה"},
+    {em:"🏭", txt:"<b>תפעול</b> — re-auth: Make connection 1554993 (diana_rafael) + אצווה/Shopify"},
+    {em:"🎓", txt:"<b>קורס תכשיטים+Claude</b> — לרדת לרזולוציית מפגש"},
+    {em:"🗂️", txt:"<b>עוזר אישי</b> — מרכז שליטה חי + רענון יומי אוטומטי"},
+  ],
+
+  cats:[
+    {name:"🏭 תפעול Diana Rafael", projects:[
+      {name:"מערכת ניהול", st:"מקור האמת — חשבוניות/משלוחים/SKU, התראות מידע חסר"},
+      {name:"קליטת הזמנות (Make)", st:"תוקן 29.6 · פתוח: re-auth connection 1554993"},
+      {name:"סוכן בריאות בוקר", st:"Task יומי 06:30 — auto-fix כפילויות/סכום פי-100/ניתוק Make"},
+      {name:"סוכן WhatsApp", st:"api/whatsapp.ts · נשאר: template + Make + env"},
+      {name:"Shipping Agent", st:"make_invoice + d2d_bot · skill: ship-jewelry-order"},
+      {name:"סגירת חודש + expense-bot", st:"IMAP, מתוזמן ל-11 בחודש"},
+      {name:"מלאי יהלומים + מק\"ט", st:"Supabase · כלל BLACK ICE · ממו לפני חשבונית"},
+      {name:"Trello + Shopify maintenance", st:"Jewelry Progress Board · תיקוני כיתובים"},
+      {name:"הסוכן הלילי", st:"Task 22:00 · תור ב-~/.claude/night-agent (אוטונומי מלא)"},
+    ]},
+    {name:"🚀 צמיחה ומיזמים", projects:[
+      {name:"CustomizeAI", st:"ווידג'ט עריכת תכשיטים · חומת on-body — אפיון פייפליין", link:""},
+      {name:"REMNANT", st:"ייצור+עיצובים → סביבות הדמיה", link:"https://dadahan10.github.io/diana-rafael-remnant/"},
+      {name:"קולקציה חדשה (NSA+ספרינג)", st:"מודל עלויות v3 · נשאר תזרים חודשי", link:"https://dadahan10.github.io/collection-plan/"},
+      {name:"Marketing Agent", st:"גוגל/מטא/Klaviyo/תוכן · שלב ארכיטקטורה + פאנל", link:"https://dadahan10.github.io/dr-growth-blueprint/"},
+      {name:"asset-studio", st:"מחולל קריאייטיב דרך Airtable · ריצה בסשן מלווה"},
+      {name:"Etsy Agent", st:"קולקציה REMNANT · אסטרטגיית מוצרים"},
+      {name:"קורס תכשיטים+Claude", st:"קורס בתשלום · שלד 4+2 מפגשים"},
+    ]},
+    {name:"📊 הצגות ולקוחות", projects:[
+      {name:"הצגה לעמית", st:"one-pager חי", link:"https://dadahan10.github.io/amit-presentation/"},
+      {name:"Ximus Retreat 2026", st:"פורום עמיתים · ביקור סודהסטרים 29.6", link:"https://dadahan10.github.io/ximus-retreat-2026/"},
+      {name:"דף הערכת אצוות CustomizeAI", st:"🏠 לברר: URL חי או קובץ מקומי?", local:true},
+    ]},
+    {name:"💹 פיננסים ומסחר", projects:[
+      {name:"מערכת מסחר להכנסה חודשית", st:"🏠 ריפו מקומי (אין remote) · Playbook v1 · יעד 10K₪/יולי", local:true},
+      {name:"קולר IRDM/RKLB", st:"אקסל 20 עסקאות מ-SEC · שקול מכירת IRDM→RKLB ישיר"},
+      {name:"תיק השקעות + סינון", st:"ASTS/RKLB/NVDA/IRDM/NKE/SEDG/ONDS/URA · 9 תנאי סינון"},
+      {name:"אקסל תזרים", st:"🏠 מקומי בלבד — מקור אמת, לקריאה בלבד", local:true},
+    ]},
+    {name:"🗂️ עוזר אישי", projects:[
+      {name:"שגרת בוקר", st:"יומן + משימות אתמול + פרויקטים פתוחים (חובה כל סשן)"},
+      {name:"מרכז שליטה (הקוקפיט הזה)", st:"web GitHub + קבצים Drive · מתוחזק על ידי Claude"},
+      {name:"סנכרון דוטפיילז", st:"~/.claude ב-git פרטי · pull בפתיחה, push בסגירה"},
+    ]},
+  ]
+};
+
+/* ===================== RENDER ===================== */
+const $=id=>document.getElementById(id);
+$("updated").textContent="עודכן: "+DATA.updated;
+$("todayDate").textContent="· "+DATA.today.date;
+
+$("quick").innerHTML=DATA.quickLinks.map(l=>`<a href="${l.u}" target="_blank">${l.t}</a>`).join("");
+
+$("today").innerHTML=DATA.today.items.map(i=>{
+  const tag=i.tag&&i.tag.t?`<span class="pill ${i.tag.c}">${i.tag.t}</span>`:"";
+  return `<li><span class="time">${i.time}</span><span style="flex:1">${i.txt}</span>${tag}</li>`;
+}).join("");
+
+$("week").innerHTML=DATA.week.map(w=>{
+  const tag=w.done?`<span class="pill ok">✓</span>`:"";
+  return `<li><span class="time">${w.time}</span><span style="flex:1">${w.txt}</span>${tag}</li>`;
+}).join("");
+
+$("goals").innerHTML=DATA.goals.map(g=>`<div class="goal"><span class="em">${g.em}</span><span>${g.txt}</span></div>`).join("");
+
+$("cats").innerHTML=DATA.cats.map(c=>`
+  <div class="cat"><h3>${c.name}</h3>
+  ${c.projects.map(p=>{
+    const nm=p.link?`<a href="${p.link}" target="_blank">${p.name}</a>`:p.name;
+    const loc=p.local?`<span class="local">🏠 מקומי</span>`:"";
+    return `<div class="proj"><div class="name"><span>${nm}</span>${loc}</div><div class="st">${p.st}</div></div>`;
+  }).join("")}
+  </div>`).join("");
+</script>
+</body>
+</html>
