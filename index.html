@@ -36,6 +36,9 @@
   @media(max-width:980px){
     .layout{flex-direction:column}
     aside.side{width:100%;position:static;max-height:none}
+    .main{order:0}
+    .side-agents{order:1}
+    .side-links{order:2}
   }
 
   /* gantt (reserved for marketing plan — next 6 months) */
@@ -108,6 +111,11 @@
   </header>
 
   <div class="layout">
+    <aside class="side side-agents">
+      <div class="sec-title">🤖 סוכנים</div>
+      <div class="agents" id="agents"></div>
+    </aside>
+
     <main class="main">
       <div class="sec-title">📅 גאנט שיווק — חצי שנה קרובה <span class="stat" id="ganttStat"></span></div>
       <div class="gantt" id="gantt"></div>
@@ -116,10 +124,7 @@
       <div class="projects" id="projects"></div>
     </main>
 
-    <aside class="side">
-      <div class="sec-title">🤖 סוכנים</div>
-      <div class="agents" id="agents"></div>
-
+    <aside class="side side-links">
       <div class="sec-title">🔗 קבצים ואתרים</div>
       <div class="links" id="links"></div>
     </aside>
