@@ -14,7 +14,7 @@
   *{box-sizing:border-box}
   body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#171a27 0,var(--bg) 60%);
     color:var(--txt);font-family:"Segoe UI",Heebo,Arial,sans-serif;line-height:1.5;padding:22px 16px 60px}
-  .wrap{max-width:1280px;margin:0 auto}
+  .wrap{max-width:1360px;margin:0 auto}
   header.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between;
     padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:6px}
   h1{font-size:26px;margin:0;letter-spacing:.5px}
@@ -23,6 +23,36 @@
   .sec-title{font-size:14px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;
     margin:26px 2px 12px;font-weight:700}
   .stat{color:var(--muted);font-size:12px;font-weight:400;text-transform:none;letter-spacing:0}
+
+  /* layout: main + side menu (RTL → main on right, side on left) */
+  .layout{display:flex;gap:26px;align-items:flex-start;margin-top:6px}
+  .main{flex:1;min-width:0}
+  aside.side{width:300px;flex-shrink:0;position:sticky;top:16px;
+    max-height:calc(100vh - 32px);overflow-y:auto;
+    background:linear-gradient(180deg,var(--panel),#10131c);border:1px solid var(--line);
+    border-radius:var(--r);padding:6px 16px 18px;box-shadow:var(--shadow)}
+  aside.side .sec-title{margin:20px 0 10px}
+  aside.side .sec-title:first-child{margin-top:8px}
+  @media(max-width:980px){
+    .layout{flex-direction:column}
+    aside.side{width:100%;position:static;max-height:none}
+  }
+
+  /* gantt (reserved for marketing plan — next 6 months) */
+  .gantt{background:linear-gradient(180deg,var(--panel),#10131c);border:1px solid var(--line);
+    border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow);overflow-x:auto}
+  .gantt .months{display:grid;gap:0;border-bottom:1px solid var(--line);margin-bottom:10px}
+  .gantt .months .mh{font-size:12px;color:var(--muted);text-align:center;padding:0 4px 8px;
+    border-inline-start:1px solid var(--line);font-weight:600}
+  .gantt .months .mh:first-child{border-inline-start:none}
+  .gantt .grow{display:grid;align-items:center;gap:0;position:relative;min-height:30px}
+  .gantt .glabel{grid-column:1;font-size:12.5px;padding:5px 8px 5px 0;white-space:nowrap;position:sticky;inset-inline-start:0}
+  .gantt .track{position:relative;height:22px;border-inline-start:1px solid var(--line)}
+  .gantt .barx{position:absolute;top:3px;height:16px;border-radius:6px;font-size:10.5px;
+    color:#0c0e14;font-weight:700;display:flex;align-items:center;padding:0 7px;white-space:nowrap;overflow:hidden}
+  .gantt .empty{color:var(--muted);font-size:13px;text-align:center;padding:26px 10px 22px;
+    border:1px dashed var(--line);border-radius:10px;margin-top:4px}
+  .gantt .empty b{color:var(--accent);font-weight:700}
 
   /* projects masonry */
   .projects{columns:2;column-gap:16px}
@@ -47,9 +77,9 @@
   li.crit .tx{color:var(--hot)}
   .tx{flex:1}
 
-  /* agents */
-  .agents{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-  .agent{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:11px 13px}
+  /* agents (in side menu — vertical stack) */
+  .agents{display:flex;flex-direction:column;gap:10px}
+  .agent{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:10px 12px}
   .agent .top2{display:flex;align-items:center;gap:8px;margin-bottom:4px}
   .agent .nm{font-weight:600;font-size:14px;flex:1}
   .agent .what{color:var(--muted);font-size:12px;margin-bottom:6px}
@@ -59,9 +89,8 @@
   .pill.warn{color:var(--warn);border-color:#3a341f}
   .pill.dev{color:var(--accent2);border-color:#1f2f4a}
 
-  /* links */
-  .links{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
-  @media(max-width:880px){.links{grid-template-columns:1fr}}
+  /* links (in side menu — stacked) */
+  .links{display:flex;flex-direction:column;gap:16px}
   .lcol h4{font-size:13px;margin:0 0 8px;color:var(--txt)}
   .lcol ul{list-style:none;margin:0;padding:0}
   .lcol li{padding:4px 0;font-size:13px}
@@ -78,14 +107,23 @@
     <div class="updated" id="updated"></div>
   </header>
 
-  <div class="sec-title">הפרויקטים <span class="stat" id="projStat"></span></div>
-  <div class="projects" id="projects"></div>
+  <div class="layout">
+    <main class="main">
+      <div class="sec-title">📅 גאנט שיווק — חצי שנה קרובה <span class="stat" id="ganttStat"></span></div>
+      <div class="gantt" id="gantt"></div>
 
-  <div class="sec-title">🤖 סוכנים שאנחנו מפעילים</div>
-  <div class="agents" id="agents"></div>
+      <div class="sec-title">הפרויקטים <span class="stat" id="projStat"></span></div>
+      <div class="projects" id="projects"></div>
+    </main>
 
-  <div class="sec-title">🔗 קבצים ואתרים</div>
-  <div class="links" id="links"></div>
+    <aside class="side">
+      <div class="sec-title">🤖 סוכנים</div>
+      <div class="agents" id="agents"></div>
+
+      <div class="sec-title">🔗 קבצים ואתרים</div>
+      <div class="links" id="links"></div>
+    </aside>
+  </div>
 
   <footer>הקוקפיט מתוחזק על ידי Claude — דניאל לא מעדכן ידנית. ✓ = בוצע · ○ = פתוח. רענון: יומי / שבועי / חודשי.</footer>
 </div>
@@ -97,7 +135,18 @@
    בר ההתקדמות מחושב אוטומטית מ-done/total.
    ============================================================ */
 const DATA = {
-  updated: "30.6.2026 (ערב)",
+  updated: "2.7.2026",
+
+  /* גאנט שיווק — חצי שנה קרובה (יולי–דצמבר 2026).
+     המרחב שמור. כשתוכנית השיווק תיסגר — ממלאים rows:
+     {label, start, span, color?}  start=אינדקס חודש 0–5 · span=מס' חודשים · color אופציונלי */
+  gantt: {
+    months: ["יולי 26'","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"],
+    rows: [
+      // דוגמה חיה ראשונה מטיוטת הקמפיין (Campaign 01 — Google Search):
+      // {label:"Google Search — Black Diamond (US)", start:0, span:6, color:"var(--accent2)"},
+    ],
+  },
 
   projects: [
     { em:"🏭", nm:"מערכת ניהול", desc:"האפליקציה שמנהלת הזמנות / תכשיטים / מלאי / לקוחות — מקור האמת של העסק.",
@@ -314,6 +363,30 @@ function barColor(p){
   if(p>=40) return "linear-gradient(90deg,#b9892f,#fbbf24)";
   return "linear-gradient(90deg,#b5475a,#fb7185)";
 }
+
+/* ---- Gantt (reserved 6-month marketing timeline) ---- */
+(function(){
+  const g=DATA.gantt, n=g.months.length;
+  const colTmpl=`grid-template-columns:150px repeat(${n},1fr)`;
+  const monthsRow=`<div class="months" style="${colTmpl}"><div></div>`+
+    g.months.map(m=>`<div class="mh">${m}</div>`).join("")+`</div>`;
+  let rowsHtml="";
+  if(!g.rows.length){
+    rowsHtml=`<div class="empty">המרחב שמור ל<b>גאנט השיווק</b> — יתמלא כשתיסגר תוכנית השיווק לחצי השנה הקרובה.<br>הקמפיין הראשון (Google Search · Black Diamond) בטיוטה לאישור.</div>`;
+  } else {
+    rowsHtml=g.rows.map(r=>{
+      const left=(r.start/n*100), width=(r.span/n*100);
+      const bg=r.color||"var(--accent)";
+      return `<div class="grow" style="${colTmpl}">
+        <div class="glabel">${r.label}</div>
+        <div class="track" style="grid-column:2 / ${n+2}">
+          <div class="barx" style="inset-inline-start:${left}%;width:calc(${width}% - 4px);background:${bg}">${r.label}</div>
+        </div></div>`;
+    }).join("");
+  }
+  $("gantt").innerHTML=monthsRow+rowsHtml;
+  $("ganttStat").textContent = g.rows.length ? `· ${g.rows.length} קמפיינים` : "· מרחב שמור";
+})();
 
 let totDone=0, totTasks=0;
 $("projects").innerHTML = DATA.projects.map(p=>{
