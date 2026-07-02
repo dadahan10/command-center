@@ -57,6 +57,44 @@
     border:1px dashed var(--line);border-radius:10px;margin-top:4px}
   .gantt .empty b{color:var(--accent);font-weight:700}
 
+  /* budget split by phase */
+  .budget{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:2px}
+  @media(max-width:760px){.budget{grid-template-columns:1fr}}
+  .bcard{background:linear-gradient(180deg,var(--panel),#10131c);border:1px solid var(--line);
+    border-radius:12px;padding:11px 13px;font-size:12px}
+  .bcard h5{margin:0 0 8px;font-size:12.5px;color:var(--accent)}
+  .bcard .brow{display:flex;justify-content:space-between;color:var(--muted);padding:2px 0}
+  .bcard .brow b{color:var(--txt);font-weight:600;font-variant-numeric:tabular-nums}
+
+  /* content-ready principle banner */
+  .principle{background:linear-gradient(90deg,rgba(198,161,91,.12),transparent);
+    border:1px solid #3a341f;border-inline-start:3px solid var(--accent);border-radius:10px;
+    padding:10px 14px;margin:14px 0 4px;font-size:13px;color:var(--txt)}
+  .principle b{color:var(--accent)}
+
+  /* marketing content calendar */
+  .mktcal{background:linear-gradient(180deg,var(--panel),#10131c);border:1px solid var(--line);
+    border-radius:var(--r);padding:4px 4px 12px;box-shadow:var(--shadow)}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;padding:10px 14px;font-size:11.5px;color:var(--muted);
+    border-bottom:1px solid var(--line)}
+  .legend span{display:inline-flex;align-items:center;gap:5px}
+  .legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .mtitle{font-size:13px;color:var(--accent2);font-weight:700;padding:13px 12px 4px}
+  table.cal{width:100%;border-collapse:collapse;font-size:12.5px}
+  table.cal th{text-align:start;color:var(--muted);font-weight:600;font-size:10.5px;
+    text-transform:uppercase;letter-spacing:.5px;padding:4px 10px;border-bottom:1px solid var(--line)}
+  table.cal td{padding:6px 10px;border-bottom:1px solid #191d29;vertical-align:top}
+  table.cal tr:hover td{background:#141827}
+  td.when{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums;width:78px}
+  td.ttype{width:6px;padding:4px 0!important}
+  td.ttype i{display:block;width:4px;border-radius:3px;min-height:20px;height:100%}
+  td.ch{color:var(--accent2);font-size:11.5px;white-space:nowrap}
+  td.st{white-space:nowrap;text-align:center;width:52px}
+  .dot{display:inline-block;width:16px;height:16px;border-radius:5px;font-size:10px;line-height:16px;
+    text-align:center;border:1px solid var(--line)}
+  .dot.y{background:rgba(74,222,128,.14);color:var(--ok);border-color:#23402f}
+  .dot.n{color:var(--muted)}
+
   /* projects masonry */
   .projects{columns:2;column-gap:16px}
   @media(max-width:880px){.projects{columns:1}}
@@ -120,6 +158,14 @@
       <div class="sec-title">📅 גאנט שיווק — חצי שנה קרובה <span class="stat" id="ganttStat"></span></div>
       <div class="gantt" id="gantt"></div>
 
+      <div class="sec-title">💰 חלוקת תקציב לפי שלב <span class="stat">— $2,500/חודש · ארה"ב בלבד · הכסף נודד מלכידה→קציר</span></div>
+      <div class="budget" id="budget"></div>
+
+      <div class="principle">🧭 <b>עיקרון-על:</b> התוכן והקריאטיב של כל חודש מוכנים <b>עד סוף החודש הקודם</b>. עמודת "מוכן" = הקריאטיב הופק מראש — באחריות Claude.</div>
+
+      <div class="sec-title">🗓️ לוח תוכן — כל כתבה / ניוזלטר / שליחה <span class="stat" id="calStat"></span></div>
+      <div class="mktcal" id="mktcal"></div>
+
       <div class="sec-title">הפרויקטים <span class="stat" id="projStat"></span></div>
       <div class="projects" id="projects"></div>
     </main>
@@ -148,10 +194,83 @@ const DATA = {
   gantt: {
     months: ["יולי 26'","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"],
     rows: [
-      // דוגמה חיה ראשונה מטיוטת הקמפיין (Campaign 01 — Google Search):
-      // {label:"Google Search — Black Diamond (US)", start:0, span:6, color:"var(--accent2)"},
+      {label:"🔍 Search — Black Diamond (US)", start:0, span:6, color:"var(--accent2)"},
+      {label:"🛒 Shopping (רגיל)",             start:0, span:2, color:"var(--accent2)"},
+      {label:"🛒 PMax",                         start:2, span:4, color:"#6ea8fe"},
+      {label:"🔁 רימרקטינג (Google)",           start:1, span:5, color:"#6ea8fe"},
+      {label:"🎯 Meta — Prospecting",           start:2, span:3, color:"#a78bfa"},
+      {label:"📸 Meta — רימרקטינג",             start:2, span:4, color:"#a78bfa"},
+      {label:"✍️ כתבות SEO + קרוסלות",          start:0, span:6, color:"var(--ok)"},
+      {label:"📧 ניוזלטרים (קצב עולה)",         start:0, span:6, color:"var(--ok)"},
+      {label:"💬 SMS / וואטסאפ",                start:0, span:6, color:"var(--accent)"},
+      {label:"⚙️ CRM flows + תקרת תדירות",      start:0, span:6, color:"var(--accent)"},
+      {label:"🗂️ Backfill לידים → כרטיסים",     start:0, span:1, color:"var(--warn)"},
+      {label:"🎁 הגדלות מכירה לרוכשים",         start:1, span:5, color:"var(--accent)"},
+      {label:"🏆 שיא Q4 — קציר",                start:4, span:2, color:"var(--hot)"},
+      {label:"🧩 הפקת תוכן חודש מראש",          start:0, span:6, color:"var(--muted)"},
     ],
   },
+
+  /* חלוקת תקציב משתנה — $2,500/חודש, ארה"ב בלבד. הכסף נודד מלכידה+זריעה → קציר */
+  budgetPhases: [
+    {name:"יולי–אוגוסט · זריעה + לכידה", split:[
+      {k:"Search",v:45},{k:"Shopping",v:30},{k:"רימרקטינג",v:10},{k:"Meta",v:5},{k:"Email/מותג",v:10}]},
+    {name:"ספטמבר–אוקטובר · בנייה + רמפה", split:[
+      {k:"Search",v:30},{k:"Shopping/PMax",v:25},{k:"רימרקטינג",v:25},{k:"Meta",v:15},{k:"Email",v:5}]},
+    {name:"נובמבר–דצמבר · קציר השיא", split:[
+      {k:"Search",v:25},{k:"PMax",v:30},{k:"רימרקטינג",v:30},{k:"Meta",v:5},{k:"Email/מותג",v:10}]},
+  ],
+
+  /* לוח תוכן — פריט אחר פריט. m=אינדקס חודש 0–5 · type=article|newsletter|sms|holiday|campaign|crm|ops
+     ready=הקריאטיב הופק מראש · pub=פורסם. עריכה = הוספה/שינוי כאן. */
+  content: [
+    // ── יולי (0) — החודש הפעיל, מפורט ──
+    {m:0,d:"שבוע 1",type:"campaign",ch:"Google Ads",title:"העלאת Search US (Black Diamond) + Brand + Shopping — PAUSED→אישור→הפעלה",ready:false,pub:false},
+    {m:0,d:"שבוע 1",type:"crm",ch:"Klaviyo",title:"הדלקת flows: Welcome · Abandoned Cart · Browse Abandonment · Post-Purchase · Win-back",ready:false,pub:false},
+    {m:0,d:"שבוע 1",type:"crm",ch:"Klaviyo",title:"תקרת תדירות + smart-sending + sunset ל-unengaged (הגנת deliverability ל-Q4)",ready:false,pub:false},
+    {m:0,d:"שבוע 1",type:"ops",ch:"Gmail → CRM",title:"Backfill ~201 לידים (Custom Design Form) → כרטיסי לקוח + הצלבה למכירות",ready:false,pub:false},
+    {m:0,d:"Jul 4",type:"holiday",ch:"Email · WhatsApp · Popup · IG",title:"🇺🇸 4th of July — ברכת מותג (ללא מבצע) + soft CTA",ready:false,pub:false},
+    {m:0,d:"Jul 7",type:"newsletter",ch:"Email",title:"ניוזלטר #1 — סיפור מותג / הפילוסופיה של היהלום השחור",ready:false,pub:false},
+    {m:0,d:"~Jul 15",type:"sms",ch:"WhatsApp/SMS",title:"טיפ שמירה על הטבעת (care) — נכס מעוצב לשליחה (בקשת לקוח → נכס קבוע)",ready:false,pub:false},
+    {m:0,d:"Jul 21",type:"newsletter",ch:"Email",title:"ניוזלטר #2 — מוצר/קולקציה (Black Ice לפי צורה)",ready:false,pub:false},
+    {m:0,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"\"Why Choose a Black Diamond Engagement Ring\" (עוגן מסחרי)",ready:false,pub:false},
+    {m:0,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"\"The Science of Vibration\" — רענון העוגן המדורג #1",ready:false,pub:false},
+    {m:0,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"\"Emerald Cut Black Diamonds: A Guide\" → קולקציית emerald",ready:false,pub:false},
+    {m:0,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"\"Pear-Shaped Black Diamond Rings\" → קולקציית pear",ready:false,pub:false},
+    {m:0,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"\"Black & White Diamond Rings: The Ultimate Contrast\" → עמוד B&W",ready:false,pub:false},
+    {m:0,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"\"How to Care for Your Black Diamond Ring\" (מזין את ה-care-guide)",ready:false,pub:false},
+    {m:0,d:"סוף החודש",type:"ops",ch:"Content",title:"⚠️ כל תוכן + קריאטיב אוגוסט מוכן (produce-ahead)",ready:false,pub:false},
+
+    // ── אוגוסט (1) ──
+    {m:1,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"3–4 כתבות/שבוע — אשכולות צורה+מתכת (radiant/marquise/cushion + מדריכי זהב)",ready:false,pub:false},
+    {m:1,d:"Aug 4",type:"newsletter",ch:"Email",title:"ניוזלטר #3 — ביקורות/עדויות לקוחות",ready:false,pub:false},
+    {m:1,d:"Aug 18",type:"newsletter",ch:"Email",title:"ניוזלטר #4 — חידושים / הזמנה לפגישה",ready:false,pub:false},
+    {m:1,d:"חודשי",type:"sms",ch:"WhatsApp/SMS",title:"שליחה — new arrivals / הזמנה להתאמה אישית",ready:false,pub:false},
+    {m:1,d:"סוף החודש",type:"ops",ch:"Content",title:"⚠️ כל תוכן + קריאטיב ספטמבר מוכן",ready:false,pub:false},
+
+    // ── ספטמבר (2) — מעבר לקצב חודשי + בניית בריכה ל-Q4 ──
+    {m:2,d:"—",type:"campaign",ch:"Google + Meta",title:"מעבר ל-PMax + הרמת רימרקטינג + Meta prospecting (בניית בריכה חמה ל-Q4)",ready:false,pub:false},
+    {m:2,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"כתבות שבועיות — זווית 'הצעת נישואין / עונת החגים' מתחילה",ready:false,pub:false},
+    {m:2,d:"חודשי",type:"newsletter",ch:"Email",title:"ניוזלטר חודשי (ספט–אוק בקצב חודשי)",ready:false,pub:false},
+    {m:2,d:"סוף החודש",type:"ops",ch:"Content",title:"⚠️ כל תוכן + קריאטיב אוקטובר מוכן",ready:false,pub:false},
+
+    // ── אוקטובר (3) — חימום לעונה ──
+    {m:3,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"מדריכי מתנה + 'איך לבחור טבעת אירוסין' (מסחרי, חימום עונה)",ready:false,pub:false},
+    {m:3,d:"חודשי",type:"newsletter",ch:"Email",title:"ניוזלטר חודשי + טיזר Black Friday",ready:false,pub:false},
+    {m:3,d:"סוף החודש",type:"ops",ch:"Content",title:"⚠️ כל תוכן + קריאטיב נובמבר מוכן (החודש העמוס!)",ready:false,pub:false},
+
+    // ── נובמבר (4) — שיא: BF/Cyber, קצב 2–3/שבוע ──
+    {m:4,d:"2–3/שבוע",type:"newsletter",ch:"Email",title:"ניוזלטרים 2–3/שבוע — Black Friday / Cyber Monday / הצעות חג",ready:false,pub:false},
+    {m:4,d:"Nov 26–30",type:"campaign",ch:"כל הערוצים",title:"🏆 BF/Cyber — רימרקטינג כבד + PMax מלא (קציר הבריכה)",ready:false,pub:false},
+    {m:4,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"תוכן שיא — הצעות נישואין, מדריכי מתנה, סיפורי לקוחות",ready:false,pub:false},
+    {m:4,d:"שוטף",type:"sms",ch:"WhatsApp/SMS",title:"שליחות מבצע/חג (בכפוף לתקרת תדירות)",ready:false,pub:false},
+    {m:4,d:"סוף החודש",type:"ops",ch:"Content",title:"⚠️ כל תוכן + קריאטיב דצמבר מוכן",ready:false,pub:false},
+
+    // ── דצמבר (5) — שיא הצעות החג ──
+    {m:5,d:"2–3/שבוע",type:"newsletter",ch:"Email",title:"ניוזלטרים 2–3/שבוע — ספירה לאחור / משלוח אחרון / מתנות רגע אחרון",ready:false,pub:false},
+    {m:5,d:"—",type:"campaign",ch:"כל הערוצים",title:"🏆 שיא הצעות החג — המרה מקסימלית מהבריכה החמה",ready:false,pub:false},
+    {m:5,d:"קצב",type:"article",ch:"Blog + IG/FB",title:"תוכן חג — 'ההצעה המושלמת', last-minute gifting",ready:false,pub:false},
+  ],
 
   projects: [
     { em:"🏭", nm:"מערכת ניהול", desc:"האפליקציה שמנהלת הזמנות / תכשיטים / מלאי / לקוחות — מקור האמת של העסק.",
@@ -390,7 +509,49 @@ function barColor(p){
     }).join("");
   }
   $("gantt").innerHTML=monthsRow+rowsHtml;
-  $("ganttStat").textContent = g.rows.length ? `· ${g.rows.length} קמפיינים` : "· מרחב שמור";
+  $("ganttStat").textContent = g.rows.length ? `· ${g.rows.length} מסלולים` : "· מרחב שמור";
+})();
+
+/* ---- Budget split by phase ---- */
+$("budget").innerHTML = DATA.budgetPhases.map(b=>`
+  <div class="bcard"><h5>${b.name}</h5>
+    ${b.split.map(s=>`<div class="brow"><span>${s.k}</span><b>${s.v}%</b></div>`).join("")}
+  </div>`).join("");
+
+/* ---- Marketing content calendar (grouped by month) ---- */
+(function(){
+  const TYPEC={article:"var(--ok)",newsletter:"var(--accent2)",sms:"var(--accent)",
+    holiday:"var(--hot)",campaign:"#a78bfa",crm:"#6ea8fe",ops:"var(--muted)"};
+  const months=DATA.gantt.months, byM={};
+  DATA.content.forEach(c=>{(byM[c.m]=byM[c.m]||[]).push(c)});
+  let html=`<div class="legend">
+    <span><i style="background:var(--ok)"></i>כתבה</span>
+    <span><i style="background:var(--accent2)"></i>ניוזלטר</span>
+    <span><i style="background:var(--accent)"></i>SMS/וואטסאפ</span>
+    <span><i style="background:var(--hot)"></i>חג/מועד</span>
+    <span><i style="background:#a78bfa"></i>קמפיין</span>
+    <span><i style="background:#6ea8fe"></i>CRM</span>
+    <span><i style="background:var(--muted)"></i>תפעול</span>
+    <span>✓ מוכן = קריאטיב הופק מראש · עלה = פורסם</span></div>`;
+  Object.keys(byM).map(Number).sort((a,b)=>a-b).forEach(mi=>{
+    html+=`<div class="mtitle">${months[mi]}</div>
+      <table class="cal"><thead><tr><th></th><th class="when">מתי</th><th>תוכן</th>
+      <th>ערוץ</th><th class="st">מוכן</th><th class="st">עלה</th></tr></thead><tbody>`;
+    byM[mi].forEach(c=>{
+      const col=TYPEC[c.type]||"var(--muted)";
+      html+=`<tr>
+        <td class="ttype"><i style="background:${col}"></i></td>
+        <td class="when">${c.d||""}</td>
+        <td>${c.title}</td>
+        <td class="ch">${c.ch||""}</td>
+        <td class="st"><span class="dot ${c.ready?'y':'n'}">${c.ready?'✓':'○'}</span></td>
+        <td class="st"><span class="dot ${c.pub?'y':'n'}">${c.pub?'✓':'○'}</span></td>
+      </tr>`;
+    });
+    html+=`</tbody></table>`;
+  });
+  $("mktcal").innerHTML=html;
+  $("calStat").textContent=`· ${DATA.content.length} פריטים`;
 })();
 
 let totDone=0, totTasks=0;
