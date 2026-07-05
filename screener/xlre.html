@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XLRE — Real Estate · Screener</title>
+<style>
+*{box-sizing:border-box}
+body{--ground:#f6faf9;--panel:#fff;--ink:#15241f;--muted:#617069;--accent:#0e7c6f;--accent-soft:#e7f2ef;--border:#e2ebe8;--up:#0f7a52;--dn:#c23b2e;
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--ground);margin:0;line-height:1.4;}
+.wrap{max-width:1280px;margin:0 auto;padding:30px 20px 60px;}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+h1{font-size:clamp(24px,3.6vw,36px);margin:.12em 0 .1em;letter-spacing:-.01em;}
+h1 .tk{font-family:ui-monospace,Consolas,monospace;background:var(--accent);color:#fff;padding:2px 10px;border-radius:8px;font-size:.72em;vertical-align:middle;margin-inline-start:8px;}
+.sub{color:var(--muted);font-size:14px;max-width:78ch;margin:.2em 0 0;}
+.sub b{color:var(--ink);}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.chip{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:8px 13px;display:flex;flex-direction:column;gap:2px;min-width:92px;}
+.chip .cl{font-size:11px;color:var(--muted);}
+.chip .cv{font-size:15.5px;font-weight:650;font-variant-numeric:tabular-nums;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;}
+.statuses{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;align-items:center;}
+.statuses .lbl{font-size:12px;color:var(--muted);margin-inline-end:4px;}
+.st-seg{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12.5px;cursor:pointer;user-select:none;transition:.12s;}
+.st-seg[aria-pressed="false"]{opacity:.42;}
+.st-seg:hover{border-color:var(--accent);}
+.st-seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px;}
+.st-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.01em;}
+.st-interested{background:#d8efe1;color:#0f7a52;}
+.st-watch{background:#dfe8f4;color:#31548a;}
+.st-not{background:#eef1f0;color:#8b9894;}
+.st-empty{color:#c3ccc9;}
+.seg{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:6px 13px 6px 11px;font-size:13px;cursor:pointer;user-select:none;transition:.12s;}
+.seg .dot{width:11px;height:11px;border-radius:50%;}
+.seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;}
+.seg[aria-pressed="false"]{opacity:.42;}
+.seg:hover{border-color:var(--accent);}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 12px;flex-wrap:wrap;}
+#q{flex:1;min-width:200px;max-width:360px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:var(--panel);color:var(--ink);}
+#q:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+.hint{font-size:12.5px;color:var(--muted);}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:var(--panel);}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:1080px;}
+thead th{position:sticky;top:0;background:var(--accent-soft);color:#0a5a50;text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.02em;
+ padding:10px 11px;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--border);user-select:none;}
+thead th.num{text-align:right;}
+thead th:hover{background:#dcece8;}
+thead th.sorted{color:var(--accent);}
+thead th.sorted::after{content:attr(data-dir);font-size:10px;margin-inline-start:4px;}
+tbody td{padding:8px 11px;border-bottom:1px solid #eef4f2;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f4faf8;}
+td.num{text-align:right;white-space:nowrap;}
+td.i{color:var(--muted);font-size:11.5px;}
+td.tkr{font-weight:700;letter-spacing:.02em;font-family:ui-monospace,Consolas,monospace;border-inline-start:4px solid var(--sc);padding-inline-start:10px;}
+td.co{font-weight:550;white-space:nowrap;}
+td.desc{color:var(--muted);font-size:12px;text-align:right;min-width:210px;max-width:300px;white-space:normal;line-height:1.34;}
+td.notes{text-align:right;min-width:150px;max-width:240px;white-space:normal;font-size:11.5px;}
+.note{display:block;color:#3a4a45;}
+.note .dt{color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;}
+.note-empty{color:#c3ccc9;}
+td.w{position:relative;min-width:92px;}
+.wbar{position:absolute;right:11px;bottom:4px;height:3px;width:var(--w);max-width:60px;background:var(--sc);border-radius:2px;opacity:.6;}
+.score{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;cursor:help;}
+.s0,.s1{background:#eef1f0;color:#8b9894;}
+.s2{background:#e9eef3;color:#6f8199;}
+.s3{background:#fbf0d8;color:#9a6f16;}
+.s4{background:#d8efe1;color:#0f7a52;}
+.s5{background:#0f7a52;color:#fff;}
+.up{color:var(--up);}
+.dn{color:var(--dn);}
+.foot{margin-top:16px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6;}
+.foot code{background:#eef4f2;padding:1px 6px;border-radius:5px;font-size:11px;}
+@media(max-width:640px){.wrap{padding:18px 11px 40px;}.chip{flex:1;min-width:44%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">SPDR Sector ETF · Holdings Screener</div>
+  <h1>Real Estate <span class="tk">XLRE</span></h1>
+  <p class="sub">כל האחזקות של תעודת הסל, עם ציון סינון לפי הקריטריונים של דניאל (pullback בתוך uptrend + value). מחירי סגירה <b>2026-07-02</b> · אחזקות: State Street As of 01-Jul-2026 · חציון P/E בסקטור: <b>33.2</b>.</p>
+  <div class="chips" id="chips"></div>
+  
+  <div class="legend" id="legend"></div>
+  <div class="statuses" id="statuses"></div>
+</header>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="חיפוש לפי שם, טיקר, תיאור או הערה…" aria-label="חיפוש">
+  <span class="hint">לחיצה על כותרת ממיינת · לחיצה על סקטור בלגנדה מסננת · ריחוף על ציון מראה פירוט</span>
+</div>
+<div class="tablewrap" dir="ltr">
+<table>
+<thead><tr>
+  <th class="num" data-k="i">#</th>
+  <th data-k="t">Ticker</th>
+  <th data-k="name">Company</th>
+  <th class="desc" data-k="desc">מה החברה עושה</th>
+  <th data-k="_stsort">Status</th>
+  <th class="notes" data-k="_nsort">הערות שלי</th>
+  <th class="num" data-k="score">Score</th>
+  <th class="num" data-k="w">Weight</th>
+  <th class="num" data-k="price">Price</th>
+  <th class="num" data-k="mcap">Mkt Cap</th>
+  <th class="num" data-k="d1">1D</th>
+  <th class="num" data-k="w1">1W</th>
+  <th class="num" data-k="m1">1M</th>
+  <th class="num" data-k="ytd">YTD</th>
+  <th class="num" data-k="y1">12M</th>
+</tr></thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+<footer class="foot">
+  <div><b>שיטת הציון (0–5):</b> נקודה לכל קריטריון שמתקיים — Uptrend (מעל ממוצע 200) · Pullback (בתחום פיבו 0.382–0.618) · RSI&lt;50 · MACD&lt;0 · Value (P/E מתחת לחציון או פוטנציאל אנליסטים &gt;15%). 5 = הכי מתאים לכניסה.</div>
+  <div style="margin-top:6px">שער (gate): שווי שוק &gt;$1B — מוצג בריחוף על הציון. תשואות = שינוי מחיר בלבד. לא ייעוץ השקעות.</div>
+</footer>
+</div>
+<script>
+const DATA=[{"t": "WELL", "name": "Welltower Inc", "w": 11.117, "desc": "REIT — דיור מוגן ובריאות (Welltower)", "price": 236.06, "mcap": 166638157824, "d1": 2.55, "w1": 5.51, "m1": 20.84, "ytd": 27.18, "y1": 56.63, "rsi": 71.9, "macd": 5.63, "above200": true, "retr": 0.0, "pe": 113.5, "upside": 0.8, "sector": "reit-healthcare-facilities", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "PLD", "name": "Prologis Inc", "w": 8.726, "desc": "Prologis — REIT של מרכזים לוגיסטיים", "price": 139.43, "mcap": 133029601280, "d1": 1.92, "w1": -0.78, "m1": -0.7, "ytd": 9.22, "y1": 28.73, "rsi": 45.3, "macd": -1.4, "above200": true, "retr": 0.208, "pe": 35.1, "upside": 9.2, "sector": "reit-industrial", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": false}, "score": 3, "gate_mcap": true}, {"t": "EQIX", "name": "Equinix Inc", "w": 6.84, "desc": "Equinix — REIT של דאטה-סנטרים", "price": 1002.02, "mcap": 98823471104, "d1": -1.14, "w1": -7.87, "m1": -6.51, "ytd": 30.78, "y1": 26.02, "rsi": 31.5, "macd": -7.51, "above200": true, "retr": 0.292, "pe": 69.4, "upside": 19.6, "sector": "reit-specialty", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "AMT", "name": "American Tower Corp", "w": 5.294, "desc": "American Tower — REIT של אנטנות סלולר", "price": 166.03, "mcap": 77352222720, "d1": -0.03, "w1": -1.59, "m1": -10.51, "ytd": -5.43, "y1": -25.49, "rsi": 36.5, "macd": -4.6, "above200": false, "retr": 0.964, "pe": 26.8, "upside": 30.6, "sector": "reit-specialty", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "SPG", "name": "Simon Property Group Inc", "w": 4.948, "desc": "REIT — קניונים גדולים (Simon)", "price": 226.06, "mcap": 85898190848, "d1": 1.37, "w1": 0.25, "m1": 11.07, "ytd": 22.12, "y1": 36.31, "rsi": 66.5, "macd": 5.25, "above200": true, "retr": 0.022, "pe": 15.7, "upside": -3.0, "sector": "reit-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "DLR", "name": "Digital Realty Trust Inc", "w": 4.663, "desc": "REIT — דאטה-סנטרים (Digital Realty)", "price": 173.3, "mcap": 63074054144, "d1": -1.71, "w1": -9.95, "m1": -7.45, "ytd": 12.02, "y1": 0.66, "rsi": 32.5, "macd": -2.22, "above200": false, "retr": 0.547, "pe": 45.8, "upside": 26.7, "sector": "reit-specialty", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "PSA", "name": "Public Storage", "w": 4.53, "desc": "REIT — אחסון עצמי (Public Storage)", "price": 329.64, "mcap": 57878077440, "d1": 2.04, "w1": 2.77, "m1": 10.2, "ytd": 27.03, "y1": 10.95, "rsi": 63.3, "macd": 4.62, "above200": true, "retr": 0.0, "pe": 34.0, "upside": 0.3, "sector": "reit-industrial", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "O", "name": "Realty Income Corp", "w": 4.521, "desc": "Realty Income — REIT קמעונאי (מונטלי)", "price": 63.84, "mcap": 59530326016, "d1": 3.27, "w1": 2.9, "m1": 6.56, "ytd": 13.25, "y1": 10.55, "rsi": 60.9, "macd": 0.27, "above200": true, "retr": 0.32, "pe": 52.3, "upside": 6.6, "sector": "reit-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "VTR", "name": "Ventas Inc", "w": 4.496, "desc": "REIT — בריאות ודיור מוגן (Ventas)", "price": 92.52, "mcap": 44980420608, "d1": 3.2, "w1": 5.82, "m1": 15.46, "ytd": 19.57, "y1": 47.02, "rsi": 69.7, "macd": 1.48, "above200": true, "retr": 0.0, "pe": 168.2, "upside": 4.4, "sector": "reit-healthcare-facilities", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "CBRE", "name": "Cbre Group Inc   A", "w": 4.177, "desc": "שירותי נדל״ן מסחרי (CBRE)", "price": 141.58, "mcap": 41456971776, "d1": 2.37, "w1": 5.2, "m1": 10.73, "ytd": -11.95, "y1": -0.65, "rsi": 62.8, "macd": 1.06, "above200": false, "retr": 0.639, "pe": 32.4, "upside": 24.5, "sector": "real-estate-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 1, "gate_mcap": true}, {"t": "IRM", "name": "Iron Mountain Inc", "w": 3.741, "desc": "REIT — אחסון מסמכים ודאטה (Iron Mountain)", "price": 117.16, "mcap": 34857992192, "d1": -3.89, "w1": -10.61, "m1": -8.8, "ytd": 41.24, "y1": 17.62, "rsi": 35.5, "macd": -0.17, "above200": true, "retr": 0.293, "pe": 126.0, "upside": 13.5, "sector": "reit-specialty", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": false}, "score": 3, "gate_mcap": true}, {"t": "CCI", "name": "Crown Castle Inc", "w": 3.445, "desc": "Crown Castle — REIT של אנטנות ופייבר", "price": 76.6, "mcap": 33432219648, "d1": 0.09, "w1": -3.68, "m1": -14.81, "ytd": -13.81, "y1": -25.75, "rsi": 32.4, "macd": -3.47, "above200": false, "retr": 0.977, "pe": 32.3, "upside": 29.3, "sector": "reit-specialty", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "EXR", "name": "Extra Space Storage Inc", "w": 3.21, "desc": "REIT — אחסון עצמי (Extra Space)", "price": 149.34, "mcap": 32958429184, "d1": 1.39, "w1": 1.46, "m1": 4.95, "ytd": 14.68, "y1": -1.61, "rsi": 57.3, "macd": 1.06, "above200": true, "retr": 0.135, "pe": 33.6, "upside": 4.8, "sector": "reit-industrial", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "VICI", "name": "Vici Properties Inc", "w": 2.961, "desc": "REIT — קזינו ובידור", "price": 27.19, "mcap": 29938370560, "d1": 3.5, "w1": 2.49, "m1": -1.27, "ytd": -3.31, "y1": -18.37, "rsi": 48.5, "macd": -0.36, "above200": false, "retr": 0.86, "pe": 9.3, "upside": 24.4, "sector": "reit-diversified", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "AVB", "name": "Avalonbay Communities Inc", "w": 2.729, "desc": "REIT — דירות מרכזיות (AvalonBay)", "price": 193.96, "mcap": 27517505536, "d1": 1.85, "w1": 4.21, "m1": 5.77, "ytd": 6.98, "y1": -3.98, "rsi": 63.3, "macd": 1.97, "above200": true, "retr": 0.241, "pe": 24.0, "upside": 1.5, "sector": "reit-residential", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "EQR", "name": "Equity Residential", "w": 2.414, "desc": "REIT — דירות עירוניות (Equity Residential)", "price": 69.83, "mcap": 26980636672, "d1": 1.75, "w1": 3.96, "m1": 5.47, "ytd": 10.77, "y1": 4.74, "rsi": 66.5, "macd": 0.77, "above200": true, "retr": 0.0, "pe": 27.9, "upside": 2.5, "sector": "reit-residential", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "SBAC", "name": "Sba Communications Corp", "w": 1.978, "desc": "REIT — אנטנות סלולר (SBA)", "price": 184.56, "mcap": 19574990848, "d1": 2.11, "w1": 2.0, "m1": -5.94, "ytd": -4.59, "y1": -22.32, "rsi": 41.2, "macd": -6.51, "above200": false, "retr": 0.738, "pe": 19.4, "upside": 27.5, "sector": "reit-specialty", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "ESS", "name": "Essex Property Trust Inc", "w": 1.957, "desc": "REIT — דירות במערב (Essex)", "price": 298.33, "mcap": 20562749440, "d1": 1.07, "w1": 4.47, "m1": 7.48, "ytd": 14.01, "y1": 5.27, "rsi": 69.4, "macd": 5.63, "above200": true, "retr": 0.0, "pe": 33.6, "upside": -3.2, "sector": "reit-residential", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "WY", "name": "Weyerhaeuser Co", "w": 1.752, "desc": "REIT — יער ועץ (Weyerhaeuser)", "price": 23.79, "mcap": 17153604608, "d1": 0.98, "w1": -7.65, "m1": -2.46, "ytd": 0.42, "y1": -10.9, "rsi": 44.1, "macd": 0.01, "above200": false, "retr": 0.576, "pe": 42.5, "upside": 31.5, "sector": "reit-specialty", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": true, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "KIM", "name": "Kimco Realty Corp", "w": 1.745, "desc": "REIT — קניונים גדולים (Kimco)", "price": 25.32, "mcap": 17075548160, "d1": 0.96, "w1": -0.78, "m1": 6.79, "ytd": 24.91, "y1": 18.1, "rsi": 56.2, "macd": 0.35, "above200": true, "retr": 0.096, "pe": 29.1, "upside": 2.9, "sector": "reit-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "INVH", "name": "Invitation Homes Inc", "w": 1.711, "desc": "REIT — בתי משפחה בשכירות (Invitation Homes)", "price": 30.53, "mcap": 18136102912, "d1": 0.59, "w1": 2.07, "m1": 5.75, "ytd": 9.86, "y1": -6.09, "rsi": 63.9, "macd": 0.42, "above200": true, "retr": 0.254, "pe": 32.1, "upside": 5.1, "sector": "reit-residential", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "MAA", "name": "Mid America Apartment Comm", "w": 1.68, "desc": "REIT — דירות בדרום (Mid-America)", "price": 142.19, "mcap": 16967055360, "d1": 1.61, "w1": 2.98, "m1": 10.26, "ytd": 2.36, "y1": -4.7, "rsi": 66.7, "macd": 2.26, "above200": true, "retr": 0.337, "pe": 43.1, "upside": -0.3, "sector": "reit-residential", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "DOC", "name": "Healthpeak Properties Inc", "w": 1.539, "desc": "REIT — מרכזים רפואיים (Healthpeak)", "price": 21.89, "mcap": 15091396608, "d1": 1.16, "w1": 3.11, "m1": 12.54, "ytd": 36.13, "y1": 19.55, "rsi": 68.2, "macd": 0.66, "above200": true, "retr": 0.0, "pe": 68.4, "upside": -2.0, "sector": "reit-healthcare-facilities", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "HST", "name": "Host Hotels & Resorts Inc", "w": 1.534, "desc": "REIT — מלונות (Host)", "price": 23.35, "mcap": 16199442432, "d1": 0.0, "w1": -6.53, "m1": -1.27, "ytd": 31.7, "y1": 44.4, "rsi": 42.7, "macd": 0.27, "above200": true, "retr": 0.181, "pe": 15.9, "upside": 4.5, "sector": "reit-hotel-motel", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "REG", "name": "Regency Centers Corp", "w": 1.35, "desc": "REIT — קניונים גדולים (Regency)", "price": 80.96, "mcap": 15134255104, "d1": 2.0, "w1": 0.88, "m1": 6.48, "ytd": 17.28, "y1": 14.35, "rsi": 58.4, "macd": 0.62, "above200": true, "retr": 0.058, "pe": 27.8, "upside": 5.1, "sector": "reit-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "UDR", "name": "Udr Inc", "w": 1.239, "desc": "REIT — דירות (UDR)", "price": 41.09, "mcap": 15224487936, "d1": 1.16, "w1": 5.09, "m1": 11.54, "ytd": 12.02, "y1": 1.28, "rsi": 70.8, "macd": 0.74, "above200": true, "retr": 0.036, "pe": 28.0, "upside": -1.1, "sector": "reit-residential", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "CSGP", "name": "Costar Group Inc", "w": 1.237, "desc": "נתוני נדל״ן מסחרי (CoStar)", "price": 30.0, "mcap": 12250671104, "d1": 2.18, "w1": 4.75, "m1": -10.87, "ytd": -55.38, "y1": -63.15, "rsi": 43.1, "macd": -1.24, "above200": false, "retr": 0.975, "pe": 428.6, "upside": 58.3, "sector": "real-estate-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "CPT", "name": "Camden Property Trust", "w": 1.199, "desc": "", "price": 117.25, "mcap": 11618371584, "d1": 1.37, "w1": 3.22, "m1": 10.51, "ytd": 6.51, "y1": 3.4, "rsi": 66.3, "macd": 2.09, "above200": true, "retr": 0.0, "pe": 32.8, "upside": -2.4, "sector": "reit-residential", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "BXP", "name": "Bxp Inc", "w": 1.036, "desc": "REIT — משרדים (BXP)", "price": 69.32, "mcap": 12360548352, "d1": 2.3, "w1": 5.56, "m1": 13.25, "ytd": 2.73, "y1": 1.54, "rsi": 69.4, "macd": 1.77, "above200": true, "retr": 0.344, "pe": 34.8, "upside": 0.5, "sector": "reit-office", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "FRT", "name": "Federal Realty Invs Trust", "w": 0.976, "desc": "REIT — קמעונות עירונית (Federal Realty)", "price": 121.69, "mcap": 10577100800, "d1": 1.06, "w1": -2.3, "m1": 1.99, "ytd": 20.72, "y1": 28.2, "rsi": 50.3, "macd": 1.17, "above200": true, "retr": 0.118, "pe": 21.1, "upside": 4.3, "sector": "reit-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "ARE", "name": "Alexandria Real Estate Equit", "w": 0.858, "desc": "REIT — מעבדות מדעי החיים (Alexandria)", "price": 52.58, "mcap": 9163088896, "d1": -0.81, "w1": -1.33, "m1": -0.3, "ytd": 7.44, "y1": -31.06, "rsi": 53.8, "macd": 1.16, "above200": false, "retr": 0.741, "pe": null, "upside": -1.0, "sector": "reit-office", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 0, "gate_mcap": true}], LABELS={}, COLORS={"pharma": "#6d5bd0", "device": "#0e9488", "payer": "#c0872e", "g0": "#6d5bd0", "g1": "#0e9488", "g2": "#c0872e", "g3": "#c2557a", "g4": "#4478c4", "g5": "#7a8a55"};
+const active=new Set(Object.keys(LABELS).length?Object.keys(LABELS):[...new Set(DATA.map(r=>r.sector))]);
+const sc=s=>COLORS[s]||'#0e7c6f';
+const fmtMcap=v=>v==null?'—':v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(0)+'B':'$'+(v/1e6).toFixed(0)+'M';
+const fmtPct=v=>v==null?'—':(v>0?'+':'')+v.toFixed(1)+'%';
+const fmtPrice=v=>v==null?'—':'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const ccls=v=>v==null?'':v>0?'up':v<0?'dn':'';
+const STATUS_META={interested:{lbl:'⭐ מעניינת',cls:'st-interested',ord:3},watch:{lbl:'👁 מעקב',cls:'st-watch',ord:2},not:{lbl:'🚫 לא',cls:'st-not',ord:1}};
+DATA.forEach((r,i)=>{r._rank=i+1;r._nsort=(r.notes&&r.notes.length)?1:0;r._stsort=STATUS_META[r.status]?.ord||0;});
+const activeSt=new Set(['interested','watch','not','']);  // '' = unmarked
+let sortK='w', sortDir=-1;
+const body=document.getElementById('body');
+function scoreTip(r){
+  const s=r.sig, m={uptrend:'Uptrend (>MA200)',pullback:'Pullback (fib 0.382–0.618)',rsi:'RSI<50 ('+r.rsi+')',macd:'MACD<0 ('+r.macd+')',value:'Value (P/E '+(r.pe??'—')+' / upside '+(r.upside!=null?r.upside+'%':'—')+')'};
+  let t=Object.keys(m).map(k=>(s[k]?'✓ ':'✗ ')+m[k]).join('\n');
+  t+='\n— gate —\n'+(r.gate_mcap?'✓':'✗')+' MktCap>$1B';
+  return t;
+}
+function notesCell(r){
+  if(!r.notes||!r.notes.length) return '<span class="note-empty">—</span>';
+  return r.notes.map(n=>`<span class="note">${n.text} <span class="dt">${n.date}</span></span>`).join('');
+}
+function statusCell(r){
+  const m=STATUS_META[r.status]; if(!m) return '<span class="st-empty">—</span>';
+  return `<span class="st-tag ${m.cls}">${m.lbl}</span>`;
+}
+function render(list){
+  body.innerHTML=list.map(r=>`<tr>
+    <td class="num i">${r._rank}</td>
+    <td class="tkr" style="--sc:${sc(r.sector)}">${r.t}</td>
+    <td class="co">${r.name}</td>
+    <td class="desc" dir="rtl">${r.desc||''}</td>
+    <td dir="rtl">${statusCell(r)}</td>
+    <td class="notes" dir="rtl">${notesCell(r)}</td>
+    <td class="num"><span class="score s${r.score}" title="${scoreTip(r).replace(/"/g,'&quot;')}">${r.score}</span></td>
+    <td class="num w"><span class="wbar" style="--w:${(r.w/(DATA[0].w||1)*100).toFixed(1)}%;--sc:${sc(r.sector)}"></span>${r.w.toFixed(2)}%</td>
+    <td class="num mono">${fmtPrice(r.price)}</td>
+    <td class="num mono">${fmtMcap(r.mcap)}</td>
+    <td class="num mono ${ccls(r.d1)}">${fmtPct(r.d1)}</td>
+    <td class="num mono ${ccls(r.w1)}">${fmtPct(r.w1)}</td>
+    <td class="num mono ${ccls(r.m1)}">${fmtPct(r.m1)}</td>
+    <td class="num mono ${ccls(r.ytd)}">${fmtPct(r.ytd)}</td>
+    <td class="num mono ${ccls(r.y1)}">${fmtPct(r.y1)}</td>
+  </tr>`).join('');
+}
+function apply(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=DATA.filter(r=>active.has(r.sector)).filter(r=>activeSt.has(r.status||'')).filter(r=>{
+    if(!q)return true;
+    const nz=(r.notes||[]).map(n=>n.text).join(' ');
+    return r.t.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||(r.desc||'').includes(q)||nz.includes(q);
+  });
+  list.sort((a,b)=>{
+    let x=a[sortK],y=b[sortK];
+    if(typeof x==='string'||typeof y==='string'){return sortDir*((x||'')+'').localeCompare((y||'')+'');}
+    x=x==null?-1e15:x; y=y==null?-1e15:y; return sortDir*(x-y);
+  });
+  render(list);
+  document.querySelectorAll('th').forEach(th=>{th.classList.toggle('sorted',th.dataset.k===sortK);th.dataset.dir=th.dataset.k===sortK?(sortDir<0?'▼':'▲'):'';});
+}
+document.querySelectorAll('th').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.k; if(k==='i')return;
+  if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=(typeof DATA[0][k]==='string')?1:-1;}
+  apply();
+}));
+document.getElementById('q').addEventListener('input',apply);
+// chips
+const ytds=DATA.map(r=>r.ytd).filter(v=>v!=null);
+const avg=ytds.reduce((a,b)=>a+b,0)/(ytds.length||1);
+const best=DATA.filter(r=>r.ytd!=null).reduce((a,b)=>b.ytd>a.ytd?b:a,{ytd:-1e9});
+const hot=DATA.filter(r=>r.score>=4).length;
+document.getElementById('chips').innerHTML=[
+  ['אחזקות',DATA.length],
+  ['ציון 4+',hot],
+  ['YTD ממוצע',(avg>0?'+':'')+avg.toFixed(1)+'%'],
+  ['מובילה YTD',best.t+' '+fmtPct(best.ytd)],
+].map(c=>`<div class="chip"><span class="cl">${c[0]}</span><span class="cv">${c[1]}</span></div>`).join('');
+// legend / sector filter
+const counts={}; DATA.forEach(r=>counts[r.sector]=(counts[r.sector]||0)+1);
+const segs=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+document.getElementById('legend').innerHTML=segs.map(s=>
+  `<span class="seg" data-s="${s}" aria-pressed="true"><span class="dot" style="background:${sc(s)}"></span>${LABELS[s]||s}<span class="n">${counts[s]}</span></span>`).join('');
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.s;
+  if(active.has(s)&&active.size>1){active.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{active.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+// status filter chips
+const stCounts={interested:0,watch:0,not:0,'':0};
+DATA.forEach(r=>{stCounts[r.status||'']++;});
+document.getElementById('statuses').innerHTML='<span class="lbl">סטטוס:</span>'+
+  [['interested','⭐ מעניינת'],['watch','👁 מעקב'],['not','🚫 לא'],['','ללא סטטוס']].map(([k,l])=>
+   `<span class="st-seg" data-st="${k}" aria-pressed="true">${l}<span class="n">${stCounts[k]||0}</span></span>`).join('');
+document.querySelectorAll('.st-seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.st;
+  if(activeSt.has(s)&&activeSt.size>1){activeSt.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{activeSt.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+apply();
+</script>
+</body>
+</html>

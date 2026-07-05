@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XLU — Utilities · Screener</title>
+<style>
+*{box-sizing:border-box}
+body{--ground:#f6faf9;--panel:#fff;--ink:#15241f;--muted:#617069;--accent:#0e7c6f;--accent-soft:#e7f2ef;--border:#e2ebe8;--up:#0f7a52;--dn:#c23b2e;
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--ground);margin:0;line-height:1.4;}
+.wrap{max-width:1280px;margin:0 auto;padding:30px 20px 60px;}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+h1{font-size:clamp(24px,3.6vw,36px);margin:.12em 0 .1em;letter-spacing:-.01em;}
+h1 .tk{font-family:ui-monospace,Consolas,monospace;background:var(--accent);color:#fff;padding:2px 10px;border-radius:8px;font-size:.72em;vertical-align:middle;margin-inline-start:8px;}
+.sub{color:var(--muted);font-size:14px;max-width:78ch;margin:.2em 0 0;}
+.sub b{color:var(--ink);}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.chip{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:8px 13px;display:flex;flex-direction:column;gap:2px;min-width:92px;}
+.chip .cl{font-size:11px;color:var(--muted);}
+.chip .cv{font-size:15.5px;font-weight:650;font-variant-numeric:tabular-nums;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;}
+.statuses{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;align-items:center;}
+.statuses .lbl{font-size:12px;color:var(--muted);margin-inline-end:4px;}
+.st-seg{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12.5px;cursor:pointer;user-select:none;transition:.12s;}
+.st-seg[aria-pressed="false"]{opacity:.42;}
+.st-seg:hover{border-color:var(--accent);}
+.st-seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px;}
+.st-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.01em;}
+.st-interested{background:#d8efe1;color:#0f7a52;}
+.st-watch{background:#dfe8f4;color:#31548a;}
+.st-not{background:#eef1f0;color:#8b9894;}
+.st-empty{color:#c3ccc9;}
+.seg{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:6px 13px 6px 11px;font-size:13px;cursor:pointer;user-select:none;transition:.12s;}
+.seg .dot{width:11px;height:11px;border-radius:50%;}
+.seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;}
+.seg[aria-pressed="false"]{opacity:.42;}
+.seg:hover{border-color:var(--accent);}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 12px;flex-wrap:wrap;}
+#q{flex:1;min-width:200px;max-width:360px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:var(--panel);color:var(--ink);}
+#q:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+.hint{font-size:12.5px;color:var(--muted);}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:var(--panel);}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:1080px;}
+thead th{position:sticky;top:0;background:var(--accent-soft);color:#0a5a50;text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.02em;
+ padding:10px 11px;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--border);user-select:none;}
+thead th.num{text-align:right;}
+thead th:hover{background:#dcece8;}
+thead th.sorted{color:var(--accent);}
+thead th.sorted::after{content:attr(data-dir);font-size:10px;margin-inline-start:4px;}
+tbody td{padding:8px 11px;border-bottom:1px solid #eef4f2;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f4faf8;}
+td.num{text-align:right;white-space:nowrap;}
+td.i{color:var(--muted);font-size:11.5px;}
+td.tkr{font-weight:700;letter-spacing:.02em;font-family:ui-monospace,Consolas,monospace;border-inline-start:4px solid var(--sc);padding-inline-start:10px;}
+td.co{font-weight:550;white-space:nowrap;}
+td.desc{color:var(--muted);font-size:12px;text-align:right;min-width:210px;max-width:300px;white-space:normal;line-height:1.34;}
+td.notes{text-align:right;min-width:150px;max-width:240px;white-space:normal;font-size:11.5px;}
+.note{display:block;color:#3a4a45;}
+.note .dt{color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;}
+.note-empty{color:#c3ccc9;}
+td.w{position:relative;min-width:92px;}
+.wbar{position:absolute;right:11px;bottom:4px;height:3px;width:var(--w);max-width:60px;background:var(--sc);border-radius:2px;opacity:.6;}
+.score{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;cursor:help;}
+.s0,.s1{background:#eef1f0;color:#8b9894;}
+.s2{background:#e9eef3;color:#6f8199;}
+.s3{background:#fbf0d8;color:#9a6f16;}
+.s4{background:#d8efe1;color:#0f7a52;}
+.s5{background:#0f7a52;color:#fff;}
+.up{color:var(--up);}
+.dn{color:var(--dn);}
+.foot{margin-top:16px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6;}
+.foot code{background:#eef4f2;padding:1px 6px;border-radius:5px;font-size:11px;}
+@media(max-width:640px){.wrap{padding:18px 11px 40px;}.chip{flex:1;min-width:44%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">SPDR Sector ETF · Holdings Screener</div>
+  <h1>Utilities <span class="tk">XLU</span></h1>
+  <p class="sub">כל האחזקות של תעודת הסל, עם ציון סינון לפי הקריטריונים של דניאל (pullback בתוך uptrend + value). מחירי סגירה <b>2026-07-02</b> · אחזקות: State Street As of 01-Jul-2026 · חציון P/E בסקטור: <b>22.4</b>.</p>
+  <div class="chips" id="chips"></div>
+  
+  <div class="legend" id="legend"></div>
+  <div class="statuses" id="statuses"></div>
+</header>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="חיפוש לפי שם, טיקר, תיאור או הערה…" aria-label="חיפוש">
+  <span class="hint">לחיצה על כותרת ממיינת · לחיצה על סקטור בלגנדה מסננת · ריחוף על ציון מראה פירוט</span>
+</div>
+<div class="tablewrap" dir="ltr">
+<table>
+<thead><tr>
+  <th class="num" data-k="i">#</th>
+  <th data-k="t">Ticker</th>
+  <th data-k="name">Company</th>
+  <th class="desc" data-k="desc">מה החברה עושה</th>
+  <th data-k="_stsort">Status</th>
+  <th class="notes" data-k="_nsort">הערות שלי</th>
+  <th class="num" data-k="score">Score</th>
+  <th class="num" data-k="w">Weight</th>
+  <th class="num" data-k="price">Price</th>
+  <th class="num" data-k="mcap">Mkt Cap</th>
+  <th class="num" data-k="d1">1D</th>
+  <th class="num" data-k="w1">1W</th>
+  <th class="num" data-k="m1">1M</th>
+  <th class="num" data-k="ytd">YTD</th>
+  <th class="num" data-k="y1">12M</th>
+</tr></thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+<footer class="foot">
+  <div><b>שיטת הציון (0–5):</b> נקודה לכל קריטריון שמתקיים — Uptrend (מעל ממוצע 200) · Pullback (בתחום פיבו 0.382–0.618) · RSI&lt;50 · MACD&lt;0 · Value (P/E מתחת לחציון או פוטנציאל אנליסטים &gt;15%). 5 = הכי מתאים לכניסה.</div>
+  <div style="margin-top:6px">שער (gate): שווי שוק &gt;$1B — מוצג בריחוף על הציון. תשואות = שינוי מחיר בלבד. לא ייעוץ השקעות.</div>
+</footer>
+</div>
+<script>
+const DATA=[{"t": "NEE", "name": "Nextera Energy Inc", "w": 12.849, "desc": "NextEra — חברת החשמל הגדולה בפלורידה + מובילת אנרגיה מתחדשת", "price": 88.34, "mcap": 184242372608, "d1": 2.28, "w1": 0.73, "m1": 3.1, "ytd": 10.04, "y1": 20.98, "rsi": 53.2, "macd": -0.22, "above200": true, "retr": 0.339, "pe": 22.4, "upside": 12.3, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": true, "value": false}, "score": 2, "gate_mcap": true}, {"t": "SO", "name": "Southern Co/The", "w": 7.65, "desc": "סאותרן קומפני — חברת חשמל בדרום ארה״ב", "price": 97.98, "mcap": 110452965376, "d1": 3.01, "w1": 2.16, "m1": 8.25, "ytd": 12.36, "y1": 7.49, "rsi": 63.5, "macd": 0.93, "above200": true, "retr": 0.111, "pe": 25.1, "upside": 3.2, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "DUK", "name": "Duke Energy Corp", "w": 6.995, "desc": "דיוק אנרג׳י — חברת חשמל בדרום-מזרח", "price": 129.6, "mcap": 101035671552, "d1": 3.05, "w1": 1.96, "m1": 7.03, "ytd": 10.57, "y1": 10.71, "rsi": 62.0, "macd": 0.89, "above200": true, "retr": 0.198, "pe": 19.9, "upside": 6.5, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "CEG", "name": "Constellation Energy", "w": 5.394, "desc": "אנרג׳י גרעינית (Constellation)", "price": 239.25, "mcap": 85436653568, "d1": 1.16, "w1": -10.96, "m1": -12.25, "ytd": -32.28, "y1": -21.97, "rsi": 34.1, "macd": -7.72, "above200": false, "retr": 0.984, "pe": 20.8, "upside": 49.6, "sector": "utilities-independent-power-producers", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "AEP", "name": "American Electric Power", "w": 5.242, "desc": "חברת חשמל אזורית (American Electric)", "price": 138.51, "mcap": 75363983360, "d1": 2.56, "w1": 1.1, "m1": 8.97, "ytd": 20.12, "y1": 34.14, "rsi": 64.6, "macd": 2.16, "above200": true, "retr": 0.005, "pe": 20.5, "upside": 4.8, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "SRE", "name": "Sempra", "w": 4.261, "desc": "סמפרה — גז וחשמל בקליפורניה + LNG", "price": 93.06, "mcap": 60834009088, "d1": 1.85, "w1": -0.4, "m1": 3.92, "ytd": 5.4, "y1": 24.38, "rsi": 54.2, "macd": 0.37, "above200": true, "retr": 0.261, "pe": 31.7, "upside": 11.6, "sector": "utilities-diversified", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "D", "name": "Dominion Energy Inc", "w": 4.253, "desc": "דומיניון אנרג׳י — חברת חשמל בווירג׳יניה", "price": 69.75, "mcap": 61345996800, "d1": 2.89, "w1": 0.35, "m1": 4.93, "ytd": 19.05, "y1": 21.47, "rsi": 61.9, "macd": 0.9, "above200": true, "retr": 0.0, "pe": 20.6, "upside": -0.6, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "ETR", "name": "Entergy Corp", "w": 3.687, "desc": "אנטרג׳י — חברת חשמל בלואיזיאנה", "price": 115.11, "mcap": 53709762560, "d1": 1.99, "w1": -0.23, "m1": 6.98, "ytd": 24.54, "y1": 41.55, "rsi": 57.8, "macd": 1.1, "above200": true, "retr": 0.076, "pe": 29.3, "upside": 6.3, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "XEL", "name": "Xcel Energy Inc", "w": 3.549, "desc": "אקסל אנרג׳י — חברת חשמל בקולורדו", "price": 81.96, "mcap": 51165134848, "d1": 2.84, "w1": 0.26, "m1": 5.25, "ytd": 10.97, "y1": 21.31, "rsi": 58.8, "macd": 0.56, "above200": true, "retr": 0.119, "pe": 23.6, "upside": 11.7, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "VST", "name": "Vistra Corp", "w": 3.463, "desc": "ויסטרה — יצרן חשמל תחרותי (כולל גרעין)", "price": 151.05, "mcap": 50931412992, "d1": -1.38, "w1": -9.97, "m1": -4.38, "ytd": -6.37, "y1": -19.23, "rsi": 44.2, "macd": 1.3, "above200": false, "retr": 0.804, "pe": 25.3, "upside": 47.6, "sector": "utilities-independent-power-producers", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "EXC", "name": "Exelon Corp", "w": 3.377, "desc": "אקסלון — חברת חשמל בשיקגו/פילדלפיה", "price": 47.88, "mcap": 48991207424, "d1": 3.5, "w1": 2.42, "m1": 6.4, "ytd": 9.84, "y1": 11.56, "rsi": 61.9, "macd": 0.41, "above200": true, "retr": 0.319, "pe": 17.5, "upside": 3.3, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "ED", "name": "Consolidated Edison Inc", "w": 2.917, "desc": "קונסולידייטד אדיסון — חברת חשמל בניו-יורק", "price": 113.99, "mcap": 42008698880, "d1": 2.74, "w1": 2.92, "m1": 9.83, "ytd": 14.77, "y1": 14.08, "rsi": 67.1, "macd": 1.39, "above200": true, "retr": 0.073, "pe": 19.2, "upside": -3.4, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "PEG", "name": "Public Service Enterprise Gp", "w": 2.854, "desc": "פאבליק סרוויס — חברת חשמל בניו-ג׳רזי", "price": 81.62, "mcap": 40672993280, "d1": 1.68, "w1": -1.22, "m1": 4.21, "ytd": 1.64, "y1": 0.49, "rsi": 55.3, "macd": 0.73, "above200": true, "retr": 0.622, "pe": 18.1, "upside": 9.6, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "WEC", "name": "Wec Energy Group Inc", "w": 2.701, "desc": "WEC אנרג׳י — חברת חשמל בוויסקונסין", "price": 118.83, "mcap": 38705979392, "d1": 2.25, "w1": 1.5, "m1": 7.8, "ytd": 12.68, "y1": 14.53, "rsi": 63.1, "macd": 1.37, "above200": true, "retr": 0.001, "pe": 23.8, "upside": 4.2, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "PCG", "name": "P G & E Corp", "w": 2.603, "desc": "PG&E — חברת חשמל בקליפורניה", "price": 17.05, "mcap": 37547929600, "d1": 2.9, "w1": -0.18, "m1": 2.9, "ytd": 6.1, "y1": 21.87, "rsi": 54.2, "macd": 0.09, "above200": true, "retr": 0.337, "pe": 13.2, "upside": 32.5, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "DTE", "name": "Dte Energy Company", "w": 2.235, "desc": "DTE אנרג׳י — חברת חשמל במישיגן", "price": 154.06, "mcap": 32048842752, "d1": 2.32, "w1": 0.82, "m1": 8.0, "ytd": 19.44, "y1": 17.89, "rsi": 63.4, "macd": 2.29, "above200": true, "retr": 0.014, "pe": 25.3, "upside": 3.6, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "AEE", "name": "Ameren Corporation", "w": 2.215, "desc": "אמרן — חברת חשמל במיזורי", "price": 115.02, "mcap": 31831969792, "d1": 2.52, "w1": 0.43, "m1": 7.72, "ytd": 15.18, "y1": 20.47, "rsi": 59.1, "macd": 1.42, "above200": true, "retr": 0.142, "pe": 20.7, "upside": 4.5, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "NRG", "name": "Nrg Energy Inc", "w": 2.119, "desc": "NRG — חברת חשמל תחרותית", "price": 136.7, "mcap": 28841848832, "d1": -2.91, "w1": -7.08, "m1": 2.39, "ytd": -14.15, "y1": -12.11, "rsi": 48.0, "macd": 1.86, "above200": false, "retr": 0.747, "pe": 148.6, "upside": 45.5, "sector": "utilities-independent-power-producers", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "ATO", "name": "Atmos Energy Corp", "w": 2.06, "desc": "אטמוס — חברת גז טבעי", "price": 176.87, "mcap": 29523107840, "d1": 2.22, "w1": 1.84, "m1": 4.81, "ytd": 5.51, "y1": 16.74, "rsi": 60.0, "macd": -0.12, "above200": true, "retr": 0.378, "pe": 21.8, "upside": 5.6, "sector": "utilities-regulated-gas", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "CNP", "name": "Centerpoint Energy Inc", "w": 2.041, "desc": "סנטרפוינט — חברת חשמל וגז בטקסס", "price": 44.61, "mcap": 29182500864, "d1": 2.01, "w1": 0.88, "m1": 6.9, "ytd": 16.35, "y1": 24.71, "rsi": 60.8, "macd": 0.52, "above200": true, "retr": 0.046, "pe": 27.4, "upside": 3.4, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "EIX", "name": "Edison International", "w": 2.018, "desc": "אדיסון — חברת חשמל בדרום קליפורניה", "price": 75.66, "mcap": 29113511936, "d1": 2.94, "w1": 1.22, "m1": 6.68, "ytd": 26.06, "y1": 43.95, "rsi": 62.4, "macd": 1.09, "above200": true, "retr": 0.006, "pe": 8.2, "upside": -0.7, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "ES", "name": "Eversource Energy", "w": 1.937, "desc": "אוורסורס — חברת חשמל בניו-אינגלנד", "price": 74.44, "mcap": 27995398144, "d1": 3.1, "w1": 3.27, "m1": 8.66, "ytd": 10.56, "y1": 15.5, "rsi": 66.5, "macd": 1.17, "above200": true, "retr": 0.133, "pe": 15.9, "upside": -2.6, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "PPL", "name": "Ppl Corp", "w": 1.912, "desc": "PPL — חברת חשמל בפנסילבניה וקנטקי", "price": 36.89, "mcap": 27754203136, "d1": 3.57, "w1": -0.3, "m1": 5.91, "ytd": 5.34, "y1": 9.99, "rsi": 56.3, "macd": 0.13, "above200": true, "retr": 0.446, "pe": 22.6, "upside": 12.0, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": false, "value": false}, "score": 2, "gate_mcap": true}, {"t": "AWK", "name": "American Water Works Co Inc", "w": 1.836, "desc": "American Water — חברת מים", "price": 136.86, "mcap": 26726092800, "d1": 3.85, "w1": 5.28, "m1": 10.66, "ytd": 4.87, "y1": -2.46, "rsi": 70.5, "macd": 2.04, "above200": true, "retr": 0.392, "pe": 24.3, "upside": 0.2, "sector": "utilities-regulated-water", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": false, "value": false}, "score": 2, "gate_mcap": true}, {"t": "FE", "name": "Firstenergy Corp", "w": 1.748, "desc": "פירסט אנרג׳י — חברת חשמל באוהיו", "price": 48.53, "mcap": 28071264256, "d1": 3.1, "w1": 1.08, "m1": 7.08, "ytd": 8.4, "y1": 22.06, "rsi": 60.4, "macd": 0.42, "above200": true, "retr": 0.278, "pe": 26.4, "upside": 7.6, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "CMS", "name": "Cms Energy Corp", "w": 1.673, "desc": "CMS — חברת חשמל במישיגן", "price": 77.73, "mcap": 24012322816, "d1": 2.38, "w1": 0.82, "m1": 8.18, "ytd": 11.15, "y1": 11.54, "rsi": 61.3, "macd": 1.06, "above200": true, "retr": 0.205, "pe": 21.5, "upside": 2.6, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "NI", "name": "Nisource Inc", "w": 1.603, "desc": "NiSource — חברת חשמל וגז", "price": 47.82, "mcap": 22926784512, "d1": 2.03, "w1": 0.02, "m1": 4.27, "ytd": 14.51, "y1": 21.34, "rsi": 53.5, "macd": 0.23, "above200": true, "retr": 0.125, "pe": 23.8, "upside": 7.3, "sector": "utilities-regulated-gas", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "EVRG", "name": "Evergy Inc", "w": 1.417, "desc": "אברג׳י — חברת חשמל בקנזס", "price": 88.13, "mcap": 20315111424, "d1": 2.25, "w1": 1.7, "m1": 8.33, "ytd": 21.58, "y1": 27.76, "rsi": 67.7, "macd": 1.25, "above200": true, "retr": 0.0, "pe": 23.4, "upside": 3.1, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "LNT", "name": "Alliant Energy Corp", "w": 1.396, "desc": "אליאנט אנרג׳י — חברת חשמל באיווה", "price": 78.03, "mcap": 20153356288, "d1": 2.96, "w1": 2.42, "m1": 9.96, "ytd": 20.03, "y1": 28.42, "rsi": 67.9, "macd": 1.24, "above200": true, "retr": 0.0, "pe": 24.5, "upside": 1.4, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "PNW", "name": "Pinnacle West Capital", "w": 0.919, "desc": "פינקל ווסט — חברת חשמל בפניקס", "price": 109.37, "mcap": 13254241280, "d1": 2.89, "w1": 1.95, "m1": 10.68, "ytd": 23.3, "y1": 21.29, "rsi": 68.4, "macd": 1.73, "above200": true, "retr": 0.0, "pe": 20.4, "upside": -3.3, "sector": "utilities-regulated-electric", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "AES", "name": "Aes Corp", "w": 0.745, "desc": "AES — חברת חשמל גלובלית", "price": 14.58, "mcap": 10397839360, "d1": -0.41, "w1": -0.55, "m1": -0.68, "ytd": 1.67, "y1": 31.0, "rsi": 43.8, "macd": 0.01, "above200": true, "retr": 0.435, "pe": 7.6, "upside": 2.9, "sector": "utilities-diversified", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": true, "macd": false, "value": true}, "score": 4, "gate_mcap": true}], LABELS={}, COLORS={"pharma": "#6d5bd0", "device": "#0e9488", "payer": "#c0872e", "g0": "#6d5bd0", "g1": "#0e9488", "g2": "#c0872e", "g3": "#c2557a", "g4": "#4478c4", "g5": "#7a8a55"};
+const active=new Set(Object.keys(LABELS).length?Object.keys(LABELS):[...new Set(DATA.map(r=>r.sector))]);
+const sc=s=>COLORS[s]||'#0e7c6f';
+const fmtMcap=v=>v==null?'—':v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(0)+'B':'$'+(v/1e6).toFixed(0)+'M';
+const fmtPct=v=>v==null?'—':(v>0?'+':'')+v.toFixed(1)+'%';
+const fmtPrice=v=>v==null?'—':'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const ccls=v=>v==null?'':v>0?'up':v<0?'dn':'';
+const STATUS_META={interested:{lbl:'⭐ מעניינת',cls:'st-interested',ord:3},watch:{lbl:'👁 מעקב',cls:'st-watch',ord:2},not:{lbl:'🚫 לא',cls:'st-not',ord:1}};
+DATA.forEach((r,i)=>{r._rank=i+1;r._nsort=(r.notes&&r.notes.length)?1:0;r._stsort=STATUS_META[r.status]?.ord||0;});
+const activeSt=new Set(['interested','watch','not','']);  // '' = unmarked
+let sortK='w', sortDir=-1;
+const body=document.getElementById('body');
+function scoreTip(r){
+  const s=r.sig, m={uptrend:'Uptrend (>MA200)',pullback:'Pullback (fib 0.382–0.618)',rsi:'RSI<50 ('+r.rsi+')',macd:'MACD<0 ('+r.macd+')',value:'Value (P/E '+(r.pe??'—')+' / upside '+(r.upside!=null?r.upside+'%':'—')+')'};
+  let t=Object.keys(m).map(k=>(s[k]?'✓ ':'✗ ')+m[k]).join('\n');
+  t+='\n— gate —\n'+(r.gate_mcap?'✓':'✗')+' MktCap>$1B';
+  return t;
+}
+function notesCell(r){
+  if(!r.notes||!r.notes.length) return '<span class="note-empty">—</span>';
+  return r.notes.map(n=>`<span class="note">${n.text} <span class="dt">${n.date}</span></span>`).join('');
+}
+function statusCell(r){
+  const m=STATUS_META[r.status]; if(!m) return '<span class="st-empty">—</span>';
+  return `<span class="st-tag ${m.cls}">${m.lbl}</span>`;
+}
+function render(list){
+  body.innerHTML=list.map(r=>`<tr>
+    <td class="num i">${r._rank}</td>
+    <td class="tkr" style="--sc:${sc(r.sector)}">${r.t}</td>
+    <td class="co">${r.name}</td>
+    <td class="desc" dir="rtl">${r.desc||''}</td>
+    <td dir="rtl">${statusCell(r)}</td>
+    <td class="notes" dir="rtl">${notesCell(r)}</td>
+    <td class="num"><span class="score s${r.score}" title="${scoreTip(r).replace(/"/g,'&quot;')}">${r.score}</span></td>
+    <td class="num w"><span class="wbar" style="--w:${(r.w/(DATA[0].w||1)*100).toFixed(1)}%;--sc:${sc(r.sector)}"></span>${r.w.toFixed(2)}%</td>
+    <td class="num mono">${fmtPrice(r.price)}</td>
+    <td class="num mono">${fmtMcap(r.mcap)}</td>
+    <td class="num mono ${ccls(r.d1)}">${fmtPct(r.d1)}</td>
+    <td class="num mono ${ccls(r.w1)}">${fmtPct(r.w1)}</td>
+    <td class="num mono ${ccls(r.m1)}">${fmtPct(r.m1)}</td>
+    <td class="num mono ${ccls(r.ytd)}">${fmtPct(r.ytd)}</td>
+    <td class="num mono ${ccls(r.y1)}">${fmtPct(r.y1)}</td>
+  </tr>`).join('');
+}
+function apply(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=DATA.filter(r=>active.has(r.sector)).filter(r=>activeSt.has(r.status||'')).filter(r=>{
+    if(!q)return true;
+    const nz=(r.notes||[]).map(n=>n.text).join(' ');
+    return r.t.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||(r.desc||'').includes(q)||nz.includes(q);
+  });
+  list.sort((a,b)=>{
+    let x=a[sortK],y=b[sortK];
+    if(typeof x==='string'||typeof y==='string'){return sortDir*((x||'')+'').localeCompare((y||'')+'');}
+    x=x==null?-1e15:x; y=y==null?-1e15:y; return sortDir*(x-y);
+  });
+  render(list);
+  document.querySelectorAll('th').forEach(th=>{th.classList.toggle('sorted',th.dataset.k===sortK);th.dataset.dir=th.dataset.k===sortK?(sortDir<0?'▼':'▲'):'';});
+}
+document.querySelectorAll('th').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.k; if(k==='i')return;
+  if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=(typeof DATA[0][k]==='string')?1:-1;}
+  apply();
+}));
+document.getElementById('q').addEventListener('input',apply);
+// chips
+const ytds=DATA.map(r=>r.ytd).filter(v=>v!=null);
+const avg=ytds.reduce((a,b)=>a+b,0)/(ytds.length||1);
+const best=DATA.filter(r=>r.ytd!=null).reduce((a,b)=>b.ytd>a.ytd?b:a,{ytd:-1e9});
+const hot=DATA.filter(r=>r.score>=4).length;
+document.getElementById('chips').innerHTML=[
+  ['אחזקות',DATA.length],
+  ['ציון 4+',hot],
+  ['YTD ממוצע',(avg>0?'+':'')+avg.toFixed(1)+'%'],
+  ['מובילה YTD',best.t+' '+fmtPct(best.ytd)],
+].map(c=>`<div class="chip"><span class="cl">${c[0]}</span><span class="cv">${c[1]}</span></div>`).join('');
+// legend / sector filter
+const counts={}; DATA.forEach(r=>counts[r.sector]=(counts[r.sector]||0)+1);
+const segs=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+document.getElementById('legend').innerHTML=segs.map(s=>
+  `<span class="seg" data-s="${s}" aria-pressed="true"><span class="dot" style="background:${sc(s)}"></span>${LABELS[s]||s}<span class="n">${counts[s]}</span></span>`).join('');
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.s;
+  if(active.has(s)&&active.size>1){active.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{active.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+// status filter chips
+const stCounts={interested:0,watch:0,not:0,'':0};
+DATA.forEach(r=>{stCounts[r.status||'']++;});
+document.getElementById('statuses').innerHTML='<span class="lbl">סטטוס:</span>'+
+  [['interested','⭐ מעניינת'],['watch','👁 מעקב'],['not','🚫 לא'],['','ללא סטטוס']].map(([k,l])=>
+   `<span class="st-seg" data-st="${k}" aria-pressed="true">${l}<span class="n">${stCounts[k]||0}</span></span>`).join('');
+document.querySelectorAll('.st-seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.st;
+  if(activeSt.has(s)&&activeSt.size>1){activeSt.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{activeSt.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+apply();
+</script>
+</body>
+</html>

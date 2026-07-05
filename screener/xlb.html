@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XLB — Materials · Screener</title>
+<style>
+*{box-sizing:border-box}
+body{--ground:#f6faf9;--panel:#fff;--ink:#15241f;--muted:#617069;--accent:#0e7c6f;--accent-soft:#e7f2ef;--border:#e2ebe8;--up:#0f7a52;--dn:#c23b2e;
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--ground);margin:0;line-height:1.4;}
+.wrap{max-width:1280px;margin:0 auto;padding:30px 20px 60px;}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+h1{font-size:clamp(24px,3.6vw,36px);margin:.12em 0 .1em;letter-spacing:-.01em;}
+h1 .tk{font-family:ui-monospace,Consolas,monospace;background:var(--accent);color:#fff;padding:2px 10px;border-radius:8px;font-size:.72em;vertical-align:middle;margin-inline-start:8px;}
+.sub{color:var(--muted);font-size:14px;max-width:78ch;margin:.2em 0 0;}
+.sub b{color:var(--ink);}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.chip{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:8px 13px;display:flex;flex-direction:column;gap:2px;min-width:92px;}
+.chip .cl{font-size:11px;color:var(--muted);}
+.chip .cv{font-size:15.5px;font-weight:650;font-variant-numeric:tabular-nums;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;}
+.statuses{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;align-items:center;}
+.statuses .lbl{font-size:12px;color:var(--muted);margin-inline-end:4px;}
+.st-seg{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12.5px;cursor:pointer;user-select:none;transition:.12s;}
+.st-seg[aria-pressed="false"]{opacity:.42;}
+.st-seg:hover{border-color:var(--accent);}
+.st-seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px;}
+.st-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.01em;}
+.st-interested{background:#d8efe1;color:#0f7a52;}
+.st-watch{background:#dfe8f4;color:#31548a;}
+.st-not{background:#eef1f0;color:#8b9894;}
+.st-empty{color:#c3ccc9;}
+.seg{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:6px 13px 6px 11px;font-size:13px;cursor:pointer;user-select:none;transition:.12s;}
+.seg .dot{width:11px;height:11px;border-radius:50%;}
+.seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;}
+.seg[aria-pressed="false"]{opacity:.42;}
+.seg:hover{border-color:var(--accent);}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 12px;flex-wrap:wrap;}
+#q{flex:1;min-width:200px;max-width:360px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:var(--panel);color:var(--ink);}
+#q:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+.hint{font-size:12.5px;color:var(--muted);}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:var(--panel);}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:1080px;}
+thead th{position:sticky;top:0;background:var(--accent-soft);color:#0a5a50;text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.02em;
+ padding:10px 11px;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--border);user-select:none;}
+thead th.num{text-align:right;}
+thead th:hover{background:#dcece8;}
+thead th.sorted{color:var(--accent);}
+thead th.sorted::after{content:attr(data-dir);font-size:10px;margin-inline-start:4px;}
+tbody td{padding:8px 11px;border-bottom:1px solid #eef4f2;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f4faf8;}
+td.num{text-align:right;white-space:nowrap;}
+td.i{color:var(--muted);font-size:11.5px;}
+td.tkr{font-weight:700;letter-spacing:.02em;font-family:ui-monospace,Consolas,monospace;border-inline-start:4px solid var(--sc);padding-inline-start:10px;}
+td.co{font-weight:550;white-space:nowrap;}
+td.desc{color:var(--muted);font-size:12px;text-align:right;min-width:210px;max-width:300px;white-space:normal;line-height:1.34;}
+td.notes{text-align:right;min-width:150px;max-width:240px;white-space:normal;font-size:11.5px;}
+.note{display:block;color:#3a4a45;}
+.note .dt{color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;}
+.note-empty{color:#c3ccc9;}
+td.w{position:relative;min-width:92px;}
+.wbar{position:absolute;right:11px;bottom:4px;height:3px;width:var(--w);max-width:60px;background:var(--sc);border-radius:2px;opacity:.6;}
+.score{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;cursor:help;}
+.s0,.s1{background:#eef1f0;color:#8b9894;}
+.s2{background:#e9eef3;color:#6f8199;}
+.s3{background:#fbf0d8;color:#9a6f16;}
+.s4{background:#d8efe1;color:#0f7a52;}
+.s5{background:#0f7a52;color:#fff;}
+.up{color:var(--up);}
+.dn{color:var(--dn);}
+.foot{margin-top:16px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6;}
+.foot code{background:#eef4f2;padding:1px 6px;border-radius:5px;font-size:11px;}
+@media(max-width:640px){.wrap{padding:18px 11px 40px;}.chip{flex:1;min-width:44%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">SPDR Sector ETF · Holdings Screener</div>
+  <h1>Materials <span class="tk">XLB</span></h1>
+  <p class="sub">כל האחזקות של תעודת הסל, עם ציון סינון לפי הקריטריונים של דניאל (pullback בתוך uptrend + value). מחירי סגירה <b>2026-07-02</b> · אחזקות: State Street As of 01-Jul-2026 · חציון P/E בסקטור: <b>32.7</b>.</p>
+  <div class="chips" id="chips"></div>
+  
+  <div class="legend" id="legend"></div>
+  <div class="statuses" id="statuses"></div>
+</header>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="חיפוש לפי שם, טיקר, תיאור או הערה…" aria-label="חיפוש">
+  <span class="hint">לחיצה על כותרת ממיינת · לחיצה על סקטור בלגנדה מסננת · ריחוף על ציון מראה פירוט</span>
+</div>
+<div class="tablewrap" dir="ltr">
+<table>
+<thead><tr>
+  <th class="num" data-k="i">#</th>
+  <th data-k="t">Ticker</th>
+  <th data-k="name">Company</th>
+  <th class="desc" data-k="desc">מה החברה עושה</th>
+  <th data-k="_stsort">Status</th>
+  <th class="notes" data-k="_nsort">הערות שלי</th>
+  <th class="num" data-k="score">Score</th>
+  <th class="num" data-k="w">Weight</th>
+  <th class="num" data-k="price">Price</th>
+  <th class="num" data-k="mcap">Mkt Cap</th>
+  <th class="num" data-k="d1">1D</th>
+  <th class="num" data-k="w1">1W</th>
+  <th class="num" data-k="m1">1M</th>
+  <th class="num" data-k="ytd">YTD</th>
+  <th class="num" data-k="y1">12M</th>
+</tr></thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+<footer class="foot">
+  <div><b>שיטת הציון (0–5):</b> נקודה לכל קריטריון שמתקיים — Uptrend (מעל ממוצע 200) · Pullback (בתחום פיבו 0.382–0.618) · RSI&lt;50 · MACD&lt;0 · Value (P/E מתחת לחציון או פוטנציאל אנליסטים &gt;15%). 5 = הכי מתאים לכניסה.</div>
+  <div style="margin-top:6px">שער (gate): שווי שוק &gt;$1B — מוצג בריחוף על הציון. תשואות = שינוי מחיר בלבד. לא ייעוץ השקעות.</div>
+</footer>
+</div>
+<script>
+const DATA=[{"t": "LIN", "name": "Linde Plc", "w": 14.421, "desc": "גזים תעשייתיים (Linde)", "price": 546.64, "mcap": 252737536000, "d1": 2.45, "w1": 4.66, "m1": 10.23, "ytd": 28.2, "y1": 14.56, "rsi": 68.4, "macd": 6.11, "above200": true, "retr": 0.0, "pe": 36.2, "upside": -0.1, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "NEM", "name": "Newmont Corp", "w": 5.823, "desc": "כרייה — זהב (Newmont)", "price": 97.04, "mcap": 103595319296, "d1": 4.01, "w1": 1.77, "m1": -11.38, "ytd": -2.81, "y1": 61.57, "rsi": 43.9, "macd": -3.44, "above200": false, "retr": 0.468, "pe": 12.6, "upside": 43.3, "sector": "gold", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "FCX", "name": "Freeport Mcmoran Inc", "w": 5.087, "desc": "כרייה — נחושת ומולבידן (Freeport)", "price": 60.97, "mcap": 87648026624, "d1": 0.73, "w1": -2.91, "m1": -14.99, "ytd": 20.04, "y1": 33.21, "rsi": 41.9, "macd": -0.89, "above200": true, "retr": 0.295, "pe": 32.3, "upside": 15.9, "sector": "copper", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "SHW", "name": "Sherwin Williams Co/The", "w": 4.952, "desc": "צבע ומעילים (Sherwin-Williams)", "price": 352.48, "mcap": 86934126592, "d1": 1.86, "w1": 3.95, "m1": 20.3, "ytd": 8.78, "y1": -0.01, "rsi": 72.3, "macd": 9.82, "above200": true, "retr": 0.277, "pe": 33.9, "upside": 6.2, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "CTVA", "name": "Corteva Inc", "w": 4.879, "desc": "סחורות חקלאיות ותוספי צמח (Corteva)", "price": 85.8, "mcap": 57384755200, "d1": 2.71, "w1": 5.12, "m1": 10.61, "ytd": 28.0, "y1": 11.43, "rsi": 72.0, "macd": 1.48, "above200": true, "retr": 0.0, "pe": 46.4, "upside": 5.1, "sector": "agricultural-inputs", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "APD", "name": "Air Products & Chemicals Inc", "w": 4.819, "desc": "גזים תעשייתיים (Air Products)", "price": 314.19, "mcap": 69964046336, "d1": 2.54, "w1": 12.24, "m1": 12.5, "ytd": 27.19, "y1": 8.23, "rsi": 71.0, "macd": 2.59, "above200": true, "retr": 0.0, "pe": 33.1, "upside": 4.3, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "ECL", "name": "Ecolab Inc", "w": 4.711, "desc": "מוצרי ניקוי לתעשיות מזון וטיפול (Ecolab)", "price": 283.36, "mcap": 79748128768, "d1": 1.79, "w1": 0.77, "m1": 10.58, "ytd": 7.94, "y1": 4.0, "rsi": 66.4, "macd": 5.93, "above200": true, "retr": 0.399, "pe": 38.3, "upside": 12.0, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": false, "value": false}, "score": 2, "gate_mcap": true}, {"t": "VMC", "name": "Vulcan Materials Co", "w": 4.705, "desc": "סחורות בנייה — אגרגטים (Vulcan)", "price": 303.19, "mcap": 39340384256, "d1": 2.77, "w1": -3.12, "m1": 7.58, "ytd": 6.3, "y1": 14.11, "rsi": 57.2, "macd": 5.86, "above200": true, "retr": 0.371, "pe": 36.0, "upside": 7.7, "sector": "building-materials", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "CRH", "name": "Crh Plc", "w": 4.575, "desc": "", "price": 107.53, "mcap": 71851565056, "d1": 2.22, "w1": -4.88, "m1": 0.95, "ytd": -13.84, "y1": 13.82, "rsi": 48.5, "macd": 0.27, "above200": false, "retr": 0.619, "pe": 19.9, "upside": 33.6, "sector": "building-materials", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "MLM", "name": "Martin Marietta Materials", "w": 4.556, "desc": "סחורות בנייה — אגרגטים (Martin Marietta)", "price": 599.42, "mcap": 35992711168, "d1": 3.48, "w1": -4.69, "m1": 3.9, "ytd": -3.73, "y1": 7.29, "rsi": 53.1, "macd": 4.13, "above200": false, "retr": 0.619, "pe": 37.6, "upside": 13.7, "sector": "building-materials", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 0, "gate_mcap": true}, {"t": "NUE", "name": "Nucor Corp", "w": 3.802, "desc": "פלדה (Nucor)", "price": 220.75, "mcap": 50273812480, "d1": 0.79, "w1": -11.31, "m1": -14.59, "ytd": 35.34, "y1": 58.97, "rsi": 35.7, "macd": -3.84, "above200": true, "retr": 0.339, "pe": 21.9, "upside": 18.1, "sector": "steel", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "PPG", "name": "Ppg Industries Inc", "w": 3.649, "desc": "צבעים ומעילים (PPG)", "price": 125.33, "mcap": 27936057344, "d1": 2.22, "w1": 2.39, "m1": 10.29, "ytd": 22.32, "y1": 5.68, "rsi": 66.4, "macd": 3.17, "above200": true, "retr": 0.167, "pe": 18.0, "upside": -1.0, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "STLD", "name": "Steel Dynamics Inc", "w": 3.594, "desc": "פלדה (Steel Dynamics)", "price": 220.39, "mcap": 31783055360, "d1": -0.62, "w1": -12.2, "m1": -18.8, "ytd": 30.06, "y1": 64.4, "rsi": 32.4, "macd": -5.89, "above200": true, "retr": 0.386, "pe": 23.6, "upside": 23.1, "sector": "steel", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": true, "macd": true, "value": true}, "score": 5, "gate_mcap": true}, {"t": "SW", "name": "Smurfit Westrock Plc", "w": 3.227, "desc": "", "price": 45.93, "mcap": 24088635392, "d1": -0.35, "w1": -1.94, "m1": 8.74, "ytd": 18.77, "y1": -2.65, "rsi": 60.6, "macd": 1.51, "above200": true, "retr": 0.31, "pe": 63.8, "upside": 16.4, "sector": "packaging-containers", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "PKG", "name": "Packaging Corp Of America", "w": 2.813, "desc": "אריזות קרטון (Packaging Corp)", "price": 238.2, "mcap": 21223297024, "d1": 0.11, "w1": -1.2, "m1": 5.95, "ytd": 15.5, "y1": 17.96, "rsi": 62.6, "macd": 5.13, "above200": true, "retr": 0.148, "pe": 28.9, "upside": -1.0, "sector": "packaging-containers", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "IFF", "name": "Intl Flavors & Fragrances", "w": 2.766, "desc": "ריחות וטעמים (IFF)", "price": 83.83, "mcap": 21402091520, "d1": 3.3, "w1": 11.65, "m1": 14.46, "ytd": 24.4, "y1": 9.4, "rsi": 69.4, "macd": 1.38, "above200": true, "retr": 0.0, "pe": 26.0, "upside": 8.9, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "IP", "name": "International Paper Co", "w": 2.71, "desc": "נייר ואריזות (International Paper)", "price": 38.79, "mcap": 20539963392, "d1": 1.17, "w1": -0.59, "m1": 14.66, "ytd": -1.52, "y1": -23.02, "rsi": 66.3, "macd": 1.4, "above200": false, "retr": 0.642, "pe": null, "upside": 1.5, "sector": "packaging-containers", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 0, "gate_mcap": true}, {"t": "AMCR", "name": "Amcor Plc", "w": 2.694, "desc": "אריזה גמישה (Amcor)", "price": 45.0, "mcap": 20805556224, "d1": 3.12, "w1": 4.99, "m1": 17.16, "ytd": 7.91, "y1": -7.12, "rsi": 73.7, "macd": 1.3, "above200": true, "retr": 0.402, "pe": 36.0, "upside": 7.1, "sector": "packaging-containers", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": false, "value": false}, "score": 2, "gate_mcap": true}, {"t": "DOW", "name": "Dow Inc", "w": 2.6, "desc": "פטרוכימיה (Dow)", "price": 27.71, "mcap": 19971743744, "d1": 2.55, "w1": -5.46, "m1": -20.19, "ytd": 18.52, "y1": -3.55, "rsi": 24.6, "macd": -2.2, "above200": false, "retr": 0.667, "pe": null, "upside": 39.8, "sector": "chemicals", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "DD", "name": "Dupont De Nemours Inc", "w": 2.526, "desc": "כימיקלים לתעשייה (DuPont)", "price": 139.91, "mcap": 18890565632, "d1": 1.04, "w1": 1.53, "m1": -4.16, "ytd": 16.01, "y1": 52.79, "rsi": 48.3, "macd": -1.45, "above200": true, "retr": 0.22, "pe": 123.8, "upside": 22.1, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "CF", "name": "Cf Industries Holdings Inc", "w": 2.218, "desc": "דשנים (CF Industries)", "price": 110.54, "mcap": 16982180864, "d1": 2.2, "w1": 4.79, "m1": -2.59, "ytd": 42.93, "y1": 17.78, "rsi": 51.4, "macd": -2.4, "above200": true, "retr": 0.44, "pe": 10.0, "upside": 12.0, "sector": "agricultural-inputs", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "BALL", "name": "Ball Corp", "w": 2.195, "desc": "קופסאות אלומיניום למשקאות (Ball)", "price": 63.39, "mcap": 16877366272, "d1": 2.66, "w1": 3.29, "m1": 17.93, "ytd": 19.67, "y1": 7.92, "rsi": 73.9, "macd": 1.62, "above200": true, "retr": 0.205, "pe": 18.5, "upside": 11.7, "sector": "packaging-containers", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "ALB", "name": "Albemarle Corp", "w": 2.143, "desc": "ליתיום (Albemarle)", "price": 135.56, "mcap": 15987220480, "d1": -0.38, "w1": -3.89, "m1": -21.08, "ytd": -4.16, "y1": 99.38, "rsi": 32.9, "macd": -10.51, "above200": false, "retr": 0.533, "pe": null, "upside": 54.7, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "LYB", "name": "Lyondellbasell Indu Cl A", "w": 1.813, "desc": "פטרוכימיה (LyondellBasell)", "price": 53.36, "mcap": 17223794688, "d1": 1.48, "w1": -4.44, "m1": -20.72, "ytd": 23.23, "y1": -14.71, "rsi": 21.8, "macd": -4.11, "above200": false, "retr": 0.724, "pe": null, "upside": 36.5, "sector": "specialty-chemicals", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "AVY", "name": "Avery Dennison Corp", "w": 1.666, "desc": "תוויות ואריזות (Avery Dennison)", "price": 166.97, "mcap": 12771599360, "d1": 2.36, "w1": 1.43, "m1": 6.32, "ytd": -8.2, "y1": -8.97, "rsi": 61.2, "macd": 1.28, "above200": false, "retr": 0.686, "pe": 18.8, "upside": 20.0, "sector": "packaging-containers", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 1, "gate_mcap": true}, {"t": "MOS", "name": "Mosaic Co/The", "w": 0.904, "desc": "דשנים (Mosaic)", "price": 21.13, "mcap": 6716099584, "d1": -0.8, "w1": -2.76, "m1": -9.31, "ytd": -12.29, "y1": -44.12, "rsi": 43.8, "macd": -0.34, "above200": false, "retr": 0.927, "pe": 150.9, "upside": 28.7, "sector": "agricultural-inputs", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}], LABELS={}, COLORS={"pharma": "#6d5bd0", "device": "#0e9488", "payer": "#c0872e", "g0": "#6d5bd0", "g1": "#0e9488", "g2": "#c0872e", "g3": "#c2557a", "g4": "#4478c4", "g5": "#7a8a55"};
+const active=new Set(Object.keys(LABELS).length?Object.keys(LABELS):[...new Set(DATA.map(r=>r.sector))]);
+const sc=s=>COLORS[s]||'#0e7c6f';
+const fmtMcap=v=>v==null?'—':v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(0)+'B':'$'+(v/1e6).toFixed(0)+'M';
+const fmtPct=v=>v==null?'—':(v>0?'+':'')+v.toFixed(1)+'%';
+const fmtPrice=v=>v==null?'—':'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const ccls=v=>v==null?'':v>0?'up':v<0?'dn':'';
+const STATUS_META={interested:{lbl:'⭐ מעניינת',cls:'st-interested',ord:3},watch:{lbl:'👁 מעקב',cls:'st-watch',ord:2},not:{lbl:'🚫 לא',cls:'st-not',ord:1}};
+DATA.forEach((r,i)=>{r._rank=i+1;r._nsort=(r.notes&&r.notes.length)?1:0;r._stsort=STATUS_META[r.status]?.ord||0;});
+const activeSt=new Set(['interested','watch','not','']);  // '' = unmarked
+let sortK='w', sortDir=-1;
+const body=document.getElementById('body');
+function scoreTip(r){
+  const s=r.sig, m={uptrend:'Uptrend (>MA200)',pullback:'Pullback (fib 0.382–0.618)',rsi:'RSI<50 ('+r.rsi+')',macd:'MACD<0 ('+r.macd+')',value:'Value (P/E '+(r.pe??'—')+' / upside '+(r.upside!=null?r.upside+'%':'—')+')'};
+  let t=Object.keys(m).map(k=>(s[k]?'✓ ':'✗ ')+m[k]).join('\n');
+  t+='\n— gate —\n'+(r.gate_mcap?'✓':'✗')+' MktCap>$1B';
+  return t;
+}
+function notesCell(r){
+  if(!r.notes||!r.notes.length) return '<span class="note-empty">—</span>';
+  return r.notes.map(n=>`<span class="note">${n.text} <span class="dt">${n.date}</span></span>`).join('');
+}
+function statusCell(r){
+  const m=STATUS_META[r.status]; if(!m) return '<span class="st-empty">—</span>';
+  return `<span class="st-tag ${m.cls}">${m.lbl}</span>`;
+}
+function render(list){
+  body.innerHTML=list.map(r=>`<tr>
+    <td class="num i">${r._rank}</td>
+    <td class="tkr" style="--sc:${sc(r.sector)}">${r.t}</td>
+    <td class="co">${r.name}</td>
+    <td class="desc" dir="rtl">${r.desc||''}</td>
+    <td dir="rtl">${statusCell(r)}</td>
+    <td class="notes" dir="rtl">${notesCell(r)}</td>
+    <td class="num"><span class="score s${r.score}" title="${scoreTip(r).replace(/"/g,'&quot;')}">${r.score}</span></td>
+    <td class="num w"><span class="wbar" style="--w:${(r.w/(DATA[0].w||1)*100).toFixed(1)}%;--sc:${sc(r.sector)}"></span>${r.w.toFixed(2)}%</td>
+    <td class="num mono">${fmtPrice(r.price)}</td>
+    <td class="num mono">${fmtMcap(r.mcap)}</td>
+    <td class="num mono ${ccls(r.d1)}">${fmtPct(r.d1)}</td>
+    <td class="num mono ${ccls(r.w1)}">${fmtPct(r.w1)}</td>
+    <td class="num mono ${ccls(r.m1)}">${fmtPct(r.m1)}</td>
+    <td class="num mono ${ccls(r.ytd)}">${fmtPct(r.ytd)}</td>
+    <td class="num mono ${ccls(r.y1)}">${fmtPct(r.y1)}</td>
+  </tr>`).join('');
+}
+function apply(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=DATA.filter(r=>active.has(r.sector)).filter(r=>activeSt.has(r.status||'')).filter(r=>{
+    if(!q)return true;
+    const nz=(r.notes||[]).map(n=>n.text).join(' ');
+    return r.t.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||(r.desc||'').includes(q)||nz.includes(q);
+  });
+  list.sort((a,b)=>{
+    let x=a[sortK],y=b[sortK];
+    if(typeof x==='string'||typeof y==='string'){return sortDir*((x||'')+'').localeCompare((y||'')+'');}
+    x=x==null?-1e15:x; y=y==null?-1e15:y; return sortDir*(x-y);
+  });
+  render(list);
+  document.querySelectorAll('th').forEach(th=>{th.classList.toggle('sorted',th.dataset.k===sortK);th.dataset.dir=th.dataset.k===sortK?(sortDir<0?'▼':'▲'):'';});
+}
+document.querySelectorAll('th').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.k; if(k==='i')return;
+  if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=(typeof DATA[0][k]==='string')?1:-1;}
+  apply();
+}));
+document.getElementById('q').addEventListener('input',apply);
+// chips
+const ytds=DATA.map(r=>r.ytd).filter(v=>v!=null);
+const avg=ytds.reduce((a,b)=>a+b,0)/(ytds.length||1);
+const best=DATA.filter(r=>r.ytd!=null).reduce((a,b)=>b.ytd>a.ytd?b:a,{ytd:-1e9});
+const hot=DATA.filter(r=>r.score>=4).length;
+document.getElementById('chips').innerHTML=[
+  ['אחזקות',DATA.length],
+  ['ציון 4+',hot],
+  ['YTD ממוצע',(avg>0?'+':'')+avg.toFixed(1)+'%'],
+  ['מובילה YTD',best.t+' '+fmtPct(best.ytd)],
+].map(c=>`<div class="chip"><span class="cl">${c[0]}</span><span class="cv">${c[1]}</span></div>`).join('');
+// legend / sector filter
+const counts={}; DATA.forEach(r=>counts[r.sector]=(counts[r.sector]||0)+1);
+const segs=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+document.getElementById('legend').innerHTML=segs.map(s=>
+  `<span class="seg" data-s="${s}" aria-pressed="true"><span class="dot" style="background:${sc(s)}"></span>${LABELS[s]||s}<span class="n">${counts[s]}</span></span>`).join('');
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.s;
+  if(active.has(s)&&active.size>1){active.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{active.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+// status filter chips
+const stCounts={interested:0,watch:0,not:0,'':0};
+DATA.forEach(r=>{stCounts[r.status||'']++;});
+document.getElementById('statuses').innerHTML='<span class="lbl">סטטוס:</span>'+
+  [['interested','⭐ מעניינת'],['watch','👁 מעקב'],['not','🚫 לא'],['','ללא סטטוס']].map(([k,l])=>
+   `<span class="st-seg" data-st="${k}" aria-pressed="true">${l}<span class="n">${stCounts[k]||0}</span></span>`).join('');
+document.querySelectorAll('.st-seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.st;
+  if(activeSt.has(s)&&activeSt.size>1){activeSt.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{activeSt.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+apply();
+</script>
+</body>
+</html>

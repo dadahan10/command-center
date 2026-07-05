@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XLC — Communication Services · Screener</title>
+<style>
+*{box-sizing:border-box}
+body{--ground:#f6faf9;--panel:#fff;--ink:#15241f;--muted:#617069;--accent:#0e7c6f;--accent-soft:#e7f2ef;--border:#e2ebe8;--up:#0f7a52;--dn:#c23b2e;
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--ground);margin:0;line-height:1.4;}
+.wrap{max-width:1280px;margin:0 auto;padding:30px 20px 60px;}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+h1{font-size:clamp(24px,3.6vw,36px);margin:.12em 0 .1em;letter-spacing:-.01em;}
+h1 .tk{font-family:ui-monospace,Consolas,monospace;background:var(--accent);color:#fff;padding:2px 10px;border-radius:8px;font-size:.72em;vertical-align:middle;margin-inline-start:8px;}
+.sub{color:var(--muted);font-size:14px;max-width:78ch;margin:.2em 0 0;}
+.sub b{color:var(--ink);}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.chip{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:8px 13px;display:flex;flex-direction:column;gap:2px;min-width:92px;}
+.chip .cl{font-size:11px;color:var(--muted);}
+.chip .cv{font-size:15.5px;font-weight:650;font-variant-numeric:tabular-nums;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;}
+.statuses{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;align-items:center;}
+.statuses .lbl{font-size:12px;color:var(--muted);margin-inline-end:4px;}
+.st-seg{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12.5px;cursor:pointer;user-select:none;transition:.12s;}
+.st-seg[aria-pressed="false"]{opacity:.42;}
+.st-seg:hover{border-color:var(--accent);}
+.st-seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px;}
+.st-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.01em;}
+.st-interested{background:#d8efe1;color:#0f7a52;}
+.st-watch{background:#dfe8f4;color:#31548a;}
+.st-not{background:#eef1f0;color:#8b9894;}
+.st-empty{color:#c3ccc9;}
+.seg{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:6px 13px 6px 11px;font-size:13px;cursor:pointer;user-select:none;transition:.12s;}
+.seg .dot{width:11px;height:11px;border-radius:50%;}
+.seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;}
+.seg[aria-pressed="false"]{opacity:.42;}
+.seg:hover{border-color:var(--accent);}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 12px;flex-wrap:wrap;}
+#q{flex:1;min-width:200px;max-width:360px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:var(--panel);color:var(--ink);}
+#q:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+.hint{font-size:12.5px;color:var(--muted);}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:var(--panel);}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:1080px;}
+thead th{position:sticky;top:0;background:var(--accent-soft);color:#0a5a50;text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.02em;
+ padding:10px 11px;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--border);user-select:none;}
+thead th.num{text-align:right;}
+thead th:hover{background:#dcece8;}
+thead th.sorted{color:var(--accent);}
+thead th.sorted::after{content:attr(data-dir);font-size:10px;margin-inline-start:4px;}
+tbody td{padding:8px 11px;border-bottom:1px solid #eef4f2;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f4faf8;}
+td.num{text-align:right;white-space:nowrap;}
+td.i{color:var(--muted);font-size:11.5px;}
+td.tkr{font-weight:700;letter-spacing:.02em;font-family:ui-monospace,Consolas,monospace;border-inline-start:4px solid var(--sc);padding-inline-start:10px;}
+td.co{font-weight:550;white-space:nowrap;}
+td.desc{color:var(--muted);font-size:12px;text-align:right;min-width:210px;max-width:300px;white-space:normal;line-height:1.34;}
+td.notes{text-align:right;min-width:150px;max-width:240px;white-space:normal;font-size:11.5px;}
+.note{display:block;color:#3a4a45;}
+.note .dt{color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;}
+.note-empty{color:#c3ccc9;}
+td.w{position:relative;min-width:92px;}
+.wbar{position:absolute;right:11px;bottom:4px;height:3px;width:var(--w);max-width:60px;background:var(--sc);border-radius:2px;opacity:.6;}
+.score{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;cursor:help;}
+.s0,.s1{background:#eef1f0;color:#8b9894;}
+.s2{background:#e9eef3;color:#6f8199;}
+.s3{background:#fbf0d8;color:#9a6f16;}
+.s4{background:#d8efe1;color:#0f7a52;}
+.s5{background:#0f7a52;color:#fff;}
+.up{color:var(--up);}
+.dn{color:var(--dn);}
+.foot{margin-top:16px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6;}
+.foot code{background:#eef4f2;padding:1px 6px;border-radius:5px;font-size:11px;}
+@media(max-width:640px){.wrap{padding:18px 11px 40px;}.chip{flex:1;min-width:44%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">SPDR Sector ETF · Holdings Screener</div>
+  <h1>Communication Services <span class="tk">XLC</span></h1>
+  <p class="sub">כל האחזקות של תעודת הסל, עם ציון סינון לפי הקריטריונים של דניאל (pullback בתוך uptrend + value). מחירי סגירה <b>2026-07-02</b> · אחזקות: State Street As of 01-Jul-2026 · חציון P/E בסקטור: <b>21.4</b>.</p>
+  <div class="chips" id="chips"></div>
+  
+  <div class="legend" id="legend"></div>
+  <div class="statuses" id="statuses"></div>
+</header>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="חיפוש לפי שם, טיקר, תיאור או הערה…" aria-label="חיפוש">
+  <span class="hint">לחיצה על כותרת ממיינת · לחיצה על סקטור בלגנדה מסננת · ריחוף על ציון מראה פירוט</span>
+</div>
+<div class="tablewrap" dir="ltr">
+<table>
+<thead><tr>
+  <th class="num" data-k="i">#</th>
+  <th data-k="t">Ticker</th>
+  <th data-k="name">Company</th>
+  <th class="desc" data-k="desc">מה החברה עושה</th>
+  <th data-k="_stsort">Status</th>
+  <th class="notes" data-k="_nsort">הערות שלי</th>
+  <th class="num" data-k="score">Score</th>
+  <th class="num" data-k="w">Weight</th>
+  <th class="num" data-k="price">Price</th>
+  <th class="num" data-k="mcap">Mkt Cap</th>
+  <th class="num" data-k="d1">1D</th>
+  <th class="num" data-k="w1">1W</th>
+  <th class="num" data-k="m1">1M</th>
+  <th class="num" data-k="ytd">YTD</th>
+  <th class="num" data-k="y1">12M</th>
+</tr></thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+<footer class="foot">
+  <div><b>שיטת הציון (0–5):</b> נקודה לכל קריטריון שמתקיים — Uptrend (מעל ממוצע 200) · Pullback (בתחום פיבו 0.382–0.618) · RSI&lt;50 · MACD&lt;0 · Value (P/E מתחת לחציון או פוטנציאל אנליסטים &gt;15%). 5 = הכי מתאים לכניסה.</div>
+  <div style="margin-top:6px">שער (gate): שווי שוק &gt;$1B — מוצג בריחוף על הציון. תשואות = שינוי מחיר בלבד. לא ייעוץ השקעות.</div>
+</footer>
+</div>
+<script>
+const DATA=[{"t": "META", "name": "Meta Platforms Inc Class A", "w": 17.966, "desc": "מטא — פייסבוק/אינסטגרם/ווטסאפ + AI", "price": 582.9, "mcap": 1479647035392, "d1": -4.9, "w1": 7.37, "m1": -2.46, "ytd": -11.69, "y1": -18.31, "rsi": 49.6, "macd": -8.46, "above200": false, "retr": 0.784, "pe": 21.2, "upside": 42.1, "sector": "internet-content-information", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "GOOGL", "name": "Alphabet Inc Cl A", "w": 10.967, "desc": "אלפבית — גוגל, יוטיוב, קלאוד, AI (Gemini)", "price": 359.91, "mcap": 4391827931136, "d1": -0.36, "w1": 4.71, "m1": -0.54, "ytd": 14.99, "y1": 101.47, "rsi": 49.5, "macd": -4.34, "above200": true, "retr": 0.187, "pe": 27.5, "upside": 20.1, "sector": "internet-content-information", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "GOOG", "name": "Alphabet Inc Cl C", "w": 8.759, "desc": "אלפבית — גוגל (מניה C)", "price": 356.18, "mcap": 4346312392704, "d1": -0.48, "w1": 4.09, "m1": -0.62, "ytd": 13.51, "y1": 98.14, "rsi": 48.6, "macd": -4.41, "above200": true, "retr": 0.191, "pe": 27.2, "upside": 19.8, "sector": "internet-content-information", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "TTWO", "name": "Take Two Interactive Softwre", "w": 4.485, "desc": "טייק-טו — משחקי וידאו (GTA)", "price": 254.99, "mcap": 47343140864, "d1": 1.87, "w1": 6.82, "m1": 14.66, "ytd": -0.41, "y1": 6.46, "rsi": 72.5, "macd": 7.85, "above200": true, "retr": 0.101, "pe": null, "upside": 10.6, "sector": "electronic-gaming-multimedia", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "LYV", "name": "Live Nation Entertainment In", "w": 4.462, "desc": "לייב ניישן — כרטוסים ואירועים (Ticketmaster)", "price": 186.59, "mcap": 43421880320, "d1": 1.42, "w1": 6.56, "m1": 11.3, "ytd": 30.94, "y1": 25.14, "rsi": 73.7, "macd": 4.88, "above200": true, "retr": 0.0, "pe": null, "upside": -0.6, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "NFLX", "name": "Netflix Inc", "w": 4.452, "desc": "נטפליקס — סטרימינג", "price": 77.65, "mcap": 326968508416, "d1": 4.66, "w1": 9.52, "m1": -6.82, "ytd": -17.18, "y1": -39.57, "rsi": 47.3, "macd": -3.23, "above200": false, "retr": 0.885, "pe": 25.0, "upside": 46.7, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "EA", "name": "Electronic Arts Inc", "w": 4.436, "desc": "אלקטרוניק ארטס — משחקי וידאו", "price": 205.21, "mcap": 51456712704, "d1": -0.12, "w1": 0.23, "m1": 1.58, "ytd": 0.43, "y1": 30.68, "rsi": 66.7, "macd": 0.84, "above200": true, "retr": 0.004, "pe": 58.5, "upside": 0.3, "sector": "electronic-gaming-multimedia", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "TMUS", "name": "T Mobile Us Inc", "w": 4.405, "desc": "T-Mobile — סלולר", "price": 177.52, "mcap": 192112984064, "d1": 2.58, "w1": -2.23, "m1": -5.99, "ytd": -12.57, "y1": -25.23, "rsi": 44.6, "macd": -3.56, "above200": false, "retr": 0.893, "pe": 18.9, "upside": 45.9, "sector": "telecom-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "WBD", "name": "Warner Bros Discovery Inc", "w": 4.376, "desc": "וורנר בראדרס דיסקברי — אולפני קולנוע וסטרימינג", "price": 26.48, "mcap": 66388979712, "d1": -1.23, "w1": -1.85, "m1": -2.58, "ytd": -8.12, "y1": 138.13, "rsi": 44.8, "macd": -0.06, "above200": true, "retr": 0.182, "pe": null, "upside": 13.0, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": false}, "score": 3, "gate_mcap": true}, {"t": "CMCSA", "name": "Comcast Corp Class A", "w": 4.338, "desc": "קומקאסט — כבלים, ספק אינטרנט ותוכן (NBCUniversal)", "price": 23.79, "mcap": 84983324672, "d1": 0.25, "w1": 4.85, "m1": -4.27, "ytd": -15.08, "y1": -29.15, "rsi": 48.0, "macd": -0.36, "above200": false, "retr": 0.871, "pe": 4.7, "upside": 35.7, "sector": "telecom-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "DIS", "name": "Walt Disney Co/The", "w": 4.297, "desc": "וולט דיסני — תוכן, סטרימינג ופארקים", "price": 99.5, "mcap": 172782895104, "d1": 3.96, "w1": 1.48, "m1": -1.88, "ytd": -12.54, "y1": -19.09, "rsi": 47.7, "macd": -1.1, "above200": false, "retr": 0.776, "pe": 15.9, "upside": 30.3, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "VZ", "name": "Verizon Communications Inc", "w": 4.216, "desc": "ורייזון — סלולר", "price": 42.56, "mcap": 177711792128, "d1": 1.36, "w1": -7.62, "m1": -11.09, "ytd": 4.49, "y1": -2.36, "rsi": 34.3, "macd": -1.06, "above200": false, "retr": 0.68, "pe": 10.4, "upside": 22.0, "sector": "telecom-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "T", "name": "At+T Inc", "w": 4.156, "desc": "AT&T — סלולר ותקשורת", "price": 20.58, "mcap": 142996815872, "d1": 0.49, "w1": -8.21, "m1": -16.48, "ytd": -17.15, "y1": -27.3, "rsi": 28.6, "macd": -0.91, "above200": false, "retr": 0.989, "pe": 6.9, "upside": 46.9, "sector": "telecom-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "OMC", "name": "Omnicom Group", "w": 3.948, "desc": "אומניקום — פרסום", "price": 78.62, "mcap": 22407188480, "d1": 3.3, "w1": 7.07, "m1": 4.52, "ytd": -2.64, "y1": 4.8, "rsi": 61.3, "macd": 0.1, "above200": true, "retr": 0.387, "pe": null, "upside": 30.9, "sector": "advertising-agencies", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "ECHO", "name": "Echostar Corp A", "w": 2.502, "desc": "", "price": 101.5, "mcap": 29416071168, "d1": 0.61, "w1": 4.43, "m1": -17.85, "ytd": -6.62, "y1": 244.18, "rsi": 38.3, "macd": -6.45, "above200": false, "retr": 0.349, "pe": null, "upside": 43.2, "sector": "telecom-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "TKO", "name": "Tko Group Holdings Inc", "w": 2.32, "desc": "", "price": 194.42, "mcap": 37158772736, "d1": -3.96, "w1": -4.6, "m1": -4.97, "ytd": -6.98, "y1": 9.56, "rsi": 44.2, "macd": 1.47, "above200": false, "retr": 0.44, "pe": 72.5, "upside": 20.6, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": true, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "CHTR", "name": "Charter Communications Inc A", "w": 2.129, "desc": "ספק אינטרנט וכבלים (Charter/Spectrum)", "price": 137.2, "mcap": 21496270848, "d1": -1.89, "w1": 5.82, "m1": -2.19, "ytd": -34.28, "y1": -66.72, "rsi": 46.5, "macd": -3.31, "above200": false, "retr": 0.96, "pe": 3.7, "upside": 67.8, "sector": "telecom-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "FOXA", "name": "Fox Corp   Class A", "w": 1.965, "desc": "פוקס קורפ — מניה A", "price": 56.48, "mcap": 23715987456, "d1": 4.34, "w1": 15.6, "m1": -14.02, "ytd": -22.7, "y1": 2.45, "rsi": 48.7, "macd": -3.06, "above200": false, "retr": 0.719, "pe": 14.9, "upside": 28.0, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "NWSA", "name": "News Corp   Class A", "w": 1.712, "desc": "News Corp — מדיה (מניה A)", "price": 26.64, "mcap": 14485846016, "d1": 3.34, "w1": 6.43, "m1": 0.87, "ytd": 1.99, "y1": -10.03, "rsi": 57.5, "macd": -0.17, "above200": true, "retr": 0.509, "pe": 33.7, "upside": 32.0, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "TTD", "name": "Trade Desk Inc/The  Class A", "w": 1.488, "desc": "", "price": 19.1, "mcap": 8979069952, "d1": -0.26, "w1": 10.21, "m1": -9.48, "ytd": -49.68, "y1": -74.04, "rsi": 47.7, "macd": -0.7, "above200": false, "retr": 0.976, "pe": 21.7, "upside": 27.9, "sector": "advertising-agencies", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "FOX", "name": "Fox Corp   Class B", "w": 1.225, "desc": "פוקס קורפ — חדשות וספורט", "price": 50.56, "mcap": 21230176256, "d1": 4.42, "w1": 13.9, "m1": -13.79, "ytd": -22.13, "y1": -0.41, "rsi": 47.6, "macd": -2.71, "above200": false, "retr": 0.736, "pe": 13.3, "upside": null, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "NWS", "name": "News Corp   Class B", "w": 0.641, "desc": "News Corp — מדיה (WSJ)", "price": 30.17, "mcap": 16405329920, "d1": 3.15, "w1": 6.46, "m1": -0.03, "ytd": 1.82, "y1": -12.19, "rsi": 56.2, "macd": -0.29, "above200": true, "retr": 0.525, "pe": 38.2, "upside": null, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": true, "value": false}, "score": 3, "gate_mcap": true}, {"t": "PSKY", "name": "Paramount Skydance Cl B", "w": 0.584, "desc": "", "price": 10.39, "mcap": 11628209152, "d1": 2.16, "w1": 10.18, "m1": -3.62, "ytd": -22.46, "y1": -19.08, "rsi": 54.9, "macd": -0.13, "above200": false, "retr": 0.854, "pe": 346.3, "upside": 21.7, "sector": "entertainment", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 2, "gate_mcap": true}], LABELS={}, COLORS={"pharma": "#6d5bd0", "device": "#0e9488", "payer": "#c0872e", "g0": "#6d5bd0", "g1": "#0e9488", "g2": "#c0872e", "g3": "#c2557a", "g4": "#4478c4", "g5": "#7a8a55"};
+const active=new Set(Object.keys(LABELS).length?Object.keys(LABELS):[...new Set(DATA.map(r=>r.sector))]);
+const sc=s=>COLORS[s]||'#0e7c6f';
+const fmtMcap=v=>v==null?'—':v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(0)+'B':'$'+(v/1e6).toFixed(0)+'M';
+const fmtPct=v=>v==null?'—':(v>0?'+':'')+v.toFixed(1)+'%';
+const fmtPrice=v=>v==null?'—':'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const ccls=v=>v==null?'':v>0?'up':v<0?'dn':'';
+const STATUS_META={interested:{lbl:'⭐ מעניינת',cls:'st-interested',ord:3},watch:{lbl:'👁 מעקב',cls:'st-watch',ord:2},not:{lbl:'🚫 לא',cls:'st-not',ord:1}};
+DATA.forEach((r,i)=>{r._rank=i+1;r._nsort=(r.notes&&r.notes.length)?1:0;r._stsort=STATUS_META[r.status]?.ord||0;});
+const activeSt=new Set(['interested','watch','not','']);  // '' = unmarked
+let sortK='w', sortDir=-1;
+const body=document.getElementById('body');
+function scoreTip(r){
+  const s=r.sig, m={uptrend:'Uptrend (>MA200)',pullback:'Pullback (fib 0.382–0.618)',rsi:'RSI<50 ('+r.rsi+')',macd:'MACD<0 ('+r.macd+')',value:'Value (P/E '+(r.pe??'—')+' / upside '+(r.upside!=null?r.upside+'%':'—')+')'};
+  let t=Object.keys(m).map(k=>(s[k]?'✓ ':'✗ ')+m[k]).join('\n');
+  t+='\n— gate —\n'+(r.gate_mcap?'✓':'✗')+' MktCap>$1B';
+  return t;
+}
+function notesCell(r){
+  if(!r.notes||!r.notes.length) return '<span class="note-empty">—</span>';
+  return r.notes.map(n=>`<span class="note">${n.text} <span class="dt">${n.date}</span></span>`).join('');
+}
+function statusCell(r){
+  const m=STATUS_META[r.status]; if(!m) return '<span class="st-empty">—</span>';
+  return `<span class="st-tag ${m.cls}">${m.lbl}</span>`;
+}
+function render(list){
+  body.innerHTML=list.map(r=>`<tr>
+    <td class="num i">${r._rank}</td>
+    <td class="tkr" style="--sc:${sc(r.sector)}">${r.t}</td>
+    <td class="co">${r.name}</td>
+    <td class="desc" dir="rtl">${r.desc||''}</td>
+    <td dir="rtl">${statusCell(r)}</td>
+    <td class="notes" dir="rtl">${notesCell(r)}</td>
+    <td class="num"><span class="score s${r.score}" title="${scoreTip(r).replace(/"/g,'&quot;')}">${r.score}</span></td>
+    <td class="num w"><span class="wbar" style="--w:${(r.w/(DATA[0].w||1)*100).toFixed(1)}%;--sc:${sc(r.sector)}"></span>${r.w.toFixed(2)}%</td>
+    <td class="num mono">${fmtPrice(r.price)}</td>
+    <td class="num mono">${fmtMcap(r.mcap)}</td>
+    <td class="num mono ${ccls(r.d1)}">${fmtPct(r.d1)}</td>
+    <td class="num mono ${ccls(r.w1)}">${fmtPct(r.w1)}</td>
+    <td class="num mono ${ccls(r.m1)}">${fmtPct(r.m1)}</td>
+    <td class="num mono ${ccls(r.ytd)}">${fmtPct(r.ytd)}</td>
+    <td class="num mono ${ccls(r.y1)}">${fmtPct(r.y1)}</td>
+  </tr>`).join('');
+}
+function apply(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=DATA.filter(r=>active.has(r.sector)).filter(r=>activeSt.has(r.status||'')).filter(r=>{
+    if(!q)return true;
+    const nz=(r.notes||[]).map(n=>n.text).join(' ');
+    return r.t.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||(r.desc||'').includes(q)||nz.includes(q);
+  });
+  list.sort((a,b)=>{
+    let x=a[sortK],y=b[sortK];
+    if(typeof x==='string'||typeof y==='string'){return sortDir*((x||'')+'').localeCompare((y||'')+'');}
+    x=x==null?-1e15:x; y=y==null?-1e15:y; return sortDir*(x-y);
+  });
+  render(list);
+  document.querySelectorAll('th').forEach(th=>{th.classList.toggle('sorted',th.dataset.k===sortK);th.dataset.dir=th.dataset.k===sortK?(sortDir<0?'▼':'▲'):'';});
+}
+document.querySelectorAll('th').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.k; if(k==='i')return;
+  if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=(typeof DATA[0][k]==='string')?1:-1;}
+  apply();
+}));
+document.getElementById('q').addEventListener('input',apply);
+// chips
+const ytds=DATA.map(r=>r.ytd).filter(v=>v!=null);
+const avg=ytds.reduce((a,b)=>a+b,0)/(ytds.length||1);
+const best=DATA.filter(r=>r.ytd!=null).reduce((a,b)=>b.ytd>a.ytd?b:a,{ytd:-1e9});
+const hot=DATA.filter(r=>r.score>=4).length;
+document.getElementById('chips').innerHTML=[
+  ['אחזקות',DATA.length],
+  ['ציון 4+',hot],
+  ['YTD ממוצע',(avg>0?'+':'')+avg.toFixed(1)+'%'],
+  ['מובילה YTD',best.t+' '+fmtPct(best.ytd)],
+].map(c=>`<div class="chip"><span class="cl">${c[0]}</span><span class="cv">${c[1]}</span></div>`).join('');
+// legend / sector filter
+const counts={}; DATA.forEach(r=>counts[r.sector]=(counts[r.sector]||0)+1);
+const segs=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+document.getElementById('legend').innerHTML=segs.map(s=>
+  `<span class="seg" data-s="${s}" aria-pressed="true"><span class="dot" style="background:${sc(s)}"></span>${LABELS[s]||s}<span class="n">${counts[s]}</span></span>`).join('');
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.s;
+  if(active.has(s)&&active.size>1){active.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{active.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+// status filter chips
+const stCounts={interested:0,watch:0,not:0,'':0};
+DATA.forEach(r=>{stCounts[r.status||'']++;});
+document.getElementById('statuses').innerHTML='<span class="lbl">סטטוס:</span>'+
+  [['interested','⭐ מעניינת'],['watch','👁 מעקב'],['not','🚫 לא'],['','ללא סטטוס']].map(([k,l])=>
+   `<span class="st-seg" data-st="${k}" aria-pressed="true">${l}<span class="n">${stCounts[k]||0}</span></span>`).join('');
+document.querySelectorAll('.st-seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.st;
+  if(activeSt.has(s)&&activeSt.size>1){activeSt.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{activeSt.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+apply();
+</script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>URA — Uranium (Global X) · Screener</title>
+<style>
+*{box-sizing:border-box}
+body{--ground:#f6faf9;--panel:#fff;--ink:#15241f;--muted:#617069;--accent:#0e7c6f;--accent-soft:#e7f2ef;--border:#e2ebe8;--up:#0f7a52;--dn:#c23b2e;
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--ground);margin:0;line-height:1.4;}
+.wrap{max-width:1280px;margin:0 auto;padding:30px 20px 60px;}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+h1{font-size:clamp(24px,3.6vw,36px);margin:.12em 0 .1em;letter-spacing:-.01em;}
+h1 .tk{font-family:ui-monospace,Consolas,monospace;background:var(--accent);color:#fff;padding:2px 10px;border-radius:8px;font-size:.72em;vertical-align:middle;margin-inline-start:8px;}
+.sub{color:var(--muted);font-size:14px;max-width:78ch;margin:.2em 0 0;}
+.sub b{color:var(--ink);}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.chip{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:8px 13px;display:flex;flex-direction:column;gap:2px;min-width:92px;}
+.chip .cl{font-size:11px;color:var(--muted);}
+.chip .cv{font-size:15.5px;font-weight:650;font-variant-numeric:tabular-nums;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;}
+.statuses{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;align-items:center;}
+.statuses .lbl{font-size:12px;color:var(--muted);margin-inline-end:4px;}
+.st-seg{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12.5px;cursor:pointer;user-select:none;transition:.12s;}
+.st-seg[aria-pressed="false"]{opacity:.42;}
+.st-seg:hover{border-color:var(--accent);}
+.st-seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px;}
+.st-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.01em;}
+.st-interested{background:#d8efe1;color:#0f7a52;}
+.st-watch{background:#dfe8f4;color:#31548a;}
+.st-not{background:#eef1f0;color:#8b9894;}
+.st-empty{color:#c3ccc9;}
+.seg{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:6px 13px 6px 11px;font-size:13px;cursor:pointer;user-select:none;transition:.12s;}
+.seg .dot{width:11px;height:11px;border-radius:50%;}
+.seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;}
+.seg[aria-pressed="false"]{opacity:.42;}
+.seg:hover{border-color:var(--accent);}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 12px;flex-wrap:wrap;}
+#q{flex:1;min-width:200px;max-width:360px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:var(--panel);color:var(--ink);}
+#q:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+.hint{font-size:12.5px;color:var(--muted);}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:var(--panel);}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:1080px;}
+thead th{position:sticky;top:0;background:var(--accent-soft);color:#0a5a50;text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.02em;
+ padding:10px 11px;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--border);user-select:none;}
+thead th.num{text-align:right;}
+thead th:hover{background:#dcece8;}
+thead th.sorted{color:var(--accent);}
+thead th.sorted::after{content:attr(data-dir);font-size:10px;margin-inline-start:4px;}
+tbody td{padding:8px 11px;border-bottom:1px solid #eef4f2;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f4faf8;}
+td.num{text-align:right;white-space:nowrap;}
+td.i{color:var(--muted);font-size:11.5px;}
+td.tkr{font-weight:700;letter-spacing:.02em;font-family:ui-monospace,Consolas,monospace;border-inline-start:4px solid var(--sc);padding-inline-start:10px;}
+td.co{font-weight:550;white-space:nowrap;}
+td.desc{color:var(--muted);font-size:12px;text-align:right;min-width:210px;max-width:300px;white-space:normal;line-height:1.34;}
+td.notes{text-align:right;min-width:150px;max-width:240px;white-space:normal;font-size:11.5px;}
+.note{display:block;color:#3a4a45;}
+.note .dt{color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;}
+.note-empty{color:#c3ccc9;}
+td.w{position:relative;min-width:92px;}
+.wbar{position:absolute;right:11px;bottom:4px;height:3px;width:var(--w);max-width:60px;background:var(--sc);border-radius:2px;opacity:.6;}
+.score{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;cursor:help;}
+.s0,.s1{background:#eef1f0;color:#8b9894;}
+.s2{background:#e9eef3;color:#6f8199;}
+.s3{background:#fbf0d8;color:#9a6f16;}
+.s4{background:#d8efe1;color:#0f7a52;}
+.s5{background:#0f7a52;color:#fff;}
+.up{color:var(--up);}
+.dn{color:var(--dn);}
+.foot{margin-top:16px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6;}
+.foot code{background:#eef4f2;padding:1px 6px;border-radius:5px;font-size:11px;}
+@media(max-width:640px){.wrap{padding:18px 11px 40px;}.chip{flex:1;min-width:44%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">SPDR Sector ETF · Holdings Screener</div>
+  <h1>Uranium (Global X) <span class="tk">URA</span></h1>
+  <p class="sub">כל האחזקות של תעודת הסל, עם ציון סינון לפי הקריטריונים של דניאל (pullback בתוך uptrend + value). מחירי סגירה <b>2026-07-02</b> · אחזקות: State Street top-3 (partial, via yfinance) · חציון P/E בסקטור: <b>None</b>.</p>
+  <div class="chips" id="chips"></div>
+  <div style="background:#fbf0d8;color:#9a6f16;padding:10px 14px;border-radius:10px;margin:12px 0 4px;font-size:13px;">⚠️ נתונים חלקיים — האחזקות המלאות לא נמשכו מהמנפיק. מוצגות רק 2 האחזקות הגדולות (via yfinance top_holdings). ציון סינון תקף אך הקבוצה חלקית.</div>
+  <div class="legend" id="legend"></div>
+  <div class="statuses" id="statuses"></div>
+</header>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="חיפוש לפי שם, טיקר, תיאור או הערה…" aria-label="חיפוש">
+  <span class="hint">לחיצה על כותרת ממיינת · לחיצה על סקטור בלגנדה מסננת · ריחוף על ציון מראה פירוט</span>
+</div>
+<div class="tablewrap" dir="ltr">
+<table>
+<thead><tr>
+  <th class="num" data-k="i">#</th>
+  <th data-k="t">Ticker</th>
+  <th data-k="name">Company</th>
+  <th class="desc" data-k="desc">מה החברה עושה</th>
+  <th data-k="_stsort">Status</th>
+  <th class="notes" data-k="_nsort">הערות שלי</th>
+  <th class="num" data-k="score">Score</th>
+  <th class="num" data-k="w">Weight</th>
+  <th class="num" data-k="price">Price</th>
+  <th class="num" data-k="mcap">Mkt Cap</th>
+  <th class="num" data-k="d1">1D</th>
+  <th class="num" data-k="w1">1W</th>
+  <th class="num" data-k="m1">1M</th>
+  <th class="num" data-k="ytd">YTD</th>
+  <th class="num" data-k="y1">12M</th>
+</tr></thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+<footer class="foot">
+  <div><b>שיטת הציון (0–5):</b> נקודה לכל קריטריון שמתקיים — Uptrend (מעל ממוצע 200) · Pullback (בתחום פיבו 0.382–0.618) · RSI&lt;50 · MACD&lt;0 · Value (P/E מתחת לחציון או פוטנציאל אנליסטים &gt;15%). 5 = הכי מתאים לכניסה.</div>
+  <div style="margin-top:6px">שער (gate): שווי שוק &gt;$1B — מוצג בריחוף על הציון. תשואות = שינוי מחיר בלבד. לא ייעוץ השקעות.</div>
+</footer>
+</div>
+<script>
+const DATA=[{"t": "OKLO", "name": "Oklo Inc Class A Shares", "w": 7.371, "desc": "", "price": 52.36, "mcap": 9110168576, "d1": -0.17, "w1": 2.65, "m1": -28.73, "ytd": -27.03, "y1": 2.01, "rsi": 40.6, "macd": -3.2, "above200": false, "retr": 0.947, "pe": null, "upside": 69.3, "sector": "utilities-independent-power-producers", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "UEC", "name": "Uranium Energy Corp", "w": 5.854, "desc": "", "price": 10.77, "mcap": 5279677952, "d1": 2.09, "w1": 1.7, "m1": -30.25, "ytd": -7.79, "y1": 62.69, "rsi": 41.4, "macd": -0.69, "above200": false, "retr": 0.659, "pe": null, "upside": 69.5, "sector": "uranium", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}], LABELS={}, COLORS={"pharma": "#6d5bd0", "device": "#0e9488", "payer": "#c0872e", "g0": "#6d5bd0", "g1": "#0e9488", "g2": "#c0872e", "g3": "#c2557a", "g4": "#4478c4", "g5": "#7a8a55"};
+const active=new Set(Object.keys(LABELS).length?Object.keys(LABELS):[...new Set(DATA.map(r=>r.sector))]);
+const sc=s=>COLORS[s]||'#0e7c6f';
+const fmtMcap=v=>v==null?'—':v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(0)+'B':'$'+(v/1e6).toFixed(0)+'M';
+const fmtPct=v=>v==null?'—':(v>0?'+':'')+v.toFixed(1)+'%';
+const fmtPrice=v=>v==null?'—':'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const ccls=v=>v==null?'':v>0?'up':v<0?'dn':'';
+const STATUS_META={interested:{lbl:'⭐ מעניינת',cls:'st-interested',ord:3},watch:{lbl:'👁 מעקב',cls:'st-watch',ord:2},not:{lbl:'🚫 לא',cls:'st-not',ord:1}};
+DATA.forEach((r,i)=>{r._rank=i+1;r._nsort=(r.notes&&r.notes.length)?1:0;r._stsort=STATUS_META[r.status]?.ord||0;});
+const activeSt=new Set(['interested','watch','not','']);  // '' = unmarked
+let sortK='w', sortDir=-1;
+const body=document.getElementById('body');
+function scoreTip(r){
+  const s=r.sig, m={uptrend:'Uptrend (>MA200)',pullback:'Pullback (fib 0.382–0.618)',rsi:'RSI<50 ('+r.rsi+')',macd:'MACD<0 ('+r.macd+')',value:'Value (P/E '+(r.pe??'—')+' / upside '+(r.upside!=null?r.upside+'%':'—')+')'};
+  let t=Object.keys(m).map(k=>(s[k]?'✓ ':'✗ ')+m[k]).join('\n');
+  t+='\n— gate —\n'+(r.gate_mcap?'✓':'✗')+' MktCap>$1B';
+  return t;
+}
+function notesCell(r){
+  if(!r.notes||!r.notes.length) return '<span class="note-empty">—</span>';
+  return r.notes.map(n=>`<span class="note">${n.text} <span class="dt">${n.date}</span></span>`).join('');
+}
+function statusCell(r){
+  const m=STATUS_META[r.status]; if(!m) return '<span class="st-empty">—</span>';
+  return `<span class="st-tag ${m.cls}">${m.lbl}</span>`;
+}
+function render(list){
+  body.innerHTML=list.map(r=>`<tr>
+    <td class="num i">${r._rank}</td>
+    <td class="tkr" style="--sc:${sc(r.sector)}">${r.t}</td>
+    <td class="co">${r.name}</td>
+    <td class="desc" dir="rtl">${r.desc||''}</td>
+    <td dir="rtl">${statusCell(r)}</td>
+    <td class="notes" dir="rtl">${notesCell(r)}</td>
+    <td class="num"><span class="score s${r.score}" title="${scoreTip(r).replace(/"/g,'&quot;')}">${r.score}</span></td>
+    <td class="num w"><span class="wbar" style="--w:${(r.w/(DATA[0].w||1)*100).toFixed(1)}%;--sc:${sc(r.sector)}"></span>${r.w.toFixed(2)}%</td>
+    <td class="num mono">${fmtPrice(r.price)}</td>
+    <td class="num mono">${fmtMcap(r.mcap)}</td>
+    <td class="num mono ${ccls(r.d1)}">${fmtPct(r.d1)}</td>
+    <td class="num mono ${ccls(r.w1)}">${fmtPct(r.w1)}</td>
+    <td class="num mono ${ccls(r.m1)}">${fmtPct(r.m1)}</td>
+    <td class="num mono ${ccls(r.ytd)}">${fmtPct(r.ytd)}</td>
+    <td class="num mono ${ccls(r.y1)}">${fmtPct(r.y1)}</td>
+  </tr>`).join('');
+}
+function apply(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=DATA.filter(r=>active.has(r.sector)).filter(r=>activeSt.has(r.status||'')).filter(r=>{
+    if(!q)return true;
+    const nz=(r.notes||[]).map(n=>n.text).join(' ');
+    return r.t.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||(r.desc||'').includes(q)||nz.includes(q);
+  });
+  list.sort((a,b)=>{
+    let x=a[sortK],y=b[sortK];
+    if(typeof x==='string'||typeof y==='string'){return sortDir*((x||'')+'').localeCompare((y||'')+'');}
+    x=x==null?-1e15:x; y=y==null?-1e15:y; return sortDir*(x-y);
+  });
+  render(list);
+  document.querySelectorAll('th').forEach(th=>{th.classList.toggle('sorted',th.dataset.k===sortK);th.dataset.dir=th.dataset.k===sortK?(sortDir<0?'▼':'▲'):'';});
+}
+document.querySelectorAll('th').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.k; if(k==='i')return;
+  if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=(typeof DATA[0][k]==='string')?1:-1;}
+  apply();
+}));
+document.getElementById('q').addEventListener('input',apply);
+// chips
+const ytds=DATA.map(r=>r.ytd).filter(v=>v!=null);
+const avg=ytds.reduce((a,b)=>a+b,0)/(ytds.length||1);
+const best=DATA.filter(r=>r.ytd!=null).reduce((a,b)=>b.ytd>a.ytd?b:a,{ytd:-1e9});
+const hot=DATA.filter(r=>r.score>=4).length;
+document.getElementById('chips').innerHTML=[
+  ['אחזקות',DATA.length],
+  ['ציון 4+',hot],
+  ['YTD ממוצע',(avg>0?'+':'')+avg.toFixed(1)+'%'],
+  ['מובילה YTD',best.t+' '+fmtPct(best.ytd)],
+].map(c=>`<div class="chip"><span class="cl">${c[0]}</span><span class="cv">${c[1]}</span></div>`).join('');
+// legend / sector filter
+const counts={}; DATA.forEach(r=>counts[r.sector]=(counts[r.sector]||0)+1);
+const segs=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+document.getElementById('legend').innerHTML=segs.map(s=>
+  `<span class="seg" data-s="${s}" aria-pressed="true"><span class="dot" style="background:${sc(s)}"></span>${LABELS[s]||s}<span class="n">${counts[s]}</span></span>`).join('');
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.s;
+  if(active.has(s)&&active.size>1){active.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{active.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+// status filter chips
+const stCounts={interested:0,watch:0,not:0,'':0};
+DATA.forEach(r=>{stCounts[r.status||'']++;});
+document.getElementById('statuses').innerHTML='<span class="lbl">סטטוס:</span>'+
+  [['interested','⭐ מעניינת'],['watch','👁 מעקב'],['not','🚫 לא'],['','ללא סטטוס']].map(([k,l])=>
+   `<span class="st-seg" data-st="${k}" aria-pressed="true">${l}<span class="n">${stCounts[k]||0}</span></span>`).join('');
+document.querySelectorAll('.st-seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.st;
+  if(activeSt.has(s)&&activeSt.size>1){activeSt.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{activeSt.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+apply();
+</script>
+</body>
+</html>

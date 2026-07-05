@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XLY — Consumer Discretionary · Screener</title>
+<style>
+*{box-sizing:border-box}
+body{--ground:#f6faf9;--panel:#fff;--ink:#15241f;--muted:#617069;--accent:#0e7c6f;--accent-soft:#e7f2ef;--border:#e2ebe8;--up:#0f7a52;--dn:#c23b2e;
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--ground);margin:0;line-height:1.4;}
+.wrap{max-width:1280px;margin:0 auto;padding:30px 20px 60px;}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+h1{font-size:clamp(24px,3.6vw,36px);margin:.12em 0 .1em;letter-spacing:-.01em;}
+h1 .tk{font-family:ui-monospace,Consolas,monospace;background:var(--accent);color:#fff;padding:2px 10px;border-radius:8px;font-size:.72em;vertical-align:middle;margin-inline-start:8px;}
+.sub{color:var(--muted);font-size:14px;max-width:78ch;margin:.2em 0 0;}
+.sub b{color:var(--ink);}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+.chip{background:var(--panel);border:1px solid var(--border);border-radius:11px;padding:8px 13px;display:flex;flex-direction:column;gap:2px;min-width:92px;}
+.chip .cl{font-size:11px;color:var(--muted);}
+.chip .cv{font-size:15.5px;font-weight:650;font-variant-numeric:tabular-nums;}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 4px;}
+.statuses{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px;align-items:center;}
+.statuses .lbl{font-size:12px;color:var(--muted);margin-inline-end:4px;}
+.st-seg{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:5px 12px;font-size:12.5px;cursor:pointer;user-select:none;transition:.12s;}
+.st-seg[aria-pressed="false"]{opacity:.42;}
+.st-seg:hover{border-color:var(--accent);}
+.st-seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px;}
+.st-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.01em;}
+.st-interested{background:#d8efe1;color:#0f7a52;}
+.st-watch{background:#dfe8f4;color:#31548a;}
+.st-not{background:#eef1f0;color:#8b9894;}
+.st-empty{color:#c3ccc9;}
+.seg{display:inline-flex;align-items:center;gap:7px;background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:6px 13px 6px 11px;font-size:13px;cursor:pointer;user-select:none;transition:.12s;}
+.seg .dot{width:11px;height:11px;border-radius:50%;}
+.seg .n{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;}
+.seg[aria-pressed="false"]{opacity:.42;}
+.seg:hover{border-color:var(--accent);}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 12px;flex-wrap:wrap;}
+#q{flex:1;min-width:200px;max-width:360px;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;background:var(--panel);color:var(--ink);}
+#q:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+.hint{font-size:12.5px;color:var(--muted);}
+.tablewrap{overflow-x:auto;border:1px solid var(--border);border-radius:14px;background:var(--panel);}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:1080px;}
+thead th{position:sticky;top:0;background:var(--accent-soft);color:#0a5a50;text-align:left;font-weight:600;font-size:11.5px;letter-spacing:.02em;
+ padding:10px 11px;cursor:pointer;white-space:nowrap;border-bottom:1px solid var(--border);user-select:none;}
+thead th.num{text-align:right;}
+thead th:hover{background:#dcece8;}
+thead th.sorted{color:var(--accent);}
+thead th.sorted::after{content:attr(data-dir);font-size:10px;margin-inline-start:4px;}
+tbody td{padding:8px 11px;border-bottom:1px solid #eef4f2;vertical-align:middle;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:#f4faf8;}
+td.num{text-align:right;white-space:nowrap;}
+td.i{color:var(--muted);font-size:11.5px;}
+td.tkr{font-weight:700;letter-spacing:.02em;font-family:ui-monospace,Consolas,monospace;border-inline-start:4px solid var(--sc);padding-inline-start:10px;}
+td.co{font-weight:550;white-space:nowrap;}
+td.desc{color:var(--muted);font-size:12px;text-align:right;min-width:210px;max-width:300px;white-space:normal;line-height:1.34;}
+td.notes{text-align:right;min-width:150px;max-width:240px;white-space:normal;font-size:11.5px;}
+.note{display:block;color:#3a4a45;}
+.note .dt{color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums;}
+.note-empty{color:#c3ccc9;}
+td.w{position:relative;min-width:92px;}
+.wbar{position:absolute;right:11px;bottom:4px;height:3px;width:var(--w);max-width:60px;background:var(--sc);border-radius:2px;opacity:.6;}
+.score{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;cursor:help;}
+.s0,.s1{background:#eef1f0;color:#8b9894;}
+.s2{background:#e9eef3;color:#6f8199;}
+.s3{background:#fbf0d8;color:#9a6f16;}
+.s4{background:#d8efe1;color:#0f7a52;}
+.s5{background:#0f7a52;color:#fff;}
+.up{color:var(--up);}
+.dn{color:var(--dn);}
+.foot{margin-top:16px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6;}
+.foot code{background:#eef4f2;padding:1px 6px;border-radius:5px;font-size:11px;}
+@media(max-width:640px){.wrap{padding:18px 11px 40px;}.chip{flex:1;min-width:44%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">SPDR Sector ETF · Holdings Screener</div>
+  <h1>Consumer Discretionary <span class="tk">XLY</span></h1>
+  <p class="sub">כל האחזקות של תעודת הסל, עם ציון סינון לפי הקריטריונים של דניאל (pullback בתוך uptrend + value). מחירי סגירה <b>2026-07-02</b> · אחזקות: State Street As of 01-Jul-2026 · חציון P/E בסקטור: <b>25.5</b>.</p>
+  <div class="chips" id="chips"></div>
+  
+  <div class="legend" id="legend"></div>
+  <div class="statuses" id="statuses"></div>
+</header>
+<div class="toolbar">
+  <input id="q" type="search" placeholder="חיפוש לפי שם, טיקר, תיאור או הערה…" aria-label="חיפוש">
+  <span class="hint">לחיצה על כותרת ממיינת · לחיצה על סקטור בלגנדה מסננת · ריחוף על ציון מראה פירוט</span>
+</div>
+<div class="tablewrap" dir="ltr">
+<table>
+<thead><tr>
+  <th class="num" data-k="i">#</th>
+  <th data-k="t">Ticker</th>
+  <th data-k="name">Company</th>
+  <th class="desc" data-k="desc">מה החברה עושה</th>
+  <th data-k="_stsort">Status</th>
+  <th class="notes" data-k="_nsort">הערות שלי</th>
+  <th class="num" data-k="score">Score</th>
+  <th class="num" data-k="w">Weight</th>
+  <th class="num" data-k="price">Price</th>
+  <th class="num" data-k="mcap">Mkt Cap</th>
+  <th class="num" data-k="d1">1D</th>
+  <th class="num" data-k="w1">1W</th>
+  <th class="num" data-k="m1">1M</th>
+  <th class="num" data-k="ytd">YTD</th>
+  <th class="num" data-k="y1">12M</th>
+</tr></thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+<footer class="foot">
+  <div><b>שיטת הציון (0–5):</b> נקודה לכל קריטריון שמתקיים — Uptrend (מעל ממוצע 200) · Pullback (בתחום פיבו 0.382–0.618) · RSI&lt;50 · MACD&lt;0 · Value (P/E מתחת לחציון או פוטנציאל אנליסטים &gt;15%). 5 = הכי מתאים לכניסה.</div>
+  <div style="margin-top:6px">שער (gate): שווי שוק &gt;$1B — מוצג בריחוף על הציון. תשואות = שינוי מחיר בלבד. לא ייעוץ השקעות.</div>
+</footer>
+</div>
+<script>
+const DATA=[{"t": "AMZN", "name": "Amazon.Com Inc", "w": 22.393, "desc": "אמזון — מסחר אלקטרוני + AWS", "price": 242.67, "mcap": 2610427854848, "d1": 0.4, "w1": 6.9, "m1": -5.4, "ytd": 5.13, "y1": 10.34, "rsi": 48.7, "macd": -4.39, "above200": true, "retr": 0.424, "pe": 31.6, "upside": 28.9, "sector": "internet-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": true, "macd": true, "value": true}, "score": 5, "gate_mcap": true}, {"t": "TSLA", "name": "Tesla Inc", "w": 19.735, "desc": "טסלה — רכב חשמלי", "price": 393.45, "mcap": 1477689606144, "d1": -7.49, "w1": 4.89, "m1": -7.15, "ytd": -12.51, "y1": 24.65, "rsi": 46.8, "macd": -1.63, "above200": false, "retr": 0.492, "pe": 357.7, "upside": 7.6, "sector": "auto-manufacturers", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": true, "macd": true, "value": false}, "score": 3, "gate_mcap": true}, {"t": "HD", "name": "Home Depot Inc", "w": 5.76, "desc": "הום דיפו — קמעונות שיפוץ ובנייה", "price": 357.9, "mcap": 356868063232, "d1": 2.01, "w1": 3.74, "m1": 14.89, "ytd": 4.01, "y1": -3.75, "rsi": 69.5, "macd": 9.28, "above200": true, "retr": 0.52, "pe": 25.4, "upside": 3.5, "sector": "home-improvement-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "MCD", "name": "Mcdonald S Corp", "w": 4.114, "desc": "מקדונלד׳ס — רשת מזון מהיר", "price": 280.63, "mcap": 199389265920, "d1": 4.16, "w1": 6.08, "m1": 1.55, "ytd": -8.18, "y1": -4.75, "rsi": 53.6, "macd": -2.97, "above200": false, "retr": 0.79, "pe": 23.2, "upside": 17.5, "sector": "restaurants", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 2, "gate_mcap": true}, {"t": "TJX", "name": "Tjx Companies Inc", "w": 3.895, "desc": "קמעונות אופנה מוזלת (TJ Maxx)", "price": 154.26, "mcap": 170411687936, "d1": 1.92, "w1": -0.6, "m1": 0.37, "ytd": 0.42, "y1": 23.1, "rsi": 41.5, "macd": -1.35, "above200": true, "retr": 0.301, "pe": 30.0, "upside": 15.2, "sector": "apparel-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "BKNG", "name": "Booking Holdings Inc", "w": 3.499, "desc": "בוקינג — הזמנות תיירות (Booking.com)", "price": 184.56, "mcap": 143011561472, "d1": 1.05, "w1": 4.24, "m1": 10.38, "ytd": -13.84, "y1": -19.08, "rsi": 63.1, "macd": 4.31, "above200": false, "retr": 0.612, "pe": 24.3, "upside": 21.6, "sector": "travel-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "LOW", "name": "Lowe S Cos Inc", "w": 3.073, "desc": "לואוס — קמעונות שיפוץ ובנייה", "price": 227.5, "mcap": 127627501568, "d1": 2.51, "w1": 2.51, "m1": 10.09, "ytd": -5.66, "y1": 0.25, "rsi": 58.7, "macd": 0.73, "above200": false, "retr": 0.742, "pe": 19.2, "upside": 15.9, "sector": "home-improvement-retail", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 1, "gate_mcap": true}, {"t": "SBUX", "name": "Starbucks Corp", "w": 2.913, "desc": "סטארבקס — רשת קפה", "price": 104.27, "mcap": 118836510720, "d1": 0.85, "w1": 1.08, "m1": 9.17, "ytd": 23.82, "y1": 10.71, "rsi": 58.2, "macd": 0.86, "above200": true, "retr": 0.09, "pe": 79.6, "upside": 1.6, "sector": "restaurants", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "MAR", "name": "Marriott International  Cl A", "w": 1.993, "desc": "מלונות מריוט", "price": 372.95, "mcap": 98342674432, "d1": 1.26, "w1": -1.57, "m1": -0.22, "ytd": 20.21, "y1": 34.39, "rsi": 44.1, "macd": -0.55, "above200": true, "retr": 0.201, "pe": 39.1, "upside": 2.1, "sector": "lodging", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": false}, "score": 3, "gate_mcap": true}, {"t": "ORLY", "name": "O Reilly Automotive Inc", "w": 1.899, "desc": "חלקי חילוף לרכב (O'Reilly)", "price": 90.25, "mcap": 74791534592, "d1": -2.63, "w1": 3.86, "m1": 4.66, "ytd": -1.05, "y1": 1.04, "rsi": 51.6, "macd": 0.09, "above200": false, "retr": 0.792, "pe": 29.4, "upside": 22.2, "sector": "auto-parts", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 1, "gate_mcap": true}, {"t": "RCL", "name": "Royal Caribbean Cruises Ltd", "w": 1.889, "desc": "קרוזי רויאל קריביאן", "price": 296.3, "mcap": 79466168320, "d1": -3.26, "w1": -8.17, "m1": 1.89, "ytd": 6.23, "y1": -9.14, "rsi": 48.8, "macd": 8.93, "above200": true, "retr": 0.584, "pe": 18.1, "upside": 13.7, "sector": "travel-services", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": true, "macd": false, "value": true}, "score": 4, "gate_mcap": true}, {"t": "HLT", "name": "Hilton Worldwide Holdings In", "w": 1.869, "desc": "מלונות הילטון", "price": 338.12, "mcap": 76972466176, "d1": 1.81, "w1": -0.71, "m1": 1.58, "ytd": 17.71, "y1": 25.18, "rsi": 52.2, "macd": 1.15, "above200": true, "retr": 0.129, "pe": 51.5, "upside": 2.7, "sector": "lodging", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "DASH", "name": "Doordash Inc   A", "w": 1.767, "desc": "", "price": 192.01, "mcap": 83662348288, "d1": 1.66, "w1": 8.54, "m1": 22.34, "ytd": -15.22, "y1": -19.59, "rsi": 69.8, "macd": 7.33, "above200": false, "retr": 0.664, "pe": 91.0, "upside": 28.1, "sector": "internet-retail", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 1, "gate_mcap": true}, {"t": "ROST", "name": "Ross Stores Inc", "w": 1.688, "desc": "קמעונות אופנה מוזלת (Ross)", "price": 213.43, "mcap": 68464304128, "d1": 0.72, "w1": -0.79, "m1": -4.64, "ytd": 18.48, "y1": 62.28, "rsi": 38.8, "macd": -3.81, "above200": true, "retr": 0.237, "pe": 29.9, "upside": 20.0, "sector": "apparel-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "GM", "name": "General Motors Co", "w": 1.684, "desc": "ג׳נרל מוטורס — יצרן רכב", "price": 76.0, "mcap": 68526555136, "d1": 0.64, "w1": -3.22, "m1": -7.01, "ytd": -6.54, "y1": 44.27, "rsi": 39.4, "macd": -0.89, "above200": true, "retr": 0.277, "pe": 27.7, "upside": 25.6, "sector": "auto-manufacturers", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 4, "gate_mcap": true}, {"t": "ABNB", "name": "Airbnb Inc Class A", "w": 1.522, "desc": "Airbnb — השכרות קצרות", "price": 148.93, "mcap": 88390680576, "d1": 1.1, "w1": 4.97, "m1": 10.85, "ytd": 9.73, "y1": 10.0, "rsi": 63.9, "macd": 3.2, "above200": true, "retr": 0.0, "pe": 36.8, "upside": 5.2, "sector": "travel-services", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "F", "name": "Ford Motor Co", "w": 1.32, "desc": "פורד — יצרן רכב", "price": 13.36, "mcap": 53235494912, "d1": -2.05, "w1": -5.32, "m1": -17.28, "ytd": 1.83, "y1": 13.51, "rsi": 38.7, "macd": -0.16, "above200": true, "retr": 0.616, "pe": null, "upside": 11.5, "sector": "auto-manufacturers", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": true, "macd": true, "value": false}, "score": 4, "gate_mcap": true}, {"t": "AZO", "name": "Autozone Inc", "w": 1.311, "desc": "חלקי חילוף לרכב (AutoZone)", "price": 3159.28, "mcap": 51576369152, "d1": -1.83, "w1": 3.28, "m1": 4.29, "ytd": -6.85, "y1": -14.27, "rsi": 50.6, "macd": -18.66, "above200": false, "retr": 0.842, "pe": 21.7, "upside": 25.6, "sector": "auto-parts", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 2, "gate_mcap": true}, {"t": "NKE", "name": "Nike Inc  Cl B", "w": 1.277, "desc": "נייקי — הלבשה וספורט", "price": 44.09, "mcap": 65292308480, "d1": 2.39, "w1": 7.8, "m1": 0.82, "ytd": -30.8, "y1": -42.28, "rsi": 52.9, "macd": -0.61, "above200": false, "retr": 0.913, "pe": 21.0, "upside": 16.7, "sector": "footwear-accessories", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 2, "gate_mcap": true}, {"t": "EBAY", "name": "Ebay Inc", "w": 1.222, "desc": "אי-ביי — מסחר אלקטרוני", "price": 114.84, "mcap": 50988957696, "d1": 3.2, "w1": 6.33, "m1": 5.47, "ytd": 31.85, "y1": 51.54, "rsi": 62.6, "macd": 0.77, "above200": true, "retr": 0.094, "pe": 26.5, "upside": -5.8, "sector": "internet-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "CVNA", "name": "Carvana Co", "w": 1.202, "desc": "", "price": 68.6, "mcap": 75242930176, "d1": 1.08, "w1": 3.63, "m1": 4.57, "ytd": -18.72, "y1": -0.11, "rsi": 52.1, "macd": -0.84, "above200": false, "retr": 0.687, "pe": 39.7, "upside": 34.2, "sector": "auto-truck-dealerships", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 2, "gate_mcap": true}, {"t": "CMG", "name": "Chipotle Mexican Grill Inc", "w": 1.11, "desc": "צ׳יפוטלה — רשת מקסיקנית מהירה", "price": 35.39, "mcap": 45395955712, "d1": 1.11, "w1": 9.63, "m1": 20.95, "ytd": -4.35, "y1": -37.66, "rsi": 66.2, "macd": 0.68, "above200": false, "retr": 0.75, "pe": 32.5, "upside": 21.6, "sector": "restaurants", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 1, "gate_mcap": true}, {"t": "YUM", "name": "Yum  Brands Inc", "w": 1.101, "desc": "KFC/Taco Bell/Pizza Hut", "price": 164.73, "mcap": 45403082752, "d1": 1.94, "w1": 8.99, "m1": 12.38, "ytd": 8.89, "y1": 9.69, "rsi": 68.5, "macd": 2.13, "above200": true, "retr": 0.115, "pe": 26.6, "upside": 5.5, "sector": "restaurants", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "DHI", "name": "Dr Horton Inc", "w": 1.024, "desc": "בונה בתים (D.R. Horton)", "price": 158.57, "mcap": 44967223296, "d1": 0.96, "w1": -5.02, "m1": 7.21, "ytd": 10.1, "y1": 16.93, "rsi": 54.7, "macd": 3.85, "above200": true, "retr": 0.47, "pe": 14.9, "upside": 6.1, "sector": "residential-construction", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": false, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "GRMN", "name": "Garmin Ltd", "w": 0.963, "desc": "נווטים ומכשירי ספורט (Garmin)", "price": 240.02, "mcap": 46289346560, "d1": 1.0, "w1": 1.96, "m1": -0.42, "ytd": 18.32, "y1": 12.48, "rsi": 54.0, "macd": -0.4, "above200": true, "retr": 0.342, "pe": 26.8, "upside": 9.3, "sector": "scientific-technical-instruments", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": true, "value": false}, "score": 2, "gate_mcap": true}, {"t": "CCL", "name": "Carnival Corp Ltd", "w": 0.907, "desc": "קרוזי קרנבל", "price": 27.91, "mcap": 38226907136, "d1": -2.14, "w1": -1.93, "m1": 0.98, "ytd": -8.61, "y1": -5.87, "rsi": 47.6, "macd": 0.37, "above200": false, "retr": 0.602, "pe": 12.6, "upside": 28.5, "sector": "travel-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": true, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "EXPE", "name": "Expedia Group Inc", "w": 0.749, "desc": "אקספדיה — הזמנות תיירות", "price": 268.69, "mcap": 32248733696, "d1": 1.57, "w1": 7.07, "m1": 18.7, "ytd": -5.16, "y1": 57.12, "rsi": 65.1, "macd": 9.33, "above200": true, "retr": 0.25, "pe": 23.8, "upside": 6.5, "sector": "travel-services", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "TPR", "name": "Tapestry Inc", "w": 0.719, "desc": "", "price": 144.21, "mcap": 29136871424, "d1": 0.15, "w1": -1.23, "m1": 4.01, "ytd": 12.87, "y1": 66.76, "rsi": 49.4, "macd": 1.16, "above200": true, "retr": 0.22, "pe": 44.1, "upside": 15.6, "sector": "luxury-goods", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "WSM", "name": "Williams Sonoma Inc", "w": 0.664, "desc": "", "price": 227.53, "mcap": 26790885376, "d1": -0.27, "w1": -5.22, "m1": 11.62, "ytd": 27.4, "y1": 31.38, "rsi": 58.4, "macd": 9.33, "above200": true, "retr": 0.165, "pe": 25.5, "upside": -7.0, "sector": "specialty-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "PHM", "name": "Pultegroup Inc", "w": 0.624, "desc": "בונה בתים (PulteGroup)", "price": 133.67, "mcap": 25462310912, "d1": 0.81, "w1": -1.58, "m1": 13.5, "ytd": 13.99, "y1": 20.06, "rsi": 61.9, "macd": 4.44, "above200": true, "retr": 0.257, "pe": 12.9, "upside": 3.3, "sector": "residential-construction", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "DRI", "name": "Darden Restaurants Inc", "w": 0.572, "desc": "", "price": 204.32, "mcap": 23401791488, "d1": 1.17, "w1": -3.97, "m1": 3.05, "ytd": 11.03, "y1": -6.84, "rsi": 47.9, "macd": 1.49, "above200": true, "retr": 0.312, "pe": 19.6, "upside": 11.7, "sector": "restaurants", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": true, "macd": false, "value": true}, "score": 3, "gate_mcap": true}, {"t": "ULTA", "name": "Ulta Beauty Inc", "w": 0.49, "desc": "קמעונות יופי (Ulta)", "price": 461.33, "mcap": 19832258560, "d1": 1.44, "w1": -4.98, "m1": -6.78, "ytd": -23.75, "y1": -2.85, "rsi": 43.8, "macd": -9.62, "above200": false, "retr": 0.959, "pe": 17.3, "upside": 36.0, "sector": "specialty-retail", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "LEN", "name": "Lennar Corp W/D", "w": 0.463, "desc": "בונה בתים (Lennar)", "price": 88.21, "mcap": 21249359872, "d1": 1.32, "w1": -6.02, "m1": -2.96, "ytd": -14.19, "y1": -23.5, "rsi": 46.5, "macd": -0.0, "above200": false, "retr": 0.902, "pe": 13.8, "upside": 0.4, "sector": "residential-construction", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "NVR", "name": "Nvr Inc", "w": 0.443, "desc": "בונה בתים (NVR)", "price": 6750.79, "mcap": 18222354432, "d1": 1.61, "w1": -0.93, "m1": 9.22, "ytd": -7.43, "y1": -13.1, "rsi": 60.9, "macd": 154.87, "above200": false, "retr": 0.602, "pe": 16.5, "upside": 5.6, "sector": "residential-construction", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "TSCO", "name": "Tractor Supply Company", "w": 0.418, "desc": "קמעונות חקלאות ובעלי חיים (Tractor Supply)", "price": 31.76, "mcap": 16656519168, "d1": -1.55, "w1": 3.28, "m1": 5.83, "ytd": -36.49, "y1": -42.4, "rsi": 53.6, "macd": -0.16, "above200": false, "retr": 0.922, "pe": 15.6, "upside": 41.0, "sector": "specialty-retail", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 2, "gate_mcap": true}, {"t": "GPC", "name": "Genuine Parts Co", "w": 0.399, "desc": "", "price": 132.57, "mcap": 18443419648, "d1": 12.92, "w1": 17.33, "m1": 33.44, "ytd": 7.82, "y1": 4.0, "rsi": 83.2, "macd": 5.62, "above200": true, "retr": 0.294, "pe": 301.3, "upside": 1.1, "sector": "auto-parts", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "RL", "name": "Ralph Lauren Corp", "w": 0.38, "desc": "", "price": 398.22, "mcap": 23700598784, "d1": 0.05, "w1": -2.9, "m1": 9.55, "ytd": 12.62, "y1": 45.06, "rsi": 54.2, "macd": 9.02, "above200": true, "retr": 0.115, "pe": 26.4, "upside": 7.9, "sector": "apparel-manufacturing", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "BBY", "name": "Best Buy Co Inc", "w": 0.374, "desc": "בסט באי — קמעונות אלקטרוניקה", "price": 77.99, "mcap": 16437727232, "d1": 0.98, "w1": 1.43, "m1": 7.16, "ytd": 16.52, "y1": 8.94, "rsi": 62.0, "macd": 2.58, "above200": true, "retr": 0.211, "pe": 14.4, "upside": 1.5, "sector": "specialty-retail", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "DECK", "name": "Deckers Outdoor Corp", "w": 0.352, "desc": "", "price": 104.69, "mcap": 14539448320, "d1": 4.35, "w1": 2.05, "m1": -5.51, "ytd": 0.98, "y1": -1.48, "rsi": 48.6, "macd": -1.29, "above200": true, "retr": 0.433, "pe": 14.9, "upside": 21.2, "sector": "footwear-accessories", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": true, "rsi": true, "macd": true, "value": true}, "score": 5, "gate_mcap": true}, {"t": "LVS", "name": "Las Vegas Sands Corp", "w": 0.341, "desc": "קזינו לאס וגאס סנדס (Macau)", "price": 46.99, "mcap": 31137329152, "d1": 1.6, "w1": 1.53, "m1": -8.24, "ytd": -27.81, "y1": -1.8, "rsi": 38.6, "macd": -1.3, "above200": false, "retr": 0.966, "pe": 17.3, "upside": 45.8, "sector": "resorts-casinos", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "APTV", "name": "Aptiv Plc", "w": 0.315, "desc": "", "price": 58.89, "mcap": 12462332928, "d1": -2.31, "w1": -4.97, "m1": -20.26, "ytd": -22.6, "y1": -18.42, "rsi": 41.2, "macd": -1.01, "above200": false, "retr": 0.825, "pe": 35.1, "upside": 31.8, "sector": "auto-parts", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "LULU", "name": "Lululemon Athletica Inc", "w": 0.301, "desc": "הלבשה ספורטיבית (Lululemon)", "price": 118.43, "mcap": 13448190976, "d1": 1.74, "w1": 5.68, "m1": -6.36, "ytd": -43.01, "y1": -51.92, "rsi": 49.2, "macd": -3.26, "above200": false, "retr": 0.909, "pe": 9.6, "upside": 11.6, "sector": "apparel-retail", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "HAS", "name": "Hasbro Inc", "w": 0.271, "desc": "", "price": 80.15, "mcap": 11340478464, "d1": -1.61, "w1": -5.57, "m1": -4.45, "ytd": -2.26, "y1": 2.47, "rsi": 33.2, "macd": -1.71, "above200": false, "retr": 0.737, "pe": null, "upside": 40.1, "sector": "leisure", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}, {"t": "NCLH", "name": "Norwegian Cruise Line Holdin", "w": 0.235, "desc": "קרוזי נורוויג׳יאן", "price": 19.78, "mcap": 9081198592, "d1": -4.31, "w1": -5.72, "m1": 9.1, "ytd": -11.38, "y1": -7.44, "rsi": 50.7, "macd": 0.72, "above200": false, "retr": 0.589, "pe": 16.0, "upside": 9.1, "sector": "travel-services", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": true, "rsi": false, "macd": false, "value": true}, "score": 2, "gate_mcap": true}, {"t": "DPZ", "name": "Domino S Pizza Inc", "w": 0.23, "desc": "פיצה דומינו", "price": 311.66, "mcap": 10366394368, "d1": 2.46, "w1": 9.19, "m1": 1.34, "ytd": -25.23, "y1": -31.34, "rsi": 52.6, "macd": -5.35, "above200": false, "retr": 0.859, "pe": 18.0, "upside": 28.5, "sector": "restaurants", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": false, "macd": true, "value": true}, "score": 2, "gate_mcap": true}, {"t": "MGM", "name": "Mgm Resorts International", "w": 0.225, "desc": "קזינו MGM", "price": 47.1, "mcap": 12050592768, "d1": -0.88, "w1": -0.21, "m1": -2.61, "ytd": 29.08, "y1": 25.03, "rsi": 55.0, "macd": 1.35, "above200": true, "retr": 0.18, "pe": 64.5, "upside": 0.4, "sector": "resorts-casinos", "notes": [], "status": "", "sig": {"uptrend": true, "pullback": false, "rsi": false, "macd": false, "value": false}, "score": 1, "gate_mcap": true}, {"t": "WYNN", "name": "Wynn Resorts Ltd", "w": 0.199, "desc": "קזינו וויין", "price": 95.91, "mcap": 9954185216, "d1": -0.21, "w1": -3.49, "m1": -8.33, "ytd": -20.29, "y1": -8.38, "rsi": 35.7, "macd": -1.49, "above200": false, "retr": 0.971, "pe": 27.5, "upside": 41.7, "sector": "resorts-casinos", "notes": [], "status": "", "sig": {"uptrend": false, "pullback": false, "rsi": true, "macd": true, "value": true}, "score": 3, "gate_mcap": true}], LABELS={}, COLORS={"pharma": "#6d5bd0", "device": "#0e9488", "payer": "#c0872e", "g0": "#6d5bd0", "g1": "#0e9488", "g2": "#c0872e", "g3": "#c2557a", "g4": "#4478c4", "g5": "#7a8a55"};
+const active=new Set(Object.keys(LABELS).length?Object.keys(LABELS):[...new Set(DATA.map(r=>r.sector))]);
+const sc=s=>COLORS[s]||'#0e7c6f';
+const fmtMcap=v=>v==null?'—':v>=1e12?'$'+(v/1e12).toFixed(2)+'T':v>=1e9?'$'+(v/1e9).toFixed(0)+'B':'$'+(v/1e6).toFixed(0)+'M';
+const fmtPct=v=>v==null?'—':(v>0?'+':'')+v.toFixed(1)+'%';
+const fmtPrice=v=>v==null?'—':'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const ccls=v=>v==null?'':v>0?'up':v<0?'dn':'';
+const STATUS_META={interested:{lbl:'⭐ מעניינת',cls:'st-interested',ord:3},watch:{lbl:'👁 מעקב',cls:'st-watch',ord:2},not:{lbl:'🚫 לא',cls:'st-not',ord:1}};
+DATA.forEach((r,i)=>{r._rank=i+1;r._nsort=(r.notes&&r.notes.length)?1:0;r._stsort=STATUS_META[r.status]?.ord||0;});
+const activeSt=new Set(['interested','watch','not','']);  // '' = unmarked
+let sortK='w', sortDir=-1;
+const body=document.getElementById('body');
+function scoreTip(r){
+  const s=r.sig, m={uptrend:'Uptrend (>MA200)',pullback:'Pullback (fib 0.382–0.618)',rsi:'RSI<50 ('+r.rsi+')',macd:'MACD<0 ('+r.macd+')',value:'Value (P/E '+(r.pe??'—')+' / upside '+(r.upside!=null?r.upside+'%':'—')+')'};
+  let t=Object.keys(m).map(k=>(s[k]?'✓ ':'✗ ')+m[k]).join('\n');
+  t+='\n— gate —\n'+(r.gate_mcap?'✓':'✗')+' MktCap>$1B';
+  return t;
+}
+function notesCell(r){
+  if(!r.notes||!r.notes.length) return '<span class="note-empty">—</span>';
+  return r.notes.map(n=>`<span class="note">${n.text} <span class="dt">${n.date}</span></span>`).join('');
+}
+function statusCell(r){
+  const m=STATUS_META[r.status]; if(!m) return '<span class="st-empty">—</span>';
+  return `<span class="st-tag ${m.cls}">${m.lbl}</span>`;
+}
+function render(list){
+  body.innerHTML=list.map(r=>`<tr>
+    <td class="num i">${r._rank}</td>
+    <td class="tkr" style="--sc:${sc(r.sector)}">${r.t}</td>
+    <td class="co">${r.name}</td>
+    <td class="desc" dir="rtl">${r.desc||''}</td>
+    <td dir="rtl">${statusCell(r)}</td>
+    <td class="notes" dir="rtl">${notesCell(r)}</td>
+    <td class="num"><span class="score s${r.score}" title="${scoreTip(r).replace(/"/g,'&quot;')}">${r.score}</span></td>
+    <td class="num w"><span class="wbar" style="--w:${(r.w/(DATA[0].w||1)*100).toFixed(1)}%;--sc:${sc(r.sector)}"></span>${r.w.toFixed(2)}%</td>
+    <td class="num mono">${fmtPrice(r.price)}</td>
+    <td class="num mono">${fmtMcap(r.mcap)}</td>
+    <td class="num mono ${ccls(r.d1)}">${fmtPct(r.d1)}</td>
+    <td class="num mono ${ccls(r.w1)}">${fmtPct(r.w1)}</td>
+    <td class="num mono ${ccls(r.m1)}">${fmtPct(r.m1)}</td>
+    <td class="num mono ${ccls(r.ytd)}">${fmtPct(r.ytd)}</td>
+    <td class="num mono ${ccls(r.y1)}">${fmtPct(r.y1)}</td>
+  </tr>`).join('');
+}
+function apply(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let list=DATA.filter(r=>active.has(r.sector)).filter(r=>activeSt.has(r.status||'')).filter(r=>{
+    if(!q)return true;
+    const nz=(r.notes||[]).map(n=>n.text).join(' ');
+    return r.t.toLowerCase().includes(q)||r.name.toLowerCase().includes(q)||(r.desc||'').includes(q)||nz.includes(q);
+  });
+  list.sort((a,b)=>{
+    let x=a[sortK],y=b[sortK];
+    if(typeof x==='string'||typeof y==='string'){return sortDir*((x||'')+'').localeCompare((y||'')+'');}
+    x=x==null?-1e15:x; y=y==null?-1e15:y; return sortDir*(x-y);
+  });
+  render(list);
+  document.querySelectorAll('th').forEach(th=>{th.classList.toggle('sorted',th.dataset.k===sortK);th.dataset.dir=th.dataset.k===sortK?(sortDir<0?'▼':'▲'):'';});
+}
+document.querySelectorAll('th').forEach(th=>th.addEventListener('click',()=>{
+  const k=th.dataset.k; if(k==='i')return;
+  if(sortK===k)sortDir*=-1;else{sortK=k;sortDir=(typeof DATA[0][k]==='string')?1:-1;}
+  apply();
+}));
+document.getElementById('q').addEventListener('input',apply);
+// chips
+const ytds=DATA.map(r=>r.ytd).filter(v=>v!=null);
+const avg=ytds.reduce((a,b)=>a+b,0)/(ytds.length||1);
+const best=DATA.filter(r=>r.ytd!=null).reduce((a,b)=>b.ytd>a.ytd?b:a,{ytd:-1e9});
+const hot=DATA.filter(r=>r.score>=4).length;
+document.getElementById('chips').innerHTML=[
+  ['אחזקות',DATA.length],
+  ['ציון 4+',hot],
+  ['YTD ממוצע',(avg>0?'+':'')+avg.toFixed(1)+'%'],
+  ['מובילה YTD',best.t+' '+fmtPct(best.ytd)],
+].map(c=>`<div class="chip"><span class="cl">${c[0]}</span><span class="cv">${c[1]}</span></div>`).join('');
+// legend / sector filter
+const counts={}; DATA.forEach(r=>counts[r.sector]=(counts[r.sector]||0)+1);
+const segs=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]);
+document.getElementById('legend').innerHTML=segs.map(s=>
+  `<span class="seg" data-s="${s}" aria-pressed="true"><span class="dot" style="background:${sc(s)}"></span>${LABELS[s]||s}<span class="n">${counts[s]}</span></span>`).join('');
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.s;
+  if(active.has(s)&&active.size>1){active.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{active.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+// status filter chips
+const stCounts={interested:0,watch:0,not:0,'':0};
+DATA.forEach(r=>{stCounts[r.status||'']++;});
+document.getElementById('statuses').innerHTML='<span class="lbl">סטטוס:</span>'+
+  [['interested','⭐ מעניינת'],['watch','👁 מעקב'],['not','🚫 לא'],['','ללא סטטוס']].map(([k,l])=>
+   `<span class="st-seg" data-st="${k}" aria-pressed="true">${l}<span class="n">${stCounts[k]||0}</span></span>`).join('');
+document.querySelectorAll('.st-seg').forEach(seg=>seg.addEventListener('click',()=>{
+  const s=seg.dataset.st;
+  if(activeSt.has(s)&&activeSt.size>1){activeSt.delete(s);seg.setAttribute('aria-pressed','false');}
+  else{activeSt.add(s);seg.setAttribute('aria-pressed','true');}
+  apply();
+}));
+apply();
+</script>
+</body>
+</html>
