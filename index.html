@@ -154,6 +154,40 @@
   .pill.warn{color:var(--warn);border-color:#3a341f}
   .pill.dev{color:var(--accent2);border-color:#1f2f4a}
 
+  /* clearance panel */
+  .clr-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:6px 0 12px}
+  .clr-kpi .k{background:linear-gradient(180deg,var(--panel),#10131c);border:1px solid var(--line);
+    border-radius:12px;padding:10px 12px;font-size:12px}
+  .clr-kpi .k b{display:block;font-size:20px;color:var(--txt);font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px}
+  .clr-kpi .k .lbl{color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+  .clr-kpi .k .sub{color:var(--muted);font-size:11px;margin-top:2px}
+  .clr-kpi .k.total b{color:var(--accent)}
+  .clr-kpi .k.sold b{color:var(--ok)}
+  .clr-kpi .k.hidden b{color:var(--warn)}
+  .clr-note{font-size:12px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-inline-start:3px solid var(--accent2);
+    border-radius:10px;padding:8px 13px;margin:6px 0 16px;line-height:1.6}
+  .clr-note a{color:var(--accent2);text-decoration:none;border-bottom:1px solid var(--accent2)}
+  .clr-sub{font-size:13px;color:var(--accent);font-weight:700;margin:18px 2px 8px;letter-spacing:.5px}
+  .clr-sub .cnt{color:var(--muted);font-weight:400;font-size:12px;margin-inline-start:8px}
+  table.clr{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  table.clr th{text-align:start;color:var(--muted);font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;
+    padding:7px 10px;border-bottom:1px solid var(--line);background:#10131c}
+  table.clr td{padding:6px 10px;border-bottom:1px solid #191d29;vertical-align:middle}
+  table.clr tr:last-child td{border-bottom:none}
+  table.clr tr:hover td{background:#141827}
+  table.clr td.j{font-family:"Consolas","Menlo",monospace;color:var(--accent);font-size:12px;white-space:nowrap}
+  table.clr td.nm{color:var(--txt)}
+  table.clr td.meta{color:var(--muted);font-size:11.5px;white-space:nowrap}
+  table.clr td.px{font-variant-numeric:tabular-nums;text-align:end;white-space:nowrap;font-weight:600}
+  table.clr td.px .was{color:var(--muted);text-decoration:line-through;font-weight:400;font-size:11px;margin-inline-end:5px}
+  table.clr td.lnk a{color:var(--accent2);text-decoration:none;font-size:11px}
+  table.clr td.lnk a:hover{color:var(--accent)}
+  table.clr tr.sold td{opacity:.7}
+  table.clr td.stmp{white-space:nowrap;font-size:11px}
+  table.clr td.stmp .sold-tag{background:rgba(251,113,133,.18);color:var(--hot);border:1px solid #3a1f2a;
+    padding:1px 8px;border-radius:8px;font-weight:700;font-size:10px;letter-spacing:.5px}
+  .clr-empty{color:var(--muted);font-size:13px;text-align:center;padding:22px;border:1px dashed var(--line);border-radius:10px}
+
   /* links (in side menu — stacked) */
   .links{display:flex;flex-direction:column;gap:16px}
   .lcol h4{font-size:13px;margin:0 0 8px;color:var(--txt)}
@@ -175,6 +209,7 @@
   <nav class="tabs" id="tabs">
     <button class="tab active" data-tab="proj">📂 פרויקטים</button>
     <button class="tab" data-tab="mkt">📣 שיווק</button>
+    <button class="tab" data-tab="clr">🏷️ חיסול</button>
     <button class="tab" data-tab="agents">🤖 סוכנים</button>
     <button class="tab" data-tab="files">🔗 קבצים ואתרים</button>
   </nav>
@@ -196,6 +231,18 @@
 
     <div class="sec-title">🗓️ לוח תוכן — כל כתבה / ניוזלטר / שליחה <span class="stat" id="calStat"></span></div>
     <div class="mktcal" id="mktcal"></div>
+  </section>
+
+  <section class="panel" id="panel-clr">
+    <div class="sec-title">🏷️ מכירת חיסול <span class="stat" id="clrStat">— טוען…</span></div>
+    <div class="clr-kpi" id="clrKpi"></div>
+    <div class="clr-note">
+      מקור: <a href="https://archive.dianarafael.com/" target="_blank" class="en">archive.dianarafael.com/data.csv</a> — נטען חי בכל פתיחת הקוקפיט.
+      עריכת מלאי (מחירים / <span class="en">SOLD</span> / הסתרה) נעשית בגיליון הגוגל — <span class="en">GitHub Action</span> מרענן אוטומטית כל 30 דק'.
+    </div>
+    <div id="clrLive"></div>
+    <div id="clrSold"></div>
+    <div id="clrHidden"></div>
   </section>
 
   <section class="panel" id="panel-agents">
@@ -637,6 +684,87 @@ $("links").innerHTML = `
   <div class="lcol"><h4>🌐 אתרים חיים</h4><ul>${L.sites.map(s=>`<li><a href="${s.u}" target="_blank">${s.t}</a></li>`).join("")}</ul></div>
   <div class="lcol"><h4>🏠 קבצים מקומיים</h4><ul>${L.files.map(f=>`<li>${f.t} <span class="local">🏠</span></li>`).join("")}</ul></div>
   <div class="lcol"><h4>🛠️ כלים</h4><ul>${L.tools.map(t=>`<li><a href="${t.u}" target="_blank">${t.t}</a></li>`).join("")}</ul></div>`;
+
+/* ---- Clearance panel (fetches remnant-clearance/data.csv live) ---- */
+(async function(){
+  const kpi=$("clrKpi"), stat=$("clrStat"),
+        live=$("clrLive"), sold=$("clrSold"), hid=$("clrHidden");
+  // ponytail: fetch direct from CNAME'd domain — dadahan10.github.io/remnant-clearance redirects to archive.dianarafael.com,
+  // and CORS on the 301 hop blocks a cross-origin fetch. Direct URL returns Access-Control-Allow-Origin: *.
+  const CSV_URL="https://archive.dianarafael.com/data.csv";
+  const SITE="https://archive.dianarafael.com";
+  const nfUSD=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0});
+  const nfILS=new Intl.NumberFormat("he-IL",{style:"currency",currency:"ILS",maximumFractionDigits:0});
+  let rows;
+  try{
+    const r=await fetch(CSV_URL,{cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const txt=await r.text();
+    // ponytail: naive split — CSV verified to have 19 fields per row and no embedded commas/quotes
+    const lines=txt.trim().split(/\r?\n/);
+    const head=lines.shift().split(",");
+    const idx=Object.fromEntries(head.map((h,i)=>[h.trim(),i]));
+    rows=lines.map(l=>l.split(",")).filter(r=>r[idx.j_number]);
+  }catch(e){
+    stat.textContent="";
+    live.innerHTML=`<div class="clr-empty">שגיאה בטעינת <span class="en">data.csv</span> — ${e.message}. פתח את הקוקפיט בסביבה חיה (<a href="https://dadahan10.github.io/command-center/" class="en">GitHub Pages</a>) — <span class="en">fetch</span> מכתובת מרוחקת חסום מקובץ מקומי.</div>`;
+    return;
+  }
+  const num=v=>{const n=parseFloat((v||"").replace(/[^\d.]/g,""));return isNaN(n)?0:n;};
+
+  // build by-show buckets (case-insensitive match on show column)
+  const b={live:[], sold:[], hidden:[]};
+  rows.forEach(r=>{
+    const showRaw=(r[1]||"").trim().toUpperCase();
+    if(showRaw==="SOLD") b.sold.push(r);
+    else if(showRaw==="TRUE") b.live.push(r);
+    else b.hidden.push(r);
+  });
+
+  // sort live pieces by price ILS desc
+  b.live.sort((a,c)=>num(c[13])-num(a[13]));
+
+  const sumILS=b.live.reduce((s,r)=>s+num(r[13]),0);
+  const sumUSD=b.live.reduce((s,r)=>s+num(r[12]),0);
+  const sumWasUSD=b.live.reduce((s,r)=>s+num(r[11]),0);
+  const savingsUSD=sumWasUSD-sumUSD;
+
+  stat.textContent=`· ${rows.length} פריטים · ${b.live.length} פעילים`;
+  kpi.innerHTML=`
+    <div class="k total"><span class="lbl">פעילים</span><b>${b.live.length}</b><div class="sub">מתוך ${rows.length} סה"כ</div></div>
+    <div class="k"><span class="lbl">שווי מלאי ₪</span><b>${nfILS.format(sumILS)}</b><div class="sub">${nfUSD.format(sumUSD)}</div></div>
+    <div class="k sold"><span class="lbl">נמכרו</span><b>${b.sold.length}</b></div>
+    <div class="k hidden"><span class="lbl">מוסתרים <span class="en">(FALSE)</span></span><b>${b.hidden.length}</b><div class="sub">לא בדף המכירה</div></div>
+    <div class="k"><span class="lbl">חיסכון מוצג</span><b>${nfUSD.format(savingsUSD)}</b><div class="sub">מ<span class="en">was</span> → <span class="en">now</span></div></div>`;
+
+  const rowHTML=(r,extraCls="")=>{
+    const j=r[0], title=r[2]||r[3]||"—", type=r[4]||"", ct=r[5]||"", shape=r[6]||"",
+          k=r[8]||"", gc=r[9]||"", pu=num(r[12]), wu=num(r[11]), pi=num(r[13]),
+          lnk=r[15]||"";
+    const meta=[type, shape&&ct?`${ct}ct ${shape}`:"", k&&gc?`${k} ${gc}`:""].filter(Boolean).join(" · ");
+    const wasHTML=wu&&wu>pu?`<span class="was">${nfUSD.format(wu)}</span>`:"";
+    const stamp=extraCls==="sold"?`<td class="stmp"><span class="sold-tag">SOLD</span></td>`:`<td class="stmp"></td>`;
+    return `<tr class="${extraCls}">
+      <td class="j">${j}</td>
+      <td class="nm">${title}</td>
+      <td class="meta">${meta}</td>
+      <td class="px">${pi?nfILS.format(pi):"—"}</td>
+      <td class="px">${wasHTML}${pu?nfUSD.format(pu):"—"}</td>
+      ${stamp}
+      <td class="lnk">${lnk?`<a href="${lnk}" target="_blank">מוצר ↗</a>`:""}</td>
+    </tr>`;
+  };
+  const tbl=(items,cls="")=>{
+    if(!items.length) return `<div class="clr-empty">אין פריטים בקטגוריה זו.</div>`;
+    return `<table class="clr"><thead><tr>
+      <th>J#</th><th>שם</th><th>מפרט</th><th>₪</th><th>$</th><th></th><th></th>
+      </tr></thead><tbody>${items.map(r=>rowHTML(r,cls)).join("")}</tbody></table>`;
+  };
+
+  live.innerHTML=`<div class="clr-sub">פעילים בדף החיסול <span class="cnt">${b.live.length} פריטים · מסודר לפי מחיר ₪</span></div>`+tbl(b.live);
+  if(b.sold.length) sold.innerHTML=`<div class="clr-sub">נמכרו <span class="cnt">${b.sold.length} פריטים · מוצגים בדף עם חותמת <span class="en">SOLD</span> שקופה</span></div>`+tbl(b.sold,"sold");
+  if(b.hidden.length) hid.innerHTML=`<div class="clr-sub">מוסתרים <span class="cnt">${b.hidden.length} פריטים · <span class="en">show=FALSE</span> — לא בדף המכירה (חסר תמונה / מחיר / החלטה)</span></div>`+tbl(b.hidden);
+})();
 
 /* ---- tab switching ---- */
 document.querySelectorAll(".tab").forEach(btn=>{
