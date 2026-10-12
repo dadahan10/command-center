@@ -1,0 +1,299 @@
+<title>המחברת</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap">
+<style>
+/* layout: sticky filter bar + tabbed single column of collapsible cards; nothing long is open by default */
+:root{
+  --bg:#f3f4f1; --paper:#ffffff; --paper-2:#eceee9; --line:#d6dad3; --ink:#1b1f1c; --ink-2:#4b524d; --muted:#7c837e;
+  --accent:#1f6f6a; --accent-2:#2c8f88; --accent-soft:#dcecea;
+  --ok:#2f7d4f; --ok-soft:#dff1e4; --warn:#9a6b12; --warn-soft:#f6ecd2; --bad:#a63b35; --bad-soft:#f5dedc; --info:#3b5a9a; --info-soft:#dfe6f5;
+  --office:#6a3fa0; --office-soft:#ebe2f6;
+  --font:'Heebo',system-ui,sans-serif; --serif:'Frank Ruhl Libre',Georgia,serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15181a; --paper:#1d2124; --paper-2:#262b2e; --line:#353b3f; --ink:#eef0ec; --ink-2:#c3c8c2; --muted:#8e958f;
+  --accent:#5fc2b9; --accent-2:#7ad3cb; --accent-soft:#1f3a38;
+  --ok:#7fd49c; --ok-soft:#1f3a2a; --warn:#e3b55a; --warn-soft:#3b3118; --bad:#ef8a83; --bad-soft:#3f2321; --info:#8fb0f0; --info-soft:#1f2a44;
+  --office:#c2a3f2; --office-soft:#2d2240; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15181a; --paper:#1d2124; --paper-2:#262b2e; --line:#353b3f; --ink:#eef0ec; --ink-2:#c3c8c2; --muted:#8e958f;
+  --accent:#5fc2b9; --accent-2:#7ad3cb; --accent-soft:#1f3a38;
+  --ok:#7fd49c; --ok-soft:#1f3a2a; --warn:#e3b55a; --warn-soft:#3b3118; --bad:#ef8a83; --bad-soft:#3f2321; --info:#8fb0f0; --info-soft:#1f2a44;
+  --office:#c2a3f2; --office-soft:#2d2240; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:400;line-height:1.6;direction:rtl;font-size:15px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font:inherit;cursor:pointer}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem}
+input:focus,textarea:focus,select:focus,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1100px;margin:0 auto;padding-block:0 4rem;padding-inline:16px}
+
+/* header */
+header.top{padding-block:1.4rem .6rem}
+header.top h1{font-family:var(--serif);font-weight:500;font-size:2rem;margin:0;line-height:1.1;text-wrap:balance}
+header.top .sub{color:var(--muted);font-size:.85rem;margin-top:.3rem;display:flex;gap:1rem;flex-wrap:wrap}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);padding-block:.5rem;border-bottom:1px solid var(--line);display:flex;gap:.35rem;flex-wrap:wrap}
+.tabs button{background:transparent;border:1px solid transparent;border-radius:999px;padding:.35rem .9rem;color:var(--ink-2);font-weight:500}
+.tabs button[aria-selected="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tabs button .n{font-size:.72rem;opacity:.75;margin-right:.3rem}
+
+/* filter bar */
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;padding-block:.8rem .4rem}
+.filters input[type=search]{flex:1 1 220px;min-width:0}
+.chips{display:flex;gap:.3rem;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:.2rem .7rem;font-size:.8rem;color:var(--ink-2)}
+.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.count{font-size:.8rem;color:var(--muted);margin-inline-start:auto}
+
+/* cards */
+.list{display:grid;gap:.6rem;margin-top:.6rem}
+details.card{background:var(--paper);border:1px solid var(--line);border-radius:12px}
+details.card[open]{border-color:var(--accent)}
+details.card>summary{list-style:none;cursor:pointer;padding:.8rem 1rem;display:grid;grid-template-columns:auto 1fr auto;gap:.6rem .8rem;align-items:center}
+details.card>summary::-webkit-details-marker{display:none}
+.card .t{font-weight:600;font-size:1.02rem;min-width:0}
+.card .t small{display:block;font-weight:400;color:var(--muted);font-size:.78rem;margin-top:.1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .meta{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:flex-end}
+.caret{width:.9rem;height:.9rem;border-inline-start:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s;margin-inline-end:.2rem}
+details[open]>summary .caret{transform:rotate(-135deg)}
+.pill{font-size:.7rem;padding:.1rem .55rem;border-radius:999px;font-weight:500;white-space:nowrap;border:1px solid transparent}
+.pill.active{background:var(--ok-soft);color:var(--ok)}
+.pill.paused{background:var(--warn-soft);color:var(--warn)}
+.pill.blocked{background:var(--bad-soft);color:var(--bad)}
+.pill.done{background:var(--paper-2);color:var(--muted);text-decoration:line-through}
+.pill.office{background:var(--office-soft);color:var(--office)}
+.pill.group{background:var(--info-soft);color:var(--info)}
+.pill.personal{background:var(--paper-2);color:var(--ink-2)}
+.body{padding:0 1rem 1rem;border-top:1px solid var(--line)}
+.body h4{margin:1rem 0 .3rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.body p{margin:.2rem 0;color:var(--ink-2)}
+.tasks{list-style:none;margin:0;padding:0;display:grid;gap:.25rem}
+.tasks li{display:flex;gap:.5rem;align-items:flex-start}
+.tasks input{margin-top:.35rem}
+.tasks li.off .tx{color:var(--muted);text-decoration:line-through}
+.tasks .tx.office::before{content:"משרד";font-size:.65rem;background:var(--office-soft);color:var(--office);border-radius:4px;padding:0 .35rem;margin-inline-end:.4rem;vertical-align:middle}
+.links{display:flex;flex-wrap:wrap;gap:.35rem}
+.links a,.links span.f{border:1px solid var(--line);background:var(--paper-2);border-radius:8px;padding:.25rem .6rem;font-size:.82rem;color:var(--ink);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.links span.f{color:var(--ink-2);direction:ltr;unicode-bidi:plaintext;font-family:ui-monospace,monospace;font-size:.75rem}
+details.sub{margin-top:.4rem}
+details.sub>summary{cursor:pointer;color:var(--ink-2);font-size:.9rem;padding:.3rem 0}
+.changes{margin:0;padding-inline-start:1rem;color:var(--ink-2);font-size:.9rem}
+.changes li b{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+
+/* thoughts box */
+.think{margin-top:1rem;background:var(--paper-2);border-radius:10px;padding:.8rem}
+.think label{font-size:.8rem;color:var(--ink-2);display:block;margin-bottom:.3rem}
+.think textarea{width:100%;min-height:72px;resize:vertical}
+.think .row{display:flex;gap:.5rem;align-items:center;margin-top:.4rem;flex-wrap:wrap}
+.btn{background:var(--accent);color:#fff;border:0;border-radius:8px;padding:.45rem 1rem;font-weight:500}
+.btn.ghost{background:transparent;color:var(--ink-2);border:1px solid var(--line)}
+.btn.done{background:var(--paper-2);color:var(--ink-2);border:1px solid var(--line)}
+.btn:disabled{opacity:.5;cursor:default}
+.note{font-size:.8rem;color:var(--muted)}
+.note.ok{color:var(--ok)}
+.note.bad{color:var(--bad)}
+
+/* agents tree */
+.tree details{border-inline-start:2px solid var(--line);margin-inline-start:.4rem;padding-inline-start:.8rem;margin-top:.4rem}
+.tree details>summary{cursor:pointer;list-style:none;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding:.35rem 0}
+.tree details>summary::-webkit-details-marker{display:none}
+.tree .what{color:var(--ink-2);font-size:.9rem;margin:.2rem 0 .4rem}
+.tree .kv{font-size:.8rem;color:var(--muted);display:flex;gap:1rem;flex-wrap:wrap}
+.pill.working{background:var(--ok-soft);color:var(--ok)}.pill.broken{background:var(--bad-soft);color:var(--bad)}.pill.partial{background:var(--warn-soft);color:var(--warn)}.pill.dormant,.pill.unknown{background:var(--paper-2);color:var(--muted)}
+.pill.machine{background:var(--paper-2);color:var(--ink-2)}
+
+/* flows */
+.flow{display:grid;gap:.4rem;margin-top:.6rem}
+.step{display:grid;grid-template-columns:2.2rem 1fr;gap:.6rem;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem}
+.step .n{font-family:var(--serif);font-size:1.5rem;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.step .who{font-size:.8rem;color:var(--muted);display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.15rem}
+.step.manual{border-inline-start:4px solid var(--warn)}.step.auto{border-inline-start:4px solid var(--ok)}.step.broken{border-inline-start:4px solid var(--bad)}
+.gate{background:var(--warn-soft);color:var(--warn);border-radius:8px;padding:.4rem .7rem;font-size:.85rem}
+
+/* skills */
+.skills .cat{margin-top:.5rem}
+.skills .cat>summary{cursor:pointer;list-style:none;display:flex;gap:.5rem;align-items:center;padding:.6rem .8rem;background:var(--paper);border:1px solid var(--line);border-radius:10px;font-weight:600}
+.skills .cat>summary::-webkit-details-marker{display:none}
+.skills table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:.3rem}
+.skills th{text-align:right;font-size:.7rem;letter-spacing:.1em;color:var(--muted);padding:.4rem .5rem;border-bottom:1px solid var(--line)}
+.skills td{padding:.45rem .5rem;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+.skills td b{color:var(--ink);font-weight:500}
+.skills code{font-size:.78rem;background:var(--paper-2);padding:.05rem .35rem;border-radius:4px;direction:ltr;unicode-bidi:embed}
+.tbl{overflow-x:auto}
+
+/* sites */
+.sites{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.5rem;margin-top:.6rem}
+.sites a{display:block;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem;color:var(--ink);min-width:0}
+.sites a small{display:block;color:var(--muted);font-size:.75rem;direction:ltr;unicode-bidi:plaintext;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* thoughts list */
+.tlist{display:grid;gap:.4rem;margin-top:.6rem}
+.titem{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem}
+.titem .h{display:flex;gap:.6rem;align-items:center;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.titem p{margin:.3rem 0 0;white-space:pre-wrap}
+.empty{color:var(--muted);padding:2rem 0;text-align:center}
+.banner{background:var(--office-soft);color:var(--office);border-radius:10px;padding:.6rem .9rem;font-size:.9rem;margin-top:.6rem}
+@media (prefers-reduced-motion: reduce){.caret{transition:none}}
+@media (max-width:600px){details.card>summary{grid-template-columns:auto 1fr}.card .meta{grid-column:1/-1;justify-content:flex-start}}
+</style>
+
+<div class="wrap" id="app">
+  <header class="top">
+    <h1>המחברת</h1>
+    <div class="sub"><span id="today"></span><span id="dbstate">מתחבר לאחסון…</span><span id="loadstate"></span></div>
+  </header>
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+  <div id="view"></div>
+</div>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const h=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const GROUPS={remnant:'REMNANT','diana-rafael':'דיאנה רפאל',customizeai:'CustomizeAI',trading:'מניות',projects:'פרויקטים',personal:'אישי',infra:'תשתית'};
+const STATUS={active:'פעיל',paused:'מושהה',blocked:'חסום',done:'סיימנו'};
+const TABS=[['topics','נושאים'],['done','סיימנו'],['agents','סוכנים'],['flows','פלואים'],['skills','סקילים'],['sites','אתרים וקבצים'],['thoughts','מחשבות שנשלחו']];
+const state={tab:'topics',q:'',group:null,kind:null,status:null,office:false,data:{chapters:[],skills:{categories:[]},agents:{tree:[],flows:{}},extras:{}},db:null,chapterDocs:{},thoughts:[],open:{}};
+try{const s=JSON.parse(localStorage.getItem('nb-ui')||'{}');Object.assign(state,{tab:s.tab||'topics',group:s.group||null,kind:s.kind||null,status:s.status||null});}catch(e){}
+function saveUI(){try{localStorage.setItem('nb-ui',JSON.stringify({tab:state.tab,group:state.group,kind:state.kind,status:state.status}))}catch(e){}}
+$('#today').textContent=new Date().toLocaleDateString('he-IL',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+/* ---------- data ---------- */
+async function loadJSON(p){try{const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw 0;return await r.json()}catch(e){return null}}
+async function loadData(){
+  const [c,s,a,x]=await Promise.all([loadJSON('data/chapters.json'),loadJSON('data/skills.json'),loadJSON('data/agents.json'),loadJSON('data/extras.json')]);
+  if(c)state.data.chapters=c; if(s)state.data.skills=s; if(a)state.data.agents=a; if(x)state.data.extras=x;
+  $('#loadstate').textContent=`${state.data.chapters.length} נושאים · עודכן ${state.data.extras.generated||''}`;
+  render();
+}
+/* ---------- db ---------- */
+async function initDB(){
+  const db=await window.claude?.use?.('db').catch(()=>null);
+  if(!db){$('#dbstate').textContent='ללא אחסון (קריאה בלבד)';return}
+  state.db=db;$('#dbstate').textContent='אחסון מחובר';
+  db.collection('chapters').onSnapshot(snap=>{const m={};snap.docs.forEach(d=>{m[d.id]=d.data()});state.chapterDocs=m;if(state.tab==='topics'||state.tab==='done')render()},e=>{$('#dbstate').textContent='אחסון: '+e.code});
+  db.collection('thoughts').orderBy('ts','desc').limit(200).onSnapshot(snap=>{state.thoughts=snap.docs.map(d=>({id:d.id,...d.data()}));if(state.tab==='thoughts')render();updateTabCounts()},()=>{});
+}
+async function setChapter(id,patch){
+  if(!state.db)return false;
+  const ref=state.db.doc('chapters/'+id);const cur=state.chapterDocs[id]||{};
+  try{await ref.set({...cur,...patch,updated:new Date().toISOString()});return true}catch(e){return false}
+}
+async function sendThought(id,title,text){
+  if(!state.db)return false;
+  try{await state.db.collection('thoughts').add({chapter:id,chapterTitle:title,text,ts:new Date().toISOString(),handled:false});return true}catch(e){return false}
+}
+/* ---------- render ---------- */
+function updateTabCounts(){
+  const ch=state.data.chapters;const done=ch.filter(c=>isDone(c)).length;const pend=state.thoughts.filter(t=>!t.handled).length;
+  const counts={topics:ch.length-done,done,agents:countTree(state.data.agents.tree||[]),flows:Object.keys(state.data.agents.flows||{}).length,skills:(state.data.skills.categories||[]).reduce((n,c)=>n+(c.items||[]).length,0),sites:(state.data.extras.live_sites||[]).length,thoughts:pend};
+  $('#tabs').innerHTML=TABS.map(([id,l])=>`<button role="tab" aria-selected="${state.tab===id}" data-tab="${id}">${l}<span class="n">${counts[id]??''}</span></button>`).join('');
+}
+function countTree(t){return t.reduce((n,x)=>n+1+countTree(x.children||[]),0)}
+function isDone(c){const d=state.chapterDocs[c.id];return d&&typeof d.done==='boolean'?d.done:c.status==='done'}
+function render(){updateTabCounts();const v=$('#view');
+  ({topics:renderTopics,done:renderTopics,agents:renderAgents,flows:renderFlows,skills:renderSkills,sites:renderSites,thoughts:renderThoughts})[state.tab](v);}
+function pill(cls,txt){return `<span class="pill ${cls}">${h(txt)}</span>`}
+
+function renderTopics(v){
+  const doneTab=state.tab==='done';
+  let list=state.data.chapters.filter(c=>isDone(c)===doneTab);
+  const q=state.q.trim();
+  if(state.group)list=list.filter(c=>c.group===state.group);
+  if(state.kind)list=list.filter(c=>c.kind===state.kind);
+  if(state.status&&!doneTab)list=list.filter(c=>c.status===state.status);
+  if(state.office)list=list.filter(c=>c.office_only);
+  if(q)list=list.filter(c=>JSON.stringify(c).includes(q));
+  list.sort((a,b)=>(b.last_update||'').localeCompare(a.last_update||''));
+  const officeN=state.data.chapters.filter(c=>c.office_only&&!isDone(c)).length;
+  v.innerHTML=`
+  <div class="filters">
+    <input type="search" id="q" placeholder="חיפוש בכל הנושאים…" value="${h(state.q)}">
+    <div class="chips">${Object.entries(GROUPS).map(([k,l])=>`<button class="chip" data-f="group" data-v="${k}" aria-pressed="${state.group===k}">${l}</button>`).join('')}</div>
+    <div class="chips">${['business','personal'].map(k=>`<button class="chip" data-f="kind" data-v="${k}" aria-pressed="${state.kind===k}">${k==='business'?'עסקי':'אישי'}</button>`).join('')}
+    ${doneTab?'':['active','paused','blocked'].map(k=>`<button class="chip" data-f="status" data-v="${k}" aria-pressed="${state.status===k}">${STATUS[k]}</button>`).join('')}
+    <button class="chip" data-f="office" aria-pressed="${state.office}">רק מהמשרד</button></div>
+    <span class="count">${list.length} נושאים</span>
+  </div>
+  ${(!doneTab&&officeN&&!state.office)?`<div class="banner">${officeN} נושאים מעודכנים רק במחשב המשרד — מחר בפתיחת יום משם נשלים אותם.</div>`:''}
+  <div class="list">${list.length?list.map(card).join(''):'<div class="empty">אין נושאים שתואמים לסינון</div>'}</div>`;
+  wireFilters(v);
+  v.querySelectorAll('details.card').forEach(d=>{d.addEventListener('toggle',()=>{state.open[d.dataset.id]=d.open})});
+  v.querySelectorAll('[data-act=send]').forEach(b=>b.addEventListener('click',onSend));
+  v.querySelectorAll('[data-act=done]').forEach(b=>b.addEventListener('click',onDone));
+  v.querySelectorAll('.tasks input').forEach(i=>i.addEventListener('change',onTask));
+}
+function card(c){
+  const doc=state.chapterDocs[c.id]||{};const checks=doc.tasks||{};const done=isDone(c);
+  const tasks=(c.next_tasks||[]).map((t,i)=>{const off=t.startsWith('משרד:');const txt=off?t.replace(/^משרד:\s*/,''):t;return `<li class="${checks[i]?'off':''}"><input type="checkbox" id="t-${c.id}-${i}" data-ch="${c.id}" data-i="${i}" ${checks[i]?'checked':''} ${state.db?'':'disabled'}><label for="t-${c.id}-${i}" class="tx ${off?'office':''}">${h(txt)}</label></li>`}).join('');
+  const arts=(c.artifacts||[]).map(a=>a.url&&/^https?:/.test(a.url)?`<a href="${h(a.url)}" target="_blank" rel="noopener" title="${h(a.url)}">${h(a.label||a.url)}</a>`:`<span class="f" title="${h(a.url||'')}">${h(a.label||'')}${a.url?' · '+h(a.url.replace(/^file:\s*/,'')):''}</span>`).join('');
+  const changes=(c.recent_changes||[]).map(x=>`<li>${h(x).replace(/^(\d{1,2}\.\d{1,2}(\.\d{2,4})?|\d{4}-\d{2}-\d{2})/,'<b>$1</b>')}</li>`).join('');
+  return `<details class="card" data-id="${h(c.id)}" ${state.open[c.id]?'open':''}>
+    <summary><span class="caret"></span><div class="t">${h(c.title)}<small>${h((c.where_we_stand||'').split(/[.。\n]/)[0])}</small></div>
+      <div class="meta">${c.office_only?pill('office','משרד'):''}${pill('group',GROUPS[c.group]||c.group)}${c.kind==='personal'?pill('personal','אישי'):''}${pill(done?'done':c.status,done?'סיימנו':STATUS[c.status]||c.status)}<span class="pill" style="color:var(--muted)">${h(c.last_update||'')}</span></div></summary>
+    <div class="body">
+      <h4>איפה אנחנו עומדים</h4><p>${h(c.where_we_stand)}</p>
+      ${tasks?`<h4>המשימות לפנינו</h4><ul class="tasks">${tasks}</ul>`:''}
+      ${changes?`<details class="sub"><summary>שינויים אחרונים (${c.recent_changes.length})</summary><ol class="changes">${changes}</ol></details>`:''}
+      ${arts?`<h4>ארטיפקטים</h4><div class="links">${arts}</div>`:''}
+      <div class="think"><label for="th-${c.id}">מחשבה / הנחיה על הנושא הזה — נשלחת אליי ואני מסדר</label>
+        <textarea id="th-${c.id}" placeholder="כתוב כאן…" ${state.db?'':'disabled'}></textarea>
+        <div class="row"><button class="btn" data-act="send" data-ch="${h(c.id)}" data-title="${h(c.title)}" ${state.db?'':'disabled'}>שלח לקלוד</button>
+        <button class="btn done" data-act="done" data-ch="${h(c.id)}" ${state.db?'':'disabled'}>${done?'החזר לפעיל':'סיימנו עם זה ✓'}</button>
+        <span class="note" id="n-${c.id}">${state.db?'':'אין חיבור לאחסון — פתח את העמוד דרך claude.ai'}</span></div></div>
+      ${c.sources?.length?`<p class="note" style="margin-top:.6rem">מקורות: ${h(c.sources.join(' · '))}</p>`:''}
+    </div></details>`;
+}
+function wireFilters(v){
+  const q=v.querySelector('#q');if(q){q.addEventListener('input',e=>{state.q=e.target.value;renderKeepFocus()})}
+  v.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{const f=b.dataset.f;if(f==='office'){state.office=!state.office}else{state[f]=state[f]===b.dataset.v?null:b.dataset.v}saveUI();render()}));
+}
+function renderKeepFocus(){const pos=$('#q')?.selectionStart;render();const q=$('#q');if(q){q.focus();try{q.setSelectionRange(pos,pos)}catch(e){}}}
+async function onSend(e){const b=e.currentTarget;const id=b.dataset.ch;const ta=$('#th-'+CSS.escape(id));const n=$('#n-'+CSS.escape(id));const text=(ta.value||'').trim();if(!text){n.textContent='כתוב משהו קודם';n.className='note bad';return}
+  b.disabled=true;n.textContent='שולח…';n.className='note';const ok=await sendThought(id,b.dataset.title,text);b.disabled=false;
+  if(ok){ta.value='';n.textContent='נשלח. אקרא את זה בפתיחת היום הבאה.';n.className='note ok'}else{n.textContent='השליחה נכשלה — נסה שוב';n.className='note bad'}}
+async function onDone(e){const id=e.currentTarget.dataset.ch;const c=state.data.chapters.find(x=>x.id===id);const cur=isDone(c);e.currentTarget.disabled=true;await setChapter(id,{done:!cur,done_ts:new Date().toISOString()});}
+async function onTask(e){const i=e.target;const id=i.dataset.ch;const cur=state.chapterDocs[id]||{};const tasks={...(cur.tasks||{})};tasks[i.dataset.i]=i.checked;i.closest('li').classList.toggle('off',i.checked);await setChapter(id,{tasks});}
+
+/* ---------- agents ---------- */
+function renderAgents(v){const t=state.data.agents.tree||[];
+  v.innerHTML=`<div class="filters"><span class="note">היררכיה לפי טריגר: מתוזמן · מונחה-אירוע · לפי דרישה · שירותים חיצוניים. לחץ לפתיחה.</span></div><div class="tree">${t.length?t.map(node).join(''):'<div class="empty">אין נתוני סוכנים עדיין</div>'}</div>`;}
+function node(n,depth=0){const kids=(n.children||[]).map(c=>node(c,depth+1)).join('');
+  return `<details ${depth===0?'open':''}><summary><b>${h(n.title)}</b>${n.status?pill(n.status,{working:'עובד',broken:'שבור',partial:'חלקי',dormant:'רדום',unknown:'לא ידוע'}[n.status]||n.status):''}${n.machine?pill('machine',{home:'בית',office:'משרד',cloud:'ענן',make:'Make',both:'שני המחשבים'}[n.machine]||n.machine):''}${n.schedule?`<span class="note">${h(n.schedule)}</span>`:''}</summary>
+  ${n.what?`<div class="what">${h(n.what)}</div>`:''}<div class="kv">${n.io?`<span>${h(n.io)}</span>`:''}${n.last_run?`<span>ריצה אחרונה: ${h(n.last_run)}</span>`:''}${n.known_issues?`<span style="color:var(--bad)">${h(n.known_issues)}</span>`:''}</div>
+  ${(n.files||[]).length?`<div class="links" style="margin-top:.3rem">${n.files.map(f=>/^https?:/.test(f)?`<a href="${h(f)}" target="_blank" rel="noopener">${h(f.replace(/^https?:\/\//,'').slice(0,50))}</a>`:`<span class="f">${h(f)}</span>`).join('')}</div>`:''}${kids}</details>`}
+
+/* ---------- flows ---------- */
+function renderFlows(v){const fl=state.data.agents.flows||{};const keys=Object.keys(fl);
+  if(!keys.length){v.innerHTML='<div class="empty">אין פלואים עדיין</div>';return}
+  v.innerHTML=`<div class="filters"><div class="chips">${keys.map(k=>`<button class="chip" data-flow="${h(k)}" aria-pressed="${(state.flow||keys[0])===k}">${h(fl[k].title||k)}</button>`).join('')}</div></div><div id="flowbody"></div>`;
+  const draw=k=>{const f=fl[k];state.flow=k;$('#flowbody').innerHTML=`<div class="flow">${(f.steps||[]).map(s=>`<div class="step ${h(s.status||'')}"><div class="n">${h(s.n)}</div><div><b>${h(s.title)}</b><div class="who">${s.who?`<span>מי: ${h(s.who)}</span>`:''}${s.tool?`<span>כלי: <code>${h(s.tool)}</code></span>`:''}${s.status?`<span>${{auto:'אוטומטי',manual:'ידני',broken:'שבור'}[s.status]||h(s.status)}</span>`:''}</div>${s.notes?`<div class="note" style="margin-top:.2rem">${h(s.notes)}</div>`:''}</div></div>`).join('')}</div>
+    ${(f.approval_gates||[]).length?`<h4 style="color:var(--accent);font-size:.75rem;letter-spacing:.12em;margin:1rem 0 .3rem">שערי אישור</h4>${f.approval_gates.map(g=>`<div class="gate">${h(g)}</div>`).join('')}`:''}
+    ${(f.open_improvements||[]).length?`<details class="sub"><summary>שיפורים פתוחים (${f.open_improvements.length})</summary><ul class="changes">${f.open_improvements.map(x=>`<li>${h(x)}</li>`).join('')}</ul></details>`:''}`;
+    v.querySelectorAll('[data-flow]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.flow===k))};
+  v.querySelectorAll('[data-flow]').forEach(b=>b.addEventListener('click',()=>draw(b.dataset.flow)));draw(state.flow&&fl[state.flow]?state.flow:keys[0]);}
+
+/* ---------- skills ---------- */
+function renderSkills(v){const cats=state.data.skills.categories||[];const q=(state.sq||'').trim();
+  v.innerHTML=`<div class="filters"><input type="search" id="sq" placeholder="חיפוש סקיל…" value="${h(state.sq||'')}"><div class="chips">${['user','project','plugin:adobe','plugin:ponytail','bundled','harness','mcp'].map(o=>`<button class="chip" data-o="${o}" aria-pressed="${state.so===o}">${o}</button>`).join('')}</div></div>
+  <div class="skills">${cats.map(c=>{let items=c.items||[];if(state.so)items=items.filter(i=>i.origin===state.so);if(q)items=items.filter(i=>JSON.stringify(i).includes(q));if(!items.length)return '';
+    return `<details class="cat" ${q||state.so?'open':''}><summary><span>${h(c.icon||'')}</span><span>${h(c.title)}</span><span class="note">${items.length}</span></summary><div class="tbl"><table><tr><th>סקיל</th><th>מה עושה</th><th>איך מפעילים</th><th>מקור</th><th>מצב</th></tr>${items.map(i=>`<tr><td><b>${h(i.name)}</b></td><td>${h(i.title)}${i.notes?`<div class="note">${h(i.notes)}</div>`:''}</td><td><code>${h(i.trigger||'')}</code></td><td>${h(i.origin||'')}</td><td>${i.status?pill(i.status,{working:'עובד',partial:'חלקי',broken:'שבור',unknown:'?'}[i.status]||i.status):''}</td></tr>`).join('')}</table></div></details>`}).join('')||'<div class="empty">אין סקילים עדיין</div>'}</div>`;
+  const sq=v.querySelector('#sq');sq.addEventListener('input',e=>{state.sq=e.target.value;const p=e.target.selectionStart;render();const n=$('#sq');n.focus();try{n.setSelectionRange(p,p)}catch(x){}});
+  v.querySelectorAll('[data-o]').forEach(b=>b.addEventListener('click',()=>{state.so=state.so===b.dataset.o?null:b.dataset.o;render()}));}
+
+/* ---------- sites ---------- */
+function renderSites(v){const s=state.data.extras.live_sites||[];const by={};s.forEach(x=>{(by[x.topic||'אחר']=by[x.topic||'אחר']||[]).push(x)});
+  v.innerHTML=Object.entries(by).map(([t,arr])=>`<h4 style="color:var(--accent);font-size:.75rem;letter-spacing:.12em;margin:1rem 0 .2rem">${h(t)}</h4><div class="sites">${arr.map(x=>`<a href="${h(x.url)}" target="_blank" rel="noopener">${h(x.label)}<small>${h(x.url)}</small></a>`).join('')}</div>`).join('')||'<div class="empty">אין קישורים עדיין</div>';}
+
+/* ---------- thoughts ---------- */
+function renderThoughts(v){const t=state.thoughts;
+  v.innerHTML=`<div class="filters"><span class="note">כל מה ששלחת מהבוקסים. "טופל" מסומן על ידי כשקראתי וסידרתי.</span></div><div class="tlist">${t.length?t.map(x=>`<div class="titem"><div class="h"><b>${h(x.chapterTitle||x.chapter)}</b><span>${h(new Date(x.ts).toLocaleString('he-IL'))}</span>${x.handled?pill('working','טופל'):pill('partial','ממתין')}</div><p>${h(x.text)}</p>${x.reply?`<p class="note">תשובה: ${h(x.reply)}</p>`:''}</div>`).join(''):'<div class="empty">עוד לא נשלחו מחשבות</div>'}</div>`;}
+
+/* ---------- tabs ---------- */
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('[data-tab]');if(!b)return;state.tab=b.dataset.tab;saveUI();render();window.scrollTo({top:0})});
+const hash=location.hash.replace('#','');if(TABS.some(t=>t[0]===hash))state.tab=hash;
+render();loadData();initDB();
+})();
+</script>
