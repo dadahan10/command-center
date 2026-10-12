@@ -1,0 +1,1978 @@
+[
+ {
+  "id": "remnant-renders",
+  "title": "REMNANT — הדמיות (רינדור Blender)",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "צנרת הרינדור (Blender 5.2 + import_3dm, render_matrix.py, סקיל remnant-render-loop) עובדת בשני המחשבים. מאושר ולייב: קינצוגי R117 (v14, צהוב+רוז+לבן, 3 פריימים), GW band R112 (שחור+לבן v3). מאושר בלי דף: R543 קונסטליישן (12 הדמיות, שיניים מקוצרות), Starz R470, C052. אושרו 11.10: Disturbed R115, R112 אירוסין (אחרי worldrot=180), עגילי קינצוגי E049 במנח. 12.10 (בית): E049 v2 — פסים שחורים תוקנו (groovefill=0.8,0.95,0.10); E048 סאנברסט מחקר לבנים v3 — 22 סבבים, ממצא מרכזי: רינדור 2000→1000 הוא המנוף (אבן 1.5 מ\"מ = 26 פיקסלים). לא טוב עדיין: Accretion R114 (מתכת דלה, אמייל שטוח), Sunburst R121 (שיניים, לבנים). אין בכלל: R113, R118, R119, R120. R110 — דניאל רוצה ברק לא גוון; 'חם/מאושר' לסדרה — החלטה פתוחה.",
+  "next_tasks": [
+   "משרד: לרנדר E049 YG עם speccard=6,2.5,0.68,-1.5,-0.05 (knob אחד) — תיקון פאה שטוחה כהה",
+   "להחיל מתכון הלבנים (2000→1000 + דיסק 35° אפור-כהה + הגברה 3.5–4.5) על R543 / R112 / R121 כמתכון סדרתי — אחרי אישור דניאל",
+   "משרד: GW אירוסין — סבב ניקוי 2 (הצלעות החיצוניות images\\3.png) → הסרת תג price-tbd → ACTIVE ב-$3,500; אחר כך לכתוב סקיל REFLECTION-CLEANUP",
+   "Accretion R114: מתכת מבריקה, אמייל עם עומק, לבנים מנצנצים — לפני שממשיכים (ירד מהלילה, בהמתנה)",
+   "Sunburst R121: שיניים קצרות, 4 שיניים לאבן קטנה, לבנים לסירוגין לבן/שחור + פנייה פנימה 45°",
+   "R110: ברק (gloss) לא גוון — ניסיון נקטע 11.10; החלטה סדרתית חם/מאושר (גם R112 מ-8.10)",
+   "מודל יד תלת-ממדי להדמיה על אצבע (גבר + אישה) — החלטה פתוחה מתוכנית Q4 (התחלה על R110)",
+   "לאחר אישור הדמיה: להעתיק לתיקיית הדגם ב-Dropbox עם קידומת מק\"ט (כלל 4.10) ולפתוח דף מוצר (כלל 11.10)"
+  ],
+  "recent_changes": [
+   "12.10 — E049 עגילי קינצוגי v2 (פסים שחורים) + E048 מחקר לבנים v3 (22 סבבים, RESEARCH-he.md), commits a9df6c3/b1b1ec2",
+   "11.10 — זוג עגילים E048/E049 Y/R/W (knobs pair=, whitelayer=own, prongtrim all); whitemul=2.5 (לבנים אפורים = clamp); R112 אירוסין תוקן worldrot=180; R110 v2 gemlift=0.4",
+   "8.10 — GW band v3 לבן אושר; R112 אירוסין שחור Y/R/W; Sunburst R121 צהוב; Accretion R114 רוז; Starz R470 זוג; knobs whitelayers/enamellayers",
+   "7.10 — R543 12 הדמיות סופיות (prongtrim=0.4, pavewhitegain=2.0,0.7); קינצוגי R117 WG; GW band מקובץ נכון gw-band-women.3dm",
+   "4.10 — R117 רוז אושר (goldrgb=1.0,0.52,0.40); R115 Disturbed 12 הדמיות; R110 8 הדמיות",
+   "27.9 — קינצוגי v14 אושר וסגור; התגלה שרינדורי 24.9 רצו בתאורה שגויה",
+   "29.9 — Blender הותקן במחשב הבית; pair= knob התחיל"
+  ],
+  "artifacts": [
+   {
+    "label": "ריפו הצנרת remnant-render (פרטי)",
+    "url": "https://github.com/dadahan10/remnant-render",
+    "type": "repo"
+   },
+   {
+    "label": "תיקיית remnant-launch (בית)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch",
+    "type": "folder"
+   },
+   {
+    "label": "LOG.md של האיטרציות",
+    "url": "file: remnant-launch\\pilot\\iterations\\LOG.md",
+    "type": "doc"
+   },
+   {
+    "label": "סקיל remnant-render-loop",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\remnant-render-loop",
+    "type": "skill"
+   },
+   {
+    "label": "הדמיות REMNANT בדרופבוקס (Rings\\R1xx, Earrings\\E048/E049)",
+    "url": "file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry\\Black Ice",
+    "type": "folder"
+   },
+   {
+    "label": "מחקר הלבנים E048 (12.10)",
+    "url": "file: remnant-launch\\q4\\renders-12.10\\e048-RESEARCH-he.md",
+    "type": "doc"
+   },
+   {
+    "label": "תנ\"ך הרינדור",
+    "url": "file: C:\\Users\\USER\\.claude\\plans\\remnant-render-bible.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_session-2026-10-12.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "project_remnant.md (office)",
+   "project_session-2026-09-27.md",
+   "ops_home_render_setup.md",
+   "reminder_2026-10-05_hand_model.md"
+  ]
+ },
+ {
+  "id": "remnant-product-pages",
+  "title": "REMNANT — דפי מוצר והעלאה לאתר",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "קולקציית /collections/remnant חיה בשופיפיי (קולקציה חכמה לפי תג remnant, id 490903437481) עם תבנית collection.remnant ובאנר B בראש. ACTIVE ומפורסמים: קינצוגי R117 (10314247405737, $3,500, 9 תמונות), GW band שחור (10313877192873, $2,200) ולבן (10313877487785, $2,500). R543 קונסטליישן (10317849034921, $3,200, 17 תמונות + סימולטור מזלות בתבנית product.remnant-constellation) — פורסם ל-Online Store ב-12.10 וחי ב-/products/constellation-marquise-diamond-engagement-ring. Smoothen R116 (10314256056489) ו-Starz R470 (10317640401065) — ACTIVE אבל בלי ערוץ Online Store (לא נראים באתר). GW אירוסין (10317680050345) DRAFT עם תג price-tbd, מחיר אושר $3,500. מאמר הקולקציה פורסם: /blogs/news/remnant-collection-story. כלל: הדמיה מאושרת → דף מוצר.",
+  "next_tasks": [
+   "דניאל: Smoothen + Starz → Sales channels → Online Store (או להגיד 'תפרסם')",
+   "GW אירוסין: אחרי ניקוי סבב 2 — להסיר price-tbd, ACTIVE ב-$3,500",
+   "R543: הנחת 15% אוטומטית מציגה $2,720 — לבדוק; אין הדמיה מרכזית-לבנה ב-Y/R; 6 הדמיות blackside בלי אופציה תואמת",
+   "Disturbed R115 — דף מוצר (מאושר 11.10, אין דף)",
+   "הצמדת תמונה לווריאציה (צבע זהב) בדפי המוצר; GW לבן — תמונות נוספות",
+   "Starz: מידות גבר >9? (66 וריאנטים, $1,600/$1,200)",
+   "Smoothen: מידה אמיתית של J1752 (נרשם 'size 6 US' כהנחה)",
+   "write_themes — סומן ע\"י דניאל, לוודא שהטוקן כולל"
+  ],
+  "recent_changes": [
+   "12.10 — R543 publishablePublish ל-Online Store (Publication 3636166684); אותו סימפטום זוהה ב-Smoothen/Starz/GW אירוסין",
+   "11.10 ערב — R543 DRAFT + סימולטור בתבנית product.remnant-constellation (גיבוי ב-q4\\product-pages\\theme-backup)",
+   "11.10 — Starz R470 DRAFT (66 וריאנטים) → דניאל העביר ל-ACTIVE; Smoothen ACTIVE; GW אירוסין DRAFT $3,500 price-tbd; תבנית collection.remnant + באנר B חי",
+   "8.10 — /collections/remnant נוצרה; קינצוגי + GW band שחור/לבן ACTIVE; מאמר פורסם; תיקון קטגוריה Necklaces→Rings",
+   "7.10 ערב — דניאל הוסיף write_products+write_content לטוקן; push_gw_drafts.py יצר 2 טיוטות GW band; מאמר → טיוטת בלוג 634442154153",
+   "7.10 — כותרות בלי שם הדגם (short_title metafield), לבן = Wedding Bands, מטא מלא ב-4 דפים",
+   "6.10 — דפי HTML + מחולל קונסטלציות + products.json + themeBlock.liquid נבנו"
+  ],
+  "artifacts": [
+   {
+    "label": "קולקציית REMNANT באתר",
+    "url": "https://dianarafael.com/collections/remnant",
+    "type": "site"
+   },
+   {
+    "label": "R543 קונסטליישן (חי)",
+    "url": "https://dianarafael.com/products/constellation-marquise-diamond-engagement-ring",
+    "type": "site"
+   },
+   {
+    "label": "מאמר הקולקציה",
+    "url": "https://dianarafael.com/blogs/news/remnant-collection-story",
+    "type": "site"
+   },
+   {
+    "label": "דפי המוצר + מחולל + products.json",
+    "url": "file: remnant-launch\\q4\\product-pages",
+    "type": "folder"
+   },
+   {
+    "label": "סיכום דפי מוצר",
+    "url": "file: remnant-launch\\q4\\product-pages\\SUMMARY-he.md",
+    "type": "doc"
+   },
+   {
+    "label": "הדמיות R543",
+    "url": "file: remnant-launch\\q4\\r543-renders",
+    "type": "folder"
+   },
+   {
+    "label": "וואן-פייג'ר הקולקציה (EN)",
+    "url": "https://dadahan10.github.io/diana-rafael-remnant/collection.html",
+    "type": "site"
+   },
+   {
+    "label": "וואן-פייג'ר הקולקציה (HE)",
+    "url": "https://dadahan10.github.io/diana-rafael-remnant/collection-he.html",
+    "type": "site"
+   },
+   {
+    "label": "כללי דף מוצר בשופיפיי",
+    "url": "file: C--Users-USER\\memory\\rule_shopify_product_page_content.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_session-2026-10-12.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "project_q4_operating_plan.md",
+   "project_remnant_product_pages.md",
+   "q4/product-pages/SUMMARY-he.md"
+  ]
+ },
+ {
+  "id": "remnant-marketing-content",
+  "title": "REMNANT — תוכן שיווקי (מיילים, באנרים, סטוריז, מאמר, קלאביו Q4)",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "3 קמפייני קלאביו Q4 הועלו 8.10 דרך המחבר: קלירנס C נשלח שבת 10.10 20:00 ✅; טיזר 12.10 (01M36XYN63EZJATQ63PGAZVTSX, קלון Te5Hh6, 'Pieces from a collection that doesn't exist yet', זמן 12:45 IL) — ממתין ללחיצת Schedule של דניאל (send_campaign נחסם פעמיים); השקה 16.11 19:00 (קלון WUsMGk, hero באנר C) — Draft. בלאק פריידי 27.11 וחגים 7.12 — טיוטות 23.9 לא מאושרות. באנרים: A/B/C נבנו (make_banner.py), B = קינצוגי, חי בראש /collections/remnant; גרסת B 2.1x מקודדת אבל נבנית רק במשרד (bg-raw + rembg). סטוריז: 22 PNG (קולקציה 8×HE/EN, קינצוגי 3×HE/EN) + STORYBOARDS.md (3 תסריטי ריל) — ממתינים לאישור. מאמר פורסם 8.10. כלל קלאביו: update על תבנית המקור → assign מחדש → קלון חדש.",
+  "next_tasks": [
+   "דניאל: Schedule לטיזר 12.10 (12:45; אם רוצים באנר B חדש — לדחות ל-13:30)",
+   "משרד: python make_banner.py B → להעתיק hero/1200x500 ל-diana-rafael-remnant\\assets\\email → push → V חדש ב-build_emails.py → update WZ7VsE → assign מחדש",
+   "אישור סטוריז: סטורי 03 (שורה אישית), סקר בסטורי 05, זכויות המודבורד (סטורי 04) → ואז ייצור סדרות GW/Smoothen/R543/Starz (דקה לסדרה)",
+   "סושיאל השבוע (הנחיית 11.10): 2–3 סטוריז לכל עיצוב, סדרה על הקולקציה HE+EN (אינסטגרם+פייסבוק); וידאו ברמה גבוהה — קינצוגי/Accretion/Smoothen",
+   "השקה 16.11: hero Smoothen → להחליט hero סופי (כרגע באנר C), לוודא Smoothen באתר לפני",
+   "בלאק פריידי 27.11 — לאשר/לשנות הצעה (בלי הנחה: חריטה+מידה+משלוח חינם)",
+   "דניאל ביקש 12.10: סקילים גרפיים/עיצוביים לדיוק תוכן יוצא (באנרים, מיילים, סטוריז) — לדון",
+   "סרטוני טרנטייבל/ רילס — Higgsfield (טוקן פג) או Veo; פורמט/אורך/מוזיקה לשאול"
+  ],
+  "recent_changes": [
+   "12.10 — טיזר נבנה מחדש לפי דניאל: לוגו לבן 300px, כותרת 'Pieces…', קולאז' קינצוגי/GW band רוז/Smoothen/Disturbed לבן (V=20261012a, commit 732368a) → קלון Te5Hh6; make_banner.py hero 2.1x",
+   "11.10 ערב — טיזר פלטה כהה (#0b0a09), בלוק collage 2×2, בלי כרטיסי מוצר (commit 340cab9); ממצא: הקמפיין משתמש בקלון, לא בתבנית",
+   "11.10 — באנר B נבנה מחדש עם קינצוגי; תבנית collection.remnant; 22 סטוריז + STORYBOARDS.md; דף PULSO",
+   "10.10 — קלירנס C נשלח 20:00 ✅",
+   "8.10 — 3 קמפיינים הועלו דרך מחבר קלאביו; 3 באנרים A/B/C; גאנט עודכן (53 תאים)",
+   "7.10 — מיילים סופיים: כותרות + לוח שליחה (crop לא crop2); מאמר born-from-a-break עם באנר 3 תכשיטים + קולאז'",
+   "6.10 — 3 מיילים (teaser/launch/clearance-C) + ANCHORS.md + מאמר ~1,300 מילים"
+  ],
+  "artifacts": [
+   {
+    "label": "מיילים (build_emails.py, PREVIEW.html)",
+    "url": "file: remnant-launch\\q4\\emails",
+    "type": "folder"
+   },
+   {
+    "label": "עוגני עיצוב מהקמפיינים המנצחים",
+    "url": "file: remnant-launch\\q4\\emails\\ANCHORS.md",
+    "type": "doc"
+   },
+   {
+    "label": "באנרים A/B/C",
+    "url": "file: remnant-launch\\q4\\banner",
+    "type": "folder"
+   },
+   {
+    "label": "סטוריז + STORYBOARDS",
+    "url": "file: remnant-launch\\q4\\social",
+    "type": "folder"
+   },
+   {
+    "label": "מאמר הקולקציה (מקור)",
+    "url": "file: remnant-launch\\q4\\story-article",
+    "type": "folder"
+   },
+   {
+    "label": "תמונות ציבוריות למיילים",
+    "url": "https://dadahan10.github.io/diana-rafael-remnant/assets/email/",
+    "type": "site"
+   },
+   {
+    "label": "קמפייני קלאביו Q4 — מזהים",
+    "url": "file: C--Users-USER\\memory\\ops_klaviyo_q4_campaigns.md",
+    "type": "doc"
+   },
+   {
+    "label": "גאנט שיווקי (Google Sheet, לשונית Marketing Gantt)",
+    "url": "https://docs.google.com/spreadsheets/d/1eJMqL456CvBqVbLYnNgNocoT6O1NW3Or5tTfGaUeFk0",
+    "type": "sheet"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "ops_klaviyo_q4_campaigns.md",
+   "project_session-2026-10-12.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "q4/social/SUMMARY-he.md",
+   "q4/banner/PLACEMENT-11.10-he.md",
+   "project_session-2026-09-23.md"
+  ]
+ },
+ {
+  "id": "remnant-q4-plan",
+  "title": "REMNANT — תוכנית הפעלה Q4 / גאנט השקה",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "תוכנית Q4 (6.10, ~/.claude/plans/q4-2026-operating-plan.md): 6 זרמים — הדמיות, תוכן שיווקי, LLM-SEO+מאמרים, תמחור PULSO, מילות מפתח אטסי, R543+מחולל. אבני דרך: טיזר 12.10 (12:45) → סגירת חיסול 15.10 → סטטוס דפי מוצר 2.11 → השקה ישראל 9.11 → השקה ארה\"ב 16.11 (19:00) → בלאק פריידי 27.11 → חגים 7.12 (משלוח אחרון 14.12). הגאנט החי = Google Sheet 1eJMqL456 לשונית Marketing Gantt (עודכן 8.10 ב-53 תאים); REMNANT-control.xlsx מקומי ישן. מנוע הלילה הישן (DianaRafael-NightAgent) כבוי מ-26.7; DR-NightSession ל-11.10 לא נוצר (דניאל לא הריץ schtasks). שגרת בוקר מבוקשת: לשבת על הגאנט כל בוקר. מלאי REMNANT: J1731 קינצוגי, J1752 Smoothen, J1722 Disturbed, J1756 עגילי Sunburst, J1758 Accretion band (דניאל עונד); J1755 ו-J1417 חזרו למלאי אחרי ביטול צימט 11.10.",
+  "next_tasks": [
+   "כל בוקר: לפתוח את הגאנט עם דניאל, לסמן מה נסגר, לעדכן Copy/Asset/Scheduled",
+   "מנוע לילה: דניאל מריץ את פקודת schtasks (DR-NightSession) או שהריצה לא תתבצע — בתור: Sunburst טבעת + Starz cleanup",
+   "15.10 — סגירת מכירת החיסול (archive.dianarafael.com)",
+   "2.11 — סטטוס דפי מוצר + הדמיות חסרות מול הגאנט",
+   "LLM-SEO: ora.ai/score 54/100 — התאמת האתר ל-LLMs + רשימת מאמרים (אף מאמר נוסף לא נכתב)",
+   "אטסי: 20 הצעות שכתוב (rewrite-proposals.csv) + העלאת PULSO לאטסי (כמה ליסטינגים ביום, Black Ice) — מחיר+קטגוריה פתוחים",
+   "דיווחים יומיים/שבועיים לדניאל (סעיף 9 בבקשות 6.10)"
+  ],
+  "recent_changes": [
+   "11.10 — הנחיות דניאל לשבוע: צימט לביטול ✅, R543 לאתר ✅, עגילים ✅, PULSO לאתר ✅, סושיאל, CustomizeAI כחברת סוכנים",
+   "8.10 — גאנט עודכן: 5.10 הושלם באיחור 7.10; 10.10 קלירנס C; 12.10 טיזר; 15.10 סגירת חיסול; 16.11 השקה",
+   "7.10 — 18 החלטות נענו: קינצוגי=R117, Craquelere=R118, GW band 0.07ct שחור טבעי + דף לבן $2,500, R543 שיניים מאושרות, לוח שליחה",
+   "6.10 — תוכנית Q4 נכתבה; 4 סוכנים: הדמיות R543, מחולל+מאמר, מיילים, אטסי (DR 844 / BI 724 ליסטינגים נותחו)",
+   "24.9 — לוז ההשקה ביומן (6 אבני דרך) + גאנט מולא; 23.9 — תאריכי הגאנט אושרו (12.10 / 9.11 / 16.11)"
+  ],
+  "artifacts": [
+   {
+    "label": "תוכנית Q4 (מסמך מלא)",
+    "url": "file: C:\\Users\\USER\\.claude\\plans\\q4-2026-operating-plan.md",
+    "type": "doc"
+   },
+   {
+    "label": "גיליון REMNANT — Launch Control (Items + Marketing Gantt)",
+    "url": "https://docs.google.com/spreadsheets/d/1eJMqL456CvBqVbLYnNgNocoT6O1NW3Or5tTfGaUeFk0",
+    "type": "sheet"
+   },
+   {
+    "label": "תוכנית ההשקה המקורית",
+    "url": "file: C:\\Users\\USER\\.claude\\plans\\remnant-launch-plan.md",
+    "type": "doc"
+   },
+   {
+    "label": "מחקר אטסי (ליסטינגים, מילים, תבניות PULSO)",
+    "url": "file: remnant-launch\\q4\\etsy",
+    "type": "folder"
+   },
+   {
+    "label": "מוד בורד REMNANT",
+    "url": "https://dadahan10.github.io/diana-rafael-remnant/",
+    "type": "site"
+   },
+   {
+    "label": "פרומפט לילה 11.10",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\NIGHT-2026-10-11-PROMPT.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_q4_operating_plan.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "plan_2026-10-08_tomorrow.md",
+   "project_session-2026-09-24-launch (index)",
+   "project_remnant.md"
+  ]
+ },
+ {
+  "id": "remnant-clearance",
+  "title": "מכירת החיסול (Archive Clearance) — נסגרת 15.10",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "מכירת חיסול המלאי הישן ב-archive.dianarafael.com (EN $ / HE ₪), מקור אמת = Google Sheet → GitHub Action → data.csv → קוקפיט + סטוריז. הוארכה 27.9 עד 15.10.2026 (האתר עודכן commit c469251). מלאי 27.9: 22 פעילים ($30,330), 5 נמכרו, 11 מוסתרים. מייל קלירנס C ('One of each, then gone') נשלח 10.10 20:00 ✅. Ready To Ship בשופיפיי יושר לארכיון (18 מוצרים ייעודיים חדשים, Archive Sale). J1417 (Alnilam) חזר למלאי אחרי ביטול הזמנת צימט 11.10 — צריך לחזור לזמין בגיליון/ארכיון. 'השקה 1.8' ודדליין 31.7 הישנים — מיושנים.",
+  "next_tasks": [
+   "15.10 — סגירה: לעדכן אתר (EN+HE), להסתיר/לארכב פריטים, להחליט מה קורה עם הנותרים",
+   "J1417 Alnilam — להחזיר לזמין בגיליון החיסול + RTS/ארכיון בשופיפיי (היה SOLD לצימט, בוטל)",
+   "דניאל: להסיר ידנית מ-RTS את 'Semi Bezel Elongated Pear' $4,500 (נחסם לסוכן)",
+   "החלטה על 4 מוצרי RTS שלא בארכיון (1.51ct cushion, Matahari, Darkiopeia, 3-carats earrings)",
+   "אחרי הסגירה: GitHub Action של data.csv — לכבות או להשאיר; טאב החיסול בקוקפיט"
+  ],
+  "recent_changes": [
+   "11.10 — צימט בוטל: הזמנות 1647/1648 נמחקו, J1417 חזר ל-stock",
+   "10.10 — מייל קלירנס C נשלח (קמפיין 01M4D7CPNPSQ3RD4ZS7MH33144)",
+   "7.10 — מייל קלירנס: קולאז' הפריטים שנמכרו במקום hero; כותרת 'One of each, then gone'",
+   "27.9 — הארכה ל-15.10; RTS ⇔ Archive (18 מוצרים ייעודיים); מיילים A/B עודכנו ל-October 15",
+   "4.10 — J1417 נמכר לענת צימט (בוטל 11.10)"
+  ],
+  "artifacts": [
+   {
+    "label": "אתר החיסול (EN)",
+    "url": "https://archive.dianarafael.com/",
+    "type": "site"
+   },
+   {
+    "label": "אתר החיסול (HE)",
+    "url": "https://archive.dianarafael.com/he/",
+    "type": "site"
+   },
+   {
+    "label": "גיליון העריכה (מקור אמת)",
+    "url": "https://docs.google.com/spreadsheets/d/1XiXb4j11DksQ1-ccPB3vE-ZqfZzihvxOBkq73KszOWI/edit",
+    "type": "sheet"
+   },
+   {
+    "label": "ריפו remnant-clearance",
+    "url": "https://github.com/dadahan10/remnant-clearance",
+    "type": "repo"
+   },
+   {
+    "label": "סטוריז + build_sold.py (פרטי)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-clearance-private\\stories",
+    "type": "folder"
+   },
+   {
+    "label": "קולקציית Ready To Ship",
+    "url": "https://dianarafael.com/collections/featured-items",
+    "type": "site"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_remnant_clearance.md (office)",
+   "project_remnant-clearance.md (home)",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-04.md",
+   "ops_klaviyo_q4_campaigns.md",
+   "project_session-2026-09-27.md"
+  ]
+ },
+ {
+  "id": "pulso-whoop-charms",
+  "title": "PULSO — צ'ארמים לרצועות WHOOP / כושר",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "קולקציה של ~50 צ'ארמים-סליידרים שעוצבה בלילה 30.9 (GPT/Gemini, לא Blender): מפרט build_spec.py, מק\"טים C001–C053, שמות מסחריים, 4 פריימים לפיס. אחרי מחיקת 14 (4.10) + C051 Pulso Mark + C052 Star Anise = 38 מוצרים DRAFT בשופיפיי (כולם 4 תמונות, 3 וריאנטים Y/R/W, $750), קולקציה 490635264169 = 'PULSO' (handle pulso, לא מפורסמת). המידות נסגרו 1.10: פלטה 25×6×1.0 מ\"מ, רצועה 24, תפסני money-clip 7 מ\"מ במתח מוקדם, אבנים על הפלטה, 14K 2.2 ג'. תמחור מתכות (14K/9K/כסף) נדחה — 'נעבוד על זה מאוחר יותר'; כסף = רודיום שחור + ציפוי זהב ($45) אושר. דף קולקציה מקומי (q4/pulso-page, EN+HE) + artifact לשיתוף. שת\"פ נבדק: אניס קדיס + נועה מוזס (איירונמן) — פגישה 13.10 15:00; 2 עיצובים לנועה: C051 + C053 'Línea de Meta' (לא מאושר). אופציות מיקום רצועה A/B/C (12 תמונות) — המלצה B — ממתין לבחירה → lifestyle ל-38.",
+  "next_tasks": [
+   "13.10 15:00 — פגישה אניס קדיס + נועה מוזס; לפני: החלטה על C053, איזו רצועה נועה עונדת, סמל איירונמן (סימן מסחרי — חלופה)",
+   "דניאל: מיקום צ'ארם על הרצועה A/B/C (המלצה B) → ריצת lifestyle גבר+אישה ל-38 הפיסים ('כמו הספייד')",
+   "להגיע למוצרים במאות ₪ — תמחור כסף/9K (pulso-pricing: 14K $790, 9K $590, כסף $410 חציון x2.0); שני שדות: מכפיל + עיגול",
+   "דף קולקציה PULSO: GitHub Pages או באתר? 'הפנים של PULSO' — תמונה+שם אחרי הפגישה; CTA /collections/pulso",
+   "SKU של 36 המוצרים המקוריים עדיין נושאים קראט ישן (30.9) — לעדכן לפי מפרט v4",
+   "גיליון Launch Control (1ye6…) לא משותף לחשבון השירות (403) — דניאל משתף או מוחק 14 שורות ידנית",
+   "אטסי: העלאת PULSO לחנות Black Ice (תבניות ב-pulso-listing-templates.md; מחיר+קטגוריה פתוחים)",
+   "סרטון השקה 15–20 שנ' (Veo): קליפ אישה+קפה, מאקרו C025, גרסה 2 לגבר — קרדיטי Gemini נטענו 30.9",
+   "names.py חסר C051 (באג); collection.csv לרענן אחרי סגירת האקסל"
+  ],
+  "recent_changes": [
+   "11.10 — 14 טיוטות נמחקו, C052+C051 נוצרו → 38 DRAFT בקולקציה PULSO; אופציות רצועה A/B/C; דף PULSO מקומי + artifact; מחקר נועה מוזס",
+   "7.10 — C052 'Anís Negro' נוסף (8 יהלומים שחורים כזרעים); PULSO טבלה עם תקרות 1600/2200/2800; כסף = רודיום שחור + ציפוי ($45)",
+   "6.10 — תמחור מתכות PULSO-pricing-metals (14K/9K/כסף); תמחור נדחה ע\"י דניאל",
+   "4.10 — דניאל מחק 14 פיסים (מפרט+קבצים; שופיפיי+גיליון נשארו עד 11.10)",
+   "1.10 — מידות נסגרו (25×6×1.0, money-clip 7 מ\"מ), תשריט v4, C051 Pulso Mark v4 (מלא, פאווה שחור, Y/R/W + יד גבר)",
+   "30.9 — 50 פיסים נבנו בלילה; 50 מוצרי DRAFT בשופיפיי; השם PULSO הוצע; כללי תמונות: צ'ארם רק על הרצועה, ברוחב הרצועה"
+  ],
+  "artifacts": [
+   {
+    "label": "דף PULSO לשיתוף (artifact פרטי)",
+    "url": "https://claude.ai/artifact/DWwkF1cxkEgCW5Z4so3EEn",
+    "type": "artifact"
+   },
+   {
+    "label": "דף PULSO מקומי (EN/HE)",
+    "url": "file: remnant-launch\\q4\\pulso-page\\index.html",
+    "type": "doc"
+   },
+   {
+    "label": "תמחור מתכות PULSO",
+    "url": "file: remnant-launch\\q4\\pulso-pricing\\PULSO-pricing-metals.html",
+    "type": "doc"
+   },
+   {
+    "label": "גיליון WHOOP CHARMS — Launch Control",
+    "url": "https://docs.google.com/spreadsheets/d/1ye6BvrkQEPZvBpRkws0irdEkKur59qMzkaSGUDlit9w",
+    "type": "sheet"
+   },
+   {
+    "label": "מפרט + פייפליין (charms/)",
+    "url": "file: remnant-launch\\charms",
+    "type": "folder"
+   },
+   {
+    "label": "מצב שופיפיי של PULSO",
+    "url": "file: remnant-launch\\charms\\SHOPIFY-STATE-he.md",
+    "type": "doc"
+   },
+   {
+    "label": "דרופבוקס WHOOP CHARMS (רינדורים, launch)",
+    "url": "file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry\\Black Ice\\WHOOP CHARMS",
+    "type": "folder"
+   },
+   {
+    "label": "מחקר נועה מוזס",
+    "url": "file: remnant-launch\\q4\\pulso-page\\research\\NOA-MOZES-he.md",
+    "type": "doc"
+   },
+   {
+    "label": "לוח פינטרסט whoop-charms",
+    "url": "https://www.pinterest.com/dianarafaeljewelry/whoop-charms",
+    "type": "site"
+   },
+   {
+    "label": "תבניות ליסטינג אטסי ל-PULSO",
+    "url": "file: remnant-launch\\q4\\etsy\\pulso-listing-templates.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_whoop_charms.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-01.md",
+   "project_q4_operating_plan.md",
+   "q4/pulso-page/SUMMARY-he.md",
+   "project_session-2026-10-07.md"
+  ]
+ },
+ {
+  "id": "iai-proposal",
+  "title": "הצעת מחיר לתעשייה האווירית (IAI) — צמיד מתנה B036",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "הצעה v3 נבנתה 11.10 ערב: צמיד עור (שחור/חום) + מדליון מגן דוד + סוגר כסף 925 + חריטה + קופסת הגשה. 100 יח' × 1,250 ₪ + מע\"מ (במקום 1,400) = 146,250 ₪ כולל מע\"מ; תנאים: מקדמה 30%, 45–60 ימי עסקים מאישור עיצוב, תוקף 30 יום. דף HTML מודפס ל-A4 + artifact לשיתוף. B036 נקלט בקטלוג המודלים 11.10 (subtype Charm Bracelet כקירוב). הדמיות Gemini על בסיס צילומי רינו = קונספט (הסוגר יצא מגנטי, לא מה-CAD). ה-PDF בתיקיית הלקוח = הצעת ספק, לא שלנו.",
+  "next_tasks": [
+   "סלוגן לקופסה (placeholder צהוב); 'Who Dares Wins' = מוטו SAS — חלופות: Dare to Prevail / Fortune Favors the Bold",
+   "לבקש מ-IAI את תמונות המשימות המקוריות (קולאז')",
+   "לאשר: חלוקה שחור/חום (מינימום לצבע?), מה כלול במחיר (קופסה/חריטה), מע\"מ 17% נכון?",
+   "אורך רצועה סופי (במודל 117 מ\"מ = קטע) — לפני ייצור",
+   "דניאל פותח שיתוף ב-Share ושולח"
+  ],
+  "recent_changes": [
+   "11.10 ערב — הצעה v3 (index.html, PROMPTS-he.md, SUMMARY-he.md, הדמיות שחור/חום) + artifact",
+   "11.10 — B036 IAI נקלט בקטלוג (w-new-26)"
+  ],
+  "artifacts": [
+   {
+    "label": "הצעת IAI (artifact פרטי)",
+    "url": "https://claude.ai/artifact/Sv8MHCWbbsJa1Q2Mc8oU5a",
+    "type": "artifact"
+   },
+   {
+    "label": "תיקיית ההצעה (HTML, הדמיות, פרומפטים)",
+    "url": "file: remnant-launch\\q4\\iai-proposal",
+    "type": "folder"
+   },
+   {
+    "label": "סיכום + מה דניאל צריך לאשר",
+    "url": "file: remnant-launch\\q4\\iai-proposal\\SUMMARY-he.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_session-2026-10-11.md",
+   "q4/iai-proposal/SUMMARY-he.md",
+   "project_jewelry_catalog.md"
+  ]
+ },
+ {
+  "id": "nsa-spring-diam-jv",
+  "title": "NSA + ספרינג דיאם — קולקציה כמיזם משותף",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-08-23",
+  "where_we_stand": "מיזם משותף (עלה 14.6): קולקציה של 30 עיצובים. ספרינג דיאם מספק יהלומים ומממן ייצור (החזר + 20% על העלות), NSA (יוצק) מספק זהב ומשלם שיווק ~25K ₪/חודש (40% מהרווח), דניאל 60%. מודל עלויות v3 באקסל + תחשיב חי ב-GitHub Pages (collection-plan). מספרי בסיס: רווח פרויקט 404K ₪ על 120 יח'. ב-8.9 נקבע ש-REMNANT היא פרויקט של דיאנה רפאל בלבד ולא של המיזם. ב-23.8 היה ברשימת משימות השבוע ('NSA = הפרויקט עם ספרינג דיאם') ומאז לא התקדם בזיכרון. הצעד הבא שנשאר: תזרים חודשי (סבב תשלומים כל חודשיים, החזר השקעת NSA).",
+  "next_tasks": [
+   "לברר עם דניאל את הסטטוס הנוכחי של המיזם — מאז 23.8 אין עדכון",
+   "אם ממשיכים: לבנות תזרים חודש-חודש (תשלומים כל חודשיים, תזמון תשלום הזהב ל-NSA)",
+   "לא לערבב עם חוב הזהב ליוצק NSA (ops_caster_gold_debt) — נושא תפעולי נפרד"
+  ],
+  "recent_changes": [
+   "8.9 — החלטה: REMNANT לא קשור למיזם NSA/ספרינג דיאם",
+   "23.8 — 'NSA' ברשימת משימות השבוע; פרטים לא פורטו",
+   "14.6 — מודל עלויות v3 + דף web חי נבנו"
+  ],
+  "artifacts": [
+   {
+    "label": "תחשיב הקולקציה (חי)",
+    "url": "https://dadahan10.github.io/collection-plan/",
+    "type": "site"
+   },
+   {
+    "label": "אקסל תוכנית-קולקציה-חדשה-v3",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\תוכנית-קולקציה-חדשה-v3.xlsx",
+    "type": "sheet"
+   },
+   {
+    "label": "ריפו collection-plan",
+    "url": "https://github.com/dadahan10/collection-plan",
+    "type": "repo"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_new-collection-jv.md",
+   "project_nsa_spring_diam.md",
+   "project_session-2026-08-23.md",
+   "project_remnant.md"
+  ]
+ },
+ {
+  "id": "teen-fine-jewelry-brand",
+  "title": "מותג Fine Jewelry לנערות 12–18 (מיה + רונית)",
+  "group": "projects",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "12.10 בוקר: מחקר שוק עומק (5 סבבים, ~150 חיפושים) — עמוד חי כ-artifact + ריפו מקומי teen-jewelry-research. ממצאים: אין מותג-זהות לבנות 13–17; השכבה הלא-ממותגת 120–250 ₪; סאפורו = המודל היחיד שעובד (טיקטוק 204K, 39.90 ₪); רוני קאן benchmark נירוסטה, מגנוליה ברירת מחדל של ההורה, פנדורה היחידה עם דפים ל-4 הרגעים; Lovisa/Claire's לא בישראל; אף מודעה לא אומרת 'בת מצווה'. 12.10 10:00–13:00 פגישה במשרד עם מיה (סמנכ\"לית שיווק לשעבר פרנו-ריקאר) ורונית (ממתגת): fine jewelry (יהלומים), מיתוג יוקרתי-מינימליסטי, צריך מוצר מזהה (איקון), יהלומים ורודים/כחולים, שורות: layering, ear party, friendship, אמא–בת, סטיילינג. פער: fine jewelry ממקם במתנת סבתא/דודה (400–1,000+ ₪) ולא ב'הנערה בוחרת' — לבדיקה. ריפו GitHub נחסם — פוש ידני.",
+  "next_tasks": [
+   "להציע סדר: שם ומיתוג (רונית) → מוצר מזהה → קולקציית פתיחה קטנה → טווח מחירים → ערוץ (טיקטוק/אינסטגרם/קניון)",
+   "לבדוק את פער המיצוב: fine jewelry (מתנה) מול השכבה 120–250 ₪ (הנערה בוחרת)",
+   "אם מתקדמים: סקר 100–200 הורים לבנות 11–13; Keyword Planner ישראל; מכס 71.13/71.17 + ת\"י 1811; תצפית בית ספר",
+   "אם רוצים GitHub Pages: דניאל יוצר ריפו dadahan10/teen-jewelry-research → git push",
+   "להוסיף למחקר: רונית ים, שני יעקובי (עלו בפגישה)"
+  ],
+  "recent_changes": [
+   "12.10 10:00–13:00 — פגישה ראשונה מיה+רונית (משרד): מיצוב, מוצר מזהה, שורות מוצר",
+   "12.10 בוקר — מחקר 5 סבבים + עמוד חי; נשלח במייל לדניאל; תצפית 0068 (כלים: r.jina.ai לטיקטוק/Suggest)"
+  ],
+  "artifacts": [
+   {
+    "label": "עמוד המחקר החי (artifact פרטי)",
+    "url": "https://claude.ai/artifact/CRcxdhHHXzvaUqMqsQQjcB",
+    "type": "artifact"
+   },
+   {
+    "label": "ריפו מקומי (index.html, research/round-1..5.md)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\teen-jewelry-research",
+    "type": "folder"
+   },
+   {
+    "label": "סיכום הפגישה 12.10",
+    "url": "file: C--Users-USER\\memory\\project_teen_fine_jewelry_brand.md",
+    "type": "doc"
+   },
+   {
+    "label": "סקיל niche-research",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\niche-research",
+    "type": "skill"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_teen-jewelry-research.md",
+   "project_teen_fine_jewelry_brand.md (office)"
+  ]
+ },
+ {
+  "id": "dima-jv-ecommerce",
+  "title": "שת\"פ דימה — מותג תכשיטי גוף (hand chain)",
+  "group": "projects",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-08-25",
+  "where_we_stand": "מיזם עם דימה רויטמן (Bcrazy; ייצור באסיה, משלוח בתפזורת לארה\"ב). 8 סבבי מחקר (2–3.8) + 8 סבבי עומק (9a–d, 10a–d, 25.8). הוחלט 25.8: מותג חדש, מוצר גיבור HAND CHAIN BRACELET ('צמיד טבעת'), כל תכשיטי הגוף, סגנון מינימלי-עדין, ישראל = B2B בלבד (בגד ים/מלונות), כלות מההתחלה, קפסולה שחורה 4–6 SKU כ-drop שני. תמחור: ליבה $95–165, דגל $185–220, gold-filled. הבידול ששרד: מערכת מידות/fit. מסמך השראה (16 פרקים, 14 תמונות) פורסם כ-artifact 25.8 — מוכן לישיבה עם דימה. ממצאים קבועים: קנייה חוזרת 9.9%, אטסי=סיכון, המגבלה = הון מלאי + CAC. מאז 25.8 אין עדכון — הישיבה עם דימה לא תועדה.",
+  "next_tasks": [
+   "לברר: האם הישיבה עם דימה התקיימה ומה הוחלט",
+   "השאלה הפתוחה #1: הון מלאי (תפזורת = כסף קפוא) — לא נשאל באף סבב",
+   "אם ממשיכים: 3 שערי בדיקה (הזול קודם), תקציב $5,000–8,500; הצעת מחיר 3PL בארה\"ב",
+   "אקסימוס: שורטליסט שותפים (ליאור פוזין, איתמר רין, רועי נעמן, נפתלי בר, אנה פלקין) — שלב ב'"
+  ],
+  "recent_changes": [
+   "25.8 — round-10d אימות SWOT; מסמך השראה v1.1 עם 14 תמונות פורסם",
+   "3.8 — תשובות דניאל: ייצור אסיה → תפזורת לארה\"ב; סולם $60–80 + $250–300; מוחק את חוט ה-FTA/משלוח בודד",
+   "2–3.8 — 8 סבבי מחקר אדוורסרי (כל סבב הפריך את קודמו)"
+  ],
+  "artifacts": [
+   {
+    "label": "מסמך ההשראה לישיבה (artifact)",
+    "url": "https://claude.ai/code/artifact/3cdadda6-f30f-4128-a274-26952c73db00",
+    "type": "artifact"
+   },
+   {
+    "label": "ריפו dima-jv (פרטי) + research/",
+    "url": "https://github.com/dadahan10/dima-jv",
+    "type": "repo"
+   },
+   {
+    "label": "תיקיית המחקר (משרד: OneDrive)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\dima-jv\\research",
+    "type": "folder"
+   },
+   {
+    "label": "לוח פינטרסט hand-chain",
+    "url": "https://www.pinterest.com/dianarafaeljewelry/hand-chain-jewelry",
+    "type": "site"
+   },
+   {
+    "label": "סקיל niche-research (נגזר מהמחקר)",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\niche-research",
+    "type": "skill"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_dima-jv-ecommerce.md",
+   "project_session-2026-08-25.md (office)",
+   "project_session-2026-08-23.md"
+  ]
+ },
+ {
+  "id": "lawsuit-dr-sale",
+  "title": "התביעה סביב מכירת דיאנה רפאל",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "blocked",
+  "last_update": "2026-10-04",
+  "where_we_stand": "עסקת המכירה התפוצצה 1.3.2026. ~200K ₪ (מתוך ~300K שהתקבלו) יושבים במיטב טרייד ובמחלוקת משפטית — לא לתכנן עליהם, לא נכס זמין. תביעה נגד דניאל ~500K ₪; תביעה שכנגד ~1M ₪. עלויות עד כה: שכ\"ט עו\"ד 47,200 ₪ + אגרות ~11,486 ₪. עו\"ד: מירילאשוילי / יצחק מיר. 4.10: ~100K+ במיטב לא מושקעים (~3.5–4K/שנה אבודים) — קרן כספית רק אם אין צו עיקול; לא נענה.",
+  "next_tasks": [
+   "דניאל: האם יש עיקול/צו על הכסף במיטב? (שאלה פתוחה מ-4.10) → אם לא, קרן כספית",
+   "לתקצב המשך הוצאות משפטיות בתזרים",
+   "לעדכן סטטוס ההליך כשיש התפתחות (אין עדכון מאז 2.9)"
+  ],
+  "recent_changes": [
+   "4.10 — הועלה: 100K במזומן שלא עובדים במיטב; תלוי בסטטוס המשפטי",
+   "2.9 — ניתוח פיננסי: 200K קפואים, לא לספור כהון עצמי"
+  ],
+  "artifacts": [
+   {
+    "label": "זיכרון התביעה",
+    "url": "file: C--Users-USER\\memory\\project_lawsuit_dr_sale.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_lawsuit_dr_sale.md",
+   "research_loan_refinance_2026-10.md",
+   "project_dira-behanacha-kadima.md"
+  ]
+ },
+ {
+  "id": "mechir-lamishtaken",
+  "title": "מחיר למשתכן / דירה בהנחה — קדימה-צורן",
+  "group": "personal",
+  "kind": "personal",
+  "status": "paused",
+  "last_update": "2026-08-23",
+  "where_we_stand": "דניאל זכה 2.8.2026 בהגרלה 2735 (מגרשים 27-28, שחק גרופ, קדימה-צורן), מקום 23/34 מתוך 22,074. התזה: להשכיר, לא לגור — רווח מההנחה (30–37%) + עליית מחירים. מודל המחיר אומת מול האקסל של דניאל (הנחה = min(25%×16,259×מ\"ר, 500K)). משכנתא נתקעת על 1,575,000 ₪ (LTV 75% עד 2.1M) — 100 מ\"ר → הון עצמי 171K; 120 מ\"ר → 496K. המגבלה האמיתית PTI (צריך נטו ~33K). מלכודות: לא לקנות דירה נוספת לפני המכירה (מס שבח), לא לחתום עסקה עתידית לפני 22.7.2033, חידוש זכאות שנתי 50 ₪. טרם הוגשה בקשה להיתר — מסירה 2030–2032. ב-23.8 'לומדים את האירוע'; מאז אין עדכון.",
+  "next_tasks": [
+   "3 שיחות: מחירון 9 דירות שוק חופשי (שחק גרופ) · סטטוס היתר (אשד בקרה 5349*) · אישור עקרוני מדיסקונט",
+   "תזכורת יומן: חידוש זכאות שנתי (50 ₪)",
+   "החלטה רוחבית על קיצוצים (גושים שנתיים: אקסימוס/משפט/עו\"ד) → דף מידע מקומי + ריפו פרטי dira-kadima",
+   "קרן השתלמות נזילה 31.1.2030 — מקור הון לפני חתימה"
+  ],
+  "recent_changes": [
+   "23.8 — ברשימת משימות השבוע ('לומדים את האירוע')",
+   "4.8 — מודל מחיר/הון עצמי/מס שבח אומת; 2.8 — הזכייה"
+  ],
+  "artifacts": [
+   {
+    "label": "זיכרון הדירה (מודל מלא)",
+    "url": "file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_dira-behanacha-kadima.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_dira-behanacha-kadima.md",
+   "project_mechir_lamishtaken.md",
+   "project_session-2026-08-23.md"
+  ]
+ },
+ {
+  "id": "jewelry-catalog",
+  "title": "קטלוג המודלים (934 מודלים) — ריצה שבועית",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "טבלת models במערכת הניהול = 934 מודלים (701 White / 233 Black Ice) אחרי הריצה השבועית 11.10 21:00 (929→934): נקלטו R544 Cluster, B036 IAI, E058/B034/B035 (דגל no_image); הדמיות REMNANT רועננו (R110/R112/R114/R121/E048/E049); 5 יתומים קושרו (J1781→R544, J1783→B034, J1784→B035, J1785/J1787→E058). דגלים: R112 שני עיצובים בתיקייה (BAND עם CAD, ENG בלי) — צריך מספר נפרד; R121 מרכזית Round→Marquise; R114 שם Accersion/Accretion. CONFLICTS 187 שורות. בלי דגם: J1775 (B037), B004/B006 BI, B031, R527. הפרויקט 'סגור' מבחינת דניאל (16.9) אבל הריצה השבועית (יום ראשון 21:00, DR-Catalog-Nightly עם שער בסקריפט) ממשיכה וקולטת תיקיות חדשות. 27.9 נמחקו 343 קבצי CAD + 196 זיפים מ-141 תיקיות בדרופבוקס — לא ברור אם מכוון.",
+  "next_tasks": [
+   "דניאל: לברר מחיקת CAD/זיפים מ-27.9 (מכוון?) — תצפית 9 פתוחה",
+   "דניאל: לעבור על VOCABULARY + CONFLICTS.md",
+   "R112: מספר נפרד לעיצוב ה-ENG הכיפתי; B037 של J1775 — לפתוח תיקייה",
+   "דניאל רצה לסגור DR-Catalog-Nightly (schtasks /Delete) — או להשאיר שבועי; ריצה הבאה 18.10 21:00",
+   "משרד: בבוקר שני לדווח מלוג catalog-log-<תאריך>.md"
+  ],
+  "recent_changes": [
+   "11.10 — ריצה שבועית 2: 929→934, הדמיות REMNANT רועננו, commit ca36ef5",
+   "4.10 — ריצה שבועית 1: 919→929, 10 תיקיות REMNANT נפתחו, REMNANT = קולקציית Black Ice בקטלוג",
+   "28.9 — הריצה הפכה שבועית (יום ראשון 21:00)",
+   "24.9 — B033 נקלט → J1777; 22.9 — באג J פאנטום (J1780) תוקן",
+   "16.9 — דניאל סיים לעבור → הפרויקט סגור (נשאר למחוק משימה)"
+  ],
+  "artifacts": [
+   {
+    "label": "מערכת הניהול — דף מודלים",
+    "url": "https://diana-rafael.vercel.app",
+    "type": "site"
+   },
+   {
+    "label": "catalog/ בריפו diana-rafael (census, catalog-full.json, CONFLICTS.md)",
+    "url": "file: diana-rafael\\catalog",
+    "type": "folder"
+   },
+   {
+    "label": "לוגים ליליים",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\catalog-log-*.md",
+    "type": "doc"
+   },
+   {
+    "label": "תיקיית העל בדרופבוקס",
+    "url": "file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry",
+    "type": "folder"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_jewelry_catalog.md",
+   "ops_catalog_nightly.md",
+   "project_session-2026-09-16.md",
+   "project_session-2026-10-07.md"
+  ]
+ },
+ {
+  "id": "certificates-gil",
+  "title": "תעודות GIL + cert-publisher",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-01",
+  "where_we_stand": "סוכן התעודות (make_cert.py ב-shipping-agent, משרד) מכין תעודות GIL מתוך מערכת הניהול + תבניות Word; דניאל מאשר, מדפיס מה-Word, PDF → certs PDF → cert-publisher (Playwright, Task 'CertPublisher') מעלה ל-Shopify Files + WordPress gil-lab.com. פיילוט 29.9–1.10: 1225428455 (J1779), 456 (J1768), 457 (J1769), 459 (J1776 נוגה — יהלומי מעבדה, דניאל תיקן מרכזית 1.02 E VS1) — כולן אושרו ופורסמו. כללים נלמדו: מספר הבא = הגבוה בקבצים +1, לעולם לא שבת, שווי ×1.6–2, קראט לפי הליסטינג שנמכר, תמונה FRONT VIEW, Canva להסרת רקע, יישור תוויות עם נקודות. פתוח: 1225428454 (10.9) ו-458 (1.10, לא בסשן) — לא ידוע מי/מה. חיבור משקל-מהוואטסאפ→תעודה אחרי 5–10 תעודות נקיות. Adobe לעריכת תעודות — ממתין ל-login.",
+  "next_tasks": [
+   "לברר 1225428454 (מעבר, לא פורסם) ו-1225428458 (נוצרה 1.10 מחוץ לסשן)",
+   "להמשיך פיילוט (עוד ~5 תעודות) → ואז לחבר משקל מהוואטסאפ → חשבונית+תעודה יחד",
+   "אטסי: CSV ליסטינגים מ-Shop Manager (דניאל) → etsy_listings.json לקראט לפי ליסטינג",
+   "Adobe (/mcp login של דניאל) → תעודה לדוגמה → סוכן עריכה לפני cert-publisher",
+   "16 טבעות בלי תמונת צד / תמונות cert — צילומים"
+  ],
+  "recent_changes": [
+   "1.10 — 459 לנוגה (R543, מעבדה) — כלל LAB-GROWN נוסף ל-make_cert.py; לקח: אבן מרכזית שלא במערכת = לשאול",
+   "30.9 — 457 לדרו (R030 WG) אושרה; תיקון photo_slot RGBA",
+   "29.9 — פיילוט 455/456; 14 כללים מדניאל; תבנית BI-R102-Y-4-14 נשמרה"
+  ],
+  "artifacts": [
+   {
+    "label": "make_cert.py (משרד)",
+    "url": "file: C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\make_cert.py",
+    "type": "doc"
+   },
+   {
+    "label": "תיקיית התעודות",
+    "url": "file: C:\\Users\\USER\\Dropbox\\Diana Rafael\\תעודות",
+    "type": "folder"
+   },
+   {
+    "label": "cert-publisher (agent.py)",
+    "url": "file: C:\\Users\\USER\\cert-publisher\\agent.py",
+    "type": "doc"
+   },
+   {
+    "label": "גלריית התעודות",
+    "url": "https://gil-lab.com",
+    "type": "site"
+   },
+   {
+    "label": "כללי התעודות (זיכרון)",
+    "url": "file: C--Users-USER\\memory\\project_certificates.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_certificates.md",
+   "project_cert_publisher.md",
+   "project_certs-agent.md",
+   "project_session-2026-09-29.md",
+   "project_session-2026-09-30.md",
+   "etsy_listings.md",
+   "project_higgsfield_midjourney_adobe.md"
+  ]
+ },
+ {
+  "id": "customizeai-product",
+  "title": "CustomizeAI — המוצר (ווידג'ט קסטומיזציה באתר)",
+  "group": "customizeai",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "באוויר מ-15.9 על dianarafael.com (תבנית Prestige 152145035433 = MAIN), רק על טבעות אירוסין Black Ice: כפתור מתחת ל-ADD TO CART פותח צ'ט צף; תוצאה רק בצ'ט; 'Request this' → פופאפ ליד (וואטסאפ/מייל/וידאו); מייל ליד ל-daniel@ דרך Resend. שרת: customizeai-api.onrender.com (Render Starter), DB Supabase נפרד (juygzbkytubncshfdcae, סידני). 27.9: כרטיס עובדות מוצר + כללי שיניים בפרומפט, angle_images ל-135 טבעות (דניאל סקר; 16 בלי תמונת צד), 'על היד' = צילום אמיתי, חריטה על תמונת הצד, פוקוס פול כללי, דף /admin/review לאישור/דחייה, אצווה חוזרת 21 בקשות (17 אושרו). שימוש נמוך: 6.10=0, 7.10=1, 9.10=0, 10.10=1 פתיחה. עיקרון דניאל: פתרונות כגישה כללית לכל מוצר. פתוח: CTA בסיום התהליך, תמונות צד ל-16 טבעות, הארד-קוד modal_page_gfdmkH למרצ'נט שני, עלות Supabase סידני, פופאפ קלאביו 'new feature' + סרטון שימוש.",
+  "next_tasks": [
+   "בוקר (משרד): לשלוף דחיות מאתמול מ-widget_events.feedback → לתקן פרומפט (prompt-engineering.js / learned-rules.md) → לדווח",
+   "16 טבעות בלי תמונת צד (angle_images->>'side' is null) — צילום/בחירה; הצעה: להריץ מחדש בוחר זוויות על ~100 הטבעות שהצד שלהן נבחר ע\"י קלוד",
+   "הנעה לפעולה בסיום התהליך (CTA) — טרם עוצב",
+   "פופאפ קלאביו 'Check out our new feature' + סרטון שימוש (Playwright) — דניאל יגיד טבעת+בקשה",
+   "qa_gallery_injection.py נכשל ('theme's own CTA is hidden on load') — לתקן",
+   "לבדוק עלות פרויקט Supabase בסידני; למחוק ליד טסט מ-31.8"
+  ],
+  "recent_changes": [
+   "27.9 — productFacts + כללי שיניים; angle_images 135 טבעות; ניתוב על-היד/חריטה; פוקוס פול (commit baf9fb6); /admin/review; מייל יומי עם בקשות אתמול; אצווה חוזרת (Resend 01a0e244)",
+   "15.9 — פורסם (MAIN); QA 27/27; widget_events + דוח יומי 08:00 (commit 15045bb); 16.9 תיקון Resend שקט",
+   "3.9 — 'Doesn't look right' משאיר בצ'ט; רק 'Request this' פותח ליד",
+   "1.9 — רה-עיצוב: תמונה רק בצ'ט, חלון צף נגרר, CORS לפריוויו, כפתור בבורדו, 3 הצעות פתיחה, חריטה רק בפנים הגב",
+   "31.8 — שרת ב-Render, Resend הוקם, DB נפרד, 1,000 מוצרים סונכרנו"
+  ],
+  "artifacts": [
+   {
+    "label": "ריפו customizeai",
+    "url": "https://github.com/dadahan10/customizeai",
+    "type": "repo"
+   },
+   {
+    "label": "שרת (health / customizeai.js)",
+    "url": "https://customizeai-api.onrender.com",
+    "type": "site"
+   },
+   {
+    "label": "דף סקירת רינדורים (admin/review)",
+    "url": "https://customizeai-api.onrender.com/admin/review?key=1292a2c59e250dfed1aa4b2af9924011ca5c",
+    "type": "site"
+   },
+   {
+    "label": "דף זוויות (admin/angles)",
+    "url": "https://customizeai-api.onrender.com/admin/angles?key=1292a2c59e250dfed1aa4b2af9924011ca5c",
+    "type": "site"
+   },
+   {
+    "label": "דוגמה חיה: טבעת Black Ice עם הכפתור",
+    "url": "https://dianarafael.com/products/alma-oscura-black-white-natural-black-diamond-oval-cut-engagement-ring",
+    "type": "site"
+   },
+   {
+    "label": "תיקייה מקומית (בית)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\customizeai",
+    "type": "folder"
+   },
+   {
+    "label": "GO-LIVE.md",
+    "url": "file: customizeai\\docs\\GO-LIVE.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_customizeai.md (office)",
+   "project_session-2026-09-15.md",
+   "project_session-2026-09-27.md",
+   "customizeai-storefront-preview.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "feedback_customizeai_generic_solutions.md"
+  ]
+ },
+ {
+  "id": "customizeai-usage",
+  "title": "CustomizeAI — נתוני שימוש ודוח יומי",
+  "group": "customizeai",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "מ-15.9 כל אירוע (open/clarify/generate/lead) נרשם ב-widget_events עם session_id (= אדם), product_url, request_text, result_url, feedback. מייל אוטומטי 08:00 מ-leads@dianarafael.com לדניאל (אנשים/בקשות/תמונות/לידים + 7 ימים + 'הבקשות של אתמול' before/after + כפתור לדף הסקירה). שגרת בוקר במשרד: שורת שימוש של אתמול. מספרים אחרונים: 2.10 = 15 אירועים/1 אדם, 3.10 = 4 אנשים, 6.10 = 0, 7.10 = 1 אדם/0 בקשות, 9.10 = 0, 10.10 = 1 פתיחה. דף 'הבקשות בווידג'ט' (artifact סטטי, 27.9).",
+  "next_tasks": [
+   "משרד, כל בוקר: select event,count(*),count(distinct session_id) from widget_events where created_at >= current_date-1 → שורה לדניאל",
+   "לתרגם דחיות (feedback='rejected') לתיקוני פרומפט",
+   "אם המייל לא הגיע ב-08:00 — health של Render + שורת report_sent + לוג [daily-report] resend",
+   "לרענן את artifact הבקשות (שאילתות widget_events + storage) ולפרסם לאותו URL"
+  ],
+  "recent_changes": [
+   "11.10 — 9.10=0, 10.10=1 פתיחה",
+   "8.10 — 7.10 = 1 אדם, 0 בקשות; 7.10 — 6.10 = 0 (2.10 = 15 אירועים/1 אדם, 3.10 = 4 אנשים)",
+   "27.9 — request_text/result_url/feedback; מייל עם before/after; /admin/review",
+   "16.9 — Resend שקט תוקן (זורק על error); 15.9 — widget_events + מייל 08:00"
+  ],
+  "artifacts": [
+   {
+    "label": "דף הבקשות בווידג'ט (artifact)",
+    "url": "https://claude.ai/artifact/M8Z9CNx8kEKib3xZJcwQug",
+    "type": "artifact"
+   },
+   {
+    "label": "Supabase CustomizeAI (juygzbkytubncshfdcae)",
+    "url": "https://juygzbkytubncshfdcae.supabase.co",
+    "type": "site"
+   },
+   {
+    "label": "daily-report.js",
+    "url": "file: customizeai\\api\\services\\daily-report.js",
+    "type": "doc"
+   },
+   {
+    "label": "שגרת הדוח (זיכרון)",
+    "url": "file: C--Users-USER\\memory\\ops_customizeai_daily_report.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "ops_customizeai_daily_report.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "project_session-2026-09-16.md"
+  ]
+ },
+ {
+  "id": "customizeai-agent-company",
+  "title": "CustomizeAI כחברה של סוכנים (רעיון 11.10)",
+  "group": "customizeai",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-10-11",
+  "where_we_stand": "הנחיית דניאל 11.10 (משרד): לבנות את CustomizeAI כ'חברה של סוכנים' — מנכ\"ל/CTO/פרודקט וכו'; מנוע יצירה→פידבק→תיקון→בקרה; עובד לבד ושולח תוכניות לאישור ותוצאות לבדיקה. שלב 1: מושלם לתכשיטים שלנו; שלב 2: מותג תכשיטים אחר (טננגרופ: My Name Necklace, Oak & Luna); שלב 3: מותגים אחרים. לא התחלנו — דניאל ביקש תוכנית קודם, ותוכנית מוצעת ממתינה לאישור. זה הבסיס הרעיוני גם למטרת ה-multi-tenant מה-SPEC של סוכן השיווק (22.6). ממצא רלוונטי ממחקר דימה (סבב 6): המתחרים האמיתיים מול-לקוח עולים $149–849/חודש.",
+  "next_tasks": [
+   "לכתוב תוכנית לארכיטקטורת הסוכנים (תפקידים, לולאת יצירה→פידבק→בקרה, מה דורש אישור) ולהציג לדניאל",
+   "שלב 1 תלוי בסגירת הפתוחים במוצר (תמונות צד, CTA, דחיות)",
+   "להכין את ה-hardcode (modal_page_gfdmkH, merchant UUID) לקונפיג פר-מרצ'נט לקראת שלב 2",
+   "לבדוק את הקשר ל-SPEC-autonomous-funnel.md (6 פורקים פתוחים)"
+  ],
+  "recent_changes": [
+   "11.10 — הרעיון הוצג ע\"י דניאל; לא התחיל"
+  ],
+  "artifacts": [
+   {
+    "label": "סשן 11.10 (ההנחיה)",
+    "url": "file: C--Users-USER\\memory\\project_session-2026-10-11.md",
+    "type": "doc"
+   },
+   {
+    "label": "SPEC-autonomous-funnel (סוכן שיווק, multi-tenant)",
+    "url": "file: diana-rafael-marketing\\strategy\\SPEC-autonomous-funnel.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_session-2026-10-11.md",
+   "project_diana-rafael-marketing.md",
+   "project_dima-jv-ecommerce.md"
+  ]
+ },
+ {
+  "id": "management-system",
+  "title": "מערכת הניהול (diana-rafael — React+Supabase+Vercel)",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "מערכת פנימית חיה ב-diana-rafael.vercel.app (Supabase fcmlnrkkcabebuechaum): הזמנות, לקוחות, תכשיטים, יהלומים, ספקים, הוצאות/תזרים, מודלים (934), הצעות מחיר, תמחור, משלוחים. שלבי ייצור על התכשיט (in_progress→model→casting→work→ready→sold), הזמנה received→…→delivered. שער דולר+זהב מתעדכנים אוטומטית (pg_cron 05:30 UTC, מ-23.9). טוקן sbp_ חדש מ-4.10 — SQL דרך Management API עובד. J הבא מוקצה בטריגר. 11.10: הזמנות 1647/1648 (צימט) נמחקו, J1755/J1417 חזרו למלאי. מסך לבן תוקן 2.8 (ErrorBoundary + 'נקה ורענן'). רשימת 3.9 של 5 תיקונים בוטלה (23.9). J1731 במערכת עדיין R118 (צריך R117). Backlog 23.7 (סוכן שלמות הזמנה, DD→3D, מייל→יציקה, משלוח→נמכר) בנוי חלקית ב-status_triggers.py.",
+  "next_tasks": [
+   "J1731 → R117 במערכת (SQL נחסם 7.10 — דניאל מעדכן או מאשר)",
+   "סוכן שלמות הזמנה/J (שם/מייל/טלפון/מק\"ט) — backlog #2, רץ כל היום",
+   "Etsy: מיפוי מייל+טלפון ב-Make חסר; amount בסנטים — פתוח מזמן",
+   "DS-0017: לוודא count=1 (אם אבן בודדת — הפיצול ל-DS-1724 שגוי)",
+   "'דודו עמירה' = 'ליאור עמירה'? לאחד ספק; חשבונית DR-0175 $350 — cross-check",
+   "ממו ספרינג דיאם 7169967: MDR-0001→DR, MDB-0012→DB כשתגיע חשבונית",
+   "קנבאן ייצור / Dashboard KPIs — מודולים הבאים (ישן)"
+  ],
+  "recent_changes": [
+   "2026-10-04 — טוקן Supabase Management API חדש (sbp_, Full access) ב-.env — גישת SQL ישירה לסוכן חזרה (הקודם החזיר Unauthorized)",
+   "2026-09-29 — api/whatsapp.ts: משימה שממתינה >2 דק' בלי שהמחשב אסף אותה → הבוט עונה 'המחשב לא מחובר' במקום 'מכין' (נדחף ל-main → Vercel)",
+   "2026-09-27 — קוד הדולר/זהב באוויר (commit 10f7f4c): loadFromSupabase קורא usd_ils_rate / gold_price_14k_ils / gold_price_18k_ils מ-settings; הפרוקסי המת (/api/fx, /api/gold) הוסר",
+   "2026-09-23 — refresh_market_rates() + pg_cron יומי 05:30 UTC ב-Supabase (frankfurter.dev + gold-api.com) — sql/2026-09-23_market_rates_cron.sql. ריצה ראשונה 3.0178 / $4,320. 'רשימת תיקוני 3.9' בוטלה ע\"י דניאל",
+   "2026-09-20 — סשן לילי מתוזמן DR-Mgmt-2026-09-20 (6 משימות: שער+זהב, רווח לפי מטבע פלטפורמה, באג משקל 0.0x, תמונה בהצעת מחיר→כרטיס לקוח, סה\"כ רכישות ישראלים, FOLLOW UP+תזכורת) — רק סעיף השער+זהב ידוע כבוצע; השאר לא אומת",
+   "2026-09-09 — DR-OrderIntake חזר לחיים (נפל מ-14.8 בגלל נתיב Desktop ישן אחרי מעבר ל-OneDrive): status_triggers.py כל שעתיים — כרטיס DD→model, מייל יציקה→casting, מייל תווית D2D/לאור→shipped+sold+מעקב. 8 מספרי מעקב הוזנו, J1768 model→casting",
+   "2026-09-07 — אינדקס ייחודי diamonds_one_parcel_per_slot על (allocated_to, position) — sql/2026-09-07; ה-UI מציע חריץ פנוי (commit). ספרינג דיאם נקלט כסדרת DB ישירות ב-SQL",
+   "2026-09-03 — גישת Management API ל-Supabase (טוקן claude-agent) — הסוכן מריץ מיגרציות בעצמו, בלי SQL Editor",
+   "2026-08-25 — מודל שלבים חדש: שלב הייצור על jewelry.status (in_progress→model→casting→work→ready→sold); orders רק received→in_preparation→ready→shipped→delivered (+issue)",
+   "2026-08-24 — תרחיש Make 5417151 Shopify→Supabase נבנה מחדש (אחרי אובדן אמון): חיפוש לקוח לפי מייל → upsert מלא (שם מלא, כתובת, טלפון) → הזמנה עם customer_id + model_ref=SKU מלא → השלמת sku ל-J",
+   "2026-08-20 — תיקון '14KK undefined' במסך תכשיטים: 67 רשומות נורמלו (gold_karat 14/18, gold_color Y/W/R/PT); OrdersPage כתב '14K'/'Rose' — תוקן (commit dd08d11)",
+   "2026-08-04 — לולאת משלוח מלאה: d2d_bot --j מעדכן אוטומטית order=shipped, jewelry=sold, Shopify fulfilled, טרלו",
+   "2026-08-02 — מסך לבן אחרי login תוקן (5738f1c): persist version:1 + partialize רק preferences/settings + ErrorBoundary 'נקה ורענן'; כפתורי תקופות בדשבורד (4087d4b); לשונית 'צ'קים ותשלומים' על expenses (a5c7292); כלל תזרים — צ'ק יוצא רק בסימון 'ירד' (ecc8022); סיסמה אופסה",
+   "2026-07-27 — סוכן קליטה מקומי מושך שם/מייל/טלפון/כתובת/מקט/מידה/זהב/קראט ישר מ-Shopify API; תרחיש Make 5417151 נשאר שבור בכוונה (עד 24.8)",
+   "2026-07-21 — שדה מק\"ט בכרטיס J; בורר מתכת מאוחד + פלטינה (950/PT); עלות ייצור מחושבת מ-costByJ (לא cost_usd ידני); מטבע ₪ להזמנות ישראליות (private_ils/superpharma)",
+   "2026-07-13 — שדה הצמדת J: select → input+datalist (בחירה או הזנה ידנית, מסונן status NOT IN sold/disassembled) — da35bc6+c940782; סקיל complete-order-intake; הזמנה #1263 פוצלה ל-J1725+J1726",
+   "2026-07-09 — intake_sku_match.py: צבע נגזר מ-Material של הוריאציה (לא מכותרת הליסטינג) — תיקון באג Y במקום R",
+   "2026-07-05 — routine הענן order-intake-and-casting-autopilot מת ~8 ימים → הזמנות גולמיות; הוחלט על קליטה מקומית + heartbeat (order-intake-rebuild). Diane Fox נמחקה",
+   "2026-07-01 — שער USD→ILS = settings.usd_ils_rate (3.3) נטען ב-loadFromSupabase; FX חי לא דורס את שער העלות; מכירות החודש גם ב-₪; סוכן תעודות (CERTS AGENT)",
+   "2026-06-23 — 8 תיקוני UI (e53d4ce): כפתור 'J הבא' + SKU ידני בכרטיס הזמנה, FK fix (jewelry קודם), מטבע לקוח ₪/$, costByJ ב-₪, התראות (wedding bands R199, פריט שנשלח, z-index, click-outside); דדופ יהלומים + אבן מרכזית אחת ל-J (6dcd0be)",
+   "2026-06-22 — באג 'J הבא' תוקן (סורק orders+jewelry); עמודות אבן מרכזית/אבני צד ב-JewelryPage; מסך ספקים חדש (SuppliersPage) מאגד חיובים מ-4 טבלאות עלויות",
+   "2026-06-21 — טריגר DB trg_orders_assign_j — הקצאת J אוטומטית מיידית + שורת jewelry; כפתור 'J הבא' ב-NewOrderModal; resolveCustomer מקשר customer_id; שדה מקדמה (paid_usd/paid_ils)"
+  ],
+  "artifacts": [
+   {
+    "label": "מערכת הניהול (חי)",
+    "url": "https://diana-rafael.vercel.app",
+    "type": "site"
+   },
+   {
+    "label": "ריפו diana-rafael",
+    "url": "https://github.com/dadahan10/diana-rafael",
+    "type": "repo"
+   },
+   {
+    "label": "Supabase (מערכת הניהול)",
+    "url": "https://fcmlnrkkcabebuechaum.supabase.co",
+    "type": "site"
+   },
+   {
+    "label": "תיקייה מקומית (משרד: OneDrive\\Desktop\\diana-rafael)",
+    "url": "file: C:\\Users\\USER\\OneDrive\\Desktop\\diana-rafael",
+    "type": "folder"
+   },
+   {
+    "label": "גישת SQL (Management API)",
+    "url": "file: C--Users-USER\\memory\\ops_supabase_sql_access.md",
+    "type": "doc"
+   },
+   {
+    "label": "backlog אוטומציות 23.7",
+    "url": "file: C--Users-USER\\memory\\project_mgmt_roadmap.md",
+    "type": "doc"
+   },
+   {
+    "label": "תיקונים ממתינים",
+    "url": "file: C--Users-USER\\memory\\pending_fixes_diana_rafael.md",
+    "type": "doc"
+   },
+   {
+    "label": "סקיל complete-order-intake",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\complete-order-intake",
+    "type": "skill"
+   },
+   {
+    "label": "סקיל record-supplier-payment",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\record-supplier-payment",
+    "type": "skill"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_office.md",
+   "project_mgmt_roadmap.md",
+   "pending_fixes_diana_rafael.md",
+   "parking_lot.md",
+   "ops_supabase_sql_access.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-04.md",
+   "project_session-2026-10-01.md",
+   "project_session-2026-09-30.md",
+   "project_session-2026-09-23.md",
+   "project_session-2026-09-14.md",
+   "project_mgmt-system-blank-screen.md",
+   "ops_order_status_triggers.md"
+  ]
+ },
+ {
+  "id": "order-intake",
+  "title": "קליטת הזמנות (Make → Supabase, Shopify/Etsy)",
+  "group": "infra",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-08",
+  "where_we_stand": "Shopify → Supabase: תרחיש Make 5417151 'Integration Shopify, Supabase' — נפל 30.9 על לקוח חוזר (409 customers_email_unique), תוקן 1.10 (upsert on_conflict=email, get() syntax) ופעיל. Make מכבה בשקט אחרי 3 כשלונות — אף אחד לא מתריע; סימפטום = הזמנת Shopify בלי שורת orders. טריגר DB מקצה J מיידית (מדלג על upsert מ-22.9). העשרה (לקוח/SKU/model_ref/יהלום) = סוכן מקומי intake.mjs + status_triggers.py דרך DR-OrderIntake כל שעתיים (רץ רק במשרד; ב-6.10 נופל rc 3221225786 ב-status_triggers). Etsy = INSERT דרך Make (מייל+טלפון לא ממופים; amount בסנטים); אטסי לארה\"ב = DDP דרך לאור (d2dvalue). רוטינת הענן autopilot כבויה מ-30.8. הזמנה רב-פריטית = פיצול ידני ל-J לכל פריט (סקיל complete-order-intake). פריט מלאי (בלי SKU) מקבל J חדש → להפנות ל-J של המלאי ולמחוק את הריק.",
+  "next_tasks": [
+   "אם תרחיש 5417151 כבוי: scenarios_list → isActive; שגיאות ב-executions_list",
+   "DR-OrderIntake נופל ב-status_triggers (rc 3221225786) — לאבחן במשרד",
+   "Etsy: מיפוי מייל+טלפון, amount/100 — פתוח",
+   "הזמנות מתנה: ה-upsert כותב כתובת משלוח על כרטיס הקונה — לעקוב",
+   "connection 1554993 → re-auth diana_rafael (ישן); רוטינת SKU Standardization בענן עדיין רצה כל לילה — לשאול אם מכוון"
+  ],
+  "recent_changes": [
+   "1.10 — תרחיש 5417151 תוקן (REST upsert) ופעיל; #1275 → הזמנה 1653 → J1594 ידנית",
+   "30.9 — התרחיש נפל על 409 (Trisha Rock, מתנה)",
+   "22.9 — טריגר assign_j מדלג על upsert (J פאנטום נמחק)",
+   "9.9 — נתיבי OneDrive תוקנו; DR-OrderIntake נכשל 14.8–9.9 בשקט",
+   "30.8 — רוטינת הענן autopilot כובתה (חסומה 17 יום)",
+   "27.7 — הסוכן המקומי מושך הכל מ-API של שופיפיי; תרחיש Make נשאר שבור בכוונה (עד 1.10)"
+  ],
+  "artifacts": [
+   {
+    "label": "תקרית Make 30.9 + תיקון",
+    "url": "file: C--Users-USER\\memory\\project_make-shopify-intake-broken-2026-10-01.md",
+    "type": "doc"
+   },
+   {
+    "label": "blueprint מתוקן (עותק)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\command-center\\make-5417151-shopify-supabase-fixed-blueprint.json",
+    "type": "doc"
+   },
+   {
+    "label": "agents/order-intake (intake.mjs, status_triggers.py, intake_sku_match.py)",
+    "url": "file: diana-rafael\\agents\\order-intake",
+    "type": "folder"
+   },
+   {
+    "label": "טריגרי סטטוס",
+    "url": "file: C--Users-USER\\memory\\ops_order_status_triggers.md",
+    "type": "doc"
+   },
+   {
+    "label": "סקיל complete-order-intake",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\complete-order-intake",
+    "type": "skill"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_make-shopify-intake-broken-2026-10-01.md",
+   "ops_order_status_triggers.md",
+   "project_order-intake-rebuild.md",
+   "ops_cloud_routines.md",
+   "pending_fixes_diana_rafael.md",
+   "project_session-2026-10-07.md",
+   "project_q4_operating_plan.md"
+  ]
+ },
+ {
+  "id": "shipping-agent",
+  "title": "סוכן משלוחים (חשבוניות + FedEx דרך d2dvalue)",
+  "group": "infra",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "make_invoice.py + d2d_bot.py + server.py (poller של ship_jobs, פורט 5555) ב-OneDrive\\Desktop\\shipping-agent במשרד; סקיל ship-jewelry-order — הקלט היחיד מדניאל = משקל בגרם. מ-29.9 הבוט מפצל אוטומטית לחשבונית סחורה + חשבונית עיצוב (≤$1,600 → 50/50, מעל → 30/70; תיקיית 'עיצוב תכשיטים'); אטסי לארה\"ב נחסם (DDP דרך לאור). סגירת לולאה: order=shipped+tracking, jewelry=sold, Shopify fulfilled. משלוחים אחרונים: J1779 דנה (29.9, 877893295578), J1769 דרו (30.9, 877960174740), J1768 דיפאק (29.9, 877896426701), #1275 J1594 (878020145661). משימת logon DR-ShippingAgent נרשמה 28.9 אבל נפלה בהפסקת החשמל 8.10 ולא עלתה (rc 3221225786 מ-29.9). בבית אין סקריפטים/python-docx/טוקן — עקיפה: עריכת docx + Word COM.",
+  "next_tasks": [
+   "משרד: להרים DR-ShippingAgent / run_server.bat (נפל 8.10) ולאמת /health",
+   "אטסי DDP: דיפאק נסגר; נוהל = פיצול + מייל ללאור (Lior@d2dvalue.com) עם חשבונית הסחורה בלבד",
+   "להעתיק סקריפטים + טוקן לבית (Dropbox) אם רוצים משלוחים מהבית",
+   "ציוד ישן ברשימת הפיגומים: d2dvalue Cloudflare/login שביר"
+  ],
+  "recent_changes": [
+   "11.10 — DR-ShippingAgent נפל בהפסקת חשמל 8.10 ולא עלה",
+   "30.9 — J1769 דרו נשלח (JEW-1255/56); 29.9 — J1779 דנה (JEW-1253/54), דיפאק J1768",
+   "29.9 — server.py מפצל אוטומטית סחורה/עיצוב; whatsapp.ts אומר 'המחשב לא מחובר' אחרי 2 דק'",
+   "28.9 — התגלה שהשרת לא רץ מ-19.8 (נתיב Desktop מת) → תוקן + משימת logon",
+   "10.9 — עמודת QTY בחשבונית המכס (אחרי עיכוב מכס של קיילן)",
+   "3.8 — דגל --description לחשבונית JEWELRY DESIGN"
+  ],
+  "artifacts": [
+   {
+    "label": "shipping-agent (משרד)",
+    "url": "file: C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent",
+    "type": "folder"
+   },
+   {
+    "label": "סקיל ship-jewelry-order",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\ship-jewelry-order",
+    "type": "skill"
+   },
+   {
+    "label": "d2dvalue",
+    "url": "https://www.d2dvalue.com",
+    "type": "site"
+   },
+   {
+    "label": "תיקיית חשבוניות (ניהול משרד)",
+    "url": "file: C:\\Users\\USER\\Dropbox\\ניהול משרד\\2026",
+    "type": "folder"
+   },
+   {
+    "label": "פער מחשב הבית",
+    "url": "file: C--Users-USER\\memory\\ops_home_machine_shipping_gap.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_shipping_agent.md (office)",
+   "project_session-2026-09-28.md",
+   "project_session-2026-09-29.md",
+   "project_session-2026-09-30.md",
+   "project_session-2026-10-11.md",
+   "ops_home_machine_shipping_gap.md",
+   "project_jewelry-design-invoices.md"
+  ]
+ },
+ {
+  "id": "whatsapp-agent",
+  "title": "סוכן הוואטסאפ של מערכת הניהול",
+  "group": "infra",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-09-29",
+  "where_we_stand": "diana-rafael/api/whatsapp.ts על Vercel (webhook Twilio, Claude Sonnet, זיכרון ב-wa_conversations, תמונה/PDF/קול). כלים: הזמנות, יהלומים (add/allocate/update), create_jewelry, add_payable (תזרים), add_cost, ship_order (→ ship_jobs → השרת במשרד). עדיין על Twilio Sandbox (+14155238886, נופל כל 72 שעות) — המעבר ל-WhatsApp Business Sender מאושר פתוח מ-22.6 (תוכנן 5.7, לא בוצע). 29.9: אם משימה ממתינה >2 דק' בלי שהמחשב אסף — הבוט אומר 'המחשב לא מחובר'. digest.ts (פתיחת יום) מעולם לא עלה (dry). הבוט בענן עדיין מכיר טרלו + שלבי הזמנה ישנים (תצפית 0011). לא מבין תעודת זיכוי/החזר זהב (מתייג כיציקה).",
+  "next_tasks": [
+   "WhatsApp Business Sender מאושר (Meta Business + אימות + display name) — פיגום #1 ברשימה",
+   "לעדכן system prompt: טרלו הוצא משימוש, שלבי ייצור על התכשיט, תעודת זיכוי (3 צורות החזר פיין)",
+   "digest.ts: template מאושר (HX SID) + env ב-Vercel + תרחיש Make 08:00 — או לוותר",
+   "חיבור משקל מהוואטסאפ → תעודה (אחרי פיילוט התעודות)"
+  ],
+  "recent_changes": [
+   "29.9 — 'המחשב לא מחובר' אחרי 2 דקות (נדחף ל-Vercel)",
+   "28.9 — 'הסוכן לא מבין' = השרת במשרד לא רץ מ-19.8, תוקן",
+   "22.6 — דיווח דו-מטבעי; create_jewelry"
+  ],
+  "artifacts": [
+   {
+    "label": "api/whatsapp.ts",
+    "url": "file: diana-rafael\\api\\whatsapp.ts",
+    "type": "doc"
+   },
+   {
+    "label": "api/digest.ts (פתיחת יום, dry)",
+    "url": "file: diana-rafael\\api\\digest.ts",
+    "type": "doc"
+   },
+   {
+    "label": "Audit פיגומים (Twilio Sandbox #1)",
+    "url": "file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_scaffolding-audit.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_whatsapp-agent.md",
+   "project_scaffolding-audit.md",
+   "project_session-2026-09-28.md",
+   "project_session-2026-09-29.md",
+   "project_mgmt-system-evening-tasks-16-7.md",
+   "rule_trello_retired (index)"
+  ]
+ },
+ {
+  "id": "night-agent",
+  "title": "הסוכן הלילי / מנוע הלילה",
+  "group": "infra",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-10-11",
+  "where_we_stand": "התשתית הישנה (Task DianaRafael-NightAgent 22:00 → run-night-agent.ps1 → claude -p headless, תור NIGHT-QUEUE.md, AGENT-PROMPT.md, send_mail.py, render.py, תבנית מצגת HTML) כבויה מ-26.7. תוכנית Q4 (6.10) מבקשת 'להחיות, לא לבנות מחדש' — סשנים ליליים עם Opus. מה כן רץ בלילה: DR-Catalog-Nightly (שבועי, ראשון 21:00), DR-Remnant-RenderMatrix (9.9 חד-פעמי), DR-Mgmt-2026-09-20 (חד-פעמי). 11.10: NIGHT-2026-10-11-PROMPT.md הוכן (R543+Accretion+Sunburst+Starz) אבל המשימה DR-NightSession לא נוצרה (חסימת הרשאות; דניאל לא הריץ schtasks) → לא רץ. לקח (תצפית 56): מנוע לילה = משימה קבועה שקוראת תור. מסווג auto-mode חוסם יצירת משימות מתוזמנות — צריך לצאת מ-auto (Shift+Tab) או שדניאל מריץ.",
+  "next_tasks": [
+   "דניאל: להריץ את פקודת schtasks ל-DR-NightSession (או להחיות DianaRafael-NightAgent) — משימה קבועה שקוראת תור",
+   "תור ללילה הבא: Sunburst טבעת, Starz cleanup, Accretion (אחרי החלטה)",
+   "לוודא שהריצה כותבת LOG + דוחפת git (תצפית 55: סוכנים נקטעו בלי תוצרים)",
+   "מגבלת שימוש (429) מפילה ריצות — לתזמן אחרי איפוס"
+  ],
+  "recent_changes": [
+   "11.10 — פרומפט לילה מוכן, משימה לא נוצרה, לא רץ",
+   "6.10 — תוכנית Q4: להחיות את מנוע הלילה (החלטה 1 מ-5 ממתינה)",
+   "20.9 — DR-Mgmt-2026-09-20 רץ (חד-פעמי, מערכת ניהול)",
+   "26.7 — DianaRafael-NightAgent Disabled"
+  ],
+  "artifacts": [
+   {
+    "label": "night-agent/ (דוטפיילס)",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent",
+    "type": "folder"
+   },
+   {
+    "label": "AGENT-PROMPT.md + NIGHT-QUEUE.md",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\AGENT-PROMPT.md",
+    "type": "doc"
+   },
+   {
+    "label": "פרומפט 11.10",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\NIGHT-2026-10-11-PROMPT.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_night-agent.md",
+   "project_q4_operating_plan.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-09-15.md",
+   "ops_catalog_nightly.md"
+  ]
+ },
+ {
+  "id": "morning-health-agent",
+  "title": "סוכן בריאות בוקר (DR-MorningHealthCheck)",
+  "group": "infra",
+  "kind": "business",
+  "status": "blocked",
+  "last_update": "2026-10-08",
+  "where_we_stand": "morning_health_check.py (Task 06:30 במשרד): מתקן אוטומטית כפילויות הזמנה (רק שורות לא-שלמות), סכום פי-100, לקוחות כפולים; מדווח יתומים, שתיקת Make ≥3 ימים, גלאי רב-פריטי Shopify (UNDER/OVER-SPLIT). תוקן 9.7 אחרי שמחק שורת פיצול לגיטימית ושתק 11 יום. מאז 14.8 נכשל בשקט כל בוקר (rc=1) — כנראה נתיב/מפתח אחרי המעבר ל-OneDrive (תוקן לחלק מהמשימות 9.9, זה לא). אין דוחות עדכניים.",
+  "next_tasks": [
+   "משרד: לאבחן rc=1 מ-14.8 (נתיב OneDrive? .ENV.SHOPIFY_TOKEN? Supabase legacy key?) ולהחזיר לפעולה",
+   "לוודא שהדוח נכתב גם בכישלון שלב (step())",
+   "אחרי התיקון: לבדוק UNDER-SPLIT על הזמנות ספטמבר–אוקטובר"
+  ],
+  "recent_changes": [
+   "8.10 / 7.10 — עדיין rc=1 כל בוקר (מ-14.8)",
+   "9.7 — תיקון שורש: דדופ לא מוחק שורה שלמה; דוח נכתב תמיד; גלאי רב-פריטי",
+   "29.6 — נבנה"
+  ],
+  "artifacts": [
+   {
+    "label": "morning_health_check.py",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\morning_health_check.py",
+    "type": "doc"
+   },
+   {
+    "label": "דוחות",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\health-reports",
+    "type": "folder"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_morning-health-agent.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "project_q4_operating_plan.md",
+   "ops_office_paths_onedrive.md"
+  ]
+ },
+ {
+  "id": "gold-inventory-caster-debt",
+  "title": "מלאי זהב + חוב פיין ליוצק NSA",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-09-14",
+  "where_we_stand": "מודל: יציקות = הלוואת פיין מהיוצק; 3 צורות החזר (פיין/החזר/ברוך) ב-gold_costs.classification; רובריקת 'מאזן פיין' (IN−OUT) בדשבורד מ-16.7. מול NSA (אברמוביץ'): פתיחה 61.938 ג' (26.8), 73.87 ג' (2.9), ואחרי קניית פיין 14.9 (דרור עדני 51.65 ג' @428.69 ₪ = 22,141.84 ₪, סגרה 20 יציקות) — settings.fine_gold_debt_nsa_grams = 28.73 (לפי דניאל 80.38−51.65). פתוחות: 9 יציקות 29.42 ג'. תוכנית 2.9 להחזיר 8.36 ג' 14K + טבעת 18K 12.2 ג' — לא תועד אם בוצע. זהב תמיד ב-gold_costs, לא ב-extra_costs. מלאי בחומרים ~108K (3.9). פתוח: סימן החזר/ברוך בהזנה ראשונה; J1694 ברוטו משוער 3g.",
+  "next_tasks": [
+   "לעדכן fine_gold_debt_nsa_grams בכל תעודת יציקה/זיכוי ולהצליב מול 'יתרה נוכחית' בתעודות NSA",
+   "לברר אם החזרת 8.36 ג' 14K + טבעת 18K ל-NSA בוצעה (תוכנית 2.9)",
+   "הזנה ראשונה של תעודת זיכוי → לקבוע סימן (IN) נכון + לעדכן את סוכן הוואטסאפ",
+   "יתרת ~60 ג' לשלם בכסף בפריסה (25–30K ₪) — לתכנן בתזרים"
+  ],
+  "recent_changes": [
+   "14.9 — קניית פיין 51.65 ג' (דרור עדני) סגרה 20 יציקות; חוב NSA = 28.73 ג'; J1755 נסגר בנפרד",
+   "2.9 — חוב עודכן ל-73.87 ג'; תוכנית החזר חלקי",
+   "26.8 — נקודת פתיחה מוסכמת 61.938 ג' לפי זיכוי 125489",
+   "16.7 — רובריקת מאזן פיין (commit 77c5d87); קניית פיין #31377"
+  ],
+  "artifacts": [
+   {
+    "label": "מודל מלאי הזהב (זיכרון)",
+    "url": "file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_diana-rafael-gold-inventory.md",
+    "type": "doc"
+   },
+   {
+    "label": "חוב זהב NSA (זיכרון)",
+    "url": "file: C--Users-USER\\memory\\ops_caster_gold_debt.md",
+    "type": "doc"
+   },
+   {
+    "label": "מערכת הניהול — לשונית זהב",
+    "url": "https://diana-rafael.vercel.app",
+    "type": "site"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_diana-rafael-gold-inventory.md",
+   "ops_caster_gold_debt.md",
+   "project_session-2026-09-14.md",
+   "rule_gold_always_in_gold_costs (index)",
+   "project_session-2026-09-03 (index)"
+  ]
+ },
+ {
+  "id": "trading-portfolio",
+  "title": "תיק המניות — אחזקות וסקירה שבועית",
+  "group": "trading",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "התיק נכון ל-9.10 (מצילום TradingView): MS · ABNB · ABT · CHKP · ADBE · IBM · RKLB · NVDA. ליבה ישנה שנשארה: RKLB, NVDA. ASTS, IRDM, NKE, SEDG, URA, ONDS כבר לא בתיק — לא תועד מה נמכר ומתי. ישראל (דוראל אנרגיה, קרנות שבבים ובנקים) לא עודכן מאז יוני. הסקירה השבועית של 11.10 פתוחה: ב-12.10 בבוקר דניאל אמר שאפיון תיקי הסינון 'מהיר מדי ופשטני מדי' וקבע שיחת עומק לערב 12.10 — אין תיעוד שהשיחה התקיימה. אירועי 'מיכה - לייב' ביומן הם האזנה, לא משימה.",
+  "next_tasks": [
+   "שיחת עומק על אפיון תיקי הסינון (מה כל תיק תופס, קריטריונים, אופק, גודל) — לפני כל שינוי בקוד",
+   "לסגור את הסקירה השבועית של 11.10: קריאה של דניאל על התיק והמדדים → רשומה בלוג",
+   "לתעד מה קרה לאחזקות שנעלמו (ASTS, IRDM, NKE, SEDG, URA, ONDS)",
+   "לעדכן את האחזקות בישראל (דוראל — מועמדת למימוש, קרנות 5134242 ו-1148774)",
+   "סקירה שבועית קבועה ביום ראשון 18.10 (הצ'ק-אין מריץ portfolio_screens.py)"
+  ],
+  "recent_changes": [
+   "12.10 — צ'ק-אין: portfolio_screens.py רץ על 501 מניות (ATH 13 / golden cross 11 / pullback 75); דניאל: האפיון פשטני מדי → שיחת ערב",
+   "9.10 — התיק עודכן ל-8 מניות מצילום TradingView; סריקת נפגעות AI: ADBE (בתיק) הכי קרובה להיפוך",
+   "25.6 — תיק קודם: ASTS · RKLB · NVDA · IRDM · NKE · SEDG · ONDS · URA"
+  ],
+  "artifacts": [
+   {
+    "label": "ריפו trading-income-system (פרטי)",
+    "url": "https://github.com/dadahan10/trading-income-system",
+    "type": "repo"
+   },
+   {
+    "label": "תמונות מצב של תיקי הפילטר",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\trading-income-system\\research\\portfolios",
+    "type": "folder"
+   },
+   {
+    "label": "לוג צ'ק-אין 12.10",
+    "url": "file: C:\\Users\\USER\\.claude\\accountability\\log\\2026-10-12.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_portfolio_2026-10.md",
+   "project_portfolio_characterization.md",
+   "rule_micha_stocks_not_tasks.md",
+   "project_stock-screening.md",
+   "feedback_trading_routine.md",
+   "project_session-2026-10-09.md",
+   "project_session-2026-10-12.md",
+   "accountability/log/2026-10-12.md"
+  ]
+ },
+ {
+  "id": "trading-income-system",
+  "title": "מערכת מסחר להכנסה חודשית — יעד אוקטובר 7,000 ₪",
+  "group": "trading",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "המטרה: רווח ממומש בסוף החודש, לא גודל התיק. נספרים רק טריידים חדשים שנפתחו החודש, שוק ישראלי + אמריקאי ביחד. יעד אוקטובר 2026: 7,000 ₪ — יומן הטריידים journal/2026-10.md ריק, 0 / 7,000 נכון ל-12.10. Playbook v1 נעול מ-30.6: setup יחיד Confluence Reversal, סטופ ATR, סיכון 1.5% לטרייד, שתי יציאות, מקסימום 4–5 פוזיציות. Sleeve סחיר ≈ 75K ₪; ליבה שלא סוחרים בה: RKLB, NVDA (ONDS כבר לא בתיק). Reality-check: בסיס מציאותי ~4–6K לחודש; KPI ראשי = משמעת תהליך, לא לכפות טריידים.",
+  "next_tasks": [
+   "לרשום כל טרייד חדש של אוקטובר ביומן (כניסה, סטופ, גודל, R, P&L)",
+   "החלטה: כלל הידוק לפילטר 3 (תיקון ≥5%? אזור פיבו?) — ממתין מ-9.10",
+   "החלטה: להוסיף 'נפגעות AI' כפילטר רביעי בספריית הסינון — ממתין מ-9.10",
+   "החלטה: TradingView — איזה מנוי יש; Pine Script (חינמי) או Webhook→Make (בתשלום) — ממתין מ-25.9",
+   "לבנות watchlist ישראלי נזיל — פתוח מ-30.6",
+   "מחקר 'נר ספיגה': חידוד לפי הקשר מגמה (אחרי ירידה) — לא נבדק",
+   "משרד: לוודא שהריפו הישן במחשב המשרד הוחלף ב-git clone נקי (הוראה מ-3.7, לא אומת)"
+  ],
+  "recent_changes": [
+   "9.10 — יעד אוקטובר 7,000 ₪ נקבע; journal/2026-10.md נוצר; portfolio_screens.py (3 פילטרים) נבנה",
+   "25.9 — תשובת TradingView: אין חיבור ישיר; 3 מסלולים (Webhook / Pine Script / ייצוא רשימות)",
+   "4.8 — 'ראדאר ספיגה': בקטסט נר ספיגה (התוצאה הפוכה מההשערה) + כלי מחקר",
+   "30.6 — המערכת הוקמה, Playbook v1 נעול, יעד יולי 10K"
+  ],
+  "artifacts": [
+   {
+    "label": "ריפו trading-income-system (פרטי)",
+    "url": "https://github.com/dadahan10/trading-income-system",
+    "type": "repo"
+   },
+   {
+    "label": "יומן טריידים אוקטובר",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\trading-income-system\\journal\\2026-10.md",
+    "type": "doc"
+   },
+   {
+    "label": "קובץ ההתחייבויות (היעד החודשי)",
+    "url": "file: C:\\Users\\USER\\.claude\\accountability\\commitments.md",
+    "type": "doc"
+   },
+   {
+    "label": "ראדאר ספיגה (מחקר נרות)",
+    "url": "https://claude.ai/code/artifact/d7a121e1-444c-4a1e-ac67-ee42a117e989",
+    "type": "artifact"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_trading-income-system.md",
+   "project_trading_research.md",
+   "project_tradingview_integration.md",
+   "project_portfolio_2026-10.md",
+   "project_session-2026-10-09.md",
+   "accountability/commitments.md",
+   "trading-income-system/journal/2026-10.md"
+  ]
+ },
+ {
+  "id": "trading-tools",
+  "title": "כלי מסחר — סקרינר סקטורים, סריקת היפוכים, TradingAgents",
+  "group": "trading",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-09",
+  "where_we_stand": "סקרינר סקטוריאלי חי: טבלת אחזקות + ציון 0–5 (Uptrend, Pullback, RSI<50, MACD<0, Value) לכל תעודת סל, עם הערות אישיות. באתר יש 11 SPDR + 5 תמטיים (UFO/SOXX/ITA/TAN/URA). portfolio_screens.py מריץ 3 תיקי פילטר על S&P 500 עם --track לתשואה קדימה. סוכן stock-agent + סקיל scan-stock-reversals (ממוצע 150, RSI<50, MACD<0) עם רשימת ai_victims; סריקה 8.10: ADBE, FIG, ZM, CNXC. TradingAgents (רב-סוכני, Claude Haiku+Sonnet, yfinance) מותקן במשרד; התיקייה קיימת גם בבית — לא תועד שמפתח הוכנס בבית. עמודת סטטוס בסקרינר (משימת לילה 4.7) — לא מתועד שהושלמה.",
+  "next_tasks": [
+   "להתאים את portfolio_screens.py אחרי שיחת האפיון — לא לפני",
+   "לבדוק אם עמודת הסטטוס (לא מעניינת/מעניינת/מעקב) נבנתה בסקרינר",
+   "הערות למניות: 'תוסיף הערה ל-TICKER' → data/notes.json → build",
+   "TradingAgents בבית: לוודא .env עם מפתח Anthropic (הכנסה ידנית)",
+   "Pine Script לקריטריוני ההיפוך — אם דניאל יבחר במסלול הזה"
+  ],
+  "recent_changes": [
+   "9.10 — portfolio_screens.py: תיקי ATH / golden cross / pullback, תמונות מצב 2026-10-08/09",
+   "26.8 — stock-agent + סקיל scan-stock-reversals (watchlist ai_victims, 32 מניות)",
+   "5.7 — הסקרינר חי ב-command-center/screener; 4.7 נבנה (XLV/XLK/XLF)",
+   "4.6 — TradingAgents הותקן במשרד"
+  ],
+  "artifacts": [
+   {
+    "label": "סקרינר סקטורים",
+    "url": "https://dadahan10.github.io/command-center/screener/",
+    "type": "site"
+   },
+   {
+    "label": "קוד הסקרינר + portfolio_screens.py",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\trading-income-system\\screener",
+    "type": "folder"
+   },
+   {
+    "label": "סקיל scan-stock-reversals",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\scan-stock-reversals",
+    "type": "skill"
+   },
+   {
+    "label": "סוכן stock-agent",
+    "url": "file: C:\\Users\\USER\\.claude\\agents\\stock-agent.md",
+    "type": "agent"
+   },
+   {
+    "label": "TradingAgents (GitHub)",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "type": "repo"
+   },
+   {
+    "label": "חבילת התקנה TradingAgents",
+    "url": "file: C:\\Users\\USER\\.claude\\scripts\\tradingagents",
+    "type": "folder"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_sector-screener.md",
+   "project_tradingagents.md",
+   "project_trading_research.md",
+   "project_session-2026-10-09.md",
+   "project_session-2026-07-05.md"
+  ]
+ },
+ {
+  "id": "accountability-agent",
+  "title": "סוכן אחריות — עוזר אישי",
+  "group": "personal",
+  "kind": "personal",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "נבנה 9.10: קובץ התחייבויות commitments.md (מקור אמת יחיד) + סקיל accountability-checkin שרץ בכל פתיחת סשן. שלוש בדיקות: יומי — מה מהיומן של אתמול לא נעשה; שבועי — סקירת מניות ומדדים ביום ראשון; חודשי — רווח ממומש מול 7,000 ₪. הצ'ק-אין של 12.10 רשום: סקירת 11.10 חסרה, 0 / 7,000, 19 ימים נותרו. מגבלה: הסוכן חי רק בתוך סשן — בלי סשן אין צ'ק-אין. דניאל ביקש במפורש אכיפת מיקוד: לעצור אותו כשהוא נסחף מהבלוק המתוכנן.",
+  "next_tasks": [
+   "צ'ק-אין בכל פתיחת סשן (CLAUDE.md סעיף 6) ורשומה ב-log/<תאריך>.md",
+   "לסמן את הסקירה השבועית של 11.10 כבוצעה רק אחרי קריאה של דניאל",
+   "תזכורת ענן (מייל יום ראשון/סוף חודש) — רק אם יתברר שימים נופלים",
+   "לעדכן את commitments.md כשהיעד או התיק משתנים (יעד נובמבר)"
+  ],
+  "recent_changes": [
+   "12.10 — צ'ק-אין ראשון מתועד בלוג; דניאל דחה את הסקירה לשיחת ערב",
+   "9.10 — commitments.md + סקיל accountability-checkin + journal/2026-10.md"
+  ],
+  "artifacts": [
+   {
+    "label": "commitments.md",
+    "url": "file: C:\\Users\\USER\\.claude\\accountability\\commitments.md",
+    "type": "doc"
+   },
+   {
+    "label": "לוג צ'ק-אין",
+    "url": "file: C:\\Users\\USER\\.claude\\accountability\\log",
+    "type": "folder"
+   },
+   {
+    "label": "סקיל accountability-checkin",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\accountability-checkin",
+    "type": "skill"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_accountability_agent.md",
+   "feedback_accountability_partner.md",
+   "accountability/commitments.md",
+   "accountability/log/2026-10-12.md",
+   "skills/accountability-checkin/SKILL.md"
+  ]
+ },
+ {
+  "id": "marketing-growth",
+  "title": "שיווק וצמיחה — מיילים, אורגני וקמפיינים ממומנים",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "קלאביו Q4: קלירנס C 'One of each, then gone' נשלח 10.10 20:00. טיזר REMNANT 'Broken, then whole' נבנה מחדש 12.10 (לוגו לבן, 'Pieces…', קולאז' עם דיסטרבד, קלון Te5Hh6) ותוזמן ל-12:45 — הלחיצה על Schedule של דניאל; לא תועד שנשלח בפועל. השקה 16.11 19:00 (קלון WUsMGk, באנר C) ממתינה ל-Schedule; בלאק פריידי וחגים — טיוטות מ-23.9. כלל קלאביו: עדכון תבנית מקור → assign מחדש → לאמת את הקלון. תוכנית אורגנית (25.8): מאמרים מ-GSC, פופאפים, פינטרסט, וואטסאפ ידני 10–15 ביום, זיהוי זוגות (היא מגלה ושולחת לינק, הוא סוגר). ממומן: קונקטורים חיים ל-Google Ads/Meta/Klaviyo/GSC; קמפיין Search ראשון (ID 23990162385, $35 ליום) נבנה 2.7 כ-PAUSED — לא תועד שהופעל.",
+  "next_tasks": [
+   "לוודא שהטיזר 12.10 יצא (סטטוס הקמפיין בקלאביו) ולבדוק פתיחות/קליקים",
+   "משרד: באנר B קינצוגי 2.1x — make_banner.py B → assets/email → V חדש → build → update WZ7VsE → assign",
+   "השקה 16.11 — Schedule של דניאל; לפני כן /collections/remnant מלא",
+   "בלאק פריידי וחגים — להשלים את הטיוטות (בלאק פריידי בלי הנחה — החלטה פתוחה מתוכנית Q4)",
+   "סושיאל: סטוריז הקולקציה (q4\\social) — אישור סטורי 3, סקר בסטורי 5, זכויות מודבורד; 3 תסריטי ריל",
+   "החלטה: הפעלת קמפיין Google Search הראשון (PAUSED מאז 2.7) ותקציב $2,500/חודש",
+   "פלואים בקלאביו: 0 פעילים — להחיות עגלה נטושה + Welcome",
+   "סקילים גרפיים/עיצוביים לדיוק תוכן יוצא (באנרים, מיילים, סטוריז) — דניאל ביקש 12.10 לדון"
+  ],
+  "recent_changes": [
+   "12.10 — טיזר: זמן 12:45 IL, תבנית WZ7VsE עודכנה, קלון Te5Hh6; send_campaign נחסם → Schedule ידני",
+   "11.10 — 22 סטוריז HE/EN + STORYBOARDS.md; באנר B חי בראש /collections/remnant; ממצא קלון בקלאביו",
+   "10.10 — קלירנס C נשלח",
+   "8.10 — קמפייני Q4 הועלו דרך מחבר Klaviyo (טיזר/השקה/קלירנס)",
+   "25.8 — תוכנית צמיחה אורגנית אושרה; רשימת וואטסאפ 322 אנשים",
+   "2.7 — קמפיין Search ראשון נבנה PAUSED; תוכנית מדיה 6 חודשים US בלבד"
+  ],
+  "artifacts": [
+   {
+    "label": "Blueprint הצמיחה (ציבורי)",
+    "url": "https://dadahan10.github.io/dr-growth-blueprint/",
+    "type": "site"
+   },
+   {
+    "label": "ריפו diana-rafael-marketing (פרטי)",
+    "url": "https://github.com/dadahan10/diana-rafael-marketing",
+    "type": "repo"
+   },
+   {
+    "label": "מקור המיילים build_emails.py",
+    "url": "file: remnant-launch\\q4\\emails",
+    "type": "folder"
+   },
+   {
+    "label": "סטוריז ותסריטים",
+    "url": "file: remnant-launch\\q4\\social",
+    "type": "folder"
+   },
+   {
+    "label": "באנרים make_banner.py",
+    "url": "file: remnant-launch\\q4\\banner",
+    "type": "folder"
+   },
+   {
+    "label": "תוכנית צמיחה אורגנית",
+    "url": "file: C:\\Users\\USER\\.claude\\plans\\snug-popping-abelson.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_diana-rafael-marketing.md",
+   "project_organic_growth_system.md",
+   "insight_couple_funnel.md",
+   "ops_klaviyo_q4_campaigns.md",
+   "project_session-2026-10-12.md",
+   "project_session-2026-10-11.md",
+   "project_q4_operating_plan.md",
+   "project_session-2026-07-02.md"
+  ]
+ },
+ {
+  "id": "etsy-shops",
+  "title": "חנויות אטסי — Black Ice ו-Diana Rafael",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "שתי חנויות: dianablackice ו-dianarafaeljewelry. הזמנות נקלטות ל-Supabase דרך Make.com (4 סצנריות, כל 15 דקות); הסוכן ב-Python חסום (API BANNED) — לא לנסות. באג כפילות הזמנות בין שתי החנויות (18.6) — תיקון השורש ב-Make (דדופ לפי external_order_id) לא בוצע. DDP מ-9.7: דניאל העלה +33% על מחירי הבסיס בשתי החנויות; לא להעמיק הנחות. ניתוח ליסטינגים (6.10): DR 844, Black Ice 724; 82–89% כותרות = רשימות פסיקים, 465 תגיות 'dianablackice' מבוזבזות, 73 'black spinel' על יהלום טבעי, תיאורים נפתחים בבלוק מכסים. סגירת ספטמבר ממתינה גם לנתוני אטסי של דניאל.",
+  "next_tasks": [
+   "לתקן כותרות (<15 מילים, הפריט קודם) ותגיות לפי הניתוח ב-q4\\etsy",
+   "להעלות PULSO לחנות Black Ice — כמה ליסטינגים ביום; חסר מחיר + קטגוריה מדניאל",
+   "מילות מפתח REMNANT לאטסי (אין היסטוריה) + באנר אטסי 3360×840",
+   "Make: דדופ הזמנות לפי external_order_id, ערוץ לפי התיבה — פתוח מ-18.6",
+   "לעקוב אחרי קצב ההזמנות אחרי +33% (אם צונח — קמפיין הנחה זמני, לא הורדת בסיס)",
+   "5 טיוטות stock בשופיפיי (J1411/J1335/J1412/J020/J1332) — החלטה: one-of-a-kind / מיזוג / מחיקה (פתוח מ-16.7)"
+  ],
+  "recent_changes": [
+   "11.10 — באנר B: יחס Etsy 1.55x→2.0x (בנייה במשרד)",
+   "6.10 — ניתוח ליסטינגים של שתי החנויות הושלם (remnant-launch\\q4\\etsy)",
+   "7.7 — +33% DDP בוצע ע\"י דניאל בשתי החנויות"
+  ],
+  "artifacts": [
+   {
+    "label": "ניתוח אטסי Q4",
+    "url": "file: remnant-launch\\q4\\etsy",
+    "type": "folder"
+   },
+   {
+    "label": "Make.com — סצנריות קליטה",
+    "url": "https://www.make.com/",
+    "type": "tool"
+   },
+   {
+    "label": "אתר REMNANT (מודבורד)",
+    "url": "https://dadahan10.github.io/diana-rafael-remnant/",
+    "type": "site"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_diana-rafael-etsy.md",
+   "project_etsy-agent-status.md",
+   "project_etsy-ddp-pricing.md",
+   "project_shopify-stock-drafts.md",
+   "project_etsy-order-ingestion.md",
+   "project_session-2026-10-07.md",
+   "project_session-2026-10-11.md",
+   "handoff_2026-10-06_continue_today.md"
+  ]
+ },
+ {
+  "id": "asset-studio-and-ai-tools",
+  "title": "כלי AI לתוכן — Asset Studio, Higgsfield, Adobe, Canva",
+  "group": "infra",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-10-12",
+  "where_we_stand": "Asset Studio: סקיל + בסיס Airtable 'Claude Ad Builder' (appRB11pmVTyHdGtc) מחווטים מ-24.6, עם Brand Brain של דיאנה רפאל; הריצה הראשונה נדחתה — דניאל רוצה לראות פרומפטים בסשן מלווה; downloader ל-Dropbox ומוצרים אמיתיים בטבלה לא נבנו. Higgsfield: המחבר פג תוקף (שוב 12.10) — צריך re-authorize ב-claude.ai; פיילוט מומלץ: רינדור קינצוגי → image-to-video 5–8 שניות. Midjourney: לא מתחברים (אין API רשמי). Adobe: הפלאגין מותקן, ממתין ל-login של דניאל. Canva עובד — שימש ב-12.10 לאוזן בתמונות E049.",
+  "next_tasks": [
+   "דניאל: לחבר מחדש את Higgsfield ב-claude.ai → Connectors",
+   "דניאל: login ל-Adobe בסשן אינטראקטיבי (/mcp → Adobe for creativity)",
+   "פיילוט וידאו: רינדור קינצוגי R117 → image-to-video → ריל",
+   "Asset Studio: סשן מלווה — 6 תוצרים (2 Image / 2 Clone / 2 Video UGC) על מוצרי BLACK ICE",
+   "Asset Studio: downloader Airtable→Dropbox + טעינת מוצרים ופטרני תדר כ-reference",
+   "תעודה לדוגמה מדניאל לסוכן התעודות דרך Adobe"
+  ],
+  "recent_changes": [
+   "12.10 — Canva generate-image שימש לאוזן (E049 על אוזן); Higgsfield נמצא פג תוקף",
+   "28.9 — בדיקת Higgsfield / Midjourney / Adobe; פלאגין Adobe הותקן",
+   "24.6 — Asset Studio הותקן + Brand Brain"
+  ],
+  "artifacts": [
+   {
+    "label": "סקיל asset-studio",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\asset-studio",
+    "type": "skill"
+   },
+   {
+    "label": "Brand Brain דיאנה רפאל",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\asset-studio\\references\\brand-diana-rafael.md",
+    "type": "doc"
+   },
+   {
+    "label": "Airtable — Claude Ad Builder",
+    "url": "https://airtable.com/appRB11pmVTyHdGtc",
+    "type": "tool"
+   },
+   {
+    "label": "נכסי המיתוג DUALITY",
+    "url": "file: C:\\Users\\USER\\Dropbox\\שיווק Marketing\\DUALITY REBRANDING 2025",
+    "type": "folder"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_asset-studio.md",
+   "project_higgsfield_midjourney_adobe.md",
+   "project_session-2026-10-12.md"
+  ]
+ },
+ {
+  "id": "notebook-command-center",
+  "title": "המחברת (לשעבר הקוקפיט)",
+  "group": "infra",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "ב-12.10 המחברת החליפה את הקוקפיט: Artifact פרטי עם DB — נושאים, סיימנו, סוכנים, פלואים, סקילים, אתרים וקבצים, מחשבות שנשלחו. הקוקפיט הישן מפנה אליה; הגרסה הישנה ב-cockpit-legacy.html. מקור: command-center\\notebook.html + notebook-data\\*.json; פרסום מחדש = עריכת JSON + Artifact לאותו url. ב-DB: thoughts (בוקס מחשבות, handled) ו-chapters (סיימנו + צ'קבוקסים; done מה-DB גובר). העיקרון: דניאל לא מתחזק — אני מעדכן; פרויקט חדש נכנס ביום שמתחילים. הסקרינר נשאר ב-command-center/screener.",
+  "next_tasks": [
+   "בכל פתיחת יום: לפתוח את המחברת, לקרוא thoughts עם handled==false, לטפל ולסמן reply",
+   "להשלים את פרקי ה-parts ולפרסם מחדש את המחברת",
+   "משרד: להשלים פרקים שהמצב שלהם רק במשרד (IAI, חברת הסוכנים של CustomizeAI, הערות מיה ורונית)",
+   "לפני עריכה: git pull — יש שני עותקים מקומיים של הריפו (Desktop ו-CLAUDE CODE PROJECTS)",
+   "פרויקט חדש → פרק במחברת באותו יום"
+  ],
+  "recent_changes": [
+   "12.10 — המחברת עלתה ומחליפה את הקוקפיט (הפניה אוטומטית)",
+   "4.8 — כרטיס שת\"פ דימה נוסף באיחור (הלקח: להוסיף ביום שמתחילים)",
+   "2.7 — פריסת 3 עמודות + גאנט שיווק",
+   "30.6 — הקוקפיט נבנה ב-GitHub Pages"
+  ],
+  "artifacts": [
+   {
+    "label": "המחברת",
+    "url": "https://claude.ai/artifact/7YG3XPs5Ftzr7dMX88FYPf",
+    "type": "artifact"
+   },
+   {
+    "label": "הקוקפיט הישן (legacy)",
+    "url": "https://dadahan10.github.io/command-center/cockpit-legacy.html",
+    "type": "site"
+   },
+   {
+    "label": "מקור המחברת",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\command-center",
+    "type": "folder"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_command-center.md",
+   "project_notebook.md"
+  ]
+ },
+ {
+  "id": "loan-refinance",
+  "title": "מחזור הלוואת העסק",
+  "group": "personal",
+  "kind": "personal",
+  "status": "done",
+  "last_update": "2026-10-07",
+  "where_we_stand": "נבדק 4.10: ההלוואה בדיסקונט ב-P+1.6, כ-44 חודשים נותרו. ההמלצה הייתה הלוואה מקרן ההשתלמות במיטב (P-0.5 עד P), אבל הצבירה שם מאפשרת רק ~40K — החיסכון ממחזור חלקי קטן. ערבות מדינה אסורה למחזור; בנקים וחברות אשראי יקרים יותר. 7.10 — החלטת דניאל: ירדנו מזה, לא ממחזרים. נקודה שנשארה ברקע: כסף לא מושקע בתיק במיטב טרייד שקשור לתביעה. ניתוח היציאות הקבועות בתחילת חודש (ימים 1–10) נמסר 4.10 ושמור לשאלה 'כמה יוצא בתחילת חודש'.",
+  "next_tasks": [
+   "אין פעולה — נסגר 7.10",
+   "אם הפריים יורד משמעותית — אפשר לפתוח שוב (דרישה מדיסקונט ל-P+0.5 עם הצעה ביד)",
+   "הכסף הלא-מושקע במיטב טרייד — תלוי בסטטוס המשפטי של התביעה (ראה פרק התביעה)"
+  ],
+  "recent_changes": [
+   "7.10 — דניאל: לא ממחזרים, סגור",
+   "4.10 — מחקר מחזור + ניתוח יציאות קבועות בתחילת חודש נמסרו"
+  ],
+  "artifacts": [
+   {
+    "label": "דפי בנק וניתוח",
+    "url": "file: C:\\Users\\USER\\Dropbox\\ניהול משרד\\תכנון פיננסי 1.9.226",
+    "type": "folder"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "research_loan_refinance_2026-10.md",
+   "finance_monthly_fixed_debits.md"
+  ]
+ },
+ {
+  "id": "spain-trip-2026",
+  "title": "טיול ספרד 2026 — רוד-טריפ וליקוי חמה",
+  "group": "personal",
+  "kind": "personal",
+  "status": "done",
+  "last_update": "2026-08-10",
+  "where_we_stand": "טיול של דניאל וברק, 7–18.8.2026, בסיס מדריד: מוטורהום מ-Yescapa (9–15.8), ליקוי החמה המלא ב-12.8 ומשחק ריאל מדריד ב-16.8. הפסטיבל בוטל — הטיול הפך לרוד-טריפ. דף חי ב-GitHub Pages נפתח בכל טלפון בלי התחברות; הוצאות ופתקים בגיליון גוגל (ברק חייב לדניאל €464.69 לפי הגיליון ב-4.8). העדכון האחרון בזיכרון: 10.8 בשטח — הסיירה נורטה יבשה, רק מאגרים ונהרות מווסתים. הטיול הסתיים.",
+  "next_tasks": [
+   "התחשבנות סופית עם ברק לפי גיליון ההוצאות — לא תועד שנסגרה",
+   "לקח: דפים לנייד/לשיתוף → GitHub Pages, לא artifact"
+  ],
+  "recent_changes": [
+   "10.8 — עדכון מהשטח: מפלים יבשים, הפסטיבל בוטל סופית",
+   "6.8 — מסלול ב' (Sol Obscura) נוסף לדף",
+   "4.8 — המסלול נסגר; הדף החי והגיליון נבנו"
+  ],
+  "artifacts": [
+   {
+    "label": "יומן הדרך (דף חי)",
+    "url": "https://dadahan10.github.io/spain-2026/",
+    "type": "site"
+   },
+   {
+    "label": "הוצאות ופתקים (גיליון)",
+    "url": "https://docs.google.com/spreadsheets/d/1t201w6l5rEz5Wig_jfgErKOeB2c6DhNRI-5eGWcM8IM/edit",
+    "type": "sheet"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_spain_trip.md",
+   "project_spain_trip_live.md"
+  ]
+ },
+ {
+  "id": "ximus-retreat",
+  "title": "XIMUS Retreat 2026 — צמיד הפסיפס",
+  "group": "projects",
+  "kind": "business",
+  "status": "done",
+  "last_update": "2026-07-02",
+  "where_we_stand": "צמיד מותאם (התליון הוא חלק מהצמיד) כסמל הפיזי של ריטריט קהילת XIMUS בחלקידיקי, יוון. קונספט: פסיפס יווני — אבנים נבדלות שיוצרות תמונה אחת; המילה XIMUS חקוקה כשחלקים ממנה נבלעים. ב-2.7: ייצור התחיל, מקדמה לספק שולמה, 120 קופסאות הוזמנו, דדליין ~20.8. דף one-pager חי ב-GitHub Pages. הפרויקט סומן כנסגר; בזיכרון אין תיעוד של המסירה עצמה.",
+  "next_tasks": [
+   "לוודא שמקדמת פורום XIMUS שולמה (ב-2.7 עוד הייתה ממתינה)",
+   "כרטיס ההקדשה לקופסה (עם ליטל) — לא תועד שנסגר"
+  ],
+  "recent_changes": [
+   "2.7 — ייצור התחיל, 120 קופסאות הוזמנו, דדליין ~20.8"
+  ],
+  "artifacts": [
+   {
+    "label": "One-pager XIMUS Retreat 2026",
+    "url": "https://dadahan10.github.io/ximus-retreat-2026/",
+    "type": "site"
+   },
+   {
+    "label": "ריפו ximus-retreat-2026",
+    "url": "https://github.com/dadahan10/ximus-retreat-2026",
+    "type": "repo"
+   },
+   {
+    "label": "קבצים מקומיים",
+    "url": "file: C:\\Users\\USER\\Desktop\\אקסימוס",
+    "type": "folder"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_ximus-retreat.md",
+   "project_ximus_onepager.md"
+  ]
+ },
+ {
+  "id": "amit-presentation",
+  "title": "עמית לדרך — מצגת טבעת המצפן",
+  "group": "projects",
+  "kind": "business",
+  "status": "done",
+  "last_update": "2026-06-24",
+  "where_we_stand": "One-pager לגיוס כספים: טבעת בהשראת המצפן (סמל עמותת עמית לדרך) שנמכרת לתרומות; במבט דרך האצבע רואים עיגול עם חץ. גרסאות גבר/אישה בכסף 925, כסף בציפוי זהב וזהב 14K. ב-24.6 נוסף סקשן 'הצעות עיצוב נוספות' (3 כיוונים). המצגת חיה ב-GitHub Pages. נשארו לא מולאו בזיכרון: מחירים בטבלה (₪[XXX]), תמונות on-body, גרסת ילדים.",
+  "next_tasks": [
+   "אם העמותה חוזרת: למלא מחירים, תמונות on-body וגרסת ילדים",
+   "להחליף את קרופי האינפוגרפיקה (כיוון א') בפק-שוטים נקיים"
+  ],
+  "recent_changes": [
+   "24.6 — סקשן הצעות עיצוב נוספות (3 כיוונים)"
+  ],
+  "artifacts": [
+   {
+    "label": "המצגת (חי)",
+    "url": "https://dadahan10.github.io/amit-presentation/",
+    "type": "site"
+   },
+   {
+    "label": "ריפו amit-presentation",
+    "url": "https://github.com/dadahan10/amit-presentation",
+    "type": "repo"
+   },
+   {
+    "label": "תמונות מקור",
+    "url": "file: C:\\Users\\USER\\Dropbox\\פרויקטים\\עמית לדרך",
+    "type": "folder"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_amit-presentation.md"
+  ]
+ },
+ {
+  "id": "parking-lot",
+  "title": "חניה — קצוות פתוחים במערכת הניהול",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-10-13",
+  "where_we_stand": "parking_lot.md הוא רשימת קצוות פתוחים שנצברו בפיתוח מערכת הניהול של diana-rafael (Supabase), לא רשימת רעיונות כללית. רוב הסעיפים סומנו כבוצעו (Invalid Date, טיפוסי TypeScript, drawer, שדה J#, CRUD מלא להזמנות/לקוחות/תכשיטים/יהלומים). נשארו פתוחים: באג amount_usd בהזמנות אטסי, סנכרון סטטוס חזרה לשופיפיי/אטסי, התראת וואטסאפ במשלוח, מסך ייצור Kanban ו-KPIs בדשבורד. הקובץ ללא תאריך עדכון — ייתכן שחלק כבר טופל במסגרת פרקי מערכת הניהול והמשלוחים.",
+  "next_tasks": [
+   "באג: amount_usd לא מגיע נכון מהזמנות אטסי (Make או mapping)",
+   "סנכרון סטטוס חזרה לשופיפיי/אטסי כשהזמנה עוברת ל'נשלח'",
+   "התראת וואטסאפ ללקוח במשלוח",
+   "מסך ייצור Kanban",
+   "KPIs בדשבורד",
+   "לעבור על הרשימה מול מצב המערכת בפועל ולמחוק מה שכבר נסגר"
+  ],
+  "recent_changes": [],
+  "artifacts": [
+   {
+    "label": "parking_lot.md",
+    "url": "file: C:\\Users\\USER\\.claude\\projects\\C--Users-USER\\memory\\parking_lot.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "parking_lot.md"
+  ]
+ }
+]

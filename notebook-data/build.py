@@ -1,0 +1,59 @@
+"""Build the notebook: merge chapter parts, apply CSS, stage into the scratchpad dir for publishing.
+Usage: python -I build.py <stage_dir>
+"""
+import json, glob, os, re, shutil, sys, datetime
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+stage = sys.argv[1]
+
+def load(p):
+    with open(p, encoding="utf-8") as f:
+        return json.load(f)
+
+# 1. chapters = all parts, minus topics Daniel asked not to track as status
+SKIP = {"month-closing"}  # shown as a flow (agents.json), not as a status chapter
+chapters, seen = [], set()
+for p in sorted(glob.glob(os.path.join(HERE, "parts", "part*.json"))):
+    for c in load(p):
+        if c["id"] in SKIP or c["id"] in seen:
+            continue
+        seen.add(c["id"])
+        chapters.append(c)
+
+extras = load(os.path.join(HERE, "extras.json"))
+
+# 2. management system: recent changes come from the mgmt changelog
+mg = extras.get("mgmt_changes", {})
+for c in chapters:
+    if c["id"] == "management-system" and mg.get("changes"):
+        c["recent_changes"] = [f'{x["date"]} — {x["what"]}' for x in mg["changes"]]
+        arts = c.setdefault("artifacts", [])
+        if mg.get("vercel_url") and not any(a.get("url") == mg["vercel_url"] for a in arts):
+            arts.insert(0, {"label": "מערכת הניהול (Vercel)", "url": mg["vercel_url"], "type": "site"})
+
+assert len({c["id"] for c in chapters}) == len(chapters)
+with open(os.path.join(HERE, "chapters.json"), "w", encoding="utf-8") as f:
+    json.dump(chapters, f, ensure_ascii=False, indent=1)
+
+extras["generated"] = datetime.date.today().strftime("%d.%m.%Y")
+
+# 3. page: inject notebook.css into notebook.html
+html = open(os.path.join(ROOT, "notebook.html"), encoding="utf-8").read()
+css = open(os.path.join(ROOT, "notebook.css"), encoding="utf-8").read()
+html = re.sub(r"<style>.*?</style>", lambda m: "<style>" + css + "</style>", html, count=1, flags=re.S)
+with open(os.path.join(ROOT, "notebook.html"), "w", encoding="utf-8") as f:
+    f.write(html)
+
+# 4. stage
+os.makedirs(os.path.join(stage, "data"), exist_ok=True)
+shutil.copy(os.path.join(ROOT, "notebook.html"), os.path.join(stage, "notebook.html"))
+for name, obj in [("chapters", chapters), ("extras", extras),
+                  ("skills", load(os.path.join(HERE, "skills.json"))),
+                  ("agents", load(os.path.join(HERE, "agents.json")))]:
+    with open(os.path.join(stage, "data", name + ".json"), "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False)
+
+done = sum(1 for c in chapters if c.get("status") == "done")
+office = sum(1 for c in chapters if c.get("office_only"))
+print(f"{len(chapters)} chapters ({done} done, {office} office-only) -> {stage}")

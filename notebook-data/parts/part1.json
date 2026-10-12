@@ -1,0 +1,175 @@
+[
+{
+ "id": "remnant-renders",
+ "title": "REMNANT — הדמיות (רינדור Blender)",
+ "group": "remnant", "kind": "business", "status": "active", "last_update": "2026-10-12",
+ "where_we_stand": "צנרת הרינדור (Blender 5.2 + import_3dm, render_matrix.py, סקיל remnant-render-loop) עובדת בשני המחשבים. מאושר ולייב: קינצוגי R117 (v14, צהוב+רוז+לבן, 3 פריימים), GW band R112 (שחור+לבן v3). מאושר בלי דף: R543 קונסטליישן (12 הדמיות, שיניים מקוצרות), Starz R470, C052. אושרו 11.10: Disturbed R115, R112 אירוסין (אחרי worldrot=180), עגילי קינצוגי E049 במנח. 12.10 (בית): E049 v2 — פסים שחורים תוקנו (groovefill=0.8,0.95,0.10); E048 סאנברסט מחקר לבנים v3 — 22 סבבים, ממצא מרכזי: רינדור 2000→1000 הוא המנוף (אבן 1.5 מ\"מ = 26 פיקסלים). לא טוב עדיין: Accretion R114 (מתכת דלה, אמייל שטוח), Sunburst R121 (שיניים, לבנים). אין בכלל: R113, R118, R119, R120. R110 — דניאל רוצה ברק לא גוון; 'חם/מאושר' לסדרה — החלטה פתוחה.",
+ "next_tasks": [
+  "משרד: לרנדר E049 YG עם speccard=6,2.5,0.68,-1.5,-0.05 (knob אחד) — תיקון פאה שטוחה כהה",
+  "להחיל מתכון הלבנים (2000→1000 + דיסק 35° אפור-כהה + הגברה 3.5–4.5) על R543 / R112 / R121 כמתכון סדרתי — אחרי אישור דניאל",
+  "משרד: GW אירוסין — סבב ניקוי 2 (הצלעות החיצוניות images\\3.png) → הסרת תג price-tbd → ACTIVE ב-$3,500; אחר כך לכתוב סקיל REFLECTION-CLEANUP",
+  "Accretion R114: מתכת מבריקה, אמייל עם עומק, לבנים מנצנצים — לפני שממשיכים (ירד מהלילה, בהמתנה)",
+  "Sunburst R121: שיניים קצרות, 4 שיניים לאבן קטנה, לבנים לסירוגין לבן/שחור + פנייה פנימה 45°",
+  "R110: ברק (gloss) לא גוון — ניסיון נקטע 11.10; החלטה סדרתית חם/מאושר (גם R112 מ-8.10)",
+  "מודל יד תלת-ממדי להדמיה על אצבע (גבר + אישה) — החלטה פתוחה מתוכנית Q4 (התחלה על R110)",
+  "לאחר אישור הדמיה: להעתיק לתיקיית הדגם ב-Dropbox עם קידומת מק\"ט (כלל 4.10) ולפתוח דף מוצר (כלל 11.10)"
+ ],
+ "recent_changes": [
+  "12.10 — E049 עגילי קינצוגי v2 (פסים שחורים) + E048 מחקר לבנים v3 (22 סבבים, RESEARCH-he.md), commits a9df6c3/b1b1ec2",
+  "11.10 — זוג עגילים E048/E049 Y/R/W (knobs pair=, whitelayer=own, prongtrim all); whitemul=2.5 (לבנים אפורים = clamp); R112 אירוסין תוקן worldrot=180; R110 v2 gemlift=0.4",
+  "8.10 — GW band v3 לבן אושר; R112 אירוסין שחור Y/R/W; Sunburst R121 צהוב; Accretion R114 רוז; Starz R470 זוג; knobs whitelayers/enamellayers",
+  "7.10 — R543 12 הדמיות סופיות (prongtrim=0.4, pavewhitegain=2.0,0.7); קינצוגי R117 WG; GW band מקובץ נכון gw-band-women.3dm",
+  "4.10 — R117 רוז אושר (goldrgb=1.0,0.52,0.40); R115 Disturbed 12 הדמיות; R110 8 הדמיות",
+  "27.9 — קינצוגי v14 אושר וסגור; התגלה שרינדורי 24.9 רצו בתאורה שגויה",
+  "29.9 — Blender הותקן במחשב הבית; pair= knob התחיל"
+ ],
+ "artifacts": [
+  {"label":"ריפו הצנרת remnant-render (פרטי)","url":"https://github.com/dadahan10/remnant-render","type":"repo"},
+  {"label":"תיקיית remnant-launch (בית)","url":"file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch","type":"folder"},
+  {"label":"LOG.md של האיטרציות","url":"file: remnant-launch\\pilot\\iterations\\LOG.md","type":"doc"},
+  {"label":"סקיל remnant-render-loop","url":"file: C:\\Users\\USER\\.claude\\skills\\remnant-render-loop","type":"skill"},
+  {"label":"הדמיות REMNANT בדרופבוקס (Rings\\R1xx, Earrings\\E048/E049)","url":"file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry\\Black Ice","type":"folder"},
+  {"label":"מחקר הלבנים E048 (12.10)","url":"file: remnant-launch\\q4\\renders-12.10\\e048-RESEARCH-he.md","type":"doc"},
+  {"label":"תנ\"ך הרינדור","url":"file: C:\\Users\\USER\\.claude\\plans\\remnant-render-bible.md","type":"doc"}
+ ],
+ "office_only": false,
+ "sources": ["project_session-2026-10-12.md","project_session-2026-10-11.md","project_session-2026-10-08.md","project_session-2026-10-07.md","project_remnant.md (office)","project_session-2026-09-27.md","ops_home_render_setup.md","reminder_2026-10-05_hand_model.md"]
+},
+{
+ "id": "remnant-product-pages",
+ "title": "REMNANT — דפי מוצר והעלאה לאתר",
+ "group": "remnant", "kind": "business", "status": "active", "last_update": "2026-10-12",
+ "where_we_stand": "קולקציית /collections/remnant חיה בשופיפיי (קולקציה חכמה לפי תג remnant, id 490903437481) עם תבנית collection.remnant ובאנר B בראש. ACTIVE ומפורסמים: קינצוגי R117 (10314247405737, $3,500, 9 תמונות), GW band שחור (10313877192873, $2,200) ולבן (10313877487785, $2,500). R543 קונסטליישן (10317849034921, $3,200, 17 תמונות + סימולטור מזלות בתבנית product.remnant-constellation) — פורסם ל-Online Store ב-12.10 וחי ב-/products/constellation-marquise-diamond-engagement-ring. Smoothen R116 (10314256056489) ו-Starz R470 (10317640401065) — ACTIVE אבל בלי ערוץ Online Store (לא נראים באתר). GW אירוסין (10317680050345) DRAFT עם תג price-tbd, מחיר אושר $3,500. מאמר הקולקציה פורסם: /blogs/news/remnant-collection-story. כלל: הדמיה מאושרת → דף מוצר.",
+ "next_tasks": [
+  "דניאל: Smoothen + Starz → Sales channels → Online Store (או להגיד 'תפרסם')",
+  "GW אירוסין: אחרי ניקוי סבב 2 — להסיר price-tbd, ACTIVE ב-$3,500",
+  "R543: הנחת 15% אוטומטית מציגה $2,720 — לבדוק; אין הדמיה מרכזית-לבנה ב-Y/R; 6 הדמיות blackside בלי אופציה תואמת",
+  "Disturbed R115 — דף מוצר (מאושר 11.10, אין דף)",
+  "הצמדת תמונה לווריאציה (צבע זהב) בדפי המוצר; GW לבן — תמונות נוספות",
+  "Starz: מידות גבר >9? (66 וריאנטים, $1,600/$1,200)",
+  "Smoothen: מידה אמיתית של J1752 (נרשם 'size 6 US' כהנחה)",
+  "write_themes — סומן ע\"י דניאל, לוודא שהטוקן כולל"
+ ],
+ "recent_changes": [
+  "12.10 — R543 publishablePublish ל-Online Store (Publication 3636166684); אותו סימפטום זוהה ב-Smoothen/Starz/GW אירוסין",
+  "11.10 ערב — R543 DRAFT + סימולטור בתבנית product.remnant-constellation (גיבוי ב-q4\\product-pages\\theme-backup)",
+  "11.10 — Starz R470 DRAFT (66 וריאנטים) → דניאל העביר ל-ACTIVE; Smoothen ACTIVE; GW אירוסין DRAFT $3,500 price-tbd; תבנית collection.remnant + באנר B חי",
+  "8.10 — /collections/remnant נוצרה; קינצוגי + GW band שחור/לבן ACTIVE; מאמר פורסם; תיקון קטגוריה Necklaces→Rings",
+  "7.10 ערב — דניאל הוסיף write_products+write_content לטוקן; push_gw_drafts.py יצר 2 טיוטות GW band; מאמר → טיוטת בלוג 634442154153",
+  "7.10 — כותרות בלי שם הדגם (short_title metafield), לבן = Wedding Bands, מטא מלא ב-4 דפים",
+  "6.10 — דפי HTML + מחולל קונסטלציות + products.json + themeBlock.liquid נבנו"
+ ],
+ "artifacts": [
+  {"label":"קולקציית REMNANT באתר","url":"https://dianarafael.com/collections/remnant","type":"site"},
+  {"label":"R543 קונסטליישן (חי)","url":"https://dianarafael.com/products/constellation-marquise-diamond-engagement-ring","type":"site"},
+  {"label":"מאמר הקולקציה","url":"https://dianarafael.com/blogs/news/remnant-collection-story","type":"site"},
+  {"label":"דפי המוצר + מחולל + products.json","url":"file: remnant-launch\\q4\\product-pages","type":"folder"},
+  {"label":"סיכום דפי מוצר","url":"file: remnant-launch\\q4\\product-pages\\SUMMARY-he.md","type":"doc"},
+  {"label":"הדמיות R543","url":"file: remnant-launch\\q4\\r543-renders","type":"folder"},
+  {"label":"וואן-פייג'ר הקולקציה (EN)","url":"https://dadahan10.github.io/diana-rafael-remnant/collection.html","type":"site"},
+  {"label":"וואן-פייג'ר הקולקציה (HE)","url":"https://dadahan10.github.io/diana-rafael-remnant/collection-he.html","type":"site"},
+  {"label":"כללי דף מוצר בשופיפיי","url":"file: C--Users-USER\\memory\\rule_shopify_product_page_content.md","type":"doc"}
+ ],
+ "office_only": false,
+ "sources": ["project_session-2026-10-12.md","project_session-2026-10-11.md","project_session-2026-10-08.md","project_session-2026-10-07.md","project_q4_operating_plan.md","project_remnant_product_pages.md","q4/product-pages/SUMMARY-he.md"]
+},
+{
+ "id": "remnant-marketing-content",
+ "title": "REMNANT — תוכן שיווקי (מיילים, באנרים, סטוריז, מאמר, קלאביו Q4)",
+ "group": "remnant", "kind": "business", "status": "active", "last_update": "2026-10-12",
+ "where_we_stand": "3 קמפייני קלאביו Q4 הועלו 8.10 דרך המחבר: קלירנס C נשלח שבת 10.10 20:00 ✅; טיזר 12.10 (01M36XYN63EZJATQ63PGAZVTSX, קלון Te5Hh6, 'Pieces from a collection that doesn't exist yet', זמן 12:45 IL) — ממתין ללחיצת Schedule של דניאל (send_campaign נחסם פעמיים); השקה 16.11 19:00 (קלון WUsMGk, hero באנר C) — Draft. בלאק פריידי 27.11 וחגים 7.12 — טיוטות 23.9 לא מאושרות. באנרים: A/B/C נבנו (make_banner.py), B = קינצוגי, חי בראש /collections/remnant; גרסת B 2.1x מקודדת אבל נבנית רק במשרד (bg-raw + rembg). סטוריז: 22 PNG (קולקציה 8×HE/EN, קינצוגי 3×HE/EN) + STORYBOARDS.md (3 תסריטי ריל) — ממתינים לאישור. מאמר פורסם 8.10. כלל קלאביו: update על תבנית המקור → assign מחדש → קלון חדש.",
+ "next_tasks": [
+  "דניאל: Schedule לטיזר 12.10 (12:45; אם רוצים באנר B חדש — לדחות ל-13:30)",
+  "משרד: python make_banner.py B → להעתיק hero/1200x500 ל-diana-rafael-remnant\\assets\\email → push → V חדש ב-build_emails.py → update WZ7VsE → assign מחדש",
+  "אישור סטוריז: סטורי 03 (שורה אישית), סקר בסטורי 05, זכויות המודבורד (סטורי 04) → ואז ייצור סדרות GW/Smoothen/R543/Starz (דקה לסדרה)",
+  "סושיאל השבוע (הנחיית 11.10): 2–3 סטוריז לכל עיצוב, סדרה על הקולקציה HE+EN (אינסטגרם+פייסבוק); וידאו ברמה גבוהה — קינצוגי/Accretion/Smoothen",
+  "השקה 16.11: hero Smoothen → להחליט hero סופי (כרגע באנר C), לוודא Smoothen באתר לפני",
+  "בלאק פריידי 27.11 — לאשר/לשנות הצעה (בלי הנחה: חריטה+מידה+משלוח חינם)",
+  "דניאל ביקש 12.10: סקילים גרפיים/עיצוביים לדיוק תוכן יוצא (באנרים, מיילים, סטוריז) — לדון",
+  "סרטוני טרנטייבל/ רילס — Higgsfield (טוקן פג) או Veo; פורמט/אורך/מוזיקה לשאול"
+ ],
+ "recent_changes": [
+  "12.10 — טיזר נבנה מחדש לפי דניאל: לוגו לבן 300px, כותרת 'Pieces…', קולאז' קינצוגי/GW band רוז/Smoothen/Disturbed לבן (V=20261012a, commit 732368a) → קלון Te5Hh6; make_banner.py hero 2.1x",
+  "11.10 ערב — טיזר פלטה כהה (#0b0a09), בלוק collage 2×2, בלי כרטיסי מוצר (commit 340cab9); ממצא: הקמפיין משתמש בקלון, לא בתבנית",
+  "11.10 — באנר B נבנה מחדש עם קינצוגי; תבנית collection.remnant; 22 סטוריז + STORYBOARDS.md; דף PULSO",
+  "10.10 — קלירנס C נשלח 20:00 ✅",
+  "8.10 — 3 קמפיינים הועלו דרך מחבר קלאביו; 3 באנרים A/B/C; גאנט עודכן (53 תאים)",
+  "7.10 — מיילים סופיים: כותרות + לוח שליחה (crop לא crop2); מאמר born-from-a-break עם באנר 3 תכשיטים + קולאז'",
+  "6.10 — 3 מיילים (teaser/launch/clearance-C) + ANCHORS.md + מאמר ~1,300 מילים"
+ ],
+ "artifacts": [
+  {"label":"מיילים (build_emails.py, PREVIEW.html)","url":"file: remnant-launch\\q4\\emails","type":"folder"},
+  {"label":"עוגני עיצוב מהקמפיינים המנצחים","url":"file: remnant-launch\\q4\\emails\\ANCHORS.md","type":"doc"},
+  {"label":"באנרים A/B/C","url":"file: remnant-launch\\q4\\banner","type":"folder"},
+  {"label":"סטוריז + STORYBOARDS","url":"file: remnant-launch\\q4\\social","type":"folder"},
+  {"label":"מאמר הקולקציה (מקור)","url":"file: remnant-launch\\q4\\story-article","type":"folder"},
+  {"label":"תמונות ציבוריות למיילים","url":"https://dadahan10.github.io/diana-rafael-remnant/assets/email/","type":"site"},
+  {"label":"קמפייני קלאביו Q4 — מזהים","url":"file: C--Users-USER\\memory\\ops_klaviyo_q4_campaigns.md","type":"doc"},
+  {"label":"גאנט שיווקי (Google Sheet, לשונית Marketing Gantt)","url":"https://docs.google.com/spreadsheets/d/1eJMqL456CvBqVbLYnNgNocoT6O1NW3Or5tTfGaUeFk0","type":"sheet"}
+ ],
+ "office_only": false,
+ "sources": ["ops_klaviyo_q4_campaigns.md","project_session-2026-10-12.md","project_session-2026-10-11.md","project_session-2026-10-08.md","project_session-2026-10-07.md","q4/social/SUMMARY-he.md","q4/banner/PLACEMENT-11.10-he.md","project_session-2026-09-23.md"]
+},
+{
+ "id": "remnant-q4-plan",
+ "title": "REMNANT — תוכנית הפעלה Q4 / גאנט השקה",
+ "group": "remnant", "kind": "business", "status": "active", "last_update": "2026-10-11",
+ "where_we_stand": "תוכנית Q4 (6.10, ~/.claude/plans/q4-2026-operating-plan.md): 6 זרמים — הדמיות, תוכן שיווקי, LLM-SEO+מאמרים, תמחור PULSO, מילות מפתח אטסי, R543+מחולל. אבני דרך: טיזר 12.10 (12:45) → סגירת חיסול 15.10 → סטטוס דפי מוצר 2.11 → השקה ישראל 9.11 → השקה ארה\"ב 16.11 (19:00) → בלאק פריידי 27.11 → חגים 7.12 (משלוח אחרון 14.12). הגאנט החי = Google Sheet 1eJMqL456 לשונית Marketing Gantt (עודכן 8.10 ב-53 תאים); REMNANT-control.xlsx מקומי ישן. מנוע הלילה הישן (DianaRafael-NightAgent) כבוי מ-26.7; DR-NightSession ל-11.10 לא נוצר (דניאל לא הריץ schtasks). שגרת בוקר מבוקשת: לשבת על הגאנט כל בוקר. מלאי REMNANT: J1731 קינצוגי, J1752 Smoothen, J1722 Disturbed, J1756 עגילי Sunburst, J1758 Accretion band (דניאל עונד); J1755 ו-J1417 חזרו למלאי אחרי ביטול צימט 11.10.",
+ "next_tasks": [
+  "כל בוקר: לפתוח את הגאנט עם דניאל, לסמן מה נסגר, לעדכן Copy/Asset/Scheduled",
+  "מנוע לילה: דניאל מריץ את פקודת schtasks (DR-NightSession) או שהריצה לא תתבצע — בתור: Sunburst טבעת + Starz cleanup",
+  "15.10 — סגירת מכירת החיסול (archive.dianarafael.com)",
+  "2.11 — סטטוס דפי מוצר + הדמיות חסרות מול הגאנט",
+  "LLM-SEO: ora.ai/score 54/100 — התאמת האתר ל-LLMs + רשימת מאמרים (אף מאמר נוסף לא נכתב)",
+  "אטסי: 20 הצעות שכתוב (rewrite-proposals.csv) + העלאת PULSO לאטסי (כמה ליסטינגים ביום, Black Ice) — מחיר+קטגוריה פתוחים",
+  "דיווחים יומיים/שבועיים לדניאל (סעיף 9 בבקשות 6.10)"
+ ],
+ "recent_changes": [
+  "11.10 — הנחיות דניאל לשבוע: צימט לביטול ✅, R543 לאתר ✅, עגילים ✅, PULSO לאתר ✅, סושיאל, CustomizeAI כחברת סוכנים",
+  "8.10 — גאנט עודכן: 5.10 הושלם באיחור 7.10; 10.10 קלירנס C; 12.10 טיזר; 15.10 סגירת חיסול; 16.11 השקה",
+  "7.10 — 18 החלטות נענו: קינצוגי=R117, Craquelere=R118, GW band 0.07ct שחור טבעי + דף לבן $2,500, R543 שיניים מאושרות, לוח שליחה",
+  "6.10 — תוכנית Q4 נכתבה; 4 סוכנים: הדמיות R543, מחולל+מאמר, מיילים, אטסי (DR 844 / BI 724 ליסטינגים נותחו)",
+  "24.9 — לוז ההשקה ביומן (6 אבני דרך) + גאנט מולא; 23.9 — תאריכי הגאנט אושרו (12.10 / 9.11 / 16.11)"
+ ],
+ "artifacts": [
+  {"label":"תוכנית Q4 (מסמך מלא)","url":"file: C:\\Users\\USER\\.claude\\plans\\q4-2026-operating-plan.md","type":"doc"},
+  {"label":"גיליון REMNANT — Launch Control (Items + Marketing Gantt)","url":"https://docs.google.com/spreadsheets/d/1eJMqL456CvBqVbLYnNgNocoT6O1NW3Or5tTfGaUeFk0","type":"sheet"},
+  {"label":"תוכנית ההשקה המקורית","url":"file: C:\\Users\\USER\\.claude\\plans\\remnant-launch-plan.md","type":"doc"},
+  {"label":"מחקר אטסי (ליסטינגים, מילים, תבניות PULSO)","url":"file: remnant-launch\\q4\\etsy","type":"folder"},
+  {"label":"מוד בורד REMNANT","url":"https://dadahan10.github.io/diana-rafael-remnant/","type":"site"},
+  {"label":"פרומפט לילה 11.10","url":"file: C:\\Users\\USER\\.claude\\night-agent\\NIGHT-2026-10-11-PROMPT.md","type":"doc"}
+ ],
+ "office_only": false,
+ "sources": ["project_q4_operating_plan.md","project_session-2026-10-11.md","project_session-2026-10-08.md","project_session-2026-10-07.md","plan_2026-10-08_tomorrow.md","project_session-2026-09-24-launch (index)","project_remnant.md"]
+},
+{
+ "id": "remnant-clearance",
+ "title": "מכירת החיסול (Archive Clearance) — נסגרת 15.10",
+ "group": "remnant", "kind": "business", "status": "active", "last_update": "2026-10-11",
+ "where_we_stand": "מכירת חיסול המלאי הישן ב-archive.dianarafael.com (EN $ / HE ₪), מקור אמת = Google Sheet → GitHub Action → data.csv → קוקפיט + סטוריז. הוארכה 27.9 עד 15.10.2026 (האתר עודכן commit c469251). מלאי 27.9: 22 פעילים ($30,330), 5 נמכרו, 11 מוסתרים. מייל קלירנס C ('One of each, then gone') נשלח 10.10 20:00 ✅. Ready To Ship בשופיפיי יושר לארכיון (18 מוצרים ייעודיים חדשים, Archive Sale). J1417 (Alnilam) חזר למלאי אחרי ביטול הזמנת צימט 11.10 — צריך לחזור לזמין בגיליון/ארכיון. 'השקה 1.8' ודדליין 31.7 הישנים — מיושנים.",
+ "next_tasks": [
+  "15.10 — סגירה: לעדכן אתר (EN+HE), להסתיר/לארכב פריטים, להחליט מה קורה עם הנותרים",
+  "J1417 Alnilam — להחזיר לזמין בגיליון החיסול + RTS/ארכיון בשופיפיי (היה SOLD לצימט, בוטל)",
+  "דניאל: להסיר ידנית מ-RTS את 'Semi Bezel Elongated Pear' $4,500 (נחסם לסוכן)",
+  "החלטה על 4 מוצרי RTS שלא בארכיון (1.51ct cushion, Matahari, Darkiopeia, 3-carats earrings)",
+  "אחרי הסגירה: GitHub Action של data.csv — לכבות או להשאיר; טאב החיסול בקוקפיט"
+ ],
+ "recent_changes": [
+  "11.10 — צימט בוטל: הזמנות 1647/1648 נמחקו, J1417 חזר ל-stock",
+  "10.10 — מייל קלירנס C נשלח (קמפיין 01M4D7CPNPSQ3RD4ZS7MH33144)",
+  "7.10 — מייל קלירנס: קולאז' הפריטים שנמכרו במקום hero; כותרת 'One of each, then gone'",
+  "27.9 — הארכה ל-15.10; RTS ⇔ Archive (18 מוצרים ייעודיים); מיילים A/B עודכנו ל-October 15",
+  "4.10 — J1417 נמכר לענת צימט (בוטל 11.10)"
+ ],
+ "artifacts": [
+  {"label":"אתר החיסול (EN)","url":"https://archive.dianarafael.com/","type":"site"},
+  {"label":"אתר החיסול (HE)","url":"https://archive.dianarafael.com/he/","type":"site"},
+  {"label":"גיליון העריכה (מקור אמת)","url":"https://docs.google.com/spreadsheets/d/1XiXb4j11DksQ1-ccPB3vE-ZqfZzihvxOBkq73KszOWI/edit","type":"sheet"},
+  {"label":"ריפו remnant-clearance","url":"https://github.com/dadahan10/remnant-clearance","type":"repo"},
+  {"label":"סטוריז + build_sold.py (פרטי)","url":"file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-clearance-private\\stories","type":"folder"},
+  {"label":"קולקציית Ready To Ship","url":"https://dianarafael.com/collections/featured-items","type":"site"}
+ ],
+ "office_only": false,
+ "sources": ["project_remnant_clearance.md (office)","project_remnant-clearance.md (home)","project_session-2026-10-11.md","project_session-2026-10-04.md","ops_klaviyo_q4_campaigns.md","project_session-2026-09-27.md"]
+}
+]
