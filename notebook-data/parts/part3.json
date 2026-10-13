@@ -1,301 +1,608 @@
 [
-{
- "id": "customizeai-product",
- "title": "CustomizeAI — המוצר (ווידג'ט קסטומיזציה באתר)",
- "group": "customizeai", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "באוויר מ-15.9 על dianarafael.com (תבנית Prestige 152145035433 = MAIN), רק על טבעות אירוסין Black Ice: כפתור מתחת ל-ADD TO CART פותח צ'ט צף; תוצאה רק בצ'ט; 'Request this' → פופאפ ליד (וואטסאפ/מייל/וידאו); מייל ליד ל-daniel@ דרך Resend. שרת: customizeai-api.onrender.com (Render Starter), DB Supabase נפרד (juygzbkytubncshfdcae, סידני). 27.9: כרטיס עובדות מוצר + כללי שיניים בפרומפט, angle_images ל-135 טבעות (דניאל סקר; 16 בלי תמונת צד), 'על היד' = צילום אמיתי, חריטה על תמונת הצד, פוקוס פול כללי, דף /admin/review לאישור/דחייה, אצווה חוזרת 21 בקשות (17 אושרו). שימוש נמוך: 6.10=0, 7.10=1, 9.10=0, 10.10=1 פתיחה. עיקרון דניאל: פתרונות כגישה כללית לכל מוצר. פתוח: CTA בסיום התהליך, תמונות צד ל-16 טבעות, הארד-קוד modal_page_gfdmkH למרצ'נט שני, עלות Supabase סידני, פופאפ קלאביו 'new feature' + סרטון שימוש.",
- "next_tasks": [
-  "בוקר (משרד): לשלוף דחיות מאתמול מ-widget_events.feedback → לתקן פרומפט (prompt-engineering.js / learned-rules.md) → לדווח",
-  "16 טבעות בלי תמונת צד (angle_images->>'side' is null) — צילום/בחירה; הצעה: להריץ מחדש בוחר זוויות על ~100 הטבעות שהצד שלהן נבחר ע\"י קלוד",
-  "הנעה לפעולה בסיום התהליך (CTA) — טרם עוצב",
-  "פופאפ קלאביו 'Check out our new feature' + סרטון שימוש (Playwright) — דניאל יגיד טבעת+בקשה",
-  "qa_gallery_injection.py נכשל ('theme's own CTA is hidden on load') — לתקן",
-  "לבדוק עלות פרויקט Supabase בסידני; למחוק ליד טסט מ-31.8"
- ],
- "recent_changes": [
-  "27.9 — productFacts + כללי שיניים; angle_images 135 טבעות; ניתוב על-היד/חריטה; פוקוס פול (commit baf9fb6); /admin/review; מייל יומי עם בקשות אתמול; אצווה חוזרת (Resend 01a0e244)",
-  "15.9 — פורסם (MAIN); QA 27/27; widget_events + דוח יומי 08:00 (commit 15045bb); 16.9 תיקון Resend שקט",
-  "3.9 — 'Doesn't look right' משאיר בצ'ט; רק 'Request this' פותח ליד",
-  "1.9 — רה-עיצוב: תמונה רק בצ'ט, חלון צף נגרר, CORS לפריוויו, כפתור בבורדו, 3 הצעות פתיחה, חריטה רק בפנים הגב",
-  "31.8 — שרת ב-Render, Resend הוקם, DB נפרד, 1,000 מוצרים סונכרנו"
- ],
- "artifacts": [
-  {"label":"ריפו customizeai","url":"https://github.com/dadahan10/customizeai","type":"repo"},
-  {"label":"שרת (health / customizeai.js)","url":"https://customizeai-api.onrender.com","type":"site"},
-  {"label":"דף סקירת רינדורים (admin/review)","url":"https://customizeai-api.onrender.com/admin/review?key=1292a2c59e250dfed1aa4b2af9924011ca5c","type":"site"},
-  {"label":"דף זוויות (admin/angles)","url":"https://customizeai-api.onrender.com/admin/angles?key=1292a2c59e250dfed1aa4b2af9924011ca5c","type":"site"},
-  {"label":"דוגמה חיה: טבעת Black Ice עם הכפתור","url":"https://dianarafael.com/products/alma-oscura-black-white-natural-black-diamond-oval-cut-engagement-ring","type":"site"},
-  {"label":"תיקייה מקומית (בית)","url":"file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\customizeai","type":"folder"},
-  {"label":"GO-LIVE.md","url":"file: customizeai\\docs\\GO-LIVE.md","type":"doc"}
- ],
- "office_only": false,
- "sources": ["project_customizeai.md (office)","project_session-2026-09-15.md","project_session-2026-09-27.md","customizeai-storefront-preview.md","project_session-2026-10-11.md","project_session-2026-10-08.md","feedback_customizeai_generic_solutions.md"]
-},
-{
- "id": "customizeai-usage",
- "title": "CustomizeAI — נתוני שימוש ודוח יומי",
- "group": "customizeai", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "מ-15.9 כל אירוע (open/clarify/generate/lead) נרשם ב-widget_events עם session_id (= אדם), product_url, request_text, result_url, feedback. מייל אוטומטי 08:00 מ-leads@dianarafael.com לדניאל (אנשים/בקשות/תמונות/לידים + 7 ימים + 'הבקשות של אתמול' before/after + כפתור לדף הסקירה). שגרת בוקר במשרד: שורת שימוש של אתמול. מספרים אחרונים: 2.10 = 15 אירועים/1 אדם, 3.10 = 4 אנשים, 6.10 = 0, 7.10 = 1 אדם/0 בקשות, 9.10 = 0, 10.10 = 1 פתיחה. דף 'הבקשות בווידג'ט' (artifact סטטי, 27.9).",
- "next_tasks": [
-  "משרד, כל בוקר: select event,count(*),count(distinct session_id) from widget_events where created_at >= current_date-1 → שורה לדניאל",
-  "לתרגם דחיות (feedback='rejected') לתיקוני פרומפט",
-  "אם המייל לא הגיע ב-08:00 — health של Render + שורת report_sent + לוג [daily-report] resend",
-  "לרענן את artifact הבקשות (שאילתות widget_events + storage) ולפרסם לאותו URL"
- ],
- "recent_changes": [
-  "11.10 — 9.10=0, 10.10=1 פתיחה",
-  "8.10 — 7.10 = 1 אדם, 0 בקשות; 7.10 — 6.10 = 0 (2.10 = 15 אירועים/1 אדם, 3.10 = 4 אנשים)",
-  "27.9 — request_text/result_url/feedback; מייל עם before/after; /admin/review",
-  "16.9 — Resend שקט תוקן (זורק על error); 15.9 — widget_events + מייל 08:00"
- ],
- "artifacts": [
-  {"label":"דף הבקשות בווידג'ט (artifact)","url":"https://claude.ai/artifact/M8Z9CNx8kEKib3xZJcwQug","type":"artifact"},
-  {"label":"Supabase CustomizeAI (juygzbkytubncshfdcae)","url":"https://juygzbkytubncshfdcae.supabase.co","type":"site"},
-  {"label":"daily-report.js","url":"file: customizeai\\api\\services\\daily-report.js","type":"doc"},
-  {"label":"שגרת הדוח (זיכרון)","url":"file: C--Users-USER\\memory\\ops_customizeai_daily_report.md","type":"doc"}
- ],
- "office_only": true,
- "sources": ["ops_customizeai_daily_report.md","project_session-2026-10-11.md","project_session-2026-10-08.md","project_session-2026-10-07.md","project_session-2026-09-16.md"]
-},
-{
- "id": "customizeai-agent-company",
- "title": "CustomizeAI כחברה של סוכנים (רעיון 11.10)",
- "group": "customizeai", "kind": "business", "status": "paused", "last_update": "2026-10-11",
- "where_we_stand": "הנחיית דניאל 11.10 (משרד): לבנות את CustomizeAI כ'חברה של סוכנים' — מנכ\"ל/CTO/פרודקט וכו'; מנוע יצירה→פידבק→תיקון→בקרה; עובד לבד ושולח תוכניות לאישור ותוצאות לבדיקה. שלב 1: מושלם לתכשיטים שלנו; שלב 2: מותג תכשיטים אחר (טננגרופ: My Name Necklace, Oak & Luna); שלב 3: מותגים אחרים. לא התחלנו — דניאל ביקש תוכנית קודם, ותוכנית מוצעת ממתינה לאישור. זה הבסיס הרעיוני גם למטרת ה-multi-tenant מה-SPEC של סוכן השיווק (22.6). ממצא רלוונטי ממחקר דימה (סבב 6): המתחרים האמיתיים מול-לקוח עולים $149–849/חודש.",
- "next_tasks": [
-  "לכתוב תוכנית לארכיטקטורת הסוכנים (תפקידים, לולאת יצירה→פידבק→בקרה, מה דורש אישור) ולהציג לדניאל",
-  "שלב 1 תלוי בסגירת הפתוחים במוצר (תמונות צד, CTA, דחיות)",
-  "להכין את ה-hardcode (modal_page_gfdmkH, merchant UUID) לקונפיג פר-מרצ'נט לקראת שלב 2",
-  "לבדוק את הקשר ל-SPEC-autonomous-funnel.md (6 פורקים פתוחים)"
- ],
- "recent_changes": [
-  "11.10 — הרעיון הוצג ע\"י דניאל; לא התחיל"
- ],
- "artifacts": [
-  {"label":"סשן 11.10 (ההנחיה)","url":"file: C--Users-USER\\memory\\project_session-2026-10-11.md","type":"doc"},
-  {"label":"SPEC-autonomous-funnel (סוכן שיווק, multi-tenant)","url":"file: diana-rafael-marketing\\strategy\\SPEC-autonomous-funnel.md","type":"doc"}
- ],
- "office_only": false,
- "sources": ["project_session-2026-10-11.md","project_diana-rafael-marketing.md","project_dima-jv-ecommerce.md"]
-},
-{
- "id": "management-system",
- "title": "מערכת הניהול (diana-rafael — React+Supabase+Vercel)",
- "group": "diana-rafael", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "מערכת פנימית חיה ב-diana-rafael.vercel.app (Supabase fcmlnrkkcabebuechaum): הזמנות, לקוחות, תכשיטים, יהלומים, ספקים, הוצאות/תזרים, מודלים (934), הצעות מחיר, תמחור, משלוחים. שלבי ייצור על התכשיט (in_progress→model→casting→work→ready→sold), הזמנה received→…→delivered. שער דולר+זהב מתעדכנים אוטומטית (pg_cron 05:30 UTC, מ-23.9). טוקן sbp_ חדש מ-4.10 — SQL דרך Management API עובד. J הבא מוקצה בטריגר. 11.10: הזמנות 1647/1648 (צימט) נמחקו, J1755/J1417 חזרו למלאי. מסך לבן תוקן 2.8 (ErrorBoundary + 'נקה ורענן'). רשימת 3.9 של 5 תיקונים בוטלה (23.9). J1731 במערכת עדיין R118 (צריך R117). Backlog 23.7 (סוכן שלמות הזמנה, DD→3D, מייל→יציקה, משלוח→נמכר) בנוי חלקית ב-status_triggers.py.",
- "next_tasks": [
-  "J1731 → R117 במערכת (SQL נחסם 7.10 — דניאל מעדכן או מאשר)",
-  "סוכן שלמות הזמנה/J (שם/מייל/טלפון/מק\"ט) — backlog #2, רץ כל היום",
-  "Etsy: מיפוי מייל+טלפון ב-Make חסר; amount בסנטים — פתוח מזמן",
-  "DS-0017: לוודא count=1 (אם אבן בודדת — הפיצול ל-DS-1724 שגוי)",
-  "'דודו עמירה' = 'ליאור עמירה'? לאחד ספק; חשבונית DR-0175 $350 — cross-check",
-  "ממו ספרינג דיאם 7169967: MDR-0001→DR, MDB-0012→DB כשתגיע חשבונית",
-  "קנבאן ייצור / Dashboard KPIs — מודולים הבאים (ישן)"
- ],
- "recent_changes": [
-  "11.10 — ביטול ענת צימט: הזמנות 1647/1648 נמחקו, J1755+J1417 → stock, לקוחה אופסה",
-  "4.10 — טוקן sbp_ חדש; DS-1724 פוצל → S189 צדדיות2; הזמנות פרטיות = פערים מתחת למקסימום (Shopify ממפה +378)",
-  "1.10 — DS-1723 → S189 (עדן מור אבי, אלינה); DS-1664 יתרה 0.14ct",
-  "30.9 — DR-0175 טרפזים → J1769; כפילות gold_costs נמחקה (כלל: כפילויות מוחקים בלי לשאול)",
-  "28.9 — S190/999-166 אורי הרשקוביץ (תיקון חינם)",
-  "27.9 — קוד דולר/זהב באוויר (10f7f4c)",
-  "23.9 — refresh_market_rates + pg_cron (sql/2026-09-23_market_rates_cron.sql); רשימת 3.9 בוטלה",
-  "22.9 — באג J פאנטום בטריגר assign_j (upsert) תוקן",
-  "14.9 — J1622 למלאי מ-S180; זיו עידן 1639/J1774; לירון אברהם 1640/J1775 (4,000 ₪ טרם שולם)",
-  "23.8 — מסך תמחור: ריבוי שורות זהב + חיפוש לקוח בהצעת מחיר (8694cfc)"
- ],
- "artifacts": [
-  {"label":"מערכת הניהול (חי)","url":"https://diana-rafael.vercel.app","type":"site"},
-  {"label":"ריפו diana-rafael","url":"https://github.com/dadahan10/diana-rafael","type":"repo"},
-  {"label":"Supabase (מערכת הניהול)","url":"https://fcmlnrkkcabebuechaum.supabase.co","type":"site"},
-  {"label":"תיקייה מקומית (משרד: OneDrive\\Desktop\\diana-rafael)","url":"file: C:\\Users\\USER\\OneDrive\\Desktop\\diana-rafael","type":"folder"},
-  {"label":"גישת SQL (Management API)","url":"file: C--Users-USER\\memory\\ops_supabase_sql_access.md","type":"doc"},
-  {"label":"backlog אוטומציות 23.7","url":"file: C--Users-USER\\memory\\project_mgmt_roadmap.md","type":"doc"},
-  {"label":"תיקונים ממתינים","url":"file: C--Users-USER\\memory\\pending_fixes_diana_rafael.md","type":"doc"},
-  {"label":"סקיל complete-order-intake","url":"file: C:\\Users\\USER\\.claude\\skills\\complete-order-intake","type":"skill"},
-  {"label":"סקיל record-supplier-payment","url":"file: C:\\Users\\USER\\.claude\\skills\\record-supplier-payment","type":"skill"}
- ],
- "office_only": true,
- "sources": ["project_office.md","project_mgmt_roadmap.md","pending_fixes_diana_rafael.md","parking_lot.md","ops_supabase_sql_access.md","project_session-2026-10-11.md","project_session-2026-10-04.md","project_session-2026-10-01.md","project_session-2026-09-30.md","project_session-2026-09-23.md","project_session-2026-09-14.md","project_mgmt-system-blank-screen.md","ops_order_status_triggers.md"]
-},
-{
- "id": "order-intake",
- "title": "קליטת הזמנות (Make → Supabase, Shopify/Etsy)",
- "group": "infra", "kind": "business", "status": "active", "last_update": "2026-10-08",
- "where_we_stand": "Shopify → Supabase: תרחיש Make 5417151 'Integration Shopify, Supabase' — נפל 30.9 על לקוח חוזר (409 customers_email_unique), תוקן 1.10 (upsert on_conflict=email, get() syntax) ופעיל. Make מכבה בשקט אחרי 3 כשלונות — אף אחד לא מתריע; סימפטום = הזמנת Shopify בלי שורת orders. טריגר DB מקצה J מיידית (מדלג על upsert מ-22.9). העשרה (לקוח/SKU/model_ref/יהלום) = סוכן מקומי intake.mjs + status_triggers.py דרך DR-OrderIntake כל שעתיים (רץ רק במשרד; ב-6.10 נופל rc 3221225786 ב-status_triggers). Etsy = INSERT דרך Make (מייל+טלפון לא ממופים; amount בסנטים); אטסי לארה\"ב = DDP דרך לאור (d2dvalue). רוטינת הענן autopilot כבויה מ-30.8. הזמנה רב-פריטית = פיצול ידני ל-J לכל פריט (סקיל complete-order-intake). פריט מלאי (בלי SKU) מקבל J חדש → להפנות ל-J של המלאי ולמחוק את הריק.",
- "next_tasks": [
-  "אם תרחיש 5417151 כבוי: scenarios_list → isActive; שגיאות ב-executions_list",
-  "DR-OrderIntake נופל ב-status_triggers (rc 3221225786) — לאבחן במשרד",
-  "Etsy: מיפוי מייל+טלפון, amount/100 — פתוח",
-  "הזמנות מתנה: ה-upsert כותב כתובת משלוח על כרטיס הקונה — לעקוב",
-  "connection 1554993 → re-auth diana_rafael (ישן); רוטינת SKU Standardization בענן עדיין רצה כל לילה — לשאול אם מכוון"
- ],
- "recent_changes": [
-  "1.10 — תרחיש 5417151 תוקן (REST upsert) ופעיל; #1275 → הזמנה 1653 → J1594 ידנית",
-  "30.9 — התרחיש נפל על 409 (Trisha Rock, מתנה)",
-  "22.9 — טריגר assign_j מדלג על upsert (J פאנטום נמחק)",
-  "9.9 — נתיבי OneDrive תוקנו; DR-OrderIntake נכשל 14.8–9.9 בשקט",
-  "30.8 — רוטינת הענן autopilot כובתה (חסומה 17 יום)",
-  "27.7 — הסוכן המקומי מושך הכל מ-API של שופיפיי; תרחיש Make נשאר שבור בכוונה (עד 1.10)"
- ],
- "artifacts": [
-  {"label":"תקרית Make 30.9 + תיקון","url":"file: C--Users-USER\\memory\\project_make-shopify-intake-broken-2026-10-01.md","type":"doc"},
-  {"label":"blueprint מתוקן (עותק)","url":"file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\command-center\\make-5417151-shopify-supabase-fixed-blueprint.json","type":"doc"},
-  {"label":"agents/order-intake (intake.mjs, status_triggers.py, intake_sku_match.py)","url":"file: diana-rafael\\agents\\order-intake","type":"folder"},
-  {"label":"טריגרי סטטוס","url":"file: C--Users-USER\\memory\\ops_order_status_triggers.md","type":"doc"},
-  {"label":"סקיל complete-order-intake","url":"file: C:\\Users\\USER\\.claude\\skills\\complete-order-intake","type":"skill"}
- ],
- "office_only": true,
- "sources": ["project_make-shopify-intake-broken-2026-10-01.md","ops_order_status_triggers.md","project_order-intake-rebuild.md","ops_cloud_routines.md","pending_fixes_diana_rafael.md","project_session-2026-10-07.md","project_q4_operating_plan.md"]
-},
-{
- "id": "shipping-agent",
- "title": "סוכן משלוחים (חשבוניות + FedEx דרך d2dvalue)",
- "group": "infra", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "make_invoice.py + d2d_bot.py + server.py (poller של ship_jobs, פורט 5555) ב-OneDrive\\Desktop\\shipping-agent במשרד; סקיל ship-jewelry-order — הקלט היחיד מדניאל = משקל בגרם. מ-29.9 הבוט מפצל אוטומטית לחשבונית סחורה + חשבונית עיצוב (≤$1,600 → 50/50, מעל → 30/70; תיקיית 'עיצוב תכשיטים'); אטסי לארה\"ב נחסם (DDP דרך לאור). סגירת לולאה: order=shipped+tracking, jewelry=sold, Shopify fulfilled. משלוחים אחרונים: J1779 דנה (29.9, 877893295578), J1769 דרו (30.9, 877960174740), J1768 דיפאק (29.9, 877896426701), #1275 J1594 (878020145661). משימת logon DR-ShippingAgent נרשמה 28.9 אבל נפלה בהפסקת החשמל 8.10 ולא עלתה (rc 3221225786 מ-29.9). בבית אין סקריפטים/python-docx/טוקן — עקיפה: עריכת docx + Word COM.",
- "next_tasks": [
-  "משרד: להרים DR-ShippingAgent / run_server.bat (נפל 8.10) ולאמת /health",
-  "אטסי DDP: דיפאק נסגר; נוהל = פיצול + מייל ללאור (Lior@d2dvalue.com) עם חשבונית הסחורה בלבד",
-  "להעתיק סקריפטים + טוקן לבית (Dropbox) אם רוצים משלוחים מהבית",
-  "ציוד ישן ברשימת הפיגומים: d2dvalue Cloudflare/login שביר"
- ],
- "recent_changes": [
-  "11.10 — DR-ShippingAgent נפל בהפסקת חשמל 8.10 ולא עלה",
-  "30.9 — J1769 דרו נשלח (JEW-1255/56); 29.9 — J1779 דנה (JEW-1253/54), דיפאק J1768",
-  "29.9 — server.py מפצל אוטומטית סחורה/עיצוב; whatsapp.ts אומר 'המחשב לא מחובר' אחרי 2 דק'",
-  "28.9 — התגלה שהשרת לא רץ מ-19.8 (נתיב Desktop מת) → תוקן + משימת logon",
-  "10.9 — עמודת QTY בחשבונית המכס (אחרי עיכוב מכס של קיילן)",
-  "3.8 — דגל --description לחשבונית JEWELRY DESIGN"
- ],
- "artifacts": [
-  {"label":"shipping-agent (משרד)","url":"file: C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent","type":"folder"},
-  {"label":"סקיל ship-jewelry-order","url":"file: C:\\Users\\USER\\.claude\\skills\\ship-jewelry-order","type":"skill"},
-  {"label":"d2dvalue","url":"https://www.d2dvalue.com","type":"site"},
-  {"label":"תיקיית חשבוניות (ניהול משרד)","url":"file: C:\\Users\\USER\\Dropbox\\ניהול משרד\\2026","type":"folder"},
-  {"label":"פער מחשב הבית","url":"file: C--Users-USER\\memory\\ops_home_machine_shipping_gap.md","type":"doc"}
- ],
- "office_only": true,
- "sources": ["project_shipping_agent.md (office)","project_session-2026-09-28.md","project_session-2026-09-29.md","project_session-2026-09-30.md","project_session-2026-10-11.md","ops_home_machine_shipping_gap.md","project_jewelry-design-invoices.md"]
-},
-{
- "id": "whatsapp-agent",
- "title": "סוכן הוואטסאפ של מערכת הניהול",
- "group": "infra", "kind": "business", "status": "active", "last_update": "2026-09-29",
- "where_we_stand": "diana-rafael/api/whatsapp.ts על Vercel (webhook Twilio, Claude Sonnet, זיכרון ב-wa_conversations, תמונה/PDF/קול). כלים: הזמנות, יהלומים (add/allocate/update), create_jewelry, add_payable (תזרים), add_cost, ship_order (→ ship_jobs → השרת במשרד). עדיין על Twilio Sandbox (+14155238886, נופל כל 72 שעות) — המעבר ל-WhatsApp Business Sender מאושר פתוח מ-22.6 (תוכנן 5.7, לא בוצע). 29.9: אם משימה ממתינה >2 דק' בלי שהמחשב אסף — הבוט אומר 'המחשב לא מחובר'. digest.ts (פתיחת יום) מעולם לא עלה (dry). הבוט בענן עדיין מכיר טרלו + שלבי הזמנה ישנים (תצפית 0011). לא מבין תעודת זיכוי/החזר זהב (מתייג כיציקה).",
- "next_tasks": [
-  "WhatsApp Business Sender מאושר (Meta Business + אימות + display name) — פיגום #1 ברשימה",
-  "לעדכן system prompt: טרלו הוצא משימוש, שלבי ייצור על התכשיט, תעודת זיכוי (3 צורות החזר פיין)",
-  "digest.ts: template מאושר (HX SID) + env ב-Vercel + תרחיש Make 08:00 — או לוותר",
-  "חיבור משקל מהוואטסאפ → תעודה (אחרי פיילוט התעודות)"
- ],
- "recent_changes": [
-  "29.9 — 'המחשב לא מחובר' אחרי 2 דקות (נדחף ל-Vercel)",
-  "28.9 — 'הסוכן לא מבין' = השרת במשרד לא רץ מ-19.8, תוקן",
-  "22.6 — דיווח דו-מטבעי; create_jewelry"
- ],
- "artifacts": [
-  {"label":"api/whatsapp.ts","url":"file: diana-rafael\\api\\whatsapp.ts","type":"doc"},
-  {"label":"api/digest.ts (פתיחת יום, dry)","url":"file: diana-rafael\\api\\digest.ts","type":"doc"},
-  {"label":"Audit פיגומים (Twilio Sandbox #1)","url":"file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_scaffolding-audit.md","type":"doc"}
- ],
- "office_only": false,
- "sources": ["project_whatsapp-agent.md","project_scaffolding-audit.md","project_session-2026-09-28.md","project_session-2026-09-29.md","project_mgmt-system-evening-tasks-16-7.md","rule_trello_retired (index)"]
-},
-{
- "id": "night-agent",
- "title": "הסוכן הלילי / מנוע הלילה",
- "group": "infra", "kind": "business", "status": "paused", "last_update": "2026-10-11",
- "where_we_stand": "התשתית הישנה (Task DianaRafael-NightAgent 22:00 → run-night-agent.ps1 → claude -p headless, תור NIGHT-QUEUE.md, AGENT-PROMPT.md, send_mail.py, render.py, תבנית מצגת HTML) כבויה מ-26.7. תוכנית Q4 (6.10) מבקשת 'להחיות, לא לבנות מחדש' — סשנים ליליים עם Opus. מה כן רץ בלילה: DR-Catalog-Nightly (שבועי, ראשון 21:00), DR-Remnant-RenderMatrix (9.9 חד-פעמי), DR-Mgmt-2026-09-20 (חד-פעמי). 11.10: NIGHT-2026-10-11-PROMPT.md הוכן (R543+Accretion+Sunburst+Starz) אבל המשימה DR-NightSession לא נוצרה (חסימת הרשאות; דניאל לא הריץ schtasks) → לא רץ. לקח (תצפית 56): מנוע לילה = משימה קבועה שקוראת תור. מסווג auto-mode חוסם יצירת משימות מתוזמנות — צריך לצאת מ-auto (Shift+Tab) או שדניאל מריץ.",
- "next_tasks": [
-  "דניאל: להריץ את פקודת schtasks ל-DR-NightSession (או להחיות DianaRafael-NightAgent) — משימה קבועה שקוראת תור",
-  "תור ללילה הבא: Sunburst טבעת, Starz cleanup, Accretion (אחרי החלטה)",
-  "לוודא שהריצה כותבת LOG + דוחפת git (תצפית 55: סוכנים נקטעו בלי תוצרים)",
-  "מגבלת שימוש (429) מפילה ריצות — לתזמן אחרי איפוס"
- ],
- "recent_changes": [
-  "11.10 — פרומפט לילה מוכן, משימה לא נוצרה, לא רץ",
-  "6.10 — תוכנית Q4: להחיות את מנוע הלילה (החלטה 1 מ-5 ממתינה)",
-  "20.9 — DR-Mgmt-2026-09-20 רץ (חד-פעמי, מערכת ניהול)",
-  "26.7 — DianaRafael-NightAgent Disabled"
- ],
- "artifacts": [
-  {"label":"night-agent/ (דוטפיילס)","url":"file: C:\\Users\\USER\\.claude\\night-agent","type":"folder"},
-  {"label":"AGENT-PROMPT.md + NIGHT-QUEUE.md","url":"file: C:\\Users\\USER\\.claude\\night-agent\\AGENT-PROMPT.md","type":"doc"},
-  {"label":"פרומפט 11.10","url":"file: C:\\Users\\USER\\.claude\\night-agent\\NIGHT-2026-10-11-PROMPT.md","type":"doc"}
- ],
- "office_only": true,
- "sources": ["project_night-agent.md","project_q4_operating_plan.md","project_session-2026-10-11.md","project_session-2026-09-15.md","ops_catalog_nightly.md"]
-},
-{
- "id": "morning-health-agent",
- "title": "סוכן בריאות בוקר (DR-MorningHealthCheck)",
- "group": "infra", "kind": "business", "status": "blocked", "last_update": "2026-10-08",
- "where_we_stand": "morning_health_check.py (Task 06:30 במשרד): מתקן אוטומטית כפילויות הזמנה (רק שורות לא-שלמות), סכום פי-100, לקוחות כפולים; מדווח יתומים, שתיקת Make ≥3 ימים, גלאי רב-פריטי Shopify (UNDER/OVER-SPLIT). תוקן 9.7 אחרי שמחק שורת פיצול לגיטימית ושתק 11 יום. מאז 14.8 נכשל בשקט כל בוקר (rc=1) — כנראה נתיב/מפתח אחרי המעבר ל-OneDrive (תוקן לחלק מהמשימות 9.9, זה לא). אין דוחות עדכניים.",
- "next_tasks": [
-  "משרד: לאבחן rc=1 מ-14.8 (נתיב OneDrive? .ENV.SHOPIFY_TOKEN? Supabase legacy key?) ולהחזיר לפעולה",
-  "לוודא שהדוח נכתב גם בכישלון שלב (step())",
-  "אחרי התיקון: לבדוק UNDER-SPLIT על הזמנות ספטמבר–אוקטובר"
- ],
- "recent_changes": [
-  "8.10 / 7.10 — עדיין rc=1 כל בוקר (מ-14.8)",
-  "9.7 — תיקון שורש: דדופ לא מוחק שורה שלמה; דוח נכתב תמיד; גלאי רב-פריטי",
-  "29.6 — נבנה"
- ],
- "artifacts": [
-  {"label":"morning_health_check.py","url":"file: C:\\Users\\USER\\.claude\\night-agent\\morning_health_check.py","type":"doc"},
-  {"label":"דוחות","url":"file: C:\\Users\\USER\\.claude\\night-agent\\health-reports","type":"folder"}
- ],
- "office_only": true,
- "sources": ["project_morning-health-agent.md","project_session-2026-10-08.md","project_session-2026-10-07.md","project_q4_operating_plan.md","ops_office_paths_onedrive.md"]
-},
-{
- "id": "month-closing",
- "title": "סגירת חודש (expense-bot → SUMIT)",
- "group": "diana-rafael", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "סקיל close-month: ExpenseBot (משימה DianaRafael-ExpenseBot, רק במשרד, OneDrive) מוריד חשבוניות מהמייל ב-11 בחודש → יישוב לפי חודש-שירות → טיוטת ג'ימייל → 'שלח' של דניאל ל-301186466@expense.co.il. יוני/יולי/אוגוסט 2026 נסגרו (אוגוסט נשלח 16.9, 48 קבצים). ספטמבר: ExpenseBot רץ 11.10 rc=0 → ממתין לאטסי (2 חנויות) + חשבוניות ישראל של דניאל, ואז build_draft + 'שלח'. מ-23.9: מיילי חשבוניות מתויקים (נקרא + תווית Invoices/YYYY-MM). ידוע בתיקייה: 4 סריקות בלי שם, דרור עדני 32047, שפירית 50080, בית נועם 9/26, Shopify 589953808.",
- "next_tasks": [
-  "משרד: סגירת ספטמבר — דניאל מוסיף אטסי ×2 + סריקות; build_draft.py → טיוטה → 'שלח'",
-  "לוודא שהורדת 11.10 כיסתה הכל (רב-פס, PayMe, Adobe, Calendly, Make, Shopify)",
-  "להעביר את ההורדה ל-cron/ענן 24/7 (הצעה פתוחה — תלוי במחשב המשרד דלוק)"
- ],
- "recent_changes": [
-  "11.10 — ExpenseBot רץ rc=0 לספטמבר",
-  "23.9 — כלל תיוק מיילים (Invoices/YYYY-MM); fetch_ravpass מתייק",
-  "16.9 — אוגוסט נשלח ל-SUMIT (2 מיילים, 48 קבצים); צ'ק 80000440 שמחה יצחקוב בתזרים",
-  "14.9 — סקריפטים תוקנו ל-OneDrive אחרי שהמשימה נפלה 11.9; זיכוי RJEW-061 מונה; הוצאות ספרד תויקו"
- ],
- "artifacts": [
-  {"label":"סקיל close-month","url":"file: C:\\Users\\USER\\.claude\\skills\\close-month","type":"skill"},
-  {"label":"תיקיית ניהול משרד 2026","url":"file: C:\\Users\\USER\\Dropbox\\ניהול משרד\\2026","type":"folder"},
-  {"label":"expense-bot (משרד)","url":"file: C:\\Users\\USER\\OneDrive\\Desktop\\CLAUDE CODE PROJECTS\\expense-bot","type":"folder"},
-  {"label":"סקיל foreign-transfer-form","url":"file: C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form","type":"skill"}
- ],
- "office_only": true,
- "sources": ["project_month-closing.md (office)","project_session-2026-10-11.md","project_session-2026-09-16.md","project_session-2026-09-14.md","project_session-2026-09-23.md"]
-},
-{
- "id": "gold-inventory-caster-debt",
- "title": "מלאי זהב + חוב פיין ליוצק NSA",
- "group": "diana-rafael", "kind": "business", "status": "active", "last_update": "2026-09-14",
- "where_we_stand": "מודל: יציקות = הלוואת פיין מהיוצק; 3 צורות החזר (פיין/החזר/ברוך) ב-gold_costs.classification; רובריקת 'מאזן פיין' (IN−OUT) בדשבורד מ-16.7. מול NSA (אברמוביץ'): פתיחה 61.938 ג' (26.8), 73.87 ג' (2.9), ואחרי קניית פיין 14.9 (דרור עדני 51.65 ג' @428.69 ₪ = 22,141.84 ₪, סגרה 20 יציקות) — settings.fine_gold_debt_nsa_grams = 28.73 (לפי דניאל 80.38−51.65). פתוחות: 9 יציקות 29.42 ג'. תוכנית 2.9 להחזיר 8.36 ג' 14K + טבעת 18K 12.2 ג' — לא תועד אם בוצע. זהב תמיד ב-gold_costs, לא ב-extra_costs. מלאי בחומרים ~108K (3.9). פתוח: סימן החזר/ברוך בהזנה ראשונה; J1694 ברוטו משוער 3g.",
- "next_tasks": [
-  "לעדכן fine_gold_debt_nsa_grams בכל תעודת יציקה/זיכוי ולהצליב מול 'יתרה נוכחית' בתעודות NSA",
-  "לברר אם החזרת 8.36 ג' 14K + טבעת 18K ל-NSA בוצעה (תוכנית 2.9)",
-  "הזנה ראשונה של תעודת זיכוי → לקבוע סימן (IN) נכון + לעדכן את סוכן הוואטסאפ",
-  "יתרת ~60 ג' לשלם בכסף בפריסה (25–30K ₪) — לתכנן בתזרים"
- ],
- "recent_changes": [
-  "14.9 — קניית פיין 51.65 ג' (דרור עדני) סגרה 20 יציקות; חוב NSA = 28.73 ג'; J1755 נסגר בנפרד",
-  "2.9 — חוב עודכן ל-73.87 ג'; תוכנית החזר חלקי",
-  "26.8 — נקודת פתיחה מוסכמת 61.938 ג' לפי זיכוי 125489",
-  "16.7 — רובריקת מאזן פיין (commit 77c5d87); קניית פיין #31377"
- ],
- "artifacts": [
-  {"label":"מודל מלאי הזהב (זיכרון)","url":"file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_diana-rafael-gold-inventory.md","type":"doc"},
-  {"label":"חוב זהב NSA (זיכרון)","url":"file: C--Users-USER\\memory\\ops_caster_gold_debt.md","type":"doc"},
-  {"label":"מערכת הניהול — לשונית זהב","url":"https://diana-rafael.vercel.app","type":"site"}
- ],
- "office_only": true,
- "sources": ["project_diana-rafael-gold-inventory.md","ops_caster_gold_debt.md","project_session-2026-09-14.md","rule_gold_always_in_gold_costs (index)","project_session-2026-09-03 (index)"]
-}
+ {
+  "id": "customizeai-product",
+  "title": "CustomizeAI — המוצר (ווידג'ט קסטומיזציה באתר)",
+  "group": "customizeai",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "באוויר מ-15.9 על dianarafael.com (תבנית Prestige 152145035433 = MAIN), רק על טבעות אירוסין Black Ice: כפתור מתחת ל-ADD TO CART פותח צ'ט צף; תוצאה רק בצ'ט; 'Request this' → פופאפ ליד (וואטסאפ/מייל/וידאו); מייל ליד ל-daniel@ דרך Resend. שרת: customizeai-api.onrender.com (Render Starter), DB Supabase נפרד (juygzbkytubncshfdcae, סידני). 27.9: כרטיס עובדות מוצר + כללי שיניים בפרומפט, angle_images ל-135 טבעות (דניאל סקר; 16 בלי תמונת צד), 'על היד' = צילום אמיתי, חריטה על תמונת הצד, פוקוס פול כללי, דף /admin/review לאישור/דחייה, אצווה חוזרת 21 בקשות (17 אושרו). שימוש נמוך: 6.10=0, 7.10=1, 9.10=0, 10.10=1 פתיחה. עיקרון דניאל: פתרונות כגישה כללית לכל מוצר. פתוח: CTA בסיום התהליך, תמונות צד ל-16 טבעות, הארד-קוד modal_page_gfdmkH למרצ'נט שני, עלות Supabase סידני, פופאפ קלאביו 'new feature' + סרטון שימוש.",
+  "next_tasks": [
+   "בוקר (משרד): לשלוף דחיות מאתמול מ-widget_events.feedback → לתקן פרומפט (prompt-engineering.js / learned-rules.md) → לדווח",
+   "16 טבעות בלי תמונת צד (angle_images->>'side' is null) — צילום/בחירה; הצעה: להריץ מחדש בוחר זוויות על ~100 הטבעות שהצד שלהן נבחר ע\"י קלוד",
+   "הנעה לפעולה בסיום התהליך (CTA) — טרם עוצב",
+   "פופאפ קלאביו 'Check out our new feature' + סרטון שימוש (Playwright) — דניאל יגיד טבעת+בקשה",
+   "qa_gallery_injection.py נכשל ('theme's own CTA is hidden on load') — לתקן",
+   "לבדוק עלות פרויקט Supabase בסידני; למחוק ליד טסט מ-31.8"
+  ],
+  "recent_changes": [
+   "27.9 — productFacts + כללי שיניים; angle_images 135 טבעות; ניתוב על-היד/חריטה; פוקוס פול (commit baf9fb6); /admin/review; מייל יומי עם בקשות אתמול; אצווה חוזרת (Resend 01a0e244)",
+   "15.9 — פורסם (MAIN); QA 27/27; widget_events + דוח יומי 08:00 (commit 15045bb); 16.9 תיקון Resend שקט",
+   "3.9 — 'Doesn't look right' משאיר בצ'ט; רק 'Request this' פותח ליד",
+   "1.9 — רה-עיצוב: תמונה רק בצ'ט, חלון צף נגרר, CORS לפריוויו, כפתור בבורדו, 3 הצעות פתיחה, חריטה רק בפנים הגב",
+   "31.8 — שרת ב-Render, Resend הוקם, DB נפרד, 1,000 מוצרים סונכרנו"
+  ],
+  "artifacts": [
+   {
+    "label": "ריפו customizeai",
+    "url": "https://github.com/dadahan10/customizeai",
+    "type": "repo"
+   },
+   {
+    "label": "שרת (health / customizeai.js)",
+    "url": "https://customizeai-api.onrender.com",
+    "type": "site"
+   },
+   {
+    "label": "דף סקירת רינדורים (admin/review)",
+    "url": "https://customizeai-api.onrender.com/admin/review?key=1292a2c59e250dfed1aa4b2af9924011ca5c",
+    "type": "site"
+   },
+   {
+    "label": "דף זוויות (admin/angles)",
+    "url": "https://customizeai-api.onrender.com/admin/angles?key=1292a2c59e250dfed1aa4b2af9924011ca5c",
+    "type": "site"
+   },
+   {
+    "label": "דוגמה חיה: טבעת Black Ice עם הכפתור",
+    "url": "https://dianarafael.com/products/alma-oscura-black-white-natural-black-diamond-oval-cut-engagement-ring",
+    "type": "site"
+   },
+   {
+    "label": "תיקייה מקומית (בית)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\customizeai",
+    "type": "folder"
+   },
+   {
+    "label": "GO-LIVE.md",
+    "url": "file: customizeai\\docs\\GO-LIVE.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_customizeai.md (office)",
+   "project_session-2026-09-15.md",
+   "project_session-2026-09-27.md",
+   "customizeai-storefront-preview.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "feedback_customizeai_generic_solutions.md"
+  ]
+ },
+ {
+  "id": "customizeai-usage",
+  "title": "CustomizeAI — נתוני שימוש ודוח יומי",
+  "group": "customizeai",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-13",
+  "where_we_stand": "מ-15.9 כל אירוע (open/clarify/generate/lead) נרשם ב-widget_events עם session_id (= אדם), product_url, request_text, result_url, feedback. מייל אוטומטי 08:00 מ-leads@dianarafael.com. אוקטובר עד 13.10: 32 אירועים בסך הכול. 2.10 = 2 אנשים/6 יצירות, 3.10 = 3 אנשים/2 יצירות, 8.10 = 2 אנשים/2 יצירות, שאר הימים פתיחה אחת או אפס. 11–13.10 = אפס אירועים. השימוש כמעט עומד.",
+  "next_tasks": [
+   "משרד, כל בוקר: שורת שימוש של אתמול מ-widget_events",
+   "שלושה ימים של אפס: לבדוק שהווידג'ט עדיין נטען בעמודי המוצר (לפני שמסיקים שאין עניין)",
+   "לתרגם דחיות (feedback='rejected') לתיקוני פרומפט",
+   "לרענן את artifact הבקשות"
+  ],
+  "recent_changes": [
+   "13.10 — 11–13.10 = 0 אירועים; אוקטובר 32 אירועים בסך הכול",
+   "11.10 — 9.10=0, 10.10=1 פתיחה",
+   "8.10 — 7.10 = 1 אדם, 0 בקשות; 7.10 — 6.10 = 0 (2.10 = 15 אירועים/1 אדם, 3.10 = 4 אנשים)",
+   "27.9 — request_text/result_url/feedback; מייל עם before/after; /admin/review",
+   "16.9 — Resend שקט תוקן (זורק על error); 15.9 — widget_events + מייל 08:00"
+  ],
+  "artifacts": [
+   {
+    "label": "דף הבקשות בווידג'ט (artifact)",
+    "url": "https://claude.ai/artifact/M8Z9CNx8kEKib3xZJcwQug",
+    "type": "artifact"
+   },
+   {
+    "label": "Supabase CustomizeAI (juygzbkytubncshfdcae)",
+    "url": "https://juygzbkytubncshfdcae.supabase.co",
+    "type": "site"
+   },
+   {
+    "label": "daily-report.js",
+    "url": "file: customizeai\\api\\services\\daily-report.js",
+    "type": "doc"
+   },
+   {
+    "label": "שגרת הדוח (זיכרון)",
+    "url": "file: C--Users-USER\\memory\\ops_customizeai_daily_report.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "ops_customizeai_daily_report.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "project_session-2026-09-16.md"
+  ]
+ },
+ {
+  "id": "customizeai-agent-company",
+  "title": "CustomizeAI כחברה של סוכנים (רעיון 11.10)",
+  "group": "customizeai",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-10-11",
+  "where_we_stand": "הנחיית דניאל 11.10 (משרד): לבנות את CustomizeAI כ'חברה של סוכנים' — מנכ\"ל/CTO/פרודקט וכו'; מנוע יצירה→פידבק→תיקון→בקרה; עובד לבד ושולח תוכניות לאישור ותוצאות לבדיקה. שלב 1: מושלם לתכשיטים שלנו; שלב 2: מותג תכשיטים אחר (טננגרופ: My Name Necklace, Oak & Luna); שלב 3: מותגים אחרים. לא התחלנו — דניאל ביקש תוכנית קודם, ותוכנית מוצעת ממתינה לאישור. זה הבסיס הרעיוני גם למטרת ה-multi-tenant מה-SPEC של סוכן השיווק (22.6). ממצא רלוונטי ממחקר דימה (סבב 6): המתחרים האמיתיים מול-לקוח עולים $149–849/חודש.",
+  "next_tasks": [
+   "לכתוב תוכנית לארכיטקטורת הסוכנים (תפקידים, לולאת יצירה→פידבק→בקרה, מה דורש אישור) ולהציג לדניאל",
+   "שלב 1 תלוי בסגירת הפתוחים במוצר (תמונות צד, CTA, דחיות)",
+   "להכין את ה-hardcode (modal_page_gfdmkH, merchant UUID) לקונפיג פר-מרצ'נט לקראת שלב 2",
+   "לבדוק את הקשר ל-SPEC-autonomous-funnel.md (6 פורקים פתוחים)"
+  ],
+  "recent_changes": [
+   "11.10 — הרעיון הוצג ע\"י דניאל; לא התחיל"
+  ],
+  "artifacts": [
+   {
+    "label": "סשן 11.10 (ההנחיה)",
+    "url": "file: C--Users-USER\\memory\\project_session-2026-10-11.md",
+    "type": "doc"
+   },
+   {
+    "label": "SPEC-autonomous-funnel (סוכן שיווק, multi-tenant)",
+    "url": "file: diana-rafael-marketing\\strategy\\SPEC-autonomous-funnel.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_session-2026-10-11.md",
+   "project_diana-rafael-marketing.md",
+   "project_dima-jv-ecommerce.md"
+  ]
+ },
+ {
+  "id": "management-system",
+  "title": "מערכת הניהול (diana-rafael — React+Supabase+Vercel)",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "מערכת פנימית חיה ב-diana-rafael.vercel.app (Supabase fcmlnrkkcabebuechaum): הזמנות, לקוחות, תכשיטים, יהלומים, ספקים, הוצאות/תזרים, מודלים (934), הצעות מחיר, תמחור, משלוחים. שלבי ייצור על התכשיט (in_progress→model→casting→work→ready→sold), הזמנה received→…→delivered. שער דולר+זהב מתעדכנים אוטומטית (pg_cron 05:30 UTC, מ-23.9). טוקן sbp_ חדש מ-4.10 — SQL דרך Management API עובד. J הבא מוקצה בטריגר. 11.10: הזמנות 1647/1648 (צימט) נמחקו, J1755/J1417 חזרו למלאי. מסך לבן תוקן 2.8 (ErrorBoundary + 'נקה ורענן'). רשימת 3.9 של 5 תיקונים בוטלה (23.9). J1731 במערכת עדיין R118 (צריך R117). Backlog 23.7 (סוכן שלמות הזמנה, DD→3D, מייל→יציקה, משלוח→נמכר) בנוי חלקית ב-status_triggers.py.",
+  "next_tasks": [
+   "J1731 → R117 במערכת (SQL נחסם 7.10 — דניאל מעדכן או מאשר)",
+   "סוכן שלמות הזמנה/J (שם/מייל/טלפון/מק\"ט) — backlog #2, רץ כל היום",
+   "Etsy: מיפוי מייל+טלפון ב-Make חסר; amount בסנטים — פתוח מזמן",
+   "DS-0017: לוודא count=1 (אם אבן בודדת — הפיצול ל-DS-1724 שגוי)",
+   "'דודו עמירה' = 'ליאור עמירה'? לאחד ספק; חשבונית DR-0175 $350 — cross-check",
+   "ממו ספרינג דיאם 7169967: MDR-0001→DR, MDB-0012→DB כשתגיע חשבונית",
+   "קנבאן ייצור / Dashboard KPIs — מודולים הבאים (ישן)"
+  ],
+  "recent_changes": [
+   "13.10 — נבדק מהמשרד, אין שינוי מאז העדכון הקודם",
+   "11.10 — ביטול ענת צימט: הזמנות 1647/1648 נמחקו, J1755+J1417 → stock, לקוחה אופסה",
+   "4.10 — טוקן sbp_ חדש; DS-1724 פוצל → S189 צדדיות2; הזמנות פרטיות = פערים מתחת למקסימום (Shopify ממפה +378)",
+   "1.10 — DS-1723 → S189 (עדן מור אבי, אלינה); DS-1664 יתרה 0.14ct",
+   "30.9 — DR-0175 טרפזים → J1769; כפילות gold_costs נמחקה (כלל: כפילויות מוחקים בלי לשאול)",
+   "28.9 — S190/999-166 אורי הרשקוביץ (תיקון חינם)",
+   "27.9 — קוד דולר/זהב באוויר (10f7f4c)",
+   "23.9 — refresh_market_rates + pg_cron (sql/2026-09-23_market_rates_cron.sql); רשימת 3.9 בוטלה",
+   "22.9 — באג J פאנטום בטריגר assign_j (upsert) תוקן",
+   "14.9 — J1622 למלאי מ-S180; זיו עידן 1639/J1774; לירון אברהם 1640/J1775 (4,000 ₪ טרם שולם)",
+   "23.8 — מסך תמחור: ריבוי שורות זהב + חיפוש לקוח בהצעת מחיר (8694cfc)"
+  ],
+  "artifacts": [
+   {
+    "label": "מערכת הניהול (חי)",
+    "url": "https://diana-rafael.vercel.app",
+    "type": "site"
+   },
+   {
+    "label": "ריפו diana-rafael",
+    "url": "https://github.com/dadahan10/diana-rafael",
+    "type": "repo"
+   },
+   {
+    "label": "Supabase (מערכת הניהול)",
+    "url": "https://fcmlnrkkcabebuechaum.supabase.co",
+    "type": "site"
+   },
+   {
+    "label": "תיקייה מקומית (משרד: OneDrive\\Desktop\\diana-rafael)",
+    "url": "file: C:\\Users\\USER\\OneDrive\\Desktop\\diana-rafael",
+    "type": "folder"
+   },
+   {
+    "label": "גישת SQL (Management API)",
+    "url": "file: C--Users-USER\\memory\\ops_supabase_sql_access.md",
+    "type": "doc"
+   },
+   {
+    "label": "backlog אוטומציות 23.7",
+    "url": "file: C--Users-USER\\memory\\project_mgmt_roadmap.md",
+    "type": "doc"
+   },
+   {
+    "label": "תיקונים ממתינים",
+    "url": "file: C--Users-USER\\memory\\pending_fixes_diana_rafael.md",
+    "type": "doc"
+   },
+   {
+    "label": "סקיל complete-order-intake",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\complete-order-intake",
+    "type": "skill"
+   },
+   {
+    "label": "סקיל record-supplier-payment",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\record-supplier-payment",
+    "type": "skill"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_office.md",
+   "project_mgmt_roadmap.md",
+   "pending_fixes_diana_rafael.md",
+   "parking_lot.md",
+   "ops_supabase_sql_access.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-04.md",
+   "project_session-2026-10-01.md",
+   "project_session-2026-09-30.md",
+   "project_session-2026-09-23.md",
+   "project_session-2026-09-14.md",
+   "project_mgmt-system-blank-screen.md",
+   "ops_order_status_triggers.md"
+  ]
+ },
+ {
+  "id": "order-intake",
+  "title": "קליטת הזמנות (Make → Supabase, Shopify/Etsy)",
+  "group": "infra",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-13",
+  "where_we_stand": "13.10 (משרד): DR-OrderIntake רץ תקין (17:00 rc=0, status_triggers החיל שינוי) — הנפילה מ-6.10 לא חוזרת. אין הזמנות Shopify מאז #1275 (30.9), כך שאין פער קליטה. 3 הזמנות פרטיות נכנסו היום (1664–1666). Shopify → Supabase: תרחיש Make 5417151 'Integration Shopify, Supabase' — נפל 30.9 על לקוח חוזר (409 customers_email_unique), תוקן 1.10 (upsert on_conflict=email, get() syntax) ופעיל. Make מכבה בשקט אחרי 3 כשלונות — אף אחד לא מתריע; סימפטום = הזמנת Shopify בלי שורת orders. טריגר DB מקצה J מיידית (מדלג על upsert מ-22.9). העשרה (לקוח/SKU/model_ref/יהלום) = סוכן מקומי intake.mjs + status_triggers.py דרך DR-OrderIntake כל שעתיים (רץ רק במשרד; ב-6.10 נופל rc 3221225786 ב-status_triggers). Etsy = INSERT דרך Make (מייל+טלפון לא ממופים; amount בסנטים); אטסי לארה\"ב = DDP דרך לאור (d2dvalue). רוטינת הענן autopilot כבויה מ-30.8. הזמנה רב-פריטית = פיצול ידני ל-J לכל פריט (סקיל complete-order-intake). פריט מלאי (בלי SKU) מקבל J חדש → להפנות ל-J של המלאי ולמחוק את הריק.",
+  "next_tasks": [
+   "אם תרחיש 5417151 כבוי: scenarios_list → isActive; שגיאות ב-executions_list",
+   "Etsy: מיפוי מייל+טלפון, amount/100 — פתוח",
+   "הזמנות מתנה: ה-upsert כותב כתובת משלוח על כרטיס הקונה — לעקוב",
+   "connection 1554993 → re-auth diana_rafael (ישן); רוטינת SKU Standardization בענן עדיין רצה כל לילה — לשאול אם מכוון"
+  ],
+  "recent_changes": [
+   "13.10 — סוכן הקליטה תקין; אין הזמנות Shopify מאז 30.9; 3 הזמנות פרטיות היום",
+   "1.10 — תרחיש 5417151 תוקן (REST upsert) ופעיל; #1275 → הזמנה 1653 → J1594 ידנית",
+   "30.9 — התרחיש נפל על 409 (Trisha Rock, מתנה)",
+   "22.9 — טריגר assign_j מדלג על upsert (J פאנטום נמחק)",
+   "9.9 — נתיבי OneDrive תוקנו; DR-OrderIntake נכשל 14.8–9.9 בשקט",
+   "30.8 — רוטינת הענן autopilot כובתה (חסומה 17 יום)",
+   "27.7 — הסוכן המקומי מושך הכל מ-API של שופיפיי; תרחיש Make נשאר שבור בכוונה (עד 1.10)"
+  ],
+  "artifacts": [
+   {
+    "label": "תקרית Make 30.9 + תיקון",
+    "url": "file: C--Users-USER\\memory\\project_make-shopify-intake-broken-2026-10-01.md",
+    "type": "doc"
+   },
+   {
+    "label": "blueprint מתוקן (עותק)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\command-center\\make-5417151-shopify-supabase-fixed-blueprint.json",
+    "type": "doc"
+   },
+   {
+    "label": "agents/order-intake (intake.mjs, status_triggers.py, intake_sku_match.py)",
+    "url": "file: diana-rafael\\agents\\order-intake",
+    "type": "folder"
+   },
+   {
+    "label": "טריגרי סטטוס",
+    "url": "file: C--Users-USER\\memory\\ops_order_status_triggers.md",
+    "type": "doc"
+   },
+   {
+    "label": "סקיל complete-order-intake",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\complete-order-intake",
+    "type": "skill"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_make-shopify-intake-broken-2026-10-01.md",
+   "ops_order_status_triggers.md",
+   "project_order-intake-rebuild.md",
+   "ops_cloud_routines.md",
+   "pending_fixes_diana_rafael.md",
+   "project_session-2026-10-07.md",
+   "project_q4_operating_plan.md"
+  ]
+ },
+ {
+  "id": "shipping-agent",
+  "title": "סוכן משלוחים (חשבוניות + FedEx דרך d2dvalue)",
+  "group": "infra",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-13",
+  "where_we_stand": "13.10 (משרד): השרת חי — פורט 5555 מאזין ו-/health מחזיר ok. make_invoice.py + d2d_bot.py + server.py (poller של ship_jobs, פורט 5555) ב-OneDrive\\Desktop\\shipping-agent במשרד; סקיל ship-jewelry-order — הקלט היחיד מדניאל = משקל בגרם. מ-29.9 הבוט מפצל אוטומטית לחשבונית סחורה + חשבונית עיצוב (≤$1,600 → 50/50, מעל → 30/70; תיקיית 'עיצוב תכשיטים'); אטסי לארה\"ב נחסם (DDP דרך לאור). סגירת לולאה: order=shipped+tracking, jewelry=sold, Shopify fulfilled. משלוחים אחרונים: J1779 דנה (29.9, 877893295578), J1769 דרו (30.9, 877960174740), J1768 דיפאק (29.9, 877896426701), #1275 J1594 (878020145661). משימת logon DR-ShippingAgent נרשמה 28.9 אבל נפלה בהפסקת החשמל 8.10 ולא עלתה (rc 3221225786 מ-29.9). בבית אין סקריפטים/python-docx/טוקן — עקיפה: עריכת docx + Word COM.",
+  "next_tasks": [
+   "אטסי DDP: דיפאק נסגר; נוהל = פיצול + מייל ללאור (Lior@d2dvalue.com) עם חשבונית הסחורה בלבד",
+   "להעתיק סקריפטים + טוקן לבית (Dropbox) אם רוצים משלוחים מהבית",
+   "ציוד ישן ברשימת הפיגומים: d2dvalue Cloudflare/login שביר"
+  ],
+  "recent_changes": [
+   "13.10 — שרת המשלוחים חי (/health ok); אין משלוחים חדשים מאז 30.9",
+   "11.10 — DR-ShippingAgent נפל בהפסקת חשמל 8.10 ולא עלה",
+   "30.9 — J1769 דרו נשלח (JEW-1255/56); 29.9 — J1779 דנה (JEW-1253/54), דיפאק J1768",
+   "29.9 — server.py מפצל אוטומטית סחורה/עיצוב; whatsapp.ts אומר 'המחשב לא מחובר' אחרי 2 דק'",
+   "28.9 — התגלה שהשרת לא רץ מ-19.8 (נתיב Desktop מת) → תוקן + משימת logon",
+   "10.9 — עמודת QTY בחשבונית המכס (אחרי עיכוב מכס של קיילן)",
+   "3.8 — דגל --description לחשבונית JEWELRY DESIGN"
+  ],
+  "artifacts": [
+   {
+    "label": "shipping-agent (משרד)",
+    "url": "file: C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent",
+    "type": "folder"
+   },
+   {
+    "label": "סקיל ship-jewelry-order",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\ship-jewelry-order",
+    "type": "skill"
+   },
+   {
+    "label": "d2dvalue",
+    "url": "https://www.d2dvalue.com",
+    "type": "site"
+   },
+   {
+    "label": "תיקיית חשבוניות (ניהול משרד)",
+    "url": "file: C:\\Users\\USER\\Dropbox\\ניהול משרד\\2026",
+    "type": "folder"
+   },
+   {
+    "label": "פער מחשב הבית",
+    "url": "file: C--Users-USER\\memory\\ops_home_machine_shipping_gap.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_shipping_agent.md (office)",
+   "project_session-2026-09-28.md",
+   "project_session-2026-09-29.md",
+   "project_session-2026-09-30.md",
+   "project_session-2026-10-11.md",
+   "ops_home_machine_shipping_gap.md",
+   "project_jewelry-design-invoices.md"
+  ]
+ },
+ {
+  "id": "whatsapp-agent",
+  "title": "סוכן הוואטסאפ של מערכת הניהול",
+  "group": "infra",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-09-29",
+  "where_we_stand": "diana-rafael/api/whatsapp.ts על Vercel (webhook Twilio, Claude Sonnet, זיכרון ב-wa_conversations, תמונה/PDF/קול). כלים: הזמנות, יהלומים (add/allocate/update), create_jewelry, add_payable (תזרים), add_cost, ship_order (→ ship_jobs → השרת במשרד). עדיין על Twilio Sandbox (+14155238886, נופל כל 72 שעות) — המעבר ל-WhatsApp Business Sender מאושר פתוח מ-22.6 (תוכנן 5.7, לא בוצע). 29.9: אם משימה ממתינה >2 דק' בלי שהמחשב אסף — הבוט אומר 'המחשב לא מחובר'. digest.ts (פתיחת יום) מעולם לא עלה (dry). הבוט בענן עדיין מכיר טרלו + שלבי הזמנה ישנים (תצפית 0011). לא מבין תעודת זיכוי/החזר זהב (מתייג כיציקה).",
+  "next_tasks": [
+   "WhatsApp Business Sender מאושר (Meta Business + אימות + display name) — פיגום #1 ברשימה",
+   "לעדכן system prompt: טרלו הוצא משימוש, שלבי ייצור על התכשיט, תעודת זיכוי (3 צורות החזר פיין)",
+   "digest.ts: template מאושר (HX SID) + env ב-Vercel + תרחיש Make 08:00 — או לוותר",
+   "חיבור משקל מהוואטסאפ → תעודה (אחרי פיילוט התעודות)"
+  ],
+  "recent_changes": [
+   "29.9 — 'המחשב לא מחובר' אחרי 2 דקות (נדחף ל-Vercel)",
+   "28.9 — 'הסוכן לא מבין' = השרת במשרד לא רץ מ-19.8, תוקן",
+   "22.6 — דיווח דו-מטבעי; create_jewelry"
+  ],
+  "artifacts": [
+   {
+    "label": "api/whatsapp.ts",
+    "url": "file: diana-rafael\\api\\whatsapp.ts",
+    "type": "doc"
+   },
+   {
+    "label": "api/digest.ts (פתיחת יום, dry)",
+    "url": "file: diana-rafael\\api\\digest.ts",
+    "type": "doc"
+   },
+   {
+    "label": "Audit פיגומים (Twilio Sandbox #1)",
+    "url": "file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_scaffolding-audit.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_whatsapp-agent.md",
+   "project_scaffolding-audit.md",
+   "project_session-2026-09-28.md",
+   "project_session-2026-09-29.md",
+   "project_mgmt-system-evening-tasks-16-7.md",
+   "rule_trello_retired (index)"
+  ]
+ },
+ {
+  "id": "night-agent",
+  "title": "הסוכן הלילי / מנוע הלילה",
+  "group": "infra",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-10-11",
+  "where_we_stand": "התשתית הישנה (Task DianaRafael-NightAgent 22:00 → run-night-agent.ps1 → claude -p headless, תור NIGHT-QUEUE.md, AGENT-PROMPT.md, send_mail.py, render.py, תבנית מצגת HTML) כבויה מ-26.7. תוכנית Q4 (6.10) מבקשת 'להחיות, לא לבנות מחדש' — סשנים ליליים עם Opus. מה כן רץ בלילה: DR-Catalog-Nightly (שבועי, ראשון 21:00), DR-Remnant-RenderMatrix (9.9 חד-פעמי), DR-Mgmt-2026-09-20 (חד-פעמי). 11.10: NIGHT-2026-10-11-PROMPT.md הוכן (R543+Accretion+Sunburst+Starz) אבל המשימה DR-NightSession לא נוצרה (חסימת הרשאות; דניאל לא הריץ schtasks) → לא רץ. לקח (תצפית 56): מנוע לילה = משימה קבועה שקוראת תור. מסווג auto-mode חוסם יצירת משימות מתוזמנות — צריך לצאת מ-auto (Shift+Tab) או שדניאל מריץ.",
+  "next_tasks": [
+   "דניאל: להריץ את פקודת schtasks ל-DR-NightSession (או להחיות DianaRafael-NightAgent) — משימה קבועה שקוראת תור",
+   "תור ללילה הבא: Sunburst טבעת, Starz cleanup, Accretion (אחרי החלטה)",
+   "לוודא שהריצה כותבת LOG + דוחפת git (תצפית 55: סוכנים נקטעו בלי תוצרים)",
+   "מגבלת שימוש (429) מפילה ריצות — לתזמן אחרי איפוס"
+  ],
+  "recent_changes": [
+   "13.10 — נבדק מהמשרד, אין שינוי מאז העדכון הקודם",
+   "11.10 — פרומפט לילה מוכן, משימה לא נוצרה, לא רץ",
+   "6.10 — תוכנית Q4: להחיות את מנוע הלילה (החלטה 1 מ-5 ממתינה)",
+   "20.9 — DR-Mgmt-2026-09-20 רץ (חד-פעמי, מערכת ניהול)",
+   "26.7 — DianaRafael-NightAgent Disabled"
+  ],
+  "artifacts": [
+   {
+    "label": "night-agent/ (דוטפיילס)",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent",
+    "type": "folder"
+   },
+   {
+    "label": "AGENT-PROMPT.md + NIGHT-QUEUE.md",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\AGENT-PROMPT.md",
+    "type": "doc"
+   },
+   {
+    "label": "פרומפט 11.10",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\NIGHT-2026-10-11-PROMPT.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_night-agent.md",
+   "project_q4_operating_plan.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-09-15.md",
+   "ops_catalog_nightly.md"
+  ]
+ },
+ {
+  "id": "morning-health-agent",
+  "title": "סוכן בריאות בוקר (DR-MorningHealthCheck)",
+  "group": "infra",
+  "kind": "business",
+  "status": "blocked",
+  "last_update": "2026-10-13",
+  "where_we_stand": "morning_health_check.py (Task 06:30 במשרד): מתקן אוטומטית כפילויות הזמנה (רק שורות לא-שלמות), סכום פי-100, לקוחות כפולים; מדווח יתומים, שתיקת Make ≥3 ימים, גלאי רב-פריטי Shopify (UNDER/OVER-SPLIT), שער מט\"ח ישן, חשיפה ציבורית. 13.10: נמצאה הסיבה לשתיקה מ-14.8 — הנתיב למפתח Supabase הצביע ל-Desktop הישן (לפני המעבר ל-OneDrive). תוקן: הסקריפט מחפש את המפתח ב-OneDrive\\Desktop ואז ב-Desktop, כך שעובד בשני המחשבים. ריצה ידנית 13.10 17:15: rc=0, מוזג לקוח כפול (Emily Trimble), 2 הזמנות רב-פריטיות תקינות, 0 דורש תשומת לב. דוח נכתב ל-night-agent\\health-reports.",
+  "next_tasks": [
+   "לוודא שהריצה של 14.10 06:30 מסתיימת ב-rc=0 ונכתב health-2026-10-14.txt",
+   "אחרי חודשיים בלי בדיקה: לעבור על UNDER-SPLIT בהזמנות ספטמבר–אוקטובר",
+   "משרד: 3 סקריפטים ישנים עדיין עם נתיב Desktop הישן (run-night-agent, customizeai-morning-batch, beta-host) — רלוונטי רק אם מחזירים את המשימות שלהם"
+  ],
+  "recent_changes": [
+   "13.10 — תוקן: נתיב המפתח (OneDrive). שתק מ-14.8; ריצה ידנית rc=0, לקוח כפול מוזג",
+   "8.10 / 7.10 — עדיין rc=1 כל בוקר (מ-14.8)",
+   "9.7 — תיקון שורש: דדופ לא מוחק שורה שלמה; דוח נכתב תמיד; גלאי רב-פריטי",
+   "29.6 — נבנה"
+  ],
+  "artifacts": [
+   {
+    "label": "morning_health_check.py",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\morning_health_check.py",
+    "type": "doc"
+   },
+   {
+    "label": "דוחות",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\health-reports",
+    "type": "folder"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_morning-health-agent.md",
+   "project_session-2026-10-08.md",
+   "project_session-2026-10-07.md",
+   "project_q4_operating_plan.md",
+   "ops_office_paths_onedrive.md"
+  ]
+ },
+ {
+  "id": "month-closing",
+  "title": "סגירת חודש (expense-bot → SUMIT)",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "סקיל close-month: ExpenseBot (משימה DianaRafael-ExpenseBot, רק במשרד, OneDrive) מוריד חשבוניות מהמייל ב-11 בחודש → יישוב לפי חודש-שירות → טיוטת ג'ימייל → 'שלח' של דניאל ל-301186466@expense.co.il. יוני/יולי/אוגוסט 2026 נסגרו (אוגוסט נשלח 16.9, 48 קבצים). ספטמבר: ExpenseBot רץ 11.10 rc=0 → ממתין לאטסי (2 חנויות) + חשבוניות ישראל של דניאל, ואז build_draft + 'שלח'. מ-23.9: מיילי חשבוניות מתויקים (נקרא + תווית Invoices/YYYY-MM). ידוע בתיקייה: 4 סריקות בלי שם, דרור עדני 32047, שפירית 50080, בית נועם 9/26, Shopify 589953808.",
+  "next_tasks": [
+   "משרד: סגירת ספטמבר — דניאל מוסיף אטסי ×2 + סריקות; build_draft.py → טיוטה → 'שלח'",
+   "לוודא שהורדת 11.10 כיסתה הכל (רב-פס, PayMe, Adobe, Calendly, Make, Shopify)",
+   "להעביר את ההורדה ל-cron/ענן 24/7 (הצעה פתוחה — תלוי במחשב המשרד דלוק)"
+  ],
+  "recent_changes": [
+   "11.10 — ExpenseBot רץ rc=0 לספטמבר",
+   "23.9 — כלל תיוק מיילים (Invoices/YYYY-MM); fetch_ravpass מתייק",
+   "16.9 — אוגוסט נשלח ל-SUMIT (2 מיילים, 48 קבצים); צ'ק 80000440 שמחה יצחקוב בתזרים",
+   "14.9 — סקריפטים תוקנו ל-OneDrive אחרי שהמשימה נפלה 11.9; זיכוי RJEW-061 מונה; הוצאות ספרד תויקו"
+  ],
+  "artifacts": [
+   {
+    "label": "סקיל close-month",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\close-month",
+    "type": "skill"
+   },
+   {
+    "label": "תיקיית ניהול משרד 2026",
+    "url": "file: C:\\Users\\USER\\Dropbox\\ניהול משרד\\2026",
+    "type": "folder"
+   },
+   {
+    "label": "expense-bot (משרד)",
+    "url": "file: C:\\Users\\USER\\OneDrive\\Desktop\\CLAUDE CODE PROJECTS\\expense-bot",
+    "type": "folder"
+   },
+   {
+    "label": "סקיל foreign-transfer-form",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form",
+    "type": "skill"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_month-closing.md (office)",
+   "project_session-2026-10-11.md",
+   "project_session-2026-09-16.md",
+   "project_session-2026-09-14.md",
+   "project_session-2026-09-23.md"
+  ]
+ },
+ {
+  "id": "gold-inventory-caster-debt",
+  "title": "מלאי זהב + חוב פיין ליוצק NSA",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-13",
+  "where_we_stand": "13.10: מאז 14.9 נרשמו 9 יציקות NSA עם כ-20.2 ג' פיין, אבל settings.fine_gold_debt_nsa_grams לא עודכן מאז 14.9 (עדיין 28.73) — החוב בפועל כנראה ~47–49 ג'. J1778 מופיע פעמיים ב-12.10 עם אותו משקל (1.4039) — חשד לכפילות. מודל: יציקות = הלוואת פיין מהיוצק; 3 צורות החזר (פיין/החזר/ברוך) ב-gold_costs.classification; רובריקת 'מאזן פיין' (IN−OUT) בדשבורד מ-16.7. מול NSA (אברמוביץ'): פתיחה 61.938 ג' (26.8), 73.87 ג' (2.9), ואחרי קניית פיין 14.9 (דרור עדני 51.65 ג' @428.69 ₪ = 22,141.84 ₪, סגרה 20 יציקות) — settings.fine_gold_debt_nsa_grams = 28.73 (לפי דניאל 80.38−51.65). פתוחות: 9 יציקות 29.42 ג'. תוכנית 2.9 להחזיר 8.36 ג' 14K + טבעת 18K 12.2 ג' — לא תועד אם בוצע. זהב תמיד ב-gold_costs, לא ב-extra_costs. מלאי בחומרים ~108K (3.9). פתוח: סימן החזר/ברוך בהזנה ראשונה; J1694 ברוטו משוער 3g.",
+  "next_tasks": [
+   "לבדוק את הכפילות J1778 (שתי שורות 12.10, ספק בשני כתיבים) ולמחוק אחת אם כן",
+   "לעדכן fine_gold_debt_nsa_grams עם יציקות 17.9–13.10 (~20.2 ג')",
+   "לעדכן fine_gold_debt_nsa_grams בכל תעודת יציקה/זיכוי ולהצליב מול 'יתרה נוכחית' בתעודות NSA",
+   "לברר אם החזרת 8.36 ג' 14K + טבעת 18K ל-NSA בוצעה (תוכנית 2.9)",
+   "הזנה ראשונה של תעודת זיכוי → לקבוע סימן (IN) נכון + לעדכן את סוכן הוואטסאפ",
+   "יתרת ~60 ג' לשלם בכסף בפריסה (25–30K ₪) — לתכנן בתזרים"
+  ],
+  "recent_changes": [
+   "13.10 — חוב הפיין לא עודכן מאז 14.9 (+~20 ג' יציקות); חשד לכפילות J1778",
+   "14.9 — קניית פיין 51.65 ג' (דרור עדני) סגרה 20 יציקות; חוב NSA = 28.73 ג'; J1755 נסגר בנפרד",
+   "2.9 — חוב עודכן ל-73.87 ג'; תוכנית החזר חלקי",
+   "26.8 — נקודת פתיחה מוסכמת 61.938 ג' לפי זיכוי 125489",
+   "16.7 — רובריקת מאזן פיין (commit 77c5d87); קניית פיין #31377"
+  ],
+  "artifacts": [
+   {
+    "label": "מודל מלאי הזהב (זיכרון)",
+    "url": "file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_diana-rafael-gold-inventory.md",
+    "type": "doc"
+   },
+   {
+    "label": "חוב זהב NSA (זיכרון)",
+    "url": "file: C--Users-USER\\memory\\ops_caster_gold_debt.md",
+    "type": "doc"
+   },
+   {
+    "label": "מערכת הניהול — לשונית זהב",
+    "url": "https://diana-rafael.vercel.app",
+    "type": "site"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_diana-rafael-gold-inventory.md",
+   "ops_caster_gold_debt.md",
+   "project_session-2026-09-14.md",
+   "rule_gold_always_in_gold_costs (index)",
+   "project_session-2026-09-03 (index)"
+  ]
+ }
 ]

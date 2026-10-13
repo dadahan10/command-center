@@ -1,235 +1,454 @@
 [
-{
- "id": "pulso-whoop-charms",
- "title": "PULSO — צ'ארמים לרצועות WHOOP / כושר",
- "group": "remnant", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "קולקציה של ~50 צ'ארמים-סליידרים שעוצבה בלילה 30.9 (GPT/Gemini, לא Blender): מפרט build_spec.py, מק\"טים C001–C053, שמות מסחריים, 4 פריימים לפיס. אחרי מחיקת 14 (4.10) + C051 Pulso Mark + C052 Star Anise = 38 מוצרים DRAFT בשופיפיי (כולם 4 תמונות, 3 וריאנטים Y/R/W, $750), קולקציה 490635264169 = 'PULSO' (handle pulso, לא מפורסמת). המידות נסגרו 1.10: פלטה 25×6×1.0 מ\"מ, רצועה 24, תפסני money-clip 7 מ\"מ במתח מוקדם, אבנים על הפלטה, 14K 2.2 ג'. תמחור מתכות (14K/9K/כסף) נדחה — 'נעבוד על זה מאוחר יותר'; כסף = רודיום שחור + ציפוי זהב ($45) אושר. דף קולקציה מקומי (q4/pulso-page, EN+HE) + artifact לשיתוף. שת\"פ נבדק: אניס קדיס + נועה מוזס (איירונמן) — פגישה 13.10 15:00; 2 עיצובים לנועה: C051 + C053 'Línea de Meta' (לא מאושר). אופציות מיקום רצועה A/B/C (12 תמונות) — המלצה B — ממתין לבחירה → lifestyle ל-38.",
- "next_tasks": [
-  "13.10 15:00 — פגישה אניס קדיס + נועה מוזס; לפני: החלטה על C053, איזו רצועה נועה עונדת, סמל איירונמן (סימן מסחרי — חלופה)",
-  "דניאל: מיקום צ'ארם על הרצועה A/B/C (המלצה B) → ריצת lifestyle גבר+אישה ל-38 הפיסים ('כמו הספייד')",
-  "להגיע למוצרים במאות ₪ — תמחור כסף/9K (pulso-pricing: 14K $790, 9K $590, כסף $410 חציון x2.0); שני שדות: מכפיל + עיגול",
-  "דף קולקציה PULSO: GitHub Pages או באתר? 'הפנים של PULSO' — תמונה+שם אחרי הפגישה; CTA /collections/pulso",
-  "SKU של 36 המוצרים המקוריים עדיין נושאים קראט ישן (30.9) — לעדכן לפי מפרט v4",
-  "גיליון Launch Control (1ye6…) לא משותף לחשבון השירות (403) — דניאל משתף או מוחק 14 שורות ידנית",
-  "אטסי: העלאת PULSO לחנות Black Ice (תבניות ב-pulso-listing-templates.md; מחיר+קטגוריה פתוחים)",
-  "סרטון השקה 15–20 שנ' (Veo): קליפ אישה+קפה, מאקרו C025, גרסה 2 לגבר — קרדיטי Gemini נטענו 30.9",
-  "names.py חסר C051 (באג); collection.csv לרענן אחרי סגירת האקסל"
- ],
- "recent_changes": [
-  "11.10 — 14 טיוטות נמחקו, C052+C051 נוצרו → 38 DRAFT בקולקציה PULSO; אופציות רצועה A/B/C; דף PULSO מקומי + artifact; מחקר נועה מוזס",
-  "7.10 — C052 'Anís Negro' נוסף (8 יהלומים שחורים כזרעים); PULSO טבלה עם תקרות 1600/2200/2800; כסף = רודיום שחור + ציפוי ($45)",
-  "6.10 — תמחור מתכות PULSO-pricing-metals (14K/9K/כסף); תמחור נדחה ע\"י דניאל",
-  "4.10 — דניאל מחק 14 פיסים (מפרט+קבצים; שופיפיי+גיליון נשארו עד 11.10)",
-  "1.10 — מידות נסגרו (25×6×1.0, money-clip 7 מ\"מ), תשריט v4, C051 Pulso Mark v4 (מלא, פאווה שחור, Y/R/W + יד גבר)",
-  "30.9 — 50 פיסים נבנו בלילה; 50 מוצרי DRAFT בשופיפיי; השם PULSO הוצע; כללי תמונות: צ'ארם רק על הרצועה, ברוחב הרצועה"
- ],
- "artifacts": [
-  {"label":"דף PULSO לשיתוף (artifact פרטי)","url":"https://claude.ai/artifact/DWwkF1cxkEgCW5Z4so3EEn","type":"artifact"},
-  {"label":"דף PULSO מקומי (EN/HE)","url":"file: remnant-launch\\q4\\pulso-page\\index.html","type":"doc"},
-  {"label":"תמחור מתכות PULSO","url":"file: remnant-launch\\q4\\pulso-pricing\\PULSO-pricing-metals.html","type":"doc"},
-  {"label":"גיליון WHOOP CHARMS — Launch Control","url":"https://docs.google.com/spreadsheets/d/1ye6BvrkQEPZvBpRkws0irdEkKur59qMzkaSGUDlit9w","type":"sheet"},
-  {"label":"מפרט + פייפליין (charms/)","url":"file: remnant-launch\\charms","type":"folder"},
-  {"label":"מצב שופיפיי של PULSO","url":"file: remnant-launch\\charms\\SHOPIFY-STATE-he.md","type":"doc"},
-  {"label":"דרופבוקס WHOOP CHARMS (רינדורים, launch)","url":"file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry\\Black Ice\\WHOOP CHARMS","type":"folder"},
-  {"label":"מחקר נועה מוזס","url":"file: remnant-launch\\q4\\pulso-page\\research\\NOA-MOZES-he.md","type":"doc"},
-  {"label":"לוח פינטרסט whoop-charms","url":"https://www.pinterest.com/dianarafaeljewelry/whoop-charms","type":"site"},
-  {"label":"תבניות ליסטינג אטסי ל-PULSO","url":"file: remnant-launch\\q4\\etsy\\pulso-listing-templates.md","type":"doc"}
- ],
- "office_only": false,
- "sources": ["project_whoop_charms.md","project_session-2026-10-11.md","project_session-2026-10-01.md","project_q4_operating_plan.md","q4/pulso-page/SUMMARY-he.md","project_session-2026-10-07.md"]
-},
-{
- "id": "iai-proposal",
- "title": "הצעת מחיר לתעשייה האווירית (IAI) — צמיד מתנה B036",
- "group": "diana-rafael", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "הצעה v3 נבנתה 11.10 ערב: צמיד עור (שחור/חום) + מדליון מגן דוד + סוגר כסף 925 + חריטה + קופסת הגשה. 100 יח' × 1,250 ₪ + מע\"מ (במקום 1,400) = 146,250 ₪ כולל מע\"מ; תנאים: מקדמה 30%, 45–60 ימי עסקים מאישור עיצוב, תוקף 30 יום. דף HTML מודפס ל-A4 + artifact לשיתוף. B036 נקלט בקטלוג המודלים 11.10 (subtype Charm Bracelet כקירוב). הדמיות Gemini על בסיס צילומי רינו = קונספט (הסוגר יצא מגנטי, לא מה-CAD). ה-PDF בתיקיית הלקוח = הצעת ספק, לא שלנו.",
- "next_tasks": [
-  "סלוגן לקופסה (placeholder צהוב); 'Who Dares Wins' = מוטו SAS — חלופות: Dare to Prevail / Fortune Favors the Bold",
-  "לבקש מ-IAI את תמונות המשימות המקוריות (קולאז')",
-  "לאשר: חלוקה שחור/חום (מינימום לצבע?), מה כלול במחיר (קופסה/חריטה), מע\"מ 17% נכון?",
-  "אורך רצועה סופי (במודל 117 מ\"מ = קטע) — לפני ייצור",
-  "דניאל פותח שיתוף ב-Share ושולח"
- ],
- "recent_changes": [
-  "11.10 ערב — הצעה v3 (index.html, PROMPTS-he.md, SUMMARY-he.md, הדמיות שחור/חום) + artifact",
-  "11.10 — B036 IAI נקלט בקטלוג (w-new-26)"
- ],
- "artifacts": [
-  {"label":"הצעת IAI (artifact פרטי)","url":"https://claude.ai/artifact/Sv8MHCWbbsJa1Q2Mc8oU5a","type":"artifact"},
-  {"label":"תיקיית ההצעה (HTML, הדמיות, פרומפטים)","url":"file: remnant-launch\\q4\\iai-proposal","type":"folder"},
-  {"label":"סיכום + מה דניאל צריך לאשר","url":"file: remnant-launch\\q4\\iai-proposal\\SUMMARY-he.md","type":"doc"}
- ],
- "office_only": true,
- "sources": ["project_session-2026-10-11.md","q4/iai-proposal/SUMMARY-he.md","project_jewelry_catalog.md"]
-},
-{
- "id": "nsa-spring-diam-jv",
- "title": "NSA + ספרינג דיאם — קולקציה כמיזם משותף",
- "group": "diana-rafael", "kind": "business", "status": "paused", "last_update": "2026-08-23",
- "where_we_stand": "מיזם משותף (עלה 14.6): קולקציה של 30 עיצובים. ספרינג דיאם מספק יהלומים ומממן ייצור (החזר + 20% על העלות), NSA (יוצק) מספק זהב ומשלם שיווק ~25K ₪/חודש (40% מהרווח), דניאל 60%. מודל עלויות v3 באקסל + תחשיב חי ב-GitHub Pages (collection-plan). מספרי בסיס: רווח פרויקט 404K ₪ על 120 יח'. ב-8.9 נקבע ש-REMNANT היא פרויקט של דיאנה רפאל בלבד ולא של המיזם. ב-23.8 היה ברשימת משימות השבוע ('NSA = הפרויקט עם ספרינג דיאם') ומאז לא התקדם בזיכרון. הצעד הבא שנשאר: תזרים חודשי (סבב תשלומים כל חודשיים, החזר השקעת NSA).",
- "next_tasks": [
-  "לברר עם דניאל את הסטטוס הנוכחי של המיזם — מאז 23.8 אין עדכון",
-  "אם ממשיכים: לבנות תזרים חודש-חודש (תשלומים כל חודשיים, תזמון תשלום הזהב ל-NSA)",
-  "לא לערבב עם חוב הזהב ליוצק NSA (ops_caster_gold_debt) — נושא תפעולי נפרד"
- ],
- "recent_changes": [
-  "8.9 — החלטה: REMNANT לא קשור למיזם NSA/ספרינג דיאם",
-  "23.8 — 'NSA' ברשימת משימות השבוע; פרטים לא פורטו",
-  "14.6 — מודל עלויות v3 + דף web חי נבנו"
- ],
- "artifacts": [
-  {"label":"תחשיב הקולקציה (חי)","url":"https://dadahan10.github.io/collection-plan/","type":"site"},
-  {"label":"אקסל תוכנית-קולקציה-חדשה-v3","url":"file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\תוכנית-קולקציה-חדשה-v3.xlsx","type":"sheet"},
-  {"label":"ריפו collection-plan","url":"https://github.com/dadahan10/collection-plan","type":"repo"}
- ],
- "office_only": false,
- "sources": ["project_new-collection-jv.md","project_nsa_spring_diam.md","project_session-2026-08-23.md","project_remnant.md"]
-},
-{
- "id": "teen-fine-jewelry-brand",
- "title": "מותג Fine Jewelry לנערות 12–18 (מיה + רונית)",
- "group": "projects", "kind": "business", "status": "active", "last_update": "2026-10-12",
- "where_we_stand": "12.10 בוקר: מחקר שוק עומק (5 סבבים, ~150 חיפושים) — עמוד חי כ-artifact + ריפו מקומי teen-jewelry-research. ממצאים: אין מותג-זהות לבנות 13–17; השכבה הלא-ממותגת 120–250 ₪; סאפורו = המודל היחיד שעובד (טיקטוק 204K, 39.90 ₪); רוני קאן benchmark נירוסטה, מגנוליה ברירת מחדל של ההורה, פנדורה היחידה עם דפים ל-4 הרגעים; Lovisa/Claire's לא בישראל; אף מודעה לא אומרת 'בת מצווה'. 12.10 10:00–13:00 פגישה במשרד עם מיה (סמנכ\"לית שיווק לשעבר פרנו-ריקאר) ורונית (ממתגת): fine jewelry (יהלומים), מיתוג יוקרתי-מינימליסטי, צריך מוצר מזהה (איקון), יהלומים ורודים/כחולים, שורות: layering, ear party, friendship, אמא–בת, סטיילינג. פער: fine jewelry ממקם במתנת סבתא/דודה (400–1,000+ ₪) ולא ב'הנערה בוחרת' — לבדיקה. ריפו GitHub נחסם — פוש ידני.",
- "next_tasks": [
-  "להציע סדר: שם ומיתוג (רונית) → מוצר מזהה → קולקציית פתיחה קטנה → טווח מחירים → ערוץ (טיקטוק/אינסטגרם/קניון)",
-  "לבדוק את פער המיצוב: fine jewelry (מתנה) מול השכבה 120–250 ₪ (הנערה בוחרת)",
-  "אם מתקדמים: סקר 100–200 הורים לבנות 11–13; Keyword Planner ישראל; מכס 71.13/71.17 + ת\"י 1811; תצפית בית ספר",
-  "אם רוצים GitHub Pages: דניאל יוצר ריפו dadahan10/teen-jewelry-research → git push",
-  "להוסיף למחקר: רונית ים, שני יעקובי (עלו בפגישה)"
- ],
- "recent_changes": [
-  "12.10 10:00–13:00 — פגישה ראשונה מיה+רונית (משרד): מיצוב, מוצר מזהה, שורות מוצר",
-  "12.10 בוקר — מחקר 5 סבבים + עמוד חי; נשלח במייל לדניאל; תצפית 0068 (כלים: r.jina.ai לטיקטוק/Suggest)"
- ],
- "artifacts": [
-  {"label":"עמוד המחקר החי (artifact פרטי)","url":"https://claude.ai/artifact/CRcxdhHHXzvaUqMqsQQjcB","type":"artifact"},
-  {"label":"ריפו מקומי (index.html, research/round-1..5.md)","url":"file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\teen-jewelry-research","type":"folder"},
-  {"label":"סיכום הפגישה 12.10","url":"file: C--Users-USER\\memory\\project_teen_fine_jewelry_brand.md","type":"doc"},
-  {"label":"סקיל niche-research","url":"file: C:\\Users\\USER\\.claude\\skills\\niche-research","type":"skill"}
- ],
- "office_only": false,
- "sources": ["project_teen-jewelry-research.md","project_teen_fine_jewelry_brand.md (office)"]
-},
-{
- "id": "dima-jv-ecommerce",
- "title": "שת\"פ דימה — מותג תכשיטי גוף (hand chain)",
- "group": "projects", "kind": "business", "status": "paused", "last_update": "2026-08-25",
- "where_we_stand": "מיזם עם דימה רויטמן (Bcrazy; ייצור באסיה, משלוח בתפזורת לארה\"ב). 8 סבבי מחקר (2–3.8) + 8 סבבי עומק (9a–d, 10a–d, 25.8). הוחלט 25.8: מותג חדש, מוצר גיבור HAND CHAIN BRACELET ('צמיד טבעת'), כל תכשיטי הגוף, סגנון מינימלי-עדין, ישראל = B2B בלבד (בגד ים/מלונות), כלות מההתחלה, קפסולה שחורה 4–6 SKU כ-drop שני. תמחור: ליבה $95–165, דגל $185–220, gold-filled. הבידול ששרד: מערכת מידות/fit. מסמך השראה (16 פרקים, 14 תמונות) פורסם כ-artifact 25.8 — מוכן לישיבה עם דימה. ממצאים קבועים: קנייה חוזרת 9.9%, אטסי=סיכון, המגבלה = הון מלאי + CAC. מאז 25.8 אין עדכון — הישיבה עם דימה לא תועדה.",
- "next_tasks": [
-  "לברר: האם הישיבה עם דימה התקיימה ומה הוחלט",
-  "השאלה הפתוחה #1: הון מלאי (תפזורת = כסף קפוא) — לא נשאל באף סבב",
-  "אם ממשיכים: 3 שערי בדיקה (הזול קודם), תקציב $5,000–8,500; הצעת מחיר 3PL בארה\"ב",
-  "אקסימוס: שורטליסט שותפים (ליאור פוזין, איתמר רין, רועי נעמן, נפתלי בר, אנה פלקין) — שלב ב'"
- ],
- "recent_changes": [
-  "25.8 — round-10d אימות SWOT; מסמך השראה v1.1 עם 14 תמונות פורסם",
-  "3.8 — תשובות דניאל: ייצור אסיה → תפזורת לארה\"ב; סולם $60–80 + $250–300; מוחק את חוט ה-FTA/משלוח בודד",
-  "2–3.8 — 8 סבבי מחקר אדוורסרי (כל סבב הפריך את קודמו)"
- ],
- "artifacts": [
-  {"label":"מסמך ההשראה לישיבה (artifact)","url":"https://claude.ai/code/artifact/3cdadda6-f30f-4128-a274-26952c73db00","type":"artifact"},
-  {"label":"ריפו dima-jv (פרטי) + research/","url":"https://github.com/dadahan10/dima-jv","type":"repo"},
-  {"label":"תיקיית המחקר (משרד: OneDrive)","url":"file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\dima-jv\\research","type":"folder"},
-  {"label":"לוח פינטרסט hand-chain","url":"https://www.pinterest.com/dianarafaeljewelry/hand-chain-jewelry","type":"site"},
-  {"label":"סקיל niche-research (נגזר מהמחקר)","url":"file: C:\\Users\\USER\\.claude\\skills\\niche-research","type":"skill"}
- ],
- "office_only": true,
- "sources": ["project_dima-jv-ecommerce.md","project_session-2026-08-25.md (office)","project_session-2026-08-23.md"]
-},
-{
- "id": "lawsuit-dr-sale",
- "title": "התביעה סביב מכירת דיאנה רפאל",
- "group": "diana-rafael", "kind": "business", "status": "blocked", "last_update": "2026-10-04",
- "where_we_stand": "עסקת המכירה התפוצצה 1.3.2026. ~200K ₪ (מתוך ~300K שהתקבלו) יושבים במיטב טרייד ובמחלוקת משפטית — לא לתכנן עליהם, לא נכס זמין. תביעה נגד דניאל ~500K ₪; תביעה שכנגד ~1M ₪. עלויות עד כה: שכ\"ט עו\"ד 47,200 ₪ + אגרות ~11,486 ₪. עו\"ד: מירילאשוילי / יצחק מיר. 4.10: ~100K+ במיטב לא מושקעים (~3.5–4K/שנה אבודים) — קרן כספית רק אם אין צו עיקול; לא נענה.",
- "next_tasks": [
-  "דניאל: האם יש עיקול/צו על הכסף במיטב? (שאלה פתוחה מ-4.10) → אם לא, קרן כספית",
-  "לתקצב המשך הוצאות משפטיות בתזרים",
-  "לעדכן סטטוס ההליך כשיש התפתחות (אין עדכון מאז 2.9)"
- ],
- "recent_changes": [
-  "4.10 — הועלה: 100K במזומן שלא עובדים במיטב; תלוי בסטטוס המשפטי",
-  "2.9 — ניתוח פיננסי: 200K קפואים, לא לספור כהון עצמי"
- ],
- "artifacts": [
-  {"label":"זיכרון התביעה","url":"file: C--Users-USER\\memory\\project_lawsuit_dr_sale.md","type":"doc"}
- ],
- "office_only": false,
- "sources": ["project_lawsuit_dr_sale.md","research_loan_refinance_2026-10.md","project_dira-behanacha-kadima.md"]
-},
-{
- "id": "mechir-lamishtaken",
- "title": "מחיר למשתכן / דירה בהנחה — קדימה-צורן",
- "group": "personal", "kind": "personal", "status": "paused", "last_update": "2026-08-23",
- "where_we_stand": "דניאל זכה 2.8.2026 בהגרלה 2735 (מגרשים 27-28, שחק גרופ, קדימה-צורן), מקום 23/34 מתוך 22,074. התזה: להשכיר, לא לגור — רווח מההנחה (30–37%) + עליית מחירים. מודל המחיר אומת מול האקסל של דניאל (הנחה = min(25%×16,259×מ\"ר, 500K)). משכנתא נתקעת על 1,575,000 ₪ (LTV 75% עד 2.1M) — 100 מ\"ר → הון עצמי 171K; 120 מ\"ר → 496K. המגבלה האמיתית PTI (צריך נטו ~33K). מלכודות: לא לקנות דירה נוספת לפני המכירה (מס שבח), לא לחתום עסקה עתידית לפני 22.7.2033, חידוש זכאות שנתי 50 ₪. טרם הוגשה בקשה להיתר — מסירה 2030–2032. ב-23.8 'לומדים את האירוע'; מאז אין עדכון.",
- "next_tasks": [
-  "3 שיחות: מחירון 9 דירות שוק חופשי (שחק גרופ) · סטטוס היתר (אשד בקרה 5349*) · אישור עקרוני מדיסקונט",
-  "תזכורת יומן: חידוש זכאות שנתי (50 ₪)",
-  "החלטה רוחבית על קיצוצים (גושים שנתיים: אקסימוס/משפט/עו\"ד) → דף מידע מקומי + ריפו פרטי dira-kadima",
-  "קרן השתלמות נזילה 31.1.2030 — מקור הון לפני חתימה"
- ],
- "recent_changes": [
-  "23.8 — ברשימת משימות השבוע ('לומדים את האירוע')",
-  "4.8 — מודל מחיר/הון עצמי/מס שבח אומת; 2.8 — הזכייה"
- ],
- "artifacts": [
-  {"label":"זיכרון הדירה (מודל מלא)","url":"file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_dira-behanacha-kadima.md","type":"doc"}
- ],
- "office_only": false,
- "sources": ["project_dira-behanacha-kadima.md","project_mechir_lamishtaken.md","project_session-2026-08-23.md"]
-},
-{
- "id": "jewelry-catalog",
- "title": "קטלוג המודלים (934 מודלים) — ריצה שבועית",
- "group": "diana-rafael", "kind": "business", "status": "active", "last_update": "2026-10-11",
- "where_we_stand": "טבלת models במערכת הניהול = 934 מודלים (701 White / 233 Black Ice) אחרי הריצה השבועית 11.10 21:00 (929→934): נקלטו R544 Cluster, B036 IAI, E058/B034/B035 (דגל no_image); הדמיות REMNANT רועננו (R110/R112/R114/R121/E048/E049); 5 יתומים קושרו (J1781→R544, J1783→B034, J1784→B035, J1785/J1787→E058). דגלים: R112 שני עיצובים בתיקייה (BAND עם CAD, ENG בלי) — צריך מספר נפרד; R121 מרכזית Round→Marquise; R114 שם Accersion/Accretion. CONFLICTS 187 שורות. בלי דגם: J1775 (B037), B004/B006 BI, B031, R527. הפרויקט 'סגור' מבחינת דניאל (16.9) אבל הריצה השבועית (יום ראשון 21:00, DR-Catalog-Nightly עם שער בסקריפט) ממשיכה וקולטת תיקיות חדשות. 27.9 נמחקו 343 קבצי CAD + 196 זיפים מ-141 תיקיות בדרופבוקס — לא ברור אם מכוון.",
- "next_tasks": [
-  "דניאל: לברר מחיקת CAD/זיפים מ-27.9 (מכוון?) — תצפית 9 פתוחה",
-  "דניאל: לעבור על VOCABULARY + CONFLICTS.md",
-  "R112: מספר נפרד לעיצוב ה-ENG הכיפתי; B037 של J1775 — לפתוח תיקייה",
-  "דניאל רצה לסגור DR-Catalog-Nightly (schtasks /Delete) — או להשאיר שבועי; ריצה הבאה 18.10 21:00",
-  "משרד: בבוקר שני לדווח מלוג catalog-log-<תאריך>.md"
- ],
- "recent_changes": [
-  "11.10 — ריצה שבועית 2: 929→934, הדמיות REMNANT רועננו, commit ca36ef5",
-  "4.10 — ריצה שבועית 1: 919→929, 10 תיקיות REMNANT נפתחו, REMNANT = קולקציית Black Ice בקטלוג",
-  "28.9 — הריצה הפכה שבועית (יום ראשון 21:00)",
-  "24.9 — B033 נקלט → J1777; 22.9 — באג J פאנטום (J1780) תוקן",
-  "16.9 — דניאל סיים לעבור → הפרויקט סגור (נשאר למחוק משימה)"
- ],
- "artifacts": [
-  {"label":"מערכת הניהול — דף מודלים","url":"https://diana-rafael.vercel.app","type":"site"},
-  {"label":"catalog/ בריפו diana-rafael (census, catalog-full.json, CONFLICTS.md)","url":"file: diana-rafael\\catalog","type":"folder"},
-  {"label":"לוגים ליליים","url":"file: C:\\Users\\USER\\.claude\\night-agent\\catalog-log-*.md","type":"doc"},
-  {"label":"תיקיית העל בדרופבוקס","url":"file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry","type":"folder"}
- ],
- "office_only": true,
- "sources": ["project_jewelry_catalog.md","ops_catalog_nightly.md","project_session-2026-09-16.md","project_session-2026-10-07.md"]
-},
-{
- "id": "certificates-gil",
- "title": "תעודות GIL + cert-publisher",
- "group": "diana-rafael", "kind": "business", "status": "active", "last_update": "2026-10-01",
- "where_we_stand": "סוכן התעודות (make_cert.py ב-shipping-agent, משרד) מכין תעודות GIL מתוך מערכת הניהול + תבניות Word; דניאל מאשר, מדפיס מה-Word, PDF → certs PDF → cert-publisher (Playwright, Task 'CertPublisher') מעלה ל-Shopify Files + WordPress gil-lab.com. פיילוט 29.9–1.10: 1225428455 (J1779), 456 (J1768), 457 (J1769), 459 (J1776 נוגה — יהלומי מעבדה, דניאל תיקן מרכזית 1.02 E VS1) — כולן אושרו ופורסמו. כללים נלמדו: מספר הבא = הגבוה בקבצים +1, לעולם לא שבת, שווי ×1.6–2, קראט לפי הליסטינג שנמכר, תמונה FRONT VIEW, Canva להסרת רקע, יישור תוויות עם נקודות. פתוח: 1225428454 (10.9) ו-458 (1.10, לא בסשן) — לא ידוע מי/מה. חיבור משקל-מהוואטסאפ→תעודה אחרי 5–10 תעודות נקיות. Adobe לעריכת תעודות — ממתין ל-login.",
- "next_tasks": [
-  "לברר 1225428454 (מעבר, לא פורסם) ו-1225428458 (נוצרה 1.10 מחוץ לסשן)",
-  "להמשיך פיילוט (עוד ~5 תעודות) → ואז לחבר משקל מהוואטסאפ → חשבונית+תעודה יחד",
-  "אטסי: CSV ליסטינגים מ-Shop Manager (דניאל) → etsy_listings.json לקראט לפי ליסטינג",
-  "Adobe (/mcp login של דניאל) → תעודה לדוגמה → סוכן עריכה לפני cert-publisher",
-  "16 טבעות בלי תמונת צד / תמונות cert — צילומים"
- ],
- "recent_changes": [
-  "1.10 — 459 לנוגה (R543, מעבדה) — כלל LAB-GROWN נוסף ל-make_cert.py; לקח: אבן מרכזית שלא במערכת = לשאול",
-  "30.9 — 457 לדרו (R030 WG) אושרה; תיקון photo_slot RGBA",
-  "29.9 — פיילוט 455/456; 14 כללים מדניאל; תבנית BI-R102-Y-4-14 נשמרה"
- ],
- "artifacts": [
-  {"label":"make_cert.py (משרד)","url":"file: C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\make_cert.py","type":"doc"},
-  {"label":"תיקיית התעודות","url":"file: C:\\Users\\USER\\Dropbox\\Diana Rafael\\תעודות","type":"folder"},
-  {"label":"cert-publisher (agent.py)","url":"file: C:\\Users\\USER\\cert-publisher\\agent.py","type":"doc"},
-  {"label":"גלריית התעודות","url":"https://gil-lab.com","type":"site"},
-  {"label":"כללי התעודות (זיכרון)","url":"file: C--Users-USER\\memory\\project_certificates.md","type":"doc"}
- ],
- "office_only": true,
- "sources": ["project_certificates.md","project_cert_publisher.md","project_certs-agent.md","project_session-2026-09-29.md","project_session-2026-09-30.md","etsy_listings.md","project_higgsfield_midjourney_adobe.md"]
-}
+ {
+  "id": "pulso-whoop-charms",
+  "title": "PULSO — צ'ארמים לרצועות WHOOP / כושר",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "קולקציה של ~50 צ'ארמים-סליידרים שעוצבה בלילה 30.9 (GPT/Gemini, לא Blender): מפרט build_spec.py, מק\"טים C001–C053, שמות מסחריים, 4 פריימים לפיס. אחרי מחיקת 14 (4.10) + C051 Pulso Mark + C052 Star Anise = 38 מוצרים DRAFT בשופיפיי (כולם 4 תמונות, 3 וריאנטים Y/R/W, $750), קולקציה 490635264169 = 'PULSO' (handle pulso, לא מפורסמת). המידות נסגרו 1.10: פלטה 25×6×1.0 מ\"מ, רצועה 24, תפסני money-clip 7 מ\"מ במתח מוקדם, אבנים על הפלטה, 14K 2.2 ג'. תמחור מתכות (14K/9K/כסף) נדחה — 'נעבוד על זה מאוחר יותר'; כסף = רודיום שחור + ציפוי זהב ($45) אושר. דף קולקציה מקומי (q4/pulso-page, EN+HE) + artifact לשיתוף. שת\"פ נבדק: אניס קדיס + נועה מוזס (איירונמן) — פגישה 13.10 15:00; 2 עיצובים לנועה: C051 + C053 'Línea de Meta' (לא מאושר). אופציות מיקום רצועה A/B/C (12 תמונות) — המלצה B — ממתין לבחירה → lifestyle ל-38.",
+  "next_tasks": [
+   "13.10 15:00 — פגישה אניס קדיס + נועה מוזס; לפני: החלטה על C053, איזו רצועה נועה עונדת, סמל איירונמן (סימן מסחרי — חלופה)",
+   "דניאל: מיקום צ'ארם על הרצועה A/B/C (המלצה B) → ריצת lifestyle גבר+אישה ל-38 הפיסים ('כמו הספייד')",
+   "להגיע למוצרים במאות ₪ — תמחור כסף/9K (pulso-pricing: 14K $790, 9K $590, כסף $410 חציון x2.0); שני שדות: מכפיל + עיגול",
+   "דף קולקציה PULSO: GitHub Pages או באתר? 'הפנים של PULSO' — תמונה+שם אחרי הפגישה; CTA /collections/pulso",
+   "SKU של 36 המוצרים המקוריים עדיין נושאים קראט ישן (30.9) — לעדכן לפי מפרט v4",
+   "גיליון Launch Control (1ye6…) לא משותף לחשבון השירות (403) — דניאל משתף או מוחק 14 שורות ידנית",
+   "אטסי: העלאת PULSO לחנות Black Ice (תבניות ב-pulso-listing-templates.md; מחיר+קטגוריה פתוחים)",
+   "סרטון השקה 15–20 שנ' (Veo): קליפ אישה+קפה, מאקרו C025, גרסה 2 לגבר — קרדיטי Gemini נטענו 30.9",
+   "names.py חסר C051 (באג); collection.csv לרענן אחרי סגירת האקסל"
+  ],
+  "recent_changes": [
+   "11.10 — 14 טיוטות נמחקו, C052+C051 נוצרו → 38 DRAFT בקולקציה PULSO; אופציות רצועה A/B/C; דף PULSO מקומי + artifact; מחקר נועה מוזס",
+   "7.10 — C052 'Anís Negro' נוסף (8 יהלומים שחורים כזרעים); PULSO טבלה עם תקרות 1600/2200/2800; כסף = רודיום שחור + ציפוי ($45)",
+   "6.10 — תמחור מתכות PULSO-pricing-metals (14K/9K/כסף); תמחור נדחה ע\"י דניאל",
+   "4.10 — דניאל מחק 14 פיסים (מפרט+קבצים; שופיפיי+גיליון נשארו עד 11.10)",
+   "1.10 — מידות נסגרו (25×6×1.0, money-clip 7 מ\"מ), תשריט v4, C051 Pulso Mark v4 (מלא, פאווה שחור, Y/R/W + יד גבר)",
+   "30.9 — 50 פיסים נבנו בלילה; 50 מוצרי DRAFT בשופיפיי; השם PULSO הוצע; כללי תמונות: צ'ארם רק על הרצועה, ברוחב הרצועה"
+  ],
+  "artifacts": [
+   {
+    "label": "דף PULSO לשיתוף (artifact פרטי)",
+    "url": "https://claude.ai/artifact/DWwkF1cxkEgCW5Z4so3EEn",
+    "type": "artifact"
+   },
+   {
+    "label": "דף PULSO מקומי (EN/HE)",
+    "url": "file: remnant-launch\\q4\\pulso-page\\index.html",
+    "type": "doc"
+   },
+   {
+    "label": "תמחור מתכות PULSO",
+    "url": "file: remnant-launch\\q4\\pulso-pricing\\PULSO-pricing-metals.html",
+    "type": "doc"
+   },
+   {
+    "label": "גיליון WHOOP CHARMS — Launch Control",
+    "url": "https://docs.google.com/spreadsheets/d/1ye6BvrkQEPZvBpRkws0irdEkKur59qMzkaSGUDlit9w",
+    "type": "sheet"
+   },
+   {
+    "label": "מפרט + פייפליין (charms/)",
+    "url": "file: remnant-launch\\charms",
+    "type": "folder"
+   },
+   {
+    "label": "מצב שופיפיי של PULSO",
+    "url": "file: remnant-launch\\charms\\SHOPIFY-STATE-he.md",
+    "type": "doc"
+   },
+   {
+    "label": "דרופבוקס WHOOP CHARMS (רינדורים, launch)",
+    "url": "file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry\\Black Ice\\WHOOP CHARMS",
+    "type": "folder"
+   },
+   {
+    "label": "מחקר נועה מוזס",
+    "url": "file: remnant-launch\\q4\\pulso-page\\research\\NOA-MOZES-he.md",
+    "type": "doc"
+   },
+   {
+    "label": "לוח פינטרסט whoop-charms",
+    "url": "https://www.pinterest.com/dianarafaeljewelry/whoop-charms",
+    "type": "site"
+   },
+   {
+    "label": "תבניות ליסטינג אטסי ל-PULSO",
+    "url": "file: remnant-launch\\q4\\etsy\\pulso-listing-templates.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_whoop_charms.md",
+   "project_session-2026-10-11.md",
+   "project_session-2026-10-01.md",
+   "project_q4_operating_plan.md",
+   "q4/pulso-page/SUMMARY-he.md",
+   "project_session-2026-10-07.md"
+  ]
+ },
+ {
+  "id": "iai-proposal",
+  "title": "הצעת מחיר לתעשייה האווירית (IAI) — צמיד מתנה B036",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-13",
+  "where_we_stand": "ההצעה עברה 3 גרסאות מאז 11.10. v4 (13.10 00:27): מחיר ליחידה בלבד בלי סכומים, חריטת סמל IAI כסף-על-כסף, מדליון מלוטש + נייר בראשית + אפוקסי. v5 (00:43): סמל על גב המדליון, גב הסוגר = 2 אפשרויות, מדליון 12 מ\"מ, רצועה 8–10 מ\"מ, בלי אזכור בראשית, קופסת lander. 13.10 10:44: מחיר עודכן לפי דניאל ל-1,600 ₪ ליחידה + מע\"מ. B036 בקטלוג המודלים. ההדמיות = קונספט (Gemini על צילומי רינו).",
+  "next_tasks": [
+   "סלוגן לקופסה (placeholder) — 'Who Dares Wins' = מוטו SAS; חלופות: Dare to Prevail / Fortune Favors the Bold",
+   "לבקש מ-IAI את תמונות המשימות המקוריות (קולאז')",
+   "לאשר: חלוקה שחור/חום, מה כלול במחיר, מע\"מ",
+   "אורך רצועה סופי לפני ייצור",
+   "דניאל פותח שיתוף ושולח"
+  ],
+  "recent_changes": [
+   "13.10 — v4+v5 (סמל על הגב, מדליון 12 מ\"מ, רצועה 8–10) ומחיר 1,600 ₪ + מע\"מ ליחידה",
+   "11.10 ערב — הצעה v3 (index.html, PROMPTS-he.md, SUMMARY-he.md, הדמיות שחור/חום) + artifact",
+   "11.10 — B036 IAI נקלט בקטלוג (w-new-26)"
+  ],
+  "artifacts": [
+   {
+    "label": "הצעת IAI (artifact פרטי)",
+    "url": "https://claude.ai/artifact/Sv8MHCWbbsJa1Q2Mc8oU5a",
+    "type": "artifact"
+   },
+   {
+    "label": "תיקיית ההצעה (HTML, הדמיות, פרומפטים)",
+    "url": "file: remnant-launch\\q4\\iai-proposal",
+    "type": "folder"
+   },
+   {
+    "label": "סיכום + מה דניאל צריך לאשר",
+    "url": "file: remnant-launch\\q4\\iai-proposal\\SUMMARY-he.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_session-2026-10-11.md",
+   "q4/iai-proposal/SUMMARY-he.md",
+   "project_jewelry_catalog.md"
+  ]
+ },
+ {
+  "id": "nsa-spring-diam-jv",
+  "title": "NSA + ספרינג דיאם — קולקציה כמיזם משותף",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-08-23",
+  "where_we_stand": "מיזם משותף (עלה 14.6): קולקציה של 30 עיצובים. ספרינג דיאם מספק יהלומים ומממן ייצור (החזר + 20% על העלות), NSA (יוצק) מספק זהב ומשלם שיווק ~25K ₪/חודש (40% מהרווח), דניאל 60%. מודל עלויות v3 באקסל + תחשיב חי ב-GitHub Pages (collection-plan). מספרי בסיס: רווח פרויקט 404K ₪ על 120 יח'. ב-8.9 נקבע ש-REMNANT היא פרויקט של דיאנה רפאל בלבד ולא של המיזם. ב-23.8 היה ברשימת משימות השבוע ('NSA = הפרויקט עם ספרינג דיאם') ומאז לא התקדם בזיכרון. הצעד הבא שנשאר: תזרים חודשי (סבב תשלומים כל חודשיים, החזר השקעת NSA).",
+  "next_tasks": [
+   "לברר עם דניאל את הסטטוס הנוכחי של המיזם — מאז 23.8 אין עדכון",
+   "אם ממשיכים: לבנות תזרים חודש-חודש (תשלומים כל חודשיים, תזמון תשלום הזהב ל-NSA)",
+   "לא לערבב עם חוב הזהב ליוצק NSA (ops_caster_gold_debt) — נושא תפעולי נפרד"
+  ],
+  "recent_changes": [
+   "8.9 — החלטה: REMNANT לא קשור למיזם NSA/ספרינג דיאם",
+   "23.8 — 'NSA' ברשימת משימות השבוע; פרטים לא פורטו",
+   "14.6 — מודל עלויות v3 + דף web חי נבנו"
+  ],
+  "artifacts": [
+   {
+    "label": "תחשיב הקולקציה (חי)",
+    "url": "https://dadahan10.github.io/collection-plan/",
+    "type": "site"
+   },
+   {
+    "label": "אקסל תוכנית-קולקציה-חדשה-v3",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\תוכנית-קולקציה-חדשה-v3.xlsx",
+    "type": "sheet"
+   },
+   {
+    "label": "ריפו collection-plan",
+    "url": "https://github.com/dadahan10/collection-plan",
+    "type": "repo"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_new-collection-jv.md",
+   "project_nsa_spring_diam.md",
+   "project_session-2026-08-23.md",
+   "project_remnant.md"
+  ]
+ },
+ {
+  "id": "teen-fine-jewelry-brand",
+  "title": "מותג Fine Jewelry לנערות 12–18 (מיה + רונית)",
+  "group": "projects",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-12",
+  "where_we_stand": "12.10 בוקר: מחקר שוק עומק (5 סבבים, ~150 חיפושים) — עמוד חי כ-artifact + ריפו מקומי teen-jewelry-research. ממצאים: אין מותג-זהות לבנות 13–17; השכבה הלא-ממותגת 120–250 ₪; סאפורו = המודל היחיד שעובד (טיקטוק 204K, 39.90 ₪); רוני קאן benchmark נירוסטה, מגנוליה ברירת מחדל של ההורה, פנדורה היחידה עם דפים ל-4 הרגעים; Lovisa/Claire's לא בישראל; אף מודעה לא אומרת 'בת מצווה'. 12.10 10:00–13:00 פגישה במשרד עם מיה (סמנכ\"לית שיווק לשעבר פרנו-ריקאר) ורונית (ממתגת): fine jewelry (יהלומים), מיתוג יוקרתי-מינימליסטי, צריך מוצר מזהה (איקון), יהלומים ורודים/כחולים, שורות: layering, ear party, friendship, אמא–בת, סטיילינג. פער: fine jewelry ממקם במתנת סבתא/דודה (400–1,000+ ₪) ולא ב'הנערה בוחרת' — לבדיקה. ריפו GitHub נחסם — פוש ידני.",
+  "next_tasks": [
+   "להציע סדר: שם ומיתוג (רונית) → מוצר מזהה → קולקציית פתיחה קטנה → טווח מחירים → ערוץ (טיקטוק/אינסטגרם/קניון)",
+   "לבדוק את פער המיצוב: fine jewelry (מתנה) מול השכבה 120–250 ₪ (הנערה בוחרת)",
+   "אם מתקדמים: סקר 100–200 הורים לבנות 11–13; Keyword Planner ישראל; מכס 71.13/71.17 + ת\"י 1811; תצפית בית ספר",
+   "אם רוצים GitHub Pages: דניאל יוצר ריפו dadahan10/teen-jewelry-research → git push",
+   "להוסיף למחקר: רונית ים, שני יעקובי (עלו בפגישה)"
+  ],
+  "recent_changes": [
+   "12.10 10:00–13:00 — פגישה ראשונה מיה+רונית (משרד): מיצוב, מוצר מזהה, שורות מוצר",
+   "12.10 בוקר — מחקר 5 סבבים + עמוד חי; נשלח במייל לדניאל; תצפית 0068 (כלים: r.jina.ai לטיקטוק/Suggest)"
+  ],
+  "artifacts": [
+   {
+    "label": "עמוד המחקר החי (artifact פרטי)",
+    "url": "https://claude.ai/artifact/CRcxdhHHXzvaUqMqsQQjcB",
+    "type": "artifact"
+   },
+   {
+    "label": "ריפו מקומי (index.html, research/round-1..5.md)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\teen-jewelry-research",
+    "type": "folder"
+   },
+   {
+    "label": "סיכום הפגישה 12.10",
+    "url": "file: C--Users-USER\\memory\\project_teen_fine_jewelry_brand.md",
+    "type": "doc"
+   },
+   {
+    "label": "סקיל niche-research",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\niche-research",
+    "type": "skill"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_teen-jewelry-research.md",
+   "project_teen_fine_jewelry_brand.md (office)"
+  ]
+ },
+ {
+  "id": "dima-jv-ecommerce",
+  "title": "שת\"פ דימה — מותג תכשיטי גוף (hand chain)",
+  "group": "projects",
+  "kind": "business",
+  "status": "paused",
+  "last_update": "2026-08-25",
+  "where_we_stand": "מיזם עם דימה רויטמן (Bcrazy; ייצור באסיה, משלוח בתפזורת לארה\"ב). 8 סבבי מחקר (2–3.8) + 8 סבבי עומק (9a–d, 10a–d, 25.8). הוחלט 25.8: מותג חדש, מוצר גיבור HAND CHAIN BRACELET ('צמיד טבעת'), כל תכשיטי הגוף, סגנון מינימלי-עדין, ישראל = B2B בלבד (בגד ים/מלונות), כלות מההתחלה, קפסולה שחורה 4–6 SKU כ-drop שני. תמחור: ליבה $95–165, דגל $185–220, gold-filled. הבידול ששרד: מערכת מידות/fit. מסמך השראה (16 פרקים, 14 תמונות) פורסם כ-artifact 25.8 — מוכן לישיבה עם דימה. ממצאים קבועים: קנייה חוזרת 9.9%, אטסי=סיכון, המגבלה = הון מלאי + CAC. מאז 25.8 אין עדכון — הישיבה עם דימה לא תועדה.",
+  "next_tasks": [
+   "לברר: האם הישיבה עם דימה התקיימה ומה הוחלט",
+   "השאלה הפתוחה #1: הון מלאי (תפזורת = כסף קפוא) — לא נשאל באף סבב",
+   "אם ממשיכים: 3 שערי בדיקה (הזול קודם), תקציב $5,000–8,500; הצעת מחיר 3PL בארה\"ב",
+   "אקסימוס: שורטליסט שותפים (ליאור פוזין, איתמר רין, רועי נעמן, נפתלי בר, אנה פלקין) — שלב ב'"
+  ],
+  "recent_changes": [
+   "13.10 — נבדק מהמשרד, אין שינוי מאז העדכון הקודם",
+   "25.8 — round-10d אימות SWOT; מסמך השראה v1.1 עם 14 תמונות פורסם",
+   "3.8 — תשובות דניאל: ייצור אסיה → תפזורת לארה\"ב; סולם $60–80 + $250–300; מוחק את חוט ה-FTA/משלוח בודד",
+   "2–3.8 — 8 סבבי מחקר אדוורסרי (כל סבב הפריך את קודמו)"
+  ],
+  "artifacts": [
+   {
+    "label": "מסמך ההשראה לישיבה (artifact)",
+    "url": "https://claude.ai/code/artifact/3cdadda6-f30f-4128-a274-26952c73db00",
+    "type": "artifact"
+   },
+   {
+    "label": "ריפו dima-jv (פרטי) + research/",
+    "url": "https://github.com/dadahan10/dima-jv",
+    "type": "repo"
+   },
+   {
+    "label": "תיקיית המחקר (משרד: OneDrive)",
+    "url": "file: C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\dima-jv\\research",
+    "type": "folder"
+   },
+   {
+    "label": "לוח פינטרסט hand-chain",
+    "url": "https://www.pinterest.com/dianarafaeljewelry/hand-chain-jewelry",
+    "type": "site"
+   },
+   {
+    "label": "סקיל niche-research (נגזר מהמחקר)",
+    "url": "file: C:\\Users\\USER\\.claude\\skills\\niche-research",
+    "type": "skill"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_dima-jv-ecommerce.md",
+   "project_session-2026-08-25.md (office)",
+   "project_session-2026-08-23.md"
+  ]
+ },
+ {
+  "id": "lawsuit-dr-sale",
+  "title": "התביעה סביב מכירת דיאנה רפאל",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "blocked",
+  "last_update": "2026-10-04",
+  "where_we_stand": "עסקת המכירה התפוצצה 1.3.2026. ~200K ₪ (מתוך ~300K שהתקבלו) יושבים במיטב טרייד ובמחלוקת משפטית — לא לתכנן עליהם, לא נכס זמין. תביעה נגד דניאל ~500K ₪; תביעה שכנגד ~1M ₪. עלויות עד כה: שכ\"ט עו\"ד 47,200 ₪ + אגרות ~11,486 ₪. עו\"ד: מירילאשוילי / יצחק מיר. 4.10: ~100K+ במיטב לא מושקעים (~3.5–4K/שנה אבודים) — קרן כספית רק אם אין צו עיקול; לא נענה.",
+  "next_tasks": [
+   "דניאל: האם יש עיקול/צו על הכסף במיטב? (שאלה פתוחה מ-4.10) → אם לא, קרן כספית",
+   "לתקצב המשך הוצאות משפטיות בתזרים",
+   "לעדכן סטטוס ההליך כשיש התפתחות (אין עדכון מאז 2.9)"
+  ],
+  "recent_changes": [
+   "4.10 — הועלה: 100K במזומן שלא עובדים במיטב; תלוי בסטטוס המשפטי",
+   "2.9 — ניתוח פיננסי: 200K קפואים, לא לספור כהון עצמי"
+  ],
+  "artifacts": [
+   {
+    "label": "זיכרון התביעה",
+    "url": "file: C--Users-USER\\memory\\project_lawsuit_dr_sale.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_lawsuit_dr_sale.md",
+   "research_loan_refinance_2026-10.md",
+   "project_dira-behanacha-kadima.md"
+  ]
+ },
+ {
+  "id": "mechir-lamishtaken",
+  "title": "מחיר למשתכן / דירה בהנחה — קדימה-צורן",
+  "group": "personal",
+  "kind": "personal",
+  "status": "paused",
+  "last_update": "2026-08-23",
+  "where_we_stand": "דניאל זכה 2.8.2026 בהגרלה 2735 (מגרשים 27-28, שחק גרופ, קדימה-צורן), מקום 23/34 מתוך 22,074. התזה: להשכיר, לא לגור — רווח מההנחה (30–37%) + עליית מחירים. מודל המחיר אומת מול האקסל של דניאל (הנחה = min(25%×16,259×מ\"ר, 500K)). משכנתא נתקעת על 1,575,000 ₪ (LTV 75% עד 2.1M) — 100 מ\"ר → הון עצמי 171K; 120 מ\"ר → 496K. המגבלה האמיתית PTI (צריך נטו ~33K). מלכודות: לא לקנות דירה נוספת לפני המכירה (מס שבח), לא לחתום עסקה עתידית לפני 22.7.2033, חידוש זכאות שנתי 50 ₪. טרם הוגשה בקשה להיתר — מסירה 2030–2032. ב-23.8 'לומדים את האירוע'; מאז אין עדכון.",
+  "next_tasks": [
+   "3 שיחות: מחירון 9 דירות שוק חופשי (שחק גרופ) · סטטוס היתר (אשד בקרה 5349*) · אישור עקרוני מדיסקונט",
+   "תזכורת יומן: חידוש זכאות שנתי (50 ₪)",
+   "החלטה רוחבית על קיצוצים (גושים שנתיים: אקסימוס/משפט/עו\"ד) → דף מידע מקומי + ריפו פרטי dira-kadima",
+   "קרן השתלמות נזילה 31.1.2030 — מקור הון לפני חתימה"
+  ],
+  "recent_changes": [
+   "23.8 — ברשימת משימות השבוע ('לומדים את האירוע')",
+   "4.8 — מודל מחיר/הון עצמי/מס שבח אומת; 2.8 — הזכייה"
+  ],
+  "artifacts": [
+   {
+    "label": "זיכרון הדירה (מודל מלא)",
+    "url": "file: c--Users-USER-Desktop-CLAUDE-CODE-PROJECTS\\memory\\project_dira-behanacha-kadima.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": false,
+  "sources": [
+   "project_dira-behanacha-kadima.md",
+   "project_mechir_lamishtaken.md",
+   "project_session-2026-08-23.md"
+  ]
+ },
+ {
+  "id": "jewelry-catalog",
+  "title": "קטלוג המודלים (934 מודלים) — ריצה שבועית",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-11",
+  "where_we_stand": "טבלת models במערכת הניהול = 934 מודלים (701 White / 233 Black Ice) אחרי הריצה השבועית 11.10 21:00 (929→934): נקלטו R544 Cluster, B036 IAI, E058/B034/B035 (דגל no_image); הדמיות REMNANT רועננו (R110/R112/R114/R121/E048/E049); 5 יתומים קושרו (J1781→R544, J1783→B034, J1784→B035, J1785/J1787→E058). דגלים: R112 שני עיצובים בתיקייה (BAND עם CAD, ENG בלי) — צריך מספר נפרד; R121 מרכזית Round→Marquise; R114 שם Accersion/Accretion. CONFLICTS 187 שורות. בלי דגם: J1775 (B037), B004/B006 BI, B031, R527. הפרויקט 'סגור' מבחינת דניאל (16.9) אבל הריצה השבועית (יום ראשון 21:00, DR-Catalog-Nightly עם שער בסקריפט) ממשיכה וקולטת תיקיות חדשות. 27.9 נמחקו 343 קבצי CAD + 196 זיפים מ-141 תיקיות בדרופבוקס — לא ברור אם מכוון.",
+  "next_tasks": [
+   "דניאל: לברר מחיקת CAD/זיפים מ-27.9 (מכוון?) — תצפית 9 פתוחה",
+   "דניאל: לעבור על VOCABULARY + CONFLICTS.md",
+   "R112: מספר נפרד לעיצוב ה-ENG הכיפתי; B037 של J1775 — לפתוח תיקייה",
+   "דניאל רצה לסגור DR-Catalog-Nightly (schtasks /Delete) — או להשאיר שבועי; ריצה הבאה 18.10 21:00",
+   "משרד: בבוקר שני לדווח מלוג catalog-log-<תאריך>.md"
+  ],
+  "recent_changes": [
+   "13.10 — נבדק מהמשרד, אין שינוי מאז העדכון הקודם",
+   "11.10 — ריצה שבועית 2: 929→934, הדמיות REMNANT רועננו, commit ca36ef5",
+   "4.10 — ריצה שבועית 1: 919→929, 10 תיקיות REMNANT נפתחו, REMNANT = קולקציית Black Ice בקטלוג",
+   "28.9 — הריצה הפכה שבועית (יום ראשון 21:00)",
+   "24.9 — B033 נקלט → J1777; 22.9 — באג J פאנטום (J1780) תוקן",
+   "16.9 — דניאל סיים לעבור → הפרויקט סגור (נשאר למחוק משימה)"
+  ],
+  "artifacts": [
+   {
+    "label": "מערכת הניהול — דף מודלים",
+    "url": "https://diana-rafael.vercel.app",
+    "type": "site"
+   },
+   {
+    "label": "catalog/ בריפו diana-rafael (census, catalog-full.json, CONFLICTS.md)",
+    "url": "file: diana-rafael\\catalog",
+    "type": "folder"
+   },
+   {
+    "label": "לוגים ליליים",
+    "url": "file: C:\\Users\\USER\\.claude\\night-agent\\catalog-log-*.md",
+    "type": "doc"
+   },
+   {
+    "label": "תיקיית העל בדרופבוקס",
+    "url": "file: C:\\Users\\USER\\Dropbox\\תכשיטים Jewelry",
+    "type": "folder"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_jewelry_catalog.md",
+   "ops_catalog_nightly.md",
+   "project_session-2026-09-16.md",
+   "project_session-2026-10-07.md"
+  ]
+ },
+ {
+  "id": "certificates-gil",
+  "title": "תעודות GIL + cert-publisher",
+  "group": "diana-rafael",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-01",
+  "where_we_stand": "סוכן התעודות (make_cert.py ב-shipping-agent, משרד) מכין תעודות GIL מתוך מערכת הניהול + תבניות Word; דניאל מאשר, מדפיס מה-Word, PDF → certs PDF → cert-publisher (Playwright, Task 'CertPublisher') מעלה ל-Shopify Files + WordPress gil-lab.com. פיילוט 29.9–1.10: 1225428455 (J1779), 456 (J1768), 457 (J1769), 459 (J1776 נוגה — יהלומי מעבדה, דניאל תיקן מרכזית 1.02 E VS1) — כולן אושרו ופורסמו. כללים נלמדו: מספר הבא = הגבוה בקבצים +1, לעולם לא שבת, שווי ×1.6–2, קראט לפי הליסטינג שנמכר, תמונה FRONT VIEW, Canva להסרת רקע, יישור תוויות עם נקודות. פתוח: 1225428454 (10.9) ו-458 (1.10, לא בסשן) — לא ידוע מי/מה. חיבור משקל-מהוואטסאפ→תעודה אחרי 5–10 תעודות נקיות. Adobe לעריכת תעודות — ממתין ל-login.",
+  "next_tasks": [
+   "לברר 1225428454 (מעבר, לא פורסם) ו-1225428458 (נוצרה 1.10 מחוץ לסשן)",
+   "להמשיך פיילוט (עוד ~5 תעודות) → ואז לחבר משקל מהוואטסאפ → חשבונית+תעודה יחד",
+   "אטסי: CSV ליסטינגים מ-Shop Manager (דניאל) → etsy_listings.json לקראט לפי ליסטינג",
+   "Adobe (/mcp login של דניאל) → תעודה לדוגמה → סוכן עריכה לפני cert-publisher",
+   "16 טבעות בלי תמונת צד / תמונות cert — צילומים"
+  ],
+  "recent_changes": [
+   "13.10 — נבדק מהמשרד, אין שינוי מאז העדכון הקודם",
+   "1.10 — 459 לנוגה (R543, מעבדה) — כלל LAB-GROWN נוסף ל-make_cert.py; לקח: אבן מרכזית שלא במערכת = לשאול",
+   "30.9 — 457 לדרו (R030 WG) אושרה; תיקון photo_slot RGBA",
+   "29.9 — פיילוט 455/456; 14 כללים מדניאל; תבנית BI-R102-Y-4-14 נשמרה"
+  ],
+  "artifacts": [
+   {
+    "label": "make_cert.py (משרד)",
+    "url": "file: C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\make_cert.py",
+    "type": "doc"
+   },
+   {
+    "label": "תיקיית התעודות",
+    "url": "file: C:\\Users\\USER\\Dropbox\\Diana Rafael\\תעודות",
+    "type": "folder"
+   },
+   {
+    "label": "cert-publisher (agent.py)",
+    "url": "file: C:\\Users\\USER\\cert-publisher\\agent.py",
+    "type": "doc"
+   },
+   {
+    "label": "גלריית התעודות",
+    "url": "https://gil-lab.com",
+    "type": "site"
+   },
+   {
+    "label": "כללי התעודות (זיכרון)",
+    "url": "file: C--Users-USER\\memory\\project_certificates.md",
+    "type": "doc"
+   }
+  ],
+  "office_only": true,
+  "sources": [
+   "project_certificates.md",
+   "project_cert_publisher.md",
+   "project_certs-agent.md",
+   "project_session-2026-09-29.md",
+   "project_session-2026-09-30.md",
+   "etsy_listings.md",
+   "project_higgsfield_midjourney_adobe.md"
+  ]
+ }
 ]
