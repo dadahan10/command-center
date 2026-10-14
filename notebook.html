@@ -179,7 +179,7 @@ select.sort{padding:.25rem .5rem;font-size:.82rem;background:var(--page-2);borde
 .links{display:flex;flex-wrap:wrap;gap:.4rem}
 .links a,.links span.f{border:1px solid var(--line);background:var(--page);border-radius:6px;padding:.25rem .65rem;font-size:.82rem;color:var(--ink);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .links a{border-color:var(--gold-2)}
-.links span.f{color:var(--ink-2);font-family:var(--mono);direction:ltr;unicode-bidi:plaintext;font-size:.72rem}
+.links span.f{color:var(--ink-2)}
 details.sub{margin-top:.6rem}
 details.sub>summary{cursor:pointer;color:var(--blue);font-size:.9rem;padding:.3rem 0}
 .changes{margin:0;padding-inline-start:1.1rem;color:var(--ink-2);font-size:.9rem;line-height:1.9}
@@ -234,10 +234,10 @@ details.sub>summary{cursor:pointer;color:var(--blue);font-size:.9rem;padding:.3r
 
 /* skills / sites / thoughts */
 .sbox{background:var(--page);border:1px solid var(--line);border-radius:10px;padding:.85rem .95rem;display:grid;gap:.35rem;align-content:start;text-align:start;min-width:0;min-height:9rem}
-.sbox b{font-weight:600;font-size:.95rem;font-family:var(--mono);direction:ltr;unicode-bidi:plaintext;text-align:right}
+.sbox b{font-weight:600;font-size:.95rem}
 .sbox .p{display:-webkit-box;margin:0;font-size:.85rem;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .sbox.open .p{display:block}
-.sbox code{font-family:var(--mono);font-size:.72rem;color:var(--muted);direction:ltr;unicode-bidi:plaintext;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.sbox code{font-size:.74rem;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
 .sbox .n2{font-size:.78rem;color:var(--muted);display:none}
 .sbox.open .n2{display:block}
 .sites{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.6rem}
@@ -311,7 +311,7 @@ const GVAR={remnant:'--g-remnant','diana-rafael':'--g-dr',customizeai:'--g-cai',
 const STATUS={active:'פעיל',paused:'מושהה',blocked:'חסום',done:'סיימנו'};
 const ASTAT={working:'עובד',broken:'שבור',partial:'חלקי',dormant:'רדום',unknown:'לא ידוע'};
 const MACH={home:'בית',office:'משרד',cloud:'ענן',make:'Make',both:'שני המחשבים'};
-const TABS=[['board','לוח'],['flows','פלואים'],['agents','סוכנים'],['skills','סקילים'],['sites','אתרים'],['thoughts','מחשבות']];
+const TABS=[['board','לוח'],['flows','פלואים'],['agents','סוכנים'],['skills','יכולות'],['sites','אתרים'],['thoughts','מחשבות']];
 const MAXDAYS=121; // slider end = "הכול"
 const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const state={tab:'board',q:'',group:null,status:'open',kind:null,office:false,days:MAXDAYS,stale:false,sort:'recent',layout:'rails',
@@ -358,6 +358,7 @@ function prog(c){const n=(c.next_tasks||[]).length;const t=(state.chapterDocs[c.
 function gstyle(g){return `--g:var(${GVAR[g]||'--g-infra'})`}
 function firstLine(s){return (s||'').split(/(?<=[.!?])\s|\n/)[0]}
 function countTree(t){return t.reduce((n,x)=>n+1+countTree(x.children||[]),0)}
+function site(u){try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}}
 function flat(t,out=[]){t.forEach(x=>{out.push(x);flat(x.children||[],out)});return out}
 
 /* ---------- tabs ---------- */
@@ -572,7 +573,7 @@ function page(c,ghost){
   const doc=state.chapterDocs[c.id]||{};const checks=doc.tasks||{};const st=eff(c);const p=prog(c);const pre=ghost?'g-':'';
   const tasks=(c.next_tasks||[]).map((t,i)=>{const off=/^משרד:/.test(t);const txt=off?t.replace(/^משרד:\s*/,''):t;
     return `<li class="${checks[i]?'off':''}"><input type="checkbox" id="${pre}t-${h(c.id)}-${i}" data-i="${i}" ${checks[i]?'checked':''} ${state.db&&!ghost?'':'disabled'}><label for="${pre}t-${h(c.id)}-${i}">${off?'<span class="tag office">משרד</span>':''}${h(txt)}</label></li>`}).join('');
-  const arts=(c.artifacts||[]).map(a=>a.url&&/^https?:/.test(a.url)?`<a href="${h(a.url)}" target="_blank" rel="noopener" title="${h(a.url)}">${h(a.label||a.url)}</a>`:`<span class="f" title="${h(a.url||'')}">${h(a.label||'')}${a.url?' · '+h(a.url.replace(/^file:\s*/,'')):''}</span>`).join('');
+  const arts=(c.artifacts||[]).map(a=>a.url&&/^https?:/.test(a.url)?`<a href="${h(a.url)}" target="_blank" rel="noopener">${h(a.label||a.url)}</a>`:`<span class="f">${h(a.label||'')}</span>`).join('');
   const changes=(c.recent_changes||[]).map(x=>`<li>${h(x).replace(/^(\d{1,2}\.\d{1,2}(\.\d{2,4})?|\d{4}-\d{2}-\d{2})/,'<b>$1</b>')}</li>`).join('');
   return `<div class="pg-in" style="${gstyle(c.group)}">
     <div class="eyebrow"><span class="grp">◆ ${h(GROUPS[c.group]||c.group)}</span>${c.kind==='personal'?'<span class="tag personal">אישי</span>':''}${c.office_only?'<span class="tag office">משרד</span>':''}</div>
@@ -588,7 +589,7 @@ function page(c,ghost){
       <div class="row"><button class="btn" data-act="send" ${state.db?'':'disabled'}>שלח לקלוד</button>
       <button class="btn ghost" data-act="done" ${state.db?'':'disabled'}>${st==='done'?'החזר לפעיל':'סיימנו עם זה ✓'}</button>
       <span class="note" id="n-cur" role="status">${state.db?'':'אין חיבור לאחסון. פתח את העמוד דרך claude.ai'}</span></div></div>`}
-    ${c.sources?.length?`<p class="note" style="margin-top:1rem">מקורות: ${h(c.sources.join(' · '))}</p>`:''}
+    
   </div>`;
 }
 function wirePage(el,c){
@@ -695,7 +696,7 @@ function drawFlow(){
   $('#fl-dia').querySelectorAll('.fnode').forEach(g=>{const pick=()=>{state.flowStep=+g.dataset.step;drawFlow()};g.addEventListener('click',pick);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}})});
   const s=(f.steps||[])[state.flowStep]||{};
   $('#fl-detail').innerHTML=`<p class="eyebrow">שלב ${h(s.n)} מתוך ${(f.steps||[]).length}</p><h3>${h(s.title)}</h3>
-    <dl>${s.who?`<dt>מי</dt><dd>${h(s.who)}</dd>`:''}${s.tool?`<dt>כלי</dt><dd class="mono" style="font-size:.8rem">${h(s.tool)}</dd>`:''}
+    <dl>${s.who?`<dt>מי</dt><dd>${h(s.who)}</dd>`:''}${s.tool?`<dt>כלי</dt><dd>${h(s.tool)}</dd>`:''}
     <dt>מצב</dt><dd><span class="gem ${s.status==='auto'?'working':s.status==='manual'?'partial':'broken'}">${{auto:'אוטומטי',manual:'ידני',broken:'שבור'}[s.status]||h(s.status)}</span></dd>
     ${s.notes?`<dt>הערות</dt><dd>${h(s.notes)}</dd>`:''}</dl>
     ${(f.approval_gates||[]).length?`<p class="eyebrow" style="margin-top:1.2rem">שערי אישור</p>${f.approval_gates.map(g=>`<div class="gate">${h(g)}</div>`).join('')}`:''}
@@ -758,20 +759,19 @@ function abox(n){const kids=n.children||[];
   return `<div class="abox"><div class="row">${n.status?`<span class="gem ${h(n.status)}">${ASTAT[n.status]||h(n.status)}</span>`:''}${n.machine?`<span class="tag plain">${MACH[n.machine]||h(n.machine)}</span>`:''}</div>
    <b>${h(n.title)}</b>${n.schedule?`<span class="note">${h(n.schedule)}</span>`:''}${n.what?`<div class="what">${h(n.what)}</div>`:''}
    <div class="more">${n.io?`<span>${h(n.io)}</span>`:''}${n.last_run?`<span>ריצה אחרונה: ${h(n.last_run)}</span>`:''}${n.known_issues?`<span class="issue">${h(n.known_issues)}</span>`:''}
-   ${(n.files||[]).length?`<div class="links">${n.files.map(f=>/^https?:/.test(f)?`<a href="${h(f)}" target="_blank" rel="noopener">${h(f.replace(/^https?:\/\//,'').slice(0,46))}</a>`:`<span class="f">${h(f)}</span>`).join('')}</div>`:''}
+   ${(n.files||[]).some(f=>/^https?:/.test(f))?`<div class="links">${n.files.filter(f=>/^https?:/.test(f)).map(f=>`<a href="${h(f)}" target="_blank" rel="noopener">${h(site(f))}</a>`).join('')}</div>`:''}
    ${kids.length?`<div class="kids">${kids.map(k=>`<span><span class="gem ${h(k.status||'unknown')}"></span> ${h(k.title)}</span>`).join('')}</div>`:''}</div>
-   ${(n.io||n.last_run||n.known_issues||(n.files||[]).length||kids.length||(n.what||'').length>140)?'<button class="tog" data-tog="1">עוד</button>':''}</div>`}
+   ${(n.io||n.last_run||n.known_issues||(n.files||[]).some(f=>/^https?:/.test(f))||kids.length||(n.what||'').length>140)?'<button class="tog" data-tog="1">עוד</button>':''}</div>`}
 
 /* ---------- skills ---------- */
 function renderSkills(v){
   const cats=state.data.skills.categories||[];
-  v.innerHTML=`<div class="filters"><input type="search" id="sq" placeholder="חיפוש סקיל…" value="${h(state.sq)}" aria-label="חיפוש סקיל"><div class="fgroup" id="s-o"></div></div><div id="s-list"></div>`;
+  v.innerHTML=`<div class="filters"><input type="search" id="sq" placeholder="חיפוש יכולת…" value="${h(state.sq)}" aria-label="חיפוש יכולת"></div><div id="s-list"></div>`;
   const draw=()=>{const q=state.sq.trim();
-    $('#s-o').innerHTML=`<span class="lbl">מקור</span>`+['user','project','plugin:adobe','bundled','harness','mcp'].map(o=>`<button class="chip" data-o="${o}" aria-pressed="${state.so===o}">${o}</button>`).join('');
     $('#s-list').innerHTML=cats.map(c=>{let items=c.items||[];if(state.so)items=items.filter(i=>i.origin===state.so);if(q)items=items.filter(i=>JSON.stringify(i).includes(q));if(!items.length)return '';
       return `<section class="section"><div class="sec-h"><h3 style="--g:var(--gold)">${h(c.icon||'')} ${h(c.title)}</h3><span class="n">${items.length}</span></div>
       <div class="grid">${items.map(i=>`<button class="sbox" data-sk="1"><span class="row" style="display:flex;gap:.4rem;align-items:center;justify-content:space-between"><b>${h(i.name)}</b>${i.status?`<span class="gem ${h(i.status)}">${ASTAT[i.status]||h(i.status)}</span>`:''}</span>
-        <span class="p">${h(i.title)}</span>${i.trigger?`<code title="${h(i.trigger)}">${h(i.trigger)}</code>`:''}${i.notes?`<span class="n2">${h(i.notes)}</span>`:''}</button>`).join('')}</div></section>`}).join('')||'<div class="empty">אין סקילים שתואמים</div>';};
+        <span class="p">${h(i.title)}</span>${i.trigger?`<code title="${h(i.trigger)}">${h(i.trigger)}</code>`:''}${i.notes?`<span class="n2">${h(i.notes)}</span>`:''}</button>`).join('')}</div></section>`}).join('')||'<div class="empty">אין יכולות שתואמות</div>';};
   $('#sq').addEventListener('input',e=>{state.sq=e.target.value;draw()});
   v.addEventListener('click',e=>{const o=e.target.closest('[data-o]');if(o){state.so=state.so===o.dataset.o?null:o.dataset.o;draw();return}
     const b=e.target.closest('[data-sk]');if(b)b.classList.toggle('open')});
@@ -780,7 +780,7 @@ function renderSkills(v){
 /* ---------- sites ---------- */
 function renderSites(v){const s=state.data.extras.live_sites||[];const by={};s.forEach(x=>{(by[x.topic||'אחר']=by[x.topic||'אחר']||[]).push(x)});
   const ent=Object.entries(by).sort((a,b)=>b[1].length-a[1].length);
-  v.innerHTML=ent.map(([t,arr])=>`<section class="section"><div class="sec-h"><h3 style="--g:var(--gold)">${h(t)}</h3><span class="n">${arr.length}</span></div><div class="sites">${arr.map(x=>`<a href="${h(x.url)}" target="_blank" rel="noopener">${h(x.label)}<small>${h(x.url)}</small></a>`).join('')}</div></section>`).join('')||'<div class="empty">אין קישורים עדיין</div>';}
+  v.innerHTML=ent.map(([t,arr])=>`<section class="section"><div class="sec-h"><h3 style="--g:var(--gold)">${h(t)}</h3><span class="n">${arr.length}</span></div><div class="sites">${arr.map(x=>`<a href="${h(x.url)}" target="_blank" rel="noopener">${h(x.label)}<small>${h(site(x.url))}</small></a>`).join('')}</div></section>`).join('')||'<div class="empty">אין קישורים עדיין</div>';}
 /* ---------- thoughts ---------- */
 function renderThoughts(v){let t=state.thoughts;const pend=t.filter(x=>!x.handled).length;
   if(state.tf==='pending')t=t.filter(x=>!x.handled);else if(state.tf==='done')t=t.filter(x=>x.handled);

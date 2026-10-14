@@ -3,7 +3,13 @@
     "generated": "2026-10-12",
     "generated_on_machine": "home DESKTOP-1BEJ7GH",
     "note": "במחשב הבית אין אף משימה מתוזמנת של DR (אומת ב-Get-ScheduledTask 12.10). כל המשימות המתוזמנות יושבות במחשב המשרד DESKTOP-FKE67U6 — הסטטוס שלהן נלקח מהזיכרון, לא מבדיקה חיה. Make נבדק חי (scenarios_list, team 166466); Make hooks_list החזיר ריק (אין webhooks — הכל polling).",
-    "sources": ["~/.claude/night-agent/*", "memory (2 dirs)", "skills/close-month/SKILL.md", "Make MCP scenarios_list 12.10", "Get-ScheduledTask (home)"]
+    "sources": [
+      "~/.claude/night-agent/*",
+      "memory (2 dirs)",
+      "skills/close-month/SKILL.md",
+      "Make MCP scenarios_list 12.10",
+      "Get-ScheduledTask (home)"
+    ]
   },
   "tree": [
     {
@@ -11,66 +17,80 @@
       "title": "Claude Code (מפעיל)",
       "layer": "orchestration",
       "machine": "both",
-      "schedule": "סשן אינטראקטיבי (בית/משרד) + ריצות headless (claude -p) ממשימות מתוזמנות במשרד",
+      "schedule": "סשן רגיל (בית/משרד) + ריצות אוטומטיות ממשימות מתוזמנות במשרד",
       "status": "working",
-      "what": "המוח המרכזי: בסשן פותח יום (accountability-checkin, בריף), מפעיל סקילים כסוכנים לפי דרישה, ובלילה רץ headless דרך Task Scheduler במשרד. הזיכרון ב-~/.claude מסונכרן בין שני המחשבים דרך dotfiles repo.",
-      "io": "הוראות דניאל / פרומפטים מתוזמנים → קוד, נתונים ב-Supabase, מיילים, לוגים בזיכרון",
-      "files": ["C:\\Users\\USER\\.claude\\CLAUDE.md", "C:\\Users\\USER\\.claude\\night-agent\\", "C:\\Users\\USER\\.claude\\skills\\", "https://github.com/dadahan10/claude-dotfiles"],
+      "what": "המוח המרכזי: בסשן פותח יום (צ'ק-אין, בריף), מפעיל יכולות כסוכנים לפי דרישה, ובלילה רץ אוטומטית ממחשב המשרד. הזיכרון מסונכרן בין שני המחשבים.",
+      "io": "הוראות דניאל / משימות מתוזמנות → קוד, נתונים במערכת הניהול, מיילים, רישום בזיכרון",
+      "files": [
+        "C:\\Users\\USER\\.claude\\CLAUDE.md",
+        "C:\\Users\\USER\\.claude\\night-agent\\",
+        "C:\\Users\\USER\\.claude\\skills\\",
+        "https://github.com/dadahan10/claude-dotfiles"
+      ],
       "last_run": "2026-10-12",
-      "known_issues": "אין claude CLI במחשב הבית (12.10) — סוכני רינדור בבית רצים בלי checker; מגבלות שימוש (429) הפילו סוכנים ב-11–12.10.",
+      "known_issues": "במחשב הבית חסרה ההתקנה של Claude Code להרצה אוטומטית (12.10) — סוכני ההדמיות בבית רצים בלי בדיקת איכות; מגבלות שימוש הפילו סוכנים ב-11–12.10.",
       "children": [
         {
           "id": "scheduled",
-          "title": "מתוזמנים (Task Scheduler / ענן / Make)",
+          "title": "מתוזמנים (משימות במחשב / ענן / Make)",
           "layer": "scheduled",
           "machine": "both",
           "schedule": "לפי פריט",
           "status": "partial",
-          "what": "כל מה שרץ לבד לפי שעון: משימות Windows במשרד, רוטינות ענן של claude.ai, תרחישי Make בפולינג, ושרת Render של CustomizeAI.",
-          "io": "שעון → ריצה → לוג/מייל/DB",
+          "what": "כל מה שרץ לבד לפי שעון: משימות במחשב המשרד, משימות Claude בענן, תרחישי Make שבודקים כל כמה דקות, והשרת של CustomizeAI.",
+          "io": "שעון → ריצה → רישום/מייל/מערכת הניהול",
           "files": [],
           "last_run": "",
-          "known_issues": "כל משימות Windows הן במשרד בלבד — אם המחשב כבוי/לא מחובר, שום דבר לא רץ. ב-19.8 המעבר ל-OneDrive שבר בשקט 5 משימות עד 9.9.",
+          "known_issues": "כל המשימות האוטומטיות במחשב רצות במשרד בלבד — אם המחשב כבוי/לא מחובר, שום דבר לא רץ. ב-19.8 המעבר ל-OneDrive שבר בשקט 5 משימות עד 9.9.",
           "children": [
             {
               "id": "task-scheduler-office",
-              "title": "Windows Task Scheduler — מחשב המשרד",
+              "title": "משימות אוטומטיות — מחשב המשרד",
               "layer": "scheduled",
               "machine": "office",
               "schedule": "לפי משימה",
               "status": "partial",
-              "what": "כל המשימות המתוזמנות של דיאנה רפאל רשומות במחשב המשרד בלבד. רובן מריצות סקריפט פייתון או claude -p headless, וחלקן דוחפות את ~/.claude לגיט בסיום.",
-              "io": "Task Scheduler → .ps1/.py/.cmd → לוגים ב-night-agent/ ובריפו",
-              "files": ["C:\\Users\\USER\\.claude\\night-agent\\"],
+              "what": "כל המשימות המתוזמנות של דיאנה רפאל רשומות במחשב המשרד בלבד. רובן מריצות תוכנה קטנה או את Claude אוטומטית, וחלקן שומרות גיבוי של הזיכרון בסיום.",
+              "io": "שעון → תוכנה במחשב → רישום ריצות",
+              "files": [
+                "C:\\Users\\USER\\.claude\\night-agent\\"
+              ],
               "last_run": "",
-              "known_issues": "רצות רק כשדניאל מחובר (LogonType Interactive). ב-3.8 תוקנו 4 משימות שהיו בלי StartWhenAvailable (ריצה שהוחמצה נמחקה).",
+              "known_issues": "רצות רק כשדניאל מחובר למחשב. ב-3.8 תוקנו 4 משימות שלא השלימו ריצה שהוחמצה (היא פשוט נמחקה).",
               "children": [
                 {
                   "id": "dr-morning-health-check",
-                  "title": "סוכן בריאות בוקר (DR-MorningHealthCheck)",
+                  "title": "סוכן בריאות בוקר",
                   "layer": "scheduled",
                   "machine": "office",
                   "schedule": "כל יום 06:30",
                   "status": "broken",
-                  "what": "שומר-סף של קליטת ההזמנות: מוחק כפילויות לא-שלמות של Make, מתקן סכום פי 100, ממזג לקוחות כפולים, מתריע על שתיקת Make (3 ימים) ועל הזמנות Shopify רב-פריטיות שלא פוצלו. כותב דוח יומי ל-health-reports.",
-                  "io": "Supabase orders/customers/jewelry + Shopify GraphQL → auto-fix ב-DB + דוח טקסט (exit 1 אם יש בעיות)",
-                  "files": ["C:\\Users\\USER\\.claude\\night-agent\\morning_health_check.py", "C:\\Users\\USER\\.claude\\night-agent\\health-reports\\"],
-                  "last_run": "דוח אחרון בדוטפיילס: 2026-08-13; מ-14.8 rc=1 כל בוקר",
-                  "known_issues": "נכשל בשקט מ-14.8 (rc=1, כנראה נתיב/מפתח אחרי המעבר ל-OneDrive) — לא תוקן ב-9.9 עם השאר. אין דוחות מאז 13.8. Etsy רב-פריטי לא מכוסה.",
+                  "what": "שומר-סף של קליטת ההזמנות: מוחק כפילויות לא-שלמות של Make, מתקן סכום פי 100, ממזג לקוחות כפולים, מתריע על שתיקת Make (3 ימים) ועל הזמנות Shopify רב-פריטיות שלא פוצלו. כותב דוח יומי.",
+                  "io": "הזמנות/לקוחות/תכשיטים במערכת הניהול + Shopify → תיקון אוטומטי + דוח יומי (מסמן אם יש בעיות)",
+                  "files": [
+                    "C:\\Users\\USER\\.claude\\night-agent\\morning_health_check.py",
+                    "C:\\Users\\USER\\.claude\\night-agent\\health-reports\\"
+                  ],
+                  "last_run": "דוח אחרון: 13.8.2026; מ-14.8 נכשל כל בוקר",
+                  "known_issues": "נכשל בשקט מ-14.8 (כנראה בגלל מעבר התיקיות ל-OneDrive) — לא תוקן ב-9.9 עם השאר. אין דוחות מאז 13.8. Etsy רב-פריטי לא מכוסה.",
                   "children": []
                 },
                 {
                   "id": "dr-order-intake",
-                  "title": "קליטה + טריגרי סטטוס (DR-OrderIntake)",
+                  "title": "קליטה + עדכון סטטוסים אוטומטי",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "כל שעתיים (run.cmd → intake.mjs + status_triggers.py)",
+                  "schedule": "כל שעתיים",
                   "status": "partial",
-                  "what": "המעשיר המקומי שהחליף את רוטינת הענן: intake.mjs מקשר לקוחות להזמנות גולמיות, ו-status_triggers.py מזיז סטטוסים קדימה לפי שלושה אותות — כרטיס בלוח DD של המעצב, מייל יציקה יוצא, ומייל תווית מ-D2D. סטטוס זז רק קדימה.",
-                  "io": "Trello DD (REST) + IMAP daniel@ (Sent/Inbox) + Supabase → orders.status / jewelry.status / tracking_number; לוג run.log",
-                  "files": ["diana-rafael\\agents\\order-intake\\run.cmd", "diana-rafael\\agents\\order-intake\\intake.mjs", "diana-rafael\\agents\\order-intake\\status_triggers.py"],
-                  "last_run": "תוקן 9.9 (נתיב OneDrive); דווח שוב rc=3221225786 ב-status_triggers בסשן 9.10",
-                  "known_issues": "נפל כל שעתיים מ-14.8 עד 9.9 בגלל נתיב Desktop מת; דיווח מאוחר יותר על נפילה ב-status_triggers (rc 3221225786) — לאמת Last Result במשרד. TRELLO_CARDS=false מאז 23.8 (לוח יצא משימוש).",
+                  "what": "הקליטה המקומית שהחליפה את משימת הענן: מקשרת לקוחות להזמנות שנכנסו לא-מלאות, ומזיזה סטטוסים קדימה לפי שלושה אותות — כרטיס בלוח DD של המעצב, מייל יציקה יוצא, ומייל תווית מ-D2D. סטטוס זז רק קדימה.",
+                  "io": "לוח DD בטרלו + תיבות Gmail של daniel@ (נשלחו/נכנסו) → סטטוס הזמנה / סטטוס תכשיט / מספר מעקב במערכת הניהול",
+                  "files": [
+                    "diana-rafael\\agents\\order-intake\\run.cmd",
+                    "diana-rafael\\agents\\order-intake\\intake.mjs",
+                    "diana-rafael\\agents\\order-intake\\status_triggers.py"
+                  ],
+                  "last_run": "תוקן 9.9 (מעבר ל-OneDrive); דווחה שוב נפילה בעדכון הסטטוסים בסשן 9.10",
+                  "known_issues": "נפל כל שעתיים מ-14.8 עד 9.9 בגלל תיקייה ישנה שנמחקה; דווחה מאוחר יותר נפילה בעדכון הסטטוסים — לבדוק במשרד מה תוצאת הריצה האחרונה. פתיחת כרטיסי טרלו כבויה מאז 23.8 (הלוח יצא משימוש).",
                   "children": [
                     {
                       "id": "trigger-dd-board-model",
@@ -79,11 +99,13 @@
                       "machine": "office",
                       "schedule": "נסרק כל שעתיים",
                       "status": "working",
-                      "what": "כרטיס עם J בלוח DD של המעצב (לא Canceled/Archive) מעביר את התכשיט ל-model וההזמנה ל-in_preparation. קורא-בלבד מהלוח.",
-                      "io": "Trello DD board → jewelry.status=model, orders.status=in_preparation",
-                      "files": ["diana-rafael\\agents\\order-intake\\status_triggers.py"],
+                      "what": "כרטיס עם J בלוח DD של המעצב (לא Canceled/Archive) מעביר את התכשיט ל-model וההזמנה ל'בהכנה'. רק קורא מהלוח, לא משנה בו.",
+                      "io": "לוח DD בטרלו → תכשיט=model, הזמנה=בהכנה",
+                      "files": [
+                        "diana-rafael\\agents\\order-intake\\status_triggers.py"
+                      ],
                       "last_run": "",
-                      "known_issues": "תרחיש Make 6716799 שעשה את זה נשאר כבוי בכוונה.",
+                      "known_issues": "תרחיש ה-Make הישן שעשה את זה נשאר כבוי בכוונה.",
                       "children": []
                     },
                     {
@@ -91,11 +113,13 @@
                       "title": "מייל יציקה יוצא → סטטוס casting",
                       "layer": "event-driven",
                       "machine": "office",
-                      "schedule": "IMAP Sent, נסרק כל שעתיים",
+                      "schedule": "תיבת 'נשלחו' ב-Gmail, נסרק כל שעתיים",
                       "status": "working",
-                      "what": "מייל יוצא בפורמט DIANA RAFAEL - 14Y - J#### מעביר את התכשיט ל-casting (גם תכשיטי מלאי בלי הזמנה). החליף את תרחיש Make 6095052 שנשבר על חיבור Gmail google-restricted.",
-                      "io": "IMAP daniel@ [Gmail]/Sent Mail → jewelry.status=casting",
-                      "files": ["diana-rafael\\agents\\order-intake\\status_triggers.py"],
+                      "what": "מייל יוצא בפורמט DIANA RAFAEL - 14Y - J#### מעביר את התכשיט ל-casting (גם תכשיטי מלאי בלי הזמנה). החליף את תרחיש ה-Make שנשבר על חיבור Gmail.",
+                      "io": "תיבת 'נשלחו' של daniel@ → תכשיט=casting",
+                      "files": [
+                        "diana-rafael\\agents\\order-intake\\status_triggers.py"
+                      ],
                       "last_run": "",
                       "known_issues": "",
                       "children": []
@@ -105,11 +129,13 @@
                       "title": "מייל תווית D2D → shipped + sold",
                       "layer": "event-driven",
                       "machine": "office",
-                      "schedule": "IMAP Inbox, נסרק כל שעתיים",
+                      "schedule": "תיבת הדואר הנכנס, נסרק כל שעתיים",
                       "status": "working",
-                      "what": "מייל Tracking Label מ-D2D או תשובת לאור עם מספר FedEx סוגר הזמנה: מספר מעקב + FedEx + orders.shipped + jewelry.sold. התאמה לפי שם לקוח (120 יום אחורה). זה הסוגר של מסלול ה-DDP.",
-                      "io": "IMAP info@/לאור → orders.tracking_number, status=shipped; jewelry.status=sold",
-                      "files": ["diana-rafael\\agents\\order-intake\\status_triggers.py"],
+                      "what": "מייל Tracking Label מ-D2D או תשובת לאור עם מספר FedEx סוגר הזמנה: מספר מעקב + FedEx + הזמנה=shipped + תכשיט=sold. התאמה לפי שם לקוח (120 יום אחורה). זה מה שסוגר משלוחי DDP.",
+                      "io": "מיילים ב-info@/מלאור → מספר מעקב, הזמנה=shipped; תכשיט=sold",
+                      "files": [
+                        "diana-rafael\\agents\\order-intake\\status_triggers.py"
+                      ],
                       "last_run": "",
                       "known_issues": "",
                       "children": []
@@ -118,197 +144,238 @@
                 },
                 {
                   "id": "dianarafael-expensebot",
-                  "title": "ExpenseBot — הורדת חשבוניות (DianaRafael-ExpenseBot)",
+                  "title": "הורדת חשבוניות הוצאה אוטומטית",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "ה-11 בכל חודש 09:00 (--auto-monthly)",
+                  "schedule": "ה-11 בכל חודש 09:00",
                   "status": "working",
-                  "what": "מושך דרך IMAP את חשבוניות ההוצאה של החודש הקודם משתי התיבות (daniel@, customercare@) לתיקיית הוצאות של החודש בדרופבוקס, מסמן נקרא ומתייג Invoices/YYYY-MM. צעד 1 של סגירת חודש.",
-                  "io": "Gmail IMAP (App Password) → PDF ב-Dropbox\\ניהול משרד\\<שנה>\\<חודש>\\הוצאות + _result.json",
-                  "files": ["C:\\Users\\USER\\OneDrive\\Desktop\\CLAUDE CODE PROJECTS\\expense-bot\\download_expenses.py", "CLAUDE CODE PROJECTS\\.ENV.EXPENSES_BOT.txt"],
-                  "last_run": "2026-10-11 09:00 rc=0",
-                  "known_issues": "אין גבול-חודש עליון → גורר חשבוניות של החודש הבא והכנסות לתיקייה (re-pollution) — מיון ידני אחרי כל הרצה. תלוי במחשב המשרד דלוק ב-11 לחודש. נפל 11.9 (נתיב) ותוקן 14.9.",
+                  "what": "מושך את חשבוניות ההוצאה של החודש הקודם משתי התיבות (daniel@, customercare@) לתיקיית הוצאות של החודש בדרופבוקס, מסמן כנקרא ומתייג Invoices/חודש. צעד 1 של סגירת חודש.",
+                  "io": "Gmail → קבצי PDF בדרופבוקס: ניהול משרד › שנה › חודש › הוצאות + סיכום",
+                  "files": [
+                    "C:\\Users\\USER\\OneDrive\\Desktop\\CLAUDE CODE PROJECTS\\expense-bot\\download_expenses.py",
+                    "CLAUDE CODE PROJECTS\\.ENV.EXPENSES_BOT.txt"
+                  ],
+                  "last_run": "11.10.2026 09:00 — הצליח",
+                  "known_issues": "אין גבול לסוף החודש → גורר גם חשבוניות של החודש הבא והכנסות לתיקייה — צריך מיון ידני אחרי כל הרצה. תלוי במחשב המשרד דלוק ב-11 לחודש. נפל 11.9 (תיקייה) ותוקן 14.9.",
                   "children": []
                 },
                 {
                   "id": "dianarafael-monthtopup",
-                  "title": "MonthTopUp — טיוטת סגירה אוטומטית (DianaRafael-MonthTopUp)",
+                  "title": "טיוטת סגירת חודש אוטומטית",
                   "layer": "scheduled",
                   "machine": "office",
                   "schedule": "חד-פעמי 12.8.2026 09:00",
                   "status": "dormant",
-                  "what": "topup_run.py: הורדה → דלתא מול מניפסט → הרכבת טיוטה (לא שליחה) → מייל סיכום לדניאל שלוחץ שלח מהטלפון. שומר סף: מעל 15 קבצים חדשים עוצר.",
-                  "io": "expense-bot → Gmail draft + מייל סיכום",
-                  "files": ["expense-bot\\topup_run.py"],
+                  "what": "הורדה → בדיקה מה חדש מול מה שכבר נאסף → הרכבת טיוטה (לא שליחה) → מייל סיכום לדניאל שלוחץ שלח מהטלפון. שומר סף: מעל 15 קבצים חדשים עוצר.",
+                  "io": "הורדת החשבוניות → טיוטה ב-Gmail + מייל סיכום",
+                  "files": [
+                    "expense-bot\\topup_run.py"
+                  ],
                   "last_run": "2026-08-12 (חד-פעמי)",
-                  "known_issues": "חד-פעמי שהסתיים; הצביע על נתיב מת עד 9.9. לא תוזמן מחדש לחודשים הבאים.",
+                  "known_issues": "חד-פעמי שהסתיים; הצביע על תיקייה שנמחקה עד 9.9. לא תוזמן מחדש לחודשים הבאים.",
                   "children": []
                 },
                 {
                   "id": "dr-catalog-nightly",
-                  "title": "קטלוג המודלים הלילי (DR-Catalog-Nightly)",
+                  "title": "קטלוג המודלים הלילי",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "המשימה יומית 21:00; הסקריפט רץ רק ביום ראשון (gate מ-28.9), שעה אחת, hard-kill ב-60 דק'",
+                  "schedule": "המשימה יומית 21:00, אבל עובדת בפועל רק ביום ראשון (מ-28.9), עד שעה ונעצרת בכוח אחרי 60 דק'",
                   "status": "working",
-                  "what": "claude -p headless על CATALOG-PROMPT.md: קולט תיקיות מודלים חדשות מהדרופבוקס, מאפיין (זהב, אבן, שיבוץ), מעדכן את טבלת models ב-Supabase ומקשר תכשיטים בלי דגם. כותב לוג בעברית פשוטה ודוחף את ~/.claude לגיט גם אחרי kill.",
-                  "io": "Dropbox תכשיטים Jewelry + census.json → catalog-full.json, Supabase models, catalog-log-<date>.md",
-                  "files": ["C:\\Users\\USER\\.claude\\night-agent\\catalog-nightly.ps1", "C:\\Users\\USER\\.claude\\night-agent\\CATALOG-PROMPT.md", "C:\\Users\\USER\\.claude\\night-agent\\catalog-log-2026-10-11.md"],
+                  "what": "Claude רץ אוטומטית: קולט תיקיות מודלים חדשות מהדרופבוקס, מאפיין (זהב, אבן, שיבוץ), מעדכן את קטלוג הדגמים במערכת הניהול ומקשר תכשיטים בלי דגם. כותב יומן בעברית פשוטה ושומר אותו גם אם נעצר באמצע.",
+                  "io": "תיקיית Jewelry בדרופבוקס → קטלוג הדגמים במערכת הניהול + יומן ריצה",
+                  "files": [
+                    "C:\\Users\\USER\\.claude\\night-agent\\catalog-nightly.ps1",
+                    "C:\\Users\\USER\\.claude\\night-agent\\CATALOG-PROMPT.md",
+                    "C:\\Users\\USER\\.claude\\night-agent\\catalog-log-2026-10-11.md"
+                  ],
                   "last_run": "2026-10-11 21:00–21:10 (934 מודלים: 701 לבנה, 233 בלאק אייס)",
                   "known_issues": "ריצה הבאה 18.10. דניאל רצה לסגור אחרי שהקטלוג הושלם (12.9) — נשאר כריצה שבועית לתחזוקה. 3 דגלים פתוחים (R112 שני עיצובים, R121 מרקיזה, R114 שם).",
                   "children": []
                 },
                 {
                   "id": "dianarafael-nightagent",
-                  "title": "הסוכן הלילי הכללי (DianaRafael-NightAgent)",
+                  "title": "הסוכן הלילי הכללי",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "היה כל יום 22:00 (חלון 7 שעות) — Disabled מ-26.7",
+                  "schedule": "היה כל יום 22:00 (חלון 7 שעות) — כבוי מ-26.7",
                   "status": "dormant",
-                  "what": "claude -p עם --dangerously-skip-permissions על AGENT-PROMPT.md: קורא NIGHT-QUEUE.md, מריץ learn-beta של CustomizeAI, בוחר 1–3 משימות מחקר/עיצוב, מייצר מצגת HTML עם לולאת אימות ויזואלית, שולח מייל (send_mail.py) וכותב NIGHT-LOG.",
-                  "io": "NIGHT-QUEUE.md → תוצרים בריפואים + NIGHT-LOG-<date>.md + מייל לדניאל",
-                  "files": ["C:\\Users\\USER\\.claude\\night-agent\\run-night-agent.ps1", "C:\\Users\\USER\\.claude\\night-agent\\AGENT-PROMPT.md", "C:\\Users\\USER\\.claude\\night-agent\\NIGHT-QUEUE.md", "C:\\Users\\USER\\.claude\\night-agent\\send_mail.py", "C:\\Users\\USER\\.claude\\night-agent\\render.py"],
-                  "last_run": "NIGHT-LOG-2026-07-26 (לילה 26→27.7)",
-                  "known_issues": "מושבת מ-26.7. התשתית (ראנר, פרומפט, תור, send_mail, render.py, תבנית מצגת) קיימת — להחיות ולא לבנות מחדש. הוחלף בפועל בפרומפטים חד-פעמיים (NIGHT-<date>-PROMPT.md) שדורשים מדניאל להריץ schtasks ידנית.",
+                  "what": "Claude רץ אוטומטית בלילה: קורא את תור משימות הלילה, מריץ את סבב הלמידה של CustomizeAI, בוחר 1–3 משימות מחקר/עיצוב, מייצר מצגת עם בדיקה ויזואלית, שולח מייל וכותב יומן לילה.",
+                  "io": "תור משימות הלילה → תוצרים + יומן לילה + מייל לדניאל",
+                  "files": [
+                    "C:\\Users\\USER\\.claude\\night-agent\\run-night-agent.ps1",
+                    "C:\\Users\\USER\\.claude\\night-agent\\AGENT-PROMPT.md",
+                    "C:\\Users\\USER\\.claude\\night-agent\\NIGHT-QUEUE.md",
+                    "C:\\Users\\USER\\.claude\\night-agent\\send_mail.py",
+                    "C:\\Users\\USER\\.claude\\night-agent\\render.py"
+                  ],
+                  "last_run": "יומן לילה 26→27.7",
+                  "known_issues": "מושבת מ-26.7. כל התשתית (תור, הוראות, שליחת מייל, תבנית מצגת) קיימת — להחיות ולא לבנות מחדש. הוחלף בפועל בהוראות חד-פעמיות לכל לילה, שדורשות מדניאל להפעיל ידנית פקודה במחשב.",
                   "children": []
                 },
                 {
                   "id": "dr-nightsession-oneoff",
-                  "title": "סשני לילה חד-פעמיים (DR-NightSession / DR-Mgmt / DR-Remnant-*)",
+                  "title": "סשני לילה חד-פעמיים",
                   "layer": "scheduled",
                   "machine": "office",
                   "schedule": "חד-פעמי לפי אישור דניאל (21:00/22:00)",
                   "status": "partial",
-                  "what": "דפוס חדש מספטמבר: פרומפט ייעודי לערב (NIGHT-2026-10-11-PROMPT.md, MGMT-2026-09-20-PROMPT.md, remnant-render-matrix.ps1, DR-Remnant-AllYG) + משימה חד-פעמית שמריצה claude -p או Blender. דוחף גיט ושולח מייל בסיום.",
-                  "io": "פרומפט ערב → רינדורים / דפי מוצר Shopify DRAFT / קוד → NIGHT-LOG + מייל",
-                  "files": ["C:\\Users\\USER\\.claude\\night-agent\\NIGHT-2026-10-11-PROMPT.md", "C:\\Users\\USER\\.claude\\night-agent\\mgmt-2026-09-20.ps1", "C:\\Users\\USER\\.claude\\night-agent\\remnant-render-matrix.ps1", "C:\\Users\\USER\\remnant-night\\night_all_yg.py"],
-                  "last_run": "DR-Remnant-AllYG 24.9 (22/22 פריימים, מייל נשלח); DR-Mgmt 20.9; DR-NightSession 11.10 — לא נוצר",
-                  "known_issues": "יצירת משימות מתוזמנות נחסמת ע\"י מסווג ההרשאות (Unauthorized Persistence) — דניאל חייב להריץ את פקודת schtasks בעצמו, וב-11.10 לא הריץ → הלילה לא רץ. תצפית 56: המנוע הנכון = משימה קבועה שקוראת תור.",
+                  "what": "דפוס חדש מספטמבר: הוראות ייעודיות לערב (לילה 11.10, ניהול 20.9, הדמיות REMNANT) + משימה חד-פעמית שמריצה את Claude או את תוכנת ההדמיות. שומר ושולח מייל בסיום.",
+                  "io": "הוראות ערב → הדמיות / דפי מוצר Shopify DRAFT / קוד → יומן לילה + מייל",
+                  "files": [
+                    "C:\\Users\\USER\\.claude\\night-agent\\NIGHT-2026-10-11-PROMPT.md",
+                    "C:\\Users\\USER\\.claude\\night-agent\\mgmt-2026-09-20.ps1",
+                    "C:\\Users\\USER\\.claude\\night-agent\\remnant-render-matrix.ps1",
+                    "C:\\Users\\USER\\remnant-night\\night_all_yg.py"
+                  ],
+                  "last_run": "הדמיות REMNANT בזהב צהוב 24.9 (22/22 פריימים, מייל נשלח); ניהול 20.9; לילה 11.10 — לא נוצר",
+                  "known_issues": "יצירת משימות מתוזמנות נחסמת ע\"י מנגנון ההרשאות — דניאל חייב להריץ את הפקודה בעצמו, וב-11.10 לא הריץ → הלילה לא רץ. תצפית 56: הפתרון הנכון = משימה קבועה שקוראת תור.",
                   "children": []
                 },
                 {
                   "id": "dr-shippingagent-task",
-                  "title": "שרת המשלוחים המקומי (DR-ShippingAgent)",
+                  "title": "שרת המשלוחים המקומי",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "AtLogOn → run_server.bat → server.py (פורט 5555, poller כל 10 שניות)",
+                  "schedule": "עולה בכניסה למחשב ובודק בקשות חדשות כל 10 שניות",
                   "status": "broken",
-                  "what": "מרים את server.py של shipping-agent שמאזין לתור ship_jobs ב-Supabase (משלוח דרך וואטסאפ) ול-HTTP route מהאפליקציה. בלי זה הבוט עונה 'מכין את פרטי המשלוח' לנצח.",
-                  "io": "ship_jobs (Supabase) → preview בוואטסאפ → חשבונית+תווית → close_loop",
-                  "files": ["C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\server.py", "C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\run_server.bat"],
-                  "last_run": "rc=3221225786 מ-29.9; נפל בהפסקת חשמל 8.10 ולא עלה (11.10)",
-                  "known_issues": "לא רץ מ-19.8 עד 28.9 (נתיב Desktop מת); המשימה נרשמה 28.9 אבל נופלת (rc 3221225786) ולא עלתה אחרי הפסקת חשמל 8.10. בדיקה: Get-NetTCPConnection -LocalPort 5555.",
+                  "what": "מפעיל את סוכן המשלוחים, שמחכה לבקשות משלוח מהוואטסאפ ומהאפליקציה. בלי זה הבוט עונה 'מכין את פרטי המשלוח' לנצח.",
+                  "io": "בקשת משלוח → תצוגה מקדימה בוואטסאפ → חשבונית+תווית → סגירת ההזמנה",
+                  "files": [
+                    "C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\server.py",
+                    "C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\run_server.bat"
+                  ],
+                  "last_run": "נופל מ-29.9; נפל בהפסקת חשמל 8.10 ולא עלה (11.10)",
+                  "known_issues": "לא רץ מ-19.8 עד 28.9 (תיקייה שנמחקה); המשימה נרשמה 28.9 אבל נופלת ולא עלתה אחרי הפסקת חשמל 8.10. לבדוק במשרד אם השרת עובד.",
                   "children": []
                 },
                 {
                   "id": "dr-customizeai-batch",
-                  "title": "אצוות בוקר CustomizeAI (DR-CustomizeAI-Batch)",
+                  "title": "אצוות בוקר CustomizeAI",
                   "layer": "scheduled",
                   "machine": "office",
                   "schedule": "חד-פעמי 28.7 06:30",
                   "status": "dormant",
-                  "what": "מרים את שרת ה-API על 3001 אם צריך ומריץ npm run daily --target=70 --maxProducts=15 עם 3 ניסיונות (מגבלת קצב). דניאל מדרג ב-review.html, ואז learn הופך דחיות לכללים.",
-                  "io": "קטלוג Shopify → תמונות gpt-image-1 → eval-results.json → proposed-rules.md",
-                  "files": ["C:\\Users\\USER\\.claude\\night-agent\\customizeai-morning-batch.ps1", "C:\\Users\\USER\\.claude\\night-agent\\customizeai-batch-log.txt"],
+                  "what": "מפעיל את השרת של CustomizeAI אם צריך ומריץ אצוות תמונות (יעד 70, עד 15 מוצרים) עם 3 ניסיונות. דניאל מדרג בדף הדירוג, ואז סבב הלמידה הופך דחיות לכללים.",
+                  "io": "קטלוג Shopify → תמונות AI → תוצאות דירוג → הצעת כללים",
+                  "files": [
+                    "C:\\Users\\USER\\.claude\\night-agent\\customizeai-morning-batch.ps1",
+                    "C:\\Users\\USER\\.claude\\night-agent\\customizeai-batch-log.txt"
+                  ],
                   "last_run": "2026-07-28",
-                  "known_issues": "חד-פעמי. לקח 26.7: אצווה בלי learn אחריה = בזבוז (4 אצוות בלי learn → 49% דחייה).",
+                  "known_issues": "חד-פעמי. לקח 26.7: אצווה בלי סבב למידה אחריה = בזבוז (4 אצוות בלי למידה → 49% דחייה).",
                   "children": []
                 },
                 {
                   "id": "dianarafael-intakewatchdog",
-                  "title": "Intake Watchdog (DianaRafael-IntakeWatchdog)",
+                  "title": "שומר קליטת ההזמנות",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "היה כל 30 דק' — Disabled מ-6.7",
+                  "schedule": "היה כל 30 דק' — כבוי מ-6.7",
                   "status": "dormant",
-                  "what": "intake_watchdog.py מזהה הזמנות אונליין שנחתו בלי customer_id (מוות שקט של הקליטה). דניאל לא רוצה מיילים על תקלות → הבדיקה עברה ל-/daily-brief (--dry-run) ומוצפת רק בבוקר.",
-                  "io": "Supabase orders → רשימת תקועות (dry-run בבריף)",
-                  "files": ["diana-rafael\\agents\\order-intake\\intake_watchdog.py", "C:\\Users\\USER\\.claude\\commands\\daily-brief.md"],
+                  "what": "מזהה הזמנות אונליין שנכנסו בלי לקוח מקושר (סימן שהקליטה מתה בשקט). דניאל לא רוצה מיילים על תקלות → הבדיקה עברה לבריף הבוקר ומוצגת רק שם.",
+                  "io": "הזמנות במערכת הניהול → רשימת הזמנות תקועות (בבריף)",
+                  "files": [
+                    "diana-rafael\\agents\\order-intake\\intake_watchdog.py",
+                    "C:\\Users\\USER\\.claude\\commands\\daily-brief.md"
+                  ],
                   "last_run": "",
-                  "known_issues": "הצביע על נתיב מת עד 9.9 (לא רלוונטי — מושבת).",
+                  "known_issues": "הצביע על תיקייה שנמחקה עד 9.9 (לא רלוונטי — מושבת).",
                   "children": []
                 },
                 {
                   "id": "dr-adapprovalcheck",
-                  "title": "DR-AdApprovalCheck",
+                  "title": "בדיקת אישור מודעות (לא ברור)",
                   "layer": "scheduled",
                   "machine": "office",
                   "schedule": "לא ידוע",
                   "status": "unknown",
-                  "what": "משימה שמוזכרת רק ברשימת המשימות שתוקנו ב-9.9 (נתיב OneDrive). כנראה בדיקת אישור מודעות (Google Ads/Meta) של סוכן השיווק. אין זיכרון ייעודי.",
+                  "what": "משימה שמוזכרת רק ברשימת המשימות שתוקנו ב-9.9 (מעבר ל-OneDrive). כנראה בדיקת אישור מודעות (Google Ads/Meta) של סוכן השיווק. אין עליה מידע בזיכרון.",
                   "io": "לא ידוע",
                   "files": [],
                   "last_run": "",
-                  "known_issues": "לברר במשרד: schtasks /Query /TN DR-AdApprovalCheck /V — מה מריצה והאם עדיין נחוצה.",
+                  "known_issues": "לברר במשרד מה המשימה הזו מריצה והאם עדיין נחוצה.",
                   "children": []
                 },
                 {
                   "id": "certpublisher-task",
-                  "title": "סוכן התעודות — watcher (CertPublisher)",
+                  "title": "סוכן התעודות — מעקב תיקייה",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "AtStartup; בודק פעם ביום",
+                  "schedule": "עולה עם הדלקת המחשב; בודק פעם ביום",
                   "status": "unknown",
-                  "what": "agent.py מאזין לתיקיית Dropbox של תעודות; PDF חדש → Shopify Files (CDN) → פוסט WordPress ב-gil-lab.com (Playwright, כי WP 4.4 בלי REST). קיימת גם גרסת one-shot cert_agent.py (XML-RPC, מועדפת ידנית).",
-                  "io": "Dropbox\\Diana Rafael\\תעודות\\certs PDF → Shopify CDN URL → פוסט gil-lab.com",
-                  "files": ["C:\\Users\\USER\\cert-publisher\\agent.py", "diana-rafael\\agents\\CERTS AGENT\\cert_agent.py"],
-                  "last_run": "אומת 1.7.2026 (one-shot); watcher לא אומת מאז",
-                  "known_issues": "קרדנציאלס מוטמעים בקוד; slug -3 ב-WP מרמז על פוסטים כפולים; SSL של gil-lab לא תקין (ignore_https_errors).",
+                  "what": "מחכה לתעודות חדשות בתיקיית התעודות בדרופבוקס; PDF חדש → עולה לקבצים ב-Shopify → פוסט באתר gil-lab.com (דרך דפדפן אוטומטי, כי האתר ישן). יש גם גרסה להפעלה ידנית חד-פעמית (מועדפת).",
+                  "io": "PDF בתיקיית התעודות בדרופבוקס → קישור לקובץ ב-Shopify → פוסט ב-gil-lab.com",
+                  "files": [
+                    "C:\\Users\\USER\\cert-publisher\\agent.py",
+                    "diana-rafael\\agents\\CERTS AGENT\\cert_agent.py"
+                  ],
+                  "last_run": "אומת 1.7.2026 (בהפעלה ידנית); המעקב האוטומטי לא אומת מאז",
+                  "known_issues": "הסיסמאות שמורות בתוך הקוד; כתובת עם -3 באתר מרמזת על פוסטים כפולים; תעודת האבטחה של gil-lab לא תקינה (מתעלמים ממנה).",
                   "children": []
                 },
                 {
                   "id": "beta-host",
-                  "title": "beta-host — שרת CustomizeAI + Cloudflare tunnel",
+                  "title": "שרת בדיקות CustomizeAI + קישור ציבורי זמני",
                   "layer": "scheduled",
                   "machine": "office",
-                  "schedule": "AtStartup + AtLogOn",
+                  "schedule": "עולה עם הדלקת המחשב ובכניסה",
                   "status": "unknown",
-                  "what": "מרים את api/index.js על 3001 ו-cloudflared quick tunnel, וכותב את ה-URL הציבורי ל-beta-url.txt. שימש להפצת beta.html לבודקים לפני המעבר ל-Render.",
-                  "io": "localhost:3001 → https://<random>.trycloudflare.com/beta.html",
-                  "files": ["C:\\Users\\USER\\.claude\\night-agent\\beta-host.ps1", "C:\\Users\\USER\\.claude\\night-agent\\beta-url.txt"],
+                  "what": "מפעיל את השרת של CustomizeAI במחשב ופותח אליו קישור ציבורי זמני. שימש להפצת דף הבטא לבודקים לפני המעבר לשרת הקבוע.",
+                  "io": "המחשב המקומי → קישור ציבורי זמני לדף הבטא",
+                  "files": [
+                    "C:\\Users\\USER\\.claude\\night-agent\\beta-host.ps1",
+                    "C:\\Users\\USER\\.claude\\night-agent\\beta-url.txt"
+                  ],
                   "last_run": "",
-                  "known_issues": "URL זמני שמשתנה בכל reboot (פיגום). הפרודקשן של CustomizeAI עבר ל-Render — כנראה מיותר, לבדוק אם עדיין מריץ תהליכים.",
+                  "known_issues": "הקישור משתנה בכל הפעלה מחדש של המחשב (פיגום זמני). CustomizeAI עבר לשרת קבוע — כנראה מיותר, לבדוק אם עדיין רץ.",
                   "children": []
                 }
               ]
             },
             {
               "id": "cloud-routines",
-              "title": "רוטינות ענן (claude.ai/code/routines)",
+              "title": "משימות בענן (claude.ai)",
               "layer": "scheduled",
               "machine": "cloud",
-              "schedule": "cron בענן",
+              "schedule": "לפי שעון בענן",
               "status": "partial",
-              "what": "משימות Claude שרצות בענן גם כשהמחשבים כבויים. בפועל סביבת הענן חוסמת Supabase/Trello (egress 403) ואין בה מחברי Gmail/Shopify — לכן האוטופיילוט מת.",
-              "io": "cron → Claude בענן → מיילים",
-              "files": ["C:\\Users\\USER\\.claude\\projects\\C--Users-USER\\memory\\ops_cloud_routines.md"],
+              "what": "משימות Claude שרצות בענן גם כשהמחשבים כבויים. בפועל הענן חסום מגישה למערכת הניהול ולטרלו ואין בו חיבור ל-Gmail/Shopify — לכן הקליטה האוטומטית מתה.",
+              "io": "שעון → Claude בענן → מיילים",
+              "files": [
+                "C:\\Users\\USER\\.claude\\projects\\C--Users-USER\\memory\\ops_cloud_routines.md"
+              ],
               "last_run": "",
               "known_issues": "מיילי AUTOPILOT בתיבה = רוטינה 1 הופעלה מחדש בטעות.",
               "children": [
                 {
                   "id": "routine-order-intake-autopilot",
-                  "title": "order-intake-and-casting-autopilot",
+                  "title": "קליטת הזמנות ומעקב יציקה (ענן)",
                   "layer": "scheduled",
                   "machine": "cloud",
                   "schedule": "היה 3×ביום 08/14/20 — כבוי מ-30.8",
                   "status": "dormant",
-                  "what": "העשרת הזמנות (לקוח/SKU/יהלום/Trello) + מעקב יציקה דרך Gmail MCP. נחסם 17 יום (403 ל-Supabase/Trello) ושלח רק מיילי כישלון → כובה לבקשת דניאל. הפרומפט שמור ברוטינה (enabled=false).",
-                  "io": "Supabase + Gmail → העשרה (לא עובד)",
-                  "files": ["trig_013puxCSjFLEGVTrzLsQdKGj"],
+                  "what": "העשרת הזמנות (לקוח/מק\"ט/יהלום/טרלו) + מעקב יציקה דרך Gmail. נחסם 17 יום (אין גישה למערכת הניהול/טרלו) ושלח רק מיילי כישלון → כובה לבקשת דניאל. ההוראות שמורות במשימה (כבויה).",
+                  "io": "מערכת הניהול + Gmail → העשרה (לא עובד)",
+                  "files": [
+                    "trig_013puxCSjFLEGVTrzLsQdKGj"
+                  ],
                   "last_run": "2026-08 (כישלונות)",
-                  "known_issues": "הוחלף ב-DR-OrderIntake המקומי + סקיל complete-order-intake ידני.",
+                  "known_issues": "הוחלף בקליטה המקומית במחשב המשרד + הנוהל הידני לקליטת הזמנות.",
                   "children": []
                 },
                 {
                   "id": "routine-shopify-sku-standardization",
-                  "title": "Shopify SKU Standardization",
+                  "title": "תקינת מק\"טים ב-Shopify",
                   "layer": "scheduled",
                   "machine": "cloud",
-                  "schedule": "כל לילה 22:00 UTC מאז 18.5",
+                  "schedule": "כל לילה ב-01:00 (שעון ישראל) מאז 18.5",
                   "status": "working",
                   "what": "משכתבת מק\"טים בחנות Shopify לפורמט הבית. נוצרה כמשימה חד-פעמית ונשארה פעילה.",
-                  "io": "Shopify products → SKU מתוקנן",
-                  "files": ["trig_01SxgzgXyMLxeYjH3Rx7pve2"],
+                  "io": "מוצרי Shopify → מק\"ט בפורמט אחיד",
+                  "files": [
+                    "trig_01SxgzgXyMLxeYjH3Rx7pve2"
+                  ],
                   "last_run": "לילי",
                   "known_issues": "לא ברור אם בכוונה — לשאול את דניאל; אם שכחה, לכבות.",
                   "children": []
@@ -331,54 +398,59 @@
             },
             {
               "id": "make-scenarios",
-              "title": "Make.com — תרחישים (team 166466)",
+              "title": "Make.com — תרחישים",
               "layer": "scheduled",
               "machine": "make",
-              "schedule": "פולינג (אין webhooks — hooks_list ריק)",
+              "schedule": "בודק כל כמה דקות (אין התראות מיידיות)",
               "status": "partial",
-              "what": "שכבת הקליטה הגולמית: Shopify ו-Etsy → Supabase orders+customers, ושאריות ישנות של Trello/Klaviyo. 16 תרחישים, 5 פעילים (נבדק חי 12.10).",
-              "io": "Shopify watchOrders / Etsy triggerShopReceipts → Supabase REST (connection 6886793, sb_secret)",
-              "files": ["https://eu1.make.com/166466/scenarios", "command-center\\make-5417151-shopify-supabase-fixed-blueprint.json"],
+              "what": "שכבת הקליטה הבסיסית: Shopify ו-Etsy → הזמנות ולקוחות במערכת הניהול, ושאריות ישנות של Trello/Klaviyo. 16 תרחישים, 5 פעילים (נבדק 12.10).",
+              "io": "הזמנות Shopify / קבלות Etsy → מערכת הניהול",
+              "files": [
+                "https://eu1.make.com/166466/scenarios",
+                "command-center\\make-5417151-shopify-supabase-fixed-blueprint.json"
+              ],
               "last_run": "2026-10-12 (פעילים רצים כל 15 דק')",
-              "known_issues": "Make מכבה תרחיש בשקט אחרי 3 כשלים (maxErrors) ואיש לא מקבל התראה. ה-MCP לא מעדכן credentials של connection — כל סיבוב מפתח Supabase דורש תיקון ידני. חיבור Gmail google-restricted נשבר כל ~7 ימים.",
+              "known_issues": "Make מכבה תרחיש בשקט אחרי 3 כשלים ואיש לא מקבל התראה. כל החלפת מפתח של מערכת הניהול דורשת תיקון ידני של החיבור ב-Make. חיבור Gmail נשבר כל ~7 ימים.",
               "children": [
                 {
                   "id": "make-5417151-shopify-supabase",
-                  "title": "Integration Shopify → Supabase (5417151)",
-                  "layer": "scheduled",
-                  "machine": "make",
-                  "schedule": "כל 15 דק' (interval 900)",
-                  "status": "working",
-                  "what": "הזמנת Shopify חדשה → upsert לקוח לפי email (REST on_conflict, תוקן 1.10) → שורת orders גולמית עם customer_id ו-model_ref מה-SKU. הטריגר ב-DB נותן J.",
-                  "io": "Shopify watchOrders → customers (upsert) + orders (createARow)",
-                  "files": ["command-center\\make-5417151-shopify-supabase-fixed-blueprint.json"],
-                  "last_run": "פעיל, nextExec 12.10; 2845 ריצות, 5 שגיאות",
-                  "known_issues": "ממפה totalPriceSet (כולל מס/משלוח) ל-amount_usd — יתקלקל אם החנות תגבה מס. הזמנת מתנה כותבת את כתובת הנמען על כרטיס הקונה. מוצר מלאי בלי SKU מקבל J חדש (לתקן ידנית). נכבה 30.9 על 409 לקוח חוזר, תוקן 1.10.",
-                  "children": []
-                },
-                {
-                  "id": "make-5423745-etsy-blackice-supabase",
-                  "title": "Integration Etsy (Black Ice) → Supabase (5423745)",
+                  "title": "חיבור Shopify → מערכת הניהול",
                   "layer": "scheduled",
                   "machine": "make",
                   "schedule": "כל 15 דק'",
                   "status": "working",
-                  "what": "קבלת Etsy של חנות DianaBlackIce → orders+customers ב-Supabase. הסכום = subtotal/divisor (תוקן 30.6 אחרי רגרסיית מס).",
-                  "io": "Etsy triggerShopReceipts (conn 1555076) → Supabase createARow/upsertARecord",
+                  "what": "הזמנת Shopify חדשה → יצירה/עדכון לקוח לפי מייל (תוקן 1.10) → הזמנה חדשה מקושרת ללקוח עם הדגם לפי המק\"ט. מערכת הניהול נותנת מספר J אוטומטית.",
+                  "io": "הזמנות Shopify → לקוחות (יצירה/עדכון) + הזמנות",
+                  "files": [
+                    "command-center\\make-5417151-shopify-supabase-fixed-blueprint.json"
+                  ],
+                  "last_run": "פעיל, ריצה הבאה 12.10; 2845 ריצות, 5 שגיאות",
+                  "known_issues": "רושם את הסכום הכולל (כולל מס/משלוח) כסכום ההזמנה — יתקלקל אם החנות תגבה מס. הזמנת מתנה כותבת את כתובת הנמען על כרטיס הקונה. מוצר מלאי בלי מק\"ט מקבל J חדש (לתקן ידנית). נכבה 30.9 בגלל לקוח חוזר, תוקן 1.10.",
+                  "children": []
+                },
+                {
+                  "id": "make-5423745-etsy-blackice-supabase",
+                  "title": "חיבור Etsy (Black Ice) → מערכת הניהול",
+                  "layer": "scheduled",
+                  "machine": "make",
+                  "schedule": "כל 15 דק'",
+                  "status": "working",
+                  "what": "קבלת Etsy של חנות DianaBlackIce → הזמנות+לקוחות במערכת הניהול. הסכום מחושב לפי סכום הפריטים (תוקן 30.6 אחרי תקלה בחישוב המס).",
+                  "io": "קבלות Etsy → מערכת הניהול",
                   "files": [],
                   "last_run": "פעיל, 2880 ריצות, 0 שגיאות",
-                  "known_issues": "בלי דדופ לפי external_order_id; createARow בלי on_conflict. אם דניאל עוצר ידנית ושוכח להדליק — הזמנות נתקעות (30.6).",
+                  "known_issues": "אין הגנה מפני הזמנה כפולה. אם דניאל עוצר ידנית ושוכח להדליק — הזמנות נתקעות (30.6).",
                   "children": []
                 },
                 {
                   "id": "make-1436301-jpb-blackice-trello",
-                  "title": "JPB card for a NEW BLACK ICE SALE (1436301)",
+                  "title": "כרטיס טרלו למכירת BLACK ICE חדשה",
                   "layer": "scheduled",
                   "machine": "make",
                   "schedule": "כל 15 דק'",
                   "status": "working",
                   "what": "מכירה ב-Etsy Black Ice → כרטיס גולמי בלוח Jewelry Progress בטרלו. הלוח יצא משימוש 23.8 ודניאל מנהל אותו ידנית.",
-                  "io": "Etsy receipts → Trello createCard",
+                  "io": "קבלות Etsy → כרטיס בטרלו",
                   "files": [],
                   "last_run": "פעיל, 2880 ריצות",
                   "known_issues": "פתוח מ-23.8: לכבות — עדיין פותח כרטיסי '- J' גולמיים בלוח שיצא משימוש.",
@@ -386,16 +458,16 @@
                 },
                 {
                   "id": "make-608985-608974-etsy-klaviyo",
-                  "title": "Integration Etsy → Klaviyo (608985 Black Ice, 608974 Diana)",
+                  "title": "חיבור Etsy → Klaviyo (Black Ice, Diana)",
                   "layer": "scheduled",
                   "machine": "make",
                   "schedule": "יומי 06:00",
                   "status": "working",
-                  "what": "קונים חדשים מ-Etsy נוספים לרשימת Klaviyo (AddBatchOfPeopleToList). תרחישים מ-2022, פעילים.",
+                  "what": "קונים חדשים מ-Etsy נוספים לרשימת Klaviyo. תרחישים מ-2022, פעילים.",
                   "io": "Etsy receipts → Klaviyo list",
                   "files": [],
-                  "last_run": "nextExec 13.10 03:00Z; 30 ריצות",
-                  "known_issues": "608974 (Diana) מחובר כנראה לאותה חנות Black Ice (connection 1554993 מצביע על DianaBlackIce).",
+                  "last_run": "ריצה הבאה 13.10 06:00; 30 ריצות",
+                  "known_issues": "התרחיש של Diana מחובר כנראה לאותה חנות Black Ice.",
                   "children": []
                 },
                 {
@@ -405,39 +477,44 @@
                   "machine": "make",
                   "schedule": "כבוי",
                   "status": "dormant",
-                  "what": "5424356 Etsy DIANA→Supabase (כבוי בכוונה: ה-connection מצביע על Black Ice → כפילויות); 598525 JPB Diana→Trello; 6716799 DD card→3D model (כבוי בכוונה — status_triggers מכסה); 6095052 Casting email (SUPERSEDED, Gmail conn מת); 3057254 checkout→leads; 3056522 New Order→card (invalid); 3073359 Klaviyo (invalid); 3088386/3080004 Etsy convo→Trello; 4294222 Gemini→Docs; 3447863 New scenario (apiwha).",
+                  "what": "Etsy DIANA→מערכת הניהול (כבוי בכוונה: מחובר בטעות לחנות Black Ice → כפילויות); Diana→Trello; כרטיס DD→מודל תלת-ממד (כבוי בכוונה — הקליטה המקומית מכסה); מייל יציקה (הוחלף, חיבור Gmail מת); checkout→לידים; הזמנה חדשה→כרטיס (שבור); Klaviyo (שבור); שתי שיחות Etsy→Trello; Gemini→Docs; תרחיש וואטסאפ ישן.",
                   "io": "",
                   "files": [],
                   "last_run": "",
-                  "known_issues": "5424356: להפעיל רק אחרי re-auth של connection לחנות DianaRafaelJewelry + פאץ' subtotal/divisor (playbook בלילה 21.7).",
+                  "known_issues": "Etsy DIANA: להפעיל רק אחרי חיבור מחדש לחנות Diana Rafael ב-Etsy + תיקון חישוב הסכום (התוכנית מלילה 21.7).",
                   "children": []
                 }
               ]
             },
             {
               "id": "customizeai-daily-report",
-              "title": "דוח יומי CustomizeAI (Render)",
+              "title": "דוח יומי CustomizeAI",
               "layer": "scheduled",
               "machine": "cloud",
               "schedule": "כל יום 08:00 שעון ישראל",
               "status": "working",
-              "what": "השרת ב-Render (api/services/daily-report.js) שולח ל-daniel@ מ-leads@ את מספרי אתמול מ-widget_events (אנשים/בקשות/תמונות/לידים) + טבלת 7 ימים + before/after של הבקשות + כפתור לדף /admin/review. מניעת כפילות דרך שורת report_sent.",
-              "io": "Supabase juygzbkytubncshfdcae.widget_events → מייל יומי",
-              "files": ["customizeai\\api\\services\\daily-report.js", "https://claude.ai/artifact/M8Z9CNx8kEKib3xZJcwQug"],
+              "what": "השרת של CustomizeAI שולח ל-daniel@ מ-leads@ את מספרי אתמול (אנשים/בקשות/תמונות/לידים) + טבלת 7 ימים + לפני/אחרי של הבקשות + כפתור לדף הסקירה. לא נשלח פעמיים באותו יום.",
+              "io": "נתוני הווידג'ט במערכת הניהול → מייל יומי",
+              "files": [
+                "customizeai\\api\\services\\daily-report.js",
+                "https://claude.ai/artifact/M8Z9CNx8kEKib3xZJcwQug"
+              ],
               "last_run": "יומי (11.10: 9.10=0, 10.10=1 פתיחה)",
-              "known_issues": "אם לא הגיע ב-08:00 — לבדוק health של Render ושורת report_sent של אתמול.",
+              "known_issues": "אם הדוח לא הגיע ב-08:00 — לבדוק שהשרת של CustomizeAI חי ושהדוח של אתמול נרשם כנשלח.",
               "children": []
             },
             {
               "id": "gh-action-refresh-data",
-              "title": "GitHub Action — רענון data.csv של החיסול",
+              "title": "רענון אוטומטי של מחירון אתר החיסול",
               "layer": "scheduled",
               "machine": "cloud",
-              "schedule": "cron כל 30 דק' + workflow_dispatch",
+              "schedule": "כל 30 דקות אוטומטית, או הפעלה ידנית",
               "status": "unknown",
-              "what": "ב-remnant-clearance: מושך את גיליון המחירים מגוגל, שומר סכימה וכמות שורות, ומקמט רק אם יש דלתא. האתר archive.dianarafael.com קרא ממנו.",
-              "io": "Google Sheet CSV → data.csv בריפו → GitHub Pages",
-              "files": ["remnant-clearance\\.github\\workflows\\refresh-data.yml"],
+              "what": "מושך את גיליון המחירים מגוגל ומעדכן את אתר החיסול (archive.dianarafael.com) רק כשיש שינוי.",
+              "io": "גיליון Google → אתר החיסול",
+              "files": [
+                "remnant-clearance\\.github\\workflows\\refresh-data.yml"
+              ],
               "last_run": "",
               "known_issues": "החיסול נסגר 31.7 — כנראה ממשיך לרוץ לשווא; לבדוק/לכבות.",
               "children": []
@@ -446,12 +523,12 @@
         },
         {
           "id": "event-driven",
-          "title": "מונעי-אירוע (webhooks, טריגרים, תורים)",
+          "title": "מגיבים לאירוע (הודעה, הזמנה חדשה, תור)",
           "layer": "event-driven",
           "machine": "both",
-          "schedule": "on event",
+          "schedule": "כשקורה אירוע",
           "status": "partial",
-          "what": "רכיבים שמגיבים לאירוע ולא לשעון: הודעת וואטסאפ, שורה חדשה ב-DB, תור משלוחים, שימוש בווידג'ט.",
+          "what": "רכיבים שמגיבים לאירוע ולא לשעון: הודעת וואטסאפ, רשומה חדשה במערכת הניהול, תור משלוחים, שימוש בווידג'ט.",
           "io": "אירוע → פעולה",
           "files": [],
           "last_run": "",
@@ -459,16 +536,18 @@
           "children": [
             {
               "id": "db-trigger-assign-j",
-              "title": "טריגר DB — הקצאת J מיידית (trg_orders_assign_j)",
+              "title": "הקצאת מספר J מיידית לכל הזמנה",
               "layer": "event-driven",
               "machine": "cloud",
-              "schedule": "BEFORE INSERT על orders",
+              "schedule": "ברגע שנוצרת הזמנה חדשה",
               "status": "working",
-              "what": "כל הזמנה חדשה (כל ערוץ) מקבלת מספר J הבא ושורת jewelry מיד. החלק היחיד בקליטה שעובד תמיד. הופעל 21.6.",
-              "io": "INSERT orders → j_number + jewelry row",
-              "files": ["diana-rafael\\sql\\2026-06-21_auto_assign_j.sql"],
+              "what": "כל הזמנה חדשה (מכל ערוץ) מקבלת מיד את מספר ה-J הבא ורשומת תכשיט. החלק היחיד בקליטה שעובד תמיד. הופעל 21.6.",
+              "io": "הזמנה חדשה → מספר J + רשומת תכשיט",
+              "files": [
+                "diana-rafael\\sql\\2026-06-21_auto_assign_j.sql"
+              ],
               "last_run": "רציף",
-              "known_issues": "תמיד שורה אחת = J אחד → הזמנה רב-פריטית דורשת פיצול ידני. j_number עם רווח בסוף מתעלם ממנו (באג trailing-space, לא נוקה). מוצר מלאי מקבל J חדש מיותר.",
+              "known_issues": "תמיד הזמנה אחת = J אחד → הזמנה עם כמה פריטים דורשת פיצול ידני. מספר J עם רווח בסוף לא מזוהה (באג, לא נוקה). מוצר מהמלאי מקבל J חדש מיותר.",
               "children": []
             },
             {
@@ -476,27 +555,35 @@
               "title": "סוכן הוואטסאפ של מערכת הניהול",
               "layer": "event-driven",
               "machine": "cloud",
-              "schedule": "webhook Twilio → Vercel",
+              "schedule": "הודעת וואטסאפ מפעילה אותו מיד",
               "status": "partial",
-              "what": "api/whatsapp.ts על Vercel: Claude Sonnet עם זיכרון שיחה ב-Supabase, תמונה/PDF/קול. כלים: הזמנות, יהלומים (add/allocate/update), create_jewelry, תזרים (add_payable), עלויות, ומשלוח (ship_order/confirm_ship/retry_label שרושמים ship_jobs). דיווח דו-מטבעי.",
-              "io": "הודעת וואטסאפ מדניאל → Supabase (orders/jewelry/diamonds/expenses/ship_jobs) → תשובה",
-              "files": ["diana-rafael\\api\\whatsapp.ts", "diana-rafael\\sql\\ship_jobs.sql"],
+              "what": "סוכן Claude בוואטסאפ שזוכר את השיחה ומבין תמונה, PDF והודעה קולית. יודע: הזמנות, יהלומים (הוספה/הקצאה/עדכון), יצירת תכשיט, תזרים (תשלום עתידי), עלויות ומשלוח (פתיחה, אישור, תווית מחדש). מדווח בשקל ובדולר.",
+              "io": "הודעת וואטסאפ מדניאל → עדכון במערכת הניהול (הזמנות, תכשיטים, יהלומים, הוצאות, משלוחים) → תשובה",
+              "files": [
+                "diana-rafael\\api\\whatsapp.ts",
+                "diana-rafael\\sql\\ship_jobs.sql"
+              ],
               "last_run": "28.9 (משלוח דיפאק 1624)",
-              "known_issues": "רץ על Twilio Sandbox — המספר נושר כל 72 שעות ודורש join <code>. הפתרון (WhatsApp Business Sender מאושר) דורש פעולות חשבון של דניאל, תוזמן ל-5.7 ולא בוצע. AUTH token רק ב-Vercel. לא להתבלבל עם WHATSAPP BOT הישן (טלגרם נטוש).",
+              "known_issues": "רץ על חיבור הוואטסאפ הזמני — המספר נושר כל 72 שעות ודורש הצטרפות מחדש. הפתרון (מספר וואטסאפ עסקי מאושר) דורש פעולות בחשבון של דניאל, תוזמן ל-5.7 ולא בוצע. לא להתבלבל עם הבוט הישן (טלגרם, נטוש).",
               "children": []
             },
             {
               "id": "shipping-poller",
-              "title": "poller המשלוחים (ship_jobs → חשבונית + תווית)",
+              "title": "סוכן המשלוחים (חשבונית + תווית)",
               "layer": "event-driven",
               "machine": "office",
-              "schedule": "כל 10 שניות בתוך server.py (מורם ע\"י DR-ShippingAgent)",
+              "schedule": "בודק כל 10 שניות, כשהשרת במחשב המשרד פועל",
               "status": "broken",
-              "what": "קורא job חדש ב-ship_jobs, אוסף הכל מ-Supabase (לקוח, כתובת, קראט, זהב), מחשב JEW-#### מהדרופבוקס, שולח preview בוואטסאפ; אחרי 'כן' מריץ make_invoice.py + d2d_bot.py, מדפיס תווית, וסוגר לולאה (shipped/sold + משקל).",
-              "io": "ship_jobs(confirmed) → DOCX/PDF חשבונית + PDF תווית FedEx (מודפס) → orders.shipped, jewelry.sold+weight_grams",
-              "files": ["C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\server.py", "shipping-agent\\make_invoice.py", "shipping-agent\\d2d_bot.py", "https://github.com/dadahan10/shipping-agent"],
+              "what": "מזהה בקשת משלוח חדשה, אוסף הכל ממערכת הניהול (לקוח, כתובת, קראט, זהב), מחשב את מספר ה-JEW הבא מהדרופבוקס ושולח תצוגה מקדימה בוואטסאפ; אחרי 'כן' מפיק חשבונית ותווית FedEx, מדפיס, ומעדכן נשלח/נמכר + משקל.",
+              "io": "בקשת משלוח מאושרת → חשבונית PDF + תווית FedEx מודפסת → ההזמנה מסומנת נשלחה, התכשיט נמכר + משקל",
+              "files": [
+                "C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\server.py",
+                "shipping-agent\\make_invoice.py",
+                "shipping-agent\\d2d_bot.py",
+                "https://github.com/dadahan10/shipping-agent"
+              ],
               "last_run": "28.9 (הופעל ידנית)",
-              "known_issues": "השרת לא רץ (ראה DR-ShippingAgent). באג מספור: כל משלוח צורך 2 מספרים (תכשיט+עיצוב) והפולר מציע מספר תפוס; לא יודע להפיק 2 חשבוניות; REF מוסיף BI תמיד; poller וזרימה ידנית מתנגשים (jobs כפולים); d2d נכשל על נורבגיה (3.8); make_invoice פריט בודד, בלי פלטינה.",
+              "known_issues": "השרת לא רץ (המשימה האוטומטית שמפעילה אותו לא עובדת). באג מספור: כל משלוח צורך 2 מספרים (תכשיט+עיצוב) והסוכן מציע מספר תפוס; לא יודע להפיק 2 חשבוניות; ה-REF מוסיף BI תמיד; הסוכן והתהליך הידני מתנגשים (משלוחים כפולים); הנפקת התווית נכשלה על נורבגיה (3.8); החשבונית תומכת בפריט בודד בלבד, בלי פלטינה.",
               "children": []
             },
             {
@@ -504,208 +591,257 @@
               "title": "סוכן התעודות — מאזין לדרופבוקס",
               "layer": "event-driven",
               "machine": "office",
-              "schedule": "לולאה על התיקייה (watcher) — ראה CertPublisher",
+              "schedule": "בודק את התיקייה ברציפות ברקע",
               "status": "unknown",
-              "what": "PDF תעודה שנוחת בתיקייה → Shopify Files → פוסט gil-lab.com. גרסת ה-watcher רצה דרך Task Scheduler; גרסת one-shot מופעלת ידנית כש'תעלה תעודה לאתר'.",
-              "io": "PDF חדש → CDN URL + פוסט WordPress",
-              "files": ["C:\\Users\\USER\\cert-publisher\\agent.py"],
+              "what": "תעודת PDF שנוחתת בתיקייה → עולה לקבצים של Shopify → פוסט ב-gil-lab.com. גרסה אחת רצה אוטומטית ברקע; גרסה חד-פעמית מופעלת ידנית כשאומרים 'תעלה תעודה לאתר'.",
+              "io": "PDF חדש → קישור לקובץ + פוסט באתר התעודות",
+              "files": [
+                "C:\\Users\\USER\\cert-publisher\\agent.py"
+              ],
               "last_run": "",
               "known_issues": "לא אומת מאז יולי.",
               "children": []
             },
             {
               "id": "customizeai-widget",
-              "title": "ווידג'ט CustomizeAI (API ב-Render)",
+              "title": "ווידג'ט CustomizeAI",
               "layer": "event-driven",
               "machine": "cloud",
-              "schedule": "on event — לקוח מקליד בקשה בדף מוצר",
+              "schedule": "כשלקוח מקליד בקשה בדף מוצר",
               "status": "working",
-              "what": "Claude Vision מתרגם בקשה חופשית לפרומפט מדויק, gpt-image-1 עורך את תמונת המוצר, learned-rules.md נקרא ב-runtime. כל אירוע (open/clarify/generate/lead) נרשם ב-widget_events; פידבק של דניאל ב-/admin/review.",
-              "io": "תמונת מוצר + טקסט → תמונה ערוכה (storage generated-images) + widget_events",
-              "files": ["C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\customizeai\\api\\", "customizeai\\api\\learned-rules.md", "https://github.com/dadahan10/customizeai"],
+              "what": "Claude מבין את בקשת הלקוח והופך אותה להוראה מדויקת, ומחולל תמונות עורך את תמונת המוצר לפי כללים שנלמדו. כל פעולה (פתיחה/הבהרה/יצירה/ליד) נרשמת; הפידבק של דניאל נאסף בדף הסקירה.",
+              "io": "תמונת מוצר + טקסט → תמונה ערוכה + רישום השימוש",
+              "files": [
+                "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\customizeai\\api\\",
+                "customizeai\\api\\learned-rules.md",
+                "https://github.com/dadahan10/customizeai"
+              ],
               "last_run": "10.10 (1 פתיחה)",
-              "known_issues": "לולאת הלמידה (learn-beta) רצה רק כשהסוכן הלילי רץ — והוא מושבת מ-26.7. שימוש נמוך (0–4 אנשים ביום).",
+              "known_issues": "הלמידה מהפידבק רצה רק כשהסוכן הלילי רץ — והוא מושבת מ-26.7. שימוש נמוך (0–4 אנשים ביום).",
               "children": []
             },
             {
               "id": "digest-morning-opener",
-              "title": "פתיחת יום בוואטסאפ (api/digest.ts)",
+              "title": "פתיחת יום בוואטסאפ",
               "layer": "event-driven",
               "machine": "cloud",
-              "schedule": "מתוכנן: GET /api/digest יומי 08:00 מ-Make — לא הוקם",
+              "schedule": "מתוכנן: כל יום ב-08:00 דרך Make — לא הוקם",
               "status": "dormant",
-              "what": "מחשב 3 טריגרים מ-Supabase (חסר יהלום, הזמנה ב-issue, תשלום עתידי ≤7 ימים) ושולח הודעת בוקר אחת דרך Twilio Content template. רץ ב-dry mode.",
-              "io": "Supabase → הודעת WhatsApp template",
-              "files": ["diana-rafael\\api\\digest.ts"],
-                "last_run": "מעולם לא עלה",
-              "known_issues": "חסר: template מאושר (HX SID), env ב-Vercel, תרחיש Make יומי; תלוי גם בפתרון ה-Sandbox.",
+              "what": "בודק 3 דברים במערכת הניהול (חסר יהלום, הזמנה בבעיה, תשלום עתידי תוך 7 ימים) ושולח הודעת בוקר אחת בוואטסאפ. כרגע רק במצב ניסיון.",
+              "io": "מערכת הניהול → הודעת וואטסאפ",
+              "files": [
+                "diana-rafael\\api\\digest.ts"
+              ],
+              "last_run": "מעולם לא עלה",
+              "known_issues": "חסר: תבנית הודעה מאושרת, הגדרות בשרת, תרחיש Make יומי; תלוי גם בפתרון חיבור הוואטסאפ הזמני.",
               "children": []
             }
           ]
         },
         {
           "id": "on-demand",
-          "title": "סקילים כסוכנים (לפי דרישה)",
+          "title": "יכולות כסוכנים (לפי דרישה)",
           "layer": "on-demand",
           "machine": "both",
-          "schedule": "on demand — דניאל אומר משפט טריגר",
+          "schedule": "לפי דרישה — דניאל אומר משפט הפעלה",
           "status": "working",
-          "what": "סוכנים שחיים בתוך הסשן ומופעלים ממשפט של דניאל. רובם עובדים מלא מהמשרד; מהבית חלקם מוגבלים (אין סקריפטי משלוח, אין expense-bot, מפתחות legacy).",
-          "io": "משפט טריגר → סקיל → פעולה במערכות",
-          "files": ["C:\\Users\\USER\\.claude\\skills\\", "C:\\Users\\USER\\.claude\\commands\\", "C:\\Users\\USER\\.claude\\agents\\"],
+          "what": "סוכנים שחיים בתוך השיחה עם Claude ומופעלים ממשפט של דניאל. רובם עובדים מלא מהמשרד; מהבית חלקם מוגבלים (אין כלי משלוח, אין בוט ההוצאות, מפתחות ישנים).",
+          "io": "משפט הפעלה → הסוכן המתאים → פעולה במערכות",
+          "files": [
+            "C:\\Users\\USER\\.claude\\skills\\",
+            "C:\\Users\\USER\\.claude\\commands\\",
+            "C:\\Users\\USER\\.claude\\agents\\"
+          ],
           "last_run": "",
           "known_issues": "",
           "children": [
             {
               "id": "skill-accountability-checkin",
-              "title": "סוכן האחריות (accountability-checkin)",
+              "title": "סוכן האחריות (צ'ק-אין)",
               "layer": "on-demand",
               "machine": "both",
-              "schedule": "בכל פתיחת סשן (חובה) או 'צ'ק-אין'",
+              "schedule": "בכל פתיחת שיחה (חובה) או 'צ'ק-אין'",
               "status": "working",
-              "what": "קורא commitments.md, בודק יומן אתמול/היום, סקירת מניות ביום ראשון (portfolio_screens.py), יעד חודשי מול יומן הטריידים. רושם ל-accountability/log/<date>.md.",
-              "io": "commitments.md + Google Calendar + journal → שאלה אחת לדניאל + לוג",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\accountability-checkin\\SKILL.md", "C:\\Users\\USER\\.claude\\accountability\\commitments.md", "trading-income-system\\journal\\2026-10.md"],
+              "what": "קורא את רשימת ההתחייבויות, בודק יומן אתמול/היום, סקירת מניות ביום ראשון, יעד חודשי מול יומן הטריידים. רושם יומן צ'ק-אין.",
+              "io": "רשימת התחייבויות + Google Calendar + יומן טריידים → שאלה אחת לדניאל + רישום",
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\accountability-checkin\\SKILL.md",
+                "C:\\Users\\USER\\.claude\\accountability\\commitments.md",
+                "trading-income-system\\journal\\2026-10.md"
+              ],
               "last_run": "2026-10-12",
-              "known_issues": "חי רק בסשן — אם דניאל לא פותח, אין צ'ק-אין. כלי יומן לא תמיד זמין בסשן.",
+              "known_issues": "פועל רק בתוך שיחה — אם דניאל לא פותח, אין צ'ק-אין. היומן לא תמיד זמין.",
               "children": []
             },
             {
               "id": "skill-daily-brief",
-              "title": "בריף בוקר (/daily-brief)",
+              "title": "בריף בוקר",
               "layer": "on-demand",
               "machine": "both",
-              "schedule": "on demand (בוקר)",
+              "schedule": "לפי דרישה (בוקר)",
               "status": "working",
-              "what": "יומן היום, מיילים שדורשים תשובה, משימות חוזרות, ובדיקת intake_watchdog --dry-run (מציף תקועות רק אם יש). עדיפות אחת להיום.",
-              "io": "Calendar + Gmail MCP + watchdog → בריף קצר",
-              "files": ["C:\\Users\\USER\\.claude\\commands\\daily-brief.md"],
+              "what": "יומן היום, מיילים שדורשים תשובה, משימות חוזרות, ובדיקת הזמנות תקועות (מציף רק אם יש). עדיפות אחת להיום.",
+              "io": "יומן + Gmail + בדיקת הזמנות תקועות → בריף קצר",
+              "files": [
+                "C:\\Users\\USER\\.claude\\commands\\daily-brief.md"
+              ],
               "last_run": "",
-              "known_issues": "נתיב ה-watchdog בפקודה עדיין Desktop (לא OneDrive) — יישבר במשרד.",
+              "known_issues": "בדיקת ההזמנות התקועות מצביעה על תיקייה ישנה — תישבר במשרד.",
               "children": []
             },
             {
               "id": "skill-close-month",
-              "title": "סגירת חודש (close-month)",
+              "title": "סגירת חודש",
               "layer": "on-demand",
               "machine": "office",
               "schedule": "סביב ה-11–12 לחודש",
               "status": "partial",
               "what": "אוסף הוצאות+הכנסות של החודש הקודם, מיישב לפי חודש-שירות, בונה טיוטות ושולח ל-SUMIT אחרי אישור דניאל. דניאל עושה רק Etsy + חשבוניות ישראל.",
-              "io": "IMAP + פורטלים + Dropbox → מיילים ל-301186466@expense.co.il",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\close-month\\SKILL.md", "C:\\Users\\USER\\OneDrive\\Desktop\\CLAUDE CODE PROJECTS\\expense-bot\\"],
-              "last_run": "אוגוסט נשלח 16.9; ספטמבר: ExpenseBot רץ 11.10, ממתין ל-Etsy + חשבוניות ישראל",
-              "known_issues": "רק מהמשרד. ראה flows.close-month.",
+              "io": "מייל + פורטלים + Dropbox → מיילים לתיבת ההוצאות של SUMIT",
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\close-month\\SKILL.md",
+                "C:\\Users\\USER\\OneDrive\\Desktop\\CLAUDE CODE PROJECTS\\expense-bot\\"
+              ],
+              "last_run": "אוגוסט נשלח 16.9; ספטמבר: בוט ההוצאות רץ 11.10, ממתין ל-Etsy + חשבוניות ישראל",
+              "known_issues": "רק מהמשרד. ראה תהליך סגירת חודש.",
               "children": []
             },
             {
               "id": "skill-ship-jewelry-order",
-              "title": "משלוח הזמנה (ship-jewelry-order)",
+              "title": "משלוח הזמנה",
               "layer": "on-demand",
               "machine": "office",
-              "schedule": "on demand — 'תשלח את ההזמנה' + משקל בגרמים",
+              "schedule": "לפי דרישה — 'תשלח את ההזמנה' + משקל בגרמים",
               "status": "working",
-              "what": "מ-Supabase בלבד: חשבונית מכס (make_invoice.py, DOCX→PDF) + תווית FedEx (d2d_bot.py ב-Chrome אמיתי) + הדפסה + עדכון Shopify/Supabase. הקלט היחיד = משקל.",
-              "io": "J/הזמנה + גרמים → JEW-#### PDF + תווית + orders.shipped/jewelry.sold",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\ship-jewelry-order\\SKILL.md", "C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\"],
+              "what": "הכל ממערכת הניהול: חשבונית מכס (PDF) + תווית FedEx (נוצרת בכרום) + הדפסה + עדכון Shopify ומערכת הניהול. הקלט היחיד = משקל.",
+              "io": "J/הזמנה + גרמים → חשבונית JEW ב-PDF + תווית + ההזמנה נשלחה/התכשיט נמכר",
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\ship-jewelry-order\\SKILL.md",
+                "C:\\Users\\USER\\OneDrive\\Desktop\\shipping-agent\\"
+              ],
               "last_run": "28.9 (דיפאק 1624)",
-              "known_issues": "מהבית: אין סקריפטים/python-docx/מפתחות — רק עריכת DOCX קיים דרך Word COM. d2d שביר (Cloudflare, נורבגיה). פיצול חשבונית תכשיט/עיצוב 30/70 ידני בצ'אט.",
+              "known_issues": "מהבית: אין את כלי המשלוח והמפתחות — רק עריכת חשבונית Word קיימת. הנפקת התווית שבירה (חסימות באתר, נורבגיה). פיצול חשבונית תכשיט/עיצוב 30/70 ידני בצ'אט.",
               "children": []
             },
             {
               "id": "skill-complete-order-intake",
-              "title": "השלמת קליטה (complete-order-intake)",
+              "title": "השלמת קליטת הזמנה",
               "layer": "on-demand",
               "machine": "both",
-              "schedule": "on demand — הזמנה גולמית",
+              "schedule": "לפי דרישה — הזמנה שנכנסה לא שלמה",
               "status": "working",
-              "what": "מה שרוטינת הענן הייתה אמורה לעשות: פיצול רב-פריטי ל-J לכל פריט (סכום פרופורציונלי), העשרת jewelry (SKU/זהב), קישור לקוח, הפניית מוצר מלאי ל-J הקיים. בלי טרלו.",
-              "io": "orders גולמי → J-ים שלמים ב-Supabase",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\complete-order-intake\\SKILL.md"],
+              "what": "מה שהמשימה בענן הייתה אמורה לעשות: פיצול הזמנה רב-פריטית ל-J לכל פריט (סכום יחסי), השלמת פרטי התכשיט (SKU/זהב), קישור לקוח, הפניית מוצר מלאי ל-J הקיים. בלי טרלו.",
+              "io": "הזמנה גולמית → מספרי J שלמים במערכת הניהול",
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\complete-order-intake\\SKILL.md"
+              ],
               "last_run": "1.10 (#1275 Trisha)",
               "known_issues": "ידני עד שתיבנה קליטה חדשה. חייב לוודא ששתי שורות פיצול שלמות לפני הבוקר (אחרת סוכן הבריאות מוחק).",
               "children": []
             },
             {
               "id": "skill-customer-service",
-              "title": "שירות לקוחות (customer-service / answer-customer)",
+              "title": "שירות לקוחות",
               "layer": "on-demand",
               "machine": "both",
-              "schedule": "on demand — דניאל מדביק הודעת לקוח",
+              "schedule": "לפי דרישה — דניאל מדביק הודעת לקוח",
               "status": "working",
               "what": "מנסח תשובות בקול המותג (דניאל חותם) לכל נושא: החזרות, עיכובים, מידות, תלונות; לומד מכל תשובה אמיתית. /answer-customer מסווג ומכין טיוטה לאישור.",
               "io": "הודעת לקוח → טיוטת תשובה",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\customer-service\\SKILL.md", "C:\\Users\\USER\\.claude\\commands\\answer-customer.md"],
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\customer-service\\SKILL.md",
+                "C:\\Users\\USER\\.claude\\commands\\answer-customer.md"
+              ],
               "last_run": "",
               "known_issues": "",
               "children": []
             },
             {
               "id": "skill-stock-agent",
-              "title": "סוכן המניות (stock-agent + scan-stock-reversals + TradingAgents + sector screener)",
+              "title": "סוכן המניות (סריקות, ניתוח רב-סוכני, סקרינר סקטורים)",
               "layer": "on-demand",
               "machine": "both",
-              "schedule": "on demand; סקירה שבועית ביום ראשון דרך סוכן האחריות",
+              "schedule": "לפי דרישה; סקירה שבועית ביום ראשון דרך סוכן האחריות",
               "status": "working",
-              "what": "תת-סוכן מחקר טכני: סריקת היפוכים (SMA150/RSI/MACD, yfinance), בקטסטים, חדשות. בנוסף TradingAgents (רב-סוכני, Anthropic, run_analysis.py TICKER) וסקרינר סקטוריאלי (build.py → out/<etf>.html).",
-              "io": "watchlists → דוחות/טבלאות HTML; יומן טריידים מול יעד 7,000 ₪",
-              "files": ["C:\\Users\\USER\\.claude\\agents\\stock-agent.md", "C:\\Users\\USER\\.claude\\skills\\scan-stock-reversals\\SKILL.md", "CLAUDE CODE PROJECTS\\TradingAgents\\run_analysis.py", "trading-income-system\\screener\\build.py", "https://github.com/dadahan10/trading-income-system"],
+              "what": "סוכן מחקר טכני: סריקת היפוכים (ממוצע נע 150, RSI, MACD), בדיקות על נתוני עבר, חדשות. בנוסף ניתוח רב-סוכני למניה בודדת וסקרינר לפי סקטור שמפיק טבלאות.",
+              "io": "רשימות מעקב → דוחות וטבלאות; יומן טריידים מול יעד 7,000 ₪",
+              "files": [
+                "C:\\Users\\USER\\.claude\\agents\\stock-agent.md",
+                "C:\\Users\\USER\\.claude\\skills\\scan-stock-reversals\\SKILL.md",
+                "CLAUDE CODE PROJECTS\\TradingAgents\\run_analysis.py",
+                "trading-income-system\\screener\\build.py",
+                "https://github.com/dadahan10/trading-income-system"
+              ],
               "last_run": "12.10 (סקירה שבועית פתוחה)",
-              "known_issues": "לא מסחר אוטומטי — תומך החלטה בלבד. TradingAgents דורש מפתח Anthropic ידני לכל מחשב.",
+              "known_issues": "לא מסחר אוטומטי — תומך החלטה בלבד. הניתוח הרב-סוכני דורש מפתח Anthropic ידני בכל מחשב.",
               "children": []
             },
             {
               "id": "skill-remnant-render-loop",
-              "title": "הדמיות REMNANT (remnant-render-loop + סוכני רינדור)",
+              "title": "הדמיות REMNANT (סוכני רינדור)",
               "layer": "on-demand",
               "machine": "both",
-              "schedule": "on demand; סוכני רינדור מקבילים ביום, אצוות לילה חד-פעמיות",
+              "schedule": "לפי דרישה; כמה סוכני רינדור במקביל ביום, אצוות לילה חד-פעמיות",
               "status": "working",
-              "what": "Rhino CAD → Blender (render_matrix.py) בלולאת maker/checker: שינוי אחד לרנדר, מול רפרנס סטודיו, keep/discard מדניאל. תוצרים לדרופבוקס + q4\\renders + LOG.md; הדמיה מאושרת → דף מוצר Shopify (push_gw_drafts.py).",
-              "io": ".3dm → PNG (Y/R/W) → Dropbox renders + Shopify DRAFT",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\remnant-render-loop\\SKILL.md", "remnant-launch\\pipeline\\render_matrix.py", "remnant-launch\\q4\\product-pages\\push_gw_drafts.py"],
+              "what": "מקובץ Rhino לתוכנת ההדמיות, בלולאה של יוצר ובודק: שינוי אחד בכל הדמיה, השוואה לרפרנס הסטודיו, דניאל מחליט לשמור/לזרוק. התוצרים נשמרים בדרופבוקס ובתיקיית ההדמיות; הדמיה מאושרת → דף מוצר בשופיפיי (טיוטה).",
+              "io": "קובץ Rhino → תמונות (זהב צהוב/אדום/לבן) → Dropbox + טיוטת מוצר בשופיפיי",
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\remnant-render-loop\\SKILL.md",
+                "remnant-launch\\pipeline\\render_matrix.py",
+                "remnant-launch\\q4\\product-pages\\push_gw_drafts.py"
+              ],
               "last_run": "2026-10-12 (E048 v3, E049 v2)",
-              "known_issues": "מגבלות שימוש הורגות סוכנים באמצע; בבית אין claude CLI (אין checker) ואין OneDrive/rembg; knobs תלויי-גיאומטריה.",
+              "known_issues": "מגבלות שימוש עוצרות סוכנים באמצע; בבית אין את הבודק האוטומטי, OneDrive ותוכנת הסרת הרקע; ההגדרות תלויות בצורת התכשיט.",
               "children": []
             },
             {
               "id": "skill-finance-small",
-              "title": "כספים קטנים (record-supplier-payment, foreign-transfer-form)",
+              "title": "כספים קטנים (תשלומי ספקים, העברה לחו\"ל)",
               "layer": "on-demand",
               "machine": "office",
-              "schedule": "on demand — 'תכניס צ'ק' / חשבונית ספק חו\"ל",
+              "schedule": "לפי דרישה — 'תכניס צ'ק' / חשבונית ספק חו\"ל",
               "status": "working",
-              "what": "רישום תשלום ספק לתזרים (Supabase expenses) עם בדיקת כפילויות והצלבת מלאי יהלומים; מילוי טופס העברה במט\"ח של דיסקונט, חתימה, תיוק בתיקיית ההוצאות של החודש.",
-              "io": "צ'ק/חשבונית → expenses + PDF מתויק",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\record-supplier-payment\\SKILL.md", "C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form\\SKILL.md"],
+              "what": "רישום תשלום ספק לתזרים במערכת הניהול עם בדיקת כפילויות והצלבת מלאי יהלומים; מילוי טופס העברה במט\"ח של דיסקונט, חתימה, תיוק בתיקיית ההוצאות של החודש.",
+              "io": "צ'ק/חשבונית → תזרים + PDF מתויק",
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\record-supplier-payment\\SKILL.md",
+                "C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form\\SKILL.md"
+              ],
               "last_run": "",
               "known_issues": "",
               "children": []
             },
             {
               "id": "skill-marketing-content",
-              "title": "שיווק ותוכן (asset-studio, write-post, send-report, social-content, shopify-spell-check/content-fix, niche-research)",
+              "title": "שיווק ותוכן (קריאייטיב, פוסטים, דוחות, תיקוני אתר, מחקר נישה)",
               "layer": "on-demand",
               "machine": "both",
-              "schedule": "on demand",
+              "schedule": "לפי דרישה",
               "status": "working",
-              "what": "יצירת קריאייטיב ב-Airtable Asset Studio, פוסטים בקול המותג, דוח KPI שבועי/חודשי, תיקוני תוכן בשופיפיי, מחקר נישה אדברסרי. סוכן השיווק (diana-rafael-marketing) מחזיק connectors ל-Google Ads/Meta/Klaviyo/GSC/WhatsApp Cloud API.",
+              "what": "יצירת קריאייטיב ב-Airtable Asset Studio, פוסטים בקול המותג, דוח KPI שבועי/חודשי, תיקוני תוכן בשופיפיי, מחקר נישה מעמיק. סוכן השיווק מחובר ל-Google Ads, Meta, Klaviyo, Google Search Console ו-WhatsApp.",
               "io": "בריף → תוכן/דוח/תיקון באתר",
-              "files": ["C:\\Users\\USER\\.claude\\skills\\asset-studio\\", "C:\\Users\\USER\\.claude\\commands\\write-post.md", "C:\\Users\\USER\\.claude\\commands\\send-report.md", "CLAUDE CODE PROJECTS\\diana-rafael-marketing\\connectors\\"],
+              "files": [
+                "C:\\Users\\USER\\.claude\\skills\\asset-studio\\",
+                "C:\\Users\\USER\\.claude\\commands\\write-post.md",
+                "C:\\Users\\USER\\.claude\\commands\\send-report.md",
+                "CLAUDE CODE PROJECTS\\diana-rafael-marketing\\connectors\\"
+              ],
               "last_run": "12.10 (טיזר REMNANT בקלאביו)",
-              "known_issues": "send_campaign בקלאביו נחסם ע\"י ההרשאות — דניאל לוחץ Schedule. 0 פלואים פעילים בקלאביו. Google Reviews ממתין לאישור גוגל.",
+              "known_issues": "שליחת קמפיין בקלאביו חסומה בהרשאות — דניאל לוחץ Schedule. 0 אוטומציות פעילות בקלאביו. Google Reviews ממתין לאישור גוגל.",
               "children": []
             },
             {
               "id": "skill-catalog-manual",
-              "title": "קטלוג — ריצה ידנית (catalog-nightly.ps1 -Force)",
+              "title": "קטלוג — הפעלה ידנית",
               "layer": "on-demand",
               "machine": "office",
-              "schedule": "on demand",
+              "schedule": "לפי דרישה",
               "status": "working",
-              "what": "אותו סוכן של DR-Catalog-Nightly, מופעל מיד בלי לחכות ליום ראשון.",
-              "io": "ראה DR-Catalog-Nightly",
-              "files": ["C:\\Users\\USER\\.claude\\night-agent\\catalog-nightly.ps1"],
+              "what": "אותו סוכן קטלוג שרץ אוטומטית כל יום ראשון, מופעל מיד בלי לחכות.",
+              "io": "ראה סוכן הקטלוג השבועי",
+              "files": [
+                "C:\\Users\\USER\\.claude\\night-agent\\catalog-nightly.ps1"
+              ],
               "last_run": "",
               "known_issues": "",
               "children": []
@@ -719,28 +855,260 @@
           "machine": "cloud",
           "schedule": "תמיד",
           "status": "partial",
-          "what": "המערכות שהסוכנים קוראים וכותבים אליהן. מקור האמת היחיד = Supabase (מערכת הניהול).",
+          "what": "המערכות שהסוכנים קוראים וכותבים אליהן. מקור האמת היחיד = מערכת הניהול.",
           "io": "",
           "files": [],
           "last_run": "",
           "known_issues": "",
           "children": [
-            {"id": "svc-supabase", "title": "Supabase — מערכת הניהול (fcmlnrkkcabebuechaum) + CustomizeAI (juygzbkytubncshfdcae)", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "working", "what": "מקור האמת: orders, customers, jewelry, diamonds, expenses, ship_jobs, wa_conversations, models; ב-CustomizeAI: widget_events, merchants, storage generated-images. גישה דרך REST עם sb_secret (UA לא-דפדפני) או Management API.", "io": "", "files": ["https://fcmlnrkkcabebuechaum.supabase.co", "CLAUDE CODE PROJECTS\\.ENV.SUPABASE_SECRET.txt"], "last_run": "", "known_issues": "סיבוב מפתח (22.6) שבר את Make עד שדניאל עדכן ידנית. FK orders.j_number→jewelry ON UPDATE RESTRICT מקשה על שינוי J. במחשב הבית רק מפתח legacy מת.", "children": []},
-            {"id": "svc-make", "title": "Make.com (team 166466)", "layer": "external-service", "machine": "make", "schedule": "תמיד", "status": "working", "what": "שכבת הקליטה הגולמית. MCP מחובר כ-customercare@ (Owner): list/get/activate/run/blueprint, אבל לא עדכון credentials של connection.", "io": "", "files": ["https://eu1.make.com/166466"], "last_run": "", "known_issues": "כיבוי שקט אחרי 3 כשלים; חיבורי Gmail google-restricted נשברים.", "children": []},
-            {"id": "svc-shopify", "title": "Shopify — diana-rafael.myshopify.com", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "working", "what": "חנות + Admin API (app order-intake). מקור ההזמנות ל-Make, קטלוג למוצרים/SKU, Files לתעודות, דפי מוצר REMNANT/PULSO.", "io": "", "files": ["CLAUDE CODE PROJECTS\\.ENV.SHOPIFY_TOKEN.txt"], "last_run": "", "known_issues": "הטוקן חסר write_themes (סימולטור R543). מוצרים ACTIVE בלי ערוץ Online Store לא נראים (Smoothen, Starz).", "children": []},
-            {"id": "svc-etsy", "title": "Etsy — DianaBlackIce / DianaRafaelJewelry", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "partial", "what": "הזמנות נכנסות דרך Make בלבד; ה-API לסוכן פייתון BANNED. מקור אמת להזמנה = מייל You made a sale.", "io": "", "files": [], "last_run": "", "known_issues": "שני ה-connections ב-Make מצביעים על Black Ice — אין קליטה לחנות Diana. חשבוניות Etsy לסגירת חודש — דניאל ידני.", "children": []},
-            {"id": "svc-trello", "title": "Trello — Jewelry Progress (יצא משימוש) + לוח DD של המעצב", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "dormant", "what": "לוח Jewelry Progress הוצא משימוש 23.8 (דניאל מנהל ידנית, שום תהליך לא נוגע). לוח DD של המעצב נקרא-בלבד ע\"י status_triggers.", "io": "", "files": ["CLAUDE CODE PROJECTS\\.ENV.TRELLO.txt"], "last_run": "", "known_issues": "תרחיש Make 1436301 עדיין פותח כרטיסים. טוקן Trello פג (401) ביולי — רענון ידני.", "children": []},
-            {"id": "svc-klaviyo", "title": "Klaviyo (UEHusj)", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "partial", "what": "מיילים: קמפייני REMNANT Q4 (טיזר/השקה/קלירנס), רשימות וסגמנטים. MCP לעבודה אינטראקטיבית + connector read-only בריפו השיווק.", "io": "", "files": ["CLAUDE CODE PROJECTS\\.ENV.KLAVIYO_READ_ONLY.txt"], "last_run": "קלירנס C נשלח 10.10; טיזר 12.10 12:45", "known_issues": "send_campaign נחסם בהרשאות; assign_template יוצר Clone (לעדכן מקור + assign מחדש); 0 פלואים פעילים; חשבון חינמי מול 1,900 נמענים.", "children": []},
-            {"id": "svc-fedex-d2d", "title": "FedEx דרך d2dvalue.com (D2D)", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "partial", "what": "הנפקת תוויות FedEx (user 6206) ע\"י d2d_bot.py ב-Chrome אמיתי; מיילי תווית מ-info@/לאור סוגרים הזמנות. חשבונית D2D מגיעה תמיד חודש אחרי → straggler ליעל.", "io": "", "files": [], "last_run": "", "known_issues": "Cloudflare challenge; שדה #user_identity; נכשל על נורבגיה; אחרי Shipment confirmed בלי תווית — למשוך מההיסטוריה, לא להריץ שוב.", "children": []},
-            {"id": "svc-twilio", "title": "Twilio WhatsApp (Sandbox)", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "broken", "what": "ערוץ הוואטסאפ של סוכן הניהול ושל preview המשלוחים.", "io": "", "files": [], "last_run": "", "known_issues": "Sandbox פג כל 72 שעות (join <code> ל-+14155238886). Business Sender מאושר — לא הוקם. שיווק בוואטסאפ עבר ל-Meta Cloud API (test number בלבד).", "children": []},
-            {"id": "svc-vercel", "title": "Vercel — diana-rafael (אפליקציית הניהול + api/whatsapp.ts + api/digest.ts)", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "working", "what": "מערכת הניהול React (ShippingPage, JewelryPage, ModelsPage) + ה-API של הוואטסאפ. סודות (TWILIO_AUTH_TOKEN) רק ב-Vercel.", "io": "", "files": ["https://github.com/dadahan10/diana-rafael"], "last_run": "", "known_issues": "login — email confirmation לא נפתר (project_diana-rafael-app-auth).", "children": []},
-            {"id": "svc-render", "title": "Render — CustomizeAI API", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "working", "what": "הווידג'ט, /admin/review והדוח היומי 08:00.", "io": "", "files": ["https://github.com/dadahan10/customizeai"], "last_run": "", "known_issues": "", "children": []},
-            {"id": "svc-github-pages", "title": "GitHub Pages — command-center, archive.dianarafael.com, remnant", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "working", "what": "הקוקפיט (dadahan10.github.io/command-center), אתר החיסול (remnant-clearance → archive.dianarafael.com), נכסי REMNANT (diana-rafael-remnant: תמונות למיילים/באנרים).", "io": "", "files": ["https://dadahan10.github.io/command-center/", "https://archive.dianarafael.com"], "last_run": "", "known_issues": "", "children": []},
-            {"id": "svc-gmail-imap", "title": "Gmail — IMAP/SMTP (App Passwords) + MCP", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "working", "what": "IMAP עם App Password = הדרך היציבה (expense-bot, status_triggers, send_mail.py). ה-MCP לא מוריד צרופות; Make Gmail google-restricted נשבר.", "io": "", "files": ["CLAUDE CODE PROJECTS\\.ENV.EXPENSES_BOT.txt"], "last_run": "", "known_issues": "חיפוש עברית ב-IMAP נכשל (לסנן בפייתון).", "children": []},
-            {"id": "svc-sumit", "title": "SUMIT (רו\"ח) — 301186466@expense.co.il + יעל", "layer": "external-service", "machine": "cloud", "schedule": "חודשי", "status": "working", "what": "קליטת חבילת הוצאות-הכנסות במייל; מחזיר 'קיבלנו! X קבצים'. Stragglers → yael@recpa.co.il ישירות (לא cc בחבילה).", "io": "", "files": [], "last_run": "אוגוסט 16.9", "known_issues": "", "children": []},
-            {"id": "svc-dropbox", "title": "Dropbox — תכשיטים Jewelry, ניהול משרד, תעודות", "layer": "external-service", "machine": "both", "schedule": "תמיד", "status": "working", "what": "קבצי CAD/הדמיות לקטלוג ולרינדור, תיקיות חודש לסגירת חודש (הוצאות/תכשיטים לישראל/לחול/עיצוב תכשיטים), תעודות PDF. מסונכרן לשני המחשבים.", "io": "", "files": ["C:\\Users\\USER\\Dropbox\\"], "last_run": "", "known_issues": "נתיבים בעברית → PYTHONUTF8=1 חובה.", "children": []},
-            {"id": "svc-wordpress-gillab", "title": "WordPress gil-lab.com — גלריית תעודות", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "partial", "what": "WP 4.4 ישן, XML-RPC/Playwright, SSL לא תקין. מארח את פוסטי התעודות.", "io": "", "files": [], "last_run": "", "known_issues": "פוסטים כפולים אפשריים.", "children": []},
-            {"id": "svc-ads-connectors", "title": "Google Ads / Meta / GSC / Google Reviews / WhatsApp Cloud API (connectors)", "layer": "external-service", "machine": "cloud", "schedule": "תמיד", "status": "partial", "what": "connectors read-first בריפו השיווק: Google Ads (MCC 703-955-3880, 0 קמפיינים פעילים), Meta (ad account 24444370, 0 פעילים), GSC live, Reviews ממתין לאישור, WhatsApp Cloud API על test number.", "io": "", "files": ["CLAUDE CODE PROJECTS\\diana-rafael-marketing\\connectors\\"], "last_run": "", "known_issues": "אין קמפיין פעיל; production של WhatsApp Cloud דורש מספר + System User token + אימות עסק.", "children": []}
+            {
+              "id": "svc-supabase",
+              "title": "מערכת הניהול + מסד הנתונים של CustomizeAI",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "מקור האמת: הזמנות, לקוחות, תכשיטים, יהלומים, הוצאות, משלוחים, שיחות וואטסאפ, מודלים; ב-CustomizeAI: שימוש בווידג'ט, חנויות ותמונות שנוצרו.",
+              "io": "",
+              "files": [
+                "https://fcmlnrkkcabebuechaum.supabase.co",
+                "CLAUDE CODE PROJECTS\\.ENV.SUPABASE_SECRET.txt"
+              ],
+              "last_run": "",
+              "known_issues": "החלפת מפתח (22.6) שברה את Make עד שדניאל עדכן ידנית. שינוי מספר J של הזמנה קיימת חסום במערכת וקשה. במחשב הבית יש רק מפתח ישן שלא עובד.",
+              "children": []
+            },
+            {
+              "id": "svc-make",
+              "title": "Make.com",
+              "layer": "external-service",
+              "machine": "make",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "שכבת הקליטה הגולמית. Claude מחובר כ-customercare@ (בעלים): יכול לראות, להפעיל ולהריץ תרחישים, אבל לא לעדכן סיסמאות של חיבורים.",
+              "io": "",
+              "files": [
+                "https://eu1.make.com/166466"
+              ],
+              "last_run": "",
+              "known_issues": "נכבה בשקט אחרי 3 כשלים; חיבורי Gmail נשברים בגלל הגבלות של גוגל.",
+              "children": []
+            },
+            {
+              "id": "svc-shopify",
+              "title": "Shopify — diana-rafael.myshopify.com",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "החנות + חיבור לניהול. מקור ההזמנות ל-Make, קטלוג מוצרים/SKU, קבצים לתעודות, דפי מוצר REMNANT/PULSO.",
+              "io": "",
+              "files": [
+                "CLAUDE CODE PROJECTS\\.ENV.SHOPIFY_TOKEN.txt"
+              ],
+              "last_run": "",
+              "known_issues": "להרשאה של Claude חסרה עריכת ערכת העיצוב (סימולטור R543). מוצרים פעילים שלא משויכים לחנות האונליין לא נראים (Smoothen, Starz).",
+              "children": []
+            },
+            {
+              "id": "svc-etsy",
+              "title": "Etsy — DianaBlackIce / DianaRafaelJewelry",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "partial",
+              "what": "הזמנות נכנסות דרך Make בלבד; חיבור ישיר של סוכן — אסור. מקור אמת להזמנה = מייל You made a sale.",
+              "io": "",
+              "files": [],
+              "last_run": "",
+              "known_issues": "שני החיבורים ב-Make מצביעים על Black Ice — אין קליטה לחנות Diana. חשבוניות Etsy לסגירת חודש — דניאל ידני.",
+              "children": []
+            },
+            {
+              "id": "svc-trello",
+              "title": "Trello — Jewelry Progress (יצא משימוש) + לוח DD של המעצב",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "dormant",
+              "what": "לוח Jewelry Progress הוצא משימוש 23.8 (דניאל מנהל ידנית, שום תהליך לא נוגע). לוח DD של המעצב נקרא בלבד ע\"י סוכן הסטטוסים.",
+              "io": "",
+              "files": [
+                "CLAUDE CODE PROJECTS\\.ENV.TRELLO.txt"
+              ],
+              "last_run": "",
+              "known_issues": "תרחיש ב-Make עדיין פותח כרטיסים בטרלו. החיבור לטרלו פג ביולי — דורש רענון ידני.",
+              "children": []
+            },
+            {
+              "id": "svc-klaviyo",
+              "title": "Klaviyo",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "partial",
+              "what": "מיילים: קמפייני REMNANT Q4 (טיזר/השקה/קלירנס), רשימות וסגמנטים. חיבור לעבודה שוטפת + חיבור לקריאה בלבד בפרויקט השיווק.",
+              "io": "",
+              "files": [
+                "CLAUDE CODE PROJECTS\\.ENV.KLAVIYO_READ_ONLY.txt"
+              ],
+              "last_run": "קלירנס C נשלח 10.10; טיזר 12.10 12:45",
+              "known_issues": "שליחת קמפיין חסומה בהרשאות; שיוך תבנית יוצר עותק (לעדכן את המקור ולשייך מחדש); 0 אוטומציות פעילות; חשבון חינמי מול 1,900 נמענים.",
+              "children": []
+            },
+            {
+              "id": "svc-fedex-d2d",
+              "title": "FedEx דרך d2dvalue.com (D2D)",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "partial",
+              "what": "הנפקת תוויות FedEx אוטומטית דרך כרום; מיילי התווית מ-info@/לאור סוגרים הזמנות. חשבונית D2D מגיעה תמיד חודש אחרי → נשלחת בנפרד ליעל.",
+              "io": "",
+              "files": [],
+              "last_run": "",
+              "known_issues": "חסימות אבטחה באתר; נכשל על נורבגיה; אם המשלוח אושר בלי תווית — למשוך מההיסטוריה, לא להריץ שוב.",
+              "children": []
+            },
+            {
+              "id": "svc-twilio",
+              "title": "חיבור הוואטסאפ הזמני (Twilio)",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "broken",
+              "what": "ערוץ הוואטסאפ של סוכן הניהול ושל אישור המשלוחים.",
+              "io": "",
+              "files": [],
+              "last_run": "",
+              "known_issues": "החיבור הזמני פג כל 72 שעות (צריך לשלוח קוד הצטרפות מחדש). מספר עסקי מאושר — לא הוקם. שיווק בוואטסאפ עבר ל-Meta (מספר ניסיון בלבד).",
+              "children": []
+            },
+            {
+              "id": "svc-vercel",
+              "title": "השרת של אפליקציית הניהול + סוכן הוואטסאפ",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "אפליקציית הניהול (משלוחים, תכשיטים, מודלים) + חיבור הוואטסאפ. הסיסמאות שמורות רק בשרת.",
+              "io": "",
+              "files": [
+                "https://github.com/dadahan10/diana-rafael"
+              ],
+              "last_run": "",
+              "known_issues": "כניסה למערכת — אישור המייל בהרשמה לא נפתר.",
+              "children": []
+            },
+            {
+              "id": "svc-render",
+              "title": "השרת של CustomizeAI",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "הווידג'ט, דף הסקירה והדוח היומי 08:00.",
+              "io": "",
+              "files": [
+                "https://github.com/dadahan10/customizeai"
+              ],
+              "last_run": "",
+              "known_issues": "",
+              "children": []
+            },
+            {
+              "id": "svc-github-pages",
+              "title": "אתרים: הקוקפיט, אתר החיסול, נכסי REMNANT",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "הקוקפיט, אתר החיסול (archive.dianarafael.com), נכסי REMNANT (תמונות למיילים/באנרים).",
+              "io": "",
+              "files": [
+                "https://dadahan10.github.io/command-center/",
+                "https://archive.dianarafael.com"
+              ],
+              "last_run": "",
+              "known_issues": "",
+              "children": []
+            },
+            {
+              "id": "svc-gmail-imap",
+              "title": "Gmail",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "חיבור ישיר עם סיסמת אפליקציה = הדרך היציבה (בוט ההוצאות, סוכן הסטטוסים, שליחת מיילים). החיבור של Claude לא מוריד צרופות; חיבור Gmail ב-Make נשבר.",
+              "io": "",
+              "files": [
+                "CLAUDE CODE PROJECTS\\.ENV.EXPENSES_BOT.txt"
+              ],
+              "last_run": "",
+              "known_issues": "חיפוש בעברית במייל נכשל (צריך לסנן אחרי ההורדה).",
+              "children": []
+            },
+            {
+              "id": "svc-sumit",
+              "title": "SUMIT (רו\"ח) — תיבת ההוצאות + יעל",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "חודשי",
+              "status": "working",
+              "what": "קליטת חבילת הוצאות-הכנסות במייל; מחזיר 'קיבלנו! X קבצים'. חשבוניות מאחרות → ישירות ליעל (yael@recpa.co.il), לא בהעתק לחבילה.",
+              "io": "",
+              "files": [],
+              "last_run": "אוגוסט 16.9",
+              "known_issues": "",
+              "children": []
+            },
+            {
+              "id": "svc-dropbox",
+              "title": "Dropbox — תכשיטים Jewelry, ניהול משרד, תעודות",
+              "layer": "external-service",
+              "machine": "both",
+              "schedule": "תמיד",
+              "status": "working",
+              "what": "קבצי CAD/הדמיות לקטלוג ולרינדור, תיקיות חודש לסגירת חודש (הוצאות/תכשיטים לישראל/לחול/עיצוב תכשיטים), תעודות PDF. מסונכרן לשני המחשבים.",
+              "io": "",
+              "files": [
+                "C:\\Users\\USER\\Dropbox\\"
+              ],
+              "last_run": "",
+              "known_issues": "שמות תיקיות בעברית — דורש הגדרת קידוד מיוחדת, אחרת נשמר ג'יבריש.",
+              "children": []
+            },
+            {
+              "id": "svc-wordpress-gillab",
+              "title": "WordPress gil-lab.com — גלריית תעודות",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "partial",
+              "what": "אתר וורדפרס ישן, מתעדכן דרך דפדפן אוטומטי, תעודת האבטחה לא תקינה. מארח את פוסטי התעודות.",
+              "io": "",
+              "files": [],
+              "last_run": "",
+              "known_issues": "פוסטים כפולים אפשריים.",
+              "children": []
+            },
+            {
+              "id": "svc-ads-connectors",
+              "title": "Google Ads / Meta / Google Search Console / Google Reviews / WhatsApp (חיבורים)",
+              "layer": "external-service",
+              "machine": "cloud",
+              "schedule": "תמיד",
+              "status": "partial",
+              "what": "חיבורים בפרויקט השיווק (קודם כל קריאה): Google Ads (0 קמפיינים פעילים), Meta (0 פעילים), Search Console פעיל, Reviews ממתין לאישור, WhatsApp על מספר ניסיון.",
+              "io": "",
+              "files": [
+                "CLAUDE CODE PROJECTS\\diana-rafael-marketing\\connectors\\"
+              ],
+              "last_run": "",
+              "known_issues": "אין קמפיין פעיל; הפעלת וואטסאפ עסקי אמיתי דורשת מספר, הרשאת מערכת ואימות עסק.",
+              "children": []
+            }
           ]
         }
       ]
@@ -749,93 +1117,437 @@
   "flows": {
     "close-month": {
       "title": "סגירת חודש",
-      "when": "סביב ה-11–12 לחודש, עבור החודש הקודם. רק מהמשרד (expense-bot + המשימה המתוזמנת קיימים רק שם).",
+      "when": "סביב ה-11–12 לחודש, עבור החודש הקודם. רק מהמשרד (בוט ההוצאות והמשימה האוטומטית קיימים רק שם).",
       "steps": [
-        {"n": 1, "title": "הורדת חשבוניות מהמייל (IMAP) לתיקיית הוצאות + תיוג Invoices/YYYY-MM", "who": "ExpenseBot (DianaRafael-ExpenseBot)", "tool": "download_expenses.py --auto-monthly", "status": "auto", "notes": "רץ ה-11 09:00 במשרד; ב-11.10 rc=0. בלי גבול-חודש עליון → גורר חשבוניות של החודש הבא והכנסות. לעולם לא --no-file. לבדוק _result.json filed_to_label > 0."},
-        {"n": 2, "title": "משיכת חשבוניות לינק/פורטל: רב-פס, Adobe, PayMe, פנדה, Etsy", "who": "Claude (fetch_ravpass + adobe_invoice) / דניאל (Etsy, PayMe, פנדה)", "tool": "fetch_ravpass.py; adobe_invoice.py --month YYYY-MM", "status": "manual", "notes": "Adobe אוטומטי (Chrome אמיתי + פרופיל מתמשך). PayMe/פנדה — ידני עד שייבנה בוט באותו דפוס. Etsy — דניאל בלבד (לא מסתכנים עם החנויות)."},
-        {"n": 3, "title": "יישוב לפי חודש-שירות וניקוי תיקיית הוצאות", "who": "Claude", "tool": "ידני בצ'אט (לא מקודד)", "status": "manual", "notes": "להעביר חשבוניות של החודש הבא; GreenInvoice 7 ספרות = הוצאה, 5 ספרות = הכנסה → תכשיטים לישראל; דדופ. חוזר על עצמו אחרי כל הורדה (re-pollution)."},
-        {"n": 4, "title": "בדיקת שלמות מול ספקים קבועים + הצלבת הזמנות private_ils מול חשבוניות", "who": "Claude", "tool": "רשימת ספקים בסקיל + שאילתת Supabase", "status": "manual", "notes": "Anthropic, Calendly, Make, Supabase, Replicate, Shopify, XCover, Google, Bezeq, Partner, בית נועם, D2D, NewPack, SuperPharm, GreenInvoice, רב-פס, PayMe, Adobe, Etsy. צ'קליסט אוטומטי — טרם נבנה."},
-        {"n": 5, "title": "הרכבת הכנסות: תכשיטים לחול (#JEW בלבד), תכשיטים לישראל (דניאל מפיק), עיצוב תכשיטים (30/70), ביטול עסקה", "who": "build_draft.py / דניאל (חשבוניות ישראל)", "tool": "build_draft.py", "status": "auto", "notes": "לא לצרף _LABEL.pdf / .docx / debug PNG. קבצים גדולים לכווץ ב-PyMuPDF (build_draft לא מפצל קובץ בודד מעל CAP)."},
-        {"n": 6, "title": "בניית טיוטות Gmail → אישור דניאל → שליחה ל-SUMIT", "who": "Claude בונה, דניאל מאשר, build_draft שולח", "tool": "python build_draft.py; python build_draft.py send", "status": "manual", "notes": "שער אישור: לוודא Etsy ×2 + חשבוניות ישראל בפנים, להציג רשימה מסודרת, לקבל 'שלח' מפורש. יעד 301186466@expense.co.il בלבד, בלי cc ליעל. לאמת 'קיבלנו! X קבצים'."},
-        {"n": 7, "title": "Stragglers (D2D ועוד) בשבוע שאחרי → פורוורד ישיר ליעל; החודש הבא כבר אוסף", "who": "Claude / דניאל", "tool": "Gmail forward", "status": "manual", "notes": "אחד-אחד ל-yael@recpa.co.il, לא לתייק בחודש הסגור. חשבוניות החודש הבא נכנסות לתיקייה הבאה."}
+        {
+          "n": 1,
+          "title": "הורדת חשבוניות מהמייל לתיקיית הוצאות + תיוג בתווית של החודש",
+          "who": "בוט ההוצאות (משימה אוטומטית במשרד)",
+          "tool": "בוט ההוצאות במחשב המשרד",
+          "status": "auto",
+          "notes": "רץ ב-11 בחודש ב-09:00 במשרד; ב-11.10 הצליח. אין לו גבול לסוף החודש → גורר גם חשבוניות של החודש הבא והכנסות. לעולם לא להריץ בלי תיוק. לוודא שתויקו חשבוניות בפועל (יותר מ-0)."
+        },
+        {
+          "n": 2,
+          "title": "משיכת חשבוניות לינק/פורטל: רב-פס, Adobe, PayMe, פנדה, Etsy",
+          "who": "Claude (רב-פס, Adobe) / דניאל (Etsy, PayMe, פנדה)",
+          "tool": "כלים אוטומטיים לרב-פס ול-Adobe",
+          "status": "manual",
+          "notes": "Adobe אוטומטי (דרך כרום עם התחברות שמורה). PayMe/פנדה — ידני עד שייבנה בוט דומה. Etsy — דניאל בלבד (לא מסתכנים עם החנויות)."
+        },
+        {
+          "n": 3,
+          "title": "יישוב לפי חודש-שירות וניקוי תיקיית הוצאות",
+          "who": "Claude",
+          "tool": "ידני בצ'אט (לא אוטומטי)",
+          "status": "manual",
+          "notes": "להעביר חשבוניות של החודש הבא; GreenInvoice 7 ספרות = הוצאה, 5 ספרות = הכנסה → תכשיטים לישראל; להסיר כפילויות. חוזר על עצמו אחרי כל הורדה."
+        },
+        {
+          "n": 4,
+          "title": "בדיקת שלמות מול ספקים קבועים + הצלבת הזמנות פרטיות בישראל מול חשבוניות",
+          "who": "Claude",
+          "tool": "רשימת ספקים בנוהל + בדיקה במערכת הניהול",
+          "status": "manual",
+          "notes": "Anthropic, Calendly, Make, Supabase, Replicate, Shopify, XCover, Google, Bezeq, Partner, בית נועם, D2D, NewPack, SuperPharm, GreenInvoice, רב-פס, PayMe, Adobe, Etsy. צ'קליסט אוטומטי — טרם נבנה."
+        },
+        {
+          "n": 5,
+          "title": "הרכבת הכנסות: תכשיטים לחול (#JEW בלבד), תכשיטים לישראל (דניאל מפיק), עיצוב תכשיטים (30/70), ביטול עסקה",
+          "who": "כלי הרכבת הטיוטות / דניאל (חשבוניות ישראל)",
+          "tool": "כלי הרכבת הטיוטות",
+          "status": "auto",
+          "notes": "לא לצרף קבצי תווית, קבצי Word או תמונות בדיקה. קבצים גדולים לכווץ מראש (הכלי לא מפצל קובץ בודד שחורג מהגודל המותר)."
+        },
+        {
+          "n": 6,
+          "title": "בניית טיוטות Gmail → אישור דניאל → שליחה ל-SUMIT",
+          "who": "Claude בונה, דניאל מאשר, הכלי שולח",
+          "tool": "כלי הרכבת הטיוטות (בנייה ואז שליחה)",
+          "status": "manual",
+          "notes": "שער אישור: לוודא Etsy ×2 + חשבוניות ישראל בפנים, להציג רשימה מסודרת, לקבל 'שלח' מפורש. יעד: תיבת ההוצאות של SUMIT בלבד, בלי העתק ליעל. לאמת 'קיבלנו! X קבצים'."
+        },
+        {
+          "n": 7,
+          "title": "חשבוניות מאחרות (D2D ועוד) בשבוע שאחרי → העברה ישירה ליעל; החודש הבא כבר אוסף",
+          "who": "Claude / דניאל",
+          "tool": "Gmail forward",
+          "status": "manual",
+          "notes": "אחד-אחד ל-yael@recpa.co.il, לא לתייק בחודש הסגור. חשבוניות החודש הבא נכנסות לתיקייה הבאה."
+        }
       ],
-      "approval_gates": ["דניאל: הורדת חשבוניות Etsy (2 חנויות)", "דניאל: הנפקת חשבוניות לקוחות ישראל", "דניאל: 'שלח' מפורש אחרי סקירת הטיוטות (שליחה בלתי הפיכה לרו\"ח)"],
-      "open_improvements": ["גבול-חודש עליון ב-download_expenses.py + מיון idempotent (תנאי לאוטונומיה)", "בוט PayMe/פנדה בדפוס Adobe (Chrome אמיתי + פרופיל)", "צ'קליסט שלמות אוטומטי", "העברת ההורדה ל-cron/ענן 24/7 — היום תלויה במחשב המשרד דלוק ב-11", "MonthTopUp (טיוטה + מייל 'לחץ שלח') היה חד-פעמי 12.8 — לקבוע כחודשי", "ספטמבר 2026: ממתין ל-Etsy + חשבוניות ישראל של דניאל (11.10)"]
+      "approval_gates": [
+        "דניאל: הורדת חשבוניות Etsy (2 חנויות)",
+        "דניאל: הנפקת חשבוניות לקוחות ישראל",
+        "דניאל: 'שלח' מפורש אחרי סקירת הטיוטות (שליחה בלתי הפיכה לרו\"ח)"
+      ],
+      "open_improvements": [
+        "גבול לסוף החודש בבוט ההוצאות + מיון שלא יוצר כפילויות בהרצה חוזרת (תנאי לאוטונומיה)",
+        "בוט PayMe/פנדה כמו של Adobe (כרום עם התחברות שמורה)",
+        "צ'קליסט שלמות אוטומטי",
+        "העברת ההורדה לשרת שרץ 24/7 — היום תלויה בכך שמחשב המשרד דלוק ב-11",
+        "התזכורת החודשית (טיוטה + מייל 'לחץ שלח') הייתה חד-פעמית ב-12.8 — לקבוע כחודשית",
+        "ספטמבר 2026: ממתין ל-Etsy + חשבוניות ישראל של דניאל (11.10)"
+      ]
     },
     "order-intake": {
       "title": "קליטת הזמנה — מהחנות עד תעודה",
-      "when": "on event — הזמנה ב-Shopify/Etsy",
+      "when": "כשנכנסת הזמנה ב-Shopify/Etsy",
       "steps": [
-        {"n": 1, "title": "הזמנה נוצרת ב-Shopify / Etsy (Black Ice)", "who": "לקוח", "tool": "Shopify / Etsy", "status": "auto", "notes": "חנות Etsy Diana לא נקלטת (connection מצביע על Black Ice)."},
-        {"n": 2, "title": "Make מפיל שורה גולמית: customers upsert לפי email + orders (external_order_id, amount, model_ref מה-SKU)", "who": "Make 5417151 / 5423745", "tool": "Make polling כל 15 דק'", "status": "auto", "notes": "Shopify ממפה totalPriceSet (כולל מס); Etsy subtotal/divisor. כיבוי שקט אחרי 3 כשלים — לבדוק isActive לפני אבחון חיבור."},
-        {"n": 3, "title": "טריגר DB מקצה J ויוצר שורת jewelry", "who": "Supabase trg_orders_assign_j", "tool": "SQL trigger", "status": "auto", "notes": "תמיד J אחד להזמנה."},
-        {"n": 4, "title": "העשרה: קישור לקוח (intake.mjs), פיצול רב-פריטי, SKU/זהב, מוצר מלאי → J קיים", "who": "DR-OrderIntake (intake.mjs, כל שעתיים) + Claude (complete-order-intake)", "tool": "intake.mjs; סקיל complete-order-intake", "status": "manual", "notes": "רוטינת הענן מתה (30.8). intake.mjs מקשר לקוחות; פיצול/העשרה ידניים בסקיל. יהלום/תעודה מוקצים דרך סוכן הוואטסאפ (allocate_diamond)."},
-        {"n": 5, "title": "רשת ביטחון בוקר: כפילויות, פי 100, לקוח כפול, שתיקת Make, UNDER/OVER-SPLIT", "who": "DR-MorningHealthCheck 06:30", "tool": "morning_health_check.py", "status": "broken", "notes": "rc=1 מ-14.8, אין דוחות מאז 13.8."},
-        {"n": 6, "title": "כרטיס J בלוח DD של המעצב → jewelry=model, order=in_preparation", "who": "status_triggers.py (DR-OrderIntake)", "tool": "Trello REST קורא-בלבד", "status": "auto", "notes": "לוח Jewelry Progress יצא משימוש — אין יצירת כרטיסים."},
-        {"n": 7, "title": "מייל יציקה יוצא DIANA RAFAEL - 14Y - J#### → jewelry=casting", "who": "status_triggers.py", "tool": "IMAP Sent", "status": "auto", "notes": "לפני 10:30 חוזר מחר, אחרי — בעוד יומיים (ידע בלבד)."},
-        {"n": 8, "title": "עבודה → מוכן (work/ready)", "who": "דניאל ידנית במערכת / וואטסאפ update_order", "tool": "אפליקציית הניהול / סוכן וואטסאפ", "status": "manual", "notes": "טריגר ready מעולם לא נבנה (אודיט 17.7: 0/35 הזמנות ראו ready)."},
-        {"n": 9, "title": "משלוח (ראה flows.shipping) → shipped + sold", "who": "ship-jewelry-order / poller / מייל D2D", "tool": "make_invoice.py + d2d_bot.py; status_triggers (מייל תווית)", "status": "auto", "notes": "private_ils קופץ ישר ל-delivered בלי shipped — סגירת jewelry ידנית."},
-        {"n": 10, "title": "תעודה: PDF לדרופבוקס → Shopify Files → פוסט gil-lab", "who": "cert publisher / cert_agent.py", "tool": "CertPublisher (watcher) או python cert_agent.py", "status": "manual", "notes": "one-shot מועדף; watcher לא אומת מאז יולי."}
+        {
+          "n": 1,
+          "title": "הזמנה נוצרת ב-Shopify / Etsy (Black Ice)",
+          "who": "לקוח",
+          "tool": "Shopify / Etsy",
+          "status": "auto",
+          "notes": "חנות Etsy Diana לא נקלטת (החיבור מצביע על Black Ice)."
+        },
+        {
+          "n": 2,
+          "title": "Make רושם הזמנה גולמית: לקוח (לפי מייל, בלי כפילות) + הזמנה (מספר הזמנה, סכום, דגם לפי ה-SKU)",
+          "who": "תרחישי Make של Shopify ו-Etsy",
+          "tool": "Make בודק כל 15 דק'",
+          "status": "auto",
+          "notes": "Shopify לוקח סכום כולל מס; Etsy סכום לפני משלוח. Make נכבה בשקט אחרי 3 כשלים — לבדוק שהתרחיש פעיל לפני שמאבחנים חיבור."
+        },
+        {
+          "n": 3,
+          "title": "מערכת הניהול מקצה J ויוצרת רשומת תכשיט",
+          "who": "מערכת הניהול (אוטומטי)",
+          "tool": "מערכת הניהול",
+          "status": "auto",
+          "notes": "תמיד J אחד להזמנה."
+        },
+        {
+          "n": 4,
+          "title": "השלמה: קישור לקוח, פיצול רב-פריטי, SKU/זהב, מוצר מלאי → J קיים",
+          "who": "משימה אוטומטית כל שעתיים + Claude (נוהל השלמת קליטה)",
+          "tool": "משימה אוטומטית; נוהל השלמת קליטה",
+          "status": "manual",
+          "notes": "המשימה בענן מתה (30.8). המשימה האוטומטית מקשרת לקוחות; פיצול והשלמה ידניים דרך הנוהל. יהלום/תעודה מוקצים דרך סוכן הוואטסאפ."
+        },
+        {
+          "n": 5,
+          "title": "רשת ביטחון בוקר: כפילויות, סכום פי 100, לקוח כפול, שתיקה של Make, פיצול חסר/עודף",
+          "who": "בדיקת בריאות אוטומטית כל בוקר 06:30",
+          "tool": "בדיקת הבריאות במחשב המשרד",
+          "status": "broken",
+          "notes": "נכשלת מ-14.8, אין דוחות מאז 13.8."
+        },
+        {
+          "n": 6,
+          "title": "כרטיס J בלוח DD של המעצב → התכשיט בשלב דגם, ההזמנה בהכנה",
+          "who": "סוכן הסטטוסים (משימה אוטומטית)",
+          "tool": "Trello (קריאה בלבד)",
+          "status": "auto",
+          "notes": "לוח Jewelry Progress יצא משימוש — אין יצירת כרטיסים."
+        },
+        {
+          "n": 7,
+          "title": "מייל יציקה יוצא DIANA RAFAEL - 14Y - J#### → התכשיט בשלב יציקה",
+          "who": "סוכן הסטטוסים",
+          "tool": "Gmail (דואר יוצא)",
+          "status": "auto",
+          "notes": "לפני 10:30 חוזר מחר, אחרי — בעוד יומיים (ידע בלבד)."
+        },
+        {
+          "n": 8,
+          "title": "עבודה → מוכן",
+          "who": "דניאל ידנית במערכת / בוואטסאפ",
+          "tool": "אפליקציית הניהול / סוכן וואטסאפ",
+          "status": "manual",
+          "notes": "עדכון אוטומטי ל'מוכן' מעולם לא נבנה (בדיקה 17.7: 0 מתוך 35 הזמנות הגיעו ל'מוכן')."
+        },
+        {
+          "n": 9,
+          "title": "משלוח (ראה תהליך המשלוח) → נשלח + נמכר",
+          "who": "סוכן המשלוחים / מייל D2D",
+          "tool": "הפקת חשבונית + תווית; סוכן הסטטוסים (מייל תווית)",
+          "status": "auto",
+          "notes": "הזמנות פרטיות בישראל קופצות ישר ל'נמסר' בלי 'נשלח' — סגירת התכשיט ידנית."
+        },
+        {
+          "n": 10,
+          "title": "תעודה: PDF לדרופבוקס → קבצים של Shopify → פוסט gil-lab",
+          "who": "סוכן התעודות",
+          "tool": "סוכן התעודות (ברקע או הפעלה חד-פעמית)",
+          "status": "manual",
+          "notes": "הפעלה חד-פעמית מועדפת; גרסת הרקע לא אומתה מאז יולי."
+        }
       ],
-      "approval_gates": ["פיצול רב-פריטי ואישור מיפוי listing→מודל (Etsy)", "אין אישור על הקליטה עצמה — אוטומטי"],
-      "open_improvements": ["קליטה מקומית אחת אוטונומית (IMAP+REST, כל 15 דק', heartbeat) שמקפלת את Make — ההחלטה מ-5.7, לא נבנתה", "לתקן DR-MorningHealthCheck (rc=1) ו-DR-OrderIntake (rc 3221225786)", "לכבות Make 1436301 (טרלו יצא משימוש)", "re-auth connection Etsy לחנות Diana + פאץ' subtotal → להפעיל 5424356", "Shopify amount = subtotal כשיופעל מס", "ניקוי j_number עם רווח + TRIM בטריגר", "טריגר ready + טיפול private_ils ב-close_loop"]
+      "approval_gates": [
+        "פיצול רב-פריטי ואישור התאמת מוצר ה-Etsy לדגם",
+        "אין אישור על הקליטה עצמה — אוטומטי"
+      ],
+      "open_improvements": [
+        "קליטה מקומית אחת אוטונומית (מייל + חיבור ישיר, כל 15 דק', עם התראה אם נעצרת) שמחליפה את Make — ההחלטה מ-5.7, לא נבנתה",
+        "לתקן את בדיקת הבריאות של הבוקר ואת משימת קליטת ההזמנות (שתיהן נכשלות)",
+        "לכבות את תרחיש Make שפותח כרטיסים בטרלו (טרלו יצא משימוש)",
+        "חיבור מחדש של Etsy לחנות Diana + תיקון הסכום → להפעיל את תרחיש הקליטה שלה",
+        "Shopify: סכום לפני מס כשיופעל מס",
+        "ניקוי מספרי J עם רווח בסוף + מניעה אוטומטית",
+        "עדכון אוטומטי ל'מוכן' + טיפול בהזמנות פרטיות בישראל בסגירת ההזמנה"
+      ]
     },
     "shipping": {
       "title": "משלוח תכשיט",
-      "when": "on demand — דניאל נותן משקל בגרמים (בצ'אט או בוואטסאפ)",
+      "when": "לפי דרישה — דניאל נותן משקל בגרמים (בצ'אט או בוואטסאפ)",
       "steps": [
-        {"n": 1, "title": "דניאל שולח J/הזמנה + משקל", "who": "דניאל", "tool": "Claude Code (ship-jewelry-order) או וואטסאפ (ship_order)", "status": "manual", "notes": "הקלט היחיד = גרמים. בוואטסאפ: Sandbox עלול להיות פג."},
-        {"n": 2, "title": "איסוף פרטים מ-Supabase: לקוח+כתובת, SKU/REF, קראט, זהב, מספר JEW הבא מהדרופבוקס", "who": "סקיל / server.py gather_details", "tool": "Supabase REST + סריקת Dropbox ניהול משרד", "status": "auto", "notes": "לא לגשת ל-Shopify אלא אם שדה חסר. באג מספור: כל משלוח = 2 מספרים (תכשיט+עיצוב)."},
-        {"n": 3, "title": "preview לאישור (וואטסאפ) / המשך ישיר (סקיל)", "who": "server.py → Twilio / Claude", "tool": "ship_jobs awaiting_confirm", "status": "manual", "notes": "דניאל: 'כן' → confirm_ship. בסקיל אין אישור — מבצעים."},
-        {"n": 4, "title": "חשבונית מכס DOCX→PDF (#JEW-#### - שם) + חשבונית עיצוב 30/70", "who": "make_invoice.py / Claude", "tool": "make_invoice.py (python-docx + Word)", "status": "auto", "notes": "פריט בודד, בלי פלטינה, תבנית US — EU/NO ידני. פיצול עיצוב בצ'אט. מהבית: רק עריכת DOCX קיים דרך Word COM."},
-        {"n": 5, "title": "תווית FedEx ב-d2dvalue.com + הדפסה אוטומטית", "who": "d2d_bot.py", "tool": "Playwright + Chrome אמיתי (Cloudflare)", "status": "auto", "notes": "non-headless. אם Shipment confirmed בלי PDF — למשוך מההיסטוריה, לא להריץ שוב. נכשל על נורבגיה."},
-        {"n": 6, "title": "סגירת לולאה: orders.shipped+tracking+FedEx, jewelry.sold+weight_grams, Shopify fulfillment", "who": "close_loop() / סקיל / status_triggers (מייל תווית D2D)", "tool": "Supabase REST; Shopify", "status": "auto", "notes": "Etsy: מעקב ללקוח ידני באתר Etsy. הטריגר ממייל D2D = רשת ביטחון למסלול DDP."},
-        {"n": 7, "title": "חשבונית לתיקיית החודש (תכשיטים לחול / עיצוב תכשיטים) → סגירת חודש", "who": "אוטומטי (נשמר שם)", "tool": "Dropbox", "status": "auto", "notes": "רק #JEW pdf נשלח לרו\"ח."}
+        {
+          "n": 1,
+          "title": "דניאל שולח J/הזמנה + משקל",
+          "who": "דניאל",
+          "tool": "Claude או וואטסאפ",
+          "status": "manual",
+          "notes": "הקלט היחיד = גרמים. בוואטסאפ: החיבור הזמני עלול להיות פג."
+        },
+        {
+          "n": 2,
+          "title": "איסוף פרטים ממערכת הניהול: לקוח+כתובת, SKU/REF, קראט, זהב, מספר JEW הבא מהדרופבוקס",
+          "who": "סוכן המשלוחים",
+          "tool": "מערכת הניהול + Dropbox ניהול משרד",
+          "status": "auto",
+          "notes": "לא לגשת ל-Shopify אלא אם שדה חסר. באג מספור: כל משלוח = 2 מספרים (תכשיט+עיצוב)."
+        },
+        {
+          "n": 3,
+          "title": "תצוגה מקדימה לאישור (וואטסאפ) / המשך ישיר (בצ'אט)",
+          "who": "סוכן המשלוחים → וואטסאפ / Claude",
+          "tool": "מערכת הניהול (ממתין לאישור)",
+          "status": "manual",
+          "notes": "דניאל: 'כן' → המשלוח מאושר. בצ'אט אין אישור — מבצעים."
+        },
+        {
+          "n": 4,
+          "title": "חשבונית מכס PDF (#JEW-#### - שם) + חשבונית עיצוב 30/70",
+          "who": "תוכנת החשבוניות / Claude",
+          "tool": "Word",
+          "status": "auto",
+          "notes": "פריט בודד, בלי פלטינה, תבנית ארה\"ב — אירופה/נורבגיה ידני. פיצול עיצוב בצ'אט. מהבית: רק עריכת חשבונית קיימת ב-Word."
+        },
+        {
+          "n": 5,
+          "title": "תווית FedEx באתר D2D + הדפסה אוטומטית",
+          "who": "סוכן המשלוחים (D2D)",
+          "tool": "Chrome (דפדפן אמיתי)",
+          "status": "auto",
+          "notes": "רץ בחלון גלוי. אם המשלוח אושר בלי PDF — למשוך מההיסטוריה, לא להריץ שוב. נכשל על נורבגיה."
+        },
+        {
+          "n": 6,
+          "title": "סגירת לולאה: ההזמנה מסומנת נשלחה + מספר מעקב FedEx, התכשיט מסומן נמכר + משקל, ועדכון משלוח ב-Shopify",
+          "who": "הסוכן אוטומטית / Claude / מייל התווית מ-D2D",
+          "tool": "מערכת הניהול; Shopify",
+          "status": "auto",
+          "notes": "Etsy: מעקב ללקוח ידני באתר Etsy. מייל התווית מ-D2D מעדכן אוטומטית — רשת ביטחון למסלול DDP."
+        },
+        {
+          "n": 7,
+          "title": "חשבונית לתיקיית החודש (תכשיטים לחול / עיצוב תכשיטים) → סגירת חודש",
+          "who": "אוטומטי (נשמר שם)",
+          "tool": "Dropbox",
+          "status": "auto",
+          "notes": "רק #JEW pdf נשלח לרו\"ח."
+        }
       ],
-      "approval_gates": ["וואטסאפ: 'כן' על ה-preview לפני יצירת תווית (עולה כסף)"],
-      "open_improvements": ["DR-ShippingAgent לא עולה (rc 3221225786, הפסקת חשמל 8.10) — להרים ולאמת", "מספור JEW: 2 לכל משלוח + מניעת התנגשות בריצות מקבילות", "make_invoice: ריבוי פריטים, פלטינה, תבנית EU/NO", "d2d: מדינות מחוץ ל-US/NL", "poller ↔ ידני מתנגשים — לבטל jobs תקועים לפני ריצה ידנית", "העתקת סקריפטים+טוקן לבית"]
+      "approval_gates": [
+        "וואטסאפ: 'כן' על ה-preview לפני יצירת תווית (עולה כסף)"
+      ],
+      "open_improvements": [
+        "סוכן המשלוחים האוטומטי לא עולה מאז הפסקת החשמל ב-8.10 — להרים ולאמת",
+        "מספור JEW: 2 לכל משלוח + מניעת התנגשות בריצות מקבילות",
+        "חשבונית המכס: ריבוי פריטים, פלטינה, תבנית אירופה/נורבגיה",
+        "תוויות D2D: מדינות מחוץ לארה\"ב/הולנד",
+        "הבדיקה האוטומטית וההרצה הידנית מתנגשות — לבטל משלוחים תקועים לפני הרצה ידנית",
+        "העתקת כלי המשלוחים וההרשאות למחשב הבית"
+      ]
     },
     "night-agent": {
       "title": "הסוכן הלילי",
       "when": "היה כל יום 22:00 במשרד — מושבת מ-26.7; היום פרומפטים חד-פעמיים לפי ערב",
       "steps": [
-        {"n": 1, "title": "תור: NIGHT-QUEUE.md (לפי פרויקט) או פרומפט ייעודי NIGHT-<date>-PROMPT.md", "who": "Claude ביום + דניאל", "tool": "night-agent/NIGHT-QUEUE.md", "status": "manual", "notes": "החלטת דניאל: התור אצל Claude, לא בטרלו."},
-        {"n": 2, "title": "22:00 (או 21:00) Task Scheduler מריץ claude -p headless", "who": "DianaRafael-NightAgent / DR-NightSession", "tool": "run-night-agent.ps1 (--dangerously-skip-permissions) / schtasks חד-פעמי", "status": "broken", "notes": "המשימה הקבועה Disabled; יצירת משימה חדשה נחסמת ע\"י המסווג — דניאל חייב להריץ schtasks ידנית (11.10 לא רץ)."},
-        {"n": 3, "title": "שגרה: learn-beta של CustomizeAI (פידבק → learned-rules.md → git)", "who": "הסוכן", "tool": "node scripts/learn-beta.js", "status": "auto", "notes": "רץ רק כשהסוכן רץ — כלומר לא מאז 26.7."},
-        {"n": 4, "title": "1–3 משימות: מחקר web, transcript, rendering, סינתזה, קוד", "who": "הסוכן", "tool": "WebSearch/WebFetch, render.py, youtube-transcript-api, Blender", "status": "auto", "notes": "מדלג על משימות שדורשות קלט מדניאל ומציין בלוג."},
-        {"n": 5, "title": "תוצר = מצגת HTML מתבנית + לולאת אימות ויזואלית (render.py → PNG → צ'קליסט RTL)", "who": "הסוכן", "tool": "presentation-template.html + render.py", "status": "auto", "notes": "חוזר עד מעבר נקי."},
-        {"n": 6, "title": "NIGHT-LOG-<date>.md (כנות על מה נכשל) + עדכון התור + git push לכל ריפו", "who": "הסוכן / הסקריפט", "tool": "git", "status": "auto", "notes": "catalog-nightly.ps1 דוחף ~/.claude גם אחרי kill."},
-        {"n": 7, "title": "מייל קצר לדניאל עם המצגת מצורפת; בבוקר Claude ממזג לעדכון", "who": "send_mail.py / Claude בבוקר", "tool": "send_mail.py --attach (Gmail SMTP, creds expense-bot)", "status": "auto", "notes": "אסור דוח ארוך בגוף המייל. החלטת בוקר של 30 שניות."}
+        {
+          "n": 1,
+          "title": "תור משימות (לפי פרויקט) או הנחיה ייעודית לערב מסוים",
+          "who": "Claude ביום + דניאל",
+          "tool": "רשימת משימות הלילה אצל Claude",
+          "status": "manual",
+          "notes": "החלטת דניאל: התור אצל Claude, לא בטרלו."
+        },
+        {
+          "n": 2,
+          "title": "22:00 (או 21:00) המחשב מפעיל את Claude אוטומטית, ללא השגחה",
+          "who": "משימה אוטומטית שרצה בלילה",
+          "tool": "משימה מתוזמנת במחשב המשרד",
+          "status": "broken",
+          "notes": "המשימה הקבועה כבויה; Claude לא מורשה ליצור משימה חדשה — דניאל צריך להפעיל אותה ידנית (11.10 לא רץ)."
+        },
+        {
+          "n": 3,
+          "title": "שגרה: למידה של CustomizeAI מהפידבק → הכללים שנלמדו נשמרים",
+          "who": "הסוכן",
+          "tool": "כלי הלמידה של CustomizeAI",
+          "status": "auto",
+          "notes": "רץ רק כשהסוכן רץ — כלומר לא מאז 26.7."
+        },
+        {
+          "n": 4,
+          "title": "1–3 משימות: מחקר ברשת, תמלול סרטונים, הדמיות, סינתזה, קוד",
+          "who": "הסוכן",
+          "tool": "חיפוש ברשת, תמלול YouTube, תוכנת ההדמיות",
+          "status": "auto",
+          "notes": "מדלג על משימות שדורשות קלט מדניאל ומציין בלוג."
+        },
+        {
+          "n": 5,
+          "title": "תוצר = מצגת מתבנית + בדיקה ויזואלית חוזרת (צילום → רשימת בדיקה לעברית)",
+          "who": "הסוכן",
+          "tool": "תבנית מצגת + כלי צילום",
+          "status": "auto",
+          "notes": "חוזר עד מעבר נקי."
+        },
+        {
+          "n": 6,
+          "title": "יומן לילה (כנות על מה נכשל) + עדכון התור + שמירה של כל העבודה",
+          "who": "הסוכן / אוטומטי",
+          "tool": "שמירה אוטומטית",
+          "status": "auto",
+          "notes": "המשימה האוטומטית שומרת את ההגדרות גם אם הסוכן נקטע."
+        },
+        {
+          "n": 7,
+          "title": "מייל קצר לדניאל עם המצגת מצורפת; בבוקר Claude ממזג לעדכון",
+          "who": "Claude (מייל אוטומטי) / Claude בבוקר",
+          "tool": "Gmail (מייל עם קובץ מצורף)",
+          "status": "auto",
+          "notes": "אסור דוח ארוך בגוף המייל. החלטת בוקר של 30 שניות."
+        }
       ],
-      "approval_gates": ["אין — אוטונומי מלא (החלטת דניאל 25.6). Shopify = DRAFT בלבד, אין מיילים ללקוחות, אין פוסטים"],
-      "open_improvements": ["להחיות את המשימה הקבועה (תצפית 56: מנוע = משימה קבועה שקוראת תור) במקום schtasks חד-פעמי שנחסם", "learn-beta לא רץ מ-26.7 — להעביר ל-cron משלו", "ffmpeg/deno לפריימים מווידאו"]
+      "approval_gates": [
+        "אין — אוטונומי מלא (החלטת דניאל 25.6). Shopify = DRAFT בלבד, אין מיילים ללקוחות, אין פוסטים"
+      ],
+      "open_improvements": [
+        "להחיות את המשימה הקבועה (תצפית 56: משימה קבועה שקוראת את התור) במקום משימות חד-פעמיות שנחסמות",
+        "הלמידה של CustomizeAI לא רצה מ-26.7 — לתזמן אותה בנפרד",
+        "כלי לחילוץ פריימים מווידאו"
+      ]
     },
     "catalog-nightly": {
       "title": "קטלוג המודלים — ריצה שבועית",
-      "when": "יום ראשון 21:00 במשרד (המשימה יומית, הסקריפט מסנן), שעה אחת",
+      "when": "יום ראשון 21:00 במשרד (המשימה רצה כל יום ומדלגת על שאר הימים), שעה אחת",
       "steps": [
-        {"n": 1, "title": "Task Scheduler → catalog-nightly.ps1 (gate ליום ראשון, או -Force)", "who": "DR-Catalog-Nightly", "tool": "catalog-nightly.ps1", "status": "auto", "notes": "hard kill ב-60 דק'; הפרומפט מבקש לסיים בדקה 55."},
-        {"n": 2, "title": "claude -p --permission-mode auto על CATALOG-PROMPT.md: קורא זיכרון project_jewelry_catalog + AGENT-BRIEF + הלוג הקודם", "who": "הסוכן", "tool": "claude-fable-5-1 headless", "status": "auto", "notes": "add-dir: ~/.claude, OneDrive diana-rafael, Dropbox תכשיטים."},
-        {"n": 3, "title": "סריקת תיקיות מודלים חדשות בדרופבוקס (R/E/P/B), אפיון מתמונות/מסכי מדידה, תיקיות ריקות = דגל", "who": "הסוכן + תת-סוכנים (עד 4)", "tool": "Agent tool + VOCABULARY.md", "status": "auto", "notes": "החלטות 6.9: תיקיות בלי מספר להתעלם; בלי תמונה → no_image."},
-        {"n": 4, "title": "מיזוג catalog-full.json + הצלבה מול excel/shopify → CONFLICTS.md; upsert ל-Supabase models; קישור תכשיטים בלי דגם", "who": "הסוכן", "tool": "Supabase Management API", "status": "auto", "notes": "upsert לפי model+collection, בלי מחיקה."},
-        {"n": 5, "title": "catalog-log-<date>.md בעברית פשוטה + עדכון 'מצב ריצה' בזיכרון + git push", "who": "הסוכן / הסקריפט", "tool": "git", "status": "auto", "notes": "בבוקר שני Claude מדווח לדניאל מהלוג."}
+        {
+          "n": 1,
+          "title": "משימה מתוזמנת במחשב המשרד (רצה רק ביום ראשון, או בהפעלה ידנית)",
+          "who": "משימת הקטלוג האוטומטית",
+          "tool": "משימה מתוזמנת במחשב המשרד",
+          "status": "auto",
+          "notes": "נעצר בכוח אחרי 60 דק'; ההנחיה מבקשת לסיים בדקה 55."
+        },
+        {
+          "n": 2,
+          "title": "Claude רץ לבד לפי הנחיית הקטלוג: קורא את הזיכרון על קטלוג התכשיטים, התדריך והיומן הקודם",
+          "who": "הסוכן",
+          "tool": "Claude (ללא השגחה)",
+          "status": "auto",
+          "notes": "גישה לתיקיות: הגדרות Claude, OneDrive דיאנה רפאל, Dropbox תכשיטים."
+        },
+        {
+          "n": 3,
+          "title": "סריקת תיקיות מודלים חדשות בדרופבוקס (R/E/P/B), אפיון מתמונות/מסכי מדידה, תיקיות ריקות = דגל",
+          "who": "הסוכן + תת-סוכנים (עד 4)",
+          "tool": "תת-סוכנים + מילון מונחים",
+          "status": "auto",
+          "notes": "החלטות 6.9: תיקיות בלי מספר להתעלם; בלי תמונה → מסומן 'אין תמונה'."
+        },
+        {
+          "n": 4,
+          "title": "מיזוג הקטלוג המלא + הצלבה מול Excel/Shopify → רשימת סתירות; עדכון הדגמים במערכת הניהול; קישור תכשיטים בלי דגם",
+          "who": "הסוכן",
+          "tool": "מערכת הניהול",
+          "status": "auto",
+          "notes": "עדכון לפי דגם+קולקציה, בלי מחיקה."
+        },
+        {
+          "n": 5,
+          "title": "יומן קטלוג בעברית פשוטה + עדכון 'מצב ריצה' בזיכרון + שמירה",
+          "who": "הסוכן / הסקריפט",
+          "tool": "שמירה אוטומטית",
+          "status": "auto",
+          "notes": "בבוקר שני Claude מדווח לדניאל מהלוג."
+        }
       ],
-      "approval_gates": ["אין — הסוכן מחליט ומתעד; דגלים לבירור נכתבים בלוג"],
-      "open_improvements": ["שלבים 6–7 של הפרומפט (ModelsPage עם פילטרים ותמונות; חיבור לקליטה + מלאי יהלומים) — ModelsPage נבנה חלקית 9–11.9", "להחליט אם להשאיר שבועי או לכבות (הקטלוג הושלם 12.9)", "דגלים פתוחים: R112 שני עיצובים, R121 מרקיזה, R114 שם, B037 בלי תיקייה"]
+      "approval_gates": [
+        "אין — הסוכן מחליט ומתעד; דגלים לבירור נכתבים בלוג"
+      ],
+      "open_improvements": [
+        "שלבים 6–7 של ההנחיה (דף דגמים עם פילטרים ותמונות; חיבור לקליטה + מלאי יהלומים) — דף הדגמים נבנה חלקית 9–11.9",
+        "להחליט אם להשאיר שבועי או לכבות (הקטלוג הושלם 12.9)",
+        "דגלים פתוחים: R112 שני עיצובים, R121 מרקיזה, R114 שם, B037 בלי תיקייה"
+      ]
     },
     "customizeai-daily": {
       "title": "CustomizeAI — לולאה יומית",
-      "when": "ווידג'ט חי 24/7 ב-Render; דוח 08:00; למידה כשיש פידבק",
+      "when": "ווידג'ט חי 24/7 בשרת; דוח 08:00; למידה כשיש פידבק",
       "steps": [
-        {"n": 1, "title": "לקוח משתמש בווידג'ט בדף מוצר → generate (Claude Vision + gpt-image-1) → widget_events + תמונה ב-storage", "who": "API ב-Render", "tool": "customizeai/api", "status": "auto", "notes": "learned-rules.md נקרא ב-runtime."},
-        {"n": 2, "title": "08:00 מייל יומי לדניאל: אנשים/בקשות/תמונות/לידים + before/after + כפתור /admin/review", "who": "daily-report.js", "tool": "Render cron", "status": "auto", "notes": "report_sent מונע כפילות."},
-        {"n": 3, "title": "דניאל מאשר/דוחה ב-/admin/review (או review.html מקומי לאצוות)", "who": "דניאל", "tool": "/admin/review", "status": "manual", "notes": "שימוש נמוך — לרוב 0–4 אנשים ביום."},
-        {"n": 4, "title": "שגרת בוקר: Claude שולף widget_events של אתמול (ו-feedback) ומדווח בשורה; כל דחייה → תיקון בפרומפט", "who": "Claude בסשן", "tool": "Supabase Management API (juygzbkytubncshfdcae)", "status": "manual", "notes": "pending: 'CustomizeAI כחברת סוכנים' (11.10) — תוכנית ממתינה."},
-        {"n": 5, "title": "למידה: learn-beta.js (לילה) / npm run learn --max=45 (אצוות) → proposed-rules / learned-rules.md → git", "who": "הסוכן הלילי / Claude", "tool": "node scripts/learn-beta.js; npm run learn", "status": "broken", "notes": "הסוכן הלילי מושבת מ-26.7 → learn-beta לא רץ אוטומטית. learn לא מטמיע לבד (proposed-rules)."},
-        {"n": 6, "title": "אצוות ייצור (npm run daily --target=70) כשרוצים כיסוי מוצרים", "who": "DR-CustomizeAI-Batch (חד-פעמי) / ידני", "tool": "customizeai-morning-batch.ps1", "status": "manual", "notes": "אצווה בלי learn אחריה = בזבוז. פורט 3001 עלול להיות תפוס ע\"י הפרויקט הנטוש C:\\Users\\USER\\CustomizeAI."}
+        {
+          "n": 1,
+          "title": "לקוח משתמש בווידג'ט בדף מוצר → נוצרת תמונה בעזרת AI → השימוש והתמונה נשמרים",
+          "who": "השרת של CustomizeAI",
+          "tool": "השרת של CustomizeAI",
+          "status": "auto",
+          "notes": "הכללים שנלמדו נטענים בכל שימוש."
+        },
+        {
+          "n": 2,
+          "title": "08:00 מייל יומי לדניאל: אנשים/בקשות/תמונות/לידים + before/after + כפתור לדף הסקירה",
+          "who": "דוח יומי אוטומטי",
+          "tool": "משימה מתוזמנת בשרת",
+          "status": "auto",
+          "notes": "מסומן כשנשלח — אין כפילות."
+        },
+        {
+          "n": 3,
+          "title": "דניאל מאשר/דוחה בדף הסקירה (או בדף סקירה מקומי לאצוות)",
+          "who": "דניאל",
+          "tool": "דף הסקירה של CustomizeAI",
+          "status": "manual",
+          "notes": "שימוש נמוך — לרוב 0–4 אנשים ביום."
+        },
+        {
+          "n": 4,
+          "title": "שגרת בוקר: Claude שולף את השימוש בווידג'ט מאתמול (והפידבק) ומדווח בשורה; כל דחייה → תיקון בהנחיה",
+          "who": "Claude בסשן",
+          "tool": "מערכת הניהול",
+          "status": "manual",
+          "notes": "ממתין: 'CustomizeAI כחברת סוכנים' (11.10) — תוכנית ממתינה."
+        },
+        {
+          "n": 5,
+          "title": "למידה: אוטומטית בלילה / ידנית באצוות → הצעות לכללים / כללים שנלמדו → נשמר",
+          "who": "הסוכן הלילי / Claude",
+          "tool": "כלי הלמידה של CustomizeAI",
+          "status": "broken",
+          "notes": "הסוכן הלילי מושבת מ-26.7 → הלמידה לא רצה אוטומטית. הלמידה הידנית לא מטמיעה לבד (רק מציעה כללים)."
+        },
+        {
+          "n": 6,
+          "title": "אצוות ייצור (יעד 70) כשרוצים כיסוי מוצרים",
+          "who": "משימה אוטומטית חד-פעמית / ידני",
+          "tool": "משימת אצווה במחשב המשרד",
+          "status": "manual",
+          "notes": "אצווה בלי למידה אחריה = בזבוז. עלולה להתנגש בפרויקט CustomizeAI הישן והנטוש שעדיין במחשב."
+        }
       ],
-      "approval_gates": ["דניאל מדרג תוצאות; Claude מחליט אילו כללים להטמיע בלי אישור פר-כלל"],
-      "open_improvements": ["cron ל-learn-beta שלא תלוי בסוכן הלילי", "on-body composite (ברייף 7.7, ממתין GO)", "שלב 2: מותג תכשיטים אחר (טננגרופ)", "beta-host (tunnel זמני) כנראה מיותר אחרי Render"]
+      "approval_gates": [
+        "דניאל מדרג תוצאות; Claude מחליט אילו כללים להטמיע בלי אישור פר-כלל"
+      ],
+      "open_improvements": [
+        "תזמון נפרד ללמידה, שלא תלוי בסוכן הלילי",
+        "הדמיה על הגוף (ברייף 7.7, ממתין GO)",
+        "שלב 2: מותג תכשיטים אחר (טננגרופ)",
+        "שרת הבטא הזמני כנראה מיותר אחרי המעבר לשרת הקבוע"
+      ]
     }
   }
 }

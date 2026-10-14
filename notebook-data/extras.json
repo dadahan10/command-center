@@ -8,7 +8,6 @@
       "memory: project_whoop_charms, project_q4_operating_plan, sessions 1.10/4.10/7.10/11.10/12.10, project_office, project_mgmt_roadmap, pending_fixes_diana_rafael (x2), mgmt-system-*, management-system-requirements, ops_order_status_triggers, ops_supabase_sql_access, reference_live_sites, sessions 6-10/2026"
     ]
   },
-
   "cockpit": {
     "structure": "דף RTL סטטי אחד (index.html, 803 שורות), כל הדאטה באובייקט JS אחד (DATA) שמתרנדר בטעינה. 5 טאבים: 📂 פרויקטים (כרטיסים מתקפלים ב-masonry 2 עמודות, בר התקדמות done/total, משימות ✓/○, משימות crit באדום), 📣 שיווק (גאנט 6 חודשים יולי–דצמבר 26', חלוקת תקציב 3 שלבים, לוח תוכן לפי חודש עם עמודות 'מוכן'/'עלה'), 🏷️ חיסול (KPI + 3 טבלאות — נטען חי מ-archive.dianarafael.com/data.csv), 🤖 סוכנים (גריד כרטיסים עם pill סטטוס), 🔗 קבצים ואתרים (3 עמודות: אתרים חיים / קבצים מקומיים / כלים). פלטה כהה: bg #0c0e14, accent זהב #c6a15b, accent2 כחול #6ea8fe. פוטר: 'הקוקפיט מתוחזק על ידי Claude'. מתארח ב-GitHub Pages dadahan10/command-center.",
     "updated_label": "26.7.2026",
@@ -17,128 +16,451 @@
         "id": "proj",
         "title": "📂 פרויקטים — 17 פרויקטים · 77/139 משימות הושלמו",
         "items": [
-          {"label": "🏭 מערכת ניהול", "url": "", "note": "9/14 · 64% — האפליקציה שמנהלת הזמנות/תכשיטים/מלאי/לקוחות. crit: קליטת הזמנות אוטומטית נפלה (routine ענן מת ~8 ימים). פתוח: דדליין Etsy, התראות דדליין ייצור, התראת מידע לקוח חסר, שולם/לא-שולם בעלויות"},
-          {"label": "💬 סוכן וואטסאפ", "url": "", "note": "6/9 · 67% — מפעיל את מערכת הניהול מוואטסאפ. crit: מעבר מ-Twilio Sandbox ל-Sender מאושר (נופל כל 72ש'). פתוח: template עברית + Make 08:00, טריגר דדליין ייצור בדיג'סט"},
-          {"label": "🪨 REMNANT", "url": "https://dadahan10.github.io/diana-rafael-remnant/", "note": "1/6 · 17% — קולקציה חדשה, CAD ב-Rhino → הדמיות → השקה. done: דף web חי. פתוח: סגירת עיצובים, ייצור ראשון, אפיון 3 סביבות הדמיה, בחירת כלים, הדמיות ראשונות"},
-          {"label": "🏷️ REMNANT Archive Clearance", "url": "https://dadahan10.github.io/remnant-clearance/he/", "note": "3/7 · 43% — מכירת חיסול 38 פריטים, שער 3.3, מע\"מ 18%, רווח ~25%. crit: אימות עלות J286/J939/J282. פתוח: 14 פריטים לצילום, 6 משקלים, טעינת מייל ל-Klaviyo"},
-          {"label": "💎 קולקציה חדשה — NSA + Spring", "url": "https://dadahan10.github.io/collection-plan/", "note": "4/7 · 57% — מיזם משותף 30 עיצובים (ספרינג 20% / NSA 40% / דניאל 60% מהנותר). פתוח: תזרים חודש-חודש, עיצוב 30 פריטים, השקה"},
-          {"label": "🧭 טבעת \"עמית לדרך\"", "url": "https://dadahan10.github.io/amit-presentation/", "note": "2/7 · 29% — טבעת מצפן, שת\"פ עם העמותה. פתוח: מחירים, on-body, פק-שוטים, גרסת ילדים, הצגה להנהלה"},
-          {"label": "🎨 CustomizeAI", "url": "https://movie-burke-shots-kodak.trycloudflare.com/beta.html", "note": "8/12 · 67% — ווידג'ט AI בדף המוצר. פתוח: on-body 3 מסלולים, few-shot, deploy HTTPS + script-tag, launch 7.7"},
-          {"label": "🏔️ צמיד פורום אקסימוס", "url": "https://dadahan10.github.io/ximus-retreat-2026/", "note": "4/6 · 67% — צמיד מותאם לריטריט חלקידיקי, דדליין ~20.8. פתוח: מקדמה מ-XIMUS, כרטיס הקדשה"},
-          {"label": "💹 מסחר במניות", "url": "https://dadahan10.github.io/command-center/screener/index.html", "note": "4/9 · 44% — TradingAgents + יעד 10K₪/חודש. פתוח: watchlist ישראלי, יומן טריידים, Review שבועי, סריקת יולי, remote לריפו"},
-          {"label": "📦 סוכן משלוחים", "url": "", "note": "8/12 · 67% — חשבונית מכס + תווית FedEx + סגירת לולאה. פתוח: באג מספר חשבונית כפול, כמה פריטים בחשבונית, פלטינה, ייצוב poller"},
-          {"label": "🧾 סוכן סגירת חודש", "url": "", "note": "6/10 · 60% — expense-bot, Task ה-11 בחודש. פתוח: גבול-חודש עליון, בוט PayMe/פנדה, checklist הצלבה, בוט הכנסות"},
-          {"label": "🌙 הסוכן הלילי", "url": "", "note": "5/6 · 83% — רץ 22:00, תור NIGHT-QUEUE. פתוח: הזנת תור שוטפת"},
-          {"label": "🩺 סוכן בריאות הבוקר", "url": "", "note": "5/6 · 83% — 06:30 מתקן באגי קליטה. פתוח: שורש Make connection 1554993"},
-          {"label": "🎯 מרכז השליטה", "url": "https://dadahan10.github.io/command-center/", "note": "3/5 · 60% — הקוקפיט עצמו. פתוח: רענון יומי אוטומטי, ניסוי Drive"},
-          {"label": "📣 סוכן השיווק", "url": "https://dadahan10.github.io/dr-growth-blueprint/", "note": "5/11 · 45% — connectors LIVE (Google Ads, Meta, Klaviyo, GSC), 13 מודולים. פתוח: איפיון 7 שלבים, פאנל ראשון, WhatsApp production, Google Reviews, downloader Airtable, asset-studio ראשון"},
-          {"label": "🎓 קורס תכשיטים + Claude", "url": "", "note": "2/6 · 33% — קורס בתשלום לבעלי עסקי תכשיטים. פתוח: רזולוציה למפגש, סדר, Twilio ל-20, הקלטת שיעור 0"},
-          {"label": "🚐 טיול ספרד (אישי)", "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3", "note": "2/6 · 33% — 7–18.8, מוטורהום D55, ליקוי 12.8, ריאל מדריד 16.8. פתוח: מסלול, Yescapa, נקודת ליקוי, כרטיס"}
+          {
+            "label": "🏭 מערכת ניהול",
+            "url": "",
+            "note": "9/14 · 64% — האפליקציה שמנהלת הזמנות/תכשיטים/מלאי/לקוחות. crit: קליטת הזמנות אוטומטית נפלה (routine ענן מת ~8 ימים). פתוח: דדליין Etsy, התראות דדליין ייצור, התראת מידע לקוח חסר, שולם/לא-שולם בעלויות"
+          },
+          {
+            "label": "💬 סוכן וואטסאפ",
+            "url": "",
+            "note": "6/9 · 67% — מפעיל את מערכת הניהול מוואטסאפ. crit: מעבר מ-Twilio Sandbox ל-Sender מאושר (נופל כל 72ש'). פתוח: template עברית + Make 08:00, טריגר דדליין ייצור בדיג'סט"
+          },
+          {
+            "label": "🪨 REMNANT",
+            "url": "https://dadahan10.github.io/diana-rafael-remnant/",
+            "note": "1/6 · 17% — קולקציה חדשה, CAD ב-Rhino → הדמיות → השקה. done: דף web חי. פתוח: סגירת עיצובים, ייצור ראשון, אפיון 3 סביבות הדמיה, בחירת כלים, הדמיות ראשונות"
+          },
+          {
+            "label": "🏷️ REMNANT Archive Clearance",
+            "url": "https://dadahan10.github.io/remnant-clearance/he/",
+            "note": "3/7 · 43% — מכירת חיסול 38 פריטים, שער 3.3, מע\"מ 18%, רווח ~25%. crit: אימות עלות J286/J939/J282. פתוח: 14 פריטים לצילום, 6 משקלים, טעינת מייל ל-Klaviyo"
+          },
+          {
+            "label": "💎 קולקציה חדשה — NSA + Spring",
+            "url": "https://dadahan10.github.io/collection-plan/",
+            "note": "4/7 · 57% — מיזם משותף 30 עיצובים (ספרינג 20% / NSA 40% / דניאל 60% מהנותר). פתוח: תזרים חודש-חודש, עיצוב 30 פריטים, השקה"
+          },
+          {
+            "label": "🧭 טבעת \"עמית לדרך\"",
+            "url": "https://dadahan10.github.io/amit-presentation/",
+            "note": "2/7 · 29% — טבעת מצפן, שת\"פ עם העמותה. פתוח: מחירים, on-body, פק-שוטים, גרסת ילדים, הצגה להנהלה"
+          },
+          {
+            "label": "🎨 CustomizeAI",
+            "url": "https://movie-burke-shots-kodak.trycloudflare.com/beta.html",
+            "note": "8/12 · 67% — ווידג'ט AI בדף המוצר. פתוח: on-body 3 מסלולים, few-shot, deploy HTTPS + script-tag, launch 7.7"
+          },
+          {
+            "label": "🏔️ צמיד פורום אקסימוס",
+            "url": "https://dadahan10.github.io/ximus-retreat-2026/",
+            "note": "4/6 · 67% — צמיד מותאם לריטריט חלקידיקי, דדליין ~20.8. פתוח: מקדמה מ-XIMUS, כרטיס הקדשה"
+          },
+          {
+            "label": "💹 מסחר במניות",
+            "url": "https://dadahan10.github.io/command-center/screener/index.html",
+            "note": "4/9 · 44% — TradingAgents + יעד 10K₪/חודש. פתוח: watchlist ישראלי, יומן טריידים, Review שבועי, סריקת יולי, remote לריפו"
+          },
+          {
+            "label": "📦 סוכן משלוחים",
+            "url": "",
+            "note": "8/12 · 67% — חשבונית מכס + תווית FedEx + סגירת לולאה. פתוח: באג מספר חשבונית כפול, כמה פריטים בחשבונית, פלטינה, ייצוב poller"
+          },
+          {
+            "label": "🧾 סוכן סגירת חודש",
+            "url": "",
+            "note": "6/10 · 60% — expense-bot, Task ה-11 בחודש. פתוח: גבול-חודש עליון, בוט PayMe/פנדה, checklist הצלבה, בוט הכנסות"
+          },
+          {
+            "label": "🌙 הסוכן הלילי",
+            "url": "",
+            "note": "5/6 · 83% — רץ 22:00, תור NIGHT-QUEUE. פתוח: הזנת תור שוטפת"
+          },
+          {
+            "label": "🩺 סוכן בריאות הבוקר",
+            "url": "",
+            "note": "5/6 · 83% — 06:30 מתקן באגי קליטה. פתוח: שורש Make connection 1554993"
+          },
+          {
+            "label": "🎯 מרכז השליטה",
+            "url": "https://dadahan10.github.io/command-center/",
+            "note": "3/5 · 60% — הקוקפיט עצמו. פתוח: רענון יומי אוטומטי, ניסוי Drive"
+          },
+          {
+            "label": "📣 סוכן השיווק",
+            "url": "https://dadahan10.github.io/dr-growth-blueprint/",
+            "note": "5/11 · 45% — connectors LIVE (Google Ads, Meta, Klaviyo, GSC), 13 מודולים. פתוח: איפיון 7 שלבים, פאנל ראשון, WhatsApp production, Google Reviews, downloader Airtable, asset-studio ראשון"
+          },
+          {
+            "label": "🎓 קורס תכשיטים + Claude",
+            "url": "",
+            "note": "2/6 · 33% — קורס בתשלום לבעלי עסקי תכשיטים. פתוח: רזולוציה למפגש, סדר, Twilio ל-20, הקלטת שיעור 0"
+          },
+          {
+            "label": "🚐 טיול ספרד (אישי)",
+            "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3",
+            "note": "2/6 · 33% — 7–18.8, מוטורהום D55, ליקוי 12.8, ריאל מדריד 16.8. פתוח: מסלול, Yescapa, נקודת ליקוי, כרטיס"
+          }
         ]
       },
       {
         "id": "mkt",
         "title": "📣 שיווק — גאנט יולי–דצמבר 2026 (14 מסלולים) · תקציב $2,500/חודש ארה\"ב · לוח תוכן 36 פריטים",
         "items": [
-          {"label": "גאנט", "url": "", "note": "14 מסלולים: Search Black Diamond US (0–6), Shopping (0–2), PMax (2–6), רימרקטינג Google (1–6), Meta Prospecting (2–5), Meta רימרקטינג (2–6), כתבות SEO (0–6), ניוזלטרים (0–6), SMS/וואטסאפ (0–6), CRM flows (0–6), Backfill לידים (0–1), הגדלות מכירה (1–6), שיא Q4 (4–6), הפקת תוכן חודש מראש (0–6)"},
-          {"label": "תקציב לפי שלב", "url": "", "note": "יולי–אוגוסט זריעה: Search 45 / Shopping 30 / רימרקטינג 10 / Meta 5 / Email 10 · ספט–אוק בנייה: 30/25/25/15/5 · נוב–דצמ קציר: Search 25 / PMax 30 / רימרקטינג 30 / Meta 5 / Email 10"},
-          {"label": "עיקרון-על", "url": "", "note": "התוכן והקריאטיב של כל חודש מוכנים עד סוף החודש הקודם — באחריות Claude"},
-          {"label": "לוח תוכן", "url": "", "note": "36 פריטים (יולי 15, אוגוסט 5, ספטמבר 4, אוקטובר 3, נובמבר 5, דצמבר 3): קמפיינים Google/Meta, Klaviyo flows, ניוזלטרים #1–#4, 6 כתבות בלוג (Why Black Diamond, Science of Vibration, Emerald/Pear guides, B&W, Care), 4th of July, BF/Cyber. כולם ready:false, pub:false — אף פריט לא סומן"}
+          {
+            "label": "גאנט",
+            "url": "",
+            "note": "14 מסלולים: Search Black Diamond US (0–6), Shopping (0–2), PMax (2–6), רימרקטינג Google (1–6), Meta Prospecting (2–5), Meta רימרקטינג (2–6), כתבות SEO (0–6), ניוזלטרים (0–6), SMS/וואטסאפ (0–6), CRM flows (0–6), Backfill לידים (0–1), הגדלות מכירה (1–6), שיא Q4 (4–6), הפקת תוכן חודש מראש (0–6)"
+          },
+          {
+            "label": "תקציב לפי שלב",
+            "url": "",
+            "note": "יולי–אוגוסט זריעה: Search 45 / Shopping 30 / רימרקטינג 10 / Meta 5 / Email 10 · ספט–אוק בנייה: 30/25/25/15/5 · נוב–דצמ קציר: Search 25 / PMax 30 / רימרקטינג 30 / Meta 5 / Email 10"
+          },
+          {
+            "label": "עיקרון-על",
+            "url": "",
+            "note": "התוכן והקריאטיב של כל חודש מוכנים עד סוף החודש הקודם — באחריות Claude"
+          },
+          {
+            "label": "לוח תוכן",
+            "url": "",
+            "note": "36 פריטים (יולי 15, אוגוסט 5, ספטמבר 4, אוקטובר 3, נובמבר 5, דצמבר 3): קמפיינים Google/Meta, Klaviyo flows, ניוזלטרים #1–#4, 6 כתבות בלוג (Why Black Diamond, Science of Vibration, Emerald/Pear guides, B&W, Care), 4th of July, BF/Cyber. כולם ready:false, pub:false — אף פריט לא סומן"
+          }
         ]
       },
       {
         "id": "clr",
         "title": "🏷️ חיסול — מקור נתונים: https://archive.dianarafael.com/data.csv",
         "items": [
-          {"label": "מקור", "url": "https://archive.dianarafael.com/data.csv", "note": "fetch חי בכל פתיחה (CORS מהדומיין הישיר; github.io מפנה 301). CSV 19 שדות, split נאיבי. עמודה show: TRUE=פעיל / SOLD=נמכר / אחר=מוסתר. עריכה בגיליון גוגל → GitHub Action מרענן כל 30 דק'"},
-          {"label": "KPI", "url": "", "note": "פעילים / שווי מלאי ₪+$ / נמכרו / מוסתרים / חיסכון מוצג (was→now). 3 טבלאות: פעילים (לפי ₪ יורד), נמכרו (חותמת SOLD), מוסתרים. קישור 'מוצר ↗' לכל שורה"}
+          {
+            "label": "מקור",
+            "url": "https://archive.dianarafael.com/data.csv",
+            "note": "fetch חי בכל פתיחה (CORS מהדומיין הישיר; github.io מפנה 301). CSV 19 שדות, split נאיבי. עמודה show: TRUE=פעיל / SOLD=נמכר / אחר=מוסתר. עריכה בגיליון גוגל → GitHub Action מרענן כל 30 דק'"
+          },
+          {
+            "label": "KPI",
+            "url": "",
+            "note": "פעילים / שווי מלאי ₪+$ / נמכרו / מוסתרים / חיסכון מוצג (was→now). 3 טבלאות: פעילים (לפי ₪ יורד), נמכרו (חותמת SOLD), מוסתרים. קישור 'מוצר ↗' לכל שורה"
+          }
         ]
       },
       {
         "id": "agents",
         "title": "🤖 סוכנים שמפעילים — 8",
         "items": [
-          {"label": "💬 סוכן וואטסאפ", "url": "", "note": "Vercel webhook · ⚠️ Sandbox 72ש'"},
-          {"label": "📦 סוכן משלוחים", "url": "", "note": "מקומי, דורש מחשב דלוק · פעיל"},
-          {"label": "🧾 expense-bot", "url": "", "note": "Task ה-11 בחודש 09:00 · מתוזמן"},
-          {"label": "🌙 הסוכן הלילי", "url": "", "note": "Task יומי 22:00 (משרד) · מתוזמן"},
-          {"label": "🩺 בריאות הבוקר", "url": "", "note": "Task יומי 06:30 · מתוזמן"},
-          {"label": "☀️ פתיחת יום (digest)", "url": "", "note": "Make 08:00 · ממתין ל-template"},
-          {"label": "📣 סוכן השיווק", "url": "", "note": "ענן · בפיתוח"},
-          {"label": "🧠 TradingAgents", "url": "", "note": "הרצה ידנית · מותקן"}
+          {
+            "label": "💬 סוכן וואטסאפ",
+            "url": "",
+            "note": "Vercel webhook · ⚠️ Sandbox 72ש'"
+          },
+          {
+            "label": "📦 סוכן משלוחים",
+            "url": "",
+            "note": "מקומי, דורש מחשב דלוק · פעיל"
+          },
+          {
+            "label": "🧾 expense-bot",
+            "url": "",
+            "note": "Task ה-11 בחודש 09:00 · מתוזמן"
+          },
+          {
+            "label": "🌙 הסוכן הלילי",
+            "url": "",
+            "note": "Task יומי 22:00 (משרד) · מתוזמן"
+          },
+          {
+            "label": "🩺 בריאות הבוקר",
+            "url": "",
+            "note": "Task יומי 06:30 · מתוזמן"
+          },
+          {
+            "label": "☀️ פתיחת יום (digest)",
+            "url": "",
+            "note": "Make 08:00 · ממתין ל-template"
+          },
+          {
+            "label": "📣 סוכן השיווק",
+            "url": "",
+            "note": "ענן · בפיתוח"
+          },
+          {
+            "label": "🧠 TradingAgents",
+            "url": "",
+            "note": "הרצה ידנית · מותקן"
+          }
         ]
       },
       {
         "id": "files",
         "title": "🔗 קבצים ואתרים — 14 אתרים · 4 קבצים מקומיים · 5 כלים",
         "items": [
-          {"label": "מרכז שליטה (כאן)", "url": "https://dadahan10.github.io/command-center/", "note": "אתרים חיים"},
-          {"label": "REMNANT", "url": "https://dadahan10.github.io/diana-rafael-remnant/", "note": "אתרים חיים"},
-          {"label": "🏷️ מכירת חיסול — עברית (חי)", "url": "https://dadahan10.github.io/remnant-clearance/he/", "note": "אתרים חיים"},
-          {"label": "🏷️ Archive Clearance — English (live)", "url": "https://dadahan10.github.io/remnant-clearance/", "note": "אתרים חיים"},
-          {"label": "קולקציה חדשה (NSA+ספרינג)", "url": "https://dadahan10.github.io/collection-plan/", "note": "אתרים חיים"},
-          {"label": "DR Growth Blueprint (שיווק)", "url": "https://dadahan10.github.io/dr-growth-blueprint/", "note": "אתרים חיים"},
-          {"label": "טבעת עמית לדרך", "url": "https://dadahan10.github.io/amit-presentation/", "note": "אתרים חיים"},
-          {"label": "Ximus Retreat 2026", "url": "https://dadahan10.github.io/ximus-retreat-2026/", "note": "אתרים חיים"},
-          {"label": "🚐 טיול ספרד — רשימת ציוד", "url": "https://claude.ai/code/artifact/981c38c3-92df-4a0e-9e54-f60f75189149", "note": "artifact פרטי"},
-          {"label": "🌘 טיול ספרד — מדריך הליקוי + מסלול", "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3", "note": "artifact פרטי"},
-          {"label": "📊 Sector Screener (מסחר)", "url": "https://dadahan10.github.io/command-center/screener/index.html", "note": "16 תעודות סל (11 SPDR + UFO/SOXX/ITA/TAN/URA), ציון 0–5, מחירים 2026-07-02, נבנה ע\"י הסוכן הלילי"},
-          {"label": "💰 דוח שנתי 2025–26 — P&L רבעוני", "url": "https://claude.ai/code/artifact/99b05503-7849-462a-ab02-19af04542304", "note": "artifact פרטי, דורש התחברות"},
-          {"label": "🎨 CustomizeAI — טופס Beta", "url": "https://movie-burke-shots-kodak.trycloudflare.com/beta.html", "note": "trycloudflare זמני — כנראה מת"},
-          {"label": "🎨 CustomizeAI — Review", "url": "http://localhost:3001/review.html", "note": "localhost בלבד"},
-          {"label": "אקסל תוכנית קולקציה v3", "url": "", "note": "קובץ מקומי 🏠"},
-          {"label": "אקסל קולר IRDM/RKLB", "url": "", "note": "קובץ מקומי 🏠"},
-          {"label": "אקסל תזרים מזומנים (לקריאה בלבד)", "url": "", "note": "קובץ מקומי 🏠"},
-          {"label": "ריפו מסחר trading-income-system", "url": "", "note": "קובץ מקומי 🏠"},
-          {"label": "Google Calendar", "url": "https://calendar.google.com/", "note": "כלים"},
-          {"label": "Google Drive", "url": "https://drive.google.com/", "note": "כלים"},
-          {"label": "Trello — Jewelry Board", "url": "https://trello.com/", "note": "כלים"},
-          {"label": "Shopify Admin", "url": "https://admin.shopify.com/", "note": "כלים"},
-          {"label": "GitHub — dadahan10", "url": "https://github.com/dadahan10", "note": "כלים"}
+          {
+            "label": "מרכז שליטה (כאן)",
+            "url": "https://dadahan10.github.io/command-center/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "REMNANT",
+            "url": "https://dadahan10.github.io/diana-rafael-remnant/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "🏷️ מכירת חיסול — עברית (חי)",
+            "url": "https://dadahan10.github.io/remnant-clearance/he/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "🏷️ Archive Clearance — English (live)",
+            "url": "https://dadahan10.github.io/remnant-clearance/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "קולקציה חדשה (NSA+ספרינג)",
+            "url": "https://dadahan10.github.io/collection-plan/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "DR Growth Blueprint (שיווק)",
+            "url": "https://dadahan10.github.io/dr-growth-blueprint/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "טבעת עמית לדרך",
+            "url": "https://dadahan10.github.io/amit-presentation/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "Ximus Retreat 2026",
+            "url": "https://dadahan10.github.io/ximus-retreat-2026/",
+            "note": "אתרים חיים"
+          },
+          {
+            "label": "🚐 טיול ספרד — רשימת ציוד",
+            "url": "https://claude.ai/code/artifact/981c38c3-92df-4a0e-9e54-f60f75189149",
+            "note": "artifact פרטי"
+          },
+          {
+            "label": "🌘 טיול ספרד — מדריך הליקוי + מסלול",
+            "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3",
+            "note": "artifact פרטי"
+          },
+          {
+            "label": "📊 Sector Screener (מסחר)",
+            "url": "https://dadahan10.github.io/command-center/screener/index.html",
+            "note": "16 תעודות סל (11 SPDR + UFO/SOXX/ITA/TAN/URA), ציון 0–5, מחירים 2026-07-02, נבנה ע\"י הסוכן הלילי"
+          },
+          {
+            "label": "💰 דוח שנתי 2025–26 — P&L רבעוני",
+            "url": "https://claude.ai/code/artifact/99b05503-7849-462a-ab02-19af04542304",
+            "note": "artifact פרטי, דורש התחברות"
+          },
+          {
+            "label": "🎨 CustomizeAI — טופס Beta",
+            "url": "https://movie-burke-shots-kodak.trycloudflare.com/beta.html",
+            "note": "trycloudflare זמני — כנראה מת"
+          },
+          {
+            "label": "🎨 CustomizeAI — Review",
+            "url": "http://localhost:3001/review.html",
+            "note": "localhost בלבד"
+          },
+          {
+            "label": "אקסל תוכנית קולקציה v3",
+            "url": "",
+            "note": "קובץ מקומי 🏠"
+          },
+          {
+            "label": "אקסל קולר IRDM/RKLB",
+            "url": "",
+            "note": "קובץ מקומי 🏠"
+          },
+          {
+            "label": "אקסל תזרים מזומנים (לקריאה בלבד)",
+            "url": "",
+            "note": "קובץ מקומי 🏠"
+          },
+          {
+            "label": "ריפו מסחר trading-income-system",
+            "url": "",
+            "note": "קובץ מקומי 🏠"
+          },
+          {
+            "label": "Google Calendar",
+            "url": "https://calendar.google.com/",
+            "note": "כלים"
+          },
+          {
+            "label": "Google Drive",
+            "url": "https://drive.google.com/",
+            "note": "כלים"
+          },
+          {
+            "label": "Trello — Jewelry Board",
+            "url": "https://trello.com/",
+            "note": "כלים"
+          },
+          {
+            "label": "Shopify Admin",
+            "url": "https://admin.shopify.com/",
+            "note": "כלים"
+          },
+          {
+            "label": "GitHub — dadahan10",
+            "url": "https://github.com/dadahan10",
+            "note": "כלים"
+          }
         ]
       }
     ],
     "all_links": [
-      {"label": "מרכז שליטה", "url": "https://dadahan10.github.io/command-center/"},
-      {"label": "REMNANT", "url": "https://dadahan10.github.io/diana-rafael-remnant/"},
-      {"label": "מכירת חיסול HE", "url": "https://dadahan10.github.io/remnant-clearance/he/"},
-      {"label": "Archive Clearance EN", "url": "https://dadahan10.github.io/remnant-clearance/"},
-      {"label": "קולקציה חדשה NSA+ספרינג", "url": "https://dadahan10.github.io/collection-plan/"},
-      {"label": "DR Growth Blueprint", "url": "https://dadahan10.github.io/dr-growth-blueprint/"},
-      {"label": "טבעת עמית לדרך", "url": "https://dadahan10.github.io/amit-presentation/"},
-      {"label": "Ximus Retreat 2026", "url": "https://dadahan10.github.io/ximus-retreat-2026/"},
-      {"label": "ספרד — רשימת ציוד", "url": "https://claude.ai/code/artifact/981c38c3-92df-4a0e-9e54-f60f75189149"},
-      {"label": "ספרד — מדריך ליקוי + מסלול", "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3"},
-      {"label": "Sector Screener", "url": "https://dadahan10.github.io/command-center/screener/index.html"},
-      {"label": "Screener — XLK Technology", "url": "https://dadahan10.github.io/command-center/screener/xlk.html"},
-      {"label": "Screener — XLF Financials", "url": "https://dadahan10.github.io/command-center/screener/xlf.html"},
-      {"label": "Screener — XLE Energy", "url": "https://dadahan10.github.io/command-center/screener/xle.html"},
-      {"label": "Screener — XLI Industrials", "url": "https://dadahan10.github.io/command-center/screener/xli.html"},
-      {"label": "Screener — XLV Health Care", "url": "https://dadahan10.github.io/command-center/screener/xlv.html"},
-      {"label": "Screener — XLP Consumer Staples", "url": "https://dadahan10.github.io/command-center/screener/xlp.html"},
-      {"label": "Screener — XLY Consumer Discretionary", "url": "https://dadahan10.github.io/command-center/screener/xly.html"},
-      {"label": "Screener — XLB Materials", "url": "https://dadahan10.github.io/command-center/screener/xlb.html"},
-      {"label": "Screener — XLU Utilities", "url": "https://dadahan10.github.io/command-center/screener/xlu.html"},
-      {"label": "Screener — XLRE Real Estate", "url": "https://dadahan10.github.io/command-center/screener/xlre.html"},
-      {"label": "Screener — XLC Communication", "url": "https://dadahan10.github.io/command-center/screener/xlc.html"},
-      {"label": "Screener — UFO Space", "url": "https://dadahan10.github.io/command-center/screener/ufo.html"},
-      {"label": "Screener — SOXX Semiconductors", "url": "https://dadahan10.github.io/command-center/screener/soxx.html"},
-      {"label": "Screener — ITA Aerospace & Defense", "url": "https://dadahan10.github.io/command-center/screener/ita.html"},
-      {"label": "Screener — TAN Solar", "url": "https://dadahan10.github.io/command-center/screener/tan.html"},
-      {"label": "Screener — URA Uranium", "url": "https://dadahan10.github.io/command-center/screener/ura.html"},
-      {"label": "דוח שנתי 2025–26 P&L", "url": "https://claude.ai/code/artifact/99b05503-7849-462a-ab02-19af04542304"},
-      {"label": "CustomizeAI Beta (trycloudflare, זמני)", "url": "https://movie-burke-shots-kodak.trycloudflare.com/beta.html"},
-      {"label": "CustomizeAI Review (localhost)", "url": "http://localhost:3001/review.html"},
-      {"label": "archive.dianarafael.com (data.csv לחיסול)", "url": "https://archive.dianarafael.com/data.csv"},
-      {"label": "Google Calendar", "url": "https://calendar.google.com/"},
-      {"label": "Google Drive", "url": "https://drive.google.com/"},
-      {"label": "Trello", "url": "https://trello.com/"},
-      {"label": "Shopify Admin", "url": "https://admin.shopify.com/"},
-      {"label": "GitHub dadahan10", "url": "https://github.com/dadahan10"}
+      {
+        "label": "מרכז שליטה",
+        "url": "https://dadahan10.github.io/command-center/"
+      },
+      {
+        "label": "REMNANT",
+        "url": "https://dadahan10.github.io/diana-rafael-remnant/"
+      },
+      {
+        "label": "מכירת חיסול HE",
+        "url": "https://dadahan10.github.io/remnant-clearance/he/"
+      },
+      {
+        "label": "Archive Clearance EN",
+        "url": "https://dadahan10.github.io/remnant-clearance/"
+      },
+      {
+        "label": "קולקציה חדשה NSA+ספרינג",
+        "url": "https://dadahan10.github.io/collection-plan/"
+      },
+      {
+        "label": "DR Growth Blueprint",
+        "url": "https://dadahan10.github.io/dr-growth-blueprint/"
+      },
+      {
+        "label": "טבעת עמית לדרך",
+        "url": "https://dadahan10.github.io/amit-presentation/"
+      },
+      {
+        "label": "Ximus Retreat 2026",
+        "url": "https://dadahan10.github.io/ximus-retreat-2026/"
+      },
+      {
+        "label": "ספרד — רשימת ציוד",
+        "url": "https://claude.ai/code/artifact/981c38c3-92df-4a0e-9e54-f60f75189149"
+      },
+      {
+        "label": "ספרד — מדריך ליקוי + מסלול",
+        "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3"
+      },
+      {
+        "label": "Sector Screener",
+        "url": "https://dadahan10.github.io/command-center/screener/index.html"
+      },
+      {
+        "label": "Screener — XLK Technology",
+        "url": "https://dadahan10.github.io/command-center/screener/xlk.html"
+      },
+      {
+        "label": "Screener — XLF Financials",
+        "url": "https://dadahan10.github.io/command-center/screener/xlf.html"
+      },
+      {
+        "label": "Screener — XLE Energy",
+        "url": "https://dadahan10.github.io/command-center/screener/xle.html"
+      },
+      {
+        "label": "Screener — XLI Industrials",
+        "url": "https://dadahan10.github.io/command-center/screener/xli.html"
+      },
+      {
+        "label": "Screener — XLV Health Care",
+        "url": "https://dadahan10.github.io/command-center/screener/xlv.html"
+      },
+      {
+        "label": "Screener — XLP Consumer Staples",
+        "url": "https://dadahan10.github.io/command-center/screener/xlp.html"
+      },
+      {
+        "label": "Screener — XLY Consumer Discretionary",
+        "url": "https://dadahan10.github.io/command-center/screener/xly.html"
+      },
+      {
+        "label": "Screener — XLB Materials",
+        "url": "https://dadahan10.github.io/command-center/screener/xlb.html"
+      },
+      {
+        "label": "Screener — XLU Utilities",
+        "url": "https://dadahan10.github.io/command-center/screener/xlu.html"
+      },
+      {
+        "label": "Screener — XLRE Real Estate",
+        "url": "https://dadahan10.github.io/command-center/screener/xlre.html"
+      },
+      {
+        "label": "Screener — XLC Communication",
+        "url": "https://dadahan10.github.io/command-center/screener/xlc.html"
+      },
+      {
+        "label": "Screener — UFO Space",
+        "url": "https://dadahan10.github.io/command-center/screener/ufo.html"
+      },
+      {
+        "label": "Screener — SOXX Semiconductors",
+        "url": "https://dadahan10.github.io/command-center/screener/soxx.html"
+      },
+      {
+        "label": "Screener — ITA Aerospace & Defense",
+        "url": "https://dadahan10.github.io/command-center/screener/ita.html"
+      },
+      {
+        "label": "Screener — TAN Solar",
+        "url": "https://dadahan10.github.io/command-center/screener/tan.html"
+      },
+      {
+        "label": "Screener — URA Uranium",
+        "url": "https://dadahan10.github.io/command-center/screener/ura.html"
+      },
+      {
+        "label": "דוח שנתי 2025–26 P&L",
+        "url": "https://claude.ai/code/artifact/99b05503-7849-462a-ab02-19af04542304"
+      },
+      {
+        "label": "CustomizeAI Beta (trycloudflare, זמני)",
+        "url": "https://movie-burke-shots-kodak.trycloudflare.com/beta.html"
+      },
+      {
+        "label": "CustomizeAI Review (localhost)",
+        "url": "http://localhost:3001/review.html"
+      },
+      {
+        "label": "archive.dianarafael.com (data.csv לחיסול)",
+        "url": "https://archive.dianarafael.com/data.csv"
+      },
+      {
+        "label": "Google Calendar",
+        "url": "https://calendar.google.com/"
+      },
+      {
+        "label": "Google Drive",
+        "url": "https://drive.google.com/"
+      },
+      {
+        "label": "Trello",
+        "url": "https://trello.com/"
+      },
+      {
+        "label": "Shopify Admin",
+        "url": "https://admin.shopify.com/"
+      },
+      {
+        "label": "GitHub dadahan10",
+        "url": "https://github.com/dadahan10"
+      }
     ],
     "notes": "הקומיט האחרון 26.7.2026 ('add Spain trip') — 2.5 חודשים ללא עדכון. מיושן: (1) טיול ספרד (7–18.8) הסתיים; (2) CustomizeAI — 'launch 7.7' עבר, קישור trycloudflare זמני מת, Review על localhost; (3) סוכן וואטסאפ עדיין מסומן על Twilio Sandbox; (4) הסוכן הלילי מסומן 'מתוזמן 22:00' אבל המשימה DianaRafael-NightAgent כבויה מ-26.7 ו-DR-MorningHealthCheck נכשל (rc=1) מ-14.8; (5) לוח התוכן ו'מוכן/עלה' לא סומנו מעולם (36×false) — התוכנית השיווקית של יולי–דצמבר לא קרתה כפי שתוכננה; (6) חסר לגמרי: PULSO (30.9), הצעת IAI B036 (11.10), R543 Constellation + סימולטור, תוכנית Q4 + גאנט REMNANT (Google Sheet), טיזר 12.10 / השקה 16.11, עגילים E048/E049, מחקר דימה JV (25.8), מחקר teen jewelry (12.10), קטלוג 934 מודלים, מסך לבן+צ'קים+שער אוטומטי במערכת הניהול; (7) 'REMNANT Archive Clearance' — הדף עבר ל-archive.dianarafael.com (CNAME), מייל קלירנס C נסגר 15.10; (8) מסחר — 'סריקה ראשונה לפתיחת יולי' ו-Review שבועי; נתוני ה-screener מ-2.7.2026; (9) פאנל החיסול הוא היחיד שעדיין חי (fetch מ-data.csv)."
   },
-
   "pulso": {
     "what": "PULSO (לשעבר WHOOP CHARMS / 'Black Ice – Charms for WHOOP & Fitness Bands') היא קולקציית צ'ארמים-סליידרים לרצועות כושר (WHOOP ודומיהן) בשפת דיאנה רפאל: לוחית זהב סאטן 25×6×1.0 מ\"מ לרוחב רצועה 24 מ\"מ, גב money-clip עם שני תפסנים קפיציים 7 מ\"מ במתח מוקדם, 4 יהלומים לבנים 1.0 מ\"מ בפינות ('ניטים') ומוטיב משובץ פאווה שחור. הקולקציה נבנתה בלילה אחד (30.9.2026, 01:15–03:00, מחשב הבית): 50 פיסים ב-5 משפחות (16 ראשי תיבות/מונוגרמים, 8 מוזיקה, 7 קלפים ומזל, 7 סמלים, 12 מזלות) עם מפרט אבנים, משקל זהב, תמחור, מק\"טים C001–C050, שמות מסחריים בספרדית/איטלקית (Inicial Negra, Sonido Negro, Espada Negra, Zodíaco Negro…) ופרומפטים ל-Gemini. ההדמיות הן קונספט ב-Gemini (תמונת-אב + עריכות), לא Blender — 4 פריימים לכל פיס (FRONT-Y, FRONT-R, LYING34-R, LYING34-Y). ב-4.10 דניאל מחק 14 פיסים; ב-1.10 נוספה C051 'Pulso Mark' (הסימן של דניאל, צורת 4 מלאה בפאווה שחור) וב-7.10 C052 'Anís Negro – Star Anise' → 38 פיסים. השם PULSO הוצע 30.9 כי דניאל ביקש שם בלי WHOOP ובלי Charms.",
     "items_count": 38,
@@ -162,23 +484,74 @@
       "פריט עם סמל Ironman — סימן מסחרי, להציע חלופה (C053 ניטרלי-טריאתלון)"
     ],
     "artifacts": [
-      {"label": "דף PULSO לשיתוף (artifact פרטי, 11.10)", "url": "https://claude.ai/artifact/DWwkF1cxkEgCW5Z4so3EEn"},
-      {"label": "גיליון שליטה 'WHOOP CHARMS — Launch Control' (Google Sheets)", "url": "https://docs.google.com/spreadsheets/d/1ye6BvrkQEPZvBpRkws0irdEkKur59qMzkaSGUDlit9w"},
-      {"label": "לוח פינטרסט השראה (36 פינים)", "url": "https://pinterest.com/dianarafaeljewelry/whoop-charms"},
-      {"label": "קולקציית PULSO בשופיפיי (לא מפורסמת, 404)", "url": "https://dianarafael.com/collections/pulso"},
-      {"label": "דף קולקציה EN (מקומי)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\index.html"},
-      {"label": "דף קולקציה HE (מקומי, נבנה מ-build_he.py)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\index-he.html"},
-      {"label": "סיכום דף PULSO", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\SUMMARY-he.md"},
-      {"label": "מחקר נועה מוזס + 2 עיצובים", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\research\\ (NOA-MOZES-he.md, NOA-2-DESIGNS-he.md)"},
-      {"label": "תמונות הדף: 46 JPG (38 צ'ארמים + 5 lifestyle + תשריט + proposals) + פונט Champie", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\assets\\"},
-      {"label": "תמחור מתכות 14K/9K/כסף (CSV + HTML, 38 שורות)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-pricing\\PULSO-pricing-metals.html"},
-      {"label": "מצב שופיפיי 11.10 (טבלת 38 gids)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\SHOPIFY-STATE-he.md"},
-      {"label": "README הקולקציה (30.9)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\README-he.md"},
-      {"label": "מפרט: build_spec.py → collection.{json,csv,md}, names.py, תשריט מידות v4", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\spec\\"},
-      {"label": "השקה: shopify_sync.py, strap_options.py, veo_clip.py, assemble.py, PULSO-preview-9x16.mp4", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\launch\\"},
-      {"label": "אופציות מיקום על הרצועה (12 תמונות, 11.10)", "file": "remnant-launch\\charms\\launch\\out\\strap-options-11.10 + Dropbox WHOOP CHARMS\\launch\\strap-options-11.10"},
-      {"label": "רינדורים (Dropbox)", "file": "Dropbox\\תכשיטים Jewelry\\Black Ice\\WHOOP CHARMS\\renders\\gemini-v1\\<id>"},
-      {"label": "תבניות ליסטינג Etsy", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\etsy\\pulso-listing-templates.md"}
+      {
+        "label": "דף PULSO לשיתוף (artifact פרטי, 11.10)",
+        "url": "https://claude.ai/artifact/DWwkF1cxkEgCW5Z4so3EEn"
+      },
+      {
+        "label": "גיליון שליטה 'WHOOP CHARMS — Launch Control' (Google Sheets)",
+        "url": "https://docs.google.com/spreadsheets/d/1ye6BvrkQEPZvBpRkws0irdEkKur59qMzkaSGUDlit9w"
+      },
+      {
+        "label": "לוח פינטרסט השראה (36 פינים)",
+        "url": "https://pinterest.com/dianarafaeljewelry/whoop-charms"
+      },
+      {
+        "label": "קולקציית PULSO בשופיפיי (לא מפורסמת, 404)",
+        "url": "https://dianarafael.com/collections/pulso"
+      },
+      {
+        "label": "דף קולקציה EN (מקומי)",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\index.html"
+      },
+      {
+        "label": "דף קולקציה HE (מקומי, נבנה מ-build_he.py)",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\index-he.html"
+      },
+      {
+        "label": "סיכום דף PULSO",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\SUMMARY-he.md"
+      },
+      {
+        "label": "מחקר נועה מוזס + 2 עיצובים",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\research\\ (NOA-MOZES-he.md, NOA-2-DESIGNS-he.md)"
+      },
+      {
+        "label": "תמונות הדף: 46 JPG (38 צ'ארמים + 5 lifestyle + תשריט + proposals) + פונט Champie",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-page\\assets\\"
+      },
+      {
+        "label": "תמחור מתכות 14K/9K/כסף (CSV + HTML, 38 שורות)",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\pulso-pricing\\PULSO-pricing-metals.html"
+      },
+      {
+        "label": "מצב שופיפיי 11.10 (טבלת 38 gids)",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\SHOPIFY-STATE-he.md"
+      },
+      {
+        "label": "README הקולקציה (30.9)",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\README-he.md"
+      },
+      {
+        "label": "מפרט: build_spec.py → collection.{json,csv,md}, names.py, תשריט מידות v4",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\spec\\"
+      },
+      {
+        "label": "השקה: shopify_sync.py, strap_options.py, veo_clip.py, assemble.py, PULSO-preview-9x16.mp4",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\charms\\launch\\"
+      },
+      {
+        "label": "אופציות מיקום על הרצועה (12 תמונות, 11.10)",
+        "file": "remnant-launch\\charms\\launch\\out\\strap-options-11.10 + Dropbox WHOOP CHARMS\\launch\\strap-options-11.10"
+      },
+      {
+        "label": "רינדורים (Dropbox)",
+        "file": "Dropbox\\תכשיטים Jewelry\\Black Ice\\WHOOP CHARMS\\renders\\gemini-v1\\<id>"
+      },
+      {
+        "label": "תבניות ליסטינג Etsy",
+        "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\etsy\\pulso-listing-templates.md"
+      }
     ],
     "iai": {
       "what": "הצעת מחיר לצמיד מתנה לתעשייה האווירית (IAI) — דגם B036: רצועת עור (שחור או חום, 12 מ\"מ) עם מדליון כסף 925 Ø16 מ\"מ ובו מגן דוד על פסיפס שברי מתכת ממשימות אווירחלל (רקע רדיד זהב מקומט בסגנון 'בראשית') תחת כיפת אפוקסי, סוגר קופסה 22×12.5 עם חריטה (קו מסלול יירוט 'חץ' או 'WHO DARES WINS'), קופסת הגשה. 100 יחידות × ₪1,250 + מע\"מ (מחירון ₪1,400) = ₪146,250 כולל מע\"מ 17%. דף הצעה HTML (מודפס A4) עם לוגואים, קולאז' 6 תמונות משימה מאתר IAI, הדמיות Gemini שחור/חום, 4 אלמנטים עם מידות מה-CAD (דניאל צמיד.3dm), 5 ערכים. B036 נקלט בקטלוג המודלים 11.10.",
@@ -193,16 +566,33 @@
         "שליחה ל-IAI (דניאל) — אחרי הסלוגן"
       ],
       "artifacts": [
-        {"label": "הצעת IAI לשיתוף (artifact פרטי, v3 11.10)", "url": "https://claude.ai/artifact/Sv8MHCWbbsJa1Q2Mc8oU5a"},
-        {"label": "דף ההצעה (HTML, מודפס A4)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\index.html"},
-        {"label": "סיכום v1–v3 + מה דניאל חייב לאשר", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\SUMMARY-he.md"},
-        {"label": "פרומפטים (Gemini / GPT-image / Veo-Sora)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\PROMPTS-he.md"},
-        {"label": "הדמיות סופיות render-black.png / render-brown.png (5 MB כ\"א) + assets/ (2 קבצים בבית; השאר ב-OneDrive משרד)", "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\"},
-        {"label": "לוגו IAI לבן (להורדה מהדפדפן)", "url": "https://www.iai.co.il/wp-content/themes/generatepress_child/assets/images/iai-logo-white.svg"}
+        {
+          "label": "הצעת IAI לשיתוף (artifact פרטי, v3 11.10)",
+          "url": "https://claude.ai/artifact/Sv8MHCWbbsJa1Q2Mc8oU5a"
+        },
+        {
+          "label": "דף ההצעה (HTML, מודפס A4)",
+          "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\index.html"
+        },
+        {
+          "label": "סיכום v1–v3 + מה דניאל חייב לאשר",
+          "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\SUMMARY-he.md"
+        },
+        {
+          "label": "פרומפטים (Gemini / GPT-image / Veo-Sora)",
+          "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\PROMPTS-he.md"
+        },
+        {
+          "label": "הדמיות סופיות render-black.png / render-brown.png (5 MB כ\"א) + assets/ (2 קבצים בבית; השאר ב-OneDrive משרד)",
+          "file": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\q4\\iai-proposal\\"
+        },
+        {
+          "label": "לוגו IAI לבן (להורדה מהדפדפן)",
+          "url": "https://www.iai.co.il/wp-content/themes/generatepress_child/assets/images/iai-logo-white.svg"
+        }
       ]
     }
   },
-
   "mgmt_changes": {
     "repo_on_this_machine": false,
     "repo_path": "",
@@ -212,28 +602,94 @@
     "supabase": "https://fcmlnrkkcabebuechaum.supabase.co",
     "stack": "React + TypeScript + Vite + Zustand + Supabase + Vercel (auto-deploy on push to main); api/whatsapp.ts (Vercel function); agents/ (order-intake, shipping-close-loop, CERTS AGENT, cockpit-clearance, etsy-ddp-pulse); sql/ migrations",
     "changes": [
-      {"date": "2026-10-04", "what": "טוקן Supabase Management API חדש (sbp_, Full access) ב-.env — גישת SQL ישירה לסוכן חזרה (הקודם החזיר Unauthorized)"},
-      {"date": "2026-09-29", "what": "api/whatsapp.ts: משימה שממתינה >2 דק' בלי שהמחשב אסף אותה → הבוט עונה 'המחשב לא מחובר' במקום 'מכין' (נדחף ל-main → Vercel)"},
-      {"date": "2026-09-27", "what": "קוד הדולר/זהב באוויר (commit 10f7f4c): loadFromSupabase קורא usd_ils_rate / gold_price_14k_ils / gold_price_18k_ils מ-settings; הפרוקסי המת (/api/fx, /api/gold) הוסר"},
-      {"date": "2026-09-23", "what": "refresh_market_rates() + pg_cron יומי 05:30 UTC ב-Supabase (frankfurter.dev + gold-api.com) — sql/2026-09-23_market_rates_cron.sql. ריצה ראשונה 3.0178 / $4,320. 'רשימת תיקוני 3.9' בוטלה ע\"י דניאל"},
-      {"date": "2026-09-20", "what": "סשן לילי מתוזמן DR-Mgmt-2026-09-20 (6 משימות: שער+זהב, רווח לפי מטבע פלטפורמה, באג משקל 0.0x, תמונה בהצעת מחיר→כרטיס לקוח, סה\"כ רכישות ישראלים, FOLLOW UP+תזכורת) — רק סעיף השער+זהב ידוע כבוצע; השאר לא אומת"},
-      {"date": "2026-09-09", "what": "DR-OrderIntake חזר לחיים (נפל מ-14.8 בגלל נתיב Desktop ישן אחרי מעבר ל-OneDrive): status_triggers.py כל שעתיים — כרטיס DD→model, מייל יציקה→casting, מייל תווית D2D/לאור→shipped+sold+מעקב. 8 מספרי מעקב הוזנו, J1768 model→casting"},
-      {"date": "2026-09-07", "what": "אינדקס ייחודי diamonds_one_parcel_per_slot על (allocated_to, position) — sql/2026-09-07; ה-UI מציע חריץ פנוי (commit). ספרינג דיאם נקלט כסדרת DB ישירות ב-SQL"},
-      {"date": "2026-09-03", "what": "גישת Management API ל-Supabase (טוקן claude-agent) — הסוכן מריץ מיגרציות בעצמו, בלי SQL Editor"},
-      {"date": "2026-08-25", "what": "מודל שלבים חדש: שלב הייצור על jewelry.status (in_progress→model→casting→work→ready→sold); orders רק received→in_preparation→ready→shipped→delivered (+issue)"},
-      {"date": "2026-08-24", "what": "תרחיש Make 5417151 Shopify→Supabase נבנה מחדש (אחרי אובדן אמון): חיפוש לקוח לפי מייל → upsert מלא (שם מלא, כתובת, טלפון) → הזמנה עם customer_id + model_ref=SKU מלא → השלמת sku ל-J"},
-      {"date": "2026-08-20", "what": "תיקון '14KK undefined' במסך תכשיטים: 67 רשומות נורמלו (gold_karat 14/18, gold_color Y/W/R/PT); OrdersPage כתב '14K'/'Rose' — תוקן (commit dd08d11)"},
-      {"date": "2026-08-04", "what": "לולאת משלוח מלאה: d2d_bot --j מעדכן אוטומטית order=shipped, jewelry=sold, Shopify fulfilled, טרלו"},
-      {"date": "2026-08-02", "what": "מסך לבן אחרי login תוקן (5738f1c): persist version:1 + partialize רק preferences/settings + ErrorBoundary 'נקה ורענן'; כפתורי תקופות בדשבורד (4087d4b); לשונית 'צ'קים ותשלומים' על expenses (a5c7292); כלל תזרים — צ'ק יוצא רק בסימון 'ירד' (ecc8022); סיסמה אופסה"},
-      {"date": "2026-07-27", "what": "סוכן קליטה מקומי מושך שם/מייל/טלפון/כתובת/מקט/מידה/זהב/קראט ישר מ-Shopify API; תרחיש Make 5417151 נשאר שבור בכוונה (עד 24.8)"},
-      {"date": "2026-07-21", "what": "שדה מק\"ט בכרטיס J; בורר מתכת מאוחד + פלטינה (950/PT); עלות ייצור מחושבת מ-costByJ (לא cost_usd ידני); מטבע ₪ להזמנות ישראליות (private_ils/superpharma)"},
-      {"date": "2026-07-13", "what": "שדה הצמדת J: select → input+datalist (בחירה או הזנה ידנית, מסונן status NOT IN sold/disassembled) — da35bc6+c940782; סקיל complete-order-intake; הזמנה #1263 פוצלה ל-J1725+J1726"},
-      {"date": "2026-07-09", "what": "intake_sku_match.py: צבע נגזר מ-Material של הוריאציה (לא מכותרת הליסטינג) — תיקון באג Y במקום R"},
-      {"date": "2026-07-05", "what": "routine הענן order-intake-and-casting-autopilot מת ~8 ימים → הזמנות גולמיות; הוחלט על קליטה מקומית + heartbeat (order-intake-rebuild). Diane Fox נמחקה"},
-      {"date": "2026-07-01", "what": "שער USD→ILS = settings.usd_ils_rate (3.3) נטען ב-loadFromSupabase; FX חי לא דורס את שער העלות; מכירות החודש גם ב-₪; סוכן תעודות (CERTS AGENT)"},
-      {"date": "2026-06-23", "what": "8 תיקוני UI (e53d4ce): כפתור 'J הבא' + SKU ידני בכרטיס הזמנה, FK fix (jewelry קודם), מטבע לקוח ₪/$, costByJ ב-₪, התראות (wedding bands R199, פריט שנשלח, z-index, click-outside); דדופ יהלומים + אבן מרכזית אחת ל-J (6dcd0be)"},
-      {"date": "2026-06-22", "what": "באג 'J הבא' תוקן (סורק orders+jewelry); עמודות אבן מרכזית/אבני צד ב-JewelryPage; מסך ספקים חדש (SuppliersPage) מאגד חיובים מ-4 טבלאות עלויות"},
-      {"date": "2026-06-21", "what": "טריגר DB trg_orders_assign_j — הקצאת J אוטומטית מיידית + שורת jewelry; כפתור 'J הבא' ב-NewOrderModal; resolveCustomer מקשר customer_id; שדה מקדמה (paid_usd/paid_ils)"}
+      {
+        "date": "2026-10-04",
+        "what": "הסוכן קיבל שוב גישה ישירה למערכת הניהול (המפתח הקודם הפסיק לעבוד)"
+      },
+      {
+        "date": "2026-09-29",
+        "what": "סוכן הוואטסאפ: אם בקשה ממתינה יותר מ-2 דק' ומחשב המשרד לא אסף אותה — הבוט עונה 'המחשב לא מחובר' במקום 'מכין' (עודכן באתר)"
+      },
+      {
+        "date": "2026-09-27",
+        "what": "שער הדולר ומחיר הזהב (14K/18K) נטענים עכשיו ישירות ממערכת הניהול; החיבור הישן שלא עבד הוסר"
+      },
+      {
+        "date": "2026-09-23",
+        "what": "שער הדולר ומחיר הזהב מתעדכנים אוטומטית כל בוקר ב-08:30 במערכת הניהול. עדכון ראשון: 3.0178 / $4,320. 'רשימת תיקוני 3.9' בוטלה ע\"י דניאל"
+      },
+      {
+        "date": "2026-09-20",
+        "what": "סשן לילה מתוזמן 20.9 (6 משימות: שער+זהב, רווח לפי מטבע פלטפורמה, באג משקל 0.0x, תמונה בהצעת מחיר→כרטיס לקוח, סה\"כ רכישות ישראלים, FOLLOW UP+תזכורת) — רק סעיף השער+זהב ידוע כבוצע; השאר לא אומת"
+      },
+      {
+        "date": "2026-09-09",
+        "what": "קליטת ההזמנות האוטומטית חזרה לעבוד (נפלה מ-14.8 בגלל מעבר התיקיות ל-OneDrive): כל שעתיים — כרטיס DD→model, מייל יציקה→casting, מייל תווית D2D/לאור→shipped+sold+מעקב. 8 מספרי מעקב הוזנו, J1768 model→casting"
+      },
+      {
+        "date": "2026-09-07",
+        "what": "מערכת הניהול כבר לא מאפשרת לשבץ שתי חבילות יהלומים באותו מקום בתכשיט; המסך מציע מקום פנוי. ספרינג דיאם נקלט ישירות למערכת"
+      },
+      {
+        "date": "2026-09-03",
+        "what": "הסוכן קיבל גישה לעדכן את מערכת הניהול בעצמו, בלי שדניאל יצטרך להריץ שום דבר"
+      },
+      {
+        "date": "2026-08-25",
+        "what": "מודל שלבים חדש: שלב הייצור נשמר על התכשיט (בעבודה→model→casting→work→ready→sold); ההזמנה רק received→in preparation→ready→shipped→delivered (+issue)"
+      },
+      {
+        "date": "2026-08-24",
+        "what": "תרחיש Make של Shopify→מערכת הניהול נבנה מחדש (אחרי אובדן אמון): חיפוש לקוח לפי מייל → יצירה/עדכון מלא (שם מלא, כתובת, טלפון) → הזמנה מקושרת ללקוח + מק\"ט מלא → השלמת מק\"ט לכרטיס J"
+      },
+      {
+        "date": "2026-08-20",
+        "what": "תיקון '14KK undefined' במסך תכשיטים: 67 רשומות תוקנו (זהב 14/18, צבע Y/W/R/PT); מסך ההזמנות כתב '14K'/'Rose' — תוקן"
+      },
+      {
+        "date": "2026-08-04",
+        "what": "לולאת משלוח מלאה: סוכן המשלוחים מעדכן אוטומטית הזמנה=shipped, תכשיט=sold, Shopify נשלח, טרלו"
+      },
+      {
+        "date": "2026-08-02",
+        "what": "מסך לבן אחרי כניסה למערכת תוקן (+ כפתור 'נקה ורענן'); כפתורי תקופות בדשבורד; לשונית 'צ'קים ותשלומים' בהוצאות; כלל תזרים — צ'ק יוצא רק בסימון 'ירד'; סיסמה אופסה"
+      },
+      {
+        "date": "2026-07-27",
+        "what": "סוכן קליטה במחשב מושך שם/מייל/טלפון/כתובת/מק\"ט/מידה/זהב/קראט ישר מ-Shopify; תרחיש ה-Make הישן נשאר שבור בכוונה (עד 24.8)"
+      },
+      {
+        "date": "2026-07-21",
+        "what": "שדה מק\"ט בכרטיס J; בורר מתכת מאוחד + פלטינה (950/PT); עלות ייצור מחושבת אוטומטית לפי J (לא הזנה ידנית); מטבע ₪ להזמנות ישראליות (פרטי/סופר-פארם)"
+      },
+      {
+        "date": "2026-07-13",
+        "what": "שדה הצמדת J: אפשר לבחור מרשימה או להקליד ידנית (בלי תכשיטים שנמכרו/פורקו); נוהל לקליטת הזמנות; הזמנה #1263 פוצלה ל-J1725+J1726"
+      },
+      {
+        "date": "2026-07-09",
+        "what": "קליטת הזמנה: צבע הזהב נלקח מהווריאציה שהלקוח בחר (לא מכותרת המוצר) — תיקון באג Y במקום R"
+      },
+      {
+        "date": "2026-07-05",
+        "what": "משימת הענן לקליטת הזמנות ומעקב יציקה מתה ~8 ימים → הזמנות נשארו לא-מלאות; הוחלט על קליטה במחשב המשרד + בדיקה שהיא חיה. Diane Fox נמחקה"
+      },
+      {
+        "date": "2026-07-01",
+        "what": "שער הדולר→שקל נלקח מההגדרות (3.3); השער החי לא דורס את שער העלות; מכירות החודש גם ב-₪; סוכן תעודות (CERTS AGENT)"
+      },
+      {
+        "date": "2026-06-23",
+        "what": "8 תיקוני מסך: כפתור 'J הבא' + מק\"ט ידני בכרטיס הזמנה, תיקון שמירה (התכשיט נוצר קודם), מטבע לקוח ₪/$, עלות לפי J ב-₪, התראות (wedding bands R199, פריט שנשלח, תצוגה, סגירה בלחיצה בחוץ); ניקוי יהלומים כפולים + אבן מרכזית אחת ל-J"
+      },
+      {
+        "date": "2026-06-22",
+        "what": "באג 'J הבא' תוקן (בודק גם הזמנות וגם תכשיטים); עמודות אבן מרכזית/אבני צד במסך תכשיטים; מסך ספקים חדש שמאגד חיובים מ-4 סוגי עלויות"
+      },
+      {
+        "date": "2026-06-21",
+        "what": "כל הזמנה חדשה מקבלת מספר J אוטומטית מיד + כרטיס תכשיט; כפתור 'J הבא' בהזמנה חדשה; הזמנה מקושרת אוטומטית ללקוח; שדה מקדמה ($/₪)"
+      }
     ],
     "roadmap_open": [
       "סוכן בוקר — בדיקת שלמות הזמנה/J (שם, מייל, טלפון, מק\"ט, J) — להשלים ממקור ודאי, לסמן ספק (roadmap 23.7 #2)",
@@ -266,52 +722,231 @@
       "19 טבעות בלי מידה — המידה לא קיימת בשום מקור, רק דניאל"
     ]
   },
-
   "live_sites": [
-    {"label": "מרכז שליטה (Cockpit)", "url": "https://dadahan10.github.io/command-center/", "topic": "קוקפיט — מיושן מ-26.7"},
-    {"label": "Sector Screener", "url": "https://dadahan10.github.io/command-center/screener/index.html", "topic": "מסחר במניות (נתונים 2.7.2026)"},
-    {"label": "REMNANT — דף הקולקציה", "url": "https://dadahan10.github.io/diana-rafael-remnant/", "topic": "REMNANT"},
-    {"label": "REMNANT — וואן-פייג'ר ללקוחות (collection.html)", "url": "https://dadahan10.github.io/diana-rafael-remnant/collection.html", "topic": "REMNANT"},
-    {"label": "REMNANT — תמונות ציבוריות למיילים", "url": "https://dadahan10.github.io/diana-rafael-remnant/assets/email/", "topic": "REMNANT / Klaviyo"},
-    {"label": "Archive Clearance — EN (CNAME)", "url": "https://archive.dianarafael.com/", "topic": "מכירת חיסול"},
-    {"label": "Archive Clearance — HE", "url": "https://archive.dianarafael.com/he/", "topic": "מכירת חיסול"},
-    {"label": "Clearance data.csv (מקור הקוקפיט)", "url": "https://archive.dianarafael.com/data.csv", "topic": "מכירת חיסול"},
-    {"label": "Clearance — github.io EN (מפנה ל-archive)", "url": "https://dadahan10.github.io/remnant-clearance/", "topic": "מכירת חיסול"},
-    {"label": "Clearance — github.io HE", "url": "https://dadahan10.github.io/remnant-clearance/he/", "topic": "מכירת חיסול"},
-    {"label": "Clearance — גיליון העריכה (Google Sheets)", "url": "https://docs.google.com/spreadsheets/d/1XiXb4j11DksQ1-ccPB3vE-ZqfZzihvxOBkq73KszOWI/edit", "topic": "מכירת חיסול"},
-    {"label": "Clearance — Published CSV", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLzeMWDKkDwzu1g4h-geR-tnJ5yk970n6Yth4kDnUxE4mLwOl5UBVRi_O0IgC3nHdm-9cISDDB6PO/pub?output=csv", "topic": "מכירת חיסול"},
-    {"label": "מערכת הניהול (Vercel)", "url": "https://diana-rafael.vercel.app", "topic": "מערכת ניהול"},
-    {"label": "מערכת הניהול — GitHub", "url": "https://github.com/dadahan10/diana-rafael", "topic": "מערכת ניהול"},
-    {"label": "Supabase (מערכת הניהול)", "url": "https://fcmlnrkkcabebuechaum.supabase.co", "topic": "מערכת ניהול"},
-    {"label": "WhatsApp webhook (Vercel)", "url": "https://diana-rafael.vercel.app/api/whatsapp", "topic": "סוכן וואטסאפ"},
-    {"label": "תחשיב קולקציה חדשה (NSA + ספרינג)", "url": "https://dadahan10.github.io/collection-plan/", "topic": "NSA + Spring JV"},
-    {"label": "הצגה לעמית לדרך", "url": "https://dadahan10.github.io/amit-presentation/", "topic": "טבעת עמית לדרך"},
-    {"label": "DR Growth Blueprint", "url": "https://dadahan10.github.io/dr-growth-blueprint/", "topic": "שיווק"},
-    {"label": "Ximus Retreat 2026", "url": "https://dadahan10.github.io/ximus-retreat-2026/", "topic": "צמיד אקסימוס"},
-    {"label": "יומן דרך ספרד 2026", "url": "https://dadahan10.github.io/spain-2026/", "topic": "אישי — ספרד"},
-    {"label": "ספרד — אלבום", "url": "https://dadahan10.github.io/spain-2026/album/", "topic": "אישי — ספרד"},
-    {"label": "ספרד — הוצאות ופתקים (Sheets)", "url": "https://docs.google.com/spreadsheets/d/1t201w6l5rEz5Wig_jfgErKOeB2c6DhNRI-5eGWcM8IM/edit", "topic": "אישי — ספרד"},
-    {"label": "ספרד — רשימת ציוד (artifact)", "url": "https://claude.ai/code/artifact/981c38c3-92df-4a0e-9e54-f60f75189149", "topic": "אישי — ספרד"},
-    {"label": "ספרד — מדריך ליקוי + מסלול (artifact)", "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3", "topic": "אישי — ספרד"},
-    {"label": "PULSO — דף קולקציה (artifact פרטי)", "url": "https://claude.ai/artifact/DWwkF1cxkEgCW5Z4so3EEn", "topic": "PULSO"},
-    {"label": "PULSO — Launch Control (Sheets)", "url": "https://docs.google.com/spreadsheets/d/1ye6BvrkQEPZvBpRkws0irdEkKur59qMzkaSGUDlit9w", "topic": "PULSO"},
-    {"label": "PULSO — לוח פינטרסט", "url": "https://pinterest.com/dianarafaeljewelry/whoop-charms", "topic": "PULSO"},
-    {"label": "הצעת IAI B036 (artifact פרטי)", "url": "https://claude.ai/artifact/Sv8MHCWbbsJa1Q2Mc8oU5a", "topic": "IAI צמיד מתנה"},
-    {"label": "REMNANT — Launch Control: Items + Marketing Gantt (Sheets)", "url": "https://docs.google.com/spreadsheets/d/1eJMqL456CvBqVbLYnNgNocoT6O1NW3Or5tTfGaUeFk0", "topic": "REMNANT / Q4 גאנט"},
-    {"label": "דוח שנתי 2025–26 P&L רבעוני (artifact פרטי)", "url": "https://claude.ai/code/artifact/99b05503-7849-462a-ab02-19af04542304", "topic": "פיננסים"},
-    {"label": "המפה הפיננסית II (artifact, 3.9)", "url": "https://claude.ai/code/artifact/e9797aae-8d7f-46e8-859f-990a94c98f9d", "topic": "פיננסים"},
-    {"label": "המפה הפיננסית I (artifact, 2.9)", "url": "https://claude.ai/code/artifact/e69b6060-88ef-4f55-b523-e3239bcce1b2", "topic": "פיננסים"},
-    {"label": "ראדאר ספיגה — מחקר מסחר (artifact)", "url": "https://claude.ai/code/artifact/d7a121e1-444c-4a1e-ac67-ee42a117e989", "topic": "מסחר במניות"},
-    {"label": "מסמך השראה — מיזם דימה hand chain (artifact)", "url": "https://claude.ai/code/artifact/3cdadda6-f30f-4128-a274-26952c73db00", "topic": "דימה JV"},
-    {"label": "מחקר teen fine jewelry (artifact פרטי, 12.10)", "url": "https://claude.ai/artifact/CRcxdhHHXzvaUqMqsQQjcB", "topic": "מותג תכשיטים לנערות (מיה+רונית)"},
-    {"label": "CustomizeAI — הבקשות בווידג'ט (artifact)", "url": "https://claude.ai/artifact/M8Z9CNx8kEKib3xZJcwQug", "topic": "CustomizeAI"},
-    {"label": "artifact מסשן 2–3.8 (לא מזוהה)", "url": "https://claude.ai/code/artifact/d7efb456-3f27-49ed-840a-1d1f43e1f7ed", "topic": "לא ידוע"},
-    {"label": "Airtable — Asset Studio 'Claude Ad Builder' (base appRB11pmVTyHdGtc)", "url": "https://airtable.com/appRB11pmVTyHdGtc", "topic": "שיווק / קריאייטיב"},
-    {"label": "Trello — Jewelry Progress (מחבר) / לוח DD id 5a6207665e60c7bc8735a05a", "url": "https://trello.com/", "topic": "ייצור"},
-    {"label": "Trello — כרטיס BLACK ICE לדוגמה", "url": "https://trello.com/c/Ta9Bq7H5", "topic": "ייצור"},
-    {"label": "Shopify Admin", "url": "https://admin.shopify.com/", "topic": "חנות"},
-    {"label": "dianarafael.com", "url": "https://dianarafael.com/", "topic": "חנות"},
-    {"label": "GitHub dadahan10", "url": "https://github.com/dadahan10", "topic": "קוד"},
-    {"label": "dotfiles (~/.claude)", "url": "https://github.com/dadahan10/claude-dotfiles", "topic": "קוד"}
+    {
+      "label": "מרכז שליטה (Cockpit)",
+      "url": "https://dadahan10.github.io/command-center/",
+      "topic": "קוקפיט — מיושן מ-26.7"
+    },
+    {
+      "label": "Sector Screener",
+      "url": "https://dadahan10.github.io/command-center/screener/index.html",
+      "topic": "מסחר במניות (נתונים 2.7.2026)"
+    },
+    {
+      "label": "REMNANT — דף הקולקציה",
+      "url": "https://dadahan10.github.io/diana-rafael-remnant/",
+      "topic": "REMNANT"
+    },
+    {
+      "label": "REMNANT — וואן-פייג'ר ללקוחות",
+      "url": "https://dadahan10.github.io/diana-rafael-remnant/collection.html",
+      "topic": "REMNANT"
+    },
+    {
+      "label": "REMNANT — תמונות ציבוריות למיילים",
+      "url": "https://dadahan10.github.io/diana-rafael-remnant/assets/email/",
+      "topic": "REMNANT / Klaviyo"
+    },
+    {
+      "label": "Archive Clearance — EN (בדומיין משלה)",
+      "url": "https://archive.dianarafael.com/",
+      "topic": "מכירת חיסול"
+    },
+    {
+      "label": "Archive Clearance — HE",
+      "url": "https://archive.dianarafael.com/he/",
+      "topic": "מכירת חיסול"
+    },
+    {
+      "label": "Clearance — קובץ הנתונים (מקור הקוקפיט)",
+      "url": "https://archive.dianarafael.com/data.csv",
+      "topic": "מכירת חיסול"
+    },
+    {
+      "label": "Clearance — כתובת ישנה EN (מפנה ל-archive)",
+      "url": "https://dadahan10.github.io/remnant-clearance/",
+      "topic": "מכירת חיסול"
+    },
+    {
+      "label": "Clearance — כתובת ישנה HE",
+      "url": "https://dadahan10.github.io/remnant-clearance/he/",
+      "topic": "מכירת חיסול"
+    },
+    {
+      "label": "Clearance — גיליון העריכה (Google Sheets)",
+      "url": "https://docs.google.com/spreadsheets/d/1XiXb4j11DksQ1-ccPB3vE-ZqfZzihvxOBkq73KszOWI/edit",
+      "topic": "מכירת חיסול"
+    },
+    {
+      "label": "Clearance — הנתונים המפורסמים מהגיליון",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLzeMWDKkDwzu1g4h-geR-tnJ5yk970n6Yth4kDnUxE4mLwOl5UBVRi_O0IgC3nHdm-9cISDDB6PO/pub?output=csv",
+      "topic": "מכירת חיסול"
+    },
+    {
+      "label": "מערכת הניהול (האתר)",
+      "url": "https://diana-rafael.vercel.app",
+      "topic": "מערכת ניהול"
+    },
+    {
+      "label": "מערכת הניהול — קוד המקור",
+      "url": "https://github.com/dadahan10/diana-rafael",
+      "topic": "מערכת ניהול"
+    },
+    {
+      "label": "מערכת הניהול",
+      "url": "https://fcmlnrkkcabebuechaum.supabase.co",
+      "topic": "מערכת ניהול"
+    },
+    {
+      "label": "סוכן הוואטסאפ (השרת)",
+      "url": "https://diana-rafael.vercel.app/api/whatsapp",
+      "topic": "סוכן וואטסאפ"
+    },
+    {
+      "label": "תחשיב קולקציה חדשה (NSA + ספרינג)",
+      "url": "https://dadahan10.github.io/collection-plan/",
+      "topic": "NSA + Spring JV"
+    },
+    {
+      "label": "הצגה לעמית לדרך",
+      "url": "https://dadahan10.github.io/amit-presentation/",
+      "topic": "טבעת עמית לדרך"
+    },
+    {
+      "label": "DR Growth Blueprint",
+      "url": "https://dadahan10.github.io/dr-growth-blueprint/",
+      "topic": "שיווק"
+    },
+    {
+      "label": "Ximus Retreat 2026",
+      "url": "https://dadahan10.github.io/ximus-retreat-2026/",
+      "topic": "צמיד אקסימוס"
+    },
+    {
+      "label": "יומן דרך ספרד 2026",
+      "url": "https://dadahan10.github.io/spain-2026/",
+      "topic": "אישי — ספרד"
+    },
+    {
+      "label": "ספרד — אלבום",
+      "url": "https://dadahan10.github.io/spain-2026/album/",
+      "topic": "אישי — ספרד"
+    },
+    {
+      "label": "ספרד — הוצאות ופתקים (Sheets)",
+      "url": "https://docs.google.com/spreadsheets/d/1t201w6l5rEz5Wig_jfgErKOeB2c6DhNRI-5eGWcM8IM/edit",
+      "topic": "אישי — ספרד"
+    },
+    {
+      "label": "ספרד — רשימת ציוד (דף)",
+      "url": "https://claude.ai/code/artifact/981c38c3-92df-4a0e-9e54-f60f75189149",
+      "topic": "אישי — ספרד"
+    },
+    {
+      "label": "ספרד — מדריך ליקוי + מסלול (דף)",
+      "url": "https://claude.ai/code/artifact/d3732748-685a-4b10-baf9-1f77af11f6d3",
+      "topic": "אישי — ספרד"
+    },
+    {
+      "label": "PULSO — דף קולקציה (פרטי)",
+      "url": "https://claude.ai/artifact/DWwkF1cxkEgCW5Z4so3EEn",
+      "topic": "PULSO"
+    },
+    {
+      "label": "PULSO — Launch Control (Sheets)",
+      "url": "https://docs.google.com/spreadsheets/d/1ye6BvrkQEPZvBpRkws0irdEkKur59qMzkaSGUDlit9w",
+      "topic": "PULSO"
+    },
+    {
+      "label": "PULSO — לוח פינטרסט",
+      "url": "https://pinterest.com/dianarafaeljewelry/whoop-charms",
+      "topic": "PULSO"
+    },
+    {
+      "label": "הצעת IAI B036 (דף פרטי)",
+      "url": "https://claude.ai/artifact/Sv8MHCWbbsJa1Q2Mc8oU5a",
+      "topic": "IAI צמיד מתנה"
+    },
+    {
+      "label": "REMNANT — Launch Control: Items + Marketing Gantt (Sheets)",
+      "url": "https://docs.google.com/spreadsheets/d/1eJMqL456CvBqVbLYnNgNocoT6O1NW3Or5tTfGaUeFk0",
+      "topic": "REMNANT / Q4 גאנט"
+    },
+    {
+      "label": "דוח שנתי 2025–26 P&L רבעוני (דף פרטי)",
+      "url": "https://claude.ai/code/artifact/99b05503-7849-462a-ab02-19af04542304",
+      "topic": "פיננסים"
+    },
+    {
+      "label": "המפה הפיננסית II (דף, 3.9)",
+      "url": "https://claude.ai/code/artifact/e9797aae-8d7f-46e8-859f-990a94c98f9d",
+      "topic": "פיננסים"
+    },
+    {
+      "label": "המפה הפיננסית I (דף, 2.9)",
+      "url": "https://claude.ai/code/artifact/e69b6060-88ef-4f55-b523-e3239bcce1b2",
+      "topic": "פיננסים"
+    },
+    {
+      "label": "ראדאר ספיגה — מחקר מסחר (דף)",
+      "url": "https://claude.ai/code/artifact/d7a121e1-444c-4a1e-ac67-ee42a117e989",
+      "topic": "מסחר במניות"
+    },
+    {
+      "label": "מסמך השראה — מיזם דימה hand chain (דף)",
+      "url": "https://claude.ai/code/artifact/3cdadda6-f30f-4128-a274-26952c73db00",
+      "topic": "דימה JV"
+    },
+    {
+      "label": "מחקר teen fine jewelry (דף פרטי, 12.10)",
+      "url": "https://claude.ai/artifact/CRcxdhHHXzvaUqMqsQQjcB",
+      "topic": "מותג תכשיטים לנערות (מיה+רונית)"
+    },
+    {
+      "label": "CustomizeAI — הבקשות בווידג'ט (דף)",
+      "url": "https://claude.ai/artifact/M8Z9CNx8kEKib3xZJcwQug",
+      "topic": "CustomizeAI"
+    },
+    {
+      "label": "דף מסשן 2–3.8 (לא מזוהה)",
+      "url": "https://claude.ai/code/artifact/d7efb456-3f27-49ed-840a-1d1f43e1f7ed",
+      "topic": "לא ידוע"
+    },
+    {
+      "label": "Airtable — Asset Studio 'Claude Ad Builder'",
+      "url": "https://airtable.com/appRB11pmVTyHdGtc",
+      "topic": "שיווק / קריאייטיב"
+    },
+    {
+      "label": "Trello — Jewelry Progress / לוח DD",
+      "url": "https://trello.com/",
+      "topic": "ייצור"
+    },
+    {
+      "label": "Trello — כרטיס BLACK ICE לדוגמה",
+      "url": "https://trello.com/c/Ta9Bq7H5",
+      "topic": "ייצור"
+    },
+    {
+      "label": "Shopify Admin",
+      "url": "https://admin.shopify.com/",
+      "topic": "חנות"
+    },
+    {
+      "label": "dianarafael.com",
+      "url": "https://dianarafael.com/",
+      "topic": "חנות"
+    },
+    {
+      "label": "GitHub (גיבוי הקוד)",
+      "url": "https://github.com/dadahan10",
+      "topic": "קוד"
+    },
+    {
+      "label": "גיבוי הזיכרון של Claude (מסונכרן בין המחשבים)",
+      "url": "https://github.com/dadahan10/claude-dotfiles",
+      "topic": "קוד"
+    }
   ]
 }

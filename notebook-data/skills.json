@@ -6,14 +6,80 @@
       "title": "הנהלת חשבונות וכספים",
       "icon": "💰",
       "items": [
-        { "name": "close-month", "title": "סגירת חודש: איסוף כל חשבוניות הוצאות+הכנסות, התאמה ושליחה ל-SUMIT של רו\"ח", "origin": "user", "trigger": "\"סגירת חודש\" / \"close the month\" / סביב ה-11 בחודש", "status": "partial", "notes": "ה-Task המתוזמן DianaRafael-ExpenseBot תוקן 11.6.2026 (שורה 13 בסקיל עדיין אומרת 'שבור' — לא עודכנה). פתוח: חסם-חודש-עליון ב-download_expenses.py, התאמה אידמפוטנטית, פורטלי PayMe/Panda. דניאל עצמו: חשבוניות Etsy + חשבוניות לקוחות בארץ.", "path": "C:\\Users\\USER\\.claude\\skills\\close-month\\SKILL.md" },
-        { "name": "record-supplier-payment", "title": "רישום תשלום לספק (צ'ק/העברה) לתזרים ב-Supabase expenses + בדיקת כפילויות ומלאי יהלומים", "origin": "user", "trigger": "\"תכניס צ'ק\" / \"תכניס לתזרים\" / מספר צ'ק+ספק+סכום", "status": "working", "notes": "כתיבה רק דרך Node .mjs — PowerShell/curl הורסים עברית.", "path": "C:\\Users\\USER\\.claude\\skills\\record-supplier-payment\\SKILL.md" },
-        { "name": "foreign-transfer-form", "title": "מילוי טופס העברה במט\"ח של דיסקונט (05-022) מחשבונית ספק זר, חתימה+חותמת, תיוק ורישום בתזרים", "origin": "user", "trigger": "\"טופס העברה לחו\"ל\" / \"העברת דולרים\" / חשבונית של 3D Art Studio, Nena Design", "status": "working", "notes": "הטופס שטוח (אין שדות) — הסקריפט fill_transfer_form.py מצייר בקואורדינטות קבועות. --demo לבדיקה עצמית.", "path": "C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form\\SKILL.md" },
-        { "name": "send-report", "title": "דוח ביצועים שבועי/חודשי: הכנסות, לידים, סושיאל, מיילים", "origin": "user", "trigger": "/send-report שבוע|חודש", "status": "partial", "notes": "הפקודה גנרית (Stripe/CRM/Mailchimp) — לא מחוברת למקורות הנתונים האמיתיים של דיאנה רפאל.", "path": "C:\\Users\\USER\\.claude\\commands\\send-report.md" },
-        { "name": "PayPal", "title": "מחבר PayPal — עסקאות ותשלומים", "origin": "mcp", "trigger": "כלי mcp PayPal", "status": "partial", "notes": "דורש התחברות (OAuth) בהגדרות המחברים של claude.ai לפני שימוש." },
-        { "name": "Stripe", "title": "מחבר Stripe — תשלומים ומנויים", "origin": "mcp", "trigger": "כלי mcp Stripe", "status": "partial", "notes": "דורש התחברות (OAuth) בהגדרות המחברים של claude.ai לפני שימוש." },
-        { "name": "xlsx", "title": "קריאה/יצירה/עריכה של גיליונות Excel ו-CSV", "origin": "bundled", "trigger": "כל משימה שבה קובץ xlsx/csv הוא הקלט או הפלט", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\xlsx\\SKILL.md" },
-        { "name": "adobe-document-review", "title": "הדגשה חכמה ב-PDF: חוזים, חשבוניות, סיכונים, תאריכים וסכומים", "origin": "plugin:adobe", "trigger": "\"review this document\" / \"highlight the total\"", "status": "partial", "notes": "דורש התחברות ל-Adobe (OAuth) לפני שימוש." }
+        {
+          "name": "סגירת חודש",
+          "title": "סגירת חודש: איסוף כל חשבוניות הוצאות+הכנסות, התאמה ושליחה ל-SUMIT של רו\"ח",
+          "origin": "user",
+          "trigger": "\"סגירת חודש\" / \"close the month\" / סביב ה-11 בחודש",
+          "status": "partial",
+          "notes": "המשימה האוטומטית של בוט ההוצאות תוקנה 11.6.2026 (בהוראות עדיין כתוב 'שבור' — לא עודכן). פתוח: הגבלה לחודש הנכון בהורדת ההוצאות, התאמה שלא יוצרת כפילויות בהרצה חוזרת, פורטלי PayMe/Panda. דניאל עצמו: חשבוניות Etsy + חשבוניות לקוחות בארץ.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\close-month\\SKILL.md",
+          "id": "close-month"
+        },
+        {
+          "name": "רישום תשלום לספק",
+          "title": "רישום תשלום לספק (צ'ק/העברה) לתזרים במערכת הניהול + בדיקת כפילויות ומלאי יהלומים",
+          "origin": "user",
+          "trigger": "\"תכניס צ'ק\" / \"תכניס לתזרים\" / מספר צ'ק+ספק+סכום",
+          "status": "working",
+          "notes": "הרישום נעשה רק בדרך שמשמרת עברית — דרכים אחרות הורסות אותה.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\record-supplier-payment\\SKILL.md",
+          "id": "record-supplier-payment"
+        },
+        {
+          "name": "טופס העברה לחו\"ל",
+          "title": "מילוי טופס העברה במט\"ח של דיסקונט (05-022) מחשבונית ספק זר, חתימה+חותמת, תיוק ורישום בתזרים",
+          "origin": "user",
+          "trigger": "\"טופס העברה לחו\"ל\" / \"העברת דולרים\" / חשבונית של 3D Art Studio, Nena Design",
+          "status": "working",
+          "notes": "הטופס שטוח (אין שדות למילוי) — הכתב מוצב במיקומים קבועים על הדף. יש מצב בדיקה עצמית.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form\\SKILL.md",
+          "id": "foreign-transfer-form"
+        },
+        {
+          "name": "דוח ביצועים",
+          "title": "דוח ביצועים שבועי/חודשי: הכנסות, לידים, סושיאל, מיילים",
+          "origin": "user",
+          "trigger": "/send-report שבוע|חודש",
+          "status": "partial",
+          "notes": "הפקודה גנרית (Stripe/CRM/Mailchimp) — לא מחוברת למקורות הנתונים האמיתיים של דיאנה רפאל.",
+          "path": "C:\\Users\\USER\\.claude\\commands\\send-report.md",
+          "id": "send-report"
+        },
+        {
+          "name": "PayPal",
+          "title": "מחבר PayPal — עסקאות ותשלומים",
+          "origin": "mcp",
+          "trigger": "מחבר PayPal",
+          "status": "partial",
+          "notes": "דורש התחברות בהגדרות המחברים של claude.ai לפני שימוש."
+        },
+        {
+          "name": "Stripe",
+          "title": "מחבר Stripe — תשלומים ומנויים",
+          "origin": "mcp",
+          "trigger": "מחבר Stripe",
+          "status": "partial",
+          "notes": "דורש התחברות בהגדרות המחברים של claude.ai לפני שימוש."
+        },
+        {
+          "name": "קבצי Excel",
+          "title": "קריאה/יצירה/עריכה של גיליונות Excel ו-CSV",
+          "origin": "bundled",
+          "trigger": "כל משימה שבה קובץ Excel/CSV הוא הקלט או הפלט",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\xlsx\\SKILL.md",
+          "id": "xlsx"
+        },
+        {
+          "name": "סקירת מסמך PDF",
+          "title": "הדגשה חכמה ב-PDF: חוזים, חשבוניות, סיכונים, תאריכים וסכומים",
+          "origin": "plugin:adobe",
+          "trigger": "\"review this document\" / \"highlight the total\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe לפני שימוש.",
+          "id": "adobe-document-review"
+        }
       ]
     },
     {
@@ -21,10 +87,43 @@
       "title": "הזמנות ומשלוחים",
       "icon": "📦",
       "items": [
-        { "name": "ship-jewelry-order", "title": "משלוח הזמנה מקצה לקצה: חשבונית מכס + תווית FedEx + עדכון Shopify. קלט יחיד: משקל בגרם", "origin": "user", "trigger": "\"תשלח את ההזמנה\" / \"תכין משלוח\" / מספר J + משקל", "status": "working", "notes": "סקריפטים ב-OneDrive\\Desktop\\shipping-agent (העותק ב-Desktop מת). Etsy לארה\"ב = DDP דרך ליאור במייל, לא d2d_bot. בלי טלפון → אין תווית (--no-pdf). טרלו פרש 23.8.", "path": "C:\\Users\\USER\\.claude\\skills\\ship-jewelry-order\\SKILL.md" },
-        { "name": "complete-order-intake", "title": "השלמת הזמנה שנחתה גולמית ב-Supabase: פיצול ל-J לכל פריט, העשרה (SKU/זהב), קישור לקוח", "origin": "user", "trigger": "\"ההזמנה שנכנסה צריכה שני J\" / \"split this order\" / \"finish the intake for #1263\"", "status": "partial", "notes": "ידני כי רוטינת ההעשרה בענן מתה (project_order-intake-rebuild). Supabase חוסם secret key מ-User-Agent של דפדפן; עברית רק דרך Python requests.", "path": "C:\\Users\\USER\\.claude\\skills\\complete-order-intake\\SKILL.md" },
-        { "name": "daily-brief", "title": "בריף בוקר כולל בדיקת הזמנות תקועות (intake_watchdog.py --dry-run)", "origin": "user", "trigger": "/daily-brief", "status": "working", "notes": "מצביע על C:\\Users\\USER\\Desktop\\diana-rafael\\agents\\order-intake\\intake_watchdog.py — הנתיב לא קיים במחשב הזה (Desktop\\diana-rafael חסר); כנראה OneDrive\\Desktop.", "path": "C:\\Users\\USER\\.claude\\commands\\daily-brief.md" },
-        { "name": "Shopify", "title": "מחבר Shopify: הזמנות, לקוחות, מוצרים, מלאי, אנליטיקס, GraphQL", "origin": "mcp", "trigger": "כלי mcp Shopify (get-order, list-orders, graphql_query...)", "status": "working" }
+        {
+          "name": "משלוח הזמנה",
+          "title": "משלוח הזמנה מקצה לקצה: חשבונית מכס + תווית FedEx + עדכון Shopify. קלט יחיד: משקל בגרם",
+          "origin": "user",
+          "trigger": "\"תשלח את ההזמנה\" / \"תכין משלוח\" / מספר J + משקל",
+          "status": "working",
+          "notes": "הכלים נמצאים בתיקיית סוכן המשלוחים ב-OneDrive (העותק הישן בשולחן העבודה מת). Etsy לארה\"ב = DDP דרך ליאור במייל, לא דרך D2D האוטומטי. בלי טלפון → אין תווית. טרלו פרש 23.8.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\ship-jewelry-order\\SKILL.md",
+          "id": "ship-jewelry-order"
+        },
+        {
+          "name": "קליטת הזמנה",
+          "title": "השלמת הזמנה שנחתה גולמית במערכת הניהול: פיצול ל-J לכל פריט, העשרה (SKU/זהב), קישור לקוח",
+          "origin": "user",
+          "trigger": "\"ההזמנה שנכנסה צריכה שני J\" / \"split this order\" / \"finish the intake for #1263\"",
+          "status": "partial",
+          "notes": "ידני כי ההשלמה האוטומטית בענן מתה (בבנייה מחדש). מערכת הניהול חוסמת גישה מהדפדפן; עברית נשמרת רק בדרך אחת שעובדת.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\complete-order-intake\\SKILL.md",
+          "id": "complete-order-intake"
+        },
+        {
+          "name": "בריף בוקר",
+          "title": "בריף בוקר כולל בדיקת הזמנות תקועות (בדיקה בלבד, בלי שינויים)",
+          "origin": "user",
+          "trigger": "/daily-brief",
+          "status": "working",
+          "notes": "מצביע על בודק ההזמנות התקועות בתיקייה שלא קיימת במחשב הזה; כנראה נמצא ב-OneDrive.",
+          "path": "C:\\Users\\USER\\.claude\\commands\\daily-brief.md",
+          "id": "daily-brief"
+        },
+        {
+          "name": "Shopify",
+          "title": "מחבר Shopify: הזמנות, לקוחות, מוצרים, מלאי, אנליטיקס, שאילתות מתקדמות",
+          "origin": "mcp",
+          "trigger": "מחבר Shopify (שליפת הזמנות, רשימות, שאילתות...)",
+          "status": "working"
+        }
       ]
     },
     {
@@ -32,10 +131,42 @@
       "title": "שירות לקוחות",
       "icon": "💬",
       "items": [
-        { "name": "customer-service", "title": "ניסוח תשובות ללקוחות בקול של דיאנה רפאל (החזרות, תלונות, משלוחים, מידות, עיכובים) — לאישור בלבד, לומד מכל תשובה אמיתית", "origin": "user", "trigger": "\"answer this customer\" / \"תענה ללקוח\" / הדבקת הודעת לקוח", "status": "working", "notes": "לעולם לא שולח לבד. סכומים/תאריכים → [CONFIRM]. קבצים: voice-dna.md, playbooks.md, examples.md.", "path": "C:\\Users\\USER\\.claude\\skills\\customer-service\\SKILL.md" },
-        { "name": "answer-customer", "title": "פקודה: סיווג הודעת לקוח + טיוטה בסגנון דיאנה רפאל לאישור (מפעיל customer-service)", "origin": "user", "trigger": "/answer-customer <הודעה>", "status": "working", "path": "C:\\Users\\USER\\.claude\\commands\\answer-customer.md" },
-        { "name": "Gmail", "title": "מחבר Gmail: חיפוש, קריאה, תשובה, טיוטות, תוויות", "origin": "mcp", "trigger": "כלי mcp Gmail", "status": "working" },
-        { "name": "gws-gmail", "title": "Gmail דרך CLI של gws (שליחה, triage, reply, watch)", "origin": "user", "trigger": "gws gmail <resource> <method>", "status": "partial", "notes": "דורש בינארי gws וקובץ ../gws-shared/SKILL.md שלא קיים בתיקיית הסקילים (צריך gws generate-skills). מחבר Gmail ה-MCP מכסה את אותו צורך.", "path": "C:\\Users\\USER\\.claude\\skills\\gws-gmail\\SKILL.md" }
+        {
+          "name": "שירות לקוחות",
+          "title": "ניסוח תשובות ללקוחות בקול של דיאנה רפאל (החזרות, תלונות, משלוחים, מידות, עיכובים) — לאישור בלבד, לומד מכל תשובה אמיתית",
+          "origin": "user",
+          "trigger": "\"answer this customer\" / \"תענה ללקוח\" / הדבקת הודעת לקוח",
+          "status": "working",
+          "notes": "לעולם לא שולח לבד. סכומים/תאריכים → מסומנים לאישור. נשען על קול המותג, נהלי טיפול ודוגמאות.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\customer-service\\SKILL.md",
+          "id": "customer-service"
+        },
+        {
+          "name": "תשובה ללקוח",
+          "title": "פקודה: סיווג הודעת לקוח + טיוטה בסגנון דיאנה רפאל לאישור (מפעיל את נוהל שירות הלקוחות)",
+          "origin": "user",
+          "trigger": "/answer-customer <הודעה>",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\commands\\answer-customer.md",
+          "id": "answer-customer"
+        },
+        {
+          "name": "Gmail",
+          "title": "מחבר Gmail: חיפוש, קריאה, תשובה, טיוטות, תוויות",
+          "origin": "mcp",
+          "trigger": "מחבר Gmail",
+          "status": "working"
+        },
+        {
+          "name": "Gmail (כלי נוסף)",
+          "title": "Gmail דרך כלי נוסף (שליחה, מיון, תשובה, מעקב)",
+          "origin": "user",
+          "trigger": "דרך Claude (כלי נוסף ל-Gmail)",
+          "status": "partial",
+          "notes": "דורש התקנה של כלי נוסף שחסר במחשב. מחבר Gmail הרגיל מכסה את אותו צורך.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\gws-gmail\\SKILL.md",
+          "id": "gws-gmail"
+        }
       ]
     },
     {
@@ -43,12 +174,56 @@
       "title": "Shopify ואתר",
       "icon": "🛍️",
       "items": [
-        { "name": "shopify-spell-check", "title": "ביקורת שגיאות כתיב ועקביות שם המותג בכל דפי, תפריטי ותבניות dianarafael.com", "origin": "user", "trigger": "\"check spelling on the site\" / דיווח על טעות כתיב באתר", "status": "working", "notes": "תבניות ערכת נושא (templates/*.json) — ה-API חוסם כתיבה ל-MAIN theme, תיקון ידני בלבד.", "path": "C:\\Users\\USER\\.claude\\skills\\shopify-spell-check\\SKILL.md" },
-        { "name": "shopify-content-fix", "title": "תיקון טקסטים באתר Shopify: כותרות דפים, HTML, פריטי תפריט דרך GraphQL mutations", "origin": "user", "trigger": "\"fix the typo on the site\" / אחרי shopify-spell-check", "status": "working", "notes": "menuUpdate מחליף את כל הפריטים — תמיד לשלוח מערך מלא.", "path": "C:\\Users\\USER\\.claude\\skills\\shopify-content-fix\\SKILL.md" },
-        { "name": "Shopify", "title": "מחבר Shopify: מוצרים, קולקציות, הנחות, מלאי, GraphQL מלא", "origin": "mcp", "trigger": "כלי mcp Shopify", "status": "working" },
-        { "name": "Higgsfield website builder", "title": "בניית אתרים/אפליקציות ופריסה (create_website, deploy_website, publish_website)", "origin": "mcp", "trigger": "get_workflow_instructions {workflow: \"website-builder-flow\"}", "status": "unknown" },
-        { "name": "artifact-design", "title": "עיצוב דפי HTML/Artifacts (דפי נחיתה, דשבורדים) — חובה לטעון לפני כתיבת artifact", "origin": "harness", "trigger": "אוטומטי לפני כל artifact", "status": "working" },
-        { "name": "Klaviyo", "title": "מחבר Klaviyo: קמפיינים, flows, רשימות, תבניות מייל, אנליטיקס", "origin": "mcp", "trigger": "כלי mcp Klaviyo", "status": "working" }
+        {
+          "name": "בדיקת כתיב באתר",
+          "title": "ביקורת שגיאות כתיב ועקביות שם המותג בכל דפי, תפריטי ותבניות dianarafael.com",
+          "origin": "user",
+          "trigger": "\"check spelling on the site\" / דיווח על טעות כתיב באתר",
+          "status": "working",
+          "notes": "תבניות ערכת הנושא — אי אפשר לתקן אוטומטית בערכה הפעילה, תיקון ידני בלבד.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\shopify-spell-check\\SKILL.md",
+          "id": "shopify-spell-check"
+        },
+        {
+          "name": "תיקון טקסטים באתר",
+          "title": "תיקון טקסטים באתר Shopify: כותרות דפים, תוכן דפים, פריטי תפריט",
+          "origin": "user",
+          "trigger": "\"fix the typo on the site\" / אחרי בדיקת הכתיב",
+          "status": "working",
+          "notes": "עדכון תפריט מחליף את כל הפריטים — תמיד לשלוח את התפריט המלא.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\shopify-content-fix\\SKILL.md",
+          "id": "shopify-content-fix"
+        },
+        {
+          "name": "Shopify",
+          "title": "מחבר Shopify: מוצרים, קולקציות, הנחות, מלאי, גישה מלאה",
+          "origin": "mcp",
+          "trigger": "מחבר Shopify",
+          "status": "working"
+        },
+        {
+          "name": "בונה האתרים של Higgsfield",
+          "title": "בניית אתרים/אפליקציות ופרסום שלהם ברשת",
+          "origin": "mcp",
+          "trigger": "\"בנה לי אתר\" ב-Higgsfield",
+          "status": "unknown",
+          "id": "Higgsfield website builder"
+        },
+        {
+          "name": "עיצוב דפים",
+          "title": "עיצוב דפי אינטרנט לשיתוף (דפי נחיתה, דשבורדים) — נטען תמיד לפני בניית דף כזה",
+          "origin": "harness",
+          "trigger": "אוטומטי לפני כל דף כזה",
+          "status": "working",
+          "id": "artifact-design"
+        },
+        {
+          "name": "Klaviyo",
+          "title": "מחבר Klaviyo: קמפיינים, flows, רשימות, תבניות מייל, אנליטיקס",
+          "origin": "mcp",
+          "trigger": "מחבר Klaviyo",
+          "status": "working"
+        }
       ]
     },
     {
@@ -56,13 +231,69 @@
       "title": "תוכן ושיווק",
       "icon": "✍️",
       "items": [
-        { "name": "write-post", "title": "כתיבת פוסט בסגנון דניאל לפי Voice DNA ופלטפורמה — 2 וריאציות", "origin": "user", "trigger": "/write-post <נושא>", "status": "partial", "notes": "מניח voice-dna.md 'בפרויקט' — קיים רק בתוך סקיל customer-service (קול המותג, לא קול דניאל האישי).", "path": "C:\\Users\\USER\\.claude\\commands\\write-post.md" },
-        { "name": "social-content", "title": "אסטרטגיה ותוכן לסושיאל: פוסטים, Reels, תסריטי וידאו קצר, לוח תוכן, repurposing", "origin": "user", "trigger": "\"what should I post\" / \"content calendar\" / \"create a reel\"", "status": "working", "notes": "סקיל גנרי (לא מותאם לדיאנה רפאל); מחפש .agents/product-marketing-context.md.", "path": "C:\\Users\\USER\\.claude\\skills\\social-content\\SKILL.md" },
-        { "name": "sales-enablement", "title": "חומרי מכירה B2B: מצגות pitch, one-pager, טיפול בהתנגדויות, תסריטי דמו", "origin": "user", "trigger": "\"pitch deck\" / \"one-pager\" / \"objection handling\"", "status": "working", "notes": "גנרי. רלוונטי ל-CustomizeAI (מכירה לחנויות).", "path": "C:\\Users\\USER\\.claude\\skills\\sales-enablement\\SKILL.md" },
-        { "name": "asset-studio", "title": "יצירת קריאייטיב פרסומי ב-Airtable Asset Studio: שכפול מודעה, מודעת תמונה מתבנית, מודעת וידאו UGC", "origin": "user", "trigger": "\"clone this ad for my brand\" / \"make a UGC ad\" / Asset Studio", "status": "unknown", "notes": "דורש בסיס Airtable של Asset Studio עם עמודות agent; לא ברור שהבסיס הוקם אצל דניאל.", "path": "C:\\Users\\USER\\.claude\\skills\\asset-studio\\SKILL.md" },
-        { "name": "Klaviyo", "title": "מחבר Klaviyo: ניוזלטרים, קמפיינים, flows, סגמנטים ודוחות", "origin": "mcp", "trigger": "כלי mcp Klaviyo", "status": "working" },
-        { "name": "Canva", "title": "מחבר Canva: יצירה/עריכה/ייצוא עיצובים, תבניות מותג, הסרת רקע", "origin": "mcp", "trigger": "כלי mcp Canva", "status": "working" },
-        { "name": "docs", "title": "Claude Docs — מסמכים חיים משותפים (דוחות, הצעות, מדריכים)", "origin": "bundled", "trigger": "\"תכין מסמך/דוח\" (ברירת מחדל לכל מסמך)", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\docs\\SKILL.md" }
+        {
+          "name": "כתיבת פוסט",
+          "title": "כתיבת פוסט בסגנון דניאל לפי Voice DNA ופלטפורמה — 2 וריאציות",
+          "origin": "user",
+          "trigger": "/write-post <נושא>",
+          "status": "partial",
+          "notes": "מניח קובץ קול אישי בפרויקט — קיים רק בתוך נוהל שירות הלקוחות (קול המותג, לא קול דניאל האישי).",
+          "path": "C:\\Users\\USER\\.claude\\commands\\write-post.md",
+          "id": "write-post"
+        },
+        {
+          "name": "תוכן לסושיאל",
+          "title": "אסטרטגיה ותוכן לסושיאל: פוסטים, Reels, תסריטי וידאו קצר, לוח תוכן, שימוש חוזר בתוכן",
+          "origin": "user",
+          "trigger": "\"what should I post\" / \"content calendar\" / \"create a reel\"",
+          "status": "working",
+          "notes": "נוהל גנרי (לא מותאם לדיאנה רפאל); מחפש קובץ הקשר שיווקי שלא קיים.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\social-content\\SKILL.md",
+          "id": "social-content"
+        },
+        {
+          "name": "חומרי מכירה",
+          "title": "חומרי מכירה B2B: מצגות pitch, one-pager, טיפול בהתנגדויות, תסריטי דמו",
+          "origin": "user",
+          "trigger": "\"pitch deck\" / \"one-pager\" / \"objection handling\"",
+          "status": "working",
+          "notes": "גנרי. רלוונטי ל-CustomizeAI (מכירה לחנויות).",
+          "path": "C:\\Users\\USER\\.claude\\skills\\sales-enablement\\SKILL.md",
+          "id": "sales-enablement"
+        },
+        {
+          "name": "סטודיו מודעות Airtable",
+          "title": "יצירת קריאייטיב פרסומי ב-Airtable Asset Studio: שכפול מודעה, מודעת תמונה מתבנית, מודעת וידאו UGC",
+          "origin": "user",
+          "trigger": "\"clone this ad for my brand\" / \"make a UGC ad\" / Asset Studio",
+          "status": "unknown",
+          "notes": "דורש בסיס Asset Studio ב-Airtable עם עמודות אוטומטיות; לא ברור שהבסיס הוקם אצל דניאל.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\asset-studio\\SKILL.md",
+          "id": "asset-studio"
+        },
+        {
+          "name": "Klaviyo",
+          "title": "מחבר Klaviyo: ניוזלטרים, קמפיינים, flows, סגמנטים ודוחות",
+          "origin": "mcp",
+          "trigger": "מחבר Klaviyo",
+          "status": "working"
+        },
+        {
+          "name": "Canva",
+          "title": "מחבר Canva: יצירה/עריכה/ייצוא עיצובים, תבניות מותג, הסרת רקע",
+          "origin": "mcp",
+          "trigger": "מחבר Canva",
+          "status": "working"
+        },
+        {
+          "name": "מסמכי Claude",
+          "title": "Claude Docs — מסמכים חיים משותפים (דוחות, הצעות, מדריכים)",
+          "origin": "bundled",
+          "trigger": "\"תכין מסמך/דוח\" (ברירת מחדל לכל מסמך)",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\docs\\SKILL.md",
+          "id": "docs"
+        }
       ]
     },
     {
@@ -70,10 +301,43 @@
       "title": "פרסום ממומן",
       "icon": "📣",
       "items": [
-        { "name": "israeli-paid-ads", "title": "קמפיינים ממומנים לשוק הישראלי: Google Ads, Meta, TikTok — מחקר מילים בעברית, רגולציה, תקציב", "origin": "user", "trigger": "\"Israeli PPC\" / \"Hebrew ad copy\" / קמפיין ממומן בישראל", "status": "working", "notes": "סקיל גנרי (MIT).", "path": "C:\\Users\\USER\\.claude\\skills\\israeli-paid-ads\\SKILL.md" },
-        { "name": "asset-studio", "title": "מודעות תמונה/וידאו אוטומטיות ב-Airtable (Clone Ads / Image Ads / Video Ads)", "origin": "user", "trigger": "\"build ads for these products\"", "status": "unknown", "notes": "דורש בסיס Airtable מוכן.", "path": "C:\\Users\\USER\\.claude\\skills\\asset-studio\\SKILL.md" },
-        { "name": "Higgsfield Ads Studio", "title": "סטודיו מודעות AI: מותג, מוצרים, הפקת מודעות (ads_studio_*), AI influencer, virality predictor", "origin": "mcp", "trigger": "ads_studio_create_brand → ads_studio_generate", "status": "unknown", "notes": "צורך קרדיטים; ads_studio_quote לפני הפקה." },
-        { "name": "adobe-create-social-variations", "title": "גרסאות מודעה/תמונה לכל פלטפורמה (Instagram, TikTok, Facebook, Pinterest...)", "origin": "plugin:adobe", "trigger": "\"resize for TikTok\" / \"make versions for all platforms\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." }
+        {
+          "name": "פרסום ממומן בישראל",
+          "title": "קמפיינים ממומנים לשוק הישראלי: Google Ads, Meta, TikTok — מחקר מילים בעברית, רגולציה, תקציב",
+          "origin": "user",
+          "trigger": "\"Israeli PPC\" / \"Hebrew ad copy\" / קמפיין ממומן בישראל",
+          "status": "working",
+          "notes": "נוהל גנרי (קוד פתוח).",
+          "path": "C:\\Users\\USER\\.claude\\skills\\israeli-paid-ads\\SKILL.md",
+          "id": "israeli-paid-ads"
+        },
+        {
+          "name": "סטודיו מודעות Airtable",
+          "title": "מודעות תמונה/וידאו אוטומטיות ב-Airtable (Clone Ads / Image Ads / Video Ads)",
+          "origin": "user",
+          "trigger": "\"build ads for these products\"",
+          "status": "unknown",
+          "notes": "דורש בסיס Airtable מוכן.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\asset-studio\\SKILL.md",
+          "id": "asset-studio"
+        },
+        {
+          "name": "Higgsfield Ads Studio",
+          "title": "סטודיו מודעות AI: מותג, מוצרים, הפקת מודעות, משפיענית AI, חיזוי ויראליות",
+          "origin": "mcp",
+          "trigger": "יצירת מותג → הפקת מודעות ב-Higgsfield",
+          "status": "unknown",
+          "notes": "צורך קרדיטים; לבקש הצעת מחיר לפני הפקה."
+        },
+        {
+          "name": "גרסאות לכל פלטפורמה",
+          "title": "גרסאות מודעה/תמונה לכל פלטפורמה (Instagram, TikTok, Facebook, Pinterest...)",
+          "origin": "plugin:adobe",
+          "trigger": "\"resize for TikTok\" / \"make versions for all platforms\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-create-social-variations"
+        }
       ]
     },
     {
@@ -81,13 +345,67 @@
       "title": "סושיאל ווידאו",
       "icon": "🎬",
       "items": [
-        { "name": "adobe-edit-quick-cut", "title": "עריכת וידאו: sizzle reel / highlight reel מקובץ וידאו (Adobe Quick Cut)", "origin": "plugin:adobe", "trigger": "\"make a sizzle reel\" / \"shorten this video\" / \"cut the best parts\"", "status": "partial", "notes": "דורש התחברות ל-Adobe + העלאת קובץ וידאו." },
-        { "name": "adobe-create-social-variations", "title": "חיתוך/שינוי גודל של תמונה או וידאו לכל הפלטפורמות החברתיות", "origin": "plugin:adobe", "trigger": "\"prepare my image for Instagram\" / \"crop for stories\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-resize-photos-and-videos", "title": "שינוי גודל תמונות ווידאו", "origin": "plugin:adobe", "trigger": "\"resize these\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "Higgsfield video", "title": "הפקת וידאו AI: generate_video, motion control, Genjutsu, upscale, dubbing, קול, Shorts Studio, פרסום ל-TikTok", "origin": "mcp", "trigger": "generate_video / shorts_studio_create / tiktok_prepare_publish", "status": "unknown", "notes": "צורך קרדיטים. ל-TikTok צריך tiktok_connect קודם. הדמיות REMNANT — אסור ל-AI לצייר את התכשיט." },
-        { "name": "social-content", "title": "תסריטים לוידאו קצר, הוקים, Reels/TikTok, לוח תוכן", "origin": "user", "trigger": "\"video script\" / \"video hook\" / \"TikTok video\"", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\social-content\\SKILL.md" },
-        { "name": "write-post", "title": "פוסט לאינסטגרם/לינקדאין/ניוזלטר בסגנון אישי", "origin": "user", "trigger": "/write-post", "status": "partial", "notes": "voice-dna.md אישי חסר.", "path": "C:\\Users\\USER\\.claude\\commands\\write-post.md" },
-        { "name": "Canva", "title": "עיצובי סושיאל ב-Canva: יצירה מתבנית, resize, ייצוא", "origin": "mcp", "trigger": "כלי mcp Canva", "status": "working" }
+        {
+          "name": "עריכת וידאו מהירה",
+          "title": "עריכת וידאו: sizzle reel / highlight reel מקובץ וידאו (Adobe Quick Cut)",
+          "origin": "plugin:adobe",
+          "trigger": "\"make a sizzle reel\" / \"shorten this video\" / \"cut the best parts\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe + העלאת קובץ וידאו.",
+          "id": "adobe-edit-quick-cut"
+        },
+        {
+          "name": "גרסאות לכל פלטפורמה",
+          "title": "חיתוך/שינוי גודל של תמונה או וידאו לכל הפלטפורמות החברתיות",
+          "origin": "plugin:adobe",
+          "trigger": "\"prepare my image for Instagram\" / \"crop for stories\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-create-social-variations"
+        },
+        {
+          "name": "שינוי גודל תמונות ווידאו",
+          "title": "שינוי גודל תמונות ווידאו",
+          "origin": "plugin:adobe",
+          "trigger": "\"resize these\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-resize-photos-and-videos"
+        },
+        {
+          "name": "Higgsfield video",
+          "title": "הפקת וידאו AI: יצירת וידאו, שליטה בתנועה, Genjutsu, שיפור איכות, דיבוב, קול, Shorts Studio, פרסום ל-TikTok",
+          "origin": "mcp",
+          "trigger": "\"תיצור וידאו\" / Shorts / פרסום ל-TikTok",
+          "status": "unknown",
+          "notes": "צורך קרדיטים. ל-TikTok צריך לחבר חשבון קודם. הדמיות REMNANT — אסור ל-AI לצייר את התכשיט."
+        },
+        {
+          "name": "תוכן לסושיאל",
+          "title": "תסריטים לוידאו קצר, הוקים, Reels/TikTok, לוח תוכן",
+          "origin": "user",
+          "trigger": "\"video script\" / \"video hook\" / \"TikTok video\"",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\social-content\\SKILL.md",
+          "id": "social-content"
+        },
+        {
+          "name": "כתיבת פוסט",
+          "title": "פוסט לאינסטגרם/לינקדאין/ניוזלטר בסגנון אישי",
+          "origin": "user",
+          "trigger": "/write-post",
+          "status": "partial",
+          "notes": "חסר קובץ קול אישי של דניאל.",
+          "path": "C:\\Users\\USER\\.claude\\commands\\write-post.md",
+          "id": "write-post"
+        },
+        {
+          "name": "Canva",
+          "title": "עיצובי סושיאל ב-Canva: יצירה מתבנית, resize, ייצוא",
+          "origin": "mcp",
+          "trigger": "מחבר Canva",
+          "status": "working"
+        }
       ]
     },
     {
@@ -95,18 +413,108 @@
       "title": "עיצוב ותמונות (Adobe/Canva/Higgsfield)",
       "icon": "🎨",
       "items": [
-        { "name": "adobe", "title": "סיור ביכולות מחבר Adobe — מה אפשר לעשות ואיזה מוצר מאחורי כל יכולת", "origin": "plugin:adobe", "trigger": "/adobe", "status": "partial", "notes": "המחבר Adobe for creativity דורש התחברות (OAuth) — כל סקילי adobe-* לא זמינים עד אז." },
-        { "name": "adobe-design-from-template", "title": "עיצוב מתבניות Adobe Express: פלאיירים, פוסטרים, כרטיסי ביקור, הזמנות, תעודות, לוגו, תפריטים", "origin": "plugin:adobe", "trigger": "\"make me a flyer\" / \"design a poster\" / \"create a certificate\"", "status": "partial", "notes": "דורש התחברות ל-Adobe. בלי Gen AI ב-Claude." },
-        { "name": "adobe-design-to-pdf", "title": "תבנית Express → PDF מוכן לדפוס / חבילה / קישור לשיתוף", "origin": "plugin:adobe", "trigger": "\"make a flyer and give me a PDF\" / \"ready for the print shop\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-batch-edit-photos", "title": "עריכה אחידה של סט תמונות (look קוהרנטי, cinematic, warm) — Lightroom", "origin": "plugin:adobe", "trigger": "\"make my photos look cohesive\" / \"batch edit these\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-retouch-portraits", "title": "ריטוש המוני של פורטרטים: יישור, טון, אור אוטומטיים", "origin": "plugin:adobe", "trigger": "\"retouch my photos\" / \"process my headshots\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-resize-photos-and-videos", "title": "שינוי גודל/חיתוך תמונות ווידאו", "origin": "plugin:adobe", "trigger": "\"resize\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-create-social-variations", "title": "גרסאות לפלטפורמות סושיאל עם חיתוך חכם והרחבת קנבס", "origin": "plugin:adobe", "trigger": "\"social media sizes\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-fonts", "title": "חיפוש, המלצה ותצוגה מקדימה של גופני Adobe Fonts (כולל תמיכה בעברית)", "origin": "plugin:adobe", "trigger": "\"what font for...\" / \"does [font] support Hebrew\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "Canva", "title": "מחבר Canva: עיצובים, תבניות מותג, הסרת רקע, הפרדת שכבות, ייצוא", "origin": "mcp", "trigger": "כלי mcp Canva (create-design, generate-design, remove-background...)", "status": "working" },
-        { "name": "Higgsfield image", "title": "הפקת תמונות AI: generate_image, upscale, outpaint, reframe, remove_background, Marketing Studio product shots", "origin": "mcp", "trigger": "generate_image / get_presets source:'marketing_studio'", "status": "unknown", "notes": "צורך קרדיטים (balance). לא לשימוש בהדמיות התכשיטים עצמם." },
-        { "name": "Higgsfield 3D", "title": "תמונה → GLB תלת-ממד, Scene Builder 3D (זוויות, וידאו מסצנה)", "origin": "mcp", "trigger": "generate_3d / get_preset_instructions {preset: \"/3d-jutsu\"}", "status": "unknown" },
-        { "name": "Adobe (connector)", "title": "מחבר Adobe for creativity — Express, Acrobat, Lightroom, Fonts, Quick Cut, InDesign", "origin": "mcp", "trigger": "דרך סקילי adobe-*", "status": "partial", "notes": "דורש התחברות (OAuth) — לא בוצע." }
+        {
+          "name": "Adobe",
+          "title": "סיור ביכולות מחבר Adobe — מה אפשר לעשות ואיזה מוצר מאחורי כל יכולת",
+          "origin": "plugin:adobe",
+          "trigger": "/adobe",
+          "status": "partial",
+          "notes": "מחבר Adobe for creativity דורש התחברות — כל יכולות Adobe לא זמינות עד אז.",
+          "id": "adobe"
+        },
+        {
+          "name": "עיצוב מתבנית Adobe",
+          "title": "עיצוב מתבניות Adobe Express: פלאיירים, פוסטרים, כרטיסי ביקור, הזמנות, תעודות, לוגו, תפריטים",
+          "origin": "plugin:adobe",
+          "trigger": "\"make me a flyer\" / \"design a poster\" / \"create a certificate\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe. בלי Gen AI ב-Claude.",
+          "id": "adobe-design-from-template"
+        },
+        {
+          "name": "עיצוב ל-PDF לדפוס",
+          "title": "תבנית Express → PDF מוכן לדפוס / חבילה / קישור לשיתוף",
+          "origin": "plugin:adobe",
+          "trigger": "\"make a flyer and give me a PDF\" / \"ready for the print shop\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-design-to-pdf"
+        },
+        {
+          "name": "עריכת סט תמונות",
+          "title": "עריכה אחידה של סט תמונות (look קוהרנטי, cinematic, warm) — Lightroom",
+          "origin": "plugin:adobe",
+          "trigger": "\"make my photos look cohesive\" / \"batch edit these\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-batch-edit-photos"
+        },
+        {
+          "name": "ריטוש פורטרטים",
+          "title": "ריטוש המוני של פורטרטים: יישור, טון, אור אוטומטיים",
+          "origin": "plugin:adobe",
+          "trigger": "\"retouch my photos\" / \"process my headshots\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-retouch-portraits"
+        },
+        {
+          "name": "שינוי גודל תמונות ווידאו",
+          "title": "שינוי גודל/חיתוך תמונות ווידאו",
+          "origin": "plugin:adobe",
+          "trigger": "\"resize\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-resize-photos-and-videos"
+        },
+        {
+          "name": "גרסאות לכל פלטפורמה",
+          "title": "גרסאות לפלטפורמות סושיאל עם חיתוך חכם והרחבת קנבס",
+          "origin": "plugin:adobe",
+          "trigger": "\"social media sizes\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-create-social-variations"
+        },
+        {
+          "name": "גופני Adobe",
+          "title": "חיפוש, המלצה ותצוגה מקדימה של גופני Adobe Fonts (כולל תמיכה בעברית)",
+          "origin": "plugin:adobe",
+          "trigger": "\"what font for...\" / \"does [font] support Hebrew\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-fonts"
+        },
+        {
+          "name": "Canva",
+          "title": "מחבר Canva: עיצובים, תבניות מותג, הסרת רקע, הפרדת שכבות, ייצוא",
+          "origin": "mcp",
+          "trigger": "מחבר Canva (יצירת עיצוב, הסרת רקע...)",
+          "status": "working"
+        },
+        {
+          "name": "Higgsfield image",
+          "title": "הפקת תמונות AI: יצירה, שיפור איכות, הרחבת תמונה, שינוי יחס, הסרת רקע, צילומי מוצר ב-Marketing Studio",
+          "origin": "mcp",
+          "trigger": "\"תיצור תמונה\" / צילומי מוצר ב-Higgsfield",
+          "status": "unknown",
+          "notes": "צורך קרדיטים. לא לשימוש בהדמיות התכשיטים עצמם."
+        },
+        {
+          "name": "Higgsfield 3D",
+          "title": "תמונה → מודל תלת-ממד, בונה סצנות תלת-ממד (זוויות, וידאו מסצנה)",
+          "origin": "mcp",
+          "trigger": "\"תהפוך לתלת-ממד\" ב-Higgsfield",
+          "status": "unknown"
+        },
+        {
+          "name": "Adobe (connector)",
+          "title": "מחבר Adobe for creativity — Express, Acrobat, Lightroom, Fonts, Quick Cut, InDesign",
+          "origin": "mcp",
+          "trigger": "דרך יכולות Adobe",
+          "status": "partial",
+          "notes": "דורש התחברות — לא בוצע."
+        }
       ]
     },
     {
@@ -114,10 +522,43 @@
       "title": "הדמיות REMNANT",
       "icon": "💎",
       "items": [
-        { "name": "remnant-render-loop", "title": "לולאת maker/checker להדמיות תכשיטים מ-Rhino ב-Blender (REMNANT, SUNBURST, render_matrix.py) — כפתור אחד לאיטרציה מול רפרנס סטודיו", "origin": "user", "trigger": "\"continue the renders\" / \"ההדמיות נראות פלסטיק\" / לפני נגיעה ב-DR-Remnant-RenderMatrix", "status": "working", "notes": "לבדוק blender.exe חי לפני רינדור. ממשיכים מ-FINALn האחרון ב-pilot/iterations/LOG.md. כללים נעולים/פתוחים ב-~/.claude/plans/remnant-render-bible.md. reference.md: knobs, dead ends.", "path": "C:\\Users\\USER\\.claude\\skills\\remnant-render-loop\\SKILL.md" },
-        { "name": "DR-Remnant-RenderMatrix (night task)", "title": "משימה לילית מתוזמנת: רינדור מטריצה של REMNANT", "origin": "project", "trigger": "Windows Task → ~/.claude/night-agent/remnant-render-matrix.ps1", "status": "unknown", "notes": "חייב לשמור UTF-8 BOM בקובץ ה-ps1.", "path": "C:\\Users\\USER\\.claude\\night-agent\\remnant-render-matrix.ps1" },
-        { "name": "remnant-launch pipeline", "title": "סקריפטי פייפליין: compare.py, judge.py, measure.py, metric.py, night_all_yg.py, pair_run.py", "origin": "project", "trigger": "python <script> בתוך remnant-launch/pipeline", "status": "unknown", "notes": "אין SKILL.md או CLAUDE.md בפרויקט — הידע חי בסקיל remnant-render-loop ובזיכרון.", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\pipeline" },
-        { "name": "Higgsfield 3D / Scene Builder", "title": "רקעים/סצנות תלת-ממד ווידאו מסצנה (לא לציור התכשיט עצמו)", "origin": "mcp", "trigger": "scene_builder_3d_*", "status": "unknown" }
+        {
+          "name": "הדמיות REMNANT",
+          "title": "לולאת יצירה ובדיקה להדמיות תכשיטים מ-Rhino (REMNANT, SUNBURST) — כפתור אחד לסבב שיפור מול רפרנס סטודיו",
+          "origin": "user",
+          "trigger": "\"continue the renders\" / \"ההדמיות נראות פלסטיק\" / לפני שינוי בהדמיות הליליות",
+          "status": "working",
+          "notes": "לבדוק שתוכנת ההדמיות לא רצה כבר לפני רינדור. ממשיכים מהגרסה הסופית האחרונה ביומן הניסויים. כללים נעולים/פתוחים בתוכנית ההדמיות, כולל מה ניסינו ולא עבד.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\remnant-render-loop\\SKILL.md",
+          "id": "remnant-render-loop"
+        },
+        {
+          "name": "הדמיות לילה אוטומטיות",
+          "title": "משימה לילית מתוזמנת: רינדור מטריצה של REMNANT",
+          "origin": "project",
+          "trigger": "משימה אוטומטית במחשב שרצה כל לילה",
+          "status": "unknown",
+          "notes": "חייב לשמור את קובץ המשימה בקידוד שמשמר עברית.",
+          "path": "C:\\Users\\USER\\.claude\\night-agent\\remnant-render-matrix.ps1",
+          "id": "DR-Remnant-RenderMatrix (night task)"
+        },
+        {
+          "name": "כלי ההדמיות של REMNANT",
+          "title": "כלי השוואה, שיפוט ומדידה של ההדמיות + ריצות לילה",
+          "origin": "project",
+          "trigger": "הפעלה דרך Claude מתיקיית ההדמיות",
+          "status": "unknown",
+          "notes": "אין הוראות כתובות בפרויקט — הידע נמצא בנוהל ההדמיות ובזיכרון.",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\remnant-launch\\pipeline",
+          "id": "remnant-launch pipeline"
+        },
+        {
+          "name": "Higgsfield 3D / Scene Builder",
+          "title": "רקעים/סצנות תלת-ממד ווידאו מסצנה (לא לציור התכשיט עצמו)",
+          "origin": "mcp",
+          "trigger": "בונה הסצנות של Higgsfield",
+          "status": "unknown"
+        }
       ]
     },
     {
@@ -125,21 +566,137 @@
       "title": "מסמכים (PDF/Word/Excel/PPT)",
       "icon": "📄",
       "items": [
-        { "name": "pdf", "title": "PDF: קריאה, חילוץ טבלאות, מיזוג/פיצול, סיבוב, סימן מים, מילוי טפסים, OCR, הצפנה", "origin": "bundled", "trigger": "כל אזכור של קובץ .pdf", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\pdf\\SKILL.md" },
-        { "name": "docx", "title": "Word: יצירה, עריכה, tracked changes, הערות, תבניות", "origin": "bundled", "trigger": "כל אזכור של .docx", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\docx\\SKILL.md" },
-        { "name": "pptx", "title": "PowerPoint: יצירת מצגות, קריאה, עריכה, תבניות .potx", "origin": "bundled", "trigger": "כל אזכור של .pptx", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\pptx\\SKILL.md" },
-        { "name": "xlsx", "title": "Excel/CSV: קריאה, נוסחאות, עיצוב, גרפים, ניקוי דאטה", "origin": "bundled", "trigger": "כל אזכור של .xlsx/.csv", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\xlsx\\SKILL.md" },
-        { "name": "docs", "title": "Claude Docs: מסמך חי לשיתוף, ייצוא ל-Word/PDF/Google Docs", "origin": "bundled", "trigger": "\"תכין מסמך\" / mcp Claude Docs", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\docs\\SKILL.md" },
-        { "name": "google-workspace", "title": "Google Docs/Sheets/Slides: יצירה ועריכה של קבצי Google ב-Drive", "origin": "bundled", "trigger": "קישור docs.google.com / \"צור Google Sheet\"", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\google-workspace\\SKILL.md" },
-        { "name": "Google Drive", "title": "מחבר Google Drive: חיפוש, קריאה, יצירה, שיתוף קבצים", "origin": "mcp", "trigger": "כלי mcp Google Drive", "status": "working" },
-        { "name": "Claude Docs", "title": "מחבר Claude Docs: create/read/update/export", "origin": "mcp", "trigger": "כלי mcp Claude_Docs", "status": "working" },
-        { "name": "adobe-anypdf", "title": "Acrobat: דחיסה, מיזוג, OCR, השחרה, חתימה, המרה מ/אל PDF — נאמנות גבוהה", "origin": "plugin:adobe", "trigger": "כל משימת PDF (adobe_mandatory_init קודם)", "status": "partial", "notes": "דורש התחברות ל-Adobe; עד אז הסקיל pdf המובנה." },
-        { "name": "adobe-anydocx", "title": "PDF → Word", "origin": "plugin:adobe", "trigger": "\"convert this pdf to word\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-anyexcel", "title": "PDF → Excel (חילוץ טבלאות)", "origin": "plugin:adobe", "trigger": "\"pull the tables from this pdf\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-anypptx", "title": "PDF → PowerPoint", "origin": "plugin:adobe", "trigger": "\"turn this pdf into slides\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-document-review", "title": "הדגשת מה שחשוב ב-PDF: סיכונים, התחייבויות, תאריכים, סכומים", "origin": "plugin:adobe", "trigger": "\"review this document\"", "status": "partial", "notes": "דורש התחברות ל-Adobe." },
-        { "name": "adobe-create-pdfs-from-data", "title": "Data merge ב-InDesign: CSV + תבנית → תעודות, תגים, קטלוגים, תוויות, חשבוניות מותאמות לכל שורה", "origin": "plugin:adobe", "trigger": "\"data merge\" / \"certificates from this CSV\"", "status": "partial", "notes": "דורש התחברות ל-Adobe. מתאים לתעודות אותנטיות/יהלומים." },
-        { "name": "foreign-transfer-form", "title": "מילוי טופס בנק שטוח (overlay בקואורדינטות) — דוגמה למילוי PDF ללא שדות", "origin": "user", "trigger": "\"טופס העברה לחו\"ל\"", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form\\SKILL.md" }
+        {
+          "name": "קבצי PDF",
+          "title": "PDF: קריאה, חילוץ טבלאות, מיזוג/פיצול, סיבוב, סימן מים, מילוי טפסים, OCR, הצפנה",
+          "origin": "bundled",
+          "trigger": "כל אזכור של קובץ PDF",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\pdf\\SKILL.md",
+          "id": "pdf"
+        },
+        {
+          "name": "קבצי Word",
+          "title": "Word: יצירה, עריכה, מעקב שינויים, הערות, תבניות",
+          "origin": "bundled",
+          "trigger": "כל אזכור של קובץ Word",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\docx\\SKILL.md",
+          "id": "docx"
+        },
+        {
+          "name": "מצגות PowerPoint",
+          "title": "PowerPoint: יצירת מצגות, קריאה, עריכה, תבניות",
+          "origin": "bundled",
+          "trigger": "כל אזכור של קובץ PowerPoint",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\pptx\\SKILL.md",
+          "id": "pptx"
+        },
+        {
+          "name": "קבצי Excel",
+          "title": "Excel/CSV: קריאה, נוסחאות, עיצוב, גרפים, ניקוי דאטה",
+          "origin": "bundled",
+          "trigger": "כל אזכור של קובץ Excel/CSV",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\xlsx\\SKILL.md",
+          "id": "xlsx"
+        },
+        {
+          "name": "מסמכי Claude",
+          "title": "Claude Docs: מסמך חי לשיתוף, ייצוא ל-Word/PDF/Google Docs",
+          "origin": "bundled",
+          "trigger": "\"תכין מסמך\" / מחבר Claude Docs",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\docs\\SKILL.md",
+          "id": "docs"
+        },
+        {
+          "name": "קבצי Google",
+          "title": "Google Docs/Sheets/Slides: יצירה ועריכה של קבצי Google ב-Drive",
+          "origin": "bundled",
+          "trigger": "קישור docs.google.com / \"צור Google Sheet\"",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\google-workspace\\SKILL.md",
+          "id": "google-workspace"
+        },
+        {
+          "name": "Google Drive",
+          "title": "מחבר Google Drive: חיפוש, קריאה, יצירה, שיתוף קבצים",
+          "origin": "mcp",
+          "trigger": "מחבר Google Drive",
+          "status": "working"
+        },
+        {
+          "name": "Claude Docs",
+          "title": "מחבר Claude Docs: יצירה/קריאה/עדכון/ייצוא",
+          "origin": "mcp",
+          "trigger": "מחבר Claude Docs",
+          "status": "working"
+        },
+        {
+          "name": "Acrobat (PDF)",
+          "title": "Acrobat: דחיסה, מיזוג, OCR, השחרה, חתימה, המרה מ/אל PDF — נאמנות גבוהה",
+          "origin": "plugin:adobe",
+          "trigger": "כל משימת PDF",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe; עד אז הכלי המובנה ל-PDF.",
+          "id": "adobe-anypdf"
+        },
+        {
+          "name": "PDF ל-Word",
+          "title": "PDF → Word",
+          "origin": "plugin:adobe",
+          "trigger": "\"convert this pdf to word\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-anydocx"
+        },
+        {
+          "name": "PDF ל-Excel",
+          "title": "PDF → Excel (חילוץ טבלאות)",
+          "origin": "plugin:adobe",
+          "trigger": "\"pull the tables from this pdf\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-anyexcel"
+        },
+        {
+          "name": "PDF ל-PowerPoint",
+          "title": "PDF → PowerPoint",
+          "origin": "plugin:adobe",
+          "trigger": "\"turn this pdf into slides\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-anypptx"
+        },
+        {
+          "name": "סקירת מסמך PDF",
+          "title": "הדגשת מה שחשוב ב-PDF: סיכונים, התחייבויות, תאריכים, סכומים",
+          "origin": "plugin:adobe",
+          "trigger": "\"review this document\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe.",
+          "id": "adobe-document-review"
+        },
+        {
+          "name": "יצירת PDF מנתונים",
+          "title": "מיזוג נתונים ב-InDesign: טבלה + תבנית → תעודות, תגים, קטלוגים, תוויות, חשבוניות מותאמות לכל שורה",
+          "origin": "plugin:adobe",
+          "trigger": "\"data merge\" / \"certificates from this CSV\"",
+          "status": "partial",
+          "notes": "דורש התחברות ל-Adobe. מתאים לתעודות אותנטיות/יהלומים.",
+          "id": "adobe-create-pdfs-from-data"
+        },
+        {
+          "name": "טופס העברה לחו\"ל",
+          "title": "מילוי טופס בנק שטוח (כתיבה במיקומים קבועים) — דוגמה למילוי PDF ללא שדות",
+          "origin": "user",
+          "trigger": "\"טופס העברה לחו\"ל\"",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\foreign-transfer-form\\SKILL.md",
+          "id": "foreign-transfer-form"
+        }
       ]
     },
     {
@@ -147,12 +704,65 @@
       "title": "מחקר",
       "icon": "🔍",
       "items": [
-        { "name": "niche-research", "title": "מחקר שוק עמוק ואדברסרי (5-6 סבבים, כל סבב תוקף את הקודם): ביקוש/היצע, מתחרים, מחירים מאומתים, יוניט אקונומיקס", "origin": "user", "trigger": "\"do market research on X\" / \"יש פתח ב-Y?\" / \"כדאי להיכנס ל-W?\"", "status": "working", "notes": "Etsy מת לכל סקרייפינג — לעולם לא לרשום אפליקציית Etsy API (סיכון לחנות החיה). Similarweb = חודשי, לא רבעוני. כל טענה VERIFIED/INFERRED/REPORTED. לכתוב קבצים בהדרגה.", "path": "C:\\Users\\USER\\.claude\\skills\\niche-research\\SKILL.md" },
-        { "name": "deep-research", "title": "מחקר רב-מקורות עם סוכני משנה מקבילים + דוח נרטיבי מסונתז", "origin": "bundled", "trigger": "שאלת מחקר רחבה / השוואת חלופות / ניתוח שוק", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\deep-research\\SKILL.md" },
-        { "name": "chrome-browser", "title": "Claude in Chrome — פעולה בדפדפן האמיתי עם ההתחברויות של דניאל", "origin": "bundled", "trigger": "לפני שימוש ראשון בכלי mcp__claude-in-chrome__*", "status": "unknown", "notes": "דורש תוסף Chrome מחובר.", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\chrome-browser\\SKILL.md" },
-        { "name": "built-in-browser", "title": "הדפדפן המובנה באפליקציית Claude Desktop", "origin": "bundled", "trigger": "לפני שימוש ראשון ב-mcp__Claude_Browser__*", "status": "unknown", "notes": "רק ב-Cowork/Desktop app.", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\built-in-browser\\SKILL.md" },
-        { "name": "computer-use", "title": "שליטה בשולחן העבודה: צילומי מסך, קליקים, הקלדה דרך Claude Desktop", "origin": "bundled", "trigger": "\"computer use\" / פעולה באפליקציה מקומית", "status": "unknown", "notes": "רק ב-Cowork/Desktop app.", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\computer-use\\SKILL.md" },
-        { "name": "teen-jewelry-research", "title": "פרויקט מחקר: מותג תכשיטי נוער (Mia+Ronit) — תוצרים ב-research/", "origin": "project", "trigger": "תיקיית הפרויקט", "status": "unknown", "notes": "אין SKILL.md/CLAUDE.md בפרויקט.", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\teen-jewelry-research" }
+        {
+          "name": "מחקר שוק",
+          "title": "מחקר שוק עמוק ומאתגר (5-6 סבבים, כל סבב תוקף את הקודם): ביקוש/היצע, מתחרים, מחירים מאומתים, כלכלת יחידה",
+          "origin": "user",
+          "trigger": "\"do market research on X\" / \"יש פתח ב-Y?\" / \"כדאי להיכנס ל-W?\"",
+          "status": "working",
+          "notes": "Etsy חוסם כל איסוף נתונים אוטומטי — לעולם לא לפתוח חיבור מפתחים ל-Etsy (סיכון לחנות החיה). Similarweb = חודשי, לא רבעוני. כל טענה מסומנת: מאומת/מוסק/מדווח. לכתוב קבצים בהדרגה.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\niche-research\\SKILL.md",
+          "id": "niche-research"
+        },
+        {
+          "name": "מחקר מעמיק",
+          "title": "מחקר רב-מקורות עם כמה סוכנים במקביל + דוח מסכם",
+          "origin": "bundled",
+          "trigger": "שאלת מחקר רחבה / השוואת חלופות / ניתוח שוק",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\deep-research\\SKILL.md",
+          "id": "deep-research"
+        },
+        {
+          "name": "דפדפן כרום",
+          "title": "Claude in Chrome — פעולה בדפדפן האמיתי עם ההתחברויות של דניאל",
+          "origin": "bundled",
+          "trigger": "לפני הפעם הראשונה ש-Claude פועל בכרום",
+          "status": "unknown",
+          "notes": "דורש תוסף Chrome מחובר.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\chrome-browser\\SKILL.md",
+          "id": "chrome-browser"
+        },
+        {
+          "name": "הדפדפן המובנה",
+          "title": "הדפדפן המובנה באפליקציית Claude Desktop",
+          "origin": "bundled",
+          "trigger": "לפני הפעם הראשונה ש-Claude משתמש בדפדפן המובנה",
+          "status": "unknown",
+          "notes": "רק באפליקציית Claude במחשב.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\built-in-browser\\SKILL.md",
+          "id": "built-in-browser"
+        },
+        {
+          "name": "שליטה במחשב",
+          "title": "שליטה בשולחן העבודה: צילומי מסך, קליקים, הקלדה דרך Claude Desktop",
+          "origin": "bundled",
+          "trigger": "\"computer use\" / פעולה באפליקציה מקומית",
+          "status": "unknown",
+          "notes": "רק באפליקציית Claude במחשב.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\computer-use\\SKILL.md",
+          "id": "computer-use"
+        },
+        {
+          "name": "מחקר תכשיטי נוער",
+          "title": "פרויקט מחקר: מותג תכשיטי נוער (Mia+Ronit) — התוצרים שמורים בתיקיית המחקר",
+          "origin": "project",
+          "trigger": "תיקיית הפרויקט",
+          "status": "unknown",
+          "notes": "אין לפרויקט קובץ הנחיות.",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\teen-jewelry-research",
+          "id": "teen-jewelry-research"
+        }
       ]
     },
     {
@@ -160,13 +770,71 @@
       "title": "מניות ומסחר",
       "icon": "📈",
       "items": [
-        { "name": "scan-stock-reversals", "title": "סריקת היפוכי מגמה: מחיר מתקרב ל-SMA150 מלמטה, RSI<50, MACD<0, מעל שפל 52 שבועות (yfinance)", "origin": "user", "trigger": "\"סריקת היפוכים\" / \"מי מתקרבת לממוצע נע 150\" / \"תריץ את סריקת נפגעות ה-AI\"", "status": "working", "notes": "watchlists/ai_victims.csv. נתיב מלא לסקריפט (~ לא מתרחב ב-Windows). Falling knife ≠ היפוך.", "path": "C:\\Users\\USER\\.claude\\skills\\scan-stock-reversals\\SKILL.md" },
-        { "name": "stock-agent", "title": "סוכן משנה למחקר מסחר טכני: סריקות, backtests, חדשות שוק", "origin": "user", "trigger": "Agent subagent_type=stock-agent", "status": "working", "path": "C:\\Users\\USER\\.claude\\agents\\stock-agent.md" },
-        { "name": "portfolio_screens.py", "title": "סקירת שלושת התיקים (סקירה שבועית של יום ראשון)", "origin": "project", "trigger": "python trading-income-system/screener/portfolio_screens.py (מופעל מ-accountability-checkin)", "status": "working", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\trading-income-system\\screener\\portfolio_screens.py" },
-        { "name": "sector screener pages", "title": "דפי סקרינר סקטוריאליים (XLK, XLE, SOXX, URA...) ב-command-center", "origin": "project", "trigger": "build.py / build_index.py → command-center/screener/*.html", "status": "working", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\command-center\\screener" },
-        { "name": "trading-income-system", "title": "פלייבוק Confluence Reversal, יומן טריידים, יעד רווח חודשי, watchlists US/IL", "origin": "project", "trigger": "playbook.md / journal/<YYYY-MM>.md", "status": "working", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\trading-income-system\\README.md" },
-        { "name": "TradingAgents", "title": "פריימוורק סוכני מסחר LLM (run_analysis.py, cli) — פרויקט חיצוני", "origin": "project", "trigger": "python run_analysis.py / cli", "status": "unknown", "notes": "דורש .venv ו-.env עם מפתחות API.", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\TradingAgents" },
-        { "name": "accountability-checkin", "title": "חלק שבועי: סקירת מניות של יום ראשון + יעד רווח חודשי מהיומן", "origin": "user", "trigger": "אוטומטי בתחילת כל סשן", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\accountability-checkin\\SKILL.md" }
+        {
+          "name": "סריקת היפוכי מגמה",
+          "title": "סריקת היפוכי מגמה: מחיר מתקרב לממוצע נע 150 מלמטה, RSI מתחת ל-50, MACD שלילי, מעל השפל של 52 שבועות",
+          "origin": "user",
+          "trigger": "\"סריקת היפוכים\" / \"מי מתקרבת לממוצע נע 150\" / \"תריץ את סריקת נפגעות ה-AI\"",
+          "status": "working",
+          "notes": "רשימת המעקב של נפגעות ה-AI. סכין נופלת ≠ היפוך.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\scan-stock-reversals\\SKILL.md",
+          "id": "scan-stock-reversals"
+        },
+        {
+          "name": "סוכן המניות",
+          "title": "סוכן עזר למחקר מסחר טכני: סריקות, בדיקות על נתוני עבר, חדשות שוק",
+          "origin": "user",
+          "trigger": "Claude מפעיל אותו כשצריך מחקר מניות",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\agents\\stock-agent.md",
+          "id": "stock-agent"
+        },
+        {
+          "name": "סקירת התיקים",
+          "title": "סקירת שלושת התיקים (סקירה שבועית של יום ראשון)",
+          "origin": "project",
+          "trigger": "רץ אוטומטית מתוך הצ'ק-אין של יום ראשון",
+          "status": "working",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\trading-income-system\\screener\\portfolio_screens.py",
+          "id": "portfolio_screens.py"
+        },
+        {
+          "name": "דפי סקרינר לפי סקטור",
+          "title": "דפי סקרינר לפי סקטור (XLK, XLE, SOXX, URA...) במרכז השליטה",
+          "origin": "project",
+          "trigger": "נבנים אוטומטית ומתפרסמים במרכז השליטה",
+          "status": "working",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\command-center\\screener",
+          "id": "sector screener pages"
+        },
+        {
+          "name": "מערכת המסחר",
+          "title": "פלייבוק Confluence Reversal, יומן טריידים, יעד רווח חודשי, רשימות מעקב ארה\"ב/ישראל",
+          "origin": "project",
+          "trigger": "הפלייבוק ויומן הטריידים החודשי",
+          "status": "working",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\trading-income-system\\README.md",
+          "id": "trading-income-system"
+        },
+        {
+          "name": "סוכני מסחר (פרויקט חיצוני)",
+          "title": "פרויקט חיצוני של סוכני AI שמנתחים מניות",
+          "origin": "project",
+          "trigger": "מופעל ידנית במחשב",
+          "status": "unknown",
+          "notes": "דורש מפתחות גישה לשירותים חיצוניים.",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\TradingAgents",
+          "id": "TradingAgents"
+        },
+        {
+          "name": "צ'ק-אין אחריות",
+          "title": "חלק שבועי: סקירת מניות של יום ראשון + יעד רווח חודשי מהיומן",
+          "origin": "user",
+          "trigger": "אוטומטי בתחילת כל סשן",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\accountability-checkin\\SKILL.md",
+          "id": "accountability-checkin"
+        }
       ]
     },
     {
@@ -174,14 +842,72 @@
       "title": "יומן ומיילים",
       "icon": "📅",
       "items": [
-        { "name": "daily-brief", "title": "בריף בוקר: יומן היום, מיילים שדורשים תשובה, עדיפות אחת, הזמנות תקועות", "origin": "user", "trigger": "/daily-brief", "status": "working", "path": "C:\\Users\\USER\\.claude\\commands\\daily-brief.md" },
-        { "name": "manage-calendar", "title": "ניהול יומן Google: תכנון שבוע, קביעת אירועים, בדיקת זמינות לפי כללי העבודה של דניאל (א-ה, מ-10:00, 10 דק' מרווח)", "origin": "user", "trigger": "/manage-calendar", "status": "working", "path": "C:\\Users\\USER\\.claude\\commands\\manage-calendar.md" },
-        { "name": "Google Calendar", "title": "מחבר Google Calendar: אירועים, חיפוש, הצעת זמן", "origin": "mcp", "trigger": "כלי mcp Google_Calendar", "status": "working" },
-        { "name": "Gmail", "title": "מחבר Gmail: חיפוש שרשורים, קריאה, תשובה, טיוטות, תוויות, ספאם", "origin": "mcp", "trigger": "כלי mcp Gmail", "status": "working" },
-        { "name": "gws-gmail", "title": "Gmail דרך CLI (gws)", "origin": "user", "trigger": "gws gmail ...", "status": "partial", "notes": "gws-shared חסר.", "path": "C:\\Users\\USER\\.claude\\skills\\gws-gmail\\SKILL.md" },
-        { "name": "Calendly", "title": "מחבר Calendly: סוגי פגישות, זמינות, הזמנות, קישורי תיאום", "origin": "mcp", "trigger": "כלי mcp Calendly", "status": "working" },
-        { "name": "morning", "title": "בריף בוקר כ-artifact HTML מעוצב / משימה חוזרת בימי חול", "origin": "bundled", "trigger": "/morning", "status": "working", "notes": "חופף ל-/daily-brief ול-accountability-checkin.", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\morning\\SKILL.md" },
-        { "name": "Google Drive", "title": "מחבר Google Drive", "origin": "mcp", "trigger": "כלי mcp Google_Drive", "status": "working" }
+        {
+          "name": "בריף בוקר",
+          "title": "בריף בוקר: יומן היום, מיילים שדורשים תשובה, עדיפות אחת, הזמנות תקועות",
+          "origin": "user",
+          "trigger": "/daily-brief",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\commands\\daily-brief.md",
+          "id": "daily-brief"
+        },
+        {
+          "name": "ניהול יומן",
+          "title": "ניהול יומן Google: תכנון שבוע, קביעת אירועים, בדיקת זמינות לפי כללי העבודה של דניאל (א-ה, מ-10:00, 10 דק' מרווח)",
+          "origin": "user",
+          "trigger": "/manage-calendar",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\commands\\manage-calendar.md",
+          "id": "manage-calendar"
+        },
+        {
+          "name": "Google Calendar",
+          "title": "מחבר Google Calendar: אירועים, חיפוש, הצעת זמן",
+          "origin": "mcp",
+          "trigger": "החיבור של Claude ל-Google Calendar",
+          "status": "working"
+        },
+        {
+          "name": "Gmail",
+          "title": "מחבר Gmail: חיפוש שרשורים, קריאה, תשובה, טיוטות, תוויות, ספאם",
+          "origin": "mcp",
+          "trigger": "החיבור של Claude ל-Gmail",
+          "status": "working"
+        },
+        {
+          "name": "Gmail (כלי נוסף)",
+          "title": "גישה נוספת ל-Gmail משורת הפקודה",
+          "origin": "user",
+          "trigger": "פקודות Gmail במחשב",
+          "status": "partial",
+          "notes": "חסר רכיב משותף — לא עובד במלואו.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\gws-gmail\\SKILL.md",
+          "id": "gws-gmail"
+        },
+        {
+          "name": "Calendly",
+          "title": "מחבר Calendly: סוגי פגישות, זמינות, הזמנות, קישורי תיאום",
+          "origin": "mcp",
+          "trigger": "החיבור של Claude ל-Calendly",
+          "status": "working"
+        },
+        {
+          "name": "בריף בוקר מעוצב",
+          "title": "בריף בוקר כדף מעוצב / משימה חוזרת בימי חול",
+          "origin": "bundled",
+          "trigger": "/morning",
+          "status": "working",
+          "notes": "חופף לבריף הבוקר ולצ'ק-אין.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\morning\\SKILL.md",
+          "id": "morning"
+        },
+        {
+          "name": "Google Drive",
+          "title": "מחבר Google Drive",
+          "origin": "mcp",
+          "trigger": "החיבור של Claude ל-Google Drive",
+          "status": "working"
+        }
       ]
     },
     {
@@ -189,13 +915,68 @@
       "title": "עוזר אישי ומשמעת",
       "icon": "🧭",
       "items": [
-        { "name": "accountability-checkin", "title": "צ'ק-אין אחריות: יומן אתמול, סקירת מניות שבועית, יעד רווח חודשי — מול commitments.md, רושם log יומי", "origin": "user", "trigger": "אוטומטי בתחילת כל סשן / \"צ'ק-אין\" / \"מה פתוח אצלי\" / \"איפה אני עומד מול היעד\"", "status": "working", "notes": "מקור אמת: ~/.claude/accountability/commitments.md. לא מציק על זמן מסחר, רק על ההתחייבויות.", "path": "C:\\Users\\USER\\.claude\\skills\\accountability-checkin\\SKILL.md" },
-        { "name": "daily-brief", "title": "בריף בוקר קצר בעברית", "origin": "user", "trigger": "/daily-brief", "status": "working", "path": "C:\\Users\\USER\\.claude\\commands\\daily-brief.md" },
-        { "name": "manage-calendar", "title": "תכנון שבוע לפי מבנה היום הקבוע (בוקר לקוחות, צהריים פרויקטים)", "origin": "user", "trigger": "/manage-calendar", "status": "working", "path": "C:\\Users\\USER\\.claude\\commands\\manage-calendar.md" },
-        { "name": "morning", "title": "בריף בוקר מעוצב", "origin": "bundled", "trigger": "/morning", "status": "working" },
-        { "name": "schedule", "title": "סוכני ענן מתוזמנים (cron) — משימות חוזרות או חד-פעמיות", "origin": "harness", "trigger": "/schedule", "status": "working" },
-        { "name": "loop", "title": "הרצת פקודה/פרומפט במרווח קבוע בסשן הנוכחי", "origin": "harness", "trigger": "/loop 5m /foo", "status": "working" },
-        { "name": "night-agent", "title": "סוכן לילה: קטלוג CustomizeAI, בדיקות בריאות בוקר, רינדור REMNANT, שליחת מייל", "origin": "project", "trigger": "Windows Tasks → ~/.claude/night-agent/*.ps1", "status": "unknown", "notes": "אין סקיל — פרומפטים ב-NIGHT-*-PROMPT.md, לוגים ב-catalog-log-*.md.", "path": "C:\\Users\\USER\\.claude\\night-agent" }
+        {
+          "name": "צ'ק-אין אחריות",
+          "title": "צ'ק-אין אחריות: יומן אתמול, סקירת מניות שבועית, יעד רווח חודשי — מול רשימת ההתחייבויות, ורושם יומן יומי",
+          "origin": "user",
+          "trigger": "אוטומטי בתחילת כל סשן / \"צ'ק-אין\" / \"מה פתוח אצלי\" / \"איפה אני עומד מול היעד\"",
+          "status": "working",
+          "notes": "מקור האמת: רשימת ההתחייבויות שלך. לא מציק על זמן מסחר, רק על ההתחייבויות.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\accountability-checkin\\SKILL.md",
+          "id": "accountability-checkin"
+        },
+        {
+          "name": "בריף בוקר",
+          "title": "בריף בוקר קצר בעברית",
+          "origin": "user",
+          "trigger": "/daily-brief",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\commands\\daily-brief.md",
+          "id": "daily-brief"
+        },
+        {
+          "name": "ניהול יומן",
+          "title": "תכנון שבוע לפי מבנה היום הקבוע (בוקר לקוחות, צהריים פרויקטים)",
+          "origin": "user",
+          "trigger": "/manage-calendar",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\commands\\manage-calendar.md",
+          "id": "manage-calendar"
+        },
+        {
+          "name": "בריף בוקר מעוצב",
+          "title": "בריף בוקר מעוצב",
+          "origin": "bundled",
+          "trigger": "/morning",
+          "status": "working",
+          "id": "morning"
+        },
+        {
+          "name": "משימות מתוזמנות",
+          "title": "סוכנים בענן שרצים לפי לוח זמנים — משימות חוזרות או חד-פעמיות",
+          "origin": "harness",
+          "trigger": "/schedule",
+          "status": "working",
+          "id": "schedule"
+        },
+        {
+          "name": "הרצה חוזרת",
+          "title": "הרצת פקודה/פרומפט במרווח קבוע בסשן הנוכחי",
+          "origin": "harness",
+          "trigger": "/loop 5m /foo",
+          "status": "working",
+          "id": "loop"
+        },
+        {
+          "name": "סוכן הלילה",
+          "title": "סוכן לילה: קטלוג CustomizeAI, בדיקות בריאות בוקר, רינדור REMNANT, שליחת מייל",
+          "origin": "project",
+          "trigger": "משימות אוטומטיות של Windows שרצות כל לילה",
+          "status": "unknown",
+          "notes": "אין לו נוהל כתוב — ההוראות והיומנים שמורים בתיקיית סוכן הלילה.",
+          "path": "C:\\Users\\USER\\.claude\\night-agent",
+          "id": "night-agent"
+        }
       ]
     },
     {
@@ -203,63 +984,384 @@
       "title": "פיתוח ובקרת איכות",
       "icon": "🛠️",
       "items": [
-        { "name": "brainstorming", "title": "חובה לפני כל עבודה יצירתית: שאלות הבהרה, 2-3 גישות, מסמך עיצוב לאישור", "origin": "user", "trigger": "אוטומטי לפני פיצ'ר/קומפוננטה חדשה", "status": "working", "notes": "שומר ל-docs/superpowers/specs/.", "path": "C:\\Users\\USER\\.claude\\skills\\brainstorming\\SKILL.md" },
-        { "name": "writing-plans", "title": "תוכנית יישום מפורטת במשימות של 2-5 דקות (TDD, commits תכופים)", "origin": "user", "trigger": "אחרי spec, לפני קוד", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\writing-plans\\SKILL.md" },
-        { "name": "subagent-driven-development", "title": "ביצוע תוכנית: סוכן משנה טרי לכל משימה + ביקורת spec ואיכות", "origin": "user", "trigger": "בעת ביצוע תוכנית עם משימות עצמאיות", "status": "partial", "notes": "מפנה לסוכני superpowers:* שאינם מותקנים ברשימת הסוכנים.", "path": "C:\\Users\\USER\\.claude\\skills\\subagent-driven-development\\SKILL.md" },
-        { "name": "systematic-debugging", "title": "דיבאג שיטתי: שורש הבעיה לפני כל תיקון (4 שלבים)", "origin": "user", "trigger": "כל באג / כשלון בדיקה / התנהגות לא צפויה", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\systematic-debugging\\SKILL.md" },
-        { "name": "requesting-code-review", "title": "בקשת code review מסוכן משנה אחרי כל משימה/לפני merge", "origin": "user", "trigger": "אחרי השלמת פיצ'ר", "status": "partial", "notes": "דורש סוכן superpowers:code-reviewer שלא קיים — להשתמש ב-/code-review של ה-harness.", "path": "C:\\Users\\USER\\.claude\\skills\\requesting-code-review\\SKILL.md" },
-        { "name": "code-review", "title": "ביקורת diff/PR לבאגים ברמות מאמץ שונות, --fix / --comment", "origin": "harness", "trigger": "/code-review [level]", "status": "working" },
-        { "name": "simplify", "title": "ניקוי קוד ששונה: שימוש חוזר, פישוט, יעילות", "origin": "harness", "trigger": "/simplify", "status": "working" },
-        { "name": "security-review", "title": "סקירת אבטחה", "origin": "harness", "trigger": "/security-review", "status": "working" },
-        { "name": "ponytail", "title": "מצב המפתח העצלן: הפתרון המינימלי שעובד (YAGNI, stdlib קודם)", "origin": "plugin:ponytail", "trigger": "/ponytail lite|full|ultra — פעיל כברירת מחדל", "status": "working" },
-        { "name": "ponytail-review", "title": "ביקורת קוד רק על over-engineering: מה למחוק", "origin": "plugin:ponytail", "trigger": "/ponytail-review", "status": "working" },
-        { "name": "ponytail-audit", "title": "סריקת ריפו שלם ל-bloat ולהחלפות ב-stdlib", "origin": "plugin:ponytail", "trigger": "/ponytail-audit", "status": "working" },
-        { "name": "ponytail-debt", "title": "איסוף כל הערות ponytail: לרשימת חוב", "origin": "plugin:ponytail", "trigger": "/ponytail-debt", "status": "working" },
-        { "name": "run", "title": "הרצת האפליקציה של הפרויקט לראות שינוי עובד / צילום מסך", "origin": "harness", "trigger": "/run", "status": "working" },
-        { "name": "init", "title": "יצירת CLAUDE.md חדש עם תיעוד הקודבייס", "origin": "harness", "trigger": "/init", "status": "working", "notes": "אף פרויקט ב-CLAUDE CODE PROJECTS לא מכיל CLAUDE.md." },
-        { "name": "claude-api", "title": "רפרנס Claude API/SDK: מודלים, מחירים, tool use, caching", "origin": "harness", "trigger": "אוטומטי כשמזכירים Claude/Anthropic בקוד", "status": "working" },
-        { "name": "workflow-authoring", "title": "כתיבת סקריפטי Workflow", "origin": "harness", "trigger": "לפני כתיבת workflow script", "status": "working" },
-        { "name": "dataviz", "title": "עיצוב גרפים/דשבורדים עקבי ונגיש (פלטה, סוגי גרפים)", "origin": "harness", "trigger": "אוטומטי לפני כל גרף/דשבורד", "status": "working" },
-        { "name": "artifact-design", "title": "עקרונות עיצוב לדפי Artifact", "origin": "harness", "trigger": "אוטומטי לפני artifact", "status": "working" },
-        { "name": "artifact-diagramming", "title": "דיאגרמות SVG בתוך Artifacts", "origin": "harness", "trigger": "כשדיאגרמה מועילה ב-artifact", "status": "working" },
-        { "name": "artifact-capabilities", "title": "יכולות runtime ל-Artifacts: db משותף, קבצים, זהות צופה, שאלות ל-Claude", "origin": "harness", "trigger": "לפני capabilities ב-artifact", "status": "working" },
-        { "name": "skill-creator", "title": "יצירה, שיפור ומדידת ביצועים של סקילים (evals)", "origin": "bundled", "trigger": "\"create a skill\" / \"optimize the skill description\"", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\skill-creator\\SKILL.md" }
+        {
+          "name": "סיעור מוחות",
+          "title": "חובה לפני כל עבודה יצירתית: שאלות הבהרה, 2-3 גישות, מסמך עיצוב לאישור",
+          "origin": "user",
+          "trigger": "אוטומטי לפני בניית יכולת חדשה",
+          "status": "working",
+          "notes": "שומר את מסמך העיצוב בתיקיית המסמכים.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\brainstorming\\SKILL.md",
+          "id": "brainstorming"
+        },
+        {
+          "name": "כתיבת תוכנית עבודה",
+          "title": "תוכנית יישום מפורטת במשימות של 2-5 דקות, עם בדיקות ושמירה תכופה",
+          "origin": "user",
+          "trigger": "אחרי שהדרישות מאושרות, לפני הבנייה",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\writing-plans\\SKILL.md",
+          "id": "writing-plans"
+        },
+        {
+          "name": "ביצוע תוכנית בסוכנים",
+          "title": "ביצוע תוכנית: סוכן חדש לכל משימה + בדיקה שהתוצאה תואמת ואיכותית",
+          "origin": "user",
+          "trigger": "בעת ביצוע תוכנית עם משימות עצמאיות",
+          "status": "partial",
+          "notes": "מפנה לסוכנים שלא מותקנים.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\subagent-driven-development\\SKILL.md",
+          "id": "subagent-driven-development"
+        },
+        {
+          "name": "איתור תקלות שיטתי",
+          "title": "איתור תקלות שיטתי: מוצאים את שורש הבעיה לפני כל תיקון (4 שלבים)",
+          "origin": "user",
+          "trigger": "כל תקלה / בדיקה שנכשלה / התנהגות לא צפויה",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\systematic-debugging\\SKILL.md",
+          "id": "systematic-debugging"
+        },
+        {
+          "name": "בקשת בדיקת קוד",
+          "title": "בקשת בדיקת קוד מסוכן נוסף אחרי כל משימה, לפני שמשלבים",
+          "origin": "user",
+          "trigger": "אחרי השלמת יכולת חדשה",
+          "status": "partial",
+          "notes": "דורש סוכן בודק שלא קיים — להשתמש במקום זה ב-/code-review.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\requesting-code-review\\SKILL.md",
+          "id": "requesting-code-review"
+        },
+        {
+          "name": "בדיקת קוד",
+          "title": "בדיקת שינויים בקוד לאיתור באגים, ברמות יסודיות שונות, עם אפשרות לתקן אוטומטית",
+          "origin": "harness",
+          "trigger": "/code-review [level]",
+          "status": "working",
+          "id": "code-review"
+        },
+        {
+          "name": "פישוט קוד",
+          "title": "ניקוי קוד ששונה: שימוש חוזר, פישוט, יעילות",
+          "origin": "harness",
+          "trigger": "/simplify",
+          "status": "working",
+          "id": "simplify"
+        },
+        {
+          "name": "סקירת אבטחה",
+          "title": "סקירת אבטחה",
+          "origin": "harness",
+          "trigger": "/security-review",
+          "status": "working",
+          "id": "security-review"
+        },
+        {
+          "name": "מצב פתרון מינימלי",
+          "title": "מצב \"המפתח העצלן\": הפתרון המינימלי שעובד, בלי תוספות מיותרות",
+          "origin": "plugin:ponytail",
+          "trigger": "/ponytail lite|full|ultra — פעיל כברירת מחדל",
+          "status": "working",
+          "id": "ponytail"
+        },
+        {
+          "name": "ביקורת סיבוך-יתר",
+          "title": "בדיקת קוד רק לסיבוך מיותר: מה למחוק",
+          "origin": "plugin:ponytail",
+          "trigger": "/ponytail-review",
+          "status": "working",
+          "id": "ponytail-review"
+        },
+        {
+          "name": "סריקת עודפים",
+          "title": "סריקת פרויקט שלם לקוד מיותר ולהחלפות פשוטות יותר",
+          "origin": "plugin:ponytail",
+          "trigger": "/ponytail-audit",
+          "status": "working",
+          "id": "ponytail-audit"
+        },
+        {
+          "name": "רשימת חוב קוד",
+          "title": "איסוף כל ההערות של המצב המינימלי לרשימת חוב",
+          "origin": "plugin:ponytail",
+          "trigger": "/ponytail-debt",
+          "status": "working",
+          "id": "ponytail-debt"
+        },
+        {
+          "name": "הרצת האפליקציה",
+          "title": "הרצת האפליקציה של הפרויקט לראות שינוי עובד / צילום מסך",
+          "origin": "harness",
+          "trigger": "/run",
+          "status": "working",
+          "id": "run"
+        },
+        {
+          "name": "תיעוד פרויקט חדש",
+          "title": "יצירת קובץ הנחיות חדש שמתעד את הפרויקט",
+          "origin": "harness",
+          "trigger": "/init",
+          "status": "working",
+          "notes": "לאף פרויקט בתיקיית הפרויקטים אין קובץ הנחיות.",
+          "id": "init"
+        },
+        {
+          "name": "מדריך Claude למפתחים",
+          "title": "מדריך לבנייה עם Claude: מודלים, מחירים, חיבור כלים, חיסכון בעלויות",
+          "origin": "harness",
+          "trigger": "אוטומטי כשמזכירים Claude/Anthropic בקוד",
+          "status": "working",
+          "id": "claude-api"
+        },
+        {
+          "name": "כתיבת תהליכי עבודה",
+          "title": "כתיבת תהליכי עבודה אוטומטיים מרובי שלבים",
+          "origin": "harness",
+          "trigger": "לפני כתיבת תהליך עבודה אוטומטי",
+          "status": "working",
+          "id": "workflow-authoring"
+        },
+        {
+          "name": "עיצוב גרפים",
+          "title": "עיצוב גרפים/דשבורדים עקבי ונגיש (פלטה, סוגי גרפים)",
+          "origin": "harness",
+          "trigger": "אוטומטי לפני כל גרף/דשבורד",
+          "status": "working",
+          "id": "dataviz"
+        },
+        {
+          "name": "עיצוב דפים",
+          "title": "עקרונות עיצוב לדפים ש-Claude מפרסם",
+          "origin": "harness",
+          "trigger": "אוטומטי לפני בניית דף",
+          "status": "working",
+          "id": "artifact-design"
+        },
+        {
+          "name": "תרשימים בדפים",
+          "title": "תרשימים בתוך הדפים ש-Claude מפרסם",
+          "origin": "harness",
+          "trigger": "כשתרשים יעזור בדף",
+          "status": "working",
+          "id": "artifact-diagramming"
+        },
+        {
+          "name": "יכולות לדפים",
+          "title": "יכולות מתקדמות לדפים: נתונים משותפים, קבצים, זיהוי מי צופה, שאלות ל-Claude",
+          "origin": "harness",
+          "trigger": "לפני הוספת יכולות מתקדמות לדף",
+          "status": "working",
+          "id": "artifact-capabilities"
+        },
+        {
+          "name": "יצירת יכולות חדשות",
+          "title": "יצירה, שיפור ומדידת ביצועים של יכולות",
+          "origin": "bundled",
+          "trigger": "\"תבנה יכולת חדשה\" / \"תשפר את היכולת\"",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\skill-creator\\SKILL.md",
+          "id": "skill-creator"
+        }
       ]
     },
     {
       "id": "data-systems",
-      "title": "מערכת ניהול ודאטה (Airtable/Supabase/Make)",
+      "title": "מערכת ניהול ודאטה (Airtable / מערכת הניהול / Make)",
       "icon": "🗄️",
       "items": [
-        { "name": "Airtable", "title": "מחבר Airtable: בסיסים, טבלאות, רשומות, אוטומציות, ממשקים", "origin": "mcp", "trigger": "כלי mcp Airtable (search_bases → list_tables_for_base → list_records_for_table)", "status": "working" },
-        { "name": "Make", "title": "מחבר Make: תרחישים, hooks, data stores, הרצות, custom apps", "origin": "mcp", "trigger": "כלי mcp Make (scenarios_list, executions_list...)", "status": "working", "notes": "Make מזריק את ההזמנה הגולמית ל-Supabase (שורה אחת + J אחד)." },
-        { "name": "Supabase (management system)", "title": "מערכת הניהול של דיאנה רפאל: orders, jewelry, customers, expenses — דרך REST עם service-role key", "origin": "project", "trigger": "סקריפט Node .mjs / Python requests עם המפתח מ-.ENV.SERVICE_ROLE_KEY.txt", "status": "working", "notes": "אין MCP. PowerShell/curl הורסים עברית — רק Python/Node. User-Agent של דפדפן נחסם.", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\.ENV.SERVICE_ROLE_KEY.txt" },
-        { "name": "complete-order-intake", "title": "השלמת קליטת הזמנה ב-Supabase", "origin": "user", "trigger": "\"split this order\"", "status": "partial", "notes": "ידני עד שבונים מחדש את ה-intake.", "path": "C:\\Users\\USER\\.claude\\skills\\complete-order-intake\\SKILL.md" },
-        { "name": "record-supplier-payment", "title": "כתיבה לטבלת expenses (תזרים)", "origin": "user", "trigger": "\"תכניס לתזרים\"", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\record-supplier-payment\\SKILL.md" },
-        { "name": "asset-studio", "title": "כתיבת פרומפטים לעמודות agent ב-Airtable", "origin": "user", "trigger": "Asset Studio / base ID", "status": "unknown", "path": "C:\\Users\\USER\\.claude\\skills\\asset-studio\\SKILL.md" },
-        { "name": "customizeai", "title": "פרויקט CustomizeAI: widget, api, admin, db (Supabase), night audit, qa", "origin": "project", "trigger": "README.md בפרויקט; widget_events לדוח שימוש יומי", "status": "working", "notes": "אין CLAUDE.md/SKILL.md בפרויקט.", "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\customizeai\\README.md" },
-        { "name": "Google Drive", "title": "קבצים ב-Drive", "origin": "mcp", "trigger": "כלי mcp Google_Drive", "status": "working" }
+        {
+          "name": "Airtable",
+          "title": "מחבר Airtable: בסיסים, טבלאות, רשומות, אוטומציות, ממשקים",
+          "origin": "mcp",
+          "trigger": "החיבור של Claude ל-Airtable",
+          "status": "working"
+        },
+        {
+          "name": "Make",
+          "title": "מחבר Make: תרחישים, הרצות ומאגרי נתונים",
+          "origin": "mcp",
+          "trigger": "החיבור של Claude ל-Make",
+          "status": "working",
+          "notes": "Make מכניס את ההזמנה הגולמית למערכת הניהול (שורה אחת + J אחד)."
+        },
+        {
+          "name": "מערכת הניהול",
+          "title": "מערכת הניהול של דיאנה רפאל: הזמנות, תכשיטים, לקוחות, הוצאות",
+          "origin": "project",
+          "trigger": "Claude ניגש ישירות עם מפתח הגישה השמור",
+          "status": "working",
+          "notes": "אין חיבור ישיר. עברית נשמרת נכון רק בכלים מסוימים — Claude יודע לטפל בזה.",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\.ENV.SERVICE_ROLE_KEY.txt",
+          "id": "Supabase (management system)"
+        },
+        {
+          "name": "קליטת הזמנה",
+          "title": "השלמת קליטת הזמנה במערכת הניהול",
+          "origin": "user",
+          "trigger": "\"split this order\"",
+          "status": "partial",
+          "notes": "ידני עד שבונים מחדש את הקליטה האוטומטית.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\complete-order-intake\\SKILL.md",
+          "id": "complete-order-intake"
+        },
+        {
+          "name": "רישום תשלום לספק",
+          "title": "רישום בתזרים במערכת הניהול",
+          "origin": "user",
+          "trigger": "\"תכניס לתזרים\"",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\record-supplier-payment\\SKILL.md",
+          "id": "record-supplier-payment"
+        },
+        {
+          "name": "סטודיו מודעות",
+          "title": "כתיבת פרומפטים לעמודות שיוצרות מודעות אוטומטית ב-Airtable",
+          "origin": "user",
+          "trigger": "Asset Studio / קישור לבסיס ב-Airtable",
+          "status": "unknown",
+          "path": "C:\\Users\\USER\\.claude\\skills\\asset-studio\\SKILL.md",
+          "id": "asset-studio"
+        },
+        {
+          "name": "customizeai",
+          "title": "פרויקט CustomizeAI: הווידג'ט, השרת, ממשק הניהול, מסד הנתונים, בדיקות לילה ובקרת איכות",
+          "origin": "project",
+          "trigger": "תיעוד הפרויקט; נתוני שימוש לדוח יומי",
+          "status": "working",
+          "notes": "אין לפרויקט קובץ הנחיות.",
+          "path": "C:\\Users\\USER\\Desktop\\CLAUDE CODE PROJECTS\\customizeai\\README.md"
+        },
+        {
+          "name": "Google Drive",
+          "title": "קבצים ב-Drive",
+          "origin": "mcp",
+          "trigger": "החיבור של Claude ל-Google Drive",
+          "status": "working"
+        }
       ]
     },
     {
       "id": "claude-infra",
-      "title": "תשתית Claude (config, memory, skills)",
+      "title": "תשתית Claude (הגדרות, זיכרון, יכולות)",
       "icon": "⚙️",
       "items": [
-        { "name": "task-observer", "title": "'One Skill to Rule Them All': מעקב אחרי ביצוע משימות ולכידת תובנות לסקילים חדשים (skill-observations)", "origin": "user", "trigger": "אוטומטי לפני הכלי הראשון בכל סשן / \"observation log\"", "status": "working", "notes": "Workspace: C:\\Users\\USER\\.claude\\skill-observations\\. 728 שורות core.", "path": "C:\\Users\\USER\\.claude\\skills\\task-observer\\SKILL.md" },
-        { "name": "writing-skills", "title": "כתיבת סקילים בשיטת TDD: baseline ללא סקיל → סקיל → אימות", "origin": "user", "trigger": "יצירה/עריכה של סקיל", "status": "working", "notes": "דורש superpowers:test-driven-development שלא מותקן (רקע בלבד).", "path": "C:\\Users\\USER\\.claude\\skills\\writing-skills\\SKILL.md" },
-        { "name": "skill-creator", "title": "יצירה, שיפור, evals ואופטימיזציית description לסקילים", "origin": "bundled", "trigger": "\"create a skill\"", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\skill-creator\\SKILL.md" },
-        { "name": "update-config", "title": "הגדרת settings.json: hooks, הרשאות, משתני סביבה", "origin": "harness", "trigger": "\"מעכשיו כל פעם ש-X\" / \"allow npm\"", "status": "working" },
-        { "name": "keybindings-help", "title": "קיצורי מקלדת (~/.claude/keybindings.json)", "origin": "harness", "trigger": "\"rebind ctrl+s\"", "status": "working" },
-        { "name": "fewer-permission-prompts", "title": "סריקת היסטוריה והוספת allowlist להפחתת בקשות הרשאה", "origin": "harness", "trigger": "/fewer-permission-prompts", "status": "working" },
-        { "name": "plugin-authoring", "title": "בניית mod ל-Claude Code: פאנלים, status line, פקודות slash, hooks", "origin": "harness", "trigger": "\"make a mod\"", "status": "working" },
-        { "name": "import-memory", "title": "ייבוא זיכרון מעוזר AI אחר לזיכרון של Claude", "origin": "bundled", "trigger": "\"import my memory from ChatGPT\"", "status": "working", "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\import-memory\\SKILL.md" },
-        { "name": "schedule", "title": "סוכני ענן מתוזמנים", "origin": "harness", "trigger": "/schedule", "status": "working" },
-        { "name": "loop", "title": "הרצה חוזרת במרווח", "origin": "harness", "trigger": "/loop", "status": "working" },
-        { "name": "ponytail-help", "title": "כרטיס עזר לכל מצבי ponytail", "origin": "plugin:ponytail", "trigger": "/ponytail-help", "status": "working" },
-        { "name": "ponytail-gain", "title": "לוח תוצאות: כמה ponytail חוסך (קוד, עלות, זמן)", "origin": "plugin:ponytail", "trigger": "/ponytail-gain", "status": "working" },
-        { "name": "init", "title": "יצירת CLAUDE.md לפרויקט", "origin": "harness", "trigger": "/init", "status": "working" },
-        { "name": "dotfiles sync", "title": "סנכרון ~/.claude בין שני המחשבים (git push/pull)", "origin": "project", "trigger": "cd ~/.claude && git add . && git commit -m \"session update\" && git push", "status": "working", "path": "C:\\Users\\USER\\.claude\\CLAUDE.md" }
+        {
+          "name": "מעקב שיפור יכולות",
+          "title": "המשקיף: עוקב אחרי ביצוע משימות ולוכד תובנות ליכולות חדשות",
+          "origin": "user",
+          "trigger": "אוטומטי בתחילת כל סשן / \"observation log\"",
+          "status": "working",
+          "notes": "התובנות נשמרות בתיקייה משותפת לשני המחשבים.",
+          "path": "C:\\Users\\USER\\.claude\\skills\\task-observer\\SKILL.md",
+          "id": "task-observer"
+        },
+        {
+          "name": "כתיבת יכולות",
+          "title": "כתיבת יכולות חדשות בשיטת ניסוי: בדיקה בלי, כתיבה, ואימות",
+          "origin": "user",
+          "trigger": "יצירה/עריכה של יכולת",
+          "status": "working",
+          "notes": "דורש רכיב שלא מותקן (רקע בלבד).",
+          "path": "C:\\Users\\USER\\.claude\\skills\\writing-skills\\SKILL.md",
+          "id": "writing-skills"
+        },
+        {
+          "name": "יצירת יכולות חדשות",
+          "title": "יצירה, שיפור, מדידה ושיפור התיאור של יכולות",
+          "origin": "bundled",
+          "trigger": "\"תבנה יכולת חדשה\"",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\skill-creator\\SKILL.md",
+          "id": "skill-creator"
+        },
+        {
+          "name": "הגדרות Claude",
+          "title": "הגדרות Claude: פעולות אוטומטיות, הרשאות, הגדרות סביבה",
+          "origin": "harness",
+          "trigger": "\"מעכשיו כל פעם ש-X\" / \"תאשר פקודה מסוימת\"",
+          "status": "working",
+          "id": "update-config"
+        },
+        {
+          "name": "קיצורי מקלדת",
+          "title": "התאמת קיצורי מקלדת",
+          "origin": "harness",
+          "trigger": "\"rebind ctrl+s\"",
+          "status": "working",
+          "id": "keybindings-help"
+        },
+        {
+          "name": "פחות בקשות אישור",
+          "title": "סריקת היסטוריה והוספת רשימת פעולות מאושרות כדי להפחית בקשות הרשאה",
+          "origin": "harness",
+          "trigger": "/fewer-permission-prompts",
+          "status": "working",
+          "id": "fewer-permission-prompts"
+        },
+        {
+          "name": "הרחבות ל-Claude",
+          "title": "בניית תוספות ל-Claude Code: פאנלים, שורת סטטוס, פקודות, פעולות אוטומטיות",
+          "origin": "harness",
+          "trigger": "\"make a mod\"",
+          "status": "working",
+          "id": "plugin-authoring"
+        },
+        {
+          "name": "ייבוא זיכרון",
+          "title": "ייבוא זיכרון מעוזר AI אחר לזיכרון של Claude",
+          "origin": "bundled",
+          "trigger": "\"import my memory from ChatGPT\"",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\skills\\synced\\2c45c09b-0692-46fd-b7ec-f52f028ca188_1e42172c-9c43-4a1b-8360-2e0e534b9019\\import-memory\\SKILL.md",
+          "id": "import-memory"
+        },
+        {
+          "name": "schedule",
+          "title": "סוכני ענן מתוזמנים",
+          "origin": "harness",
+          "trigger": "/schedule",
+          "status": "working"
+        },
+        {
+          "name": "loop",
+          "title": "הרצה חוזרת במרווח",
+          "origin": "harness",
+          "trigger": "/loop",
+          "status": "working"
+        },
+        {
+          "name": "עזרה למצב המינימלי",
+          "title": "כרטיס עזר לכל אפשרויות מצב הפתרון המינימלי",
+          "origin": "plugin:ponytail",
+          "trigger": "/ponytail-help",
+          "status": "working",
+          "id": "ponytail-help"
+        },
+        {
+          "name": "חיסכון המצב המינימלי",
+          "title": "לוח תוצאות: כמה המצב המינימלי חוסך (קוד, עלות, זמן)",
+          "origin": "plugin:ponytail",
+          "trigger": "/ponytail-gain",
+          "status": "working",
+          "id": "ponytail-gain"
+        },
+        {
+          "name": "תיעוד פרויקט חדש",
+          "title": "יצירת קובץ הנחיות לפרויקט",
+          "origin": "harness",
+          "trigger": "/init",
+          "status": "working",
+          "id": "init"
+        },
+        {
+          "name": "סנכרון בין המחשבים",
+          "title": "סנכרון ההגדרות והזיכרון של Claude בין שני המחשבים",
+          "origin": "project",
+          "trigger": "cd ~/.claude && git add . && git commit -m \"session update\" && git push",
+          "status": "working",
+          "path": "C:\\Users\\USER\\.claude\\CLAUDE.md",
+          "id": "dotfiles sync"
+        }
       ]
     }
   ]
