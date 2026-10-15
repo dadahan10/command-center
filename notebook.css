@@ -267,3 +267,21 @@ details.sub>summary{cursor:pointer;color:var(--blue);font-size:.9rem;padding:.3r
   .r-shell{transform:none}
   .box,.chip,.btn,.stat,.fcard,nav.seg button{transition:none}
 }
+/* status matrix (per-model render status) */
+.mx-legend{display:flex;flex-wrap:wrap;gap:.35rem .9rem;font-size:.78rem;color:var(--ink-2);margin:.2rem 0 .5rem}
+.mx-legend i{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;margin-inline-end:.3rem;background:var(--c);vertical-align:middle}
+.mx-wrap{overflow-x:auto;margin-bottom:.6rem;scrollbar-width:thin}
+table.mx{border-collapse:separate;border-spacing:3px;width:100%;min-width:420px;font-size:.82rem}
+table.mx thead th{font-weight:600;color:var(--muted);font-size:.76rem;text-align:start;padding:.2rem .4rem}
+table.mx tbody th{text-align:start;font-weight:600;padding:.4rem;white-space:nowrap;color:var(--ink)}
+table.mx td{vertical-align:top;padding:.4rem .5rem;border-radius:6px;background:var(--bg);border-inline-start:3px solid var(--c)}
+table.mx td .mx-s{display:block;font-size:.72rem;color:var(--c);font-weight:600}
+table.mx td b{font-variant-numeric:tabular-nums;margin-inline-end:.3rem}
+table.mx td small{display:block;color:var(--ink-2);font-size:.74rem;line-height:1.35;margin-top:.1rem}
+.mx-live{--c:var(--ok);--bg:var(--ok-soft)}
+.mx-approved{--c:var(--ok);--bg:var(--page-2)}
+.mx-work{--c:var(--warn);--bg:var(--warn-soft)}
+.mx-weak{--c:var(--bad);--bg:var(--bad-soft)}
+.mx-none,.mx-model{--c:var(--muted);--bg:var(--page)}
+.mx-model td,td.mx-model{border-inline-start-style:dashed}
+td.mx-na{color:var(--muted);background:transparent;border:0;text-align:center}

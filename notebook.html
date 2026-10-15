@@ -269,6 +269,24 @@ details.sub>summary{cursor:pointer;color:var(--blue);font-size:.9rem;padding:.3r
   .r-shell{transform:none}
   .box,.chip,.btn,.stat,.fcard,nav.seg button{transition:none}
 }
+/* status matrix (per-model render status) */
+.mx-legend{display:flex;flex-wrap:wrap;gap:.35rem .9rem;font-size:.78rem;color:var(--ink-2);margin:.2rem 0 .5rem}
+.mx-legend i{display:inline-block;width:.6rem;height:.6rem;border-radius:2px;margin-inline-end:.3rem;background:var(--c);vertical-align:middle}
+.mx-wrap{overflow-x:auto;margin-bottom:.6rem;scrollbar-width:thin}
+table.mx{border-collapse:separate;border-spacing:3px;width:100%;min-width:420px;font-size:.82rem}
+table.mx thead th{font-weight:600;color:var(--muted);font-size:.76rem;text-align:start;padding:.2rem .4rem}
+table.mx tbody th{text-align:start;font-weight:600;padding:.4rem;white-space:nowrap;color:var(--ink)}
+table.mx td{vertical-align:top;padding:.4rem .5rem;border-radius:6px;background:var(--bg);border-inline-start:3px solid var(--c)}
+table.mx td .mx-s{display:block;font-size:.72rem;color:var(--c);font-weight:600}
+table.mx td b{font-variant-numeric:tabular-nums;margin-inline-end:.3rem}
+table.mx td small{display:block;color:var(--ink-2);font-size:.74rem;line-height:1.35;margin-top:.1rem}
+.mx-live{--c:var(--ok);--bg:var(--ok-soft)}
+.mx-approved{--c:var(--ok);--bg:var(--page-2)}
+.mx-work{--c:var(--warn);--bg:var(--warn-soft)}
+.mx-weak{--c:var(--bad);--bg:var(--bad-soft)}
+.mx-none,.mx-model{--c:var(--muted);--bg:var(--page)}
+.mx-model td,td.mx-model{border-inline-start-style:dashed}
+td.mx-na{color:var(--muted);background:transparent;border:0;text-align:center}
 </style>
 
 <div class="wrap" id="app">
@@ -569,6 +587,15 @@ function fillPages(){
   const pct=R.list.length>1?R.i/(R.list.length-1):0;$('#r-track i').style.insetInlineStart=(pct*100)+'%';
   wirePage(slots.cur,c);
 }
+const MX={live:'באתר',approved:'מאושר, אין דף',work:'בעבודה',weak:'לא טוב עדיין',none:'אין הדמיה',model:'אין דגם'};
+function matrix(m){
+  if(!m||!m.rows)return '';
+  const cell=x=>x?`<td class="mx-${h(x.s)}"><span class="mx-s">${h(MX[x.s]||x.s)}</span>${x.sku?`<b>${h(x.sku)}</b>`:''}${x.note?`<small>${h(x.note)}</small>`:''}</td>`:'<td class="mx-na">—</td>';
+  const cnt={};m.rows.forEach(r=>r.cells.forEach(x=>{if(x)cnt[x.s]=(cnt[x.s]||0)+1}));
+  const legend=Object.keys(MX).filter(k=>cnt[k]).map(k=>`<span class="mx-${k}"><i></i>${MX[k]} ${cnt[k]}</span>`).join('');
+  return `<h4>${h(m.title||'סטטוס לפי דגם')}</h4><div class="mx-legend">${legend}</div><div class="mx-wrap"><table class="mx"><thead><tr><th></th>${m.cols.map(x=>`<th>${h(x)}</th>`).join('')}</tr></thead>
+    <tbody>${m.rows.map(r=>`<tr><th>${h(r.name)}</th>${r.cells.map(cell).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
 function page(c,ghost){
   const doc=state.chapterDocs[c.id]||{};const checks=doc.tasks||{};const st=eff(c);const p=prog(c);const pre=ghost?'g-':'';
   const tasks=(c.next_tasks||[]).map((t,i)=>{const off=/^משרד:/.test(t);const txt=off?t.replace(/^משרד:\s*/,''):t;
@@ -581,6 +608,7 @@ function page(c,ghost){
     <div class="meta"><span class="gem ${st}" data-m="st">${STATUS[st]||st}</span><span>עודכן ${rel(c)}${c.last_update?` (${h(c.last_update.split('-').reverse().join('.'))})`:''}</span>
       ${p.n?`<span class="bar"><i data-m="bar" style="width:${Math.round(100*p.d/p.n)}%"></i></span><span data-m="pr">${p.d}/${p.n} משימות</span>`:''}</div>
     <h4>איפה אנחנו עומדים</h4><p class="stand">${h(c.where_we_stand)}</p>
+    ${matrix(c.matrix)}
     ${tasks?`<h4>המשימות לפנינו</h4><ul class="tasks">${tasks}</ul>`:''}
     ${changes?`<details class="sub"><summary>שינויים אחרונים (${c.recent_changes.length})</summary><ol class="changes">${changes}</ol></details>`:''}
     ${arts?`<h4>קישורים וקבצים</h4><div class="links">${arts}</div>`:''}
