@@ -36,7 +36,7 @@ for c in chapters:
 SOCIAL = os.path.join(os.path.dirname(ROOT), "diana-rafael-marketing", "social")
 def dmy(s):
     return ".".join(reversed(s.split("-")[1:])) if s and s.count("-") == 2 else (s or "")
-LEDGER_ST = {"published": "פורסם", "made": "מוכן, לא פורסם", "scheduled": "בתור"}
+LEDGER_ST = {"published": "פורסם", "made": "מוכן, לא פורסם", "scheduled": "בתור", "planned": "מתוכנן, ממתין לאישור"}
 for c in chapters:
     if c["id"] != "social-weekly":
         continue

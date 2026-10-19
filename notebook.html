@@ -323,6 +323,7 @@ ul.rules li{margin:.25rem 0;line-height:1.45}
 .sw-row time{font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
 .sw-pf{font-weight:600;color:var(--ink-2);white-space:nowrap}
 .sw-pf.ig{color:#b5487a}.sw-pf.fb{color:#3b5fa8}
+.sw-pfs{display:inline-flex;gap:.35rem;flex-wrap:wrap}.sw-pfs .sw-pf+.sw-pf::before{content:'+';margin-inline-end:.35rem;color:var(--ink-2);font-weight:400}
 .sw-cap{color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;direction:ltr;text-align:left}
 .sw-cap[dir=rtl]{direction:rtl;text-align:right}
 .sw-st{align-self:flex-start;font-size:.66rem;font-weight:600;padding:.05rem .45rem;border-radius:999px;white-space:nowrap}
@@ -680,7 +681,17 @@ function tables(ts){
     ?`<div class="tb-wrap"><table class="tb"><thead><tr>${t.cols.map(x=>`<th>${h(x)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map(x=>`<td>${h(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
     :`<div class="tb-empty">${h(t.empty||'')}</div>`}`).join('');
 }
-const SW_PF={ig_post:['ig','IG · פוסט'],ig_carousel:['ig','IG · קרוסלה'],ig_story:['ig','IG · סטורי'],ig_reel:['ig','IG · ריל'],fb_post:['fb','FB · פוסט'],fb_album:['fb','FB · אלבום'],fb_story:['fb','FB · סטורי']};
+const SW_PF={ig_post:['ig','IG · פוסט'],ig_carousel:['ig','IG · קרוסלה'],ig_story:['ig','IG · סטורי'],ig_reel:['ig','IG · ריל'],fb_post:['fb','FB · פוסט'],fb_album:['fb','FB · אלבום'],fb_story:['fb','FB · סטורי'],fb_reel:['fb','FB · ריל'],fb_video:['fb','FB · וידאו']};
+function swPfs(it){return (it.pfs||[it.platform]).map(p=>{const [c,l]=SW_PF[p]||['',p];return `<span class="sw-pf ${c}">${h(l)}</span>`}).join('')}
+function swCross(items){ // the same post on IG and on the FB Page -> ONE card with both platform labels
+  const out=[],seen={};
+  for(const it of items){const k=it.date+'|'+it.time+'|'+((it.thumbs||[])[0]||'');const net=String(it.platform).slice(0,2);const o=seen[k];
+    if(o&&!o.nets.includes(net)){o.nets.push(net);o.pfs.push(it.platform);if(net==='fb'&&(it.caption||'')!==(o.caption||''))o.fb_caption=it.caption;
+      if(net==='ig'){o.fb_caption=o.fb_caption||(o.caption!==it.caption?o.caption:undefined);o.caption=it.caption;o.platform=it.platform;}
+      o.pfs.sort((a,b)=>a.localeCompare(b)>0?-1:1);continue;}
+    const c={...it,pfs:[it.platform],nets:[net]};seen[k]=c;out.push(c);}
+  return out;
+}
 const SW_ST={'ממתין לאישור':'wait','אושר':'ok','בתור':'queue','פורסם':'done'};
 const SW_DAYS=['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
 let SW_CARDS=[];
@@ -692,12 +703,12 @@ function swCard(it){
   const i=SW_CARDS.push(it)-1;const [cls,lab]=SW_PF[it.platform]||['',it.platform];const n=(it.thumbs||[]).length;const r916=it.format==='9:16';
   const badge=it.group?`${n} סטוריז`:(n>1?`1/${n}`:'');const cap=it.group?it.hook:swFirst(it.caption);
   return `<button class="sw-card" data-sv="${i}" aria-label="${h(lab+' '+it.time)}"><span class="sw-th${r916?' r916':''}"><img src="social/${h(it.thumbs[0])}" alt="" loading="lazy">${badge?`<span class="sw-badge">${badge}</span>`:''}</span>
-    <span class="sw-meta"><span class="sw-row"><time>${h(it.time)}</time><span class="sw-pf ${cls}">${h(lab)}</span></span>
+    <span class="sw-meta"><span class="sw-row"><time>${h(it.time)}</time><span class="sw-pfs">${swPfs(it)}</span></span>
     <span class="sw-cap"${swHeb(cap)?' dir="rtl"':''}>${h(cap)}</span><span class="sw-st st-${SW_ST[it.status]||'wait'}">${h(it.status||'ממתין לאישור')}</span></span></button>`;
 }
 function swGroup(items){ // consecutive stories of the same day+platform+status -> one card
   const out=[];for(const it of items){const last=out[out.length-1];
-    if(/_story$/.test(it.platform)&&last&&last.platform===it.platform&&last.date===it.date&&last.status===it.status){
+    if(/_story$/.test(it.platform)&&last&&/_story$/.test(last.platform)&&(last.pfs||[]).join()===(it.pfs||[]).join()&&last.date===it.date&&last.status===it.status){
       if(!last.group){last.group=[{...last}];}
       last.group.push(it);last.thumbs=last.group.flatMap(x=>x.thumbs);last.images=last.group.flatMap(x=>x.images||[]);
       last.time=last.group[0].time+'–'+it.time;last.hook=last.group[0].hook;last.caption=last.group.map((x,k)=>`${k+1}. ${x.time}  ${x.hook||x.caption||''}`).join('\n');
@@ -707,7 +718,7 @@ function swGroup(items){ // consecutive stories of the same day+platform+status 
 function socialCal(sc){
   if(!sc)return '';SW_CARDS=[];
   const today=new Date();const tk=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate());
-  const weeks=(sc.weeks||[]).map(w=>{const s=swDate(w.week_of);const items=swGroup([...(w.items||[])].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)));
+  const weeks=(sc.weeks||[]).map(w=>{const s=swDate(w.week_of);const items=swGroup(swCross([...(w.items||[])].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time))));
     const days=SW_DAYS.map((nm,k)=>{const d=new Date(s.getTime()+k*864e5);const key=d.toISOString().slice(0,10);const its=items.filter(x=>x.date===key);
       return `<div class="sw-day${its.length?' has':''}${d.getTime()===tk?' today':''}"><div class="sw-dn"><b>${nm}</b><span>${swDM(d)}</span></div>${its.length?its.map(swCard).join(''):'<div class="sw-none">—</div>'}</div>`}).join('');
     const e=new Date(s.getTime()+6*864e5);
@@ -727,9 +738,9 @@ function swViewer(it){
   let k=0;const n=(it.thumbs||[]).length;const [cls,lab]=SW_PF[it.platform]||['',it.platform];
   const dlg=document.createElement('dialog');dlg.className='sv';dlg.setAttribute('dir','rtl');
   dlg.innerHTML=`<div class="sv-in"><div class="sv-img"><img alt=""><button class="sv-nav p" aria-label="הקודם">›</button><button class="sv-nav n" aria-label="הבא">‹</button><div class="sv-dots"></div></div>
-    <div class="sv-body"><div class="sw-row"><span><b>${h(SW_DAYS[swDate(it.date).getUTCDay()])} ${swDM(swDate(it.date))} · ${h(it.time)}</b> · <span class="sw-pf ${cls}">${h(lab)}</span></span><button class="sv-x" aria-label="סגור">✕</button></div>
+    <div class="sv-body"><div class="sw-row"><span><b>${h(SW_DAYS[swDate(it.date).getUTCDay()])} ${swDM(swDate(it.date))} · ${h(it.time)}</b> · <span class="sw-pfs">${swPfs(it)}</span></span><button class="sv-x" aria-label="סגור">✕</button></div>
     <span class="sw-st st-${SW_ST[it.status]||'wait'}">${h(it.status||'')}</span>${it.piece?` <span style="font-size:.8rem;color:var(--ink-2)">${h(it.piece)}</span>`:''}
-    ${it.angle?`<div style="margin-top:.4rem;font-size:.8rem;color:var(--ink-2)">הזווית: ${h(it.angle)}</div>`:''}<pre${swHeb(it.caption||'')?' style="direction:rtl;text-align:right"':''}>${h(it.caption||'')}</pre></div></div>`;
+    ${it.angle?`<div style="margin-top:.4rem;font-size:.8rem;color:var(--ink-2)">הזווית: ${h(it.angle)}</div>`:''}<pre${swHeb(it.caption||'')?' style="direction:rtl;text-align:right"':''}>${h(it.caption||'')}</pre>${it.fb_caption?`<div style="margin-top:.6rem;font-size:.8rem;color:var(--ink-2)">הכיתוב בפייסבוק (שונה מעט):</div><pre>${h(it.fb_caption)}</pre>`:''}</div></div>`;
   document.body.appendChild(dlg);
   const img=dlg.querySelector('.sv-img img'),p=dlg.querySelector('.sv-nav.p'),nx=dlg.querySelector('.sv-nav.n'),dots=dlg.querySelector('.sv-dots');
   const show=()=>{img.src='social/'+it.thumbs[k];p.disabled=k===0;nx.disabled=k>=n-1;p.hidden=nx.hidden=n<2;dots.textContent=n>1?`${k+1}/${n}`:''};

@@ -464,8 +464,8 @@
    "weeks": [
     {
      "week_of": "2026-10-18",
-     "label": "שבוע הפיילוט",
-     "approved": "דניאל אישר 19.10",
+     "label": "שבוע הפיילוט + ספירה לאחור להשקה",
+     "approved": "הפיילוט (20.10) אושר 19.10 · 21–24.10 ממתינים לאישור",
      "items": [
       {
        "id": "pilot-ig-carousel",
@@ -592,6 +592,247 @@
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-04-6c0f63b9.jpg"
        ],
        "status": "בתור"
+      },
+      {
+       "id": "w21-ig-reel",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-21",
+       "time": "16:30",
+       "platform": "ig_reel",
+       "format": "9:16",
+       "piece": "Black Ice: oval in hand, emerald B&W",
+       "hook": "Black diamond. Real diamond?",
+       "angle": "שאלות של זוגות לפני קנייה: יהלום אמיתי, ברק ולא נצנוץ, שקיפות לגבי הטיפול, ביקורת אמיתית, בן אדם עונה",
+       "caption": "Black diamond. Real diamond? Yes, and here's what else couples ask us before they buy.\n\nA black diamond is carbon, like any diamond: a 10 on the hardness scale. It doesn't throw rainbow sparkle. It shines from the surface, with a glossy, mirror-like luster that shows off the cut.\n\nMost black diamonds on the market are natural diamonds with enhanced color. Ours are natural, earth-mined, color enhanced, and every certificate says so. A good seller tells you that up front.\n\nIt's a ring you'll wear every day for the rest of your life, so it deserves straight answers. Cuts, durability, gold color and price are all in our honest buyer's guide. Link in bio.\n\nQuestions? Message us. A real person answers, never an AI.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #engagementring #alternativeengagementring #emeraldcut #ovalengagementring #finejewelry #handmadejewelry #dianarafael",
+       "thumbs": [
+        "2026-10-21-week/wed-21-reel-cover.jpg",
+        "2026-10-21-week/wed-21-reel-f1.jpg",
+        "2026-10-21-week/wed-21-reel-f2.jpg",
+        "2026-10-21-week/wed-21-reel-f3.jpg",
+        "2026-10-21-week/wed-21-reel-f4.jpg",
+        "2026-10-21-week/wed-21-reel-f5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "w21-fb-reel",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-21",
+       "time": "16:30",
+       "platform": "fb_reel",
+       "format": "9:16",
+       "piece": "Black Ice: oval in hand, emerald B&W",
+       "hook": "Black diamond. Real diamond?",
+       "angle": "שאלות של זוגות לפני קנייה: יהלום אמיתי, ברק ולא נצנוץ, שקיפות לגבי הטיפול, ביקורת אמיתית, בן אדם עונה",
+       "caption": "Black diamond. Real diamond? Yes, and here's what else couples ask us before they buy.\n\nA black diamond is carbon, like any diamond: a 10 on the hardness scale. It doesn't throw rainbow sparkle. It shines from the surface, with a glossy, mirror-like luster that shows off the cut.\n\nMost black diamonds on the market are natural diamonds with enhanced color. Ours are natural, earth-mined, color enhanced, and every certificate says so. A good seller tells you that up front.\n\nIt's a ring you'll wear every day for the rest of your life, so it deserves straight answers. Cuts, durability, gold color and price are all in our honest buyer's guide. Read it here: https://dianarafael.com/blogs/news/black-diamond-engagement-rings-guide\n\nQuestions? Message us. A real person answers, never an AI.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #engagementring #alternativeengagementring #emeraldcut #ovalengagementring #finejewelry #handmadejewelry #dianarafael",
+       "thumbs": [
+        "2026-10-21-week/wed-21-reel-cover.jpg",
+        "2026-10-21-week/wed-21-reel-f1.jpg",
+        "2026-10-21-week/wed-21-reel-f2.jpg",
+        "2026-10-21-week/wed-21-reel-f3.jpg",
+        "2026-10-21-week/wed-21-reel-f4.jpg",
+        "2026-10-21-week/wed-21-reel-f5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "w21-ig-story-1",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-21",
+       "time": "17:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ביקורת: Nia",
+       "hook": "Real words, real customers",
+       "angle": "שאלות של זוגות לפני קנייה: יהלום אמיתי, ברק ולא נצנוץ, שקיפות לגבי הטיפול, ביקורת אמיתית, בן אדם עונה",
+       "caption": "סטורי וידאו 6 שניות: ביקורת של Nia ('I get compliments on my ring every single day') + בן אדם עונה, לא AI",
+       "thumbs": [
+        "2026-10-21-week/wed-21-story-1.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "w21-ig-story-2",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-21",
+       "time": "17:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Black Ice emerald B&W",
+       "hook": "Choosing a ring you'll wear for life?",
+       "angle": "שאלות של זוגות לפני קנייה: יהלום אמיתי, ברק ולא נצנוץ, שקיפות לגבי הטיפול, ביקורת אמיתית, בן אדם עונה",
+       "caption": "Choosing a ring you'll wear for life? Ask us anything. A real person answers. Never an AI.",
+       "thumbs": [
+        "2026-10-21-week/wed-21-story-2.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "w21-ig-story-3",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-21",
+       "time": "17:04",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "הפניה לריל",
+       "hook": "New reel: Black diamond. Real diamond?",
+       "angle": "שאלות של זוגות לפני קנייה: יהלום אמיתי, ברק ולא נצנוץ, שקיפות לגבי הטיפול, ביקורת אמיתית, בן אדם עונה",
+       "caption": "New reel → Black diamond. Real diamond?",
+       "thumbs": [
+        "2026-10-21-week/wed-21-story-3.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "t22-ig-reel",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-22",
+       "time": "16:30",
+       "platform": "ig_reel",
+       "format": "9:16",
+       "piece": "Kintsugi, Smoothen, Gravitational Wave, Kintsugi huggies",
+       "hook": "Broken. → Whole. (stripe flip light→dark)",
+       "angle": "דואליות: אף אחד הוא לא רק דבר אחד, שבור ושלם, להחזיק את שניהם",
+       "caption": "Broken and whole. Soft and strong. Lost and found. Hidden and worn.\n\nNobody is only one thing. The hardest year and the brightest one live in the same person, and that isn't a contradiction. That's what whole looks like.\n\nREMNANT is built on that balance. Every piece starts from a break, a crack, a rough edge, and keeps it in plain sight: solid gold, dark natural diamonds, light and dark held together.\n\nREMNANT launches Sunday, October 25. Made to order, by hand.\n\nWhich word is you today? Tell us below.\n\n#REMNANT #duality #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #dianarafael",
+       "thumbs": [
+        "2026-10-21-week/thu-22-reel-cover.jpg",
+        "2026-10-21-week/thu-22-reel-f1.jpg",
+        "2026-10-21-week/thu-22-reel-f2.jpg",
+        "2026-10-21-week/thu-22-reel-f3.jpg",
+        "2026-10-21-week/thu-22-reel-f4.jpg",
+        "2026-10-21-week/thu-22-reel-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "t22-fb-reel",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-22",
+       "time": "16:30",
+       "platform": "fb_reel",
+       "format": "9:16",
+       "piece": "Kintsugi, Smoothen, Gravitational Wave, Kintsugi huggies",
+       "hook": "Broken. → Whole. (stripe flip light→dark)",
+       "angle": "דואליות: אף אחד הוא לא רק דבר אחד, שבור ושלם, להחזיק את שניהם",
+       "caption": "Broken and whole. Soft and strong. Lost and found. Hidden and worn.\n\nNobody is only one thing. The hardest year and the brightest one live in the same person, and that isn't a contradiction. That's what whole looks like.\n\nREMNANT is built on that balance. Every piece starts from a break, a crack, a rough edge, and keeps it in plain sight: solid gold, dark natural diamonds, light and dark held together.\n\nREMNANT launches Sunday, October 25. Made to order, by hand.\nSee the first pieces: https://dianarafael.com/collections/remnant\n\nWhich word is you today? Tell us below.\n\n#REMNANT #duality #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #dianarafael",
+       "thumbs": [
+        "2026-10-21-week/thu-22-reel-cover.jpg",
+        "2026-10-21-week/thu-22-reel-f1.jpg",
+        "2026-10-21-week/thu-22-reel-f2.jpg",
+        "2026-10-21-week/thu-22-reel-f3.jpg",
+        "2026-10-21-week/thu-22-reel-f4.jpg",
+        "2026-10-21-week/thu-22-reel-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "t22-ig-story-1",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-22",
+       "time": "17:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Kintsugi R117",
+       "hook": "3 days.",
+       "angle": "דואליות: אף אחד הוא לא רק דבר אחד, שבור ושלם, להחזיק את שניהם",
+       "caption": "3 days. Every REMNANT piece starts from a break. And ends whole.",
+       "thumbs": [
+        "2026-10-21-week/thu-22-story-1.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "t22-ig-story-2",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-22",
+       "time": "17:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "הפניה לריל",
+       "hook": "New reel: Broken. Whole. Both.",
+       "angle": "דואליות: אף אחד הוא לא רק דבר אחד, שבור ושלם, להחזיק את שניהם",
+       "caption": "New reel → Broken. Whole. Both.",
+       "thumbs": [
+        "2026-10-21-week/thu-22-story-2.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "f23-ig-story-1",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-23",
+       "time": "17:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Kintsugi huggies E049",
+       "hook": "2 days.",
+       "angle": "שברים שקטים שנושאים כל יום",
+       "caption": "סטורי וידאו 6 שניות: 2 days. Not every break is loud. Some you carry quietly, every day.",
+       "thumbs": [
+        "2026-10-21-week/fri-23-story-1.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "s24-ig-story-1",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-24",
+       "time": "18:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT lineup (5 pieces)",
+       "hook": "Tomorrow.",
+       "angle": "ערב ההשקה",
+       "caption": "סטורי וידאו 6 שניות: Tomorrow. מחיקת פסים מבהיר לכהה שחושפת את הקולקציה, REMNANT, Sunday October 25",
+       "thumbs": [
+        "2026-10-21-week/sat-24-story-1.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "s24-ig-story-2",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-24",
+       "time": "18:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Gravitational Wave R112",
+       "hook": "Every piece holds both",
+       "angle": "ערב ההשקה",
+       "caption": "Every piece holds both: the break, and the light that came through it.",
+       "thumbs": [
+        "2026-10-21-week/sat-24-story-2.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "s24-ig-story-3",
+       "batch": "2026-10-21-week",
+       "date": "2026-10-24",
+       "time": "18:04",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ביקורת: Jilandrel",
+       "hook": "Tomorrow: the same hands, the same care.",
+       "angle": "ערב ההשקה",
+       "caption": "ביקורת של Jilandrel ('They worked with me to ease my anxiety…') + בן אדם עונה, לא AI",
+       "thumbs": [
+        "2026-10-21-week/sat-24-story-3.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור"
       }
      ]
     }
@@ -702,7 +943,7 @@
   },
   "tables": [
    {
-    "title": "יומן המסרים (9)",
+    "title": "יומן המסרים (15)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -713,6 +954,54 @@
      "מצב"
     ],
     "rows": [
+     [
+      "24.10",
+      "Instagram stories (EN, x3)",
+      "REMNANT lineup; Gravitational Wave; review (Jilandrel)",
+      "Tomorrow.",
+      "Launch eve: every piece holds both, the break and the light that came through it; same hands, same care",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "23.10",
+      "Instagram story (EN, video)",
+      "Kintsugi huggies",
+      "2 days. Not every break is loud.",
+      "Quiet breaks you carry every day; the seam stays in sight",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "22.10",
+      "Instagram reel + Facebook reel",
+      "Kintsugi, Smoothen, Gravitational Wave, Kintsugi huggies",
+      "Broken. Whole. (light/dark stripe flips) / Hold both.",
+      "Duality: nobody is only one thing; broken and whole, soft and strong, lost and found, hidden and worn",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "22.10",
+      "Instagram stories (EN, x2)",
+      "Kintsugi R117",
+      "3 days.",
+      "Countdown: starts from a break, ends whole",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "21.10",
+      "Instagram reel + Facebook reel",
+      "Black Ice (oval in hand, emerald B&W); buyer's guide",
+      "Black diamond. Real diamond?",
+      "Questions couples ask before buying: real diamond, shine not sparkle, honest about treatment, a real review, a real person answers",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "21.10",
+      "Instagram stories (EN, x3)",
+      "Reviews (Nia) + emerald B&W",
+      "Real words, real customers / Choosing a ring you'll wear for life?",
+      "Social proof + human-only service: ask us anything, a real person answers",
+      "מתוכנן, ממתין לאישור"
+     ],
      [
       "20.10",
       "Instagram carousel + Facebook album",
