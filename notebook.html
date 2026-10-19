@@ -297,6 +297,71 @@ table.tb td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
 .tb-empty{padding:.7rem .8rem;border:1px dashed var(--line,rgba(127,127,127,.35));border-radius:8px;color:var(--ink-2);font-size:.85rem;margin-bottom:.8rem}
 ul.rules{margin:.2rem 0 .8rem;padding-inline-start:1.1rem}
 ul.rules li{margin:.25rem 0;line-height:1.45}
+/* social weekly: visual week calendar + IG grid preview + viewer */
+.pg-in.wide{max-width:none}
+.sw-week{margin:.4rem 0 1.4rem}
+.sw-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .7rem;margin-bottom:.5rem}
+.sw-head b{font-family:var(--serif);font-size:1.05rem}
+.sw-head span{font-size:.8rem;color:var(--ink-2)}
+.sw-cal{display:grid;grid-template-columns:repeat(7,minmax(104px,1fr));gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:.3rem}
+.sw-day{background:var(--page);border:1px solid var(--rule);border-radius:10px;padding:.35rem;min-height:120px;display:flex;flex-direction:column;gap:.4rem}
+.sw-day.has{border-color:var(--line)}
+.sw-day.today{box-shadow:inset 0 0 0 1.5px var(--gold)}
+.sw-dn{display:flex;justify-content:space-between;align-items:baseline;font-size:.74rem;color:var(--muted);padding:0 .15rem}
+.sw-dn b{color:var(--ink);font-weight:600;font-size:.8rem}
+.sw-none{font-size:.72rem;color:var(--muted);text-align:center;margin-top:.6rem}
+.sw-card{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:.25rem;cursor:pointer;border-radius:8px;background:var(--paper);border:1px solid var(--rule);overflow:hidden;transition:transform .15s ease,border-color .15s ease}
+.sw-card:hover{border-color:var(--gold-2)}
+.sw-card:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.sw-card:active{transform:scale(.98)}
+.sw-th{position:relative;background:var(--page-2);display:flex;justify-content:center}
+.sw-th img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.sw-th.r916 img{aspect-ratio:9/16;width:auto;height:170px;max-width:100%}
+.sw-badge{position:absolute;top:5px;inset-inline-start:5px;background:rgba(0,0,0,.62);color:#fff;font-size:.66rem;font-weight:600;padding:.05rem .4rem;border-radius:999px;font-variant-numeric:tabular-nums}
+.sw-meta{padding:.1rem .4rem .45rem;display:flex;flex-direction:column;gap:.2rem;font-size:.72rem;line-height:1.3}
+.sw-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.1rem .3rem;align-items:center}
+.sw-row time{font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.sw-pf{font-weight:600;color:var(--ink-2);white-space:nowrap}
+.sw-pf.ig{color:#b5487a}.sw-pf.fb{color:#3b5fa8}
+.sw-cap{color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;direction:ltr;text-align:left}
+.sw-cap[dir=rtl]{direction:rtl;text-align:right}
+.sw-st{align-self:flex-start;font-size:.66rem;font-weight:600;padding:.05rem .45rem;border-radius:999px;white-space:nowrap}
+.st-wait{background:var(--warn-soft);color:var(--warn)}.st-ok{background:var(--ok-soft);color:var(--ok)}
+.st-queue{background:var(--blue-soft);color:var(--blue)}.st-done{background:var(--page-2);color:var(--muted)}
+.sw-next{padding:.7rem .8rem;border:1px dashed var(--line);border-radius:8px;color:var(--ink-2);font-size:.85rem;margin-bottom:1rem}
+.sw-grid-wrap{display:flex;flex-wrap:wrap;gap:1rem 1.4rem;align-items:flex-start;margin-bottom:1rem}
+.sw-phone{width:100%;max-width:330px;border:1px solid var(--line);border-radius:22px;padding:.7rem .5rem .8rem;background:var(--page)}
+.sw-phone .hd{display:flex;align-items:center;gap:.5rem;padding:0 .3rem .55rem;font-size:.8rem;font-weight:600;direction:ltr}
+.sw-phone .hd i{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#3b3530);flex:none}
+.sw-ig{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;direction:ltr}
+.sw-ig a,.sw-ig button{all:unset;cursor:pointer;position:relative;display:block;aspect-ratio:3/4;background:var(--page-2);overflow:hidden}
+.sw-ig img{width:100%;height:100%;object-fit:cover;display:block}
+.sw-ig .plan{outline:2px dashed var(--gold);outline-offset:-2px}
+.sw-ig .plan span{position:absolute;bottom:3px;left:3px;right:3px;background:rgba(0,0,0,.62);color:#fff;font-size:.6rem;text-align:center;border-radius:4px;padding:.05rem 0;direction:rtl}
+.sw-ig .ph{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.65rem}
+.sw-legend{font-size:.8rem;color:var(--ink-2);max-width:300px;line-height:1.5}
+.sw-legend i{display:inline-block;width:.8rem;height:.8rem;outline:2px dashed var(--gold);outline-offset:-2px;vertical-align:middle;margin-inline-end:.3rem}
+dialog.sv{border:0;padding:0;background:transparent;max-width:min(94vw,560px);width:100%;color:var(--ink)}
+dialog.sv::backdrop{background:rgba(20,17,14,.78)}
+.sv-in{background:var(--page);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;max-height:92vh}
+.sv-img{position:relative;background:#111;display:flex;justify-content:center;align-items:center}
+.sv-img img{display:block;max-width:100%;max-height:62vh;object-fit:contain}
+.sv-nav{position:absolute;top:50%;transform:translateY(-50%);border:0;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.85);color:#222;font-size:1.2rem;cursor:pointer}
+.sv-nav.p{right:8px}.sv-nav.n{left:8px}
+.sv-nav[disabled]{opacity:.25;cursor:default}
+.sv-dots{position:absolute;bottom:8px;left:0;right:0;text-align:center;color:#fff;font-size:.75rem;font-variant-numeric:tabular-nums}
+.sv-body{padding:.8rem 1rem 1rem;overflow:auto;font-size:.85rem}
+.sv-body .sw-row{margin-bottom:.4rem}
+.sv-body pre{white-space:pre-wrap;font:inherit;margin:.4rem 0 0;direction:ltr;text-align:left;color:var(--ink-2)}
+.sv-x{border:0;background:transparent;font-size:1.3rem;cursor:pointer;color:var(--ink-2);padding:0 .2rem}
+@media (max-width:640px){
+  .sw-cal{grid-template-columns:1fr;overflow:visible}
+  .sw-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:flex-start}
+  .sw-day:not(.has){display:none}
+  .sw-dn{flex-direction:column;justify-content:flex-start;width:3.2rem;flex:none}
+  .sw-card{width:calc(50% - 2rem);min-width:120px}
+  .sw-phone{max-width:none}
+}
 </style>
 
 <div class="wrap" id="app">
@@ -615,19 +680,80 @@ function tables(ts){
     ?`<div class="tb-wrap"><table class="tb"><thead><tr>${t.cols.map(x=>`<th>${h(x)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map(x=>`<td>${h(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
     :`<div class="tb-empty">${h(t.empty||'')}</div>`}`).join('');
 }
+const SW_PF={ig_post:['ig','IG · פוסט'],ig_carousel:['ig','IG · קרוסלה'],ig_story:['ig','IG · סטורי'],ig_reel:['ig','IG · ריל'],fb_post:['fb','FB · פוסט'],fb_album:['fb','FB · אלבום'],fb_story:['fb','FB · סטורי']};
+const SW_ST={'ממתין לאישור':'wait','אושר':'ok','בתור':'queue','פורסם':'done'};
+const SW_DAYS=['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
+let SW_CARDS=[];
+function swDate(s){const [y,m,d]=s.split('-').map(Number);return new Date(Date.UTC(y,m-1,d))}
+function swDM(d){return d.getUTCDate()+'.'+(d.getUTCMonth()+1)}
+function swFirst(t){return String(t||'').split('\n').find(x=>x.trim())||''}
+function swHeb(t){return /[֐-׿]/.test(t)}
+function swCard(it){
+  const i=SW_CARDS.push(it)-1;const [cls,lab]=SW_PF[it.platform]||['',it.platform];const n=(it.thumbs||[]).length;const r916=it.format==='9:16';
+  const badge=it.group?`${n} סטוריז`:(n>1?`1/${n}`:'');const cap=it.group?it.hook:swFirst(it.caption);
+  return `<button class="sw-card" data-sv="${i}" aria-label="${h(lab+' '+it.time)}"><span class="sw-th${r916?' r916':''}"><img src="social/${h(it.thumbs[0])}" alt="" loading="lazy">${badge?`<span class="sw-badge">${badge}</span>`:''}</span>
+    <span class="sw-meta"><span class="sw-row"><time>${h(it.time)}</time><span class="sw-pf ${cls}">${h(lab)}</span></span>
+    <span class="sw-cap"${swHeb(cap)?' dir="rtl"':''}>${h(cap)}</span><span class="sw-st st-${SW_ST[it.status]||'wait'}">${h(it.status||'ממתין לאישור')}</span></span></button>`;
+}
+function swGroup(items){ // consecutive stories of the same day+platform+status -> one card
+  const out=[];for(const it of items){const last=out[out.length-1];
+    if(/_story$/.test(it.platform)&&last&&last.platform===it.platform&&last.date===it.date&&last.status===it.status){
+      if(!last.group){last.group=[{...last}];}
+      last.group.push(it);last.thumbs=last.group.flatMap(x=>x.thumbs);last.images=last.group.flatMap(x=>x.images||[]);
+      last.time=last.group[0].time+'–'+it.time;last.hook=last.group[0].hook;last.caption=last.group.map((x,k)=>`${k+1}. ${x.time}  ${x.hook||x.caption||''}`).join('\n');
+    } else out.push({...it});}
+  return out;
+}
+function socialCal(sc){
+  if(!sc)return '';SW_CARDS=[];
+  const today=new Date();const tk=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate());
+  const weeks=(sc.weeks||[]).map(w=>{const s=swDate(w.week_of);const items=swGroup([...(w.items||[])].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)));
+    const days=SW_DAYS.map((nm,k)=>{const d=new Date(s.getTime()+k*864e5);const key=d.toISOString().slice(0,10);const its=items.filter(x=>x.date===key);
+      return `<div class="sw-day${its.length?' has':''}${d.getTime()===tk?' today':''}"><div class="sw-dn"><b>${nm}</b><span>${swDM(d)}</span></div>${its.length?its.map(swCard).join(''):'<div class="sw-none">—</div>'}</div>`}).join('');
+    const e=new Date(s.getTime()+6*864e5);
+    return `<section class="sw-week"><div class="sw-head"><b>${swDM(s)}–${swDM(e)}</b>${w.label?`<span>${h(w.label)}</span>`:''}${w.approved?`<span>· ${h(w.approved)}</span>`:''}</div><div class="sw-cal">${days}</div></section>`}).join('');
+  // IG grid: planned feed posts (not yet published) on top of the latest real posts
+  const planned=[];(sc.weeks||[]).forEach(w=>(w.items||[]).forEach(it=>{if(/^ig_(post|carousel|reel)$/.test(it.platform)&&it.status!=='פורסם')planned.push(it)}));
+  planned.sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
+  const pl=planned.map(it=>{const i=SW_CARDS.push(it)-1;return `<button class="plan" data-sv="${i}" aria-label="פוסט מתוכנן ${h(it.date)}"><img src="social/${h(it.thumbs[0])}" alt="" loading="lazy"><span>מתוכנן ${swDM(swDate(it.date))}</span></button>`}).join('');
+  const ig=(sc.ig&&sc.ig.items)||[];
+  const real=ig.length?ig.slice(0,Math.max(0,12-planned.length)).map(m=>`<a href="${h(m.permalink)}" target="_blank" rel="noopener" title="${h(m.date)}"><img src="social/${h(m.thumb)}" alt="" loading="lazy"></a>`).join('')
+    :Array.from({length:9}).map(()=>'<div class="ph">פוסט קיים</div>').join('');
+  return `<h4>לוח השבוע</h4>${weeks}${sc.next?`<div class="sw-next">${h(sc.next)}</div>`:''}
+    <h4>ככה הפרופיל באינסטגרם ייראה</h4><div class="sw-grid-wrap"><div class="sw-phone"><div class="hd"><i></i>dianarafaeljewelry</div><div class="sw-ig">${pl}${real}</div></div>
+    <p class="sw-legend"><i></i>מסגרת זהב = פוסט מתוכנן שעוד לא עלה. השאר הם הפוסטים האחרונים שכבר באינסטגרם${sc.ig&&sc.ig.fetched?` (נכון ל-${h(sc.ig.fetched.split('-').reverse().join('.'))})`:''}. סטוריז לא מופיעים ברשת.</p></div>`;
+}
+function swViewer(it){
+  let k=0;const n=(it.thumbs||[]).length;const [cls,lab]=SW_PF[it.platform]||['',it.platform];
+  const dlg=document.createElement('dialog');dlg.className='sv';dlg.setAttribute('dir','rtl');
+  dlg.innerHTML=`<div class="sv-in"><div class="sv-img"><img alt=""><button class="sv-nav p" aria-label="הקודם">›</button><button class="sv-nav n" aria-label="הבא">‹</button><div class="sv-dots"></div></div>
+    <div class="sv-body"><div class="sw-row"><span><b>${h(SW_DAYS[swDate(it.date).getUTCDay()])} ${swDM(swDate(it.date))} · ${h(it.time)}</b> · <span class="sw-pf ${cls}">${h(lab)}</span></span><button class="sv-x" aria-label="סגור">✕</button></div>
+    <span class="sw-st st-${SW_ST[it.status]||'wait'}">${h(it.status||'')}</span>${it.piece?` <span style="font-size:.8rem;color:var(--ink-2)">${h(it.piece)}</span>`:''}
+    ${it.angle?`<div style="margin-top:.4rem;font-size:.8rem;color:var(--ink-2)">הזווית: ${h(it.angle)}</div>`:''}<pre${swHeb(it.caption||'')?' style="direction:rtl;text-align:right"':''}>${h(it.caption||'')}</pre></div></div>`;
+  document.body.appendChild(dlg);
+  const img=dlg.querySelector('.sv-img img'),p=dlg.querySelector('.sv-nav.p'),nx=dlg.querySelector('.sv-nav.n'),dots=dlg.querySelector('.sv-dots');
+  const show=()=>{img.src='social/'+it.thumbs[k];p.disabled=k===0;nx.disabled=k>=n-1;p.hidden=nx.hidden=n<2;dots.textContent=n>1?`${k+1}/${n}`:''};
+  p.onclick=()=>{if(k>0){k--;show()}};nx.onclick=()=>{if(k<n-1){k++;show()}};
+  dlg.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){nx.onclick();e.stopPropagation()}else if(e.key==='ArrowRight'){p.onclick();e.stopPropagation()}});
+  let x0=null;img.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+  img.addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)(dx<0?p:nx).onclick();x0=null});
+  dlg.querySelector('.sv-x').onclick=()=>dlg.close();dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+  dlg.addEventListener('close',()=>dlg.remove());show();dlg.showModal();
+}
 function page(c,ghost){
   const doc=state.chapterDocs[c.id]||{};const checks=doc.tasks||{};const st=eff(c);const p=prog(c);const pre=ghost?'g-':'';
   const tasks=(c.next_tasks||[]).map((t,i)=>{const off=/^משרד:/.test(t);const txt=off?t.replace(/^משרד:\s*/,''):t;
     return `<li class="${checks[i]?'off':''}"><input type="checkbox" id="${pre}t-${h(c.id)}-${i}" data-i="${i}" ${checks[i]?'checked':''} ${state.db&&!ghost?'':'disabled'}><label for="${pre}t-${h(c.id)}-${i}">${off?'<span class="tag office">משרד</span>':''}${h(txt)}</label></li>`}).join('');
   const arts=(c.artifacts||[]).map(a=>a.url&&/^https?:/.test(a.url)?`<a href="${h(a.url)}" target="_blank" rel="noopener">${h(a.label||a.url)}</a>`:`<span class="f">${h(a.label||'')}</span>`).join('');
   const changes=(c.recent_changes||[]).map(x=>`<li>${h(x).replace(/^(\d{1,2}\.\d{1,2}(\.\d{2,4})?|\d{4}-\d{2}-\d{2})/,'<b>$1</b>')}</li>`).join('');
-  return `<div class="pg-in" style="${gstyle(c.group)}">
+  return `<div class="pg-in${c.social?' wide':''}" style="${gstyle(c.group)}">
     <div class="eyebrow"><span class="grp">◆ ${h(GROUPS[c.group]||c.group)}</span>${c.kind==='personal'?'<span class="tag personal">אישי</span>':''}${c.office_only?'<span class="tag office">משרד</span>':''}</div>
     <h2 ${ghost?'':'id="pg-title"'}>${h(c.title)}</h2>
     <div class="meta"><span class="gem ${st}" data-m="st">${STATUS[st]||st}</span><span>עודכן ${rel(c)}${c.last_update?` (${h(c.last_update.split('-').reverse().join('.'))})`:''}</span>
       ${p.n?`<span class="bar"><i data-m="bar" style="width:${Math.round(100*p.d/p.n)}%"></i></span><span data-m="pr">${p.d}/${p.n} משימות</span>`:''}</div>
     <h4>איפה אנחנו עומדים</h4><p class="stand">${h(c.where_we_stand)}</p>
     ${matrix(c.matrix)}
+    ${socialCal(c.social)}
     ${rules(c.rules)}
     ${tables(c.tables)}
     ${tasks?`<h4>המשימות לפנינו</h4><ul class="tasks">${tasks}</ul>`:''}
@@ -643,6 +769,7 @@ function page(c,ghost){
 }
 function wirePage(el,c){
   if(!c)return;
+  el.querySelectorAll('[data-sv]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();const it=SW_CARDS[+b.dataset.sv];it&&swViewer(it)}));
   el.querySelectorAll('.tasks input').forEach(i=>i.addEventListener('change',async()=>{
     const cur=state.chapterDocs[c.id]||{};const tasks={...(cur.tasks||{})};tasks[i.dataset.i]=i.checked;i.closest('li').classList.toggle('off',i.checked);
     state.chapterDocs[c.id]={...cur,tasks};refreshReaderMeta();await setChapter(c.id,{tasks})}));

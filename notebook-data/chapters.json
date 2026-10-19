@@ -433,7 +433,7 @@
   "kind": "business",
   "status": "active",
   "last_update": "2026-10-19",
-  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את התוכנית לשבוע הבא לאישורך. היא כוללת סטוריז באינסטגרם באנגלית, ועוד 2–3 פוסטים בעברית לפייסבוק, ל-X וללינקדאין: קודם פוסט אחד על קולקציית REMNANT, ואחריו פוסט לכל עיצוב, כל 2–3 ימים. שום דבר לא נכנס לתור לפני שאישרת. כל מה שיוצא נרשם ביומן המסרים כדי שלא נחזור על אותו מסר. התוכנית הראשונה תוצג ביום רביעי 22.10.",
+  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. הלוח כולל סטוריז באינסטגרם באנגלית, ועוד 2–3 פוסטים בעברית לפייסבוק, ל-X וללינקדאין: קודם פוסט על קולקציית REMNANT, ואחריו פוסט לכל עיצוב, כל 2–3 ימים. שום דבר לא נכנס לתור לפני שאישרת. הפיילוט אושר ב-19.10 והוא בתור: קרוסלה באינסטגרם ואלבום בפייסבוק ביום שלישי 20.10 ב-16:30, ו-4 סטוריז בין 17:00 ל-17:06. לחיצה על כרטיס פותחת את כל השקפים ואת הכיתוב המלא.",
   "rules": {
    "title": "כללי התוכן",
    "items": [
@@ -443,12 +443,13 @@
    ]
   },
   "next_tasks": [
-   "רביעי 22.10: להציג כאן את תוכנית השבוע 25–31.10 (סטוריז באנגלית + 2–3 פוסטים בעברית) לאישור",
-   "אחרי האישור: להכניס לתור רק את מה שאושר, ולעדכן סטטוס ל'בתור'",
-   "אחרי כל פרסום: לרשום ביומן המסרים ולסמן 'פורסם'",
-   "שש סרטוני ה-hook מוכנים ולא פורסמו. לשבץ אותם בתוכנית הראשונה"
+   "רביעי 22.10: להציג כאן את לוח השבוע 25–31.10 לאישור",
+   "אחרי האישור: להכניס לתור רק את מה שאושר ולסמן 'בתור'",
+   "אחרי כל פרסום: לסמן 'פורסם', לרשום ביומן המסרים ולרענן את תמונות הפרופיל",
+   "שישה סרטוני ה-hook מוכנים ולא פורסמו. לשבץ אותם בלוח הבא"
   ],
   "recent_changes": [
+   "19.10 ערב — לוח שבוע ויזואלי עם התמונות עצמן, תצוגה מקדימה של הפרופיל באינסטגרם, ופיילוט 20.10 בתור",
    "19.10 — הפרק נפתח: שגרת רביעי, תוכנית שבועית לאישור, יומן מסרים עם הטיזר מ-18.10 ושישה סרטוני hook"
   ],
   "artifacts": [],
@@ -459,22 +460,248 @@
    "Dropbox/שיווק Marketing/REMNANT/Social Hooks/SUMMARY-he.md",
    "feedback_remnant_marketing_content.md"
   ],
+  "social": {
+   "weeks": [
+    {
+     "week_of": "2026-10-18",
+     "label": "שבוע הפיילוט",
+     "approved": "דניאל אישר 19.10",
+     "items": [
+      {
+       "id": "pilot-ig-carousel",
+       "batch": "2026-10-19-pilot",
+       "date": "2026-10-20",
+       "time": "16:30",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "Kintsugi R117 + Smoothen + Gravitational Wave",
+       "hook": "You survived it. Now wear it.",
+       "angle": "התכשיט כהוכחה שעברת את זה",
+       "caption": "You survived it. Now you can wear it.\n\nEveryone carries a year like that. A loss, a diagnosis, a goodbye, a night that didn't seem to end. It leaves a mark, and most of us spend a long time hiding it.\n\nREMNANT is built on the opposite idea. In kintsugi, a broken bowl isn't thrown away or patched to look new. The break is mended in gold and left in plain sight, because that's where the story lives.\n\nEvery REMNANT piece starts from a break: a crack, a rough edge, a collapse. And every one ends whole. Not perfect. Whole.\n\nNot a reminder of what hurt. Proof that you came through.\n\nREMNANT launches October 25. Solid gold, dark natural diamonds, made to order by hand.\n\nWhat did you come through this year? One word in the comments is enough. We read every one.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
+       "thumbs": [
+        "2026-10-19-pilot/post-01.jpg",
+        "2026-10-19-pilot/post-02.jpg",
+        "2026-10-19-pilot/post-03.jpg",
+        "2026-10-19-pilot/post-04.jpg"
+       ],
+       "images": [
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-01-ce90660e.jpg",
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-02-bc6873d7.jpg",
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-03-902f69a4.jpg",
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-04-4ba342fa.jpg"
+       ],
+       "status": "בתור"
+      },
+      {
+       "id": "pilot-fb-album",
+       "batch": "2026-10-19-pilot",
+       "date": "2026-10-20",
+       "time": "16:30",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "Kintsugi R117 + Smoothen + Gravitational Wave",
+       "hook": "You survived it. Now wear it.",
+       "angle": "התכשיט כהוכחה שעברת את זה",
+       "caption": "You survived it. Now you can wear it.\n\nEveryone carries a year like that. A loss, a diagnosis, a goodbye, a night that didn't seem to end. It leaves a mark, and most of us spend a long time hiding it.\n\nREMNANT, our new collection, is built on the opposite idea. In kintsugi, a broken bowl isn't thrown away or patched to look new. The break is mended in gold and left in plain sight, because that's where the story lives. Every REMNANT piece starts from a break and ends whole. Not perfect. Whole.\n\nNot a reminder of what hurt. Proof that you came through.\n\nREMNANT launches October 25. Solid gold, dark natural diamonds, made to order by hand.\nSee the first pieces: https://dianarafael.com/collections/remnant\n\nWhat did you come through this year? Tell us in the comments, or just keep it, and know you're not alone in it.\n\n#REMNANT #kintsugi #blackdiamond #finejewelry",
+       "thumbs": [
+        "2026-10-19-pilot/post-01.jpg",
+        "2026-10-19-pilot/post-02.jpg",
+        "2026-10-19-pilot/post-03.jpg",
+        "2026-10-19-pilot/post-04.jpg"
+       ],
+       "images": [
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-01-ce90660e.jpg",
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-02-bc6873d7.jpg",
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-03-902f69a4.jpg",
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-04-4ba342fa.jpg"
+       ],
+       "status": "בתור"
+      },
+      {
+       "id": "pilot-ig-story-01",
+       "batch": "2026-10-19-pilot",
+       "date": "2026-10-20",
+       "time": "17:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT",
+       "hook": "What did you come through this year?",
+       "angle": "התכשיט כהוכחה שעברת את זה",
+       "caption": "What did you come through this year?",
+       "thumbs": [
+        "2026-10-19-pilot/story-01.jpg"
+       ],
+       "images": [
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-01-a4ed0ccf.jpg"
+       ],
+       "status": "בתור"
+      },
+      {
+       "id": "pilot-ig-story-02",
+       "batch": "2026-10-19-pilot",
+       "date": "2026-10-20",
+       "time": "17:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT",
+       "hook": "Most of us hide the mark it left.",
+       "angle": "התכשיט כהוכחה שעברת את זה",
+       "caption": "Most of us hide the mark it left.",
+       "thumbs": [
+        "2026-10-19-pilot/story-02.jpg"
+       ],
+       "images": [
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-02-66e9ff38.jpg"
+       ],
+       "status": "בתור"
+      },
+      {
+       "id": "pilot-ig-story-03",
+       "batch": "2026-10-19-pilot",
+       "date": "2026-10-20",
+       "time": "17:04",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Kintsugi R117",
+       "hook": "Kintsugi — the break stays. That's the point.",
+       "angle": "התכשיט כהוכחה שעברת את זה",
+       "caption": "Kintsugi — the break stays. That's the point.",
+       "thumbs": [
+        "2026-10-19-pilot/story-03.jpg"
+       ],
+       "images": [
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-03-eb5aeebe.jpg"
+       ],
+       "status": "בתור"
+      },
+      {
+       "id": "pilot-ig-story-04",
+       "batch": "2026-10-19-pilot",
+       "date": "2026-10-20",
+       "time": "17:06",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Kintsugi R117",
+       "hook": "Wear what you survived. (points to the new post)",
+       "angle": "התכשיט כהוכחה שעברת את זה",
+       "caption": "Wear what you survived. (points to the new post)",
+       "thumbs": [
+        "2026-10-19-pilot/story-04.jpg"
+       ],
+       "images": [
+        "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-04-6c0f63b9.jpg"
+       ],
+       "status": "בתור"
+      }
+     ]
+    }
+   ],
+   "next": "השבוע הבא (25–31.10) יוצג ביום רביעי 22.10",
+   "ig": {
+    "fetched": "2026-10-19",
+    "items": [
+     {
+      "id": "18129281782542621",
+      "type": "CAROUSEL_ALBUM",
+      "date": "2026-03-02",
+      "permalink": "https://www.instagram.com/p/DVYFXdYk_pX/",
+      "thumb": "ig/18129281782542621.jpg",
+      "caption": "Whiteflash "
+     },
+     {
+      "id": "18125461237530628",
+      "type": "CAROUSEL_ALBUM",
+      "date": "2026-01-20",
+      "permalink": "https://www.instagram.com/p/DTuudinl0z-/",
+      "thumb": "ig/18125461237530628.jpg",
+      "caption": "'Lunar Cascade'"
+     },
+     {
+      "id": "18076894622039302",
+      "type": "CAROUSEL_ALBUM",
+      "date": "2026-01-19",
+      "permalink": "https://www.instagram.com/p/DTsJqIWCalR/",
+      "thumb": "ig/18076894622039302.jpg",
+      "caption": "Voidfire Star"
+     },
+     {
+      "id": "18086905742113663",
+      "type": "CAROUSEL_ALBUM",
+      "date": "2026-01-18",
+      "permalink": "https://www.instagram.com/p/DTpaalNjFD6/",
+      "thumb": "ig/18086905742113663.jpg",
+      "caption": "'Portal' "
+     },
+     {
+      "id": "18086339918166996",
+      "type": "VIDEO",
+      "date": "2026-01-16",
+      "permalink": "https://www.instagram.com/reel/DTkNnCPCfBm/",
+      "thumb": "ig/18086339918166996.jpg",
+      "caption": "'Sigiza' "
+     },
+     {
+      "id": "18078806702018065",
+      "type": "CAROUSEL_ALBUM",
+      "date": "2026-01-15",
+      "permalink": "https://www.instagram.com/p/DTiLHCIjVRt/",
+      "thumb": "ig/18078806702018065.jpg",
+      "caption": "\"Mystery Soire'e\" Ready to ship 25% off "
+     },
+     {
+      "id": "18038000543725369",
+      "type": "VIDEO",
+      "date": "2026-01-14",
+      "permalink": "https://www.instagram.com/reel/DTfmY9DlaCm/",
+      "thumb": "ig/18038000543725369.jpg",
+      "caption": "'Dim Light' Accent Diamonds Natural Cushion Cut Diamond Engagement Ring- Ready To Ship 25% off!"
+     },
+     {
+      "id": "18135112306494503",
+      "type": "VIDEO",
+      "date": "2026-01-13",
+      "permalink": "https://www.instagram.com/reel/DTdBrZCldeI/",
+      "thumb": "ig/18135112306494503.jpg",
+      "caption": "'Pera Scura' Ready To Ship- 25% 0FF!"
+     },
+     {
+      "id": "17853883830562933",
+      "type": "VIDEO",
+      "date": "2026-01-06",
+      "permalink": "https://www.instagram.com/reel/DTLDTr-ERVm/",
+      "thumb": "ig/17853883830562933.jpg",
+      "caption": "\"SIGIZA\" This classic white diamond engagement ring features 3.91 carats of beautiful & sparkly natural, earth-mined dia"
+     },
+     {
+      "id": "18010285280811934",
+      "type": "CAROUSEL_ALBUM",
+      "date": "2025-12-21",
+      "permalink": "https://www.instagram.com/p/DShgvS3jEuP/",
+      "thumb": "ig/18010285280811934.jpg",
+      "caption": "CONE\r"
+     },
+     {
+      "id": "17958501047882470",
+      "type": "IMAGE",
+      "date": "2025-12-02",
+      "permalink": "https://www.instagram.com/p/DRwli_gDwM3/",
+      "thumb": "ig/17958501047882470.jpg",
+      "caption": "Holiday sale- 25% off all items! ⁠"
+     },
+     {
+      "id": "18080146901174653",
+      "type": "IMAGE",
+      "date": "2025-11-27",
+      "permalink": "https://www.instagram.com/p/DRjkb4jk9NE/",
+      "thumb": "ig/18080146901174653.jpg",
+      "caption": "Blackout⁠"
+     }
+    ]
+   }
+  },
   "tables": [
    {
-    "title": "השבוע הבא",
-    "cols": [
-     "מתי",
-     "פלטפורמה",
-     "תכשיט",
-     "Hook / מסר",
-     "כיתוב",
-     "סטטוס"
-    ],
-    "rows": [],
-    "empty": "יוצג ביום רביעי 22.10"
-   },
-   {
-    "title": "יומן המסרים (7)",
+    "title": "יומן המסרים (10)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -485,6 +712,30 @@
      "מצב"
     ],
     "rows": [
+     [
+      "20.10",
+      "Instagram carousel + Facebook album",
+      "Kintsugi R117, Smoothen, Gravitational Wave band",
+      "You survived it. Now wear it.",
+      "The piece as proof you came through, worn for yourself (loss, diagnosis, goodbye)",
+      "בתור"
+     ],
+     [
+      "20.10",
+      "Instagram stories (EN, x4)",
+      "Kintsugi R117",
+      "What did you come through this year?",
+      "Hiding the mark vs. wearing it; the break stays, that's the point; wear what you survived",
+      "בתור"
+     ],
+     [
+      "20.10",
+      "Instagram carousel + 4 stories / FB Page album",
+      "REMNANT Kintsugi R117 (+ Smoothen, GW band)",
+      "You survived it. Now you can wear it.",
+      "Wear what you survived: proof you came through (identification, the reader's own year)",
+      "planned"
+     ],
      [
       "18.10",
       "Email (Klaviyo)",

@@ -295,3 +295,68 @@ table.tb td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
 .tb-empty{padding:.7rem .8rem;border:1px dashed var(--line,rgba(127,127,127,.35));border-radius:8px;color:var(--ink-2);font-size:.85rem;margin-bottom:.8rem}
 ul.rules{margin:.2rem 0 .8rem;padding-inline-start:1.1rem}
 ul.rules li{margin:.25rem 0;line-height:1.45}
+/* social weekly: visual week calendar + IG grid preview + viewer */
+.pg-in.wide{max-width:none}
+.sw-week{margin:.4rem 0 1.4rem}
+.sw-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .7rem;margin-bottom:.5rem}
+.sw-head b{font-family:var(--serif);font-size:1.05rem}
+.sw-head span{font-size:.8rem;color:var(--ink-2)}
+.sw-cal{display:grid;grid-template-columns:repeat(7,minmax(104px,1fr));gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:.3rem}
+.sw-day{background:var(--page);border:1px solid var(--rule);border-radius:10px;padding:.35rem;min-height:120px;display:flex;flex-direction:column;gap:.4rem}
+.sw-day.has{border-color:var(--line)}
+.sw-day.today{box-shadow:inset 0 0 0 1.5px var(--gold)}
+.sw-dn{display:flex;justify-content:space-between;align-items:baseline;font-size:.74rem;color:var(--muted);padding:0 .15rem}
+.sw-dn b{color:var(--ink);font-weight:600;font-size:.8rem}
+.sw-none{font-size:.72rem;color:var(--muted);text-align:center;margin-top:.6rem}
+.sw-card{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:.25rem;cursor:pointer;border-radius:8px;background:var(--paper);border:1px solid var(--rule);overflow:hidden;transition:transform .15s ease,border-color .15s ease}
+.sw-card:hover{border-color:var(--gold-2)}
+.sw-card:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.sw-card:active{transform:scale(.98)}
+.sw-th{position:relative;background:var(--page-2);display:flex;justify-content:center}
+.sw-th img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.sw-th.r916 img{aspect-ratio:9/16;width:auto;height:170px;max-width:100%}
+.sw-badge{position:absolute;top:5px;inset-inline-start:5px;background:rgba(0,0,0,.62);color:#fff;font-size:.66rem;font-weight:600;padding:.05rem .4rem;border-radius:999px;font-variant-numeric:tabular-nums}
+.sw-meta{padding:.1rem .4rem .45rem;display:flex;flex-direction:column;gap:.2rem;font-size:.72rem;line-height:1.3}
+.sw-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.1rem .3rem;align-items:center}
+.sw-row time{font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.sw-pf{font-weight:600;color:var(--ink-2);white-space:nowrap}
+.sw-pf.ig{color:#b5487a}.sw-pf.fb{color:#3b5fa8}
+.sw-cap{color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;direction:ltr;text-align:left}
+.sw-cap[dir=rtl]{direction:rtl;text-align:right}
+.sw-st{align-self:flex-start;font-size:.66rem;font-weight:600;padding:.05rem .45rem;border-radius:999px;white-space:nowrap}
+.st-wait{background:var(--warn-soft);color:var(--warn)}.st-ok{background:var(--ok-soft);color:var(--ok)}
+.st-queue{background:var(--blue-soft);color:var(--blue)}.st-done{background:var(--page-2);color:var(--muted)}
+.sw-next{padding:.7rem .8rem;border:1px dashed var(--line);border-radius:8px;color:var(--ink-2);font-size:.85rem;margin-bottom:1rem}
+.sw-grid-wrap{display:flex;flex-wrap:wrap;gap:1rem 1.4rem;align-items:flex-start;margin-bottom:1rem}
+.sw-phone{width:100%;max-width:330px;border:1px solid var(--line);border-radius:22px;padding:.7rem .5rem .8rem;background:var(--page)}
+.sw-phone .hd{display:flex;align-items:center;gap:.5rem;padding:0 .3rem .55rem;font-size:.8rem;font-weight:600;direction:ltr}
+.sw-phone .hd i{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#3b3530);flex:none}
+.sw-ig{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;direction:ltr}
+.sw-ig a,.sw-ig button{all:unset;cursor:pointer;position:relative;display:block;aspect-ratio:3/4;background:var(--page-2);overflow:hidden}
+.sw-ig img{width:100%;height:100%;object-fit:cover;display:block}
+.sw-ig .plan{outline:2px dashed var(--gold);outline-offset:-2px}
+.sw-ig .plan span{position:absolute;bottom:3px;left:3px;right:3px;background:rgba(0,0,0,.62);color:#fff;font-size:.6rem;text-align:center;border-radius:4px;padding:.05rem 0;direction:rtl}
+.sw-ig .ph{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.65rem}
+.sw-legend{font-size:.8rem;color:var(--ink-2);max-width:300px;line-height:1.5}
+.sw-legend i{display:inline-block;width:.8rem;height:.8rem;outline:2px dashed var(--gold);outline-offset:-2px;vertical-align:middle;margin-inline-end:.3rem}
+dialog.sv{border:0;padding:0;background:transparent;max-width:min(94vw,560px);width:100%;color:var(--ink)}
+dialog.sv::backdrop{background:rgba(20,17,14,.78)}
+.sv-in{background:var(--page);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;max-height:92vh}
+.sv-img{position:relative;background:#111;display:flex;justify-content:center;align-items:center}
+.sv-img img{display:block;max-width:100%;max-height:62vh;object-fit:contain}
+.sv-nav{position:absolute;top:50%;transform:translateY(-50%);border:0;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.85);color:#222;font-size:1.2rem;cursor:pointer}
+.sv-nav.p{right:8px}.sv-nav.n{left:8px}
+.sv-nav[disabled]{opacity:.25;cursor:default}
+.sv-dots{position:absolute;bottom:8px;left:0;right:0;text-align:center;color:#fff;font-size:.75rem;font-variant-numeric:tabular-nums}
+.sv-body{padding:.8rem 1rem 1rem;overflow:auto;font-size:.85rem}
+.sv-body .sw-row{margin-bottom:.4rem}
+.sv-body pre{white-space:pre-wrap;font:inherit;margin:.4rem 0 0;direction:ltr;text-align:left;color:var(--ink-2)}
+.sv-x{border:0;background:transparent;font-size:1.3rem;cursor:pointer;color:var(--ink-2);padding:0 .2rem}
+@media (max-width:640px){
+  .sw-cal{grid-template-columns:1fr;overflow:visible}
+  .sw-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:flex-start}
+  .sw-day:not(.has){display:none}
+  .sw-dn{flex-direction:column;justify-content:flex-start;width:3.2rem;flex:none}
+  .sw-card{width:calc(50% - 2rem);min-width:120px}
+  .sw-phone{max-width:none}
+}

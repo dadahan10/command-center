@@ -44,11 +44,9 @@ for c in chapters:
     wp_path, lg_path = os.path.join(SOCIAL, "week-plan.json"), os.path.join(SOCIAL, "ledger.json")
     if os.path.exists(wp_path):
         wp = load(wp_path)
-        tables.append({"title": "השבוע הבא" + (f" ({wp['week_of']})" if wp.get("week_of") else ""),
-                       "cols": ["מתי", "פלטפורמה", "תכשיט", "Hook / מסר", "כיתוב", "סטטוס"],
-                       "rows": [[f'{dmy(x.get("date",""))} {x.get("time","")}'.strip(), x.get("platform", ""), x.get("piece", ""),
-                                 x.get("hook", ""), x.get("caption", ""), x.get("status", "ממתין לאישור")] for x in wp.get("items", [])],
-                       "empty": wp.get("placeholder") or "יוצג ביום רביעי"})
+        ig_path = os.path.join(SOCIAL, "ig-recent.json")
+        c["social"] = {"weeks": wp.get("weeks", []), "next": wp.get("next_placeholder", ""),
+                       "ig": load(ig_path) if os.path.exists(ig_path) else {"items": []}}
     if os.path.exists(lg_path):
         lg = sorted(load(lg_path).get("entries", []), key=lambda x: x.get("date", ""), reverse=True)
         tables.append({"title": f"יומן המסרים ({len(lg)})",
@@ -80,6 +78,12 @@ for name, obj in [("chapters", chapters), ("extras", extras),
                   ("agents", load(os.path.join(HERE, "agents.json")))]:
     with open(os.path.join(stage, "data", name + ".json"), "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False)
+
+# social calendar thumbnails (published next to the page as social/...)
+thumbs = os.path.join(SOCIAL, "thumbs")
+if os.path.isdir(thumbs):
+    shutil.rmtree(os.path.join(stage, "social"), ignore_errors=True)
+    shutil.copytree(thumbs, os.path.join(stage, "social"), dirs_exist_ok=True)
 
 done = sum(1 for c in chapters if c.get("status") == "done")
 office = sum(1 for c in chapters if c.get("office_only"))
