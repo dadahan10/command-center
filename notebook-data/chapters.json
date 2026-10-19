@@ -427,6 +427,126 @@
   ]
  },
  {
+  "id": "social-weekly",
+  "title": "סושיאל — תזמון שבועי",
+  "group": "remnant",
+  "kind": "business",
+  "status": "active",
+  "last_update": "2026-10-19",
+  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את התוכנית לשבוע הבא לאישורך. היא כוללת סטוריז באינסטגרם באנגלית, ועוד 2–3 פוסטים בעברית לפייסבוק, ל-X וללינקדאין: קודם פוסט אחד על קולקציית REMNANT, ואחריו פוסט לכל עיצוב, כל 2–3 ימים. שום דבר לא נכנס לתור לפני שאישרת. כל מה שיוצא נרשם ביומן המסרים כדי שלא נחזור על אותו מסר. התוכנית הראשונה תוצג ביום רביעי 22.10.",
+  "rules": {
+   "title": "כללי התוכן",
+   "items": [
+    "סטורי שמראה רק תכשיט חייב להתחבר לחוויה האנושית דרך המילים: שבר, החלמה, לאסוף את עצמך מחדש. תכשיט לבד, בלי משפט שנוגע באדם, לא עולה.",
+    "לא חוזרים על מסר. לפני כל פוסט בודקים ביומן המסרים שה-hook והזווית עוד לא יצאו.",
+    "רק הדמיות ותמונות אמיתיות של התכשיטים שלנו. לא תכשיטים שנוצרו ב-AI."
+   ]
+  },
+  "next_tasks": [
+   "רביעי 22.10: להציג כאן את תוכנית השבוע 25–31.10 (סטוריז באנגלית + 2–3 פוסטים בעברית) לאישור",
+   "אחרי האישור: להכניס לתור רק את מה שאושר, ולעדכן סטטוס ל'בתור'",
+   "אחרי כל פרסום: לרשום ביומן המסרים ולסמן 'פורסם'",
+   "שש סרטוני ה-hook מוכנים ולא פורסמו. לשבץ אותם בתוכנית הראשונה"
+  ],
+  "recent_changes": [
+   "19.10 — הפרק נפתח: שגרת רביעי, תוכנית שבועית לאישור, יומן מסרים עם הטיזר מ-18.10 ושישה סרטוני hook"
+  ],
+  "artifacts": [],
+  "office_only": false,
+  "sources": [
+   "diana-rafael-marketing/social/ledger.json",
+   "diana-rafael-marketing/social/week-plan.json",
+   "Dropbox/שיווק Marketing/REMNANT/Social Hooks/SUMMARY-he.md",
+   "feedback_remnant_marketing_content.md"
+  ],
+  "tables": [
+   {
+    "title": "השבוע הבא",
+    "cols": [
+     "מתי",
+     "פלטפורמה",
+     "תכשיט",
+     "Hook / מסר",
+     "כיתוב",
+     "סטטוס"
+    ],
+    "rows": [],
+    "empty": "יוצג ביום רביעי 22.10"
+   },
+   {
+    "title": "יומן המסרים (7)",
+    "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
+    "cols": [
+     "תאריך",
+     "פלטפורמה",
+     "תכשיט",
+     "Hook",
+     "זווית המסר",
+     "מצב"
+    ],
+    "rows": [
+     [
+      "18.10",
+      "Email (Klaviyo)",
+      "REMNANT collection (Disturbed in front)",
+      "Born from a break.",
+      "Teaser: the collection is born from a break; whole, not perfect; the break lit up instead of hidden",
+      "פורסם"
+     ],
+     [
+      "16.10",
+      "Reels / TikTok",
+      "REMNANT Kintsugi ring R117",
+      "Everyone breaks (words crack, match cut to the ring)",
+      "Everyone breaks; not everyone turns it into something beautiful",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "TikTok / Reels",
+      "REMNANT Kintsugi ring R117",
+      "Shards fly back together into the ring (seamless loop)",
+      "Every piece found its way back: putting yourself back together",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "TikTok / Shorts",
+      "REMNANT Kintsugi ring R117",
+      "Black enamel pours into the grooves (satisfying fill)",
+      "Filling the crack, not hiding it",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "Reels / Pinterest",
+      "REMNANT Kintsugi ring R117",
+      "\"this is a crack\" -> crossed out -> \"the design\"",
+      "The break becomes the design, made permanent",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "Reels / TikTok",
+      "REMNANT Kintsugi ring R117 (smooth vs. kintsugi)",
+      "Split screen light/dark: same ring",
+      "Same ring, only one has a story (A or B question for comments)",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "Reels",
+      "REMNANT Kintsugi ring R117",
+      "A woman's face with glowing gold seams, match cut to the ring",
+      "Everyone breaks; not everyone hides it",
+      "מוכן, לא פורסם"
+     ]
+    ],
+    "empty": "עוד לא נרשם כלום"
+   }
+  ]
+ },
+ {
   "id": "remnant-q4-plan",
   "title": "REMNANT — תוכנית הפעלה Q4 / גאנט השקה",
   "group": "remnant",

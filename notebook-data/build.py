@@ -32,6 +32,33 @@ for c in chapters:
         if mg.get("vercel_url") and not any(a.get("url") == mg["vercel_url"] for a in arts):
             arts.insert(0, {"label": "מערכת הניהול (Vercel)", "url": mg["vercel_url"], "type": "site"})
 
+# 2b. social weekly: next-week plan + message ledger come from the marketing repo (source of truth)
+SOCIAL = os.path.join(os.path.dirname(ROOT), "diana-rafael-marketing", "social")
+def dmy(s):
+    return ".".join(reversed(s.split("-")[1:])) if s and s.count("-") == 2 else (s or "")
+LEDGER_ST = {"published": "פורסם", "made": "מוכן, לא פורסם", "scheduled": "בתור"}
+for c in chapters:
+    if c["id"] != "social-weekly":
+        continue
+    tables = []
+    wp_path, lg_path = os.path.join(SOCIAL, "week-plan.json"), os.path.join(SOCIAL, "ledger.json")
+    if os.path.exists(wp_path):
+        wp = load(wp_path)
+        tables.append({"title": "השבוע הבא" + (f" ({wp['week_of']})" if wp.get("week_of") else ""),
+                       "cols": ["מתי", "פלטפורמה", "תכשיט", "Hook / מסר", "כיתוב", "סטטוס"],
+                       "rows": [[f'{dmy(x.get("date",""))} {x.get("time","")}'.strip(), x.get("platform", ""), x.get("piece", ""),
+                                 x.get("hook", ""), x.get("caption", ""), x.get("status", "ממתין לאישור")] for x in wp.get("items", [])],
+                       "empty": wp.get("placeholder") or "יוצג ביום רביעי"})
+    if os.path.exists(lg_path):
+        lg = sorted(load(lg_path).get("entries", []), key=lambda x: x.get("date", ""), reverse=True)
+        tables.append({"title": f"יומן המסרים ({len(lg)})",
+                       "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
+                       "cols": ["תאריך", "פלטפורמה", "תכשיט", "Hook", "זווית המסר", "מצב"],
+                       "rows": [[dmy(x.get("date")), x.get("platform", ""), x.get("piece", ""), x.get("hook", ""),
+                                 x.get("message_angle", ""), LEDGER_ST.get(x.get("status"), x.get("status", ""))] for x in lg],
+                       "empty": "עוד לא נרשם כלום"})
+    c["tables"] = tables
+
 assert len({c["id"] for c in chapters}) == len(chapters)
 with open(os.path.join(HERE, "chapters.json"), "w", encoding="utf-8") as f:
     json.dump(chapters, f, ensure_ascii=False, indent=1)

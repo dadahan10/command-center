@@ -285,3 +285,13 @@ table.mx td small{display:block;color:var(--ink-2);font-size:.74rem;line-height:
 .mx-none,.mx-model{--c:var(--muted);--bg:var(--page)}
 .mx-model td,td.mx-model{border-inline-start-style:dashed}
 td.mx-na{color:var(--muted);background:transparent;border:0;text-align:center}
+/* generic data tables + rules (social weekly chapter) */
+.tb-note{font-size:.8rem;color:var(--ink-2);margin:.1rem 0 .4rem}
+.tb-wrap{overflow-x:auto;margin-bottom:.8rem;scrollbar-width:thin}
+table.tb{border-collapse:collapse;width:100%;min-width:560px;font-size:.82rem}
+table.tb th{font-weight:600;color:var(--muted);font-size:.76rem;text-align:start;padding:.3rem .45rem;border-bottom:1px solid var(--line,rgba(127,127,127,.25))}
+table.tb td{vertical-align:top;padding:.4rem .45rem;border-bottom:1px solid var(--line,rgba(127,127,127,.15));line-height:1.4}
+table.tb td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.tb-empty{padding:.7rem .8rem;border:1px dashed var(--line,rgba(127,127,127,.35));border-radius:8px;color:var(--ink-2);font-size:.85rem;margin-bottom:.8rem}
+ul.rules{margin:.2rem 0 .8rem;padding-inline-start:1.1rem}
+ul.rules li{margin:.25rem 0;line-height:1.45}
