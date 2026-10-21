@@ -328,7 +328,7 @@ ul.rules li{margin:.25rem 0;line-height:1.45}
 .sw-cap[dir=rtl]{direction:rtl;text-align:right}
 .sw-st{align-self:flex-start;font-size:.66rem;font-weight:600;padding:.05rem .45rem;border-radius:999px;white-space:nowrap}
 .st-wait{background:var(--warn-soft);color:var(--warn)}.st-ok{background:var(--ok-soft);color:var(--ok)}
-.st-queue{background:var(--blue-soft);color:var(--blue)}.st-done{background:var(--page-2);color:var(--muted)}
+.st-queue{background:var(--blue-soft);color:var(--blue)}.st-done{background:var(--page-2);color:var(--muted)}.st-no{background:var(--bad-soft);color:var(--bad);text-decoration:line-through}
 .sw-next{padding:.7rem .8rem;border:1px dashed var(--line);border-radius:8px;color:var(--ink-2);font-size:.85rem;margin-bottom:1rem}
 .sw-grid-wrap{display:flex;flex-wrap:wrap;gap:1rem 1.4rem;align-items:flex-start;margin-bottom:1rem}
 .sw-phone{width:100%;max-width:330px;border:1px solid var(--line);border-radius:22px;padding:.7rem .5rem .8rem;background:var(--page)}
@@ -692,7 +692,7 @@ function swCross(items){ // the same post on IG and on the FB Page -> ONE card w
     const c={...it,pfs:[it.platform],nets:[net]};seen[k]=c;out.push(c);}
   return out;
 }
-const SW_ST={'ממתין לאישור':'wait','אושר':'ok','בתור':'queue','פורסם':'done'};
+const SW_ST={'ממתין לאישור':'wait','אושר':'ok','בתור':'queue','פורסם':'done','נפסל':'no'};
 const SW_DAYS=['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
 let SW_CARDS=[];
 function swDate(s){const [y,m,d]=s.split('-').map(Number);return new Date(Date.UTC(y,m-1,d))}
