@@ -465,7 +465,7 @@
     {
      "week_of": "2026-10-18",
      "label": "שבוע הפיילוט + ספירה לאחור להשקה",
-     "approved": "הפיילוט (20.10) אושר 19.10 · 21–24.10 ממתינים לאישור",
+     "approved": "פיילוט 20.10 פורסם · רביעי 21 המקורי נפסל → Everyone Breaks פורסם · 22–24.10 אושרו ובתור",
      "items": [
       {
        "id": "pilot-ig-carousel",
@@ -490,7 +490,7 @@
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-03-902f69a4.jpg",
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-04-4ba342fa.jpg"
        ],
-       "status": "בתור"
+       "status": "פורסם"
       },
       {
        "id": "pilot-fb-album",
@@ -515,7 +515,7 @@
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-03-902f69a4.jpg",
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/post-04-4ba342fa.jpg"
        ],
-       "status": "בתור"
+       "status": "פורסם"
       },
       {
        "id": "pilot-ig-story-01",
@@ -534,7 +534,7 @@
        "images": [
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-01-a4ed0ccf.jpg"
        ],
-       "status": "בתור"
+       "status": "פורסם"
       },
       {
        "id": "pilot-ig-story-02",
@@ -553,7 +553,7 @@
        "images": [
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-02-66e9ff38.jpg"
        ],
-       "status": "בתור"
+       "status": "פורסם"
       },
       {
        "id": "pilot-ig-story-03",
@@ -572,7 +572,7 @@
        "images": [
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-03-eb5aeebe.jpg"
        ],
-       "status": "בתור"
+       "status": "פורסם"
       },
       {
        "id": "pilot-ig-story-04",
@@ -591,7 +591,7 @@
        "images": [
         "https://fcmlnrkkcabebuechaum.supabase.co/storage/v1/object/public/social/2026-10-19-pilot/story-04-6c0f63b9.jpg"
        ],
-       "status": "בתור"
+       "status": "פורסם"
       },
       {
        "id": "w21-ig-reel",
@@ -613,7 +613,7 @@
         "2026-10-21-week/wed-21-reel-f5.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "נפסל"
       },
       {
        "id": "w21-fb-reel",
@@ -635,7 +635,7 @@
         "2026-10-21-week/wed-21-reel-f5.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "נפסל"
       },
       {
        "id": "w21-ig-story-1",
@@ -652,7 +652,7 @@
         "2026-10-21-week/wed-21-story-1.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "נפסל"
       },
       {
        "id": "w21-ig-story-2",
@@ -669,7 +669,7 @@
         "2026-10-21-week/wed-21-story-2.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "נפסל"
       },
       {
        "id": "w21-ig-story-3",
@@ -686,7 +686,58 @@
         "2026-10-21-week/wed-21-story-3.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "נפסל"
+      },
+      {
+       "batch": "2026-10-21-hook",
+       "date": "2026-10-21",
+       "format": "9:16",
+       "piece": "Kintsugi R117",
+       "hook": "Everyone breaks.",
+       "angle": "כולם נשברים, לא כולם הופכים את זה ליפה",
+       "caption": "Everyone breaks. Not everyone turns it into something beautiful.",
+       "thumbs": [
+        "2026-10-21-week/wed-21-hook-cover.jpg"
+       ],
+       "images": [],
+       "status": "פורסם",
+       "id": "eb21-ig-story",
+       "time": "12:01",
+       "platform": "ig_story"
+      },
+      {
+       "batch": "2026-10-21-hook",
+       "date": "2026-10-21",
+       "format": "9:16",
+       "piece": "Kintsugi R117",
+       "hook": "Everyone breaks.",
+       "angle": "כולם נשברים, לא כולם הופכים את זה ליפה",
+       "caption": "Everyone breaks. Not everyone turns it into something beautiful.",
+       "thumbs": [
+        "2026-10-21-week/wed-21-hook-cover.jpg"
+       ],
+       "images": [],
+       "status": "פורסם",
+       "id": "eb21-ig-reel",
+       "time": "12:35",
+       "platform": "ig_reel"
+      },
+      {
+       "batch": "2026-10-21-hook",
+       "date": "2026-10-21",
+       "format": "9:16",
+       "piece": "Kintsugi R117",
+       "hook": "Everyone breaks.",
+       "angle": "כולם נשברים, לא כולם הופכים את זה ליפה",
+       "caption": "Everyone breaks. Not everyone turns it into something beautiful.",
+       "thumbs": [
+        "2026-10-21-week/wed-21-hook-cover.jpg"
+       ],
+       "images": [],
+       "status": "פורסם",
+       "id": "eb21-fb-reel",
+       "time": "12:35",
+       "platform": "fb_reel"
       },
       {
        "id": "t22-ig-reel",
@@ -708,7 +759,7 @@
         "2026-10-21-week/thu-22-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "t22-fb-reel",
@@ -730,7 +781,7 @@
         "2026-10-21-week/thu-22-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "t22-ig-story-1",
@@ -747,7 +798,7 @@
         "2026-10-21-week/thu-22-story-1.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "t22-ig-story-2",
@@ -764,7 +815,7 @@
         "2026-10-21-week/thu-22-story-2.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "f23-ig-story-1",
@@ -781,7 +832,7 @@
         "2026-10-21-week/fri-23-story-1.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "s24-ig-story-1",
@@ -798,7 +849,7 @@
         "2026-10-21-week/sat-24-story-1.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "s24-ig-story-2",
@@ -815,7 +866,7 @@
         "2026-10-21-week/sat-24-story-2.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "s24-ig-story-3",
@@ -832,7 +883,7 @@
         "2026-10-21-week/sat-24-story-3.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       }
      ]
     }
