@@ -890,7 +890,7 @@
     {
      "week_of": "2026-10-25",
      "label": "גרסה 3 (25.10) אחרי ההערות של דניאל: בלי קינצוגי נוסף, 2–3 סטוריז ביום",
-     "approved": "2 אושרו ונכנסו לתור · כל השאר ממתין לאישור",
+     "approved": "דניאל אישר את כל השבוע (25.10) · הכול בתור",
      "items": [
       {
        "id": "w25-mon-story-1",
@@ -969,14 +969,14 @@
        "format": "9:16",
        "piece": "Review (Bridgett) + conversation invite",
        "hook": "Thinking about your own? Message us. / A real person answers, never an AI.",
-       "angle": "הזמנה לשיחה: ביקורת Bridgett על השאלות שנענו + אדם אמיתי עונה (המקום היחיד השבוע שזה בהקשר) · מגרסה 1, דניאל לא התייחס אליו, עדיין ממתין לאישור",
+       "angle": "הזמנה לשיחה: ביקורת Bridgett על השאלות שנענו + אדם אמיתי עונה (המקום היחיד השבוע שזה בהקשר) · מגרסה 1, אושר עם כל השבוע 25.10 ונכנס לתור",
        "caption": "",
        "music": "",
        "thumbs": [
         "2026-10-25-week/thu-29-story-1.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "w25-sat-story-1",
@@ -987,7 +987,7 @@
        "format": "9:16",
        "piece": "Gravitational Wave",
        "hook": "Your dark side / was never a costume.",
-       "angle": "האלווין בטעם: הצד האפל שלך הוא לא תחפושת (DUALITY) · מגרסה 1, דניאל לא התייחס אליו, עדיין ממתין לאישור",
+       "angle": "האלווין בטעם: הצד האפל שלך הוא לא תחפושת (DUALITY) · מגרסה 1, אושר עם כל השבוע 25.10 ונכנס לתור",
        "caption": "",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
@@ -997,7 +997,7 @@
         "2026-10-25-week/sat-31-story-1-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "v3-sun-25-story-a",
@@ -1020,7 +1020,7 @@
         "2026-10-25-week-v3/sun-25-story-a-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/sun-25-story-a.mp4"
       },
@@ -1045,7 +1045,7 @@
         "2026-10-25-week-v3/sun-25-story-b-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/sun-25-story-b.mp4"
       },
@@ -1070,7 +1070,7 @@
         "2026-10-25-week-v3/mon-26-story-a-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/mon-26-story-a.mp4"
       },
@@ -1093,7 +1093,7 @@
         "2026-10-25-week-v3/mon-26-post-5.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "Ready to ship. One of each.\n\nSome rings are made once and wait for the right hand. Each of these is finished and ready to leave the studio, and when it goes, it's gone.\n\nTriangulum, a black triangle in yellow gold: $1,100 (was $2,066)\nPortal, a black cushion in rose gold: $1,400 (was $2,588)\nMystery Soirée, a black oval in rose gold: $750 (was $1,723)\nFractals, one of a kind: $750 (was $1,408)\n\nA question about one of them? Message us. A real person answers.\n\nReady to ship: link in bio.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael"
       },
       {
@@ -1115,7 +1115,7 @@
         "2026-10-25-week-v3/mon-26-post-5.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "Ready to ship. One of each.\n\nSome rings are made once and wait for the right hand. Each of these is finished and ready to leave the studio, and when it goes, it's gone.\n\nTriangulum, a black triangle in yellow gold: $1,100 (was $2,066)\nPortal, a black cushion in rose gold: $1,400 (was $2,588)\nMystery Soirée, a black oval in rose gold: $750 (was $1,723)\nFractals, one of a kind: $750 (was $1,408)\n\nA question about one of them? Message us. A real person answers.\n\nReady to ship: https://dianarafael.com/collections/featured-items\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael"
       },
       {
@@ -1139,7 +1139,7 @@
         "2026-10-25-week-v3/mon-26-story-c-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/mon-26-story-c.mp4"
       },
@@ -1164,7 +1164,7 @@
         "2026-10-25-week-v3/tue-27-story-a-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/tue-27-story-a.mp4"
       },
@@ -1189,7 +1189,7 @@
         "2026-10-25-week-v3/tue-27-story-c-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/tue-27-story-c.mp4"
       },
@@ -1214,7 +1214,7 @@
         "2026-10-25-week-v3/wed-28-story-a-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/wed-28-story-a.mp4"
       },
@@ -1239,7 +1239,7 @@
         "2026-10-25-week-v3/wed-28-story-b-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/wed-28-story-b.mp4"
       },
@@ -1264,7 +1264,7 @@
         "2026-10-25-week-v3/wed-28-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "Soft is not the same as weak.\n\nNew in the studio: black stones held in gold, for the people who carry both sides of themselves. The gentle and the fierce. What you hold on to and what you let go.\n\nEach one is made to order, by hand. They're not on the site yet, so message us to make one yours. A real person answers, never an AI.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
        "video": "2026-10-25-week-v3/wed-28-reel.mp4"
       },
@@ -1289,7 +1289,7 @@
         "2026-10-25-week-v3/wed-28-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "Soft is not the same as weak.\n\nNew in the studio: black stones held in gold, for the people who carry both sides of themselves. The gentle and the fierce. What you hold on to and what you let go.\n\nEach one is made to order, by hand. They're not on the site yet, so message us to make one yours. A real person answers, never an AI.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
        "video": "2026-10-25-week-v3/wed-28-reel.mp4"
       },
@@ -1314,7 +1314,7 @@
         "2026-10-25-week-v3/thu-29-story-a-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/thu-29-story-a.mp4"
       },
@@ -1339,7 +1339,7 @@
         "2026-10-25-week-v3/thu-29-story-b-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/thu-29-story-b.mp4"
       },
@@ -1364,7 +1364,7 @@
         "2026-10-25-week-v3/fri-30-story-a-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/fri-30-story-a.mp4"
       },
@@ -1389,7 +1389,7 @@
         "2026-10-25-week-v3/fri-30-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "The first ring asks. The second one answers.\n\nAn engagement ring is a question. The band is the answer you keep giving, every day after. We design them to be worn together, so the two read as one story on your hand.\n\nThe Gravitational Wave engagement ring and its band, and more pairs like them, made to order.\n\nLooking for the band that matches yours? Message us. A real person answers.\n\nSee the Gravitational Wave set: link in bio.\n\n#engagementring #weddingband #bridalset #ringstack #blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
        "video": "2026-10-25-week-v3/fri-30-reel.mp4"
       },
@@ -1414,7 +1414,7 @@
         "2026-10-25-week-v3/fri-30-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "The first ring asks. The second one answers.\n\nAn engagement ring is a question. The band is the answer you keep giving, every day after. We design them to be worn together, so the two read as one story on your hand.\n\nThe Gravitational Wave engagement ring and its band, and more pairs like them, made to order.\n\nLooking for the band that matches yours? Message us. A real person answers.\n\nSee the Gravitational Wave set: https://dianarafael.com/collections/remnant\n\n#engagementring #weddingband #bridalset #ringstack #blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
        "video": "2026-10-25-week-v3/fri-30-reel.mp4"
       },
@@ -1439,7 +1439,7 @@
         "2026-10-25-week-v3/fri-30-story-b-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/fri-30-story-b.mp4"
       },
@@ -1464,7 +1464,7 @@
         "2026-10-25-week-v3/sat-31-story-a-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/sat-31-story-a.mp4"
       },
@@ -1489,9 +1489,216 @@
         "2026-10-25-week-v3/sat-31-story-c-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "caption": "",
        "video": "2026-10-25-week-v3/sat-31-story-c.mp4"
+      }
+     ]
+    },
+    {
+     "week_of": "2026-11-01",
+     "label": "טיוטה: שתי סדרות סטוריז מועילות (חדר כושר, ניקוי בבית)",
+     "approved": "ממתין לאישור · עוד לא בתור; שאר השבוע ייבנה ביום רביעי",
+     "items": [
+      {
+       "id": "edu-gym-1",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-02",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry at the gym (1/4) · Starz band",
+       "hook": "Training today? / Your ring can sit this one out. -> Here's why.",
+       "angle": "סדרה מועילה, חדר כושר 1/4: הוק, משקולת עולה ויורדת והטבעת נשארת בצד",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/gym-1.jpg",
+        "2026-11-01-edu/gym-1-f1.jpg",
+        "2026-11-01-edu/gym-1-f2.jpg",
+        "2026-11-01-edu/gym-1-f3.jpg",
+        "2026-11-01-edu/gym-1-f4.jpg",
+        "2026-11-01-edu/gym-1-f5.jpg",
+        "2026-11-01-edu/gym-1-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/gym-1.mp4",
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "edu-gym-2",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-02",
+       "time": "12:01",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry at the gym (2/4)",
+       "hook": "Gold is a soft metal. / That's what makes it beautiful. -> And it means weight can bend it.",
+       "angle": "חדר כושר 2/4: זהב הוא מתכת רכה, מוט לוחץ והעיגול מתעקם",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/gym-2.jpg",
+        "2026-11-01-edu/gym-2-f1.jpg",
+        "2026-11-01-edu/gym-2-f2.jpg",
+        "2026-11-01-edu/gym-2-f3.jpg",
+        "2026-11-01-edu/gym-2-f4.jpg",
+        "2026-11-01-edu/gym-2-f5.jpg",
+        "2026-11-01-edu/gym-2-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/gym-2.mp4",
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "edu-gym-3",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-02",
+       "time": "12:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry at the gym (3/4)",
+       "hook": "A bent ring loosens its grip. / A stone can slip out.",
+       "angle": "חדר כושר 3/4: טבעת מעוקמת משחררת את השיניים והאבן נופלת",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/gym-3.jpg",
+        "2026-11-01-edu/gym-3-f1.jpg",
+        "2026-11-01-edu/gym-3-f2.jpg",
+        "2026-11-01-edu/gym-3-f3.jpg",
+        "2026-11-01-edu/gym-3-f4.jpg",
+        "2026-11-01-edu/gym-3-f5.jpg",
+        "2026-11-01-edu/gym-3-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/gym-3.mp4",
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "edu-gym-4",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-02",
+       "time": "12:03",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry at the gym (4/4) · Starz band",
+       "hook": "Weights, strength training, pilates: / take it off, set it aside. -> It'll be right there when you're done.",
+       "angle": "חדר כושר 4/4: משקולות/כוח/פילאטיס, מורידים ומניחים בצד; הטבעת נוחתת בקערית; בן אדם אמיתי עונה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/gym-4.jpg",
+        "2026-11-01-edu/gym-4-f1.jpg",
+        "2026-11-01-edu/gym-4-f2.jpg",
+        "2026-11-01-edu/gym-4-f3.jpg",
+        "2026-11-01-edu/gym-4-f4.jpg",
+        "2026-11-01-edu/gym-4-f5.jpg",
+        "2026-11-01-edu/gym-4-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/gym-4.mp4",
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "edu-clean-1",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-05",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: cleaning at home (1/4) · Gravitational Wave engagement",
+       "hook": "Bring the sparkle back. / At home, in five minutes.",
+       "angle": "סדרה מועילה, ניקוי בבית 1/4: הוק, הטבעת עוברת ממעומעמת לנוצצת",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/clean-1.jpg",
+        "2026-11-01-edu/clean-1-f1.jpg",
+        "2026-11-01-edu/clean-1-f2.jpg",
+        "2026-11-01-edu/clean-1-f3.jpg",
+        "2026-11-01-edu/clean-1-f4.jpg",
+        "2026-11-01-edu/clean-1-f5.jpg",
+        "2026-11-01-edu/clean-1-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/clean-1.mp4",
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "edu-clean-2",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-05",
+       "time": "12:01",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: cleaning at home (2/4)",
+       "hook": "A bowl of lukewarm water / and a drop of mild soap. -> Let your piece soak for a few minutes.",
+       "angle": "ניקוי 2/4: קערה עם מים פושרים וטיפת סבון עדין, אדוות",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/clean-2.jpg",
+        "2026-11-01-edu/clean-2-f1.jpg",
+        "2026-11-01-edu/clean-2-f2.jpg",
+        "2026-11-01-edu/clean-2-f3.jpg",
+        "2026-11-01-edu/clean-2-f4.jpg",
+        "2026-11-01-edu/clean-2-f5.jpg",
+        "2026-11-01-edu/clean-2-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/clean-2.mp4",
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "edu-clean-3",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-05",
+       "time": "12:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: cleaning at home (3/4) · Gravitational Wave engagement",
+       "hook": "A soft brush, / gently around the stone.",
+       "angle": "ניקוי 3/4: מברשת רכה בעדינות סביב האבן, בועות",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/clean-3.jpg",
+        "2026-11-01-edu/clean-3-f1.jpg",
+        "2026-11-01-edu/clean-3-f2.jpg",
+        "2026-11-01-edu/clean-3-f3.jpg",
+        "2026-11-01-edu/clean-3-f4.jpg",
+        "2026-11-01-edu/clean-3-f5.jpg",
+        "2026-11-01-edu/clean-3-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/clean-3.mp4",
+       "status": "ממתין לאישור"
+      },
+      {
+       "id": "edu-clean-4",
+       "batch": "2026-11-01-edu",
+       "date": "2026-11-05",
+       "time": "12:03",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: cleaning at home (4/4) · Gravitational Wave engagement",
+       "hook": "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us.",
+       "angle": "ניקוי 4/4: שוטפים ומייבשים במטלית רכה, ניצוצות; הזמנה לשיחה עם בן אדם אמיתי",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "caption": "",
+       "thumbs": [
+        "2026-11-01-edu/clean-4.jpg",
+        "2026-11-01-edu/clean-4-f1.jpg",
+        "2026-11-01-edu/clean-4-f2.jpg",
+        "2026-11-01-edu/clean-4-f3.jpg",
+        "2026-11-01-edu/clean-4-f4.jpg",
+        "2026-11-01-edu/clean-4-f5.jpg",
+        "2026-11-01-edu/clean-4-f6.jpg"
+       ],
+       "images": [],
+       "video": "2026-11-01-edu/clean-4.mp4",
+       "status": "ממתין לאישור"
       }
      ]
     }
@@ -1602,7 +1809,7 @@
   },
   "tables": [
    {
-    "title": "יומן המסרים (46)",
+    "title": "יומן המסרים (54)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -1614,12 +1821,76 @@
     ],
     "rows": [
      [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (1/4) · Gravitational Wave engagement",
+      "Bring the sparkle back. / At home, in five minutes.",
+      "סדרה מועילה, ניקוי בבית 1/4: הוק, הטבעת עוברת ממעומעמת לנוצצת",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (2/4)",
+      "A bowl of lukewarm water / and a drop of mild soap. -> Let your piece soak for a few minutes.",
+      "ניקוי 2/4: קערה עם מים פושרים וטיפת סבון עדין, אדוות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (3/4) · Gravitational Wave engagement",
+      "A soft brush, / gently around the stone.",
+      "ניקוי 3/4: מברשת רכה בעדינות סביב האבן, בועות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (4/4) · Gravitational Wave engagement",
+      "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us.",
+      "ניקוי 4/4: שוטפים ומייבשים במטלית רכה, ניצוצות; הזמנה לשיחה עם בן אדם אמיתי",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (1/4) · Starz band",
+      "Training today? / Your ring can sit this one out. -> Here's why.",
+      "סדרה מועילה, חדר כושר 1/4: הוק, משקולת עולה ויורדת והטבעת נשארת בצד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (2/4)",
+      "Gold is a soft metal. / That's what makes it beautiful. -> And it means weight can bend it.",
+      "חדר כושר 2/4: זהב הוא מתכת רכה, מוט לוחץ והעיגול מתעקם",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (3/4)",
+      "A bent ring loosens its grip. / A stone can slip out.",
+      "חדר כושר 3/4: טבעת מעוקמת משחררת את השיניים והאבן נופלת",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (4/4) · Starz band",
+      "Weights, strength training, pilates: / take it off, set it aside. -> It'll be right there when you're done.",
+      "חדר כושר 4/4: משקולות/כוח/פילאטיס, מורידים ומניחים בצד; הטבעת נוחתת בקערית; בן אדם אמיתי עונה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
       "31.10",
       "Instagram story (EN)",
       "Gravitational Wave",
       "Your dark side / was never a costume.",
       "האלווין בטעם: הצד האפל שלך הוא לא תחפושת (DUALITY)",
-      "מתוכנן, ממתין לאישור"
+      "בתור"
      ],
      [
       "31.10",
@@ -1691,7 +1962,7 @@
       "Review (Bridgett) + conversation invite",
       "Thinking about your own? Message us. / A real person answers, never an AI.",
       "הזמנה לשיחה: ביקורת Bridgett על השאלות שנענו + אדם אמיתי עונה (המקום היחיד השבוע שזה בהקשר)",
-      "מתוכנן, ממתין לאישור"
+      "בתור"
      ],
      [
       "29.10",
