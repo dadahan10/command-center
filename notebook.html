@@ -708,7 +708,8 @@ function swCard(it){
 }
 function swGroup(items){ // consecutive stories of the same day+platform+status -> one card
   const out=[];for(const it of items){const last=out[out.length-1];
-    if(/_story$/.test(it.platform)&&last&&/_story$/.test(last.platform)&&(last.pfs||[]).join()===(it.pfs||[]).join()&&last.date===it.date&&last.status===it.status){
+    const near=last&&(()=>{const m=s=>{const [a,b]=String(s).split('–').pop().split(':').map(Number);return a*60+b};return Math.abs(m(it.time)-m(last.time))<=15})();
+    if(/_story$/.test(it.platform)&&last&&near&&!it.video&&!last.video&&/_story$/.test(last.platform)&&(last.pfs||[]).join()===(it.pfs||[]).join()&&last.date===it.date&&last.status===it.status){
       if(!last.group){last.group=[{...last}];}
       last.group.push(it);last.thumbs=last.group.flatMap(x=>x.thumbs);last.images=last.group.flatMap(x=>x.images||[]);
       last.time=last.group[0].time+'–'+it.time;last.hook=last.group[0].hook;last.caption=last.group.map((x,k)=>`${k+1}. ${x.time}  ${x.hook||x.caption||''}`).join('\n');
@@ -743,7 +744,10 @@ function swViewer(it){
     ${it.angle?`<div style="margin-top:.4rem;font-size:.8rem;color:var(--ink-2)">הזווית: ${h(it.angle)}</div>`:''}${it.music?`<div style="margin-top:.3rem;font-size:.8rem;color:var(--ink-2)">מוזיקה: ${h(it.music)}</div>`:''}<pre${swHeb(it.caption||'')?' style="direction:rtl;text-align:right"':''}>${h(it.caption||'')}</pre>${it.fb_caption?`<div style="margin-top:.6rem;font-size:.8rem;color:var(--ink-2)">הכיתוב בפייסבוק (שונה מעט):</div><pre>${h(it.fb_caption)}</pre>`:''}</div></div>`;
   document.body.appendChild(dlg);
   const img=dlg.querySelector('.sv-img img'),p=dlg.querySelector('.sv-nav.p'),nx=dlg.querySelector('.sv-nav.n'),dots=dlg.querySelector('.sv-dots');
-  const show=()=>{img.src='social/'+it.thumbs[k];p.disabled=k===0;nx.disabled=k>=n-1;p.hidden=nx.hidden=n<2;dots.textContent=n>1?`${k+1}/${n}`:''};
+  let vid=null;if(it.video){vid=document.createElement('video');vid.src='social/'+it.video;vid.controls=true;vid.autoplay=true;vid.loop=true;vid.playsInline=true;vid.muted=false;
+    vid.setAttribute('poster','social/'+it.thumbs[0]);vid.style.cssText='width:100%;height:100%;object-fit:contain;background:#000;display:block';img.parentNode.insertBefore(vid,img);}
+  const show=()=>{const v=vid&&k===0;if(vid){vid.style.display=v?'block':'none';img.style.display=v?'none':'';if(!v)vid.pause();}
+    img.src='social/'+it.thumbs[k];p.disabled=k===0;nx.disabled=k>=n-1;p.hidden=nx.hidden=n<2;dots.textContent=n>1?(vid&&k===0?`▶ וידאו · ${n}`:`${k+1}/${n}`):''};
   p.onclick=()=>{if(k>0){k--;show()}};nx.onclick=()=>{if(k<n-1){k++;show()}};
   dlg.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){nx.onclick();e.stopPropagation()}else if(e.key==='ArrowRight'){p.onclick();e.stopPropagation()}});
   let x0=null;img.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});

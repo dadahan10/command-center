@@ -889,116 +889,9 @@
     },
     {
      "week_of": "2026-10-25",
-     "label": "שבוע ההשקה של REMNANT (25–31.10)",
-     "approved": "ממתין לאישור דניאל",
+     "label": "גרסה 3 (25.10) אחרי ההערות של דניאל: בלי קינצוגי נוסף, 2–3 סטוריז ביום",
+     "approved": "2 אושרו ונכנסו לתור · כל השאר ממתין לאישור",
      "items": [
-      {
-       "id": "w25-sun-reel-ig",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-25",
-       "time": "12:00",
-       "platform": "ig_reel",
-       "format": "9:16",
-       "piece": "Kintsugi R117",
-       "hook": "every mark / has a story. -> hers is written / in gold.",
-       "angle": "יום ההשקה: לכל סימן יש סיפור, ו-REMNANT כותבת אותו בזהב (06 she-breaks מתוקן)",
-       "caption": "Every mark has a story. Hers is written in gold.\n\nThe scar from the summer you were nine. The one nobody sees. The year you'd rather forget, and the person you became because of it. Every mark tells where you've been.\n\nREMNANT, our new collection, is out today. Each piece starts from a break, a crack, a rough edge, and turns it into the part you look at first. Solid gold and black diamonds, made to order by hand.\n\nWhich piece would carry your story?\n\nSee the collection: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-25-week/sun-25-reel-cover.jpg",
-        "2026-10-25-week/sun-25-reel-f1.jpg",
-        "2026-10-25-week/sun-25-reel-f2.jpg",
-        "2026-10-25-week/sun-25-reel-f3.jpg",
-        "2026-10-25-week/sun-25-reel-f4.jpg",
-        "2026-10-25-week/sun-25-reel-f5.jpg",
-        "2026-10-25-week/sun-25-reel-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "fb_caption": "Every mark has a story. Hers is written in gold.\n\nThe scar from the summer you were nine. The one nobody sees. The year you'd rather forget, and the person you became because of it. Every mark tells where you've been.\n\nREMNANT, our new collection, is out today. Each piece starts from a break, a crack, a rough edge, and turns it into the part you look at first. Solid gold and black diamonds, made to order by hand.\n\nWhich piece would carry your story?\n\nSee the collection: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
-      },
-      {
-       "id": "w25-sun-reel-fb",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-25",
-       "time": "12:00",
-       "platform": "fb_reel",
-       "format": "9:16",
-       "piece": "Kintsugi R117",
-       "hook": "every mark / has a story. -> hers is written / in gold.",
-       "angle": "יום ההשקה: לכל סימן יש סיפור, ו-REMNANT כותבת אותו בזהב (06 she-breaks מתוקן)",
-       "caption": "Every mark has a story. Hers is written in gold.\n\nThe scar from the summer you were nine. The one nobody sees. The year you'd rather forget, and the person you became because of it. Every mark tells where you've been.\n\nREMNANT, our new collection, is out today. Each piece starts from a break, a crack, a rough edge, and turns it into the part you look at first. Solid gold and black diamonds, made to order by hand.\n\nWhich piece would carry your story?\n\nSee the collection: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-25-week/sun-25-reel-cover.jpg",
-        "2026-10-25-week/sun-25-reel-f1.jpg",
-        "2026-10-25-week/sun-25-reel-f2.jpg",
-        "2026-10-25-week/sun-25-reel-f3.jpg",
-        "2026-10-25-week/sun-25-reel-f4.jpg",
-        "2026-10-25-week/sun-25-reel-f5.jpg",
-        "2026-10-25-week/sun-25-reel-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "fb_caption": "Every mark has a story. Hers is written in gold.\n\nThe scar from the summer you were nine. The one nobody sees. The year you'd rather forget, and the person you became because of it. Every mark tells where you've been.\n\nREMNANT, our new collection, is out today. Each piece starts from a break, a crack, a rough edge, and turns it into the part you look at first. Solid gold and black diamonds, made to order by hand.\n\nWhich piece would carry your story?\n\nSee the collection: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
-      },
-      {
-       "id": "w25-sun-story-1",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-25",
-       "time": "12:10",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "Kintsugi R117",
-       "hook": "Today. (light -> dark wipe) REMNANT out now",
-       "angle": "השקה: היום. סוף הספירה לאחור (3 ימים / 2 ימים / מחר / היום)",
-       "caption": "",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-25-week/sun-25-story-1.jpg",
-        "2026-10-25-week/sun-25-story-1-f1.jpg",
-        "2026-10-25-week/sun-25-story-1-f3.jpg",
-        "2026-10-25-week/sun-25-story-1-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור"
-      },
-      {
-       "id": "w25-sun-story-2",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-25",
-       "time": "17:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "Kintsugi R117 on-body (yellow, knit)",
-       "hook": "What shaped you / stays close.",
-       "angle": "מה שעיצב אותך נשאר קרוב: עונדים את זה קרוב לגוף",
-       "caption": "",
-       "music": "",
-       "thumbs": [
-        "2026-10-25-week/sun-25-story-2.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור"
-      },
-      {
-       "id": "w25-sun-story-3",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-25",
-       "time": "17:02",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "Review (Ashlee)",
-       "hook": "“This ring is so much better than I imagined. Seller was awesome every step of the way.”",
-       "angle": "ביקורת אמיתית מהאתר (Ashlee): הוכחה חברתית ביום ההשקה",
-       "caption": "",
-       "music": "",
-       "thumbs": [
-        "2026-10-25-week/sun-25-story-3.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור"
-      },
       {
        "id": "w25-mon-story-1",
        "batch": "2026-10-25-week",
@@ -1008,35 +901,14 @@
        "format": "9:16",
        "piece": "Kintsugi R117 on-body (rose, coffee)",
        "hook": "For the ordinary mornings / after the long nights.",
-       "angle": "הבקרים הרגילים אחרי הלילות הארוכים: תכשיט ליום-יום, לא רק לאירוע",
+       "angle": "הבקרים הרגילים אחרי הלילות הארוכים: תכשיט ליום-יום, לא רק לאירוע · אושר ע״י דניאל 25.10 ונכנס לתור",
        "caption": "",
        "music": "",
        "thumbs": [
         "2026-10-25-week/mon-26-story-1.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור"
-      },
-      {
-       "id": "w25-tue-story-1",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-27",
-       "time": "17:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "Smoothen (rose)",
-       "hook": "Time softens the edges. / It doesn't erase you.",
-       "angle": "הזמן מרכך את הקצוות אבל לא מוחק אותך (Smoothen, מעבר אור/חושך)",
-       "caption": "",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-25-week/tue-27-story-1.jpg",
-        "2026-10-25-week/tue-27-story-1-f1.jpg",
-        "2026-10-25-week/tue-27-story-1-f3.jpg",
-        "2026-10-25-week/tue-27-story-1-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור"
+       "status": "בתור"
       },
       {
        "id": "w25-tue-reel-ig",
@@ -1047,7 +919,7 @@
        "format": "9:16",
        "piece": "Kintsugi R117 (enamel fill)",
        "hook": "you don't have to / cover it up. -> let it show.",
-       "angle": "לא להסתיר את הצלקות: האמייל השחור בקווים, בכוונה, גלוי (03 the-fill מתוקן)",
+       "angle": "לא להסתיר את הצלקות: האמייל השחור בקווים, בכוונה, גלוי (03 the-fill מתוקן) · אושר ע״י דניאל 25.10 ונכנס לתור",
        "caption": "You don't have to cover it up.\n\nWe learn early to hide what broke. A smile over a bad week, a sleeve over a scar, \"I'm fine\" over everything. Some of it deserves to be seen.\n\nThis is the Kintsugi ring from REMNANT. Black enamel runs through every line in the gold, on purpose, where you can see it. Nothing smoothed over, nothing pretended.\n\nLet it show.\n\nKintsugi ring, made to order by hand: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
@@ -1060,7 +932,7 @@
         "2026-10-25-week/tue-27-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "fb_caption": "You don't have to cover it up.\n\nWe learn early to hide what broke. A smile over a bad week, a sleeve over a scar, \"I'm fine\" over everything. Some of it deserves to be seen.\n\nThis is the Kintsugi ring from REMNANT. Black enamel runs through every line in the gold, on purpose, where you can see it. Nothing smoothed over, nothing pretended.\n\nLet it show.\n\nKintsugi ring, made to order by hand: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
       },
       {
@@ -1072,7 +944,7 @@
        "format": "9:16",
        "piece": "Kintsugi R117 (enamel fill)",
        "hook": "you don't have to / cover it up. -> let it show.",
-       "angle": "לא להסתיר את הצלקות: האמייל השחור בקווים, בכוונה, גלוי (03 the-fill מתוקן)",
+       "angle": "לא להסתיר את הצלקות: האמייל השחור בקווים, בכוונה, גלוי (03 the-fill מתוקן) · אושר ע״י דניאל 25.10 ונכנס לתור",
        "caption": "You don't have to cover it up.\n\nWe learn early to hide what broke. A smile over a bad week, a sleeve over a scar, \"I'm fine\" over everything. Some of it deserves to be seen.\n\nThis is the Kintsugi ring from REMNANT. Black enamel runs through every line in the gold, on purpose, where you can see it. Nothing smoothed over, nothing pretended.\n\nLet it show.\n\nKintsugi ring, made to order by hand: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
@@ -1085,73 +957,8 @@
         "2026-10-25-week/tue-27-reel-f6.jpg"
        ],
        "images": [],
-       "status": "ממתין לאישור",
+       "status": "בתור",
        "fb_caption": "You don't have to cover it up.\n\nWe learn early to hide what broke. A smile over a bad week, a sleeve over a scar, \"I'm fine\" over everything. Some of it deserves to be seen.\n\nThis is the Kintsugi ring from REMNANT. Black enamel runs through every line in the gold, on purpose, where you can see it. Nothing smoothed over, nothing pretended.\n\nLet it show.\n\nKintsugi ring, made to order by hand: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
-      },
-      {
-       "id": "w25-wed-story-1",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-28",
-       "time": "17:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "Kintsugi R117",
-       "hook": "this is / a crack. -> your story. / the break is part of you. make it part of the design.",
-       "angle": "הסדק הוא הסיפור שלך: השבר הוא חלק ממך (04 this-is-a-crack מתוקן)",
-       "caption": "",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-25-week/wed-28-story-1-cover.jpg",
-        "2026-10-25-week/wed-28-story-1-f2.jpg",
-        "2026-10-25-week/wed-28-story-1-f4.jpg",
-        "2026-10-25-week/wed-28-story-1-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור"
-      },
-      {
-       "id": "w25-thu-carousel-ig",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-29",
-       "time": "18:00",
-       "platform": "ig_carousel",
-       "format": "4:5",
-       "piece": "Kintsugi R117 on-body x3 + review (Freddie)",
-       "hook": "One ring. / A different story on every hand.",
-       "angle": "אותה טבעת, סיפור אחר על כל יד (3 תמונות גוף + ביקורת Freddie)",
-       "caption": "One ring. A different story on every hand.\n\nThe same Kintsugi ring, three different moments: a leather jacket on the way out, a quiet minute with your chin in your hand, a slow morning that hasn't left the bed yet. The ring stays the same. The story behind it belongs to whoever wears it.\n\n“Beautiful ring. She loved it and said yes! Would highly recommend this seller.” Freddie\n\nWhose story would it carry on your hand? Tell us below.\n\nKintsugi from REMNANT, made to order by hand: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
-       "music": "",
-       "thumbs": [
-        "2026-10-25-week/thu-29-post-1.jpg",
-        "2026-10-25-week/thu-29-post-2.jpg",
-        "2026-10-25-week/thu-29-post-3.jpg",
-        "2026-10-25-week/thu-29-post-4.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "fb_caption": "One ring. A different story on every hand.\n\nThe same Kintsugi ring, three different moments: a leather jacket on the way out, a quiet minute with your chin in your hand, a slow morning that hasn't left the bed yet. The ring stays the same. The story behind it belongs to whoever wears it.\n\n“Beautiful ring. She loved it and said yes! Would highly recommend this seller.” Freddie\n\nWhose story would it carry on your hand? Tell us below.\n\nKintsugi from REMNANT, made to order by hand: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
-      },
-      {
-       "id": "w25-thu-carousel-fb",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-29",
-       "time": "18:00",
-       "platform": "fb_album",
-       "format": "4:5",
-       "piece": "Kintsugi R117 on-body x3 + review (Freddie)",
-       "hook": "One ring. / A different story on every hand.",
-       "angle": "אותה טבעת, סיפור אחר על כל יד (3 תמונות גוף + ביקורת Freddie)",
-       "caption": "One ring. A different story on every hand.\n\nThe same Kintsugi ring, three different moments: a leather jacket on the way out, a quiet minute with your chin in your hand, a slow morning that hasn't left the bed yet. The ring stays the same. The story behind it belongs to whoever wears it.\n\n“Beautiful ring. She loved it and said yes! Would highly recommend this seller.” Freddie\n\nWhose story would it carry on your hand? Tell us below.\n\nKintsugi from REMNANT, made to order by hand: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
-       "music": "",
-       "thumbs": [
-        "2026-10-25-week/thu-29-post-1.jpg",
-        "2026-10-25-week/thu-29-post-2.jpg",
-        "2026-10-25-week/thu-29-post-3.jpg",
-        "2026-10-25-week/thu-29-post-4.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "fb_caption": "One ring. A different story on every hand.\n\nThe same Kintsugi ring, three different moments: a leather jacket on the way out, a quiet minute with your chin in your hand, a slow morning that hasn't left the bed yet. The ring stays the same. The story behind it belongs to whoever wears it.\n\n“Beautiful ring. She loved it and said yes! Would highly recommend this seller.” Freddie\n\nWhose story would it carry on your hand? Tell us below.\n\nKintsugi from REMNANT, made to order by hand: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
       },
       {
        "id": "w25-thu-story-1",
@@ -1162,29 +969,11 @@
        "format": "9:16",
        "piece": "Review (Bridgett) + conversation invite",
        "hook": "Thinking about your own? Message us. / A real person answers, never an AI.",
-       "angle": "הזמנה לשיחה: ביקורת Bridgett על השאלות שנענו + אדם אמיתי עונה (המקום היחיד השבוע שזה בהקשר)",
+       "angle": "הזמנה לשיחה: ביקורת Bridgett על השאלות שנענו + אדם אמיתי עונה (המקום היחיד השבוע שזה בהקשר) · מגרסה 1, דניאל לא התייחס אליו, עדיין ממתין לאישור",
        "caption": "",
        "music": "",
        "thumbs": [
         "2026-10-25-week/thu-29-story-1.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור"
-      },
-      {
-       "id": "w25-fri-story-1",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-30",
-       "time": "17:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "Kintsugi R117 on-body (white, hair)",
-       "hook": "For the one who stayed / when it all fell apart.",
-       "angle": "מתנה: למי שנשאר/ה כשהכול התפרק (זווית מתנה לקראת העונה)",
-       "caption": "",
-       "music": "",
-       "thumbs": [
-        "2026-10-25-week/fri-30-story-1.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור"
@@ -1198,7 +987,7 @@
        "format": "9:16",
        "piece": "Gravitational Wave",
        "hook": "Your dark side / was never a costume.",
-       "angle": "האלווין בטעם: הצד האפל שלך הוא לא תחפושת (DUALITY)",
+       "angle": "האלווין בטעם: הצד האפל שלך הוא לא תחפושת (DUALITY) · מגרסה 1, דניאל לא התייחס אליו, עדיין ממתין לאישור",
        "caption": "",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
@@ -1211,54 +1000,498 @@
        "status": "ממתין לאישור"
       },
       {
-       "id": "w25-sat-reel-ig",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-31",
+       "id": "v3-sun-25-story-a",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-25",
+       "time": "19:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrivals R541 (large) + R491 heart, on hand",
+       "hook": "Polished on the outside. / Deep on the inside.",
+       "angle": "עמוד מגזין: שתי טבעות חדשות על יד, דואליות מבחוץ/מבפנים, הזמנה לשיחה",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/sun-25-story-a.jpg",
+        "2026-10-25-week-v3/sun-25-story-a-f1.jpg",
+        "2026-10-25-week-v3/sun-25-story-a-f2.jpg",
+        "2026-10-25-week-v3/sun-25-story-a-f3.jpg",
+        "2026-10-25-week-v3/sun-25-story-a-f4.jpg",
+        "2026-10-25-week-v3/sun-25-story-a-f5.jpg",
+        "2026-10-25-week-v3/sun-25-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/sun-25-story-a.mp4"
+      },
+      {
+       "id": "v3-sun-25-story-b",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-25",
+       "time": "21:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customers (Mary, two brides, a couple at home)",
+       "hook": "Every ring here / has a someone. -> Thank you for letting us / be part of it.",
+       "angle": "תמונות לקוחות אמיתיות: לכל טבעת יש מישהו. תודה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/sun-25-story-b.jpg",
+        "2026-10-25-week-v3/sun-25-story-b-f1.jpg",
+        "2026-10-25-week-v3/sun-25-story-b-f2.jpg",
+        "2026-10-25-week-v3/sun-25-story-b-f3.jpg",
+        "2026-10-25-week-v3/sun-25-story-b-f4.jpg",
+        "2026-10-25-week-v3/sun-25-story-b-f5.jpg",
+        "2026-10-25-week-v3/sun-25-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/sun-25-story-b.mp4"
+      },
+      {
+       "id": "v3-mon-26-story-a",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-26",
+       "time": "11:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Ready to ship: Pera Scura (black pear, yellow gold)",
+       "hook": "Ready to ship. / One of each.",
+       "angle": "מוכן למשלוח (החיסול/ארכיון): פרה סקורה, 3 תמונות במעבר דואליות, מחיר + מחיר קודם",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/mon-26-story-a.jpg",
+        "2026-10-25-week-v3/mon-26-story-a-f1.jpg",
+        "2026-10-25-week-v3/mon-26-story-a-f2.jpg",
+        "2026-10-25-week-v3/mon-26-story-a-f3.jpg",
+        "2026-10-25-week-v3/mon-26-story-a-f4.jpg",
+        "2026-10-25-week-v3/mon-26-story-a-f5.jpg",
+        "2026-10-25-week-v3/mon-26-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/mon-26-story-a.mp4"
+      },
+      {
+       "id": "v3-mon-26-post",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-26",
+       "time": "19:00",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "Ready to ship: Triangulum, Portal, Mystery Soirée, Fractals",
+       "hook": "Ready to ship. / One of each.",
+       "angle": "קרוסלה: 4 טבעות מוכנות למשלוח עם מחירים, אחת מכל אחת",
+       "music": "",
+       "thumbs": [
+        "2026-10-25-week-v3/mon-26-post-1.jpg",
+        "2026-10-25-week-v3/mon-26-post-2.jpg",
+        "2026-10-25-week-v3/mon-26-post-3.jpg",
+        "2026-10-25-week-v3/mon-26-post-4.jpg",
+        "2026-10-25-week-v3/mon-26-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "Ready to ship. One of each.\n\nSome rings are made once and wait for the right hand. Each of these is finished and ready to leave the studio, and when it goes, it's gone.\n\nTriangulum, a black triangle in yellow gold: $1,100 (was $2,066)\nPortal, a black cushion in rose gold: $1,400 (was $2,588)\nMystery Soirée, a black oval in rose gold: $750 (was $1,723)\nFractals, one of a kind: $750 (was $1,408)\n\nA question about one of them? Message us. A real person answers.\n\nReady to ship: link in bio.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael"
+      },
+      {
+       "id": "v3-mon-26-post-fb",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-26",
+       "time": "19:00",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "Ready to ship: Triangulum, Portal, Mystery Soirée, Fractals",
+       "hook": "Ready to ship. / One of each.",
+       "angle": "קרוסלה: 4 טבעות מוכנות למשלוח עם מחירים, אחת מכל אחת",
+       "music": "",
+       "thumbs": [
+        "2026-10-25-week-v3/mon-26-post-1.jpg",
+        "2026-10-25-week-v3/mon-26-post-2.jpg",
+        "2026-10-25-week-v3/mon-26-post-3.jpg",
+        "2026-10-25-week-v3/mon-26-post-4.jpg",
+        "2026-10-25-week-v3/mon-26-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "Ready to ship. One of each.\n\nSome rings are made once and wait for the right hand. Each of these is finished and ready to leave the studio, and when it goes, it's gone.\n\nTriangulum, a black triangle in yellow gold: $1,100 (was $2,066)\nPortal, a black cushion in rose gold: $1,400 (was $2,588)\nMystery Soirée, a black oval in rose gold: $750 (was $1,723)\nFractals, one of a kind: $750 (was $1,408)\n\nA question about one of them? Message us. A real person answers.\n\nReady to ship: https://dianarafael.com/collections/featured-items\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael"
+      },
+      {
+       "id": "v3-mon-26-story-c",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-26",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Renee) + conversation invite",
+       "hook": "“I wanted a custom design, and I got a quick response…” / Have a design in your head? Message us.",
+       "angle": "ביקורת אמיתית (Renee) על עיצוב אישי ותגובה מהירה + הזמנה לשיחה עם בן אדם אמיתי",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/mon-26-story-c.jpg",
+        "2026-10-25-week-v3/mon-26-story-c-f1.jpg",
+        "2026-10-25-week-v3/mon-26-story-c-f2.jpg",
+        "2026-10-25-week-v3/mon-26-story-c-f3.jpg",
+        "2026-10-25-week-v3/mon-26-story-c-f4.jpg",
+        "2026-10-25-week-v3/mon-26-story-c-f5.jpg",
+        "2026-10-25-week-v3/mon-26-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/mon-26-story-c.mp4"
+      },
+      {
+       "id": "v3-tue-27-story-a",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-27",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Smoothen R116 (rose gold)",
+       "hook": "ROUGH -> BREAK -> REBUILD -> POLISH: So collapse. / Crumble. / This is not your destruction. / This is your birth. -> What remains, becomes.",
+       "angle": "נבנה מחדש לפי דניאל: ציר זמן של לידה מחדש. הטבעת עוברת מגלם מחוספס לליטוש, המילים מדף המסרים של הקולקציה (r.h. sin + What remains, becomes)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/tue-27-story-a.jpg",
+        "2026-10-25-week-v3/tue-27-story-a-f1.jpg",
+        "2026-10-25-week-v3/tue-27-story-a-f2.jpg",
+        "2026-10-25-week-v3/tue-27-story-a-f3.jpg",
+        "2026-10-25-week-v3/tue-27-story-a-f4.jpg",
+        "2026-10-25-week-v3/tue-27-story-a-f5.jpg",
+        "2026-10-25-week-v3/tue-27-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/tue-27-story-a.mp4"
+      },
+      {
+       "id": "v3-tue-27-story-c",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-27",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival R513 (oval with side stones), on hand",
+       "hook": "You can be gentle / and still hold your ground.",
+       "angle": "טבעת חדשה על יד: עדינות וחוזק באותו אדם",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/tue-27-story-c.jpg",
+        "2026-10-25-week-v3/tue-27-story-c-f1.jpg",
+        "2026-10-25-week-v3/tue-27-story-c-f2.jpg",
+        "2026-10-25-week-v3/tue-27-story-c-f3.jpg",
+        "2026-10-25-week-v3/tue-27-story-c-f4.jpg",
+        "2026-10-25-week-v3/tue-27-story-c-f5.jpg",
+        "2026-10-25-week-v3/tue-27-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/tue-27-story-c.mp4"
+      },
+      {
+       "id": "v3-wed-28-story-a",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-28",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Gravitational Wave band (yellow, white diamond)",
+       "hook": "Some moments travel / further than you think.",
+       "angle": "לפי דניאל: רקע שזז כמו גל כבידה בחלל, הטבעת צפה על הגל; רגעים שמשנים הכול",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/wed-28-story-a.jpg",
+        "2026-10-25-week-v3/wed-28-story-a-f1.jpg",
+        "2026-10-25-week-v3/wed-28-story-a-f2.jpg",
+        "2026-10-25-week-v3/wed-28-story-a-f3.jpg",
+        "2026-10-25-week-v3/wed-28-story-a-f4.jpg",
+        "2026-10-25-week-v3/wed-28-story-a-f5.jpg",
+        "2026-10-25-week-v3/wed-28-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/wed-28-story-a.mp4"
+      },
+      {
+       "id": "v3-wed-28-story-b",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-28",
+       "time": "16:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customers: Tomer & Yuval's wedding",
+       "hook": "The rings were ours. / The day was theirs.",
+       "angle": "חתונה אמיתית של לקוחות",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/wed-28-story-b.jpg",
+        "2026-10-25-week-v3/wed-28-story-b-f1.jpg",
+        "2026-10-25-week-v3/wed-28-story-b-f2.jpg",
+        "2026-10-25-week-v3/wed-28-story-b-f3.jpg",
+        "2026-10-25-week-v3/wed-28-story-b-f4.jpg",
+        "2026-10-25-week-v3/wed-28-story-b-f5.jpg",
+        "2026-10-25-week-v3/wed-28-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/wed-28-story-b.mp4"
+      },
+      {
+       "id": "v3-wed-28-reel",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-28",
        "time": "18:00",
        "platform": "ig_reel",
        "format": "9:16",
-       "piece": "Kintsugi R117 (shards)",
-       "hook": "some days you / fall apart. -> piece by piece, / you come back together.",
-       "angle": "מתפרקים וחוזרים, חתיכה אחרי חתיכה; ערב האלווין (02 shards-loop מתוקן)",
-       "caption": "Some days you fall apart. Piece by piece, you come back together.\n\nNobody puts themselves back together in one night. It's a thousand small returns: a call you answer, a walk you take, a morning you get up anyway. And you don't come back exactly the same. You come back with the lines showing.\n\nThat's the Kintsugi ring from REMNANT: shaped from the break, held together in gold.\n\nTonight is Halloween, the one night everyone shows a darker side. Yours is welcome here all year.\n\nREMNANT: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "piece": "New arrivals R516, R483, R499, R513 (magazine pages)",
+       "hook": "Soft is not / the same as weak. -> Hold on to what matters. / Let go of the rest. -> Light and dark were never opposites.",
+       "angle": "ריל מגזין: עמודים מתהפכים עם טבעות חדשות על יד, דואליות, הזמנה לשיחה (לא באתר עדיין, בלי קישור)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-10-25-week/sat-31-reel-cover.jpg",
-        "2026-10-25-week/sat-31-reel-f1.jpg",
-        "2026-10-25-week/sat-31-reel-f2.jpg",
-        "2026-10-25-week/sat-31-reel-f3.jpg",
-        "2026-10-25-week/sat-31-reel-f4.jpg",
-        "2026-10-25-week/sat-31-reel-f5.jpg",
-        "2026-10-25-week/sat-31-reel-f6.jpg"
+        "2026-10-25-week-v3/wed-28-reel-cover.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f1.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f2.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f3.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f4.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f5.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f6.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
-       "fb_caption": "Some days you fall apart. Piece by piece, you come back together.\n\nNobody puts themselves back together in one night. It's a thousand small returns: a call you answer, a walk you take, a morning you get up anyway. And you don't come back exactly the same. You come back with the lines showing.\n\nThat's the Kintsugi ring from REMNANT: shaped from the break, held together in gold.\n\nTonight is Halloween, the one night everyone shows a darker side. Yours is welcome here all year.\n\nREMNANT: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
+       "caption": "Soft is not the same as weak.\n\nNew in the studio: black stones held in gold, for the people who carry both sides of themselves. The gentle and the fierce. What you hold on to and what you let go.\n\nEach one is made to order, by hand. They're not on the site yet, so message us to make one yours. A real person answers, never an AI.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
+       "video": "2026-10-25-week-v3/wed-28-reel.mp4"
       },
       {
-       "id": "w25-sat-reel-fb",
-       "batch": "2026-10-25-week",
-       "date": "2026-10-31",
+       "id": "v3-wed-28-reel-fb",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-28",
        "time": "18:00",
        "platform": "fb_reel",
        "format": "9:16",
-       "piece": "Kintsugi R117 (shards)",
-       "hook": "some days you / fall apart. -> piece by piece, / you come back together.",
-       "angle": "מתפרקים וחוזרים, חתיכה אחרי חתיכה; ערב האלווין (02 shards-loop מתוקן)",
-       "caption": "Some days you fall apart. Piece by piece, you come back together.\n\nNobody puts themselves back together in one night. It's a thousand small returns: a call you answer, a walk you take, a morning you get up anyway. And you don't come back exactly the same. You come back with the lines showing.\n\nThat's the Kintsugi ring from REMNANT: shaped from the break, held together in gold.\n\nTonight is Halloween, the one night everyone shows a darker side. Yours is welcome here all year.\n\nREMNANT: link in bio.\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "piece": "New arrivals R516, R483, R499, R513 (magazine pages)",
+       "hook": "Soft is not / the same as weak. -> Hold on to what matters. / Let go of the rest. -> Light and dark were never opposites.",
+       "angle": "ריל מגזין: עמודים מתהפכים עם טבעות חדשות על יד, דואליות, הזמנה לשיחה (לא באתר עדיין, בלי קישור)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-10-25-week/sat-31-reel-cover.jpg",
-        "2026-10-25-week/sat-31-reel-f1.jpg",
-        "2026-10-25-week/sat-31-reel-f2.jpg",
-        "2026-10-25-week/sat-31-reel-f3.jpg",
-        "2026-10-25-week/sat-31-reel-f4.jpg",
-        "2026-10-25-week/sat-31-reel-f5.jpg",
-        "2026-10-25-week/sat-31-reel-f6.jpg"
+        "2026-10-25-week-v3/wed-28-reel-cover.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f1.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f2.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f3.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f4.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f5.jpg",
+        "2026-10-25-week-v3/wed-28-reel-f6.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
-       "fb_caption": "Some days you fall apart. Piece by piece, you come back together.\n\nNobody puts themselves back together in one night. It's a thousand small returns: a call you answer, a walk you take, a morning you get up anyway. And you don't come back exactly the same. You come back with the lines showing.\n\nThat's the Kintsugi ring from REMNANT: shaped from the break, held together in gold.\n\nTonight is Halloween, the one night everyone shows a darker side. Yours is welcome here all year.\n\nREMNANT: https://dianarafael.com/collections/remnant\n\n#REMNANT #kintsugi #kintsugijewelry #blackdiamond #blackdiamondring #finejewelry #meaningfuljewelry #solidgold #handmadejewelry #dianarafael"
+       "caption": "Soft is not the same as weak.\n\nNew in the studio: black stones held in gold, for the people who carry both sides of themselves. The gentle and the fierce. What you hold on to and what you let go.\n\nEach one is made to order, by hand. They're not on the site yet, so message us to make one yours. A real person answers, never an AI.\n\n#blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
+       "video": "2026-10-25-week-v3/wed-28-reel.mp4"
+      },
+      {
+       "id": "v3-thu-29-story-a",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-29",
+       "time": "11:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Ready to ship: Orion's Belt tennis necklace (rose gold)",
+       "hook": "Ready to ship. / One of each.",
+       "angle": "מוכן למשלוח: שרשרת טניס, גם תכשיט שאינו טבעת",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/thu-29-story-a.jpg",
+        "2026-10-25-week-v3/thu-29-story-a-f1.jpg",
+        "2026-10-25-week-v3/thu-29-story-a-f2.jpg",
+        "2026-10-25-week-v3/thu-29-story-a-f3.jpg",
+        "2026-10-25-week-v3/thu-29-story-a-f4.jpg",
+        "2026-10-25-week-v3/thu-29-story-a-f5.jpg",
+        "2026-10-25-week-v3/thu-29-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/thu-29-story-a.mp4"
+      },
+      {
+       "id": "v3-thu-29-story-b",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-29",
+       "time": "16:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrivals R520 V band + R507 east-west baguette, on hand",
+       "hook": "Made for every day. / Especially the hard ones.",
+       "angle": "עמוד מגזין: טבעות חדשות ליום-יום, גם לימים הקשים",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/thu-29-story-b.jpg",
+        "2026-10-25-week-v3/thu-29-story-b-f1.jpg",
+        "2026-10-25-week-v3/thu-29-story-b-f2.jpg",
+        "2026-10-25-week-v3/thu-29-story-b-f3.jpg",
+        "2026-10-25-week-v3/thu-29-story-b-f4.jpg",
+        "2026-10-25-week-v3/thu-29-story-b-f5.jpg",
+        "2026-10-25-week-v3/thu-29-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/thu-29-story-b.mp4"
+      },
+      {
+       "id": "v3-fri-30-story-a",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-30",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customers: Kenneth's proposal kiss",
+       "hook": "Somewhere tonight, / someone says yes.",
+       "angle": "תמונת לקוחות אמיתית לפני סוף השבוע: מישהו אומר כן",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/fri-30-story-a.jpg",
+        "2026-10-25-week-v3/fri-30-story-a-f1.jpg",
+        "2026-10-25-week-v3/fri-30-story-a-f2.jpg",
+        "2026-10-25-week-v3/fri-30-story-a-f3.jpg",
+        "2026-10-25-week-v3/fri-30-story-a-f4.jpg",
+        "2026-10-25-week-v3/fri-30-story-a-f5.jpg",
+        "2026-10-25-week-v3/fri-30-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/fri-30-story-a.mp4"
+      },
+      {
+       "id": "v3-fri-30-reel",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-30",
+       "time": "18:00",
+       "platform": "ig_reel",
+       "format": "9:16",
+       "piece": "Engagement + matching bands: Gravitational Wave set, Matahari + Whiteflash, R111 + R085",
+       "hook": "The first ring asks. / The second one answers. -> Made to be worn together. -> One promise. Then another.",
+       "angle": "לפי דניאל: טבעות אירוסין עם טבעות הנישואין התואמות; זוג GW ברינדור + שני סטים על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/fri-30-reel-cover.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f1.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f2.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f3.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f4.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f5.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "The first ring asks. The second one answers.\n\nAn engagement ring is a question. The band is the answer you keep giving, every day after. We design them to be worn together, so the two read as one story on your hand.\n\nThe Gravitational Wave engagement ring and its band, and more pairs like them, made to order.\n\nLooking for the band that matches yours? Message us. A real person answers.\n\nSee the Gravitational Wave set: link in bio.\n\n#engagementring #weddingband #bridalset #ringstack #blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
+       "video": "2026-10-25-week-v3/fri-30-reel.mp4"
+      },
+      {
+       "id": "v3-fri-30-reel-fb",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-30",
+       "time": "18:00",
+       "platform": "fb_reel",
+       "format": "9:16",
+       "piece": "Engagement + matching bands: Gravitational Wave set, Matahari + Whiteflash, R111 + R085",
+       "hook": "The first ring asks. / The second one answers. -> Made to be worn together. -> One promise. Then another.",
+       "angle": "לפי דניאל: טבעות אירוסין עם טבעות הנישואין התואמות; זוג GW ברינדור + שני סטים על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/fri-30-reel-cover.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f1.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f2.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f3.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f4.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f5.jpg",
+        "2026-10-25-week-v3/fri-30-reel-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "The first ring asks. The second one answers.\n\nAn engagement ring is a question. The band is the answer you keep giving, every day after. We design them to be worn together, so the two read as one story on your hand.\n\nThe Gravitational Wave engagement ring and its band, and more pairs like them, made to order.\n\nLooking for the band that matches yours? Message us. A real person answers.\n\nSee the Gravitational Wave set: https://dianarafael.com/collections/remnant\n\n#engagementring #weddingband #bridalset #ringstack #blackdiamond #blackdiamondring #blackdiamondengagementring #finejewelry #handmadejewelry #dianarafael",
+       "video": "2026-10-25-week-v3/fri-30-reel.mp4"
+      },
+      {
+       "id": "v3-fri-30-story-b",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-30",
+       "time": "20:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival R499 (marquise between wings), on hand",
+       "hook": "Not everything bright / has to be loud.",
+       "angle": "טבעת חדשה על יד: אור שקט, דואליות",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/fri-30-story-b.jpg",
+        "2026-10-25-week-v3/fri-30-story-b-f1.jpg",
+        "2026-10-25-week-v3/fri-30-story-b-f2.jpg",
+        "2026-10-25-week-v3/fri-30-story-b-f3.jpg",
+        "2026-10-25-week-v3/fri-30-story-b-f4.jpg",
+        "2026-10-25-week-v3/fri-30-story-b-f5.jpg",
+        "2026-10-25-week-v3/fri-30-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/fri-30-story-b.mp4"
+      },
+      {
+       "id": "v3-sat-31-story-a",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-31",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customers: Roger's proposal (Halloween decorations)",
+       "hook": "Happy Halloween / from one of our favorite yeses.",
+       "angle": "האלווין: הצעת נישואין אמיתית של לקוח בין דלעות",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/sat-31-story-a.jpg",
+        "2026-10-25-week-v3/sat-31-story-a-f1.jpg",
+        "2026-10-25-week-v3/sat-31-story-a-f2.jpg",
+        "2026-10-25-week-v3/sat-31-story-a-f3.jpg",
+        "2026-10-25-week-v3/sat-31-story-a-f4.jpg",
+        "2026-10-25-week-v3/sat-31-story-a-f5.jpg",
+        "2026-10-25-week-v3/sat-31-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/sat-31-story-a.mp4"
+      },
+      {
+       "id": "v3-sat-31-story-c",
+       "batch": "2026-10-25-week-v3",
+       "date": "2026-10-31",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival R520 V band (rose), on hand",
+       "hook": "Darkness looks good / on you.",
+       "angle": "ערב האלווין: הצד האפל יפה עלייך",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-25-week-v3/sat-31-story-c.jpg",
+        "2026-10-25-week-v3/sat-31-story-c-f1.jpg",
+        "2026-10-25-week-v3/sat-31-story-c-f2.jpg",
+        "2026-10-25-week-v3/sat-31-story-c-f3.jpg",
+        "2026-10-25-week-v3/sat-31-story-c-f4.jpg",
+        "2026-10-25-week-v3/sat-31-story-c-f5.jpg",
+        "2026-10-25-week-v3/sat-31-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-25-week-v3/sat-31-story-c.mp4"
       }
      ]
     }
@@ -1369,7 +1602,7 @@
   },
   "tables": [
    {
-    "title": "יומן המסרים (29)",
+    "title": "יומן המסרים (46)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -1394,7 +1627,23 @@
       "Kintsugi R117 (shards)",
       "some days you / fall apart. -> piece by piece, / you come back together.",
       "מתפרקים וחוזרים, חתיכה אחרי חתיכה; ערב האלווין (02 shards-loop מתוקן)",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
+     ],
+     [
+      "31.10",
+      "Instagram story (EN)",
+      "Real customers: Roger's proposal (Halloween decorations)",
+      "Happy Halloween / from one of our favorite yeses.",
+      "האלווין: הצעת נישואין אמיתית של לקוח בין דלעות",
+      "נפסל"
+     ],
+     [
+      "31.10",
+      "Instagram story (EN)",
+      "New arrival R520 V band (rose), on hand",
+      "Darkness looks good / on you.",
+      "ערב האלווין: הצד האפל יפה עלייך",
+      "נפסל"
      ],
      [
       "30.10",
@@ -1402,7 +1651,31 @@
       "Kintsugi R117 on-body (white, hair)",
       "For the one who stayed / when it all fell apart.",
       "מתנה: למי שנשאר/ה כשהכול התפרק (זווית מתנה לקראת העונה)",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
+     ],
+     [
+      "30.10",
+      "Instagram story (EN)",
+      "Real customers: Kenneth's proposal kiss",
+      "Somewhere tonight, / someone says yes.",
+      "תמונת לקוחות אמיתית לפני סוף השבוע: מישהו אומר כן",
+      "נפסל"
+     ],
+     [
+      "30.10",
+      "Instagram reel + Facebook reel",
+      "Engagement + matching bands: Gravitational Wave set, Matahari + Whiteflash, R111 + R085",
+      "The first ring asks. / The second one answers. -> Made to be worn together. -> One promise. Then another.",
+      "לפי דניאל: טבעות אירוסין עם טבעות הנישואין התואמות; זוג GW ברינדור + שני סטים על יד",
+      "נפסל"
+     ],
+     [
+      "30.10",
+      "Instagram story (EN)",
+      "New arrival R499 (marquise between wings), on hand",
+      "Not everything bright / has to be loud.",
+      "טבעת חדשה על יד: אור שקט, דואליות",
+      "נפסל"
      ],
      [
       "29.10",
@@ -1410,7 +1683,7 @@
       "Kintsugi R117 on-body x3 + review (Freddie)",
       "One ring. / A different story on every hand.",
       "אותה טבעת, סיפור אחר על כל יד (3 תמונות גוף + ביקורת Freddie)",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
      ],
      [
       "29.10",
@@ -1421,12 +1694,52 @@
       "מתוכנן, ממתין לאישור"
      ],
      [
+      "29.10",
+      "Instagram story (EN)",
+      "Ready to ship: Orion's Belt tennis necklace (rose gold)",
+      "Ready to ship. / One of each.",
+      "מוכן למשלוח: שרשרת טניס, גם תכשיט שאינו טבעת",
+      "נפסל"
+     ],
+     [
+      "29.10",
+      "Instagram story (EN)",
+      "New arrivals R520 V band + R507 east-west baguette, on hand",
+      "Made for every day. / Especially the hard ones.",
+      "עמוד מגזין: טבעות חדשות ליום-יום, גם לימים הקשים",
+      "נפסל"
+     ],
+     [
       "28.10",
       "Instagram story (EN)",
       "Kintsugi R117",
       "this is / a crack. -> your story. / the break is part of you. make it part of the design.",
       "הסדק הוא הסיפור שלך: השבר הוא חלק ממך (04 this-is-a-crack מתוקן)",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
+     ],
+     [
+      "28.10",
+      "Instagram story (EN)",
+      "Gravitational Wave band (yellow, white diamond)",
+      "Some moments travel / further than you think.",
+      "לפי דניאל: רקע שזז כמו גל כבידה בחלל, הטבעת צפה על הגל; רגעים שמשנים הכול",
+      "נפסל"
+     ],
+     [
+      "28.10",
+      "Instagram story (EN)",
+      "Real customers: Tomer & Yuval's wedding",
+      "The rings were ours. / The day was theirs.",
+      "חתונה אמיתית של לקוחות",
+      "נפסל"
+     ],
+     [
+      "28.10",
+      "Instagram reel + Facebook reel",
+      "New arrivals R516, R483, R499, R513 (magazine pages)",
+      "Soft is not / the same as weak. -> Hold on to what matters. / Let go of the rest. -> Light and dark were never opposites.",
+      "ריל מגזין: עמודים מתהפכים עם טבעות חדשות על יד, דואליות, הזמנה לשיחה (לא באתר עדיין, בלי קישור)",
+      "נפסל"
      ],
      [
       "27.10",
@@ -1434,7 +1747,7 @@
       "Smoothen (rose)",
       "Time softens the edges. / It doesn't erase you.",
       "הזמן מרכך את הקצוות אבל לא מוחק אותך (Smoothen, מעבר אור/חושך)",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
      ],
      [
       "27.10",
@@ -1442,7 +1755,23 @@
       "Kintsugi R117 (enamel fill)",
       "you don't have to / cover it up. -> let it show.",
       "לא להסתיר את הצלקות: האמייל השחור בקווים, בכוונה, גלוי (03 the-fill מתוקן)",
-      "מתוכנן, ממתין לאישור"
+      "בתור"
+     ],
+     [
+      "27.10",
+      "Instagram story (EN)",
+      "Smoothen R116 (rose gold)",
+      "ROUGH -> BREAK -> REBUILD -> POLISH: So collapse. / Crumble. / This is not your destruction. / This is your birth. -> What remains, becomes.",
+      "נבנה מחדש לפי דניאל: ציר זמן של לידה מחדש. הטבעת עוברת מגלם מחוספס לליטוש, המילים מדף המסרים של הקולקציה (r.h. sin + What remains, becomes)",
+      "נפסל"
+     ],
+     [
+      "27.10",
+      "Instagram story (EN)",
+      "New arrival R513 (oval with side stones), on hand",
+      "You can be gentle / and still hold your ground.",
+      "טבעת חדשה על יד: עדינות וחוזק באותו אדם",
+      "נפסל"
      ],
      [
       "26.10",
@@ -1450,7 +1779,31 @@
       "Kintsugi R117 on-body (rose, coffee)",
       "For the ordinary mornings / after the long nights.",
       "הבקרים הרגילים אחרי הלילות הארוכים: תכשיט ליום-יום, לא רק לאירוע",
-      "מתוכנן, ממתין לאישור"
+      "בתור"
+     ],
+     [
+      "26.10",
+      "Instagram story (EN)",
+      "Ready to ship: Pera Scura (black pear, yellow gold)",
+      "Ready to ship. / One of each.",
+      "מוכן למשלוח (החיסול/ארכיון): פרה סקורה, 3 תמונות במעבר דואליות, מחיר + מחיר קודם",
+      "נפסל"
+     ],
+     [
+      "26.10",
+      "Instagram carousel + Facebook album",
+      "Ready to ship: Triangulum, Portal, Mystery Soirée, Fractals",
+      "Ready to ship. / One of each.",
+      "קרוסלה: 4 טבעות מוכנות למשלוח עם מחירים, אחת מכל אחת",
+      "נפסל"
+     ],
+     [
+      "26.10",
+      "Instagram story (EN)",
+      "Review (Renee) + conversation invite",
+      "“I wanted a custom design, and I got a quick response…” / Have a design in your head? Message us.",
+      "ביקורת אמיתית (Renee) על עיצוב אישי ותגובה מהירה + הזמנה לשיחה עם בן אדם אמיתי",
+      "נפסל"
      ],
      [
       "25.10",
@@ -1458,7 +1811,7 @@
       "Kintsugi R117",
       "every mark / has a story. -> hers is written / in gold.",
       "יום ההשקה: לכל סימן יש סיפור, ו-REMNANT כותבת אותו בזהב (06 she-breaks מתוקן)",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
      ],
      [
       "25.10",
@@ -1466,7 +1819,7 @@
       "Kintsugi R117",
       "Today. (light -> dark wipe) REMNANT out now",
       "השקה: היום. סוף הספירה לאחור (3 ימים / 2 ימים / מחר / היום)",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
      ],
      [
       "25.10",
@@ -1474,7 +1827,7 @@
       "Kintsugi R117 on-body (yellow, knit)",
       "What shaped you / stays close.",
       "מה שעיצב אותך נשאר קרוב: עונדים את זה קרוב לגוף",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
      ],
      [
       "25.10",
@@ -1482,7 +1835,23 @@
       "Review (Ashlee)",
       "“This ring is so much better than I imagined. Seller was awesome every step of the way.”",
       "ביקורת אמיתית מהאתר (Ashlee): הוכחה חברתית ביום ההשקה",
-      "מתוכנן, ממתין לאישור"
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram story (EN)",
+      "New arrivals R541 (large) + R491 heart, on hand",
+      "Polished on the outside. / Deep on the inside.",
+      "עמוד מגזין: שתי טבעות חדשות על יד, דואליות מבחוץ/מבפנים, הזמנה לשיחה",
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram story (EN)",
+      "Real customers (Mary, two brides, a couple at home)",
+      "Every ring here / has a someone. -> Thank you for letting us / be part of it.",
+      "תמונות לקוחות אמיתיות: לכל טבעת יש מישהו. תודה",
+      "נפסל"
      ],
      [
       "24.10",
@@ -1522,7 +1891,7 @@
       "Black Ice (oval in hand, emerald B&W)",
       "Not all light is bright.",
       "DUALITY through the black diamond: light that runs deep and shines anyway; black and white held in balance; a love that holds both sides of you; real review (Renee); a real person answers. (Reworked 20.10: buyer's-guide/education version rejected)",
-      "rejected"
+      "נפסל"
      ],
      [
       "21.10",
@@ -1530,7 +1899,7 @@
       "Reviews (Nia) + emerald B&W",
       "Review (Nia) / Your light. Your dark. One ring. / pointer to the reel",
       "Social proof + duality + human-only service",
-      "rejected"
+      "נפסל"
      ],
      [
       "21.10",
