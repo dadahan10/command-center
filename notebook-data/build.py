@@ -55,7 +55,7 @@ for c in chapters:
                        "rows": [[dmy(x.get("date")), x.get("platform", ""), x.get("piece", ""), x.get("hook", ""),
                                  x.get("message_angle", ""), LEDGER_ST.get(x.get("status"), x.get("status", ""))] for x in lg],
                        "empty": "עוד לא נרשם כלום"})
-    c["tables"] = tables
+    c["tables"] = c.get("tables", []) + tables  # chapter-authored tables (e.g. Monday ideas) stay on top
 
 assert len({c["id"] for c in chapters}) == len(chapters)
 with open(os.path.join(HERE, "chapters.json"), "w", encoding="utf-8") as f:

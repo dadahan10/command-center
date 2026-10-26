@@ -432,7 +432,7 @@
   "group": "remnant",
   "kind": "business",
   "status": "active",
-  "last_update": "2026-10-19",
+  "last_update": "2026-10-26",
   "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. הלוח כולל סטוריז באינסטגרם באנגלית, ועוד 2–3 פוסטים בעברית לפייסבוק, ל-X וללינקדאין: קודם פוסט על קולקציית REMNANT, ואחריו פוסט לכל עיצוב, כל 2–3 ימים. שום דבר לא נכנס לתור לפני שאישרת. הפיילוט אושר ב-19.10 והוא בתור: קרוסלה באינסטגרם ואלבום בפייסבוק ביום שלישי 20.10 ב-16:30, ו-4 סטוריז בין 17:00 ל-17:06. לחיצה על כרטיס פותחת את כל השקפים ואת הכיתוב המלא.",
   "rules": {
    "title": "כללי התוכן",
@@ -443,6 +443,7 @@
    ]
   },
   "next_tasks": [
+   "26.10: דניאל בוחר 2 מתוך רשימת הרעיונות לתוכן מועיל (טבלה למטה)",
    "רביעי 22.10: להציג כאן את לוח השבוע 25–31.10 לאישור",
    "אחרי האישור: להכניס לתור רק את מה שאושר ולסמן 'בתור'",
    "אחרי כל פרסום: לסמן 'פורסם', לרשום ביומן המסרים ולרענן את תמונות הפרופיל",
@@ -459,6 +460,538 @@
    "diana-rafael-marketing/social/week-plan.json",
    "Dropbox/שיווק Marketing/REMNANT/Social Hooks/SUMMARY-he.md",
    "feedback_remnant_marketing_content.md"
+  ],
+  "tables": [
+   {
+    "title": "רעיונות לתוכן מועיל, יום שני 26.10 (לבחור 2)",
+    "note": "כל רעיון = סדרת סטוריז (שבוע 8–14.11) + מאמר באתר. נבדק מול יומן המסרים ומאמרי האתר: אין חזרה. דניאל בוחר 2, הן נבנות ומוצגות באישור של יום רביעי.",
+    "cols": [
+     "#",
+     "רעיון",
+     "סדרת הסטוריז",
+     "מאמר באתר",
+     "הערה"
+    ],
+    "rows": [
+     [
+      "1",
+      "מידת טבעת בבית, וגם שלה בהפתעה",
+      "חוט/נייר סביב האצבע, למדוד בערב (האצבע מתנפחת בחום), טבעת קיימת על סרגל; איך לגלות את המידה שלה בלי שתדע",
+      "How to find your ring size at home (and hers, secretly)",
+      "מומלץ: עונת הצעות הנישואין (נובמבר–דצמבר)"
+     ],
+     [
+      "2",
+      "יהלום שחור: טיפול שרק לו יש",
+      "צבע היהלום השחור הועשר: לא לחמם, להגיד לצורף לפני תיקון/הגדלה, לא אולטרסוניק בלי לשאול",
+      "Black diamond care: what every owner should know",
+      "מומלץ: ייחודי למותג, אין מאמר כזה"
+     ],
+     [
+      "3",
+      "מתי להוריד את הטבעת",
+      "בריכה (כלור), ים וחול, קרמים, חומרי ניקוי, גינה (חדר כושר כבר בסדרה של 2.11)",
+      "When to take off your engagement ring",
+      ""
+     ],
+     [
+      "4",
+      "איך יודעים שאבן משתחררת",
+      "מבחן הניעור ליד האוזן, שן שנתפסת בסוודר, בדיקה שנתית אצלנו",
+      "How to tell if a diamond is loose in its setting",
+      ""
+     ],
+     [
+      "5",
+      "איך מאחסנים תכשיטים",
+      "יהלום שורט זהב ותכשיטים אחרים: כל פריט בנפרד, שרשראות סגורות, קופסה רכה",
+      "How to store diamond jewelry at home",
+      ""
+     ],
+     [
+      "6",
+      "טבעת אירוסין + נישואין שיושבות יחד",
+      "ישרה / V / קונטור / עם רווח: מה מתאים לאיזה ראש",
+      "How to pair a wedding band with your engagement ring",
+      "קרוב לריל הסטים של 30.10; כאן זווית חינוכית, לא מוצר"
+     ],
+     [
+      "7",
+      "איזה צבע זהב מתאים לך",
+      "צהוב / לבן / רוז מול גוון העור, ומה כל אחד עושה ליהלום שחור",
+      "Yellow, white or rose gold: how to choose",
+      ""
+     ],
+     [
+      "8",
+      "שיניים מול בזל",
+      "מה מחזיק את האבן, מה מתאים לידיים פעילות, מה נתפס פחות",
+      "Prong vs bezel setting",
+      ""
+     ],
+     [
+      "9",
+      "טסים עם תכשיטים",
+      "מה לקחת, מה להשאיר, בטיחות במלון, ביטוח",
+      "Traveling with fine jewelry",
+      "עונת החגים"
+     ],
+     [
+      "10",
+      "תכשיט במתנה בלי לדעת את הטעם שלה",
+      "לבדוק מה היא כבר עונדת, צבע זהב, עגילים מול טבעת, מדיניות החלפה",
+      "How to buy jewelry as a gift (without guessing)",
+      "לקראת BF והחגים; בלי הבטחת תאריך הגעה"
+     ]
+    ]
+   },
+   {
+    "title": "יומן המסרים (54)",
+    "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
+    "cols": [
+     "תאריך",
+     "פלטפורמה",
+     "תכשיט",
+     "Hook",
+     "זווית המסר",
+     "מצב"
+    ],
+    "rows": [
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (1/4) · Gravitational Wave engagement",
+      "Bring the sparkle back. / At home, in five minutes.",
+      "סדרה מועילה, ניקוי בבית 1/4: הוק, הטבעת עוברת ממעומעמת לנוצצת",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (2/4)",
+      "A bowl of lukewarm water / and a drop of mild soap. -> Let your piece soak for a few minutes.",
+      "ניקוי 2/4: קערה עם מים פושרים וטיפת סבון עדין, אדוות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (3/4) · Gravitational Wave engagement",
+      "A soft brush, / gently around the stone.",
+      "ניקוי 3/4: מברשת רכה בעדינות סביב האבן, בועות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: cleaning at home (4/4) · Gravitational Wave engagement",
+      "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us.",
+      "ניקוי 4/4: שוטפים ומייבשים במטלית רכה, ניצוצות; הזמנה לשיחה עם בן אדם אמיתי",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (1/4) · Starz band",
+      "Training today? / Your ring can sit this one out. -> Here's why.",
+      "סדרה מועילה, חדר כושר 1/4: הוק, משקולת עולה ויורדת והטבעת נשארת בצד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (2/4)",
+      "Gold is a soft metal. / That's what makes it beautiful. -> And it means weight can bend it.",
+      "חדר כושר 2/4: זהב הוא מתכת רכה, מוט לוחץ והעיגול מתעקם",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (3/4)",
+      "A bent ring loosens its grip. / A stone can slip out.",
+      "חדר כושר 3/4: טבעת מעוקמת משחררת את השיניים והאבן נופלת",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "Series: jewelry at the gym (4/4) · Starz band",
+      "Weights, strength training, pilates: / take it off, set it aside. -> It'll be right there when you're done.",
+      "חדר כושר 4/4: משקולות/כוח/פילאטיס, מורידים ומניחים בצד; הטבעת נוחתת בקערית; בן אדם אמיתי עונה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "31.10",
+      "Instagram story (EN)",
+      "Gravitational Wave",
+      "Your dark side / was never a costume.",
+      "האלווין בטעם: הצד האפל שלך הוא לא תחפושת (DUALITY)",
+      "בתור"
+     ],
+     [
+      "31.10",
+      "Instagram reel + Facebook reel",
+      "Kintsugi R117 (shards)",
+      "some days you / fall apart. -> piece by piece, / you come back together.",
+      "מתפרקים וחוזרים, חתיכה אחרי חתיכה; ערב האלווין (02 shards-loop מתוקן)",
+      "נפסל"
+     ],
+     [
+      "31.10",
+      "Instagram story (EN)",
+      "Real customers: Roger's proposal (Halloween decorations)",
+      "Happy Halloween / from one of our favorite yeses.",
+      "האלווין: הצעת נישואין אמיתית של לקוח בין דלעות",
+      "נפסל"
+     ],
+     [
+      "31.10",
+      "Instagram story (EN)",
+      "New arrival R520 V band (rose), on hand",
+      "Darkness looks good / on you.",
+      "ערב האלווין: הצד האפל יפה עלייך",
+      "נפסל"
+     ],
+     [
+      "30.10",
+      "Instagram story (EN)",
+      "Kintsugi R117 on-body (white, hair)",
+      "For the one who stayed / when it all fell apart.",
+      "מתנה: למי שנשאר/ה כשהכול התפרק (זווית מתנה לקראת העונה)",
+      "נפסל"
+     ],
+     [
+      "30.10",
+      "Instagram story (EN)",
+      "Real customers: Kenneth's proposal kiss",
+      "Somewhere tonight, / someone says yes.",
+      "תמונת לקוחות אמיתית לפני סוף השבוע: מישהו אומר כן",
+      "נפסל"
+     ],
+     [
+      "30.10",
+      "Instagram reel + Facebook reel",
+      "Engagement + matching bands: Gravitational Wave set, Matahari + Whiteflash, R111 + R085",
+      "The first ring asks. / The second one answers. -> Made to be worn together. -> One promise. Then another.",
+      "לפי דניאל: טבעות אירוסין עם טבעות הנישואין התואמות; זוג GW ברינדור + שני סטים על יד",
+      "נפסל"
+     ],
+     [
+      "30.10",
+      "Instagram story (EN)",
+      "New arrival R499 (marquise between wings), on hand",
+      "Not everything bright / has to be loud.",
+      "טבעת חדשה על יד: אור שקט, דואליות",
+      "נפסל"
+     ],
+     [
+      "29.10",
+      "Instagram carousel + Facebook album",
+      "Kintsugi R117 on-body x3 + review (Freddie)",
+      "One ring. / A different story on every hand.",
+      "אותה טבעת, סיפור אחר על כל יד (3 תמונות גוף + ביקורת Freddie)",
+      "נפסל"
+     ],
+     [
+      "29.10",
+      "Instagram story (EN)",
+      "Review (Bridgett) + conversation invite",
+      "Thinking about your own? Message us. / A real person answers, never an AI.",
+      "הזמנה לשיחה: ביקורת Bridgett על השאלות שנענו + אדם אמיתי עונה (המקום היחיד השבוע שזה בהקשר)",
+      "בתור"
+     ],
+     [
+      "29.10",
+      "Instagram story (EN)",
+      "Ready to ship: Orion's Belt tennis necklace (rose gold)",
+      "Ready to ship. / One of each.",
+      "מוכן למשלוח: שרשרת טניס, גם תכשיט שאינו טבעת",
+      "נפסל"
+     ],
+     [
+      "29.10",
+      "Instagram story (EN)",
+      "New arrivals R520 V band + R507 east-west baguette, on hand",
+      "Made for every day. / Especially the hard ones.",
+      "עמוד מגזין: טבעות חדשות ליום-יום, גם לימים הקשים",
+      "נפסל"
+     ],
+     [
+      "28.10",
+      "Instagram story (EN)",
+      "Kintsugi R117",
+      "this is / a crack. -> your story. / the break is part of you. make it part of the design.",
+      "הסדק הוא הסיפור שלך: השבר הוא חלק ממך (04 this-is-a-crack מתוקן)",
+      "נפסל"
+     ],
+     [
+      "28.10",
+      "Instagram story (EN)",
+      "Gravitational Wave band (yellow, white diamond)",
+      "Some moments travel / further than you think.",
+      "לפי דניאל: רקע שזז כמו גל כבידה בחלל, הטבעת צפה על הגל; רגעים שמשנים הכול",
+      "נפסל"
+     ],
+     [
+      "28.10",
+      "Instagram story (EN)",
+      "Real customers: Tomer & Yuval's wedding",
+      "The rings were ours. / The day was theirs.",
+      "חתונה אמיתית של לקוחות",
+      "נפסל"
+     ],
+     [
+      "28.10",
+      "Instagram reel + Facebook reel",
+      "New arrivals R516, R483, R499, R513 (magazine pages)",
+      "Soft is not / the same as weak. -> Hold on to what matters. / Let go of the rest. -> Light and dark were never opposites.",
+      "ריל מגזין: עמודים מתהפכים עם טבעות חדשות על יד, דואליות, הזמנה לשיחה (לא באתר עדיין, בלי קישור)",
+      "נפסל"
+     ],
+     [
+      "27.10",
+      "Instagram story (EN)",
+      "Smoothen (rose)",
+      "Time softens the edges. / It doesn't erase you.",
+      "הזמן מרכך את הקצוות אבל לא מוחק אותך (Smoothen, מעבר אור/חושך)",
+      "נפסל"
+     ],
+     [
+      "27.10",
+      "Instagram reel + Facebook reel",
+      "Kintsugi R117 (enamel fill)",
+      "you don't have to / cover it up. -> let it show.",
+      "לא להסתיר את הצלקות: האמייל השחור בקווים, בכוונה, גלוי (03 the-fill מתוקן)",
+      "בתור"
+     ],
+     [
+      "27.10",
+      "Instagram story (EN)",
+      "Smoothen R116 (rose gold)",
+      "ROUGH -> BREAK -> REBUILD -> POLISH: So collapse. / Crumble. / This is not your destruction. / This is your birth. -> What remains, becomes.",
+      "נבנה מחדש לפי דניאל: ציר זמן של לידה מחדש. הטבעת עוברת מגלם מחוספס לליטוש, המילים מדף המסרים של הקולקציה (r.h. sin + What remains, becomes)",
+      "נפסל"
+     ],
+     [
+      "27.10",
+      "Instagram story (EN)",
+      "New arrival R513 (oval with side stones), on hand",
+      "You can be gentle / and still hold your ground.",
+      "טבעת חדשה על יד: עדינות וחוזק באותו אדם",
+      "נפסל"
+     ],
+     [
+      "26.10",
+      "Instagram story (EN)",
+      "Kintsugi R117 on-body (rose, coffee)",
+      "For the ordinary mornings / after the long nights.",
+      "הבקרים הרגילים אחרי הלילות הארוכים: תכשיט ליום-יום, לא רק לאירוע",
+      "בתור"
+     ],
+     [
+      "26.10",
+      "Instagram story (EN)",
+      "Ready to ship: Pera Scura (black pear, yellow gold)",
+      "Ready to ship. / One of each.",
+      "מוכן למשלוח (החיסול/ארכיון): פרה סקורה, 3 תמונות במעבר דואליות, מחיר + מחיר קודם",
+      "נפסל"
+     ],
+     [
+      "26.10",
+      "Instagram carousel + Facebook album",
+      "Ready to ship: Triangulum, Portal, Mystery Soirée, Fractals",
+      "Ready to ship. / One of each.",
+      "קרוסלה: 4 טבעות מוכנות למשלוח עם מחירים, אחת מכל אחת",
+      "נפסל"
+     ],
+     [
+      "26.10",
+      "Instagram story (EN)",
+      "Review (Renee) + conversation invite",
+      "“I wanted a custom design, and I got a quick response…” / Have a design in your head? Message us.",
+      "ביקורת אמיתית (Renee) על עיצוב אישי ותגובה מהירה + הזמנה לשיחה עם בן אדם אמיתי",
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram reel + Facebook reel",
+      "Kintsugi R117",
+      "every mark / has a story. -> hers is written / in gold.",
+      "יום ההשקה: לכל סימן יש סיפור, ו-REMNANT כותבת אותו בזהב (06 she-breaks מתוקן)",
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram story (EN)",
+      "Kintsugi R117",
+      "Today. (light -> dark wipe) REMNANT out now",
+      "השקה: היום. סוף הספירה לאחור (3 ימים / 2 ימים / מחר / היום)",
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram story (EN)",
+      "Kintsugi R117 on-body (yellow, knit)",
+      "What shaped you / stays close.",
+      "מה שעיצב אותך נשאר קרוב: עונדים את זה קרוב לגוף",
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram story (EN)",
+      "Review (Ashlee)",
+      "“This ring is so much better than I imagined. Seller was awesome every step of the way.”",
+      "ביקורת אמיתית מהאתר (Ashlee): הוכחה חברתית ביום ההשקה",
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram story (EN)",
+      "New arrivals R541 (large) + R491 heart, on hand",
+      "Polished on the outside. / Deep on the inside.",
+      "עמוד מגזין: שתי טבעות חדשות על יד, דואליות מבחוץ/מבפנים, הזמנה לשיחה",
+      "נפסל"
+     ],
+     [
+      "25.10",
+      "Instagram story (EN)",
+      "Real customers (Mary, two brides, a couple at home)",
+      "Every ring here / has a someone. -> Thank you for letting us / be part of it.",
+      "תמונות לקוחות אמיתיות: לכל טבעת יש מישהו. תודה",
+      "נפסל"
+     ],
+     [
+      "24.10",
+      "Instagram stories (EN, x3)",
+      "REMNANT lineup; Gravitational Wave; review (Jilandrel)",
+      "Tomorrow.",
+      "Launch eve: every piece holds both, the break and the light that came through it; made by the same hands (review Jilandrel)",
+      "בתור"
+     ],
+     [
+      "23.10",
+      "Instagram story (EN, video)",
+      "Kintsugi huggies",
+      "2 days. Not every break is loud.",
+      "Quiet breaks you carry every day; small, and always with you",
+      "בתור"
+     ],
+     [
+      "22.10",
+      "Instagram reel + Facebook reel",
+      "Kintsugi, Smoothen, Gravitational Wave, Kintsugi huggies",
+      "Broken. Golden. (light/dark stripe flips) / Hold both.",
+      "Duality: nobody is only one thing; broken and golden, soft and strong, lost and found, alone and held",
+      "בתור"
+     ],
+     [
+      "22.10",
+      "Instagram stories (EN, x2)",
+      "Kintsugi R117",
+      "3 days.",
+      "Countdown: light needs the dark to be seen",
+      "בתור"
+     ],
+     [
+      "21.10",
+      "Instagram reel + Facebook reel",
+      "Black Ice (oval in hand, emerald B&W)",
+      "Not all light is bright.",
+      "DUALITY through the black diamond: light that runs deep and shines anyway; black and white held in balance; a love that holds both sides of you; real review (Renee); a real person answers. (Reworked 20.10: buyer's-guide/education version rejected)",
+      "נפסל"
+     ],
+     [
+      "21.10",
+      "Instagram stories (EN, x3)",
+      "Reviews (Nia) + emerald B&W",
+      "Review (Nia) / Your light. Your dark. One ring. / pointer to the reel",
+      "Social proof + duality + human-only service",
+      "נפסל"
+     ],
+     [
+      "21.10",
+      "Instagram story + Instagram reel + Facebook reel",
+      "Kintsugi R117",
+      "Everyone breaks.",
+      "Everyone breaks; not everyone turns it into something beautiful; wear the part that broke with pride; launch Sun 25.10; a real person answers",
+      "פורסם"
+     ],
+     [
+      "20.10",
+      "Instagram carousel + Facebook album",
+      "Kintsugi R117, Smoothen, Gravitational Wave band",
+      "You survived it. Now wear it.",
+      "The piece as proof you came through, worn for yourself (loss, diagnosis, goodbye)",
+      "פורסם"
+     ],
+     [
+      "20.10",
+      "Instagram stories (EN, x4)",
+      "Kintsugi R117",
+      "What did you come through this year?",
+      "Hiding the mark vs. wearing it; the break stays, that's the point; wear what you survived",
+      "פורסם"
+     ],
+     [
+      "18.10",
+      "Email (Klaviyo)",
+      "REMNANT collection (Disturbed in front)",
+      "Born from a break.",
+      "Teaser: the collection is born from a break; whole, not perfect; the break lit up instead of hidden",
+      "פורסם"
+     ],
+     [
+      "16.10",
+      "Reels / TikTok",
+      "REMNANT Kintsugi ring R117",
+      "Everyone breaks (words crack, match cut to the ring)",
+      "Everyone breaks; not everyone turns it into something beautiful",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "TikTok / Reels",
+      "REMNANT Kintsugi ring R117",
+      "Shards fly back together into the ring (seamless loop)",
+      "Every piece found its way back: putting yourself back together",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "TikTok / Shorts",
+      "REMNANT Kintsugi ring R117",
+      "Black enamel pours into the grooves (satisfying fill)",
+      "Filling the crack, not hiding it",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "Reels / Pinterest",
+      "REMNANT Kintsugi ring R117",
+      "\"this is a crack\" -> crossed out -> \"the design\"",
+      "The break becomes the design, made permanent",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "Reels / TikTok",
+      "REMNANT Kintsugi ring R117 (smooth vs. kintsugi)",
+      "Split screen light/dark: same ring",
+      "Same ring, only one has a story (A or B question for comments)",
+      "מוכן, לא פורסם"
+     ],
+     [
+      "16.10",
+      "Reels",
+      "REMNANT Kintsugi ring R117",
+      "A woman's face with glowing gold seams, match cut to the ring",
+      "Everyone breaks; not everyone hides it",
+      "מוכן, לא פורסם"
+     ]
+    ],
+    "empty": "עוד לא נרשם כלום"
+   }
   ],
   "social": {
    "weeks": [
@@ -1806,456 +2339,7 @@
      }
     ]
    }
-  },
-  "tables": [
-   {
-    "title": "יומן המסרים (54)",
-    "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
-    "cols": [
-     "תאריך",
-     "פלטפורמה",
-     "תכשיט",
-     "Hook",
-     "זווית המסר",
-     "מצב"
-    ],
-    "rows": [
-     [
-      "05.11",
-      "Instagram story (EN)",
-      "Series: cleaning at home (1/4) · Gravitational Wave engagement",
-      "Bring the sparkle back. / At home, in five minutes.",
-      "סדרה מועילה, ניקוי בבית 1/4: הוק, הטבעת עוברת ממעומעמת לנוצצת",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "05.11",
-      "Instagram story (EN)",
-      "Series: cleaning at home (2/4)",
-      "A bowl of lukewarm water / and a drop of mild soap. -> Let your piece soak for a few minutes.",
-      "ניקוי 2/4: קערה עם מים פושרים וטיפת סבון עדין, אדוות",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "05.11",
-      "Instagram story (EN)",
-      "Series: cleaning at home (3/4) · Gravitational Wave engagement",
-      "A soft brush, / gently around the stone.",
-      "ניקוי 3/4: מברשת רכה בעדינות סביב האבן, בועות",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "05.11",
-      "Instagram story (EN)",
-      "Series: cleaning at home (4/4) · Gravitational Wave engagement",
-      "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us.",
-      "ניקוי 4/4: שוטפים ומייבשים במטלית רכה, ניצוצות; הזמנה לשיחה עם בן אדם אמיתי",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "02.11",
-      "Instagram story (EN)",
-      "Series: jewelry at the gym (1/4) · Starz band",
-      "Training today? / Your ring can sit this one out. -> Here's why.",
-      "סדרה מועילה, חדר כושר 1/4: הוק, משקולת עולה ויורדת והטבעת נשארת בצד",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "02.11",
-      "Instagram story (EN)",
-      "Series: jewelry at the gym (2/4)",
-      "Gold is a soft metal. / That's what makes it beautiful. -> And it means weight can bend it.",
-      "חדר כושר 2/4: זהב הוא מתכת רכה, מוט לוחץ והעיגול מתעקם",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "02.11",
-      "Instagram story (EN)",
-      "Series: jewelry at the gym (3/4)",
-      "A bent ring loosens its grip. / A stone can slip out.",
-      "חדר כושר 3/4: טבעת מעוקמת משחררת את השיניים והאבן נופלת",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "02.11",
-      "Instagram story (EN)",
-      "Series: jewelry at the gym (4/4) · Starz band",
-      "Weights, strength training, pilates: / take it off, set it aside. -> It'll be right there when you're done.",
-      "חדר כושר 4/4: משקולות/כוח/פילאטיס, מורידים ומניחים בצד; הטבעת נוחתת בקערית; בן אדם אמיתי עונה",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "31.10",
-      "Instagram story (EN)",
-      "Gravitational Wave",
-      "Your dark side / was never a costume.",
-      "האלווין בטעם: הצד האפל שלך הוא לא תחפושת (DUALITY)",
-      "בתור"
-     ],
-     [
-      "31.10",
-      "Instagram reel + Facebook reel",
-      "Kintsugi R117 (shards)",
-      "some days you / fall apart. -> piece by piece, / you come back together.",
-      "מתפרקים וחוזרים, חתיכה אחרי חתיכה; ערב האלווין (02 shards-loop מתוקן)",
-      "נפסל"
-     ],
-     [
-      "31.10",
-      "Instagram story (EN)",
-      "Real customers: Roger's proposal (Halloween decorations)",
-      "Happy Halloween / from one of our favorite yeses.",
-      "האלווין: הצעת נישואין אמיתית של לקוח בין דלעות",
-      "נפסל"
-     ],
-     [
-      "31.10",
-      "Instagram story (EN)",
-      "New arrival R520 V band (rose), on hand",
-      "Darkness looks good / on you.",
-      "ערב האלווין: הצד האפל יפה עלייך",
-      "נפסל"
-     ],
-     [
-      "30.10",
-      "Instagram story (EN)",
-      "Kintsugi R117 on-body (white, hair)",
-      "For the one who stayed / when it all fell apart.",
-      "מתנה: למי שנשאר/ה כשהכול התפרק (זווית מתנה לקראת העונה)",
-      "נפסל"
-     ],
-     [
-      "30.10",
-      "Instagram story (EN)",
-      "Real customers: Kenneth's proposal kiss",
-      "Somewhere tonight, / someone says yes.",
-      "תמונת לקוחות אמיתית לפני סוף השבוע: מישהו אומר כן",
-      "נפסל"
-     ],
-     [
-      "30.10",
-      "Instagram reel + Facebook reel",
-      "Engagement + matching bands: Gravitational Wave set, Matahari + Whiteflash, R111 + R085",
-      "The first ring asks. / The second one answers. -> Made to be worn together. -> One promise. Then another.",
-      "לפי דניאל: טבעות אירוסין עם טבעות הנישואין התואמות; זוג GW ברינדור + שני סטים על יד",
-      "נפסל"
-     ],
-     [
-      "30.10",
-      "Instagram story (EN)",
-      "New arrival R499 (marquise between wings), on hand",
-      "Not everything bright / has to be loud.",
-      "טבעת חדשה על יד: אור שקט, דואליות",
-      "נפסל"
-     ],
-     [
-      "29.10",
-      "Instagram carousel + Facebook album",
-      "Kintsugi R117 on-body x3 + review (Freddie)",
-      "One ring. / A different story on every hand.",
-      "אותה טבעת, סיפור אחר על כל יד (3 תמונות גוף + ביקורת Freddie)",
-      "נפסל"
-     ],
-     [
-      "29.10",
-      "Instagram story (EN)",
-      "Review (Bridgett) + conversation invite",
-      "Thinking about your own? Message us. / A real person answers, never an AI.",
-      "הזמנה לשיחה: ביקורת Bridgett על השאלות שנענו + אדם אמיתי עונה (המקום היחיד השבוע שזה בהקשר)",
-      "בתור"
-     ],
-     [
-      "29.10",
-      "Instagram story (EN)",
-      "Ready to ship: Orion's Belt tennis necklace (rose gold)",
-      "Ready to ship. / One of each.",
-      "מוכן למשלוח: שרשרת טניס, גם תכשיט שאינו טבעת",
-      "נפסל"
-     ],
-     [
-      "29.10",
-      "Instagram story (EN)",
-      "New arrivals R520 V band + R507 east-west baguette, on hand",
-      "Made for every day. / Especially the hard ones.",
-      "עמוד מגזין: טבעות חדשות ליום-יום, גם לימים הקשים",
-      "נפסל"
-     ],
-     [
-      "28.10",
-      "Instagram story (EN)",
-      "Kintsugi R117",
-      "this is / a crack. -> your story. / the break is part of you. make it part of the design.",
-      "הסדק הוא הסיפור שלך: השבר הוא חלק ממך (04 this-is-a-crack מתוקן)",
-      "נפסל"
-     ],
-     [
-      "28.10",
-      "Instagram story (EN)",
-      "Gravitational Wave band (yellow, white diamond)",
-      "Some moments travel / further than you think.",
-      "לפי דניאל: רקע שזז כמו גל כבידה בחלל, הטבעת צפה על הגל; רגעים שמשנים הכול",
-      "נפסל"
-     ],
-     [
-      "28.10",
-      "Instagram story (EN)",
-      "Real customers: Tomer & Yuval's wedding",
-      "The rings were ours. / The day was theirs.",
-      "חתונה אמיתית של לקוחות",
-      "נפסל"
-     ],
-     [
-      "28.10",
-      "Instagram reel + Facebook reel",
-      "New arrivals R516, R483, R499, R513 (magazine pages)",
-      "Soft is not / the same as weak. -> Hold on to what matters. / Let go of the rest. -> Light and dark were never opposites.",
-      "ריל מגזין: עמודים מתהפכים עם טבעות חדשות על יד, דואליות, הזמנה לשיחה (לא באתר עדיין, בלי קישור)",
-      "נפסל"
-     ],
-     [
-      "27.10",
-      "Instagram story (EN)",
-      "Smoothen (rose)",
-      "Time softens the edges. / It doesn't erase you.",
-      "הזמן מרכך את הקצוות אבל לא מוחק אותך (Smoothen, מעבר אור/חושך)",
-      "נפסל"
-     ],
-     [
-      "27.10",
-      "Instagram reel + Facebook reel",
-      "Kintsugi R117 (enamel fill)",
-      "you don't have to / cover it up. -> let it show.",
-      "לא להסתיר את הצלקות: האמייל השחור בקווים, בכוונה, גלוי (03 the-fill מתוקן)",
-      "בתור"
-     ],
-     [
-      "27.10",
-      "Instagram story (EN)",
-      "Smoothen R116 (rose gold)",
-      "ROUGH -> BREAK -> REBUILD -> POLISH: So collapse. / Crumble. / This is not your destruction. / This is your birth. -> What remains, becomes.",
-      "נבנה מחדש לפי דניאל: ציר זמן של לידה מחדש. הטבעת עוברת מגלם מחוספס לליטוש, המילים מדף המסרים של הקולקציה (r.h. sin + What remains, becomes)",
-      "נפסל"
-     ],
-     [
-      "27.10",
-      "Instagram story (EN)",
-      "New arrival R513 (oval with side stones), on hand",
-      "You can be gentle / and still hold your ground.",
-      "טבעת חדשה על יד: עדינות וחוזק באותו אדם",
-      "נפסל"
-     ],
-     [
-      "26.10",
-      "Instagram story (EN)",
-      "Kintsugi R117 on-body (rose, coffee)",
-      "For the ordinary mornings / after the long nights.",
-      "הבקרים הרגילים אחרי הלילות הארוכים: תכשיט ליום-יום, לא רק לאירוע",
-      "בתור"
-     ],
-     [
-      "26.10",
-      "Instagram story (EN)",
-      "Ready to ship: Pera Scura (black pear, yellow gold)",
-      "Ready to ship. / One of each.",
-      "מוכן למשלוח (החיסול/ארכיון): פרה סקורה, 3 תמונות במעבר דואליות, מחיר + מחיר קודם",
-      "נפסל"
-     ],
-     [
-      "26.10",
-      "Instagram carousel + Facebook album",
-      "Ready to ship: Triangulum, Portal, Mystery Soirée, Fractals",
-      "Ready to ship. / One of each.",
-      "קרוסלה: 4 טבעות מוכנות למשלוח עם מחירים, אחת מכל אחת",
-      "נפסל"
-     ],
-     [
-      "26.10",
-      "Instagram story (EN)",
-      "Review (Renee) + conversation invite",
-      "“I wanted a custom design, and I got a quick response…” / Have a design in your head? Message us.",
-      "ביקורת אמיתית (Renee) על עיצוב אישי ותגובה מהירה + הזמנה לשיחה עם בן אדם אמיתי",
-      "נפסל"
-     ],
-     [
-      "25.10",
-      "Instagram reel + Facebook reel",
-      "Kintsugi R117",
-      "every mark / has a story. -> hers is written / in gold.",
-      "יום ההשקה: לכל סימן יש סיפור, ו-REMNANT כותבת אותו בזהב (06 she-breaks מתוקן)",
-      "נפסל"
-     ],
-     [
-      "25.10",
-      "Instagram story (EN)",
-      "Kintsugi R117",
-      "Today. (light -> dark wipe) REMNANT out now",
-      "השקה: היום. סוף הספירה לאחור (3 ימים / 2 ימים / מחר / היום)",
-      "נפסל"
-     ],
-     [
-      "25.10",
-      "Instagram story (EN)",
-      "Kintsugi R117 on-body (yellow, knit)",
-      "What shaped you / stays close.",
-      "מה שעיצב אותך נשאר קרוב: עונדים את זה קרוב לגוף",
-      "נפסל"
-     ],
-     [
-      "25.10",
-      "Instagram story (EN)",
-      "Review (Ashlee)",
-      "“This ring is so much better than I imagined. Seller was awesome every step of the way.”",
-      "ביקורת אמיתית מהאתר (Ashlee): הוכחה חברתית ביום ההשקה",
-      "נפסל"
-     ],
-     [
-      "25.10",
-      "Instagram story (EN)",
-      "New arrivals R541 (large) + R491 heart, on hand",
-      "Polished on the outside. / Deep on the inside.",
-      "עמוד מגזין: שתי טבעות חדשות על יד, דואליות מבחוץ/מבפנים, הזמנה לשיחה",
-      "נפסל"
-     ],
-     [
-      "25.10",
-      "Instagram story (EN)",
-      "Real customers (Mary, two brides, a couple at home)",
-      "Every ring here / has a someone. -> Thank you for letting us / be part of it.",
-      "תמונות לקוחות אמיתיות: לכל טבעת יש מישהו. תודה",
-      "נפסל"
-     ],
-     [
-      "24.10",
-      "Instagram stories (EN, x3)",
-      "REMNANT lineup; Gravitational Wave; review (Jilandrel)",
-      "Tomorrow.",
-      "Launch eve: every piece holds both, the break and the light that came through it; made by the same hands (review Jilandrel)",
-      "בתור"
-     ],
-     [
-      "23.10",
-      "Instagram story (EN, video)",
-      "Kintsugi huggies",
-      "2 days. Not every break is loud.",
-      "Quiet breaks you carry every day; small, and always with you",
-      "בתור"
-     ],
-     [
-      "22.10",
-      "Instagram reel + Facebook reel",
-      "Kintsugi, Smoothen, Gravitational Wave, Kintsugi huggies",
-      "Broken. Golden. (light/dark stripe flips) / Hold both.",
-      "Duality: nobody is only one thing; broken and golden, soft and strong, lost and found, alone and held",
-      "בתור"
-     ],
-     [
-      "22.10",
-      "Instagram stories (EN, x2)",
-      "Kintsugi R117",
-      "3 days.",
-      "Countdown: light needs the dark to be seen",
-      "בתור"
-     ],
-     [
-      "21.10",
-      "Instagram reel + Facebook reel",
-      "Black Ice (oval in hand, emerald B&W)",
-      "Not all light is bright.",
-      "DUALITY through the black diamond: light that runs deep and shines anyway; black and white held in balance; a love that holds both sides of you; real review (Renee); a real person answers. (Reworked 20.10: buyer's-guide/education version rejected)",
-      "נפסל"
-     ],
-     [
-      "21.10",
-      "Instagram stories (EN, x3)",
-      "Reviews (Nia) + emerald B&W",
-      "Review (Nia) / Your light. Your dark. One ring. / pointer to the reel",
-      "Social proof + duality + human-only service",
-      "נפסל"
-     ],
-     [
-      "21.10",
-      "Instagram story + Instagram reel + Facebook reel",
-      "Kintsugi R117",
-      "Everyone breaks.",
-      "Everyone breaks; not everyone turns it into something beautiful; wear the part that broke with pride; launch Sun 25.10; a real person answers",
-      "פורסם"
-     ],
-     [
-      "20.10",
-      "Instagram carousel + Facebook album",
-      "Kintsugi R117, Smoothen, Gravitational Wave band",
-      "You survived it. Now wear it.",
-      "The piece as proof you came through, worn for yourself (loss, diagnosis, goodbye)",
-      "פורסם"
-     ],
-     [
-      "20.10",
-      "Instagram stories (EN, x4)",
-      "Kintsugi R117",
-      "What did you come through this year?",
-      "Hiding the mark vs. wearing it; the break stays, that's the point; wear what you survived",
-      "פורסם"
-     ],
-     [
-      "18.10",
-      "Email (Klaviyo)",
-      "REMNANT collection (Disturbed in front)",
-      "Born from a break.",
-      "Teaser: the collection is born from a break; whole, not perfect; the break lit up instead of hidden",
-      "פורסם"
-     ],
-     [
-      "16.10",
-      "Reels / TikTok",
-      "REMNANT Kintsugi ring R117",
-      "Everyone breaks (words crack, match cut to the ring)",
-      "Everyone breaks; not everyone turns it into something beautiful",
-      "מוכן, לא פורסם"
-     ],
-     [
-      "16.10",
-      "TikTok / Reels",
-      "REMNANT Kintsugi ring R117",
-      "Shards fly back together into the ring (seamless loop)",
-      "Every piece found its way back: putting yourself back together",
-      "מוכן, לא פורסם"
-     ],
-     [
-      "16.10",
-      "TikTok / Shorts",
-      "REMNANT Kintsugi ring R117",
-      "Black enamel pours into the grooves (satisfying fill)",
-      "Filling the crack, not hiding it",
-      "מוכן, לא פורסם"
-     ],
-     [
-      "16.10",
-      "Reels / Pinterest",
-      "REMNANT Kintsugi ring R117",
-      "\"this is a crack\" -> crossed out -> \"the design\"",
-      "The break becomes the design, made permanent",
-      "מוכן, לא פורסם"
-     ],
-     [
-      "16.10",
-      "Reels / TikTok",
-      "REMNANT Kintsugi ring R117 (smooth vs. kintsugi)",
-      "Split screen light/dark: same ring",
-      "Same ring, only one has a story (A or B question for comments)",
-      "מוכן, לא פורסם"
-     ],
-     [
-      "16.10",
-      "Reels",
-      "REMNANT Kintsugi ring R117",
-      "A woman's face with glowing gold seams, match cut to the ring",
-      "Everyone breaks; not everyone hides it",
-      "מוכן, לא פורסם"
-     ]
-    ],
-    "empty": "עוד לא נרשם כלום"
-   }
-  ]
+  }
  },
  {
   "id": "remnant-q4-plan",
