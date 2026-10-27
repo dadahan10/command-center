@@ -9,6 +9,7 @@
   --blue:#4b5a9e; --blue-soft:#e3e6f3;
   --ok:#4f7d5a; --ok-soft:#e1ecdf; --warn:#a27a1e; --warn-soft:#f5ead0; --bad:#a9544c; --bad-soft:#f3dfdb;
   --office:#6d4c9a; --office-soft:#ebe3f4;
+  --attn:#c2410c; --attn-soft:#fde7d9; --attn-ink:#fff;
   --g-remnant:#3b3530; --g-dr:#b08a2e; --g-cai:#2f7f7a; --g-trading:#4b5a9e; --g-projects:#6d4c9a; --g-personal:#b0645a; --g-infra:#8a8174;
   --glass:rgba(246,241,231,.78); --scrim:rgba(43,38,34,.38);
   --font:'Heebo',system-ui,sans-serif; --serif:'Frank Ruhl Libre',Georgia,serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
@@ -21,6 +22,7 @@
   --blue:#9aa7e6; --blue-soft:#272b45;
   --ok:#8fc49a; --ok-soft:#223526; --warn:#e0b85c; --warn-soft:#3a3018; --bad:#ec9a90; --bad-soft:#402523;
   --office:#c7aef0; --office-soft:#2f2540;
+  --attn:#ff9a62; --attn-soft:#432616; --attn-ink:#1b1814;
   --g-remnant:#d8cfc2; --g-dr:#d9bc6a; --g-cai:#6cc3bb; --g-trading:#9aa7e6; --g-projects:#c7aef0; --g-personal:#e39a8f; --g-infra:#a99f90;
   --glass:rgba(27,24,20,.78); --scrim:rgba(0,0,0,.55); color-scheme:dark}}
 :root[data-theme="dark"]{
@@ -30,6 +32,7 @@
   --blue:#9aa7e6; --blue-soft:#272b45;
   --ok:#8fc49a; --ok-soft:#223526; --warn:#e0b85c; --warn-soft:#3a3018; --bad:#ec9a90; --bad-soft:#402523;
   --office:#c7aef0; --office-soft:#2f2540;
+  --attn:#ff9a62; --attn-soft:#432616; --attn-ink:#1b1814;
   --g-remnant:#d8cfc2; --g-dr:#d9bc6a; --g-cai:#6cc3bb; --g-trading:#9aa7e6; --g-projects:#c7aef0; --g-personal:#e39a8f; --g-infra:#a99f90;
   --glass:rgba(27,24,20,.78); --scrim:rgba(0,0,0,.55); color-scheme:dark}
 
@@ -363,6 +366,22 @@ dialog.sv::backdrop{background:rgba(20,17,14,.78)}
   .sw-card{width:calc(50% - 2rem);min-width:120px}
   .sw-phone{max-width:none}
 }
+
+/* דורש טיפול — סימון מונחה-נתונים (chapter.attention[]) · 27.10 */
+.box.attn{border-color:var(--attn);box-shadow:inset 0 0 0 1px var(--attn)}
+.box.attn::after{content:"";position:absolute;top:0;right:0;width:1.4rem;height:1.4rem;background:var(--attn);clip-path:polygon(0 0,100% 0,100% 100%)}
+.attn-badge{display:inline-flex;align-items:center;gap:.3rem;background:var(--attn);color:var(--attn-ink);font-size:.7rem;font-weight:600;padding:.08rem .5rem;border-radius:999px;white-space:nowrap;line-height:1.5}
+.attn-badge::before{content:"";width:.42rem;height:.42rem;border-radius:50%;background:currentColor}
+.box .attn-why{font-size:.78rem;color:var(--attn);font-weight:500;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sec-h .attn-n{color:var(--attn);font-size:.8rem;font-weight:600;font-variant-numeric:tabular-nums}
+.stat.attn b{color:var(--attn)}
+.stat.attn.on{border-color:var(--attn);background:var(--attn-soft)}
+.attn-block{margin:1rem 0 .4rem;background:var(--attn-soft);border:1px solid var(--attn);border-inline-start-width:4px;border-radius:10px;padding:.75rem 1rem}
+.attn-block h4{margin:0 0 .4rem;color:var(--attn);display:flex;align-items:center;gap:.5rem}
+.attn-block ul{margin:0;padding-inline-start:1.1rem;display:grid;gap:.35rem}
+.attn-block li{color:var(--ink);line-height:1.55}
+.attn-block li small{display:block;color:var(--ink-2);font-size:.8rem}
+.attn-block li time{color:var(--muted);font-size:.75rem;margin-inline-start:.4rem;font-variant-numeric:tabular-nums}
 </style>
 
 <div class="wrap" id="app">
@@ -408,7 +427,7 @@ const MACH={home:'בית',office:'משרד',cloud:'ענן',make:'Make',both:'ש�
 const TABS=[['board','לוח'],['flows','פלואים'],['agents','סוכנים'],['skills','יכולות'],['sites','אתרים'],['thoughts','מחשבות']];
 const MAXDAYS=121; // slider end = "הכול"
 const REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const state={tab:'board',q:'',group:null,status:'open',kind:null,office:false,days:MAXDAYS,stale:false,sort:'recent',layout:'rails',
+const state={tab:'board',q:'',group:null,status:'open',kind:null,office:false,attn:false,days:MAXDAYS,stale:false,sort:'recent',layout:'rails',
   data:{chapters:[],skills:{categories:[]},agents:{tree:[],flows:{}},extras:{}},db:null,chapterDocs:{},thoughts:[],drafts:{},
   flow:null,flowStep:0,agentCat:null,sq:'',so:null,tf:'pending'};
 try{const s=JSON.parse(localStorage.getItem('nb-ui4')||'{}');for(const k of ['tab','group','status','kind','sort','layout','days'])if(s[k]!=null)state[k]=s[k];state.days=+state.days||MAXDAYS}catch(e){}
@@ -448,6 +467,7 @@ function age(c){if(!c.last_update)return 999;const d=new Date(c.last_update+'T00
 function rel(c){const a=age(c);if(a===999)return '';if(a===0)return 'היום';if(a===1)return 'אתמול';if(a<7)return `לפני ${a} ימים`;const [y,m,d]=c.last_update.split('-');return `${+d}.${+m}`}
 function isDone(c){const d=state.chapterDocs[c.id];return d&&typeof d.done==='boolean'?d.done:c.status==='done'}
 function eff(c){return isDone(c)?'done':c.status}
+function attn(c){if(isDone(c))return [];const a=Array.isArray(c.attention)?c.attention:[];const l=a.map(x=>typeof x==='string'?{text:x}:x).filter(x=>x&&x.text);if(!l.length&&c.needs_attention)l.push({text:c.attention_note||'דורש טיפול'});return l}
 function prog(c){const n=(c.next_tasks||[]).length;const t=(state.chapterDocs[c.id]||{}).tasks||{};let d=0;for(let i=0;i<n;i++)if(t[i])d++;return {n,d}}
 function gstyle(g){return `--g:var(${GVAR[g]||'--g-infra'})`}
 function firstLine(s){return (s||'').split(/(?<=[.!?])\s|\n/)[0]}
@@ -475,13 +495,15 @@ function filtered(){
   if(state.group)list=list.filter(c=>c.group===state.group);
   if(state.kind)list=list.filter(c=>c.kind===state.kind);
   if(state.office)list=list.filter(c=>c.office_only);
+  if(state.attn)list=list.filter(c=>attn(c).length);
   if(state.stale)list=list.filter(c=>age(c)>=14);
   else if(state.days<MAXDAYS)list=list.filter(c=>age(c)<=state.days);
   if(q)list=list.filter(c=>JSON.stringify(c).includes(q));
   const S={recent:(a,b)=>(b.last_update||'').localeCompare(a.last_update||''),
     tasks:(a,b)=>{const pa=prog(a),pb=prog(b);return (pb.n-pb.d)-(pa.n-pa.d)},
     status:(a,b)=>['blocked','active','paused','done'].indexOf(eff(a))-['blocked','active','paused','done'].indexOf(eff(b)),
-    name:(a,b)=>a.title.localeCompare(b.title,'he')};
+    name:(a,b)=>a.title.localeCompare(b.title,'he'),
+    attn:(a,b)=>attn(b).length-attn(a).length||(b.last_update||'').localeCompare(a.last_update||'')};
   return list.sort(S[state.sort]||S.recent);
 }
 function sections(list){return Object.keys(GROUPS).map(g=>({g,items:list.filter(c=>c.group===g)})).filter(s=>s.items.length)}
@@ -502,7 +524,7 @@ function renderBoard(v){
     <div class="fgroup" id="f-group"></div>
     <div class="range"><label class="note" for="days">עודכן ב־</label><input type="range" id="days" min="1" max="${MAXDAYS}" value="${state.days}"><output id="days-o" for="days"></output></div>
     <div class="fgroup"><span class="lbl">סדר</span><select class="sort" id="sort" aria-label="סדר">
-      <option value="recent">עדכון אחרון</option><option value="tasks">הכי הרבה משימות פתוחות</option><option value="status">חסום קודם</option><option value="name">א–ב</option></select>
+      <option value="attn">דורש טיפול קודם</option><option value="recent">עדכון אחרון</option><option value="tasks">הכי הרבה משימות פתוחות</option><option value="status">חסום קודם</option><option value="name">א–ב</option></select>
       <span class="toggle" role="group" aria-label="תצוגה"><button data-layout="rails">מסילות</button><button data-layout="grid">רשת</button></span></div>
   </div>
   <div class="resultline"><span class="count" id="count"></span><button class="clear" id="clear">נקה סינון</button></div>
@@ -513,7 +535,7 @@ function renderBoard(v){
   $('#days').addEventListener('input',e=>{state.days=+e.target.value;state.stale=false;updateBoard();saveUI()});
   $('#sort').addEventListener('change',e=>{state.sort=e.target.value;saveUI();updateBoard()});
   v.querySelectorAll('[data-layout]').forEach(b=>b.addEventListener('click',()=>{state.layout=b.dataset.layout;saveUI();updateBoard()}));
-  $('#clear').addEventListener('click',()=>{Object.assign(state,{q:'',group:null,status:'open',kind:null,office:false,days:MAXDAYS,stale:false});$('#q').value='';$('#days').value=MAXDAYS;saveUI();updateBoard()});
+  $('#clear').addEventListener('click',()=>{Object.assign(state,{q:'',group:null,status:'open',kind:null,office:false,attn:false,days:MAXDAYS,stale:false});$('#q').value='';$('#days').value=MAXDAYS;saveUI();updateBoard()});
   v.addEventListener('click',onBoardClick);
   updateBoard();
 }
@@ -527,6 +549,7 @@ function onBoardClick(e){
     saveUI();updateBoard();return}
   if(t.dataset.stat){const k=t.dataset.stat;
     if(k==='office')state.office=!state.office;
+    else if(k==='attn')state.attn=!state.attn;
     else if(k==='stale'){state.stale=!state.stale;if(state.stale)state.days=MAXDAYS}
     else if(k==='blocked')state.status=state.status==='blocked'?'open':'blocked';
     else if(k==='thoughts'){state.tab='thoughts';saveUI();render();return}
@@ -553,7 +576,7 @@ function updateBoard(){
   const keep={};document.querySelectorAll('.section[data-g] .rail').forEach(r=>{keep[r.closest('.section').dataset.g]=r.scrollLeft});
   const secs=sections(list);
   $('#sections').innerHTML=secs.length?secs.map(s=>`<section class="section" data-g="${s.g}" style="${gstyle(s.g)}">
-      <div class="sec-h"><h3>${h(GROUPS[s.g])}</h3><span class="n">${s.items.length}</span>
+      <div class="sec-h"><h3>${h(GROUPS[s.g])}</h3><span class="n">${s.items.length}</span>${(()=>{const n=s.items.reduce((k,c)=>k+attn(c).length,0);return n?`<span class="attn-n">● ${n} דורשים טיפול</span>`:''})()}
       ${state.layout==='rails'?`<span class="arrows"><button data-scroll="1" aria-label="הקודמים">›</button><button data-scroll="-1" aria-label="הבאים">‹</button></span>`:''}</div>
       <div class="${state.layout==='rails'?'rail':'grid'}">${s.items.map(box).join('')}</div></section>`).join('')
     :'<div class="empty">אין נושאים שתואמים לסינון. נסה להרחיב את טווח הימים או לנקות סינון.</div>';
@@ -564,11 +587,11 @@ function updateBoard(){
 function syncArrows(r){const s=r.closest('.section');const a=s.querySelectorAll('[data-scroll]');if(!a.length)return;
   const max=r.scrollWidth-r.clientWidth;const x=Math.abs(r.scrollLeft);a[0].disabled=x<4;a[1].disabled=x>max-4;if(max<4){a[0].disabled=a[1].disabled=true}}
 function box(c){
-  const st=eff(c);const p=prog(c);const a=age(c);
-  return `<button class="box ${st==='done'?'done':''} ${a>=14&&st!=='done'?'stale':''}" data-open="${h(c.id)}" style="${gstyle(c.group)}">
-    <span class="top"><span class="gem ${st}">${STATUS[st]||st}</span>${c.office_only?'<span class="tag office">משרד</span>':''}${c.kind==='personal'?'<span class="tag personal">אישי</span>':''}<time>${rel(c)}</time></span>
+  const st=eff(c);const p=prog(c);const a=age(c);const at=attn(c);
+  return `<button class="box ${st==='done'?'done':''} ${a>=14&&st!=='done'?'stale':''} ${at.length?'attn':''}" data-open="${h(c.id)}" style="${gstyle(c.group)}"${at.length?` aria-label="${h(c.title)} — ${at.length} דורשים טיפול"`:''}>
+    <span class="top">${at.length?`<span class="attn-badge">דורש טיפול${at.length>1?' · '+at.length:''}</span>`:''}<span class="gem ${st}">${STATUS[st]||st}</span>${c.office_only?'<span class="tag office">משרד</span>':''}${c.kind==='personal'?'<span class="tag personal">אישי</span>':''}<time>${rel(c)}</time></span>
     <span class="t">${h(c.title)}</span>
-    <span class="s">${h(firstLine(c.where_we_stand))}</span>
+    ${at.length?`<span class="attn-why">${h(at[0].text)}${at.length>1?` ועוד ${at.length-1}`:''}</span>`:`<span class="s">${h(firstLine(c.where_we_stand))}</span>`}
     <span class="f">${p.n?`<span class="bar"><i style="width:${Math.round(100*p.d/p.n)}%"></i></span><span>${p.d}/${p.n} משימות</span>`:'<span>אין משימות פתוחות</span>'}</span>
   </button>`;
 }
@@ -604,8 +627,9 @@ function updateStats(){
   const el=$('#stats');if(!el)return;const ch=state.data.chapters.filter(c=>!isDone(c));
   const openTasks=ch.reduce((n,c)=>{const p=prog(c);return n+p.n-p.d},0);
   const office=ch.filter(c=>c.office_only).length,stale=ch.filter(c=>age(c)>=14).length,blocked=ch.filter(c=>c.status==='blocked').length;
-  const pend=state.thoughts.filter(t=>!t.handled).length;
+  const pend=state.thoughts.filter(t=>!t.handled).length;const attnN=ch.reduce((n,c)=>n+attn(c).length,0),attnC=ch.filter(c=>attn(c).length).length;
   el.innerHTML=`
+   <button class="stat attn ${state.attn?'on':''}" data-stat="attn"><b>${attnN}</b><span>דורשים טיפול שלך</span><small>ב-${attnC} נושאים · לחץ להצגה</small></button>
    <div class="stat" style="cursor:default"><b>${openTasks}</b><span>משימות פתוחות</span><small>בכל ${ch.length} הנושאים הפתוחים</small></div>
    <button class="stat warn ${state.stale?'on':''}" data-stat="stale"><b>${stale}</b><span>לא עודכנו 14+ יום</span><small>לחץ להצגה</small></button>
    <button class="stat ${state.status==='blocked'?'on':''}" data-stat="blocked"><b style="color:var(--bad)">${blocked}</b><span>חסומים</span><small>מחכים להחלטה או לגורם חיצוני</small></button>
@@ -766,6 +790,7 @@ function page(c,ghost){
     <h2 ${ghost?'':'id="pg-title"'}>${h(c.title)}</h2>
     <div class="meta"><span class="gem ${st}" data-m="st">${STATUS[st]||st}</span><span>עודכן ${rel(c)}${c.last_update?` (${h(c.last_update.split('-').reverse().join('.'))})`:''}</span>
       ${p.n?`<span class="bar"><i data-m="bar" style="width:${Math.round(100*p.d/p.n)}%"></i></span><span data-m="pr">${p.d}/${p.n} משימות</span>`:''}</div>
+    ${(()=>{const at=attn(c);return at.length?`<div class="attn-block" role="note"><h4><span class="attn-badge">דורש טיפול · ${at.length}</span>מחכה לך</h4><ul>${at.map(x=>`<li>${h(x.text)}${x.since?`<time>מ-${h(x.since.split('-').slice(1).reverse().map(Number).join('.'))}</time>`:''}${x.note?`<small>${h(x.note)}</small>`:''}</li>`).join('')}</ul></div>`:''})()}
     <h4>איפה אנחנו עומדים</h4><p class="stand">${h(c.where_we_stand)}</p>
     ${matrix(c.matrix)}
     ${socialCal(c.social)}
