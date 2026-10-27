@@ -439,8 +439,8 @@
   "group": "remnant",
   "kind": "business",
   "status": "active",
-  "last_update": "2026-10-26",
-  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. הלוח כולל סטוריז באינסטגרם באנגלית, ועוד 2–3 פוסטים בעברית לפייסבוק, ל-X וללינקדאין: קודם פוסט על קולקציית REMNANT, ואחריו פוסט לכל עיצוב, כל 2–3 ימים. שום דבר לא נכנס לתור לפני שאישרת. הפיילוט אושר ב-19.10 והוא בתור: קרוסלה באינסטגרם ואלבום בפייסבוק ביום שלישי 20.10 ב-16:30, ו-4 סטוריז בין 17:00 ל-17:06. לחיצה על כרטיס פותחת את כל השקפים ואת הכיתוב המלא.",
+  "last_update": "2026-10-27",
+  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. לוח 1–7.11 מוכן ומחכה לאישור שלך ברביעי 28.10: 2–3 סטוריז בכל יום, 3 פוסטים לפיד (קרוסלת הטבעות החדשות, ריל 'שני צדדים', קרוסלת מידת טבעת) ו-3 פוסטים בעברית לפייסבוק, X ולינקדאין. עמוד השדרה של השבוע: עשר הטבעות החדשות שעלו לאתר ב-25.10, כל אחת עם שם של כוכב או מיתוס. שתי הסדרות המועילות שבחרת: מידת טבעת בבית (שלישי) וטיפוח יהלום שחור (חמישי; סדרת הניקוי אוחדה לתוכה), וסדרת חדר הכושר נשארה ביום שני. שום דבר לא נכנס לתור לפני שאישרת. לחיצה על כרטיס פותחת את הסרטון והכיתוב המלא.",
   "rules": {
    "title": "כללי התוכן",
    "items": [
@@ -450,13 +450,15 @@
    ]
   },
   "next_tasks": [
-   "26.10: דניאל בוחר 2 מתוך רשימת הרעיונות לתוכן מועיל (טבלה למטה)",
-   "רביעי 22.10: להציג כאן את לוח השבוע 25–31.10 לאישור",
-   "אחרי האישור: להכניס לתור רק את מה שאושר ולסמן 'בתור'",
-   "אחרי כל פרסום: לסמן 'פורסם', לרשום ביומן המסרים ולרענן את תמונות הפרופיל",
-   "שישה סרטוני ה-hook מוכנים ולא פורסמו. לשבץ אותם בלוח הבא"
+   "רביעי 28.10: דניאל מאשר/פוסל את לוח 1–7.11 (כל כרטיס בנפרד)",
+   "אחרי האישור: להכניס לתור רק את מה שאושר (queue_social.py, batch 2026-11-01-week) ולסמן 'בתור'",
+   "לפני ראשון 1.11 18:00: לקבע את 10 הטבעות החדשות בראש עמוד New Arrivals באתר, או להחליף את הקישור בכיתוב בפייסבוק (דורש את אישורך)",
+   "שלדי המאמרים (מידת טבעת, טיפוח יהלום שחור) — לאשר, ואז ייכתבו בלילה דרך seo-growth (F17, F15)",
+   "שני 2.11: רשימת רעיונות לתוכן מועיל לשבוע 15–21.11; רביעי 4.11: לוח 8–14.11"
   ],
   "recent_changes": [
+   "27.10 — לוח 1–7.11 נבנה (39 פריטים כולל פייסבוק): סדרת 'השמות' של הטבעות החדשות + שתי הסדרות המועילות; ממתין לאישור",
+   "27.10 — תיקון ביומן המסרים: שורות שבוע 25–31 (v3) שאושרו ונכנסו לתור סומנו בטעות 'נפסל'; תוקן ל'בתור'",
    "19.10 ערב — לוח שבוע ויזואלי עם התמונות עצמן, תצוגה מקדימה של הפרופיל באינסטגרם, ופיילוט 20.10 בתור",
    "19.10 — הפרק נפתח: שגרת רביעי, תוכנית שבועית לאישור, יומן מסרים עם הטיזר מ-18.10 ושישה סרטוני hook"
   ],
@@ -470,7 +472,7 @@
   ],
   "tables": [
    {
-    "title": "רעיונות לתוכן מועיל, יום שני 26.10 (לבחור 2)",
+    "title": "רעיונות לתוכן מועיל, יום שני 26.10 (נבחרו 27.10: 1 מידת טבעת + 2 טיפוח יהלום שחור)",
     "note": "כל רעיון = סדרת סטוריז (שבוע 8–14.11) + מאמר באתר. נבדק מול יומן המסרים ומאמרי האתר: אין חזרה. דניאל בוחר 2, הן נבנות ומוצגות באישור של יום רביעי.",
     "cols": [
      "#",
@@ -553,7 +555,31 @@
     ]
    },
    {
-    "title": "יומן המסרים (54)",
+    "title": "שלדי מאמרים לשתי הסדרות של 1–7.11 (ממתין לאישור)",
+    "note": "המלא: Dropbox/שיווק Marketing/REMNANT/Social/2026-11-01-week/ARTICLE-OUTLINES.md · נכנס ל-ARTICLE-PLAN כ-F17 (מידה, הצעה) ו-F15 (ניקוי/טיפוח, כבר מאושר)",
+    "cols": [
+     "מאמר",
+     "שאילתת יעד",
+     "חלקים עיקריים",
+     "קישור לסדרה"
+    ],
+    "rows": [
+     [
+      "How to Find Your Ring Size at Home (and Her Size, Secretly)",
+      "how to measure ring size at home · ring size chart mm",
+      "רצועת נייר · טבלת היקף וקוטר למידות US · טבעת קיימת · סוף היום/ידיים חמות · טבעת רחבה · מידה בסוד · FAQ",
+      "סטוריז שלישי 3.11 12:00 + קרוסלה שישי 6.11"
+     ],
+     [
+      "How to Care for a Black Diamond Ring",
+      "how to clean black diamond ring · ultrasonic black diamond",
+      "ניקוי בבית · בלי אולטרסוני/קיטור/כימיקלים · לספר לצורף (חום) · אחסון בנפרד · מתי להוריד · אבן משוחררת · FAQ",
+      "סטוריז חמישי 5.11 12:00"
+     ]
+    ]
+   },
+   {
+    "title": "יומן המסרים (82)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -565,35 +591,219 @@
     ],
     "rows": [
      [
+      "07.11",
+      "Instagram story (EN)",
+      "New arrival: Algol R541 (east-west oval bezel, white), on hand",
+      "ALGOL · Every 2.87 days this star goes dark. Then it comes back. -> You're allowed to dim. / You always come back.",
+      "סדרת השמות: אלגול, הכוכב שמתעמעם וחוזר (הכוכב מתעמעם על המסך); מותר להתעמעם, תמיד חוזרים",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "07.11",
+      "Instagram story (EN)",
+      "REMNANT: Smoothen R116 (new on-body, yellow, mug)",
+      "Calm is not / the absence of a storm.",
+      "מוצאי שבת: Smoothen על יד (תמונת גוף חדשה מהסט שבאתר); רוגע זה לא היעדר סערה. GW לא כאן כי הוא כבר מאייר את סדרת הטיפוח",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "06.11",
+      "Instagram story (EN)",
+      "New arrival: Cor Caroli R491 (heart bezel, white), on hand",
+      "COR CAROLI · A star named for a king's heart. -> Wear your heart / where you can see it.",
+      "סדרת השמות: קור קרולי, כוכב שנקרא על שם לב (פועם בקצב); לענוד את הלב איפה שרואים אותו",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "06.11",
+      "Instagram carousel + Facebook album",
+      "Ring size at home: saveable guide (5 slides)",
+      "Find your ring size / at home.",
+      "קרוסלה + אלבום פייסבוק: מדריך מידת טבעת לשמירה, תומך בסדרת יום שלישי ובמאמר באתר",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "06.11",
+      "Instagram story (EN)",
+      "Review (Freddie) + proposal invite",
+      "“Beautiful ring. She loved it and said yes!…” / Planning a yes? Message us.",
+      "ביקורת אמיתית (Freddie, מילה במילה) לפני סוף השבוע + הזמנה למי שמתכנן הצעה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
       "05.11",
       "Instagram story (EN)",
       "Series: cleaning at home (1/4) · Gravitational Wave engagement",
       "Bring the sparkle back. / At home, in five minutes.",
-      "סדרה מועילה, ניקוי בבית 1/4: הוק, הטבעת עוברת ממעומעמת לנוצצת",
-      "מתוכנן, ממתין לאישור"
+      "סדרה מועילה, ניקוי בבית 1/4: הוק, הטבעת עוברת ממעומעמת לנוצצת · הוחלף: סדרת הניקוי אוחדה לטיפוח יהלום שחור (27.10)",
+      "נפסל"
      ],
      [
       "05.11",
       "Instagram story (EN)",
       "Series: cleaning at home (2/4)",
       "A bowl of lukewarm water / and a drop of mild soap. -> Let your piece soak for a few minutes.",
-      "ניקוי 2/4: קערה עם מים פושרים וטיפת סבון עדין, אדוות",
-      "מתוכנן, ממתין לאישור"
+      "ניקוי 2/4: קערה עם מים פושרים וטיפת סבון עדין, אדוות · עבר לסדרת טיפוח יהלום שחור 5.11 (שורה חדשה)",
+      "נפסל"
      ],
      [
       "05.11",
       "Instagram story (EN)",
       "Series: cleaning at home (3/4) · Gravitational Wave engagement",
       "A soft brush, / gently around the stone.",
-      "ניקוי 3/4: מברשת רכה בעדינות סביב האבן, בועות",
-      "מתוכנן, ממתין לאישור"
+      "ניקוי 3/4: מברשת רכה בעדינות סביב האבן, בועות · עבר לסדרת טיפוח יהלום שחור 5.11 (שורה חדשה)",
+      "נפסל"
      ],
      [
       "05.11",
       "Instagram story (EN)",
       "Series: cleaning at home (4/4) · Gravitational Wave engagement",
       "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us.",
-      "ניקוי 4/4: שוטפים ומייבשים במטלית רכה, ניצוצות; הזמנה לשיחה עם בן אדם אמיתי",
+      "ניקוי 4/4: שוטפים ומייבשים במטלית רכה, ניצוצות; הזמנה לשיחה עם בן אדם אמיתי · עבר לסדרת טיפוח יהלום שחור 5.11 (שורה חדשה)",
+      "נפסל"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: black-diamond care (1/6) · Selkie R516 on hand",
+      "Keep your black diamond / like the day you got it. -> Six steps. Save this one.",
+      "סדרה מועילה חדשה (בחירת דניאל 27.10): טיפוח יהלום שחור 1/6. סדרת הניקוי מ-25.10 אוחדה לתוכה (שלבים 2–4)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: black-diamond care (2/6) — was cleaning 2/4",
+      "A bowl of lukewarm water / and a drop of mild soap. -> Let your piece soak for a few minutes.",
+      "טיפוח 2/6: מים פושרים וסבון עדין (מסדרת הניקוי, מספור חדש)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: black-diamond care (3/6) — was cleaning 3/4",
+      "A soft brush, / gently around the stone.",
+      "טיפוח 3/6: מברשת רכה סביב האבן",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: black-diamond care (4/6) — was cleaning 4/4 (its ask stays at frame 4)",
+      "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us. A real person answers.",
+      "טיפוח 4/6: שוטפים ומייבשים במטלית רכה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: black-diamond care (5/6)",
+      "Skip the ultrasonic / and the steam. -> Strong vibration and heat aren't its friends. Gentle is all it needs.",
+      "טיפוח 5/6: בלי מכשיר אולטרסוני ובלי קיטור, רק עדינות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "Series: black-diamond care (6/6) · Gravitational Wave engagement",
+      "Repair or resizing? / Tell your jeweler it's black. -> So no torch comes near the stone. Store it apart, in a soft pouch. -> That's the whole routine.",
+      "טיפוח 6/6: לספר לצורף שזה יהלום שחור (בלי להבה ליד האבן), אחסון בנפרד, סגירה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "New arrival: Centauri R513 (oval with side stones, rose), on hand",
+      "CENTAURI · Our nearest stars, 4.37 light-years from the sun. -> Keep close the ones / who shine when it's dark.",
+      "סדרת השמות: קנטאורוס, האור הקרוב ביותר בחושך; לשמור קרוב את מי שמאיר כשחשוך",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "05.11",
+      "Instagram story (EN)",
+      "New arrival: Phoenix R499 (marquise bypass, yellow), on hand",
+      "PHOENIX · It burns to ash, then rises brighter. Every time. -> You've started over before. / You know how.",
+      "סדרת השמות: פיניקס; כבר התחלת מחדש פעם, את יודעת איך",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "04.11",
+      "Instagram story (EN)",
+      "New arrival: Melusine R483 (oval split shank, white), on hand",
+      "MELUSINE · Woman above, serpent below. She hid it from everyone. -> Everyone keeps a part / the world doesn't see.",
+      "סדרת השמות: מלוזינה, מעל ומתחת למים; לכל אחד יש חלק שהעולם לא רואה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "04.11",
+      "Instagram reel + Facebook reel",
+      "New arrivals: Janus, Selkie, Melusine, Centauri (other photos than the stories)",
+      "Four rings. Four myths. / Every one has two faces. -> JANUS / SELKIE / MELUSINE / CENTAURI -> So do you. / Wear both.",
+      "ריל דואליות: ארבעת המיתוסים שיש להם שני צדדים; 'כך גם אתם, תענדו את שניהם'",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "04.11",
+      "Instagram story (EN)",
+      "REMNANT: Starz bands his & hers (new on-body, live pilot set)",
+      "Two hands. / The same stars. -> Starz bands, his and hers.",
+      "נגיעה אחת של REMNANT בשבוע: טבעות Starz לו ולה, עמוד מגזין עם תמונות גוף חדשות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "03.11",
+      "Instagram story (EN)",
+      "Series: ring size at home (1/5) · Hyades R520 on hand",
+      "Not sure of your ring size? / Find it at home in two minutes.",
+      "סדרה מועילה חדשה (בחירת דניאל 27.10): מידת טבעת בבית 1/5, הוק",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "03.11",
+      "Instagram story (EN)",
+      "Series: ring size at home (2/5)",
+      "Wrap a thin strip of paper / around the base of your finger. -> Snug, but it should still slide over the knuckle.",
+      "מידה 2/5: רצועת נייר סביב בסיס האצבע, מסמנים",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "03.11",
+      "Instagram story (EN)",
+      "Series: ring size at home (3/5)",
+      "Lay it flat on a ruler. / That length is your size. -> 49.3 mm US 5 … 59.5 mm US 9",
+      "מידה 3/5: סרגל + טבלת היקף->מידה אמריקאית (5–9)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "03.11",
+      "Instagram story (EN)",
+      "Series: ring size at home (4/5)",
+      "Measure at the end of the day, / when your hands are warm. -> Wide band? Go a quarter to a half size up. -> Got your number? Reply with it. We'll tell you your size.",
+      "מידה 4/5: מודדים בסוף היום; טבעת רחבה רבע-חצי מידה למעלה; ה'בקשה' בפריים 4: שלחו לנו את המספר בתגובה לסטורי",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "03.11",
+      "Instagram story (EN)",
+      "Series: ring size at home (5/5) · Gravitational Wave band",
+      "Keeping it a surprise? / Borrow a ring they already wear. -> A real person helps you find it.",
+      "מידה 5/5: הפתעה (המידה שלה בסוד) + בן אדם אמיתי עוזר",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "03.11",
+      "Instagram story (EN)",
+      "New arrival: Selkie R516 (bypass oval, yellow), on hand",
+      "SELKIE · She sheds her seal skin on the shore by moonlight. -> You don't have to choose / one version of yourself.",
+      "סדרת השמות: סלקי, שייכת לים ולחוף; לא חייבים לבחור גרסה אחת של עצמך",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "03.11",
+      "Instagram story (EN)",
+      "New arrival: Pleiades R481 (graduated baguettes, rose), on hand",
+      "PLEIADES · Seven sisters you only see when you look away. -> Some things show up / only when you stop staring.",
+      "סדרת השמות: הפליאדות, נראות רק כשמסתכלים מהצד; שבע כוכבים מופיעים אחד אחד",
       "מתוכנן, ממתין לאישור"
      ],
      [
@@ -629,6 +839,46 @@
       "מתוכנן, ממתין לאישור"
      ],
      [
+      "02.11",
+      "Instagram story (EN)",
+      "New arrival: Janus R507 (east-west baguette, yellow), on hand",
+      "JANUS · Two faces, one looking back. January is named for him. -> Carry the past. / Walk toward what's next.",
+      "סדרת השמות: יאנוס, שני פנים, לעבר ולעתיד; לשאת את העבר וללכת קדימה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "02.11",
+      "Instagram story (EN)",
+      "New arrival: Hyades R520 (chevron band, white), on hand",
+      "HYADES · Sisters who cried so long, the gods made them stars. -> Some of what you cried / became your light.",
+      "סדרת השמות: ההיאדות, אחיות הגשם שבכו ונעשו כוכבים (V של כוכבים); מה שבכית הפך לאור",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "New arrival: Polaris R505 (compass, white gold), on hand",
+      "POLARIS · Every other star moves across the night. This one stays. -> Everyone needs / a way back home.",
+      "פתיחת סדרת 'השמות': שמי לילה, שם הטבעת והמיתוס שלה מדף המוצר, מעבר דואליות לטבעת על יד; כוכב הצפון = הדרך הביתה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram carousel + Facebook album",
+      "New arrivals: all 10 (Algol cover + 9 tiles: name, myth line, price)",
+      "Ten new rings. / Ten stories from the night sky.",
+      "קרוסלה + אלבום פייסבוק: עשר הטבעות החדשות שעלו לאתר, כל אחת עם שם של כוכב/מיתוס ומחיר",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "Review (Nia) + invite about the new rings",
+      "“The craftsmanship is excellent and truly stunning…” / A question about the new rings? Message us.",
+      "ביקורת אמיתית (Nia, מילה במילה) + הזמנה לשאול על הטבעות החדשות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
       "31.10",
       "Instagram story (EN)",
       "Gravitational Wave",
@@ -650,7 +900,7 @@
       "Real customers: Roger's proposal (Halloween decorations)",
       "Happy Halloween / from one of our favorite yeses.",
       "האלווין: הצעת נישואין אמיתית של לקוח בין דלעות",
-      "נפסל"
+      "בתור"
      ],
      [
       "31.10",
@@ -658,7 +908,7 @@
       "New arrival R520 V band (rose), on hand",
       "Darkness looks good / on you.",
       "ערב האלווין: הצד האפל יפה עלייך",
-      "נפסל"
+      "בתור"
      ],
      [
       "30.10",
@@ -674,7 +924,7 @@
       "Real customers: Kenneth's proposal kiss",
       "Somewhere tonight, / someone says yes.",
       "תמונת לקוחות אמיתית לפני סוף השבוע: מישהו אומר כן",
-      "נפסל"
+      "בתור"
      ],
      [
       "30.10",
@@ -682,7 +932,7 @@
       "Engagement + matching bands: Gravitational Wave set, Matahari + Whiteflash, R111 + R085",
       "The first ring asks. / The second one answers. -> Made to be worn together. -> One promise. Then another.",
       "לפי דניאל: טבעות אירוסין עם טבעות הנישואין התואמות; זוג GW ברינדור + שני סטים על יד",
-      "נפסל"
+      "בתור"
      ],
      [
       "30.10",
@@ -690,7 +940,7 @@
       "New arrival R499 (marquise between wings), on hand",
       "Not everything bright / has to be loud.",
       "טבעת חדשה על יד: אור שקט, דואליות",
-      "נפסל"
+      "בתור"
      ],
      [
       "29.10",
@@ -714,7 +964,7 @@
       "Ready to ship: Orion's Belt tennis necklace (rose gold)",
       "Ready to ship. / One of each.",
       "מוכן למשלוח: שרשרת טניס, גם תכשיט שאינו טבעת",
-      "נפסל"
+      "בתור"
      ],
      [
       "29.10",
@@ -722,7 +972,7 @@
       "New arrivals R520 V band + R507 east-west baguette, on hand",
       "Made for every day. / Especially the hard ones.",
       "עמוד מגזין: טבעות חדשות ליום-יום, גם לימים הקשים",
-      "נפסל"
+      "בתור"
      ],
      [
       "28.10",
@@ -738,7 +988,7 @@
       "Gravitational Wave band (yellow, white diamond)",
       "Some moments travel / further than you think.",
       "לפי דניאל: רקע שזז כמו גל כבידה בחלל, הטבעת צפה על הגל; רגעים שמשנים הכול",
-      "נפסל"
+      "בתור"
      ],
      [
       "28.10",
@@ -746,7 +996,7 @@
       "Real customers: Tomer & Yuval's wedding",
       "The rings were ours. / The day was theirs.",
       "חתונה אמיתית של לקוחות",
-      "נפסל"
+      "בתור"
      ],
      [
       "28.10",
@@ -754,7 +1004,7 @@
       "New arrivals R516, R483, R499, R513 (magazine pages)",
       "Soft is not / the same as weak. -> Hold on to what matters. / Let go of the rest. -> Light and dark were never opposites.",
       "ריל מגזין: עמודים מתהפכים עם טבעות חדשות על יד, דואליות, הזמנה לשיחה (לא באתר עדיין, בלי קישור)",
-      "נפסל"
+      "בתור"
      ],
      [
       "27.10",
@@ -778,7 +1028,7 @@
       "Smoothen R116 (rose gold)",
       "ROUGH -> BREAK -> REBUILD -> POLISH: So collapse. / Crumble. / This is not your destruction. / This is your birth. -> What remains, becomes.",
       "נבנה מחדש לפי דניאל: ציר זמן של לידה מחדש. הטבעת עוברת מגלם מחוספס לליטוש, המילים מדף המסרים של הקולקציה (r.h. sin + What remains, becomes)",
-      "נפסל"
+      "בתור"
      ],
      [
       "27.10",
@@ -786,7 +1036,7 @@
       "New arrival R513 (oval with side stones), on hand",
       "You can be gentle / and still hold your ground.",
       "טבעת חדשה על יד: עדינות וחוזק באותו אדם",
-      "נפסל"
+      "בתור"
      ],
      [
       "26.10",
@@ -802,7 +1052,7 @@
       "Ready to ship: Pera Scura (black pear, yellow gold)",
       "Ready to ship. / One of each.",
       "מוכן למשלוח (החיסול/ארכיון): פרה סקורה, 3 תמונות במעבר דואליות, מחיר + מחיר קודם",
-      "נפסל"
+      "בתור"
      ],
      [
       "26.10",
@@ -810,7 +1060,7 @@
       "Ready to ship: Triangulum, Portal, Mystery Soirée, Fractals",
       "Ready to ship. / One of each.",
       "קרוסלה: 4 טבעות מוכנות למשלוח עם מחירים, אחת מכל אחת",
-      "נפסל"
+      "בתור"
      ],
      [
       "26.10",
@@ -818,7 +1068,7 @@
       "Review (Renee) + conversation invite",
       "“I wanted a custom design, and I got a quick response…” / Have a design in your head? Message us.",
       "ביקורת אמיתית (Renee) על עיצוב אישי ותגובה מהירה + הזמנה לשיחה עם בן אדם אמיתי",
-      "נפסל"
+      "בתור"
      ],
      [
       "25.10",
@@ -858,7 +1108,7 @@
       "New arrivals R541 (large) + R491 heart, on hand",
       "Polished on the outside. / Deep on the inside.",
       "עמוד מגזין: שתי טבעות חדשות על יד, דואליות מבחוץ/מבפנים, הזמנה לשיחה",
-      "נפסל"
+      "בתור"
      ],
      [
       "25.10",
@@ -866,7 +1116,7 @@
       "Real customers (Mary, two brides, a couple at home)",
       "Every ring here / has a someone. -> Thank you for letting us / be part of it.",
       "תמונות לקוחות אמיתיות: לכל טבעת יש מישהו. תודה",
-      "נפסל"
+      "בתור"
      ],
      [
       "24.10",
@@ -1002,8 +1252,8 @@
   ],
   "attention": [
    {
-    "text": "מחר, רביעי 28.10 — אישור לוח הסושיאל לשבוע 1–7.11",
-    "note": "כולל את שני נושאי התוכן המועיל שנבחרו: מידת טבעת בבית + טיפוח יהלום שחור. שום דבר לא נכנס לתור לפני האישור.",
+    "text": "רביעי 28.10 — לאשר את לוח הסושיאל 1–7.11 (מוכן, כל הכרטיסים למטה)",
+    "note": "39 כרטיסים ממתינים: סטוריז EN, 3 פוסטים לפיד + פייסבוק, 3 פוסטים בעברית. כולל מידת טבעת בבית + טיפוח יהלום שחור (הניקוי אוחד לתוכו). שום דבר לא בתור לפני האישור.",
     "since": "2026-10-27"
    }
   ],
@@ -2044,213 +2294,793 @@
     },
     {
      "week_of": "2026-11-01",
-     "label": "טיוטה: שתי סדרות סטוריז מועילות (חדר כושר, ניקוי בבית)",
-     "approved": "ממתין לאישור · עוד לא בתור; שאר השבוע ייבנה ביום רביעי",
+     "label": "שבוע 1–7.11: עשר הטבעות החדשות (שמות של כוכבים ומיתוסים) + סדרות מועילות: חדר כושר, מידת טבעת בבית, טיפוח יהלום שחור (כולל הניקוי)",
+     "approved": "ממתין לאישור דניאל (רביעי 28.10) · שום דבר לא בתור",
      "items": [
       {
-       "id": "edu-gym-1",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-sun-01-story-a",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-01",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Polaris R505 (compass, white gold), on hand",
+       "hook": "POLARIS · Every other star moves across the night. This one stays. -> Everyone needs / a way back home.",
+       "angle": "פתיחת סדרת 'השמות': שמי לילה, שם הטבעת והמיתוס שלה מדף המוצר, מעבר דואליות לטבעת על יד; כוכב הצפון = הדרך הביתה",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/sun-01-story-a.jpg",
+        "2026-11-01-week/sun-01-story-a-f1.jpg",
+        "2026-11-01-week/sun-01-story-a-f3.jpg",
+        "2026-11-01-week/sun-01-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/sun-01-story-a.mp4"
+      },
+      {
+       "id": "w1101-sun-01-post",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-01",
+       "time": "18:00",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "New arrivals: all 10 (Algol cover + 9 tiles: name, myth line, price)",
+       "hook": "Ten new rings. / Ten stories from the night sky.",
+       "angle": "קרוסלה + אלבום פייסבוק: עשר הטבעות החדשות שעלו לאתר, כל אחת עם שם של כוכב/מיתוס ומחיר",
+       "music": "",
+       "thumbs": [
+        "2026-11-01-week/sun-01-post-1.jpg",
+        "2026-11-01-week/sun-01-post-2.jpg",
+        "2026-11-01-week/sun-01-post-3.jpg",
+        "2026-11-01-week/sun-01-post-4.jpg",
+        "2026-11-01-week/sun-01-post-5.jpg",
+        "2026-11-01-week/sun-01-post-6.jpg",
+        "2026-11-01-week/sun-01-post-7.jpg",
+        "2026-11-01-week/sun-01-post-8.jpg",
+        "2026-11-01-week/sun-01-post-9.jpg",
+        "2026-11-01-week/sun-01-post-10.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "10 new black diamond rings, each named for a star or a myth, from Polaris to Algol.\n\nPolaris is the star sailors steered home by. Algol goes dark every 2.87 days, then it's back. Selkie belongs to the sea and to the shore, and doesn't choose. Phoenix? Fire, ash, fire.\n\nSome of them are black diamond engagement rings. Some you'll wear on an ordinary Tuesday. They're all natural black diamonds in 14K gold, made to order by hand in yellow, rose or white, from $1,100 for Janus to $3,600 for Algol.\n\nYour story's probably in here somewhere. Not sure where yours fits? Write to us. A real person answers.\n\nAll ten: link in bio.\n\n#blackdiamondring #blackdiamondengagementring #newarrivals #finejewelry #dianarafael"
+      },
+      {
+       "id": "w1101-sun-01-post-fb",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-01",
+       "time": "18:00",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "New arrivals: all 10 (Algol cover + 9 tiles: name, myth line, price)",
+       "hook": "Ten new rings. / Ten stories from the night sky.",
+       "angle": "קרוסלה + אלבום פייסבוק: עשר הטבעות החדשות שעלו לאתר, כל אחת עם שם של כוכב/מיתוס ומחיר",
+       "music": "",
+       "thumbs": [
+        "2026-11-01-week/sun-01-post-1.jpg",
+        "2026-11-01-week/sun-01-post-2.jpg",
+        "2026-11-01-week/sun-01-post-3.jpg",
+        "2026-11-01-week/sun-01-post-4.jpg",
+        "2026-11-01-week/sun-01-post-5.jpg",
+        "2026-11-01-week/sun-01-post-6.jpg",
+        "2026-11-01-week/sun-01-post-7.jpg",
+        "2026-11-01-week/sun-01-post-8.jpg",
+        "2026-11-01-week/sun-01-post-9.jpg",
+        "2026-11-01-week/sun-01-post-10.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "10 new black diamond rings, each named for a star or a myth, from Polaris to Algol.\n\nPolaris is the star sailors steered home by. Algol goes dark every 2.87 days, then it's back. Selkie belongs to the sea and to the shore, and doesn't choose. Phoenix? Fire, ash, fire.\n\nSome of them are black diamond engagement rings. Some you'll wear on an ordinary Tuesday. They're all natural black diamonds in 14K gold, made to order by hand in yellow, rose or white, from $1,100 for Janus to $3,600 for Algol.\n\nYour story's probably in here somewhere. Not sure where yours fits? Write to us. A real person answers.\n\nAll ten: https://dianarafael.com/collections/new-arrivals\n\n#blackdiamondring #blackdiamondengagementring #newarrivals #finejewelry #dianarafael"
+      },
+      {
+       "id": "w1101-sun-01-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-01",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Nia) + invite about the new rings",
+       "hook": "“The craftsmanship is excellent and truly stunning…” / A question about the new rings? Message us.",
+       "angle": "ביקורת אמיתית (Nia, מילה במילה) + הזמנה לשאול על הטבעות החדשות",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/sun-01-story-c.jpg",
+        "2026-11-01-week/sun-01-story-c-f1.jpg",
+        "2026-11-01-week/sun-01-story-c-f3.jpg",
+        "2026-11-01-week/sun-01-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/sun-01-story-c.mp4"
+      },
+      {
+       "id": "w1101-gym-1",
+       "batch": "2026-11-01-week",
        "date": "2026-11-02",
        "time": "12:00",
        "platform": "ig_story",
        "format": "9:16",
        "piece": "Series: jewelry at the gym (1/4) · Starz band",
        "hook": "Training today? / Your ring can sit this one out. -> Here's why.",
-       "angle": "סדרה מועילה, חדר כושר 1/4: הוק, משקולת עולה ויורדת והטבעת נשארת בצד",
+       "angle": "סדרה מועילה, חדר כושר 1/4 (הטיוטה מ-25.10, ללא שינוי)",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/gym-1.jpg",
-        "2026-11-01-edu/gym-1-f1.jpg",
-        "2026-11-01-edu/gym-1-f2.jpg",
-        "2026-11-01-edu/gym-1-f3.jpg",
-        "2026-11-01-edu/gym-1-f4.jpg",
-        "2026-11-01-edu/gym-1-f5.jpg",
-        "2026-11-01-edu/gym-1-f6.jpg"
+        "2026-11-01-week/gym-1.jpg",
+        "2026-11-01-week/gym-1-f1.jpg",
+        "2026-11-01-week/gym-1-f3.jpg",
+        "2026-11-01-week/gym-1-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/gym-1.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/gym-1.mp4"
       },
       {
-       "id": "edu-gym-2",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-gym-2",
+       "batch": "2026-11-01-week",
        "date": "2026-11-02",
        "time": "12:01",
        "platform": "ig_story",
        "format": "9:16",
        "piece": "Series: jewelry at the gym (2/4)",
        "hook": "Gold is a soft metal. / That's what makes it beautiful. -> And it means weight can bend it.",
-       "angle": "חדר כושר 2/4: זהב הוא מתכת רכה, מוט לוחץ והעיגול מתעקם",
+       "angle": "חדר כושר 2/4: זהב הוא מתכת רכה",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/gym-2.jpg",
-        "2026-11-01-edu/gym-2-f1.jpg",
-        "2026-11-01-edu/gym-2-f2.jpg",
-        "2026-11-01-edu/gym-2-f3.jpg",
-        "2026-11-01-edu/gym-2-f4.jpg",
-        "2026-11-01-edu/gym-2-f5.jpg",
-        "2026-11-01-edu/gym-2-f6.jpg"
+        "2026-11-01-week/gym-2.jpg",
+        "2026-11-01-week/gym-2-f1.jpg",
+        "2026-11-01-week/gym-2-f3.jpg",
+        "2026-11-01-week/gym-2-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/gym-2.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/gym-2.mp4"
       },
       {
-       "id": "edu-gym-3",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-gym-3",
+       "batch": "2026-11-01-week",
        "date": "2026-11-02",
        "time": "12:02",
        "platform": "ig_story",
        "format": "9:16",
        "piece": "Series: jewelry at the gym (3/4)",
        "hook": "A bent ring loosens its grip. / A stone can slip out.",
-       "angle": "חדר כושר 3/4: טבעת מעוקמת משחררת את השיניים והאבן נופלת",
+       "angle": "חדר כושר 3/4: טבעת מעוקמת משחררת את האבן",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/gym-3.jpg",
-        "2026-11-01-edu/gym-3-f1.jpg",
-        "2026-11-01-edu/gym-3-f2.jpg",
-        "2026-11-01-edu/gym-3-f3.jpg",
-        "2026-11-01-edu/gym-3-f4.jpg",
-        "2026-11-01-edu/gym-3-f5.jpg",
-        "2026-11-01-edu/gym-3-f6.jpg"
+        "2026-11-01-week/gym-3.jpg",
+        "2026-11-01-week/gym-3-f1.jpg",
+        "2026-11-01-week/gym-3-f3.jpg",
+        "2026-11-01-week/gym-3-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/gym-3.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/gym-3.mp4"
       },
       {
-       "id": "edu-gym-4",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-gym-4",
+       "batch": "2026-11-01-week",
        "date": "2026-11-02",
        "time": "12:03",
        "platform": "ig_story",
        "format": "9:16",
        "piece": "Series: jewelry at the gym (4/4) · Starz band",
        "hook": "Weights, strength training, pilates: / take it off, set it aside. -> It'll be right there when you're done.",
-       "angle": "חדר כושר 4/4: משקולות/כוח/פילאטיס, מורידים ומניחים בצד; הטבעת נוחתת בקערית; בן אדם אמיתי עונה",
+       "angle": "חדר כושר 4/4: מורידים ומניחים בצד; בן אדם אמיתי עונה",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/gym-4.jpg",
-        "2026-11-01-edu/gym-4-f1.jpg",
-        "2026-11-01-edu/gym-4-f2.jpg",
-        "2026-11-01-edu/gym-4-f3.jpg",
-        "2026-11-01-edu/gym-4-f4.jpg",
-        "2026-11-01-edu/gym-4-f5.jpg",
-        "2026-11-01-edu/gym-4-f6.jpg"
+        "2026-11-01-week/gym-4.jpg",
+        "2026-11-01-week/gym-4-f1.jpg",
+        "2026-11-01-week/gym-4-f3.jpg",
+        "2026-11-01-week/gym-4-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/gym-4.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/gym-4.mp4"
       },
       {
-       "id": "edu-clean-1",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-mon-02-story-b",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-02",
+       "time": "17:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Janus R507 (east-west baguette, yellow), on hand",
+       "hook": "JANUS · Two faces, one looking back. January is named for him. -> Carry the past. / Walk toward what's next.",
+       "angle": "סדרת השמות: יאנוס, שני פנים, לעבר ולעתיד; לשאת את העבר וללכת קדימה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/mon-02-story-b.jpg",
+        "2026-11-01-week/mon-02-story-b-f1.jpg",
+        "2026-11-01-week/mon-02-story-b-f3.jpg",
+        "2026-11-01-week/mon-02-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/mon-02-story-b.mp4"
+      },
+      {
+       "id": "w1101-mon-02-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-02",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Hyades R520 (chevron band, white), on hand",
+       "hook": "HYADES · Sisters who cried so long, the gods made them stars. -> Some of what you cried / became your light.",
+       "angle": "סדרת השמות: ההיאדות, אחיות הגשם שבכו ונעשו כוכבים (V של כוכבים); מה שבכית הפך לאור",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/mon-02-story-c.jpg",
+        "2026-11-01-week/mon-02-story-c-f1.jpg",
+        "2026-11-01-week/mon-02-story-c-f3.jpg",
+        "2026-11-01-week/mon-02-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/mon-02-story-c.mp4"
+      },
+      {
+       "id": "w1101-size-1",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: ring size at home (1/5) · Hyades R520 on hand",
+       "hook": "Not sure of your ring size? / Find it at home in two minutes.",
+       "angle": "סדרה מועילה חדשה (בחירת דניאל 27.10): מידת טבעת בבית 1/5, הוק",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/size-1.jpg",
+        "2026-11-01-week/size-1-f1.jpg",
+        "2026-11-01-week/size-1-f3.jpg",
+        "2026-11-01-week/size-1-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/size-1.mp4"
+      },
+      {
+       "id": "w1101-size-2",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "12:01",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: ring size at home (2/5)",
+       "hook": "Wrap a thin strip of paper / around the base of your finger. -> Snug, but it should still slide over the knuckle.",
+       "angle": "מידה 2/5: רצועת נייר סביב בסיס האצבע, מסמנים",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/size-2.jpg",
+        "2026-11-01-week/size-2-f1.jpg",
+        "2026-11-01-week/size-2-f3.jpg",
+        "2026-11-01-week/size-2-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/size-2.mp4"
+      },
+      {
+       "id": "w1101-size-3",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "12:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: ring size at home (3/5)",
+       "hook": "Lay it flat on a ruler. / That length is your size. -> 49.3 mm US 5 … 59.5 mm US 9",
+       "angle": "מידה 3/5: סרגל + טבלת היקף->מידה אמריקאית (5–9)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/size-3.jpg",
+        "2026-11-01-week/size-3-f1.jpg",
+        "2026-11-01-week/size-3-f3.jpg",
+        "2026-11-01-week/size-3-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/size-3.mp4"
+      },
+      {
+       "id": "w1101-size-4",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "12:03",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: ring size at home (4/5)",
+       "hook": "Measure at the end of the day, / when your hands are warm. -> Wide band? Go a quarter to a half size up. -> Got your number? Reply with it. We'll tell you your size.",
+       "angle": "מידה 4/5: מודדים בסוף היום; טבעת רחבה רבע-חצי מידה למעלה; ה'בקשה' בפריים 4: שלחו לנו את המספר בתגובה לסטורי",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/size-4.jpg",
+        "2026-11-01-week/size-4-f1.jpg",
+        "2026-11-01-week/size-4-f3.jpg",
+        "2026-11-01-week/size-4-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/size-4.mp4"
+      },
+      {
+       "id": "w1101-size-5",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "12:04",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: ring size at home (5/5) · Gravitational Wave band",
+       "hook": "Keeping it a surprise? / Borrow a ring they already wear. -> A real person helps you find it.",
+       "angle": "מידה 5/5: הפתעה (המידה שלה בסוד) + בן אדם אמיתי עוזר",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/size-5.jpg",
+        "2026-11-01-week/size-5-f1.jpg",
+        "2026-11-01-week/size-5-f3.jpg",
+        "2026-11-01-week/size-5-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/size-5.mp4"
+      },
+      {
+       "id": "w1101-tue-03-story-b",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "18:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Selkie R516 (bypass oval, yellow), on hand",
+       "hook": "SELKIE · She sheds her seal skin on the shore by moonlight. -> You don't have to choose / one version of yourself.",
+       "angle": "סדרת השמות: סלקי, שייכת לים ולחוף; לא חייבים לבחור גרסה אחת של עצמך",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/tue-03-story-b.jpg",
+        "2026-11-01-week/tue-03-story-b-f1.jpg",
+        "2026-11-01-week/tue-03-story-b-f3.jpg",
+        "2026-11-01-week/tue-03-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/tue-03-story-b.mp4"
+      },
+      {
+       "id": "w1101-tue-03-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Pleiades R481 (graduated baguettes, rose), on hand",
+       "hook": "PLEIADES · Seven sisters you only see when you look away. -> Some things show up / only when you stop staring.",
+       "angle": "סדרת השמות: הפליאדות, נראות רק כשמסתכלים מהצד; שבע כוכבים מופיעים אחד אחד",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/tue-03-story-c.jpg",
+        "2026-11-01-week/tue-03-story-c-f1.jpg",
+        "2026-11-01-week/tue-03-story-c-f3.jpg",
+        "2026-11-01-week/tue-03-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/tue-03-story-c.mp4"
+      },
+      {
+       "id": "w1101-wed-04-story-a",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-04",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Melusine R483 (oval split shank, white), on hand",
+       "hook": "MELUSINE · Woman above, serpent below. She hid it from everyone. -> Everyone keeps a part / the world doesn't see.",
+       "angle": "סדרת השמות: מלוזינה, מעל ומתחת למים; לכל אחד יש חלק שהעולם לא רואה",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/wed-04-story-a.jpg",
+        "2026-11-01-week/wed-04-story-a-f1.jpg",
+        "2026-11-01-week/wed-04-story-a-f3.jpg",
+        "2026-11-01-week/wed-04-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/wed-04-story-a.mp4"
+      },
+      {
+       "id": "w1101-wed-04-reel",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-04",
+       "time": "18:00",
+       "platform": "ig_reel",
+       "format": "9:16",
+       "piece": "New arrivals: Janus, Selkie, Melusine, Centauri (other photos than the stories)",
+       "hook": "Four rings. Four myths. / Every one has two faces. -> JANUS / SELKIE / MELUSINE / CENTAURI -> So do you. / Wear both.",
+       "angle": "ריל דואליות: ארבעת המיתוסים שיש להם שני צדדים; 'כך גם אתם, תענדו את שניהם'",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/wed-04-reel-cover.jpg",
+        "2026-11-01-week/wed-04-reel-f1.jpg",
+        "2026-11-01-week/wed-04-reel-f3.jpg",
+        "2026-11-01-week/wed-04-reel-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "4 black diamond rings named for Janus, Selkie, Melusine and the centaur. Every one has two faces.\n\nJanus looks back and forward at the same time. January's named for him. A selkie sheds her seal skin on the shore by moonlight, then walks into town as a woman. Melusine? Woman above the water. Serpent below. She hid it from everyone she loved. The centaur carries wisdom and wildness in one body.\n\nSound familiar? We named these rings for them because that's how most of us live, soft and strong at once, light and dark in the same week. You don't have to pick a side.\n\nNatural black diamonds in 14K gold, from $1,100. Made to order.\n\nAll ten new rings: link in bio.\n\n#blackdiamondring #duality #newarrivals #finejewelry #dianarafael",
+       "video": "2026-11-01-week/wed-04-reel.mp4"
+      },
+      {
+       "id": "w1101-wed-04-reel-fb",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-04",
+       "time": "18:00",
+       "platform": "fb_reel",
+       "format": "9:16",
+       "piece": "New arrivals: Janus, Selkie, Melusine, Centauri (other photos than the stories)",
+       "hook": "Four rings. Four myths. / Every one has two faces. -> JANUS / SELKIE / MELUSINE / CENTAURI -> So do you. / Wear both.",
+       "angle": "ריל דואליות: ארבעת המיתוסים שיש להם שני צדדים; 'כך גם אתם, תענדו את שניהם'",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/wed-04-reel-cover.jpg",
+        "2026-11-01-week/wed-04-reel-f1.jpg",
+        "2026-11-01-week/wed-04-reel-f3.jpg",
+        "2026-11-01-week/wed-04-reel-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "4 black diamond rings named for Janus, Selkie, Melusine and the centaur. Every one has two faces.\n\nJanus looks back and forward at the same time. January's named for him. A selkie sheds her seal skin on the shore by moonlight, then walks into town as a woman. Melusine? Woman above the water. Serpent below. She hid it from everyone she loved. The centaur carries wisdom and wildness in one body.\n\nSound familiar? We named these rings for them because that's how most of us live, soft and strong at once, light and dark in the same week. You don't have to pick a side.\n\nNatural black diamonds in 14K gold, from $1,100. Made to order.\n\nAll ten new rings: https://dianarafael.com/collections/new-arrivals\n\n#blackdiamondring #duality #newarrivals #finejewelry #dianarafael",
+       "video": "2026-11-01-week/wed-04-reel.mp4"
+      },
+      {
+       "id": "w1101-wed-04-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-04",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT: Starz bands his & hers (new on-body, live pilot set)",
+       "hook": "Two hands. / The same stars. -> Starz bands, his and hers.",
+       "angle": "נגיעה אחת של REMNANT בשבוע: טבעות Starz לו ולה, עמוד מגזין עם תמונות גוף חדשות",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/wed-04-story-c.jpg",
+        "2026-11-01-week/wed-04-story-c-f1.jpg",
+        "2026-11-01-week/wed-04-story-c-f3.jpg",
+        "2026-11-01-week/wed-04-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/wed-04-story-c.mp4"
+      },
+      {
+       "id": "w1101-care-1",
+       "batch": "2026-11-01-week",
        "date": "2026-11-05",
        "time": "12:00",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "Series: cleaning at home (1/4) · Gravitational Wave engagement",
-       "hook": "Bring the sparkle back. / At home, in five minutes.",
-       "angle": "סדרה מועילה, ניקוי בבית 1/4: הוק, הטבעת עוברת ממעומעמת לנוצצת",
+       "piece": "Series: black-diamond care (1/6) · Selkie R516 on hand",
+       "hook": "Keep your black diamond / like the day you got it. -> Six steps. Save this one.",
+       "angle": "סדרה מועילה חדשה (בחירת דניאל 27.10): טיפוח יהלום שחור 1/6. סדרת הניקוי מ-25.10 אוחדה לתוכה (שלבים 2–4)",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/clean-1.jpg",
-        "2026-11-01-edu/clean-1-f1.jpg",
-        "2026-11-01-edu/clean-1-f2.jpg",
-        "2026-11-01-edu/clean-1-f3.jpg",
-        "2026-11-01-edu/clean-1-f4.jpg",
-        "2026-11-01-edu/clean-1-f5.jpg",
-        "2026-11-01-edu/clean-1-f6.jpg"
+        "2026-11-01-week/care-1.jpg",
+        "2026-11-01-week/care-1-f1.jpg",
+        "2026-11-01-week/care-1-f3.jpg",
+        "2026-11-01-week/care-1-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/clean-1.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/care-1.mp4"
       },
       {
-       "id": "edu-clean-2",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-care-2",
+       "batch": "2026-11-01-week",
        "date": "2026-11-05",
        "time": "12:01",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "Series: cleaning at home (2/4)",
+       "piece": "Series: black-diamond care (2/6) — was cleaning 2/4",
        "hook": "A bowl of lukewarm water / and a drop of mild soap. -> Let your piece soak for a few minutes.",
-       "angle": "ניקוי 2/4: קערה עם מים פושרים וטיפת סבון עדין, אדוות",
+       "angle": "טיפוח 2/6: מים פושרים וסבון עדין (מסדרת הניקוי, מספור חדש)",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/clean-2.jpg",
-        "2026-11-01-edu/clean-2-f1.jpg",
-        "2026-11-01-edu/clean-2-f2.jpg",
-        "2026-11-01-edu/clean-2-f3.jpg",
-        "2026-11-01-edu/clean-2-f4.jpg",
-        "2026-11-01-edu/clean-2-f5.jpg",
-        "2026-11-01-edu/clean-2-f6.jpg"
+        "2026-11-01-week/care-2.jpg",
+        "2026-11-01-week/care-2-f1.jpg",
+        "2026-11-01-week/care-2-f3.jpg",
+        "2026-11-01-week/care-2-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/clean-2.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/care-2.mp4"
       },
       {
-       "id": "edu-clean-3",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-care-3",
+       "batch": "2026-11-01-week",
        "date": "2026-11-05",
        "time": "12:02",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "Series: cleaning at home (3/4) · Gravitational Wave engagement",
+       "piece": "Series: black-diamond care (3/6) — was cleaning 3/4",
        "hook": "A soft brush, / gently around the stone.",
-       "angle": "ניקוי 3/4: מברשת רכה בעדינות סביב האבן, בועות",
+       "angle": "טיפוח 3/6: מברשת רכה סביב האבן",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/clean-3.jpg",
-        "2026-11-01-edu/clean-3-f1.jpg",
-        "2026-11-01-edu/clean-3-f2.jpg",
-        "2026-11-01-edu/clean-3-f3.jpg",
-        "2026-11-01-edu/clean-3-f4.jpg",
-        "2026-11-01-edu/clean-3-f5.jpg",
-        "2026-11-01-edu/clean-3-f6.jpg"
+        "2026-11-01-week/care-3.jpg",
+        "2026-11-01-week/care-3-f1.jpg",
+        "2026-11-01-week/care-3-f3.jpg",
+        "2026-11-01-week/care-3-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/clean-3.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/care-3.mp4"
       },
       {
-       "id": "edu-clean-4",
-       "batch": "2026-11-01-edu",
+       "id": "w1101-care-4",
+       "batch": "2026-11-01-week",
        "date": "2026-11-05",
        "time": "12:03",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "Series: cleaning at home (4/4) · Gravitational Wave engagement",
-       "hook": "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us.",
-       "angle": "ניקוי 4/4: שוטפים ומייבשים במטלית רכה, ניצוצות; הזמנה לשיחה עם בן אדם אמיתי",
+       "piece": "Series: black-diamond care (4/6) — was cleaning 4/4 (its ask stays at frame 4)",
+       "hook": "Rinse, then dry / with a soft cloth. -> Questions about caring for your piece? Message us. A real person answers.",
+       "angle": "טיפוח 4/6: שוטפים ומייבשים במטלית רכה",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "caption": "",
        "thumbs": [
-        "2026-11-01-edu/clean-4.jpg",
-        "2026-11-01-edu/clean-4-f1.jpg",
-        "2026-11-01-edu/clean-4-f2.jpg",
-        "2026-11-01-edu/clean-4-f3.jpg",
-        "2026-11-01-edu/clean-4-f4.jpg",
-        "2026-11-01-edu/clean-4-f5.jpg",
-        "2026-11-01-edu/clean-4-f6.jpg"
+        "2026-11-01-week/care-4.jpg",
+        "2026-11-01-week/care-4-f1.jpg",
+        "2026-11-01-week/care-4-f3.jpg",
+        "2026-11-01-week/care-4-f6.jpg"
        ],
        "images": [],
-       "video": "2026-11-01-edu/clean-4.mp4",
-       "status": "ממתין לאישור"
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/care-4.mp4"
+      },
+      {
+       "id": "w1101-care-5",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-05",
+       "time": "12:04",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: black-diamond care (5/6)",
+       "hook": "Skip the ultrasonic / and the steam. -> Strong vibration and heat aren't its friends. Gentle is all it needs.",
+       "angle": "טיפוח 5/6: בלי מכשיר אולטרסוני ובלי קיטור, רק עדינות",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/care-5.jpg",
+        "2026-11-01-week/care-5-f1.jpg",
+        "2026-11-01-week/care-5-f3.jpg",
+        "2026-11-01-week/care-5-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/care-5.mp4"
+      },
+      {
+       "id": "w1101-care-6",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-05",
+       "time": "12:05",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: black-diamond care (6/6) · Gravitational Wave engagement",
+       "hook": "Repair or resizing? / Tell your jeweler it's black. -> So no torch comes near the stone. Store it apart, in a soft pouch. -> That's the whole routine.",
+       "angle": "טיפוח 6/6: לספר לצורף שזה יהלום שחור (בלי להבה ליד האבן), אחסון בנפרד, סגירה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/care-6.jpg",
+        "2026-11-01-week/care-6-f1.jpg",
+        "2026-11-01-week/care-6-f3.jpg",
+        "2026-11-01-week/care-6-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/care-6.mp4"
+      },
+      {
+       "id": "w1101-thu-05-story-b",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-05",
+       "time": "17:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Centauri R513 (oval with side stones, rose), on hand",
+       "hook": "CENTAURI · Our nearest stars, 4.37 light-years from the sun. -> Keep close the ones / who shine when it's dark.",
+       "angle": "סדרת השמות: קנטאורוס, האור הקרוב ביותר בחושך; לשמור קרוב את מי שמאיר כשחשוך",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/thu-05-story-b.jpg",
+        "2026-11-01-week/thu-05-story-b-f1.jpg",
+        "2026-11-01-week/thu-05-story-b-f3.jpg",
+        "2026-11-01-week/thu-05-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/thu-05-story-b.mp4"
+      },
+      {
+       "id": "w1101-thu-05-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-05",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Phoenix R499 (marquise bypass, yellow), on hand",
+       "hook": "PHOENIX · It burns to ash, then rises brighter. Every time. -> You've started over before. / You know how.",
+       "angle": "סדרת השמות: פיניקס; כבר התחלת מחדש פעם, את יודעת איך",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/thu-05-story-c.jpg",
+        "2026-11-01-week/thu-05-story-c-f1.jpg",
+        "2026-11-01-week/thu-05-story-c-f3.jpg",
+        "2026-11-01-week/thu-05-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/thu-05-story-c.mp4"
+      },
+      {
+       "id": "w1101-fri-06-story-a",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-06",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Cor Caroli R491 (heart bezel, white), on hand",
+       "hook": "COR CAROLI · A star named for a king's heart. -> Wear your heart / where you can see it.",
+       "angle": "סדרת השמות: קור קרולי, כוכב שנקרא על שם לב (פועם בקצב); לענוד את הלב איפה שרואים אותו",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/fri-06-story-a.jpg",
+        "2026-11-01-week/fri-06-story-a-f1.jpg",
+        "2026-11-01-week/fri-06-story-a-f3.jpg",
+        "2026-11-01-week/fri-06-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/fri-06-story-a.mp4"
+      },
+      {
+       "id": "w1101-fri-06-post",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-06",
+       "time": "18:00",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "Ring size at home: saveable guide (5 slides)",
+       "hook": "Find your ring size / at home.",
+       "angle": "קרוסלה + אלבום פייסבוק: מדריך מידת טבעת לשמירה, תומך בסדרת יום שלישי ובמאמר באתר",
+       "music": "",
+       "thumbs": [
+        "2026-11-01-week/fri-06-post-1.jpg",
+        "2026-11-01-week/fri-06-post-2.jpg",
+        "2026-11-01-week/fri-06-post-3.jpg",
+        "2026-11-01-week/fri-06-post-4.jpg",
+        "2026-11-01-week/fri-06-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "How to find your ring size at home, with a strip of paper and a ruler. Save this.\n\n1. Wrap a thin strip of paper around the base of your finger. Snug, but it should still slide over your knuckle. Mark where it meets.\n2. Lay it flat on a ruler. 49.3 mm is a US 5, 51.9 mm a 6, 54.4 mm a 7, 57.0 mm an 8, 59.5 mm a 9.\n3. Measure in the evening, when your hands are warm. Cold fingers? They'll measure small. If you're getting a wide band, go a quarter to a half size up.\n\nKeeping it a surprise? Borrow a ring she already wears on that finger and measure across the inside, edge to edge: 15.7 mm is a US 5, 16.5 mm a 6, 17.3 mm a 7, 18.1 mm an 8. Or send us a photo of it next to a ruler and we'll work it out.\n\nStuck between two sizes? Send us your number. A real person helps you find it, and we don't guess.\n\n#ringsize #ringsizing #engagementring #proposal #dianarafael"
+      },
+      {
+       "id": "w1101-fri-06-post-fb",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-06",
+       "time": "18:00",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "Ring size at home: saveable guide (5 slides)",
+       "hook": "Find your ring size / at home.",
+       "angle": "קרוסלה + אלבום פייסבוק: מדריך מידת טבעת לשמירה, תומך בסדרת יום שלישי ובמאמר באתר",
+       "music": "",
+       "thumbs": [
+        "2026-11-01-week/fri-06-post-1.jpg",
+        "2026-11-01-week/fri-06-post-2.jpg",
+        "2026-11-01-week/fri-06-post-3.jpg",
+        "2026-11-01-week/fri-06-post-4.jpg",
+        "2026-11-01-week/fri-06-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "How to find your ring size at home, with a strip of paper and a ruler. Save this.\n\n1. Wrap a thin strip of paper around the base of your finger. Snug, but it should still slide over your knuckle. Mark where it meets.\n2. Lay it flat on a ruler. 49.3 mm is a US 5, 51.9 mm a 6, 54.4 mm a 7, 57.0 mm an 8, 59.5 mm a 9.\n3. Measure in the evening, when your hands are warm. Cold fingers? They'll measure small. If you're getting a wide band, go a quarter to a half size up.\n\nKeeping it a surprise? Borrow a ring she already wears on that finger and measure across the inside, edge to edge: 15.7 mm is a US 5, 16.5 mm a 6, 17.3 mm a 7, 18.1 mm an 8. Or send us a photo of it next to a ruler and we'll work it out.\n\nStuck between two sizes? Send us your number. A real person helps you find it, and we don't guess.\n\n#ringsize #ringsizing #engagementring #proposal #dianarafael"
+      },
+      {
+       "id": "w1101-fri-06-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-06",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Freddie) + proposal invite",
+       "hook": "“Beautiful ring. She loved it and said yes!…” / Planning a yes? Message us.",
+       "angle": "ביקורת אמיתית (Freddie, מילה במילה) לפני סוף השבוע + הזמנה למי שמתכנן הצעה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/fri-06-story-c.jpg",
+        "2026-11-01-week/fri-06-story-c-f1.jpg",
+        "2026-11-01-week/fri-06-story-c-f3.jpg",
+        "2026-11-01-week/fri-06-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/fri-06-story-c.mp4"
+      },
+      {
+       "id": "w1101-sat-07-story-a",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-07",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival: Algol R541 (east-west oval bezel, white), on hand",
+       "hook": "ALGOL · Every 2.87 days this star goes dark. Then it comes back. -> You're allowed to dim. / You always come back.",
+       "angle": "סדרת השמות: אלגול, הכוכב שמתעמעם וחוזר (הכוכב מתעמעם על המסך); מותר להתעמעם, תמיד חוזרים",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/sat-07-story-a.jpg",
+        "2026-11-01-week/sat-07-story-a-f1.jpg",
+        "2026-11-01-week/sat-07-story-a-f3.jpg",
+        "2026-11-01-week/sat-07-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/sat-07-story-a.mp4"
+      },
+      {
+       "id": "w1101-sat-07-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-07",
+       "time": "20:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT: Smoothen R116 (new on-body, yellow, mug)",
+       "hook": "Calm is not / the absence of a storm.",
+       "angle": "מוצאי שבת: Smoothen על יד (תמונת גוף חדשה מהסט שבאתר); רוגע זה לא היעדר סערה. GW לא כאן כי הוא כבר מאייר את סדרת הטיפוח",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/sat-07-story-c.jpg",
+        "2026-11-01-week/sat-07-story-c-f1.jpg",
+        "2026-11-01-week/sat-07-story-c-f3.jpg",
+        "2026-11-01-week/sat-07-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/sat-07-story-c.mp4"
       }
      ]
     }
    ],
-   "next": "השבוע שאחרי (1–7.11) יוצג ביום רביעי 28.10",
+   "next": "השבוע שאחרי (8–14.11) יוצג ביום רביעי 4.11",
    "ig": {
     "fetched": "2026-10-19",
     "username": "dianarafaeljewelry",
