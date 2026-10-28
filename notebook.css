@@ -304,7 +304,7 @@ ul.rules li{margin:.25rem 0;line-height:1.45}
 .sw-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .7rem;margin-bottom:.5rem}
 .sw-head b{font-family:var(--serif);font-size:1.05rem}
 .sw-head span{font-size:.8rem;color:var(--ink-2)}
-.sw-cal{display:grid;grid-template-columns:repeat(7,minmax(104px,1fr));gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:.3rem}
+.sw-cal{display:grid;grid-template-columns:repeat(var(--n,7),minmax(104px,1fr));gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:.3rem}
 .sw-day{background:var(--page);border:1px solid var(--rule);border-radius:10px;padding:.35rem;min-height:120px;display:flex;flex-direction:column;gap:.4rem}
 .sw-day.has{border-color:var(--line)}
 .sw-day.today{box-shadow:inset 0 0 0 1.5px var(--gold)}

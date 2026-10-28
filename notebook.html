@@ -306,7 +306,7 @@ ul.rules li{margin:.25rem 0;line-height:1.45}
 .sw-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .7rem;margin-bottom:.5rem}
 .sw-head b{font-family:var(--serif);font-size:1.05rem}
 .sw-head span{font-size:.8rem;color:var(--ink-2)}
-.sw-cal{display:grid;grid-template-columns:repeat(7,minmax(104px,1fr));gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:.3rem}
+.sw-cal{display:grid;grid-template-columns:repeat(var(--n,7),minmax(104px,1fr));gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:.3rem}
 .sw-day{background:var(--page);border:1px solid var(--rule);border-radius:10px;padding:.35rem;min-height:120px;display:flex;flex-direction:column;gap:.4rem}
 .sw-day.has{border-color:var(--line)}
 .sw-day.today{box-shadow:inset 0 0 0 1.5px var(--gold)}
@@ -743,11 +743,12 @@ function swGroup(items){ // consecutive stories of the same day+platform+status 
 function socialCal(sc){
   if(!sc)return '';SW_CARDS=[];
   const today=new Date();const tk=Date.UTC(today.getFullYear(),today.getMonth(),today.getDate());
-  const weeks=(sc.weeks||[]).map(w=>{const s=swDate(w.week_of);const items=swGroup(swCross([...(w.items||[])].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time))));
-    const days=SW_DAYS.map((nm,k)=>{const d=new Date(s.getTime()+k*864e5);const key=d.toISOString().slice(0,10);const its=items.filter(x=>x.date===key);
+  // past days are hidden (Daniel 28.10): a week whose last day has passed disappears entirely
+  const weeks=(sc.weeks||[]).filter(w=>swDate(w.week_of).getTime()+6*864e5>=tk).map(w=>{const s=swDate(w.week_of);const items=swGroup(swCross([...(w.items||[])].sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time))));
+    const days=SW_DAYS.map((nm,k)=>{const d=new Date(s.getTime()+k*864e5);if(d.getTime()<tk)return '';const key=d.toISOString().slice(0,10);const its=items.filter(x=>x.date===key);
       return `<div class="sw-day${its.length?' has':''}${d.getTime()===tk?' today':''}"><div class="sw-dn"><b>${nm}</b><span>${swDM(d)}</span></div>${its.length?its.map(swCard).join(''):'<div class="sw-none">—</div>'}</div>`}).join('');
     const e=new Date(s.getTime()+6*864e5);
-    return `<section class="sw-week"><div class="sw-head"><b>${swDM(s)}–${swDM(e)}</b>${w.label?`<span>${h(w.label)}</span>`:''}${w.approved?`<span>· ${h(w.approved)}</span>`:''}</div><div class="sw-cal">${days}</div></section>`}).join('');
+    return `<section class="sw-week"><div class="sw-head"><b>${swDM(s)}–${swDM(e)}</b>${w.label?`<span>${h(w.label)}</span>`:''}${w.approved?`<span>· ${h(w.approved)}</span>`:''}</div><div class="sw-cal" style="--n:${SW_DAYS.filter((_,k)=>s.getTime()+k*864e5>=tk).length}">${days}</div></section>`}).join('');
   // IG grid: planned feed posts (not yet published) on top of the latest real posts
   const planned=[];(sc.weeks||[]).forEach(w=>(w.items||[]).forEach(it=>{if(/^ig_(post|carousel|reel)$/.test(it.platform)&&it.status!=='פורסם')planned.push(it)}));
   planned.sort((a,b)=>(b.date+b.time).localeCompare(a.date+a.time));
