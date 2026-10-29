@@ -440,7 +440,7 @@
   "kind": "business",
   "status": "active",
   "last_update": "2026-10-29",
-  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. לוח 1–7.11 מוכן ומחכה לאישור שלך ברביעי 28.10: 2–3 סטוריז בכל יום, 3 פוסטים לפיד (קרוסלת הטבעות החדשות, ריל 'שני צדדים', קרוסלת מידת טבעת) ו-3 פוסטים בעברית לפייסבוק, X ולינקדאין. עמוד השדרה של השבוע: עשר הטבעות החדשות שעלו לאתר ב-25.10, כל אחת עם שם של כוכב או מיתוס. שתי הסדרות המועילות שבחרת: מידת טבעת בבית (שלישי) וטיפוח יהלום שחור (חמישי; סדרת הניקוי אוחדה לתוכה), וסדרת חדר הכושר נשארה ביום שני. שום דבר לא נכנס לתור לפני שאישרת. לחיצה על כרטיס פותחת את הסרטון והכיתוב המלא.",
+  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. לוח 1–7.11 עודכן ב-29.10 (גרסה 3) לפי ההערות שלך: בכל יום יש עכשיו מגוון (על יד / צילום מוצר / וידאו / טקסט), ואין שני סטוריז רצופים של טבעות שונות על ידיים. ראשון 1.11 כבר לא רצף של ידיים: 7 מסטוריז המחיר של הטבעות החדשות הוחלפו בצילומי המוצר מדף המוצר, וסדרת ACCRETION עברה לראשון ב-15:00 (סרטון האסנס שאישרת, עכשיו 1080 ועם מוזיקה; סטורי 3 = פאקשוט ערוך במקום תמונת הטלפון; מחיר בלאק פריידיי $1,960 רק בסטורי; בלי מדבקת קישור, הקישור בביו). מה שירד מראשון זז: אלגול ומלוזינה לשבת 7.11 ב-16:00, היאדס/פליאדות/פיניקס לערבי שני/שלישי/חמישי. שום דבר לא נכנס לתור לפני שאישרת. לחיצה על כרטיס פותחת את הסרטון.",
   "rules": {
    "title": "כללי התוכן",
    "items": [
@@ -451,13 +451,14 @@
    ]
   },
   "next_tasks": [
-   "רביעי 28.10: דניאל מאשר/פוסל את לוח 1–7.11 (כל כרטיס בנפרד)",
-   "אחרי האישור: להכניס לתור רק את מה שאושר (queue_social.py, batch 2026-11-01-week) ולסמן 'בתור'",
-   "לפני ראשון 1.11 18:00: לקבע את 10 הטבעות החדשות בראש עמוד New Arrivals באתר, או להחליף את הקישור בכיתוב בפייסבוק (דורש את אישורך)",
+   "דניאל מאשר/פוסל את לוח 1–7.11 גרסה 3 (כל כרטיס בנפרד) — לפני ראשון 1.11 10:30",
+   "אחרי האישור: להכניס לתור רק את מה שאושר (queue_social.py: batch 2026-11-01-week + batch 2026-10-29-accretion) ולסמן 'בתור'",
+   "לפני ראשון 1.11: לקבע את 10 הטבעות החדשות בראש עמוד New Arrivals, או להחליף את הקישור בכיתוב בפייסבוק (דורש את אישורך)",
    "שלדי המאמרים (מידת טבעת, טיפוח יהלום שחור) — לאשר, ואז ייכתבו בלילה דרך seo-growth (F17, F15)",
    "שני 2.11: רשימת רעיונות לתוכן מועיל לשבוע 15–21.11; רביעי 4.11: לוח 8–14.11"
   ],
   "recent_changes": [
+   "29.10 ערב — לוח 1–7.11 גרסה 3: מגוון בתוך כל יום; 8 סטוריז מחיר עם צילומי מוצר במקום ידיים; ACCRETION עברה לראשון 15:00 עם פאקשוט ערוך, סרטון 1080 עם מוזיקה, $1,960, בלי מדבקה; אלגול+מלוזינה לשבת 16:00",
    "29.10 — כלל חדש מדניאל: בלי מחירים בפוסטים בעברית (פייסבוק, X, לינקדאין). שלושת הפוסטים של 1–7.11 נבדקו, לא היו בהם מחירים",
    "29.10 — סדרת סטוריז חדשה לטבעת ACCRETION (טבעת הגבר עם שברי היהלום השחור): 5 סטוריז, מוצעת לשבת 7.11 בארבע אחר הצהריים, ממתינה לאישור",
    "27.10 — לוח 1–7.11 נבנה (39 פריטים כולל פייסבוק): סדרת 'השמות' של הטבעות החדשות + שתי הסדרות המועילות; ממתין לאישור",
@@ -582,7 +583,7 @@
     ]
    },
    {
-    "title": "יומן המסרים (135)",
+    "title": "יומן המסרים (143)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -612,41 +613,17 @@
      [
       "07.11",
       "Instagram story (EN)",
-      "ACCRETION R114 men's band: essence video (dust spirals into the band), 10 s",
-      "(visual hook, no text) -> What gathers becomes a world.",
-      "פתיחה ויזואלית: אבק ושברים שמתכנסים לטבעת; נגמר על 'What gathers becomes a world.' (הסרטון של Gemini, ממתין לאישורך)",
+      "New arrival with price: Algol R541, studio packshot (product-page render)",
+      "ALGOL · $3,600 · 14K gold",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Algol $3,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
       "מתוכנן, ממתין לאישור"
      ],
      [
       "07.11",
       "Instagram story (EN)",
-      "ACCRETION: man playing guitar (living pose)",
-      "When a star breaks apart, / its dust doesn't disappear. -> The pieces gather. Astronomers call it accretion.",
-      "הסיפור של הטבעת: כוכב שמתפרק, האבק לא נעלם, מתכנס לעולם חדש (accretion)",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "07.11",
-      "Instagram story (EN)",
-      "ACCRETION: Daniel's real photo of the finished band (shards + white diamond)",
-      "Every piece you kept / still counts. -> Raw black diamond shards. One white diamond: the first light.",
-      "כל חלק ששמרת עדיין נחשב; השברים השחורים הגולמיים + היהלום הלבן = האור הראשון של העולם החדש (תמונה אמיתית)",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "07.11",
-      "Instagram story (EN)",
-      "ACCRETION: woman, hand at the leather-jacket collar",
-      "Made as a men's band. / Worn just as boldly by her.",
-      "נעשתה כטבעת גבר, נענדת באותה נועזות גם על ידה",
-      "מתוכנן, ממתין לאישור"
-     ],
-     [
-      "07.11",
-      "Instagram story (EN)",
-      "ACCRETION: man, hand in jeans pocket + price + LINK STICKER (posted from the phone: API stories can't carry a link)",
-      "Rose, yellow or white gold. / Made to order in your size. -> ACCRETION · $2,800 · 14K gold  [link sticker: Shop ACCRETION]",
-      "פריים ההצעה: שלושה צבעי זהב, לפי הזמנה במידה שלך, מחיר $2,800 (מחירים רק בסטוריז); מדבקת קישור למוצר",
+      "New arrival with price: Melusine R483, studio packshot (product-page render)",
+      "MELUSINE · $2,300 · 14K gold -> Want it in your size? Message us.",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Melusine $2,300 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
       "מתוכנן, ממתין לאישור"
      ],
      [
@@ -874,6 +851,14 @@
       "מתוכנן, ממתין לאישור"
      ],
      [
+      "05.11",
+      "Instagram story (EN)",
+      "New arrival with price: Phoenix R499, studio packshot (product-page render)",
+      "PHOENIX · $2,000 · 14K gold",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Phoenix $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
       "04.11",
       "Instagram story (EN)",
       "New arrival: Melusine R483 (oval split shank, white), on hand",
@@ -1034,6 +1019,14 @@
       "מתוכנן, ממתין לאישור"
      ],
      [
+      "03.11",
+      "Instagram story (EN)",
+      "New arrival with price: Pleiades R481, studio packshot (product-page render)",
+      "PLEIADES · $2,000 · 14K gold",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Pleiades $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
       "02.11",
       "Instagram story (EN)",
       "Series: jewelry at the gym (1/4) · Starz band",
@@ -1146,6 +1139,14 @@
       "מתוכנן, ממתין לאישור"
      ],
      [
+      "02.11",
+      "Instagram story (EN)",
+      "New arrival with price: Hyades R520, studio packshot (product-page render)",
+      "HYADES · $1,800 · 14K gold",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Hyades $1,800 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
       "01.11",
       "Instagram story (EN)",
       "New arrival: Polaris R505 (compass, white gold), on hand",
@@ -1174,8 +1175,8 @@
       "Instagram story (EN)",
       "New arrivals with prices (1/10): Polaris R505, living pose",
       "POLARIS · $2,000 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 1/10 Polaris $2,000",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 1/10 Polaris $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
@@ -1190,46 +1191,46 @@
       "Instagram story (EN)",
       "New arrivals with prices (3/10): Janus R507, living pose",
       "JANUS · $1,100 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 3/10 Janus $1,100",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 3/10 Janus $1,100 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (4/10): Hyades R520, living pose",
       "HYADES · $1,800 · 14K gold -> Want it in your size? Message us.",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 4/10 Hyades $1,800",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 4/10 Hyades $1,800 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (5/10): Melusine R483, living pose",
       "MELUSINE · $2,300 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 5/10 Melusine $2,300",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 5/10 Melusine $2,300 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (6/10): Centauri R513, living pose",
       "CENTAURI · $2,600 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 6/10 Centauri $2,600",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 6/10 Centauri $2,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (7/10): Pleiades R481, living pose",
       "PLEIADES · $2,000 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 7/10 Pleiades $2,000",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 7/10 Pleiades $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (8/10): Phoenix R499, living pose",
-      "PHOENIX · $2,000 · 14K gold",
+      "COR CAROLI · $2,500 · 14K gold -> Want it in your size? Message us.",
       "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 8/10 Phoenix $2,000",
       "מתוכנן, ממתין לאישור"
      ],
@@ -1238,54 +1239,54 @@
       "Instagram story (EN)",
       "New arrivals with prices (9/10): Cor Caroli R491, living pose",
       "COR CAROLI · $2,500 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 9/10 Cor Caroli $2,500",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 9/10 Cor Caroli $2,500 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (10/10): Algol R541, living pose",
       "ALGOL · $3,600 · 14K gold -> Want it in your size? Message us.",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 10/10 Algol $3,600",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 10/10 Algol $3,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (4/10): Pleiades R481, living pose",
       "PLEIADES · $2,000 · 14K gold -> Want it in your size? Message us.",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 4/10 Pleiades $2,000",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 4/10 Pleiades $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (5/10): Centauri R513, living pose",
       "CENTAURI · $2,600 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 5/10 Centauri $2,600",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 5/10 Centauri $2,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (6/10): Hyades R520, living pose",
       "HYADES · $1,800 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 6/10 Hyades $1,800",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 6/10 Hyades $1,800 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (7/10): Phoenix R499, living pose",
       "PHOENIX · $2,000 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 7/10 Phoenix $2,000",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 7/10 Phoenix $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (8/10): Cor Caroli R491, living pose",
-      "COR CAROLI · $2,500 · 14K gold",
+      "COR CAROLI · $2,500 · 14K gold -> Want it in your size? Message us.",
       "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 8/10 Cor Caroli $2,500",
       "מתוכנן, ממתין לאישור"
      ],
@@ -1294,15 +1295,79 @@
       "Instagram story (EN)",
       "New arrivals with prices (9/10): Algol R541, living pose",
       "ALGOL · $3,600 · 14K gold",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 9/10 Algol $3,600",
-      "מתוכנן, ממתין לאישור"
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 9/10 Algol $3,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
      ],
      [
       "01.11",
       "Instagram story (EN)",
       "New arrivals with prices (10/10): Melusine R483, living pose",
       "MELUSINE · $2,300 · 14K gold -> Want it in your size? Message us.",
-      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 10/10 Melusine $2,300",
+      "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 10/10 Melusine $2,300 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "נפסל"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "ACCRETION R114 men's band: essence video (dust spirals into the band), 10 s",
+      "(visual hook, no text) -> What gathers becomes a world.",
+      "פתיחה ויזואלית: אבק ושברים שמתכנסים לטבעת; נגמר על 'What gathers becomes a world.' (הסרטון של Gemini, ממתין לאישורך)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "ACCRETION: man playing guitar (living pose)",
+      "When a star breaks apart, / its dust doesn't disappear. -> The pieces gather. Astronomers call it accretion.",
+      "הסיפור של הטבעת: כוכב שמתפרק, האבק לא נעלם, מתכנס לעולם חדש (accretion)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "ACCRETION: edited studio packshot (3/4, rose)",
+      "Every piece you kept / still counts. -> Raw black diamond shards. One white diamond: the first light.",
+      "כל חלק ששמרת עדיין נחשב; השברים השחורים הגולמיים + היהלום הלבן = האור הראשון של העולם החדש (תמונה אמיתית)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "ACCRETION: woman, hand at the leather-jacket collar",
+      "Made as a men's band. / Worn just as boldly by her.",
+      "נעשתה כטבעת גבר, נענדת באותה נועזות גם על ידה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "ACCRETION: man, hand in jeans pocket + price + LINK STICKER (posted from the phone: API stories can't carry a link)",
+      "Rose, yellow or white gold. / Made to order in your size. -> ACCRETION · $1,960 · 14K gold -> Link in bio.",
+      "פריים ההצעה: שלושה צבעי זהב, לפי הזמנה במידה שלך, מחיר $2,800 (מחירים רק בסטוריז); מדבקת קישור למוצר",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "New arrival with price: Polaris R505, studio packshot (product-page render)",
+      "POLARIS · $2,000 · 14K gold",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Polaris $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "New arrival with price: Janus R507, studio packshot (product-page render)",
+      "JANUS · $1,100 · 14K gold",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Janus $1,100 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "01.11",
+      "Instagram story (EN)",
+      "New arrival with price: Centauri R513, studio packshot (product-page render)",
+      "CENTAURI · $2,600 · 14K gold",
+      "מחיר טבעת חדשה בסטורי (לא בפיד): Centauri $2,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
       "מתוכנן, ממתין לאישור"
      ],
      [
@@ -2726,58 +2791,33 @@
     },
     {
      "week_of": "2026-11-01",
-     "label": "גרסה 2 (28.10) אחרי ההערות של דניאל: מחירי הטבעות החדשות בסטוריז ולא בפיד; סדרות חדר כושר, מידה וטיפוח עם צילומים של אנשים אמיתיים (→ היילייטס); הפיד מראה רק תכשיטים; אין שני סטוריז רצופים באותה תנוחת יד · נוסף 29.10: סדרת סטוריז ACCRETION (שבת 7.11 16:00)",
-     "approved": "ממתין לאישור דניאל (רביעי 28.10) · שום דבר לא בתור",
+     "label": "גרסה 3 (29.10) אחרי ההערות של דניאל: מגוון בתוך כל יום (ידיים / פאקשוט / וידאו / טקסט, אין רצף ידיים של טבעות שונות); ACCRETION עברה לראשון 1.11 15:00 עם פאקשוט ערוך במקום תמונת טלפון; סטוריז המחיר של אלגול ומלוזינה עברו לשבת 7.11 16:00, היאדס/פליאדות/פיניקס לערבי שני/שלישי/חמישי",
+     "approved": "ממתין לאישור דניאל · שום דבר לא בתור",
      "items": [
       {
-       "id": "w1101-sun-01-story-a",
-       "batch": "2026-11-01-week",
-       "date": "2026-11-01",
-       "time": "12:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "New arrival: Polaris R505 (yellow), living pose: hand at the jacket collar",
-       "hook": "POLARIS · Every other star moves across the night. This one stays. -> Everyone needs / a way back home.",
-       "angle": "פתיחת סדרת 'השמות': שמי לילה, שם הטבעת והמיתוס שלה מדף המוצר, מעבר דואליות לטבעת על יד; כוכב הצפון = הדרך הביתה",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-11-01-week/sun-01-story-a.jpg",
-        "2026-11-01-week/sun-01-story-a-f1.jpg",
-        "2026-11-01-week/sun-01-story-a-f2.jpg",
-        "2026-11-01-week/sun-01-story-a-f3.jpg",
-        "2026-11-01-week/sun-01-story-a-f4.jpg",
-        "2026-11-01-week/sun-01-story-a-f5.jpg",
-        "2026-11-01-week/sun-01-story-a-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "",
-       "video": "2026-11-01-week/sun-01-story-a.mp4"
-      },
-      {
-       "id": "w1101-sun-01-new-01",
+       "id": "w1101-pk-polaris",
        "batch": "2026-11-01-week",
        "date": "2026-11-01",
        "time": "10:30",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "New arrivals with prices (1/10): Polaris R505, living pose",
+       "piece": "New arrival with price: Polaris R505, studio packshot (product-page render)",
        "hook": "POLARIS · $2,000 · 14K gold",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 1/10 Polaris $2,000",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Polaris $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-01-week/sun-01-new-01.jpg",
-        "2026-11-01-week/sun-01-new-01-f1.jpg",
-        "2026-11-01-week/sun-01-new-01-f2.jpg",
-        "2026-11-01-week/sun-01-new-01-f3.jpg",
-        "2026-11-01-week/sun-01-new-01-f4.jpg",
-        "2026-11-01-week/sun-01-new-01-f5.jpg",
-        "2026-11-01-week/sun-01-new-01-f6.jpg"
+        "2026-11-01-week/pk-polaris.jpg",
+        "2026-11-01-week/pk-polaris-f1.jpg",
+        "2026-11-01-week/pk-polaris-f2.jpg",
+        "2026-11-01-week/pk-polaris-f3.jpg",
+        "2026-11-01-week/pk-polaris-f4.jpg",
+        "2026-11-01-week/pk-polaris-f5.jpg",
+        "2026-11-01-week/pk-polaris-f6.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
        "caption": "",
-       "video": "2026-11-01-week/sun-01-new-01.mp4"
+       "video": "2026-11-01-week/pk-polaris.mp4"
       },
       {
        "id": "w1101-sun-01-new-02",
@@ -2805,139 +2845,212 @@
        "video": "2026-11-01-week/sun-01-new-02.mp4"
       },
       {
-       "id": "w1101-sun-01-new-03",
+       "id": "w1101-pk-janus",
        "batch": "2026-11-01-week",
        "date": "2026-11-01",
        "time": "10:32",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "New arrivals with prices (3/10): Janus R507, living pose",
+       "piece": "New arrival with price: Janus R507, studio packshot (product-page render)",
        "hook": "JANUS · $1,100 · 14K gold",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 3/10 Janus $1,100",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Janus $1,100 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-01-week/sun-01-new-03.jpg",
-        "2026-11-01-week/sun-01-new-03-f1.jpg",
-        "2026-11-01-week/sun-01-new-03-f2.jpg",
-        "2026-11-01-week/sun-01-new-03-f3.jpg",
-        "2026-11-01-week/sun-01-new-03-f4.jpg",
-        "2026-11-01-week/sun-01-new-03-f5.jpg",
-        "2026-11-01-week/sun-01-new-03-f6.jpg"
+        "2026-11-01-week/pk-janus.jpg",
+        "2026-11-01-week/pk-janus-f1.jpg",
+        "2026-11-01-week/pk-janus-f2.jpg",
+        "2026-11-01-week/pk-janus-f3.jpg",
+        "2026-11-01-week/pk-janus-f4.jpg",
+        "2026-11-01-week/pk-janus-f5.jpg",
+        "2026-11-01-week/pk-janus-f6.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
        "caption": "",
-       "video": "2026-11-01-week/sun-01-new-03.mp4"
+       "video": "2026-11-01-week/pk-janus.mp4"
       },
       {
-       "id": "w1101-sun-01-new-04",
+       "id": "w1101-sun-01-story-a",
        "batch": "2026-11-01-week",
        "date": "2026-11-01",
-       "time": "10:33",
+       "time": "12:00",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "New arrivals with prices (4/10): Pleiades R481, living pose",
-       "hook": "PLEIADES · $2,000 · 14K gold -> Want it in your size? Message us.",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 4/10 Pleiades $2,000",
+       "piece": "New arrival: Polaris R505 (yellow), living pose: hand at the jacket collar",
+       "hook": "POLARIS · Every other star moves across the night. This one stays. -> Everyone needs / a way back home.",
+       "angle": "פתיחת סדרת 'השמות': שמי לילה, שם הטבעת והמיתוס שלה מדף המוצר, מעבר דואליות לטבעת על יד; כוכב הצפון = הדרך הביתה",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-01-week/sun-01-new-04.jpg",
-        "2026-11-01-week/sun-01-new-04-f1.jpg",
-        "2026-11-01-week/sun-01-new-04-f2.jpg",
-        "2026-11-01-week/sun-01-new-04-f3.jpg",
-        "2026-11-01-week/sun-01-new-04-f4.jpg",
-        "2026-11-01-week/sun-01-new-04-f5.jpg",
-        "2026-11-01-week/sun-01-new-04-f6.jpg"
+        "2026-11-01-week/sun-01-story-a.jpg",
+        "2026-11-01-week/sun-01-story-a-f1.jpg",
+        "2026-11-01-week/sun-01-story-a-f2.jpg",
+        "2026-11-01-week/sun-01-story-a-f3.jpg",
+        "2026-11-01-week/sun-01-story-a-f4.jpg",
+        "2026-11-01-week/sun-01-story-a-f5.jpg",
+        "2026-11-01-week/sun-01-story-a-f6.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
        "caption": "",
-       "video": "2026-11-01-week/sun-01-new-04.mp4"
+       "video": "2026-11-01-week/sun-01-story-a.mp4"
       },
       {
-       "id": "w1101-sun-01-new-05",
-       "batch": "2026-11-01-week",
+       "id": "w1101-sun-01-acc-0-essence",
+       "batch": "2026-10-29-accretion",
        "date": "2026-11-01",
        "time": "15:00",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "New arrivals with prices (5/10): Centauri R513, living pose",
-       "hook": "CENTAURI · $2,600 · 14K gold",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 5/10 Centauri $2,600",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "piece": "ACCRETION R114 men's band: essence video (dust spirals into the band), 10 s, 1080x1920 + music",
+       "hook": "(visual hook, no text) -> What gathers becomes a world.",
+       "angle": "פתיחה ויזואלית: אבק ושברים שמתכנסים לטבעת; נגמר על 'What gathers becomes a world.' (אושר 29.10)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-01-week/sun-01-new-05.jpg",
-        "2026-11-01-week/sun-01-new-05-f1.jpg",
-        "2026-11-01-week/sun-01-new-05-f2.jpg",
-        "2026-11-01-week/sun-01-new-05-f3.jpg",
-        "2026-11-01-week/sun-01-new-05-f4.jpg",
-        "2026-11-01-week/sun-01-new-05-f5.jpg",
-        "2026-11-01-week/sun-01-new-05-f6.jpg"
+        "2026-10-29-accretion/acc-0-essence.jpg",
+        "2026-10-29-accretion/acc-0-essence-f1.jpg",
+        "2026-10-29-accretion/acc-0-essence-f2.jpg",
+        "2026-10-29-accretion/acc-0-essence-f3.jpg",
+        "2026-10-29-accretion/acc-0-essence-f4.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
        "caption": "",
-       "video": "2026-11-01-week/sun-01-new-05.mp4"
+       "video": "2026-10-29-accretion/acc-0-essence.mp4"
       },
       {
-       "id": "w1101-sun-01-new-06",
-       "batch": "2026-11-01-week",
+       "id": "w1101-sun-01-acc-2",
+       "batch": "2026-10-29-accretion",
        "date": "2026-11-01",
        "time": "15:01",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "New arrivals with prices (6/10): Hyades R520, living pose",
-       "hook": "HYADES · $1,800 · 14K gold",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 6/10 Hyades $1,800",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "piece": "ACCRETION: man playing guitar (living pose)",
+       "hook": "When a star breaks apart, / its dust doesn't disappear. -> The pieces gather. Astronomers call it accretion.",
+       "angle": "הסיפור של הטבעת: כוכב שמתפרק, האבק לא נעלם, מתכנס לעולם חדש (accretion)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-01-week/sun-01-new-06.jpg",
-        "2026-11-01-week/sun-01-new-06-f1.jpg",
-        "2026-11-01-week/sun-01-new-06-f2.jpg",
-        "2026-11-01-week/sun-01-new-06-f3.jpg",
-        "2026-11-01-week/sun-01-new-06-f4.jpg",
-        "2026-11-01-week/sun-01-new-06-f5.jpg",
-        "2026-11-01-week/sun-01-new-06-f6.jpg"
+        "2026-10-29-accretion/acc-2.jpg",
+        "2026-10-29-accretion/acc-2-f1.jpg",
+        "2026-10-29-accretion/acc-2-f2.jpg",
+        "2026-10-29-accretion/acc-2-f3.jpg",
+        "2026-10-29-accretion/acc-2-f4.jpg",
+        "2026-10-29-accretion/acc-2-f5.jpg",
+        "2026-10-29-accretion/acc-2-f6.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
        "caption": "",
-       "video": "2026-11-01-week/sun-01-new-06.mp4"
+       "video": "2026-10-29-accretion/acc-2.mp4"
       },
       {
-       "id": "w1101-sun-01-new-07",
-       "batch": "2026-11-01-week",
+       "id": "w1101-sun-01-acc-3",
+       "batch": "2026-10-29-accretion",
        "date": "2026-11-01",
        "time": "15:02",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "New arrivals with prices (7/10): Phoenix R499, living pose",
-       "hook": "PHOENIX · $2,000 · 14K gold",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 7/10 Phoenix $2,000",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "piece": "ACCRETION: edited studio packshot of the band (3/4, rose gold), replaces the raw phone photo",
+       "hook": "Every piece you kept / still counts. -> Raw black diamond shards. One white diamond: the first light.",
+       "angle": "כל חלק ששמרת עדיין נחשב; השברים השחורים + היהלום הלבן = האור הראשון. 29.10: פאקשוט ערוך מדף המוצר במקום תמונת הטלפון הגולמית (לעולם לא תמונה לא-ערוכה)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-01-week/sun-01-new-07.jpg",
-        "2026-11-01-week/sun-01-new-07-f1.jpg",
-        "2026-11-01-week/sun-01-new-07-f2.jpg",
-        "2026-11-01-week/sun-01-new-07-f3.jpg",
-        "2026-11-01-week/sun-01-new-07-f4.jpg",
-        "2026-11-01-week/sun-01-new-07-f5.jpg",
-        "2026-11-01-week/sun-01-new-07-f6.jpg"
+        "2026-10-29-accretion/acc-3.jpg",
+        "2026-10-29-accretion/acc-3-f1.jpg",
+        "2026-10-29-accretion/acc-3-f2.jpg",
+        "2026-10-29-accretion/acc-3-f3.jpg",
+        "2026-10-29-accretion/acc-3-f4.jpg",
+        "2026-10-29-accretion/acc-3-f5.jpg",
+        "2026-10-29-accretion/acc-3-f6.jpg"
        ],
        "images": [],
        "status": "ממתין לאישור",
        "caption": "",
-       "video": "2026-11-01-week/sun-01-new-07.mp4"
+       "video": "2026-10-29-accretion/acc-3.mp4"
       },
       {
-       "id": "w1101-sun-01-new-08",
+       "id": "w1101-sun-01-acc-5",
+       "batch": "2026-10-29-accretion",
+       "date": "2026-11-01",
+       "time": "15:03",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ACCRETION: woman, hand at the leather-jacket collar",
+       "hook": "Made as a men's band. / Worn just as boldly by her.",
+       "angle": "נעשתה כטבעת גבר, נענדת באותה נועזות גם על ידה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-29-accretion/acc-5.jpg",
+        "2026-10-29-accretion/acc-5-f1.jpg",
+        "2026-10-29-accretion/acc-5-f2.jpg",
+        "2026-10-29-accretion/acc-5-f3.jpg",
+        "2026-10-29-accretion/acc-5-f4.jpg",
+        "2026-10-29-accretion/acc-5-f5.jpg",
+        "2026-10-29-accretion/acc-5-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-29-accretion/acc-5.mp4"
+      },
+      {
+       "id": "w1101-sun-01-acc-6",
+       "batch": "2026-10-29-accretion",
+       "date": "2026-11-01",
+       "time": "15:04",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ACCRETION: man, hand in jeans pocket + Black Friday price $1,960 (story only) · link in bio, no sticker",
+       "hook": "Rose, yellow or white gold. / Made to order in your size. -> ACCRETION · $1,960 · 14K gold -> Link in bio.",
+       "angle": "פריים ההצעה: שלושה צבעי זהב, לפי הזמנה, מחיר בלאק פריידיי $1,960 (רק בסטורי); בלי מדבקת קישור, הקישור בביו",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-29-accretion/acc-6.jpg",
+        "2026-10-29-accretion/acc-6-f1.jpg",
+        "2026-10-29-accretion/acc-6-f2.jpg",
+        "2026-10-29-accretion/acc-6-f3.jpg",
+        "2026-10-29-accretion/acc-6-f4.jpg",
+        "2026-10-29-accretion/acc-6-f5.jpg",
+        "2026-10-29-accretion/acc-6-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-29-accretion/acc-6.mp4"
+      },
+      {
+       "id": "w1101-pk-centauri",
        "batch": "2026-11-01-week",
        "date": "2026-11-01",
        "time": "19:00",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "New arrivals with prices (8/10): Cor Caroli R491, living pose",
-       "hook": "COR CAROLI · $2,500 · 14K gold",
+       "piece": "New arrival with price: Centauri R513, studio packshot (product-page render)",
+       "hook": "CENTAURI · $2,600 · 14K gold",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Centauri $2,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/pk-centauri.jpg",
+        "2026-11-01-week/pk-centauri-f1.jpg",
+        "2026-11-01-week/pk-centauri-f2.jpg",
+        "2026-11-01-week/pk-centauri-f3.jpg",
+        "2026-11-01-week/pk-centauri-f4.jpg",
+        "2026-11-01-week/pk-centauri-f5.jpg",
+        "2026-11-01-week/pk-centauri-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/pk-centauri.mp4"
+      },
+      {
+       "id": "w1101-sun-01-new-08",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-01",
+       "time": "19:01",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrivals with prices (Sunday's last price story): Cor Caroli R491, living pose",
+       "hook": "COR CAROLI · $2,500 · 14K gold -> Want it in your size? Message us.",
        "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 8/10 Cor Caroli $2,500",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
@@ -2953,56 +3066,6 @@
        "status": "ממתין לאישור",
        "caption": "",
        "video": "2026-11-01-week/sun-01-new-08.mp4"
-      },
-      {
-       "id": "w1101-sun-01-new-09",
-       "batch": "2026-11-01-week",
-       "date": "2026-11-01",
-       "time": "19:01",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "New arrivals with prices (9/10): Algol R541, living pose",
-       "hook": "ALGOL · $3,600 · 14K gold",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 9/10 Algol $3,600",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-11-01-week/sun-01-new-09.jpg",
-        "2026-11-01-week/sun-01-new-09-f1.jpg",
-        "2026-11-01-week/sun-01-new-09-f2.jpg",
-        "2026-11-01-week/sun-01-new-09-f3.jpg",
-        "2026-11-01-week/sun-01-new-09-f4.jpg",
-        "2026-11-01-week/sun-01-new-09-f5.jpg",
-        "2026-11-01-week/sun-01-new-09-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "",
-       "video": "2026-11-01-week/sun-01-new-09.mp4"
-      },
-      {
-       "id": "w1101-sun-01-new-10",
-       "batch": "2026-11-01-week",
-       "date": "2026-11-01",
-       "time": "19:02",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "New arrivals with prices (10/10): Melusine R483, living pose",
-       "hook": "MELUSINE · $2,300 · 14K gold -> Want it in your size? Message us.",
-       "angle": "עשר הטבעות החדשות עם המחירים, בסטוריז ולא בפיד (דניאל 28.10): 10/10 Melusine $2,300",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-11-01-week/sun-01-new-10.jpg",
-        "2026-11-01-week/sun-01-new-10-f1.jpg",
-        "2026-11-01-week/sun-01-new-10-f2.jpg",
-        "2026-11-01-week/sun-01-new-10-f3.jpg",
-        "2026-11-01-week/sun-01-new-10-f4.jpg",
-        "2026-11-01-week/sun-01-new-10-f5.jpg",
-        "2026-11-01-week/sun-01-new-10-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "",
-       "video": "2026-11-01-week/sun-01-new-10.mp4"
       },
       {
        "id": "w1101-sun-01-story-c",
@@ -3155,10 +3218,35 @@
        "video": "2026-11-01-week/mon-02-story-b.mp4"
       },
       {
-       "id": "w1101-mon-02-story-c",
+       "id": "w1101-pk-hyades",
        "batch": "2026-11-01-week",
        "date": "2026-11-02",
        "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival with price: Hyades R520, studio packshot (product-page render)",
+       "hook": "HYADES · $1,800 · 14K gold",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Hyades $1,800 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/pk-hyades.jpg",
+        "2026-11-01-week/pk-hyades-f1.jpg",
+        "2026-11-01-week/pk-hyades-f2.jpg",
+        "2026-11-01-week/pk-hyades-f3.jpg",
+        "2026-11-01-week/pk-hyades-f4.jpg",
+        "2026-11-01-week/pk-hyades-f5.jpg",
+        "2026-11-01-week/pk-hyades-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/pk-hyades.mp4"
+      },
+      {
+       "id": "w1101-mon-02-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-02",
+       "time": "21:01",
        "platform": "ig_story",
        "format": "9:16",
        "piece": "New arrival: Hyades R520 (white), living pose: hand at the leather collar",
@@ -3330,10 +3418,35 @@
        "video": "2026-11-01-week/tue-03-story-b.mp4"
       },
       {
-       "id": "w1101-tue-03-story-c",
+       "id": "w1101-pk-pleiades",
        "batch": "2026-11-01-week",
        "date": "2026-11-03",
        "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival with price: Pleiades R481, studio packshot (product-page render)",
+       "hook": "PLEIADES · $2,000 · 14K gold",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Pleiades $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/pk-pleiades.jpg",
+        "2026-11-01-week/pk-pleiades-f1.jpg",
+        "2026-11-01-week/pk-pleiades-f2.jpg",
+        "2026-11-01-week/pk-pleiades-f3.jpg",
+        "2026-11-01-week/pk-pleiades-f4.jpg",
+        "2026-11-01-week/pk-pleiades-f5.jpg",
+        "2026-11-01-week/pk-pleiades-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/pk-pleiades.mp4"
+      },
+      {
+       "id": "w1101-tue-03-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-03",
+       "time": "21:01",
        "platform": "ig_story",
        "format": "9:16",
        "piece": "New arrival: Pleiades R481 (yellow), living pose: hand on his chest",
@@ -3630,10 +3743,35 @@
        "video": "2026-11-01-week/thu-05-story-b.mp4"
       },
       {
-       "id": "w1101-thu-05-story-c",
+       "id": "w1101-pk-phoenix",
        "batch": "2026-11-01-week",
        "date": "2026-11-05",
        "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival with price: Phoenix R499, studio packshot (product-page render)",
+       "hook": "PHOENIX · $2,000 · 14K gold",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Phoenix $2,000 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/pk-phoenix.jpg",
+        "2026-11-01-week/pk-phoenix-f1.jpg",
+        "2026-11-01-week/pk-phoenix-f2.jpg",
+        "2026-11-01-week/pk-phoenix-f3.jpg",
+        "2026-11-01-week/pk-phoenix-f4.jpg",
+        "2026-11-01-week/pk-phoenix-f5.jpg",
+        "2026-11-01-week/pk-phoenix-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/pk-phoenix.mp4"
+      },
+      {
+       "id": "w1101-thu-05-story-c",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-05",
+       "time": "21:01",
        "platform": "ig_story",
        "format": "9:16",
        "piece": "New arrival: Phoenix R499 (yellow), living pose: hand on the bag strap, street",
@@ -3774,6 +3912,56 @@
        "video": "2026-11-01-week/sat-07-story-a.mp4"
       },
       {
+       "id": "w1101-pk-algol",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-07",
+       "time": "16:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival with price: Algol R541, studio packshot (product-page render)",
+       "hook": "ALGOL · $3,600 · 14K gold",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Algol $3,600 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/pk-algol.jpg",
+        "2026-11-01-week/pk-algol-f1.jpg",
+        "2026-11-01-week/pk-algol-f2.jpg",
+        "2026-11-01-week/pk-algol-f3.jpg",
+        "2026-11-01-week/pk-algol-f4.jpg",
+        "2026-11-01-week/pk-algol-f5.jpg",
+        "2026-11-01-week/pk-algol-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/pk-algol.mp4"
+      },
+      {
+       "id": "w1101-pk-melusine",
+       "batch": "2026-11-01-week",
+       "date": "2026-11-07",
+       "time": "16:01",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "New arrival with price: Melusine R483, studio packshot (product-page render)",
+       "hook": "MELUSINE · $2,300 · 14K gold -> Want it in your size? Message us.",
+       "angle": "מחיר טבעת חדשה בסטורי (לא בפיד): Melusine $2,300 · 29.10: מחליף רצף של ידיים — סטורי מחיר עם צילום מוצר (פאקשוט מדף המוצר) בין סטוריז על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-01-week/pk-melusine.jpg",
+        "2026-11-01-week/pk-melusine-f1.jpg",
+        "2026-11-01-week/pk-melusine-f2.jpg",
+        "2026-11-01-week/pk-melusine-f3.jpg",
+        "2026-11-01-week/pk-melusine-f4.jpg",
+        "2026-11-01-week/pk-melusine-f5.jpg",
+        "2026-11-01-week/pk-melusine-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-01-week/pk-melusine.mp4"
+      },
+      {
        "id": "w1101-sat-07-story-c",
        "batch": "2026-11-01-week",
        "date": "2026-11-07",
@@ -3797,129 +3985,6 @@
        "status": "ממתין לאישור",
        "caption": "",
        "video": "2026-11-01-week/sat-07-story-c.mp4"
-      },
-      {
-       "id": "w1101-sat-07-acc-0-essence",
-       "batch": "2026-10-29-accretion",
-       "date": "2026-11-07",
-       "time": "16:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "ACCRETION R114 men's band: essence video (dust spirals into the band), 10 s",
-       "hook": "(visual hook, no text) -> What gathers becomes a world.",
-       "angle": "פתיחה ויזואלית: אבק ושברים שמתכנסים לטבעת; נגמר על 'What gathers becomes a world.' (הסרטון של Gemini, ממתין לאישורך)",
-       "music": "",
-       "thumbs": [
-        "2026-10-29-accretion/acc-0-essence.jpg",
-        "2026-10-29-accretion/acc-0-essence-f1.jpg",
-        "2026-10-29-accretion/acc-0-essence-f2.jpg",
-        "2026-10-29-accretion/acc-0-essence-f3.jpg",
-        "2026-10-29-accretion/acc-0-essence-f4.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "",
-       "video": "2026-10-29-accretion/acc-0-essence.mp4"
-      },
-      {
-       "id": "w1101-sat-07-acc-2",
-       "batch": "2026-10-29-accretion",
-       "date": "2026-11-07",
-       "time": "16:01",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "ACCRETION: man playing guitar (living pose)",
-       "hook": "When a star breaks apart, / its dust doesn't disappear. -> The pieces gather. Astronomers call it accretion.",
-       "angle": "הסיפור של הטבעת: כוכב שמתפרק, האבק לא נעלם, מתכנס לעולם חדש (accretion)",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-29-accretion/acc-2.jpg",
-        "2026-10-29-accretion/acc-2-f1.jpg",
-        "2026-10-29-accretion/acc-2-f2.jpg",
-        "2026-10-29-accretion/acc-2-f3.jpg",
-        "2026-10-29-accretion/acc-2-f4.jpg",
-        "2026-10-29-accretion/acc-2-f5.jpg",
-        "2026-10-29-accretion/acc-2-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "",
-       "video": "2026-10-29-accretion/acc-2.mp4"
-      },
-      {
-       "id": "w1101-sat-07-acc-3",
-       "batch": "2026-10-29-accretion",
-       "date": "2026-11-07",
-       "time": "16:02",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "ACCRETION: Daniel's real photo of the finished band (shards + white diamond)",
-       "hook": "Every piece you kept / still counts. -> Raw black diamond shards. One white diamond: the first light.",
-       "angle": "כל חלק ששמרת עדיין נחשב; השברים השחורים הגולמיים + היהלום הלבן = האור הראשון של העולם החדש (תמונה אמיתית)",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-29-accretion/acc-3.jpg",
-        "2026-10-29-accretion/acc-3-f1.jpg",
-        "2026-10-29-accretion/acc-3-f2.jpg",
-        "2026-10-29-accretion/acc-3-f3.jpg",
-        "2026-10-29-accretion/acc-3-f4.jpg",
-        "2026-10-29-accretion/acc-3-f5.jpg",
-        "2026-10-29-accretion/acc-3-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "",
-       "video": "2026-10-29-accretion/acc-3.mp4"
-      },
-      {
-       "id": "w1101-sat-07-acc-5",
-       "batch": "2026-10-29-accretion",
-       "date": "2026-11-07",
-       "time": "16:03",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "ACCRETION: woman, hand at the leather-jacket collar",
-       "hook": "Made as a men's band. / Worn just as boldly by her.",
-       "angle": "נעשתה כטבעת גבר, נענדת באותה נועזות גם על ידה",
-       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-29-accretion/acc-5.jpg",
-        "2026-10-29-accretion/acc-5-f1.jpg",
-        "2026-10-29-accretion/acc-5-f2.jpg",
-        "2026-10-29-accretion/acc-5-f3.jpg",
-        "2026-10-29-accretion/acc-5-f4.jpg",
-        "2026-10-29-accretion/acc-5-f5.jpg",
-        "2026-10-29-accretion/acc-5-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "",
-       "video": "2026-10-29-accretion/acc-5.mp4"
-      },
-      {
-       "id": "w1101-sat-07-acc-6",
-       "batch": "2026-10-29-accretion",
-       "date": "2026-11-07",
-       "time": "16:04",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "ACCRETION: man, hand in jeans pocket + price + LINK STICKER (posted from the phone: API stories can't carry a link)",
-       "hook": "Rose, yellow or white gold. / Made to order in your size. -> ACCRETION · $2,800 · 14K gold  [link sticker: Shop ACCRETION]",
-       "angle": "פריים ההצעה: שלושה צבעי זהב, לפי הזמנה במידה שלך, מחיר $2,800 (מחירים רק בסטוריז); מדבקת קישור למוצר",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
-       "thumbs": [
-        "2026-10-29-accretion/acc-6.jpg",
-        "2026-10-29-accretion/acc-6-f1.jpg",
-        "2026-10-29-accretion/acc-6-f2.jpg",
-        "2026-10-29-accretion/acc-6-f3.jpg",
-        "2026-10-29-accretion/acc-6-f4.jpg",
-        "2026-10-29-accretion/acc-6-f5.jpg",
-        "2026-10-29-accretion/acc-6-f6.jpg"
-       ],
-       "images": [],
-       "status": "ממתין לאישור",
-       "caption": "Link sticker: https://dianarafael.com/products/accretion-black-diamond-shard-wedding-band",
-       "video": "2026-10-29-accretion/acc-6.mp4"
       }
      ]
     }
