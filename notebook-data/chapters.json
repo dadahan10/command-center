@@ -582,7 +582,7 @@
     ]
    },
    {
-    "title": "יומן המסרים (130)",
+    "title": "יומן המסרים (135)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -607,6 +607,46 @@
       "REMNANT: Smoothen R116 (new on-body, yellow, mug)",
       "Calm is not / the absence of a storm.",
       "מוצאי שבת: Smoothen על יד (תמונת גוף חדשה מהסט שבאתר); רוגע זה לא היעדר סערה. GW לא כאן כי הוא כבר מאייר את סדרת הטיפוח",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "07.11",
+      "Instagram story (EN)",
+      "ACCRETION R114 men's band: essence video (dust spirals into the band), 10 s",
+      "(visual hook, no text) -> What gathers becomes a world.",
+      "פתיחה ויזואלית: אבק ושברים שמתכנסים לטבעת; נגמר על 'What gathers becomes a world.' (הסרטון של Gemini, ממתין לאישורך)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "07.11",
+      "Instagram story (EN)",
+      "ACCRETION: man playing guitar (living pose)",
+      "When a star breaks apart, / its dust doesn't disappear. -> The pieces gather. Astronomers call it accretion.",
+      "הסיפור של הטבעת: כוכב שמתפרק, האבק לא נעלם, מתכנס לעולם חדש (accretion)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "07.11",
+      "Instagram story (EN)",
+      "ACCRETION: Daniel's real photo of the finished band (shards + white diamond)",
+      "Every piece you kept / still counts. -> Raw black diamond shards. One white diamond: the first light.",
+      "כל חלק ששמרת עדיין נחשב; השברים השחורים הגולמיים + היהלום הלבן = האור הראשון של העולם החדש (תמונה אמיתית)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "07.11",
+      "Instagram story (EN)",
+      "ACCRETION: woman, hand at the leather-jacket collar",
+      "Made as a men's band. / Worn just as boldly by her.",
+      "נעשתה כטבעת גבר, נענדת באותה נועזות גם על ידה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "07.11",
+      "Instagram story (EN)",
+      "ACCRETION: man, hand in jeans pocket + price + LINK STICKER (posted from the phone: API stories can't carry a link)",
+      "Rose, yellow or white gold. / Made to order in your size. -> ACCRETION · $2,800 · 14K gold  [link sticker: Shop ACCRETION]",
+      "פריים ההצעה: שלושה צבעי זהב, לפי הזמנה במידה שלך, מחיר $2,800 (מחירים רק בסטוריז); מדבקת קישור למוצר",
       "מתוכנן, ממתין לאישור"
      ],
      [
@@ -2686,7 +2726,7 @@
     },
     {
      "week_of": "2026-11-01",
-     "label": "גרסה 2 (28.10) אחרי ההערות של דניאל: מחירי הטבעות החדשות בסטוריז ולא בפיד; סדרות חדר כושר, מידה וטיפוח עם צילומים של אנשים אמיתיים (→ היילייטס); הפיד מראה רק תכשיטים; אין שני סטוריז רצופים באותה תנוחת יד",
+     "label": "גרסה 2 (28.10) אחרי ההערות של דניאל: מחירי הטבעות החדשות בסטוריז ולא בפיד; סדרות חדר כושר, מידה וטיפוח עם צילומים של אנשים אמיתיים (→ היילייטס); הפיד מראה רק תכשיטים; אין שני סטוריז רצופים באותה תנוחת יד · נוסף 29.10: סדרת סטוריז ACCRETION (שבת 7.11 16:00)",
      "approved": "ממתין לאישור דניאל (רביעי 28.10) · שום דבר לא בתור",
      "items": [
       {
@@ -3757,6 +3797,129 @@
        "status": "ממתין לאישור",
        "caption": "",
        "video": "2026-11-01-week/sat-07-story-c.mp4"
+      },
+      {
+       "id": "w1101-sat-07-acc-0-essence",
+       "batch": "2026-10-29-accretion",
+       "date": "2026-11-07",
+       "time": "16:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ACCRETION R114 men's band: essence video (dust spirals into the band), 10 s",
+       "hook": "(visual hook, no text) -> What gathers becomes a world.",
+       "angle": "פתיחה ויזואלית: אבק ושברים שמתכנסים לטבעת; נגמר על 'What gathers becomes a world.' (הסרטון של Gemini, ממתין לאישורך)",
+       "music": "",
+       "thumbs": [
+        "2026-10-29-accretion/acc-0-essence.jpg",
+        "2026-10-29-accretion/acc-0-essence-f1.jpg",
+        "2026-10-29-accretion/acc-0-essence-f2.jpg",
+        "2026-10-29-accretion/acc-0-essence-f3.jpg",
+        "2026-10-29-accretion/acc-0-essence-f4.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-29-accretion/acc-0-essence.mp4"
+      },
+      {
+       "id": "w1101-sat-07-acc-2",
+       "batch": "2026-10-29-accretion",
+       "date": "2026-11-07",
+       "time": "16:01",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ACCRETION: man playing guitar (living pose)",
+       "hook": "When a star breaks apart, / its dust doesn't disappear. -> The pieces gather. Astronomers call it accretion.",
+       "angle": "הסיפור של הטבעת: כוכב שמתפרק, האבק לא נעלם, מתכנס לעולם חדש (accretion)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-29-accretion/acc-2.jpg",
+        "2026-10-29-accretion/acc-2-f1.jpg",
+        "2026-10-29-accretion/acc-2-f2.jpg",
+        "2026-10-29-accretion/acc-2-f3.jpg",
+        "2026-10-29-accretion/acc-2-f4.jpg",
+        "2026-10-29-accretion/acc-2-f5.jpg",
+        "2026-10-29-accretion/acc-2-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-29-accretion/acc-2.mp4"
+      },
+      {
+       "id": "w1101-sat-07-acc-3",
+       "batch": "2026-10-29-accretion",
+       "date": "2026-11-07",
+       "time": "16:02",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ACCRETION: Daniel's real photo of the finished band (shards + white diamond)",
+       "hook": "Every piece you kept / still counts. -> Raw black diamond shards. One white diamond: the first light.",
+       "angle": "כל חלק ששמרת עדיין נחשב; השברים השחורים הגולמיים + היהלום הלבן = האור הראשון של העולם החדש (תמונה אמיתית)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-29-accretion/acc-3.jpg",
+        "2026-10-29-accretion/acc-3-f1.jpg",
+        "2026-10-29-accretion/acc-3-f2.jpg",
+        "2026-10-29-accretion/acc-3-f3.jpg",
+        "2026-10-29-accretion/acc-3-f4.jpg",
+        "2026-10-29-accretion/acc-3-f5.jpg",
+        "2026-10-29-accretion/acc-3-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-29-accretion/acc-3.mp4"
+      },
+      {
+       "id": "w1101-sat-07-acc-5",
+       "batch": "2026-10-29-accretion",
+       "date": "2026-11-07",
+       "time": "16:03",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ACCRETION: woman, hand at the leather-jacket collar",
+       "hook": "Made as a men's band. / Worn just as boldly by her.",
+       "angle": "נעשתה כטבעת גבר, נענדת באותה נועזות גם על ידה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-29-accretion/acc-5.jpg",
+        "2026-10-29-accretion/acc-5-f1.jpg",
+        "2026-10-29-accretion/acc-5-f2.jpg",
+        "2026-10-29-accretion/acc-5-f3.jpg",
+        "2026-10-29-accretion/acc-5-f4.jpg",
+        "2026-10-29-accretion/acc-5-f5.jpg",
+        "2026-10-29-accretion/acc-5-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-10-29-accretion/acc-5.mp4"
+      },
+      {
+       "id": "w1101-sat-07-acc-6",
+       "batch": "2026-10-29-accretion",
+       "date": "2026-11-07",
+       "time": "16:04",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "ACCRETION: man, hand in jeans pocket + price + LINK STICKER (posted from the phone: API stories can't carry a link)",
+       "hook": "Rose, yellow or white gold. / Made to order in your size. -> ACCRETION · $2,800 · 14K gold  [link sticker: Shop ACCRETION]",
+       "angle": "פריים ההצעה: שלושה צבעי זהב, לפי הזמנה במידה שלך, מחיר $2,800 (מחירים רק בסטוריז); מדבקת קישור למוצר",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-10-29-accretion/acc-6.jpg",
+        "2026-10-29-accretion/acc-6-f1.jpg",
+        "2026-10-29-accretion/acc-6-f2.jpg",
+        "2026-10-29-accretion/acc-6-f3.jpg",
+        "2026-10-29-accretion/acc-6-f4.jpg",
+        "2026-10-29-accretion/acc-6-f5.jpg",
+        "2026-10-29-accretion/acc-6-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "Link sticker: https://dianarafael.com/products/accretion-black-diamond-shard-wedding-band",
+       "video": "2026-10-29-accretion/acc-6.mp4"
       }
      ]
     }
@@ -5329,8 +5492,8 @@
   "group": "diana-rafael",
   "kind": "business",
   "status": "active",
-  "last_update": "2026-10-28",
-  "where_we_stand": "הסוכן הלילי עובד לבד בלילות ראשון–חמישי: 8 דפים בכל לילה, ומאמר חדש כמעט בכל לילה. בשבוע 19–25.10 היו 88 קליקים מגוגל (87 בשבוע הקודם). החשיפות ירדו ב-19%, והמיקום הממוצע נחלש מ-7.8 ל-9.1. ציון ההתאמה לסוכני AI (ora) עלה מ-54 ל-64 ועבר את היעד של 62. הבעיה: גוגל אנליטיקס לא מייחס לגוגל אף מכירה, כך שלא רואים כמה התנועה האורגנית באמת מכניסה. הדוח המלא מתעדכן ונפתח לך בכל יום ראשון.",
+  "last_update": "2026-10-29",
+  "where_we_stand": "הסוכן הלילי עובד לבד בלילות ראשון–חמישי: 8 דפים בכל לילה, ומאמר חדש כמעט בכל לילה. בשבוע 19–25.10 היו 88 קליקים מגוגל (87 בשבוע הקודם). החשיפות ירדו ב-19%, והמיקום הממוצע נחלש מ-7.8 ל-9.1. ציון ההתאמה לסוכני AI (ora) עלה מ-54 ל-64; היעד הקודם, 62, הושג ב-23.10, והיעד החדש הוא 80. הבעיה: גוגל אנליטיקס לא מייחס לגוגל אף מכירה, כך שלא רואים כמה התנועה האורגנית באמת מכניסה. הדוח המלא מתעדכן ונפתח לך בכל יום ראשון.",
   "rules": [
    "בכל יום ראשון בבוקר: דוח שבועי מעודכן + התוכנית לשבוע, גם כאן וגם במסמך הדוח",
    "המערכת מחליטה ומבצעת לבד; שואלים אותך רק על מחירים, מדיניות ושפת המותג"
@@ -5343,6 +5506,7 @@
    "מ-2.11: מדידה ראשונה בגוגל של העבודה מ-19.10"
   ],
   "recent_changes": [
+   "29.10 — יעד חדש לציון ההתאמה לסוכני AI (ora): 80 (היעד הקודם, 62, הושג ב-23.10)",
    "28.10 — דוח SEO שבועי חדש במסמך משותף; נפתח בכל יום ראשון",
    "28.10 — תוקנו 2 מחירים שגויים באישורך: Hidden Halo טיפה מידה 6.5 ל-$2,950, Cluster מידה 5 ל-$1,800",
    "27.10 — מאמר Kintsugi Ring Meaning + 8 דפים",
@@ -5435,7 +5599,7 @@
   "group": "infra",
   "kind": "business",
   "status": "paused",
-  "last_update": "2026-10-12",
+  "last_update": "2026-10-29",
   "where_we_stand": "Asset Studio: הנוהל ובסיס ה-Airtable 'Claude Ad Builder' מחוברים מ-24.6, עם Brand Brain של דיאנה רפאל; הריצה הראשונה נדחתה — דניאל רוצה לראות את הפרומפטים בסשן מלווה; הורדה אוטומטית ל-Dropbox ומוצרים אמיתיים בטבלה עוד לא נבנו. Higgsfield: החיבור פג תוקף (שוב 12.10) — צריך לחבר מחדש ב-claude.ai; פיילוט מומלץ: רינדור קינצוגי → הנפשה לווידאו של 5–8 שניות. Midjourney: לא מתחברים (אין חיבור רשמי). Adobe: התוסף מותקן, ממתין להתחברות של דניאל. Canva עובד — שימש ב-12.10 לאוזן בתמונות E049.",
   "next_tasks": [
    "דניאל: לחבר מחדש את Higgsfield ב-claude.ai → Connectors",
@@ -5446,6 +5610,7 @@
    "תעודה לדוגמה מדניאל לסוכן התעודות דרך Adobe"
   ],
   "recent_changes": [
+   "29.10 — סיכום מה שלמדנו מ-Aluna (@aluncreative): 13 לקחים על תמונות AI, וידאו, השקות וקרוסלות",
    "12.10 — Canva שימש ליצירת תמונה (E049 על אוזן); החיבור ל-Higgsfield נמצא פג תוקף",
    "28.9 — בדיקת Higgsfield / Midjourney / Adobe; התוסף של Adobe הותקן",
    "24.6 — Asset Studio הותקן + Brand Brain"
@@ -5477,6 +5642,84 @@
    "project_asset-studio.md",
    "project_higgsfield_midjourney_adobe.md",
    "project_session-2026-10-12.md"
+  ],
+  "tables": [
+   {
+    "title": "מה למדנו מ-Aluna (@aluncreative), 28.10",
+    "note": "עברנו על 18 קרוסלות ו-13 רילים שלה. כל לקח כבר נכנס לנהלים שהסוכנים עובדים לפיהם. לא נכנס: כל מה שקשור לרילים שמדברים בהם למצלמה, כי אנחנו לא עושים כאלה.",
+    "cols": [
+     "#",
+     "מה למדנו",
+     "איך זה אצלנו"
+    ],
+    "rows": [
+     [
+      "1",
+      "6 בדיקות לכל תמונת AI: סטיילינג שנבחר ולא ברירת מחדל · המוצר הוא בדיוק המוצר ובגודל אמיתי · חומר אמיתי אחד (לא סאטן, סרט זהב ושיש מזויף) · 2–3 צבעים שבחרנו · בלי כפילויות וסימטריה · התמונה שייכת לסט ולא עומדת לבד",
+      "כל תמונה עוברת את 6 הבדיקות לפני שהיא מגיעה אליך (בדיקת האיכות של התמונות)"
+     ],
+     [
+      "2",
+      "5 סימנים שמסגירים AI: פוזה קפואה, מבט ישר למצלמה, רקע מטושטש, אור שקיעה כתום, עור של פלסטיק",
+      "מתוקנים מראש בכל הדמיה על יד או צוואר: מבט הצידה, יד באמצע תנועה, רקע חד עם פרטים, אור יום עם צל אמיתי, עור אמיתי וגיל מוגדר (נוהל ההדמיות על הגוף)"
+     ],
+     [
+      "3",
+      "רשימת ריאליזם: עור, עיניים, גוף שעומד במשקל אמיתי, ובד שנופל נכון. ובנוסף: גוון ורדרד שהמודל מוסיף לעור ולזהב",
+      "נוספה לבדיקת האיכות של התמונות, עם שורה מיוחדת לידיים ובדיקת גוון ורוד"
+     ],
+     [
+      "4",
+      "מצלמה = ערוץ: אותה תמונה מאושרת מצולמת מחדש ב'מצלמה' אחרת לכל ערוץ. פלאש לילה לסטוריז, פילם לאתר, רחוב שרץ מסביב והתכשיט הדבר החד היחיד למודעה",
+      "בנוהל ההדמיות על הגוף. משנים רק את הסצנה, התכשיט לא משתנה ונבדק אחרי כל גרסה"
+     ],
+     [
+      "5",
+      "מאחורי הקלעים מתמונה אחת: 'אותה יד, אותה טבעת, אותו אור, תוסיף רק…'. מאחורי הקלעים הוא מה שאנשים שומרים",
+      "בנוהל ההדמיות על הגוף: לופה של צורף, מגש טבעות עם תגיות בכתב יד, קפה ליד הקופסה. בלי מראות (שם ה-AI נתפס)"
+     ],
+     [
+      "6",
+      "מודל לכל משימה: תמונה עם טקסט (כרטיס, תעודה, שרטוט עם מידות) במודל אחד; עור וידיים במודל אחר",
+      "בנוהל ההדמיות. הטבעת עצמה תמיד באה מההדמיה האמיתית, אף מודל לא ממציא אותה"
+     ],
+     [
+      "7",
+      "בסרטון המוצר לא זז, העולם סביבו זז: מצלמה קבועה, תנועה אחת קטנה שהיא הרעיון, רק הצליל של המכונה. ככה האבנים והשיניים לא 'נמסות'",
+      "בנוהל הווידאו: כספת שהחוגה שלה מסתובבת, מחט פטיפון שיורדת ליד הקופסה, טלפון שמצלצל, והטבעת עומדת במקום"
+     ],
+     [
+      "8",
+      "תהליך בשלבים: כל שלב בצילום רחב וקרוב, כל תמונה עם תנועה אחת, כל חיתוך מקדם את התהליך. וגם: ציור שמצייר את עצמו עד התמונה הסופית",
+      "בנוהל הווידאו, מתאים במיוחד ל'הרסיסים מתחברים' של REMNANT"
+     ],
+     [
+      "9",
+      "השקה היא סדר, לא ערימת תמונות: נצנוץ שאי אפשר לזהות, פרט אחד ביום, ספירה לאחור, פתיחת קופסה, חשיפה. אף פעם לא מראים פחות ממה שכבר הראינו",
+      "בנוהל ההשקה. הספירה לאחור עשויה מהחומר שלנו: יהלומים שחורים קטנים בצורת מספר, מספרים מוטבעים בזהב גולמי"
+     ],
+     [
+      "10",
+      "שבוע מבצע: טיזר עם תאריך ובלי מחיר, כל יום חפץ אנלוגי חדש, והמחיר רק כשהמבצע נפתח. החפצים עשויים מה-DNA של המותג",
+      "בנוהל ההשקה, מוכן לבלאק פריידיי (27.11): טלפון חוגה שחור, קלטת עם סליל זהב, תקליט שהתווית שלו היא קופסת הטבעת"
+     ],
+     [
+      "11",
+      "מיקומים מוזרים: המוצר במקום לא צפוי אבל נכון למותג, כל שקף עם כותרת של שלוש מילים, בלי מחיר",
+      "בנוהל ההשקה: הטבעת איפה ששחור כבר אומר משהו. תקליט, כוס אספרסו, קליד פסנתר, דומינו"
+     ],
+     [
+      "12",
+      "קמפיין של 10 פריימים: התכשיט מופיע רק ב-4 מהם, השאר בונים עולם אחד. פתק בכתב יד כרגש, ושרטוט טכני עם מידות",
+      "בנוהל ההשקה: פריים 'הוא נתן לה' (ידיים על חליפה) לקונה הגבר שלנו, ושרטוט בצבעי מים מהשרטוט האמיתי של הטבעת. אף מותג יהלום שחור לא יכול להראות את זה ביושר"
+     ],
+     [
+      "13",
+      "קרוסלות וכיתובים: אף אחד לא שומר מחיר, שומרים רעיון. פתיחת קופסה ומאחורי הקלעים הם הכי נשמרים",
+      "בנוהל הקרוסלות והכיתובים. 'תגיבו מילה ונשלח קישור' רק אחרי שיש מענה אוטומטי בהודעות"
+     ]
+    ]
+   }
   ]
  },
  {
