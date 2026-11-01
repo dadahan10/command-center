@@ -1,5 +1,7 @@
 # תוכנית מייל + SMS — Diana Rafael, 2 בנובמבר – 1 בדצמבר 2026
 
+> **גרסה 2 (1.11, אחרי ההערות של דניאל):** 5.11 היכרות מחדש עם המותג; 10.11 משחק בחירה; 12.11 תכשיטים חדשים + ביקורות; 19.11 טבעת לפי אופי/מזל; VIP + רמזי מתנות + משחקי בחירה בכל מייל עד 23.11; גישה מוקדמת מותנית במספר הנרשמים ל-VIP; בלי "נגמר הלילה" ובלי דדליין משלוח; flow "מה קורה אחרי ההזמנה"; anniversary בוטל; הפניית חבר עם מתנה אמיתית. Klaviyo-Shopify חובר מחדש, SPF+DKIM תוקנו ב-1.11.
+
 נכתב: 1.11.2026, על נתונים חיים מקלאביו, משופיפיי ומ-DNS. שום דבר לא נוצר ולא נשלח בקלאביו.
 המטרה לחודש: למכור לבסיס הקיים (קונים ומנויים), להעלות את שיעור ההמרה, ולהכין את התשתית שתקלוט את התנועה מקמפיין ה-Google Search.
 
@@ -57,7 +59,7 @@
 |---|---|---|---|---|
 | S1 | **Buyers — all time** | Placed Order ≥1 over all time (מחליף את הרשימה הידנית V84wEE) | ~235 | בסיס הכסף. מקבלים הכול לפני כולם |
 | S2 | **Buyers — engagement ring, no band** | S1 + Ordered Product שבו product type/title מכיל "Engagement" + אין Ordered Product עם "Band"/"Wedding" | ~120 | upsell לטבעת נישואין תואמת |
-| S3 | **Anniversary Nov–Dec** | S1 + הזמנה ראשונה בחודשים 11–12 בשנים 2021–2025 | ~45 | מייל יום נישואין/יום שנה 10.11 |
+| S3 | ~~Anniversary Nov–Dec~~ | בוטל (דניאל 1.11: אין מספיק נתונים) | — | — |
 | S4 | **VIP repeat** | Placed Order ≥2 או סך קנייה ≥$4,000 | ~25 | WhatsApp אישי מדניאל + גישה מוקדמת |
 | S5 | **Engaged 90d** | Opened OR Clicked Email ≥1 ב-90 יום, OR Active on Site ב-30 יום, AND לא ב-S1 | ~330 | הקהל הראשי לשבועות 1–3 |
 | S6 | **Clickers 90d** | Clicked Email ≥1 ב-90 יום | ~40 | resend וקהל חם ל-SMS |
@@ -75,31 +77,36 @@
 ## 3. לוח השליחה
 
 שעת שליחה ברירת מחדל: **10:00 לפי השעון המקומי של הנמען** (Klaviyo local time). ב-BF השעה היא 07:00. Smart Sending פעיל בכל השליחות, ו-UTM בכל קישור (`utm_source=klaviyo&utm_medium=email&utm_campaign=<slug>`).
-**חוקי תוכן שחלים על כל מייל:** רק תאריך משלוח ולעולם לא תאריך הגעה ("ships within 10 business days", "ships by Dec 15"). שפה מרוממת בלי "dark/darkness". התכשיט מוצג גדול ודרמטי בראש המייל. קישורים רק לאתר שלנו. 200–300 מילה לכל היותר.
+**חוקי תוכן שחלים על כל מייל:** אף פעם לא תאריך הגעה, וגם לא דדליין משלוח (אנשים מזמינים ברגע האחרון). שפה מרוממת בלי "dark/darkness". התכשיט מוצג גדול ודרמטי בראש המייל. קישורים רק לאתר שלנו. 200–300 מילה לכל היותר.
+**החוט שעובר בכל המיילים בתקופה (דניאל 1.11):** להזכיר שאנחנו חברה טובה, שכל תכשיט נעשה בהזמנה אישית (custom made), ושיש התאמות אישיות (סרטון קצר של CustomizeAI). ובכל מייל עד 23.11:
+- **כפתור "Join the VIP list"** (רשימת קלאביו חדשה `VIP Early Access`): "VIPs get every Black Friday offer days before everyone else." דחיפות ו-FOMO, בלי לחשוף את גובה ההנחה.
+- **רמז למתנות:** "Gifts with every order above certain amounts are coming." (מדרגות המתנה עצמן נחשפות ב-VIP).
+- **משחק בחירה (engagement):** שני תכשיטים זה מול זה, "Which one is more you?". כל לחיצה מתייגת את הפרופיל (property `style_pick`) ומובילה לעמוד המוצר. הקליקים מחממים את הדומיין ומלמדים אותנו מה כל לקוחה אוהבת.
 
-**ההצעות בחודש, נעולות:**
-- **2–23.11:** אין הנחה. מוכרים דרך ערך, ביקורות ומתנה.
-- **24.11 00:00 ET עד 26.11 17:00 ET:** **גישה מוקדמת ל-VIP.** קוד `CIRCLE30` (30% על הקולקציה Black Friday 30, לשימוש אחד ללקוח), נשלח ל-S1+S4+S5. הקוד נסגר בדיוק כשההנחה האוטומטית "Black Friday 30%" נפתחת (26.11 22:00 UTC), כך שאין חפיפה ואין stacking.
+**ההצעות בחודש:**
+- **2–23.11:** אין הנחה. מוכרים דרך ערך, ביקורות ומתנה, ובונים את רשימת ה-VIP.
+- **24–26.11, גישה מוקדמת, מותנה:** אם רשימת ה-VIP הגיעה ל-**60 נרשמים לפחות עד 22.11** → הגישה המוקדמת (30% עם קוד `CIRCLE30`) רק לנרשמים ל-VIP. אם לא → לכל הקונים והמנויים הפעילים (S1+S5). ההחלטה ב-22.11 לפי המספר.
 - **27.11 עד 31.1.2027:** 30% site-wide אוטומטי (קיים ומתוזמן). Archive עד 70% בנפרד, בלי stacking.
-- **בונוס שבוע BF, מ-24.11 עד 30.11:** **חריטה מתנה בכל הזמנה מעל $2,000.** זו לא הנחה בשופיפיי, ולכן אין התנגשות עם ה-30%. זה יוצר דחיפות אמיתית ל-Cyber Monday בלי לסתור את "30% עד סוף ינואר".
+- **מתנות לפי סכום, לכל אורך המבצע ולא "נגמרות הלילה":** חריטה מתנה מעל $2,000 (לא הנחה בשופיפיי, ולכן אין התנגשות עם ה-30%). ממתין לאישור דניאל על המדרגה.
 
 ### 3א. מייל
 
 | תאריך | סגמנט | מטרה | Subject + Preview | תוכן ליבה / הצעה | CTA | יעד KPI |
 |---|---|---|---|---|---|---|
-| **ה' 5.11** | S1 Buyers (~235) | להצית תשובות (reply = האות החיובי החזק ביותר ל-Gmail) ולהחזיר את הקונים לשיחה | **"How is your ring doing?"** / *"A quick note from me, and one question."* | מייל טקסט בלבד מדניאל, בלי תמונות ובלי באנר. תודה, 2014 עד היום, "Reply with a photo of your ring today, I read every one." הכרזה: "In three weeks, you'll get Black Friday before anyone else." | Reply (+ קישור משני: Shop new arrivals) | Reply rate ≥4% (≈10 תשובות), CTR ≥3%, תלונות 0 |
-| **ג' 10.11** | S3 Anniversary (~45) | חזרה לקנייה: מתנת יום שנה | **"It's been a year (or two) of wearing it"** / *"For the anniversary: the piece that sits beside your ring."* | Hero: Geometric Baguette band על יד, לצד טבעת אירוסין. 3 להקות תואמות + חריטה. "Ships within 10 business days." | Find your matching band | CTR ≥5%, הזמנה אחת (≈$1,700) |
-| **ה' 12.11** | S5 Engaged (~330) | המרת לידים, מתואם לנחיתות של גוגל | **"Why she said yes to a black diamond"** / *"433 five-star reviews, and the rings behind them."* | 4 הנמכרות (Art Deco Marquise RG, Emerald Cut RG, Black & White Oval, Semi Bezel E-W Baguette) + 3 ציטוטי ביקורות (Etsy/Google) + "Natural, never treated, since 2014". | Shop engagement rings | CTR ≥2%, CTOR ≥10%, הזמנה אחת |
-| **א' 15.11** | **שינוי קהל:** S1+S5 במקום הרשימה המלאה | REMNANT Disturbed (מתוזמן) | כמו שמתוזמן ("It passes") | ללא שינוי בתוכן | — | CTR ≥1.5% (מול 0.31% בהשקה) |
-| **ג' 17.11** | S2 Engagement-ring buyers w/o band (~120) | **upsell: הלהקה התואמת** | **"The band that completes your ring"** / *"Designed to sit flush with the ring you already love."* | גריד 6 להקות (Geometric Baguette, Pave RG, 3-Row Black Diamond, GW band). "Tell us your ring and we'll match the curve." | Shop wedding bands / Reply with your ring | CTR ≥4%, 2 הזמנות (≈$3,400) |
-| **ה' 19.11** | S1+S5 | מתנות לחגים (לא טבעות) | **"Gifts she'll wear every day"** / *"Studs, pendants and tennis bracelets, from $500."* | Gift guide לפי מחיר: Under $1,000 / $1,000–2,000 / $2,000+. Tennis Bracelet, Climber Earrings, Pendants. "Order by Dec 1, ships by Dec 15." | Shop gifts | CTR ≥2%, הזמנה אחת |
-| **ב' 23.11** | S1+S4+S5 | בניית ציפייה לגישה המוקדמת | **"Tomorrow, Black Friday starts for you"** / *"30% off everything, 3 days before everyone else."* | הכרזה על CIRCLE30, שמתחיל מחר 24.11 ונגמר ב-26.11. בונוס חריטה מעל $2,000. Hero: הנמכרת ביותר, גדולה. | Save my favorites (קישור ל-wishlist/collection) | CTR ≥2.5% |
-| **ג' 24.11** | S1+S4+S5 | **הכנסה: פתיחת VIP** | **"You're in: 30% off, starting now"** / *"Your code CIRCLE30 works until Thursday."* | קוד, 6 מוצרים (טבעות, להקה, צמיד), חריטה מעל $2,000, "Ships within 10 business days." | Shop with my code | CTR ≥4%, **3 הזמנות (≈$4,400 נטו אחרי 30%)** |
-| **ד' 26.11 (Thanksgiving) 08:00** | S1+S4+S5 שלא קנו מאז 24.11 | דחיפות אמיתית (הקוד נגמר היום) | **"Thank you. Your early access ends tonight"** / *"CIRCLE30 closes at 5pm ET."* | קצר, 120 מילה. תודה של חג + תזכורת. 3 מוצרים. | Use CIRCLE30 | CTR ≥3%, הזמנה אחת |
-| **ה' 27.11 (BF) 07:00** | S1+S5+**S7 Cold (פעם אחת)** ≈1,800 | **הכנסה + ניסיון אחרון להחיות את הקרים** | הקמפיין הקיים (X6KmCh): **"Diana Rafael \| Black Friday: 30% off everything + up to 70% on ready-to-ship"** | כמו שבנוי. להוסיף שורה: "Free engraving on orders over $2,000, through Monday." | Shop Black Friday | CTR ≥1.5% כולל, ≥3% ב-S1/S5. תלונות <0.10%. **3 הזמנות** |
-| **ש' 28.11** | S5+S1 שלא פתחו את 27.11 | resend | **"30% off, everything (yes, even engagement rings)"** / *"Through January. Plus engraving through Monday."* | אותו תוכן, Hero מחודש (טבעת אירוסין) | Shop now | CTR ≥1.5% |
-| **ב' 30.11 (Cyber Monday)** | S1+S5+S6 | דחיפות על בונוס החריטה | **"Engraving on us ends tonight"** / *"30% stays through January. The free engraving doesn't."* | 3 טבעות מעל $2,000 עם הדמיית חריטה. ההנחה לא "נגמרת", מסומן במפורש. | Engrave mine | CTR ≥2.5%, 2 הזמנות |
-| **ג' 1.12** | S10 BF clicked, no order | המרת מתלבטים + מועד משלוח | **"Still thinking about it?"** / *"Order by tonight, it ships by Dec 15."* | המוצר שהקליקו עליו (dynamic block Viewed Product, שיעבוד אחרי התיקון) + "Talk to Daniel" (Calendly) + ביקורות. | Complete my order / Book a call | CTR ≥6%, הזמנה אחת |
+| **ה' 5.11** | S1 Buyers + S5 Engaged (~550) | **היכרות מחדש עם Diana Rafael:** המיתוג החדש, הקולקציות, מה אנחנו יכולים להכין | **"A lot has changed since you last heard from us"** / *"New look, new collections, same hands making every piece."* | מכתב קצר מדניאל + המיתוג החדש. 3 בלוקים גדולים: REMNANT, טבעות אירוסין, להקות. "Every piece is made to order, and we can change almost anything" + סרטון CustomizeAI קצר. בסוף: "Reply and tell me what you're wearing today, I read every one." + VIP + משחק בחירה. | Explore the collections | CTR ≥3%, replies ≥5 |
+| **ג' 10.11** | S1+S5 | **Engagement: משחק בחירה** (במקום מייל יום הנישואין, שאין לו מספיק נתונים) | **"Which ring is her?"** / *"Pick one. We'll tell you what it says about her."* | 4 זוגות של טבעות (מוארכת מול סימטרית, קלאסית מול אוונגרד...). כל לחיצה מובילה לעמוד שמסביר את האופי + המוצר. VIP. | Pick yours | CTR ≥4% |
+| **ה' 12.11** | S5 Engaged (~330) + S1 | **תכשיטים חדשים**, מתואם לנחיתות של קמפיין גוגל | **"New this season"** / *"The newest pieces from our studio, and what customers wrote this month."* | Hero: התכשיט החדש הכי מרשים, גדול. גריד של 4–6 תכשיטים חדשים. **סקשן "New reviews"**: 3 ביקורות אחרונות (Etsy/Google, 530+ בסך הכול). VIP. | Shop new arrivals | CTR ≥2%, הזמנה אחת |
+| **א' 15.11** | **שינוי קהל:** S1+S5 במקום הרשימה המלאה | REMNANT Disturbed (מתוזמן) | כמו שמתוזמן ("It passes") | ללא שינוי בתוכן | — | CTR ≥1.5% |
+| **ג' 17.11** | S2 Engagement-ring buyers w/o band (~120) | **upsell: הלהקה התואמת** | **"The band that completes your ring"** / *"Designed to sit flush with the ring you already love."* | גריד 6 להקות. "Tell us your ring and we'll match the curve." VIP. | Shop wedding bands / Reply with your ring | CTR ≥4%, 2 הזמנות |
+| **ה' 19.11** | S1+S5 | **עונת ההצעות:** איזו טבעת מתאימה לאופי שלה / למזל שלה | **"The ring that matches her sign"** / *"Fire, earth, air or water: which stone is hers?"* | 4 יסודות (אש/אדמה/אוויר/מים), לכל אחד מזלות + טבעת מומלצת + שורה על האופי. "Not sure? Book 15 minutes with Daniel." VIP + רמז למתנות. | Find her ring | CTR ≥2.5%, הזמנה אחת |
+| **א' 22.11** | S1+S5 שלא נרשמו ל-VIP | **הזדמנות אחרונה להצטרף ל-VIP** | **"VIP list closes tomorrow"** / *"Black Friday starts early for the people on it."* | קצר. מה מקבלים ב-VIP (גישה מוקדמת + מדרגות מתנה). | Join the VIP list | הרשמות ≥60 בסך הכול |
+| **ב' 23.11** | VIP (או S1+S5 אם <60) | ציפייה לגישה המוקדמת | **"Tomorrow, Black Friday starts for you"** / *"30% off everything, days before everyone else."* | הכרזה על CIRCLE30 + מדרגות המתנה. Hero: הנמכרת ביותר, גדולה. | Save my favorites | CTR ≥2.5% |
+| **ג' 24.11** | VIP (או S1+S5) | **פתיחת הגישה המוקדמת** | **"You're in: 30% off, starting now"** / *"Your code CIRCLE30 works until Thursday."* | קוד, 6 מוצרים, מתנה מעל $2,000, custom made. | Shop with my code | CTR ≥4%, 3 הזמנות |
+| **ד' 26.11 (Thanksgiving)** | VIP שלא קנו | הקוד נסגר היום (אמיתי: ב-27.11 נפתח לכולם) | **"Thank you. Your head start ends tonight"** / *"Tomorrow it opens to everyone."* | קצר, תודה של חג + 3 מוצרים. | Use CIRCLE30 | הזמנה אחת |
+| **ה' 27.11 (BF) 07:00** | S1+S5+**S7 Cold (פעם אחת)** | הכנסה + ניסיון אחרון להחיות את הקרים | הקמפיין הקיים (X6KmCh) | כמו שבנוי + שורת מתנה מעל $2,000 + custom made. | Shop Black Friday | CTR ≥1.5%, 3 הזמנות |
+| **ש' 28.11** | S5+S1 שלא פתחו את 27.11 | resend | **"30% off, everything (yes, even engagement rings)"** / *"Every piece still made to order, just for you."* | אותו תוכן, Hero מחודש (טבעת אירוסין) | Shop now | CTR ≥1.5% |
+| **ב' 30.11 (Cyber Monday)** | S1+S5+S6 | זווית חדשה: התאמה אישית | **"Make it yours, 30% off"** / *"Change the stone, the gold, the band. We make it for you."* | CustomizeAI + 3 דוגמאות של שינוי (אבן/צבע זהב/חריטה). בלי "נגמר הלילה". | Customize mine | CTR ≥2.5%, 2 הזמנות |
+| **ג' 1.12** | S10 BF clicked, no order | המרת מתלבטים | **"Still thinking about it?"** / *"Ask me anything, I'll answer myself. Daniel"* | המוצר שהקליקו עליו + "Talk to Daniel" (Calendly) + ביקורות. בלי דדליין. | Complete my order / Book a call | CTR ≥6%, הזמנה אחת |
 
 **סך הכול:** S1 מקבלים 9–11 מיילים בחודש, S5 מקבלים 8, S7 מקבלים 1. **יעד החודש:** 12+ הזמנות שמיוחסות למייל ול-SMS, ≈$22K נטו (נובמבר 2024 הגיע ל-$44.9K מכל הערוצים, נובמבר 2025 ל-$14.5K).
 
@@ -108,8 +115,8 @@
 |---|---|---|
 | ג' 24.11 11:00 | `Diana Rafael: Your Black Friday starts now. 30% off everything with CIRCLE30, 3 days early. dianarafael.com/collections/black-friday-30` | CTR ≥8% |
 | ד' 26.11 12:00 | `Diana Rafael: Happy Thanksgiving. Early access code CIRCLE30 ends 5pm ET today.` | CTR ≥5% |
-| ה' 27.11 09:00 | `Diana Rafael: Black Friday is live. 30% off everything + free engraving over $2,000 through Monday.` | CTR ≥6% |
-| ב' 30.11 12:00 | `Diana Rafael: Last day for free engraving on orders over $2,000. 30% stays through January.` | CTR ≥5%, unsub <2% |
+| ה' 27.11 09:00 | `Diana Rafael: Black Friday is live. 30% off everything + a gift on orders over $2,000.` | CTR ≥6% |
+| ב' 30.11 12:00 | `Diana Rafael: Make it yours. Change the stone, the gold, the band, 30% off.` | CTR ≥5%, unsub <2% |
 
 **WhatsApp:** אין שליחה המונית. השולח על Twilio Sandbox ונופל כל 72 שעות, ואסור לבנות עליו מול לקוחות. במקום זה דניאל שולח **הודעה אישית מהטלפון שלו ל-S4 (כ-25 לקוחות VIP)** ב-ג' 24.11, ב-15 דקות עם טקסט מוכן:
 > *"Hi {name}, it's Daniel from Diana Rafael. You were one of the first to trust us, so you get Black Friday first: 30% off everything with code CIRCLE30, until Thursday. If you're thinking about a band or a gift, send me a photo of your ring and I'll match it myself."*
@@ -132,9 +139,9 @@
 |---|---|---|---|
 | **1** | **Abandoned Checkout** | 115 קופות נטושות באוקטובר ו-0 נמענים. יש שני flows חיים מקבילים (VB4v4q "NOT Black Ice" + XW6UqR "Black Ice"), ושניהם מורעבים. | **עד 6.11:** ממזגים לאחד (משאירים את VB4v4q ומכבים את XW6UqR ואת הטיוטה Rs2Fcr). 3 מיילים: שעה, 24 שעות, 72 שעות. מייל 1: "Your ring is waiting" + תמונת המוצר גדולה. מייל 2: ביקורות + "Questions? Reply or book 15 min with Daniel". מייל 3: "ships within 10 business days" + חריטה מתנה מעל $2,000. בלי קוד הנחה, כי ה-30% האוטומטי מכסה מ-27.11. יציאה כשיש Placed Order. **יעד: 5% recovery = כ-2 הזמנות בחודש.** |
 | **2** | **Browse + Cart abandonment** | 7 flows חיים חופפים (Y6Zunh, Y9u9DF Viewed Page, YqVvEY Active on site, UrfQ29, Y3ZV7x, R8UpBY, V3x2q7), שכולם שלחו 4 מיילים ב-90 יום. | **עד 9.11:** משאירים 2 בלבד. **Added to Cart** (UrfQ29): 2 מיילים, 4 שעות ו-48 שעות. **Viewed Product** (Y6Zunh): מייל אחד אחרי 24 שעות, רק ל-≥2 צפיות באותו מוצר. מכבים את Y9u9DF, YqVvEY, Y3ZV7x, R8UpBY ו-V3x2q7. הם יוצרים רעש וסיכון תלונות ברגע שהאירועים יחזרו לזרום. |
-| **3** | **Post-purchase + upsell + review** | W6eUNC (Order Fulfilled), WvEmp7 (Order Placed), WTfhxp (Review), Tc6EaJ/Ye7y3T (Cross-sell): כולם live, כולם עם 0 נמענים. | **עד 12.11:** לעבור על התוכן ולהסיר כל הבטחת הגעה. להוסיף לענף WvEmp7 מייל "matching band" אחרי 21 יום, רק כשהמוצר הוא טבעת אירוסין. בקשת ביקורת 10 ימים אחרי `Delivered Shipment` (הקישור הוא Google Reviews, כי שם יש 100 ביקורות בלבד ושם החיפוש). |
-| **4** | **Anniversary (date-based)** | לא קיים. | **עד 16.11:** profile property `first_order_date` מגיע מהסנכרון (או מייבוא חד-פעמי של 235 הלקוחות מתוך Shopify). Flow שנתי: 14 יום לפני יום השנה של ההזמנה הראשונה, מייל "anniversary band / gift" + חריטה. רץ לבד לתמיד. |
-| **5** | **Win-back** | VtbjEg "Customer Winback - Junaid" live, מורעב, תוכן מ-2021. | **עד 20.11:** טריגר: 365 יום מאז Placed Order. 2 מיילים: "What's new since you bought" (New Arrivals + REMNANT), ואחרי 14 יום Referral ("Know someone shopping for a ring? Send them to us, and we'll send you a $150 gift card when their order ships"). זה gift card ולא קוד, ולכן אין stacking. |
+| **3** | **Post-purchase: "מה קורה עכשיו" + upsell + ביקורת** | W6eUNC, WvEmp7, WTfhxp, Tc6EaJ/Ye7y3T: כולם live, כולם עם 0 נמענים. | **עד 12.11:** (א) רצף "What happens after you order": מייל 1 מיד, תודה + הצעדים (אישור פרטים/מידה, ייצור ידני בסטודיו, בדיקת איכות, משלוח עם מעקב) + "עונה לך אדם, לא AI"; מייל 2 בזמן הייצור, מאחורי הקלעים מהסטודיו; מייל 3 כשנשלח, מעקב + טיפול בתכשיט. בלי תאריך הגעה. (ב) "matching band" אחרי 21 יום, רק לטבעת אירוסין. (ג) בקשת ביקורת 10 ימים אחרי Delivered Shipment (Google Reviews). |
+| **4** | ~~Anniversary~~ | בוטל לבינתיים (דניאל 1.11: אין מספיק נתונים). | — |
+| **5** | **Win-back + הפניית חבר** | VtbjEg live, מורעב, תוכן מ-2021. | **עד 20.11:** טריגר 365 יום מאז Placed Order. מייל 1: What's new since you bought. מייל 2 אחרי 14 יום, הפניית חבר עם מתנה אמיתית: "If your friend orders over $2,000, you get 1 ct black diamond studs, made for you." (עלות ייצור משוערת $200–260). קישור הפניה אישי (UTM + property referred_by). |
 | **6** | **Welcome** | WPeiJQ live, אבל 5 נמענים ב-90 יום (ה-onsite לא נטען עד 25.10). הטיוטות SsZMSX, YqP3sD ו-Ud7bZG מבלבלות. | **עד 23.11:** מוודאים שהטריגר של WPeiJQ = הרשימה שאליה כותבים הפופאפים החדשים (ATC/known lead). 4 מיילים ב-10 ימים: Story (2014, טבעי, לא מטופל) ← Bestsellers + ביקורות ← "How to choose" ← Book a call. מוחקים את 3 הטיוטות הכפולות. |
 | **7** | **Sunset** | לא קיים. 1,835 מנויים single opt-in ו-332 פתחו. | **4.11:** suppress חד-פעמי ל-S8. אחרי 1.12, מי שב-S7 ולא פתח או הקליק על BF עובר ל-suppression. Flow קבוע: 120 יום בלי מעורבות → מייל "Still want to hear from us?" → suppress אחרי 14 יום. |
 
