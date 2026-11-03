@@ -74,3 +74,38 @@ General: `{{ first_name|default:'there' }}`, `{% unsubscribe 'Unsubscribe' %}`.
 - Confirm these facts with Daniel: resizing ("We can resize most of our rings later on"; no claim that it is free), 30-day returns, "since 2014", and that every piece comes with a certificate.
 - The gift: the email doesn't say whether the studs are added automatically or need a code or a note. Make sure the mechanism works at checkout.
 - Send a preview from a real event (Klaviyo "Preview as" a profile with a real Checkout Started / Added to Cart event) before going live.
+
+---
+
+## Post-purchase, Browse, Cross-sell, JEWELVERSARY: templates (3.11.2026)
+
+These are templates only. No flow, campaign or list was created or changed. The design is based on XuuLF8 (light): logo, the jewelry big at the top, one gold CTA, signed "Daniel, Diana Rafael". Every email is 120 to 250 words. The subject and preview text go in the flow (the preview text is also built into each template as a preheader). The generator and the HTML for each template are in `emails/flow-templates/` (`build.py`).
+
+| Template | ID | Subject | Preview | Trigger / delay | Purpose |
+|---|---|---|---|---|---|
+| FLOW 2026-11 \| PostPurchase 1/4 \| Order confirmed, what happens now | Wz5xiT | Your order is confirmed. Here's what happens now. | Made by hand in our studio, checked, and shipped insured within 10 business days. | Placed Order (T6KBRR), immediately | Thank-you note and the 4 steps: confirm details and size, made by hand, quality check, insured shipping with tracking. Ships within 10 business days, no arrival date. "A person answers you, not AI." CTA: Instagram |
+| FLOW 2026-11 \| PostPurchase 2/4 \| Inside the studio (day 5) | R7aCs4 | Inside the studio while your piece is made | A look at the bench: setting, polishing and the final check. | Placed Order, +5d (filter: Fulfilled Order = 0 since start) | Behind the scenes while the piece is being made. CTA: Instagram |
+| FLOW 2026-11 \| PostPurchase 3/4 \| Shipped, tracking + customs + care | VWquHb | Your piece has shipped. Tracking inside. | Your tracking number, a short note on customs, and how to care for your piece. | Fulfilled Order (Yu3gpi), immediately | Carrier and tracking number. The exact sentence "Diana Rafael covered and paid all shipping costs." Customs duties may be required, so check them yourself. US orders ≥ $2,500 get a Form 5106 block (link to the page on the website). Care tips. CTA: track package |
+| FLOW 2026-11 \| PostPurchase 4/4 \| Google review (delivered + 3d) | VM9Y2p | How does it feel to wear it? | One minute on Google helps the next person trust a studio they've never met. | Delivered Shipment (Uin4Gb), +3d | Short Google review request (Google Maps link from S43ETz, not Etsy) |
+| FLOW 2026-11 \| Browse 1/4 \| The piece you viewed (2h) | TQqPSp | Still thinking about the {{ event.Name }}? | Made to order for you, shipped insured on us, with 30 days to decide. | Viewed Product (RdGtZY), +2h | The product plus the answers to the main objections: made to order, shipping on us, 30-day returns and certificate, customization. CTA: the product |
+| FLOW 2026-11 \| Browse 2/4 \| Why us, 530+ reviews (1d) | UibmNe | Why 530+ customers trusted a studio they'd never visited | Natural diamonds, solid gold, made by hand since 2014. | +1d | Why us: since 2014, natural diamonds, made by hand, 530+ reviews. CTA: /pages/our-customers-reviews |
+| FLOW 2026-11 \| Browse 3/4 \| Gift 1 ct studs from $2,000 (3d) | XbnPRb | A gift with the {{ event.Name }}: 1 ct studs | Free 1 ct natural black diamond studs, now from $2,000 (was $3,000). | +3d (from the previous email: +2d) | The gift: studs now from $2,000 (was $3,000). The gift is in the subject and in the body. CTA: the product |
+| FLOW 2026-11 \| Browse 4/4 \| 15 minutes with Daniel (5d) | SNfvwN | Questions about the {{ event.Name }}? 15 minutes with Daniel | Size, gold, stone, budget: ask a person, not a chatbot. | +5d (from the previous email: +2d) | A person: 15 minutes with Daniel, plus WhatsApp. CTA: new-website-book-online-appointment |
+| FLOW 2026-11 \| CrossSell 1/3 \| Made to go with yours (delivered + 60d) | SnRXLp | Made to go with yours | A few pieces we'd pair with what you're already wearing. | Delivered Shipment, +60d | A block by product type: ring → wedding bands, necklace → earrings, bracelet → ring and earrings, earrings → necklace, other → new arrivals. 2 product cards and a CTA |
+| FLOW 2026-11 \| CrossSell 2/3 \| How customers wear them together (+4d) | U4qkKw | How our customers wear theirs | Same gold, same diamonds, worn together. | +4d | How to wear them together, by type, with the same blocks |
+| FLOW 2026-11 \| CrossSell 3/3 \| Designed to match, 15 min with Daniel | YsXbez | Want it designed to match? 15 minutes with Daniel | We can make the second piece to fit the first exactly. | +5d | A matching piece built from the original design. A sentence by type. CTA: 15 minutes |
+| FLOW 2026-11 \| Jewelversary | Tg23sD | Happy JEWELVERSARY, {{ first_name\|default:'friend' }} | One year ago today, you chose a piece from our studio. | Placed Order, +365d (or a yearly date-based flow) | Congratulations on one year, a check-in, and what's new (REMNANT plus new arrivals). No discount and no referral ask. CTA: REMNANT |
+
+### Event variables used (checked against real events with get_events)
+- **Placed Order T6KBRR / Fulfilled Order:** `event.Items.0`, `event.Collections`, `event.extra.name` (#1251), `event.extra.line_items.0.product.images.0.src`, `event.extra.line_items.0.name`, `event.extra.fulfillments.0.tracking_number`, `.tracking_url`, `.tracking_company` (taken from the existing tracking template TEMYFw), `event.extra.shipping_address.country_code`, `event|lookup:"$value"`.
+- **Delivered Shipment Uin4Gb:** `event.Items`, `event.Collections`, `event.extra.fulfillment.line_items.0.product.images.0.src`. The cross-sell and review templates try this path first and then fall back to the Placed Order path, so they work on either trigger.
+- **Viewed Product RdGtZY:** `event.Name`, `event.URL`, `event.ImageURL`. `event.Price` is left out because it sometimes contains `<span class=money>`.
+- **Product type in cross-sell:** `{% if "engagement" in event.Collections|join:" "|lower %}` … `elif` necklace/pendant … bracelet … earring (on `event.Items` and `event.Collections`) … `else`. One template per email, no variants. This was checked in a render: the necklace branch and the engagement branch both work. Ordered Product (RijJmn) is not needed.
+
+### Notes for building the flows
+- **Links outside dianarafael.com:** Instagram, WhatsApp (wa.me), Google review and the carrier tracking link. All of them are required by the brief.
+- **PostPurchase 2:** add the filter "Fulfilled Order = 0 since flow start" so the "while it's being made" email doesn't go out after the piece has shipped.
+- **Form 5106:** the block appears in PostPurchase 3 for US orders ≥ $2,500 (render checked). If the separate VQTTX3 email is kept, remove one of them so the customer doesn't get it twice.
+- **Browse 3, studs:** the copy says "added to orders from $2,000". Make sure the mechanism actually works (automatic, a code, or a note).
+- **Cross-sell:** the WhatsApp/booking strip appears in emails 1 and 2. Email 3 is itself the booking email.
+- The JEWELVERSARY template says "A year ago today". It fits both a one-time Placed Order +365d flow and a yearly date-based flow.
