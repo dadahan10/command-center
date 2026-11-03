@@ -109,3 +109,17 @@ These are templates only. No flow, campaign or list was created or changed. The 
 - **Browse 3, studs:** the copy says "added to orders from $2,000". Make sure the mechanism actually works (automatic, a code, or a note).
 - **Cross-sell:** the WhatsApp/booking strip appears in emails 1 and 2. Email 3 is itself the booking email.
 - The JEWELVERSARY template says "A year ago today". It fits both a one-time Placed Order +365d flow and a yearly date-based flow.
+
+## Flows created as DRAFTS via API (3.11.2026 evening, full-access key)
+All messages draft, from daniel@, UTM on. Templates were fixed to the real refund policy BEFORE the flows copied them. Builders: `flow-templates/buildflows.py`, `buildflows2.py`.
+| Flow | ID | Trigger | Emails |
+|---|---|---|---|
+| 2026-11 \| Abandoned Checkout (8) | X6ZfPR | Checkout Started; Placed Order=0; not in flow 7d | 1h,1d,2d,4d,6d,8d,10d,13d |
+| 2026-11 \| Abandoned Cart (8) | VWbEYm | Shopify Added to Cart; Checkout=0, Order=0; not in flow 30d | 4h,1d,3d,5d,7d,9d,11d,14d |
+| Post-purchase: confirmed + studio | VydTk7 | Placed Order | now; +5d (msg filter Fulfilled=0) |
+| Post-purchase: shipped | R6tiEk | Fulfilled Order | now |
+| Delivered: review + cross-sell | Y6UjZu | Delivered Shipment | +3d review; +60d,+64d,+69d cross-sell |
+| Browse abandonment (4) | XLpiBU | Viewed Product; no order/checkout/cart; not in flow 14d | 2h,1d,3d,5d |
+| JEWELVERSARY | XrShek | Placed Order | +365d |
+| VIP confirmation | RRcbwY | Added to segment Yvkrmu | now (template TLp5wQ fixed) |
+Still to build: evergreen Welcome. Old flows stay ON until the new ones go live.
