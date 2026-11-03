@@ -173,7 +173,7 @@ BV_URL = "{{ event.URL }}?utm_source=klaviyo&utm_medium=email&utm_campaign=flow-
 
 T["br1-reminder"] = page(
     "Still thinking about the {{ event.Name }}?",
-    "Made to order for you, shipped insured on us, with 30 days to decide.",
+    "Made to order for you, shipped insured on us, with lifetime care.",
     "You were looking at",
     BV_HERO,
     "{{ event.Name }}",
@@ -181,7 +181,7 @@ T["br1-reminder"] = page(
     p("You were looking at this piece earlier, so here it is again, with the things people usually want to know before they decide:") +
     p("<b>It's made for you.</b> Every piece is made to order in our studio, in solid gold with natural diamonds, and ships within 10 business days.<br/>"
       "<b>Shipping is on us.</b> Fully insured express shipping, with tracking.<br/>"
-      "<b>You're covered.</b> 30 days for returns and exchanges, and a certificate with your piece.<br/>"
+      "<b>You're covered.</b> lifetime care for manufacturing defects, and a certificate with your piece.<br/>"
       "<b>It can change.</b> Another gold color, stone shape or an engraving: tap Customize this product on the page and ask in your own words.") +
     p("If it's the one, it's waiting for you."),
     button(BV_URL, "See it again"), c)
@@ -212,7 +212,7 @@ T["br3-studs-gift"] = page(
     p("<b>Free 1 ct natural black diamond studs with your order, now from $2,000 (was $3,000).</b> "
       "We lowered the threshold, so more of our customers walk away with a second piece. "
       "They're made in our studio like everything else, in solid gold.") +
-    p("Everything else stays the same: made to order, ships within 10 business days, fully insured shipping paid by us, and 30 days for returns and exchanges.") +
+    p("Everything else stays the same: made to order, ships within 10 business days, fully insured shipping paid by us, and lifetime care for manufacturing defects.") +
     p("The studs are added to orders from $2,000. If you have any question about how it works, reply and I'll answer you myself."),
     button(BV_URL, "Make it yours"), c)
 
