@@ -1,0 +1,32 @@
+<div id="dr-vip" style="max-width:520px;margin:40px auto 60px;padding:0 16px;text-align:center">
+  <p style="letter-spacing:.18em;text-transform:uppercase;font-size:12px;margin:0 0 12px">VIP Early Access</p>
+  <h2 style="margin:0 0 14px;font-weight:400">First in line, before everyone else</h2>
+  <p style="margin:0 0 26px;line-height:1.6">Join the list and you'll hear about new pieces and our holiday offers before they go public. One email when there's something worth seeing. No noise.</p>
+  <form id="dr-vip-form" novalidate style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+    <input id="dr-vip-email" type="email" required autocomplete="email" placeholder="Your email"
+      style="flex:1 1 240px;min-width:0;padding:14px 16px;border:1px solid currentColor;background:transparent;color:inherit;font:inherit">
+    <button type="submit" style="flex:0 0 auto;padding:14px 26px;border:1px solid currentColor;background:#1f1b16;color:#fff;font:inherit;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Join VIP</button>
+  </form>
+  <p id="dr-vip-msg" role="status" style="min-height:1.6em;margin:16px 0 0"></p>
+  <p style="font-size:12px;opacity:.7;margin:18px 0 0">You can unsubscribe at any time.</p>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('dr-vip-form'),e=document.getElementById('dr-vip-email'),m=document.getElementById('dr-vip-msg');
+  try{var q=new URLSearchParams(location.search).get('email');if(q)e.value=q;}catch(_){}
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var v=(e.value||'').trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){m.textContent='Please enter a valid email.';return;}
+    m.textContent='Adding you…';
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id=UEHusj',{
+      method:'POST',
+      headers:{'Content-Type':'application/vnd.api+json','revision':'2024-10-15'},
+      body:JSON.stringify({data:{type:'subscription',attributes:{custom_source:'VIP page',profile:{data:{type:'profile',attributes:{email:v,properties:{vip_early_access:true}}}}},relationships:{list:{data:{type:'list',id:'SeppgF'}}}}})
+    }).then(function(r){
+      if(r.status===202||r.ok){f.style.display='none';m.textContent="You're on the VIP list. We'll be in touch before anyone else.";}
+      else{m.textContent='Something went wrong, please try again.';}
+    }).catch(function(){m.textContent='Something went wrong, please try again.';});
+  });
+})();
+</script>
