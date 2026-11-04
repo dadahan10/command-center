@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="light only" name="color-scheme"/><meta content="light only" name="supported-color-schemes"/>
+<title>Your order is confirmed. Here's what happens now.</title>
+<style>:root {color-scheme:light only}</style><style>@media only screen and (max-width: 620px) {
+    .col {
+        display: block !important;
+        width: 100% !important
+        }
+    h1 {
+        font-size: 30px !important
+        }
+    .pad {
+        padding-left: 24px !important;
+        padding-right: 24px !important
+        }
+    }</style></head>
+<body style="margin:0;padding:0;background:#f7f3ec;color:#1f1b16;">
+<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">Made by hand in our studio, checked, and shipped insured within 10 business days.</div>
+<table bgcolor="#f7f3ec" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#f7f3ec;" width="100%"><tr><td align="center" style="padding:24px 10px;">
+<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;max-width:600px;background:#ffffff;border:1px solid #e6dccb;" width="600">
+<tr><td align="center" bgcolor="#f3ead9" style="background:#f3ead9;border-bottom:1px solid #e6dccb;padding:9px 16px;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#7a5d1e;">Order {{ event.extra.name }} confirmed</td></tr>
+<tr><td align="center" style="padding:24px 40px 20px;"><a href="https://dianarafael.com/?utm_source=klaviyo&amp;utm_medium=email&amp;utm_campaign=flow-postpurchase&amp;utm_content=logo" target="_blank"><img alt="Diana Rafael" src="https://dadahan10.github.io/diana-rafael-remnant/assets/email/logo-duality-dark.png?v=20261102a" style="display:block;width:220px;height:auto;border:0;" width="220"/></a></td></tr>
+<tr><td style="padding:0 24px;">{% if event.extra.line_items.0.product.images.0.src %}<img alt="{{ event.Items.0 }}" src="{{ event.extra.line_items.0.product.images.0.src }}" style="display:block;width:100%;max-width:552px;height:auto;border:0;border-radius:6px;" width="552"/>{% else %}<img alt="Diana Rafael ring in gold with a natural black diamond" src="https://cdn.shopify.com/s/files/1/2469/5441/files/r117-kintsugi-f1-yg.jpg?v=1791445879&amp;width=1200" style="display:block;width:100%;max-width:552px;height:auto;border:0;border-radius:6px;" width="552"/>{% endif %}</td></tr>
+<tr><td align="center" class="pad" style="padding:30px 48px 4px;"><h1 style="font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:36px;line-height:1.15;margin:0 0 16px;color:#1f1b16;font-weight:500;">Thank you. Here's what happens now.</h1></td></tr>
+<tr><td class="pad" style="padding:0 48px 8px;"><p style="margin:0 0 14px;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:#1f1b16;">Hi {{ first_name|default:'there' }},</p><p style="margin:0 0 14px;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:#1f1b16;">It's Daniel. Thank you for choosing us for the {{ event.Items.0|default:'piece you ordered' }}. Every piece is made to order, so here is exactly what happens next:</p><p style="margin:0 0 14px;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:#1f1b16;"><b>1. We confirm the details.</b> If anything needs checking, like your ring size or gold color, we'll write to you personally before we start.<br/><b>2. It's made by hand</b> in our studio, by the same people who have made every Diana Rafael piece.<br/><b>3. Quality check.</b> Every stone, prong and surface is inspected before it leaves us.<br/><b>4. Insured shipping with tracking.</b> Your order ships within 10 business days, and you'll get an email with the tracking number the day it leaves.</p><p style="margin:0 0 14px;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:#1f1b16;">If you have a question at any point, just reply to this email. A person answers you, not AI.</p><p style="margin:0 0 14px;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.6;color:#1f1b16;">Want to see the studio while your piece is being made? We share the bench, the stones and the finished work on Instagram.</p></td></tr>
+<tr><td align="center" style="padding:8px 40px 30px;"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"><tr><td align="center" bgcolor="#b08d3c" style="border:2px solid #b08d3c;background:#b08d3c;border-radius:2px;"><a href="https://www.instagram.com/dianarafaeljewelry/" style="display:inline-block;padding:13px 30px;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#1f1b16;text-decoration:none;" target="_blank">Follow us on Instagram</a></td></tr></table></td></tr>
+<tr><td class="pad" style="padding:0 48px 30px;"><p style="margin:0;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;font-size:15px;line-height:1.6;color:#7a5d1e;">Daniel, Diana Rafael</p></td></tr>
+<tr><td align="center" bgcolor="#efe8dc" style="padding:24px 40px 28px;background:#efe8dc;border-top:1px solid #e6dccb;font-family:'Manrope','Helvetica Neue',Arial,sans-serif;">
+<div style="font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;color:#7a5d1e;font-size:22px;font-weight:600;">Diana Rafael</div>
+<div style="font-size:12px;color:#4a4339;margin-top:10px;line-height:1.6;">23 Tuval St., Suite 10-01, Diamond Trading Center, Ramat-Gan, Israel 5252238<br/>9454 Wilshire Blvd M3, Beverly Hills, CA 90212</div>
+<div style="font-size:12px;color:#4a4339;margin-top:10px;">No longer want to receive these emails? {% unsubscribe 'Unsubscribe' %}</div>
+</td></tr>
+<tr><td bgcolor="#b08d3c" style="height:6px;line-height:6px;font-size:6px;background:#b08d3c;"> </td></tr>
+</table></td></tr></table>
+</body></html>

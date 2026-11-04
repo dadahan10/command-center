@@ -1,0 +1,201 @@
+{
+"first_name": "Sarah",
+"event": {
+"Collections": [
+"ALL ENGAGEMENT RINGS",
+"BLACK ICE - Engagement Rings",
+"BLACK RINGS",
+"Black Friday 30",
+"Black Ice",
+"Black Ice - Art Deco Engagement Rings",
+"New Arrivals",
+"all"
+],
+"Items": [
+"Geometric Natural Black Diamond Oval Engagement Ring"
+],
+"Source Name": "web",
+"Item Count": 1,
+"Discount Codes": [],
+"Customer Locale": "en-US",
+"Total Discounts": "360.00",
+"$currency_code": "USD",
+"$event_id": "67168066732201",
+"$value": 2040.0,
+"extra": {
+"webhook_id": "1cf13dc9-2cb4-5847-b2ec-50deed10e803",
+"webhook_topic": "checkouts/update",
+"presentment_currency": "USD",
+"checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIjAzHqvS1D4HQwHjofXvu/recover?key=2307fd87f5ca0c045539b5ef32191d3d&locale=en-US",
+"line_items": [
+{
+"variant_id": 44917613494441,
+"vendor": "Diana Rafael",
+"fulfillment_service": "manual",
+"applied_discounts": [],
+"requires_shipping": true,
+"product": {
+"translations": {},
+"vendor": "Diana Rafael",
+"properties": {},
+"images": [
+{
+"width": 1500,
+"alt": "Mystery Soir\u00e9e ring",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/476a0402-4997-5c54-beef-b3258e99a017.jpg?v=1732535359",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/476a0402-4997-5c54-beef-b3258e99a017_x240.jpg?v=1732535359"
+},
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 2",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/5d9572d2-3624-5b03-aed6-727c05cbc384.jpg?v=1732535361",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/5d9572d2-3624-5b03-aed6-727c05cbc384_x240.jpg?v=1732535361"
+},
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 3",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/bc7edc1c-2311-53b3-8311-ede007e938a2.jpg?v=1732535363",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/bc7edc1c-2311-53b3-8311-ede007e938a2_x240.jpg?v=1732535363"
+},
+{
+"width": 3625,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 4",
+"height": 3625,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/4ac32b36-1ac5-5f78-a776-cdde39d091de.jpg?v=1732535367",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/4ac32b36-1ac5-5f78-a776-cdde39d091de_x240.jpg?v=1732535367"
+},
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 5",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/52c03b19-1821-50c3-be76-b1933d006099.jpg?v=1732535369",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/52c03b19-1821-50c3-be76-b1933d006099_x240.jpg?v=1732535369"
+},
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 6",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/7c19bf3f-6481-5fff-a393-942e0325c1d4.jpg?v=1732535371",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/7c19bf3f-6481-5fff-a393-942e0325c1d4_x240.jpg?v=1732535371"
+},
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 7",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/7313ba11-4d6b-5cc0-9f46-252494328116.jpg?v=1732535373",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/7313ba11-4d6b-5cc0-9f46-252494328116_x240.jpg?v=1732535373"
+},
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 8",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/1b001a49-034c-5ea0-b73b-3a87a5dbc514.jpg?v=1732535375",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/1b001a49-034c-5ea0-b73b-3a87a5dbc514_x240.jpg?v=1732535375"
+},
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 9",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/100e8624-4dda-5302-96df-d078db6fc69c.jpg?v=1732535377",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/100e8624-4dda-5302-96df-d078db6fc69c_x240.jpg?v=1732535377"
+},
+{
+"width": 4378,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 10",
+"height": 4378,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/7637e20c-53ae-55cb-b406-27581a162b52.jpg?v=1732535379",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/7637e20c-53ae-55cb-b406-27581a162b52_x240.jpg?v=1732535379"
+},
+{
+"width": 3945,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 11",
+"height": 3945,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/787f52e1-d897-5f0c-8c15-35a94d568e00.jpg?v=1732535382",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/787f52e1-d897-5f0c-8c15-35a94d568e00_x240.jpg?v=1732535382"
+}
+],
+"body_html": "<p style=\"text-align: center;\">Embrace the allure of the Mystery Soir\u00e9e engagement ring, a bold statement of elegance and individuality. Crafted in luxurious rose gold, this captivating design features a 1.54-carat oval-cut black diamond, ethically sourced and exuding a mysterious, opaque allure.</p>\n<p style=\"text-align: center;\">Accented by 0.08 carats of black and white round diamonds with contrasting clarity, this geometric masterpiece balances modern sophistication with timeless charm. A celebration of unique love, the Mystery Soir\u00e9e ring is perfect for those who seek a refined yet unconventional symbol of commitment.</p>",
+"tags": "Black & White Rings, BLACK ENGAGEMENT RING, Black Engagement Rings, Black Ice, OVAL",
+"title": "Geometric Natural Black Diamond Oval Engagement Ring",
+"id": 8323891069097,
+"variant_options": {
+"Color": "Yellow",
+"Ring size": "7.5"
+},
+"variant": {
+"sku": "R337-Y-BI-2-14",
+"id": 44917613494441,
+"translations": {
+"presentment_variant_title": ""
+},
+"options": {
+"Color": "Yellow",
+"Ring size": "7.5"
+},
+"images": [
+{
+"width": 1500,
+"alt": "Mystery Soire'e Geometric Natural Black Diamond Oval Engagement Ring, view 8",
+"height": 1500,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/1b001a49-034c-5ea0-b73b-3a87a5dbc514.jpg?v=1732535375",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/1b001a49-034c-5ea0-b73b-3a87a5dbc514_x240.jpg?v=1732535375"
+}
+],
+"title": "Yellow / 7.5"
+},
+"product_type": "Black_Ice - Diamond Rings",
+"handle": "mystery-soiree-geometric-natural-black-diamond-oval-engagement-ring-in-rose-yellow-gold"
+},
+"presentment_variant_title": "Yellow / 7.5",
+"variant_title": "Yellow / 7.5",
+"line_price": 2400.0,
+"unit_price_measurement": {
+"reference_value": null,
+"measured_type": null,
+"quantity_unit": null,
+"quantity_value": null,
+"reference_unit": null
+},
+"title": "Geometric Natural Black Diamond Oval Engagement Ring",
+"rank": null,
+"quantity": 1.0,
+"line_price_set": {
+"presentment_money": {
+"amount": 2400.0
+},
+"shop_money": {
+"amount": 2400.0
+}
+},
+"gift_card": false,
+"variant_price": "2400.00",
+"translations": {
+"presentment_description": "",
+"presentment_variant_options": []
+},
+"properties": {},
+"presentment_title": "Geometric Natural Black Diamond Oval Engagement Ring",
+"product_id": 8323891069097,
+"price": 2400.0,
+"taxable": false,
+"destination_location_id": null,
+"tax_lines": [],
+"origin_location_id": null,
+"parent_relationship": null,
+"grams": 0,
+"compare_at_price": null,
+"sku": "R337-Y-BI-2-14",
+"user_id": null,
+"key": "44917613494441"
+}
+],
+"referring_site": "",
+"responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIjAzHqvS1D4HQwHjofXvu/recover?key=2307fd87f5ca0c045539b5ef32191d3d&locale=en-US",
+"full_landing_site": "http://diana-rafael.myshopify.com/products/mystery-soiree-geometric-natural-black-diamond-oval-engagement-ring-in-rose-yellow-gold?variant=44917613494441&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic",
+"note_attributes": []
+}
+}
+}

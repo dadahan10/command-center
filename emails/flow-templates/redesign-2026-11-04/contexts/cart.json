@@ -1,0 +1,50 @@
+{
+"first_name": "Sarah",
+"event": {
+"Product Type": "Black_Ice - Diamond Rings",
+"Price": 2800.0,
+"Quantity": 1.0,
+"Client ID": "6ae467f7-3102-4717-afd2-6329497330f7",
+"VariantID": "46009280495785",
+"OS": "iOS",
+"ProductID": "8222829936809",
+"Variant SKU": null,
+"_ip": "172.58.52.236",
+"Product Name": "Art Deco  Natural Black Diamond Marquise Engagement Ring in Rose  Gold - 7.5 / Rose gold",
+"Variant Name": "7.5 / Rose gold",
+"Categories": [
+"ALL ENGAGEMENT RINGS",
+"BLACK ICE - Engagement Rings",
+"BLACK RINGS",
+"Black Ice",
+"Black Ice - Art Deco Engagement Rings",
+"Black Ice - Marquise Engagement Rings",
+"Black Ice-Marquise Engagement Rings",
+"all"
+],
+"Brand": "Diana Rafael",
+"URL": "https://diana-rafael.myshopify.com/products/universs-eye-art-deco-natural-black-diamond-marquise-engagement-ring-in-rose-gold",
+"CompareAtPrice": null,
+"ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/files/4c8e1534-1a6d-58a0-a3cc-5e17ce985b34.jpg?v=1723111779",
+"_ip_country_code": "US",
+"_ip_region_code": "TX",
+"Browser": "Mobile Safari",
+"$currency": "USD",
+"$event_id": "sh-f403acc2-30A2-46FF-B168-F8389671CDCC.46009280495785",
+"$value": 2800.0,
+"extra": {
+"standard": {
+"customer_phone_sha256": "e4e995d378a6ca4141c79a97ee0a76869aa3378b76c14b633b25f79f11ead160",
+"click_id": "jAlNYQViFLUBSQGRs8sxNM-2lOHuE-2nPE4L3pzvWEiGqBmfC90i8DQyGwCt_Sbx.UEHusj",
+"event_type": "product_added_to_cart",
+"shop_id": 24695441,
+"limit_data_use": false,
+"customer_email_sha256": "dee3ffdc3005582b2298cb70bf1aae4a8accacd1a3e08e33a2a19cbc638d35e5",
+"email_inferred": true,
+"phone_inferred": true,
+"click_id_inferred": true,
+"event_date_time": "2026-03-16T00:19:39Z"
+}
+}
+}
+}

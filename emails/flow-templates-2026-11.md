@@ -123,3 +123,11 @@ All messages draft, from daniel@, UTM on. Templates were fixed to the real refun
 | JEWELVERSARY | XrShek | Placed Order | +365d |
 | VIP confirmation | RRcbwY | Added to segment Yvkrmu | now (template TLp5wQ fixed) |
 Still to build: evergreen Welcome. Old flows stay ON until the new ones go live.
+
+## Redesign 4.11.2026: one purpose-made image + layout per email
+Daniel rejected the one-template look. All 29 flow-message templates were rebuilt and pushed into the existing DRAFT flows (no flow set live, nothing sent).
+- Code: `flow-templates/redesign-2026-11-04/` (`vip.py`, `build_all.py` with the per-email PLAN, `rd.py` blocks, `push.py`/`push_all.sh`, `shot.py`, `make_gallery.py`; `backup-before/` = the templates as they were).
+- Review gallery: `emails/review-2026-11-04/index.html` (each email rendered by Klaviyo with a real past event).
+- Images (Klaviyo CDN, map in `images.json`): new AI scenes with NO jewelry drawn (VIP sealed envelope, bench/making, natural diamonds in parcel paper, unboxing, sizing tools, packed courier box, stone-to-phone call), made in Canva because Gemini = 402 (credits) and Higgsfield = 401 (re-auth). The jewelry is always real: the customer's own item from the event (chosen variant image first) or the E003 studs render.
+- JEWELVERSARY / post-purchase no longer fall back to another ring (R117): no image -> no product photo.
+- VIP flow message preview text is empty in the flow settings (API cannot set it); the template carries a hidden preheader with the same line.

@@ -1,0 +1,604 @@
+{
+"first_name": "Sarah",
+"event": {
+"FulfillmentHours": 141,
+"tags": [],
+"Discount Codes": [],
+"Source Name": "web",
+"FulfillmentStatus": "fulfilled",
+"Customer Locale": "en-US",
+"OptedInToSmsOrderUpdates": true,
+"Collections": [
+"ALL ENGAGEMENT RINGS",
+"BLACK ICE - Engagement Rings",
+"BLACK RINGS",
+"Black Diamond Eternitiy",
+"Black Ice",
+"Black Ice- Round Engagement Rings",
+"all"
+],
+"$currency_code": "USD",
+"Item Count": 1,
+"Items": [
+"5.14 Carats Natural Black Diamond Round Engagement Ring"
+],
+"ShippingRate": "International Shipping",
+"Total Discounts": "720.00",
+"HasPartialFulfillments": false,
+"$event_id": "6828685328553",
+"$value": 2880.0,
+"extra": {
+"created_at": "2026-02-20T16:23:56+02:00",
+"total_cash_rounding_payment_adjustment_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"cancel_reason": null,
+"payment_terms": null,
+"user_id": null,
+"source_url": null,
+"location_id": null,
+"device_id": null,
+"current_total_price_set": {
+"shop_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+}
+},
+"total_discounts_set": {
+"shop_money": {
+"amount": "720.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "720.00",
+"currency_code": "USD"
+}
+},
+"shipping_address": {
+"country_code": "US"
+},
+"order_number": 1250,
+"updated_at": "2026-02-26T13:18:21+02:00",
+"reference": null,
+"presentment_currency": "USD",
+"name": "#1250",
+"order_status_url": "https://dianarafael.com/24695441/orders/4df8859bdad34e7ed38a5dd2e25ad285/authenticate?key=851a8cca44305616644f3f2453e21574",
+"processed_at": "2026-02-20T16:23:54+02:00",
+"current_total_additional_fees_set": null,
+"total_discounts": "720.00",
+"total_tax": "0.00",
+"currency": "USD",
+"merchant_business_entity_id": "MTI0Njk1NDQx",
+"current_total_tax": "0.00",
+"cancelled_at": null,
+"source_identifier": null,
+"returns": [],
+"merchant_of_record_app_id": null,
+"shipping_lines": [
+{
+"carrier_identifier": null,
+"id": 5696945160361,
+"discounted_price": "0.00",
+"code": "International Shipping",
+"price": "0.00",
+"is_removed": false,
+"price_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"discounted_price_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"source": "shopify",
+"current_discounted_price_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"title": "International Shipping",
+"discount_allocations": [],
+"requested_fulfillment_service_id": null,
+"tax_lines": []
+}
+],
+"discount_codes": [],
+"total_outstanding": "0.00",
+"current_subtotal_price_set": {
+"shop_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+}
+},
+"tags": "",
+"note": null,
+"id": 6828685328553,
+"referring_site": "https://www.google.com/",
+"source_name": "web",
+"client_details": {
+"browser_height": null,
+"accept_language": "en-US",
+"browser_width": null,
+"user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+"session_hash": null
+},
+"po_number": null,
+"current_total_discounts_set": {
+"shop_money": {
+"amount": "720.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "720.00",
+"currency_code": "USD"
+}
+},
+"total_price_set": {
+"shop_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+}
+},
+"buyer_accepts_marketing": false,
+"landing_site_ref": null,
+"line_items": [
+{
+"sales_line_item_group_id": null,
+"fulfillment_status": "fulfilled",
+"fulfillable_quantity": 0,
+"gift_card": false,
+"price_set": {
+"shop_money": {
+"amount": "3600.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "3600.00",
+"currency_code": "USD"
+}
+},
+"name": "5.14 Carats Natural Black Diamond Round Engagement Ring - 6.5 / Yellow Gold",
+"taxable": false,
+"line_price_set": {
+"shop_money": {
+"amount": 3600.0,
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": 3600.0,
+"currency_code": "USD"
+}
+},
+"grams": 0,
+"product_id": 8252103688361,
+"line_price": 3600.0,
+"pre_tax_price_set": {
+"shop_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+}
+},
+"discount_allocations": [
+{
+"amount_set": {
+"shop_money": {
+"amount": "720.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "720.00",
+"currency_code": "USD"
+}
+},
+"discount_application_index": 0,
+"amount": "720.00"
+}
+],
+"variant_id": 44581175165097,
+"vendor": "Diana Rafael",
+"tax_lines": [],
+"translations": {
+"presentment_variant_options": [],
+"presentment_title": "",
+"presentment_variant_title": ""
+},
+"quantity": 1.0,
+"id": 16155366293673,
+"admin_graphql_api_id": "gid://shopify/LineItem/16155366293673",
+"total_discount_set": {
+"shop_money": {
+"amount": "720.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "720.00",
+"currency_code": "USD"
+}
+},
+"product_exists": true,
+"duties": [],
+"properties": [],
+"pre_tax_price": "2880.00",
+"variant_inventory_management": "shopify",
+"product": {
+"body_html": "<p>Gravastar- a powerful and captivating engagement ring that radiates bold sophistication. Crafted in yellow gold, this striking ring features a 4.67-carat round-cut black diamond with an alluring opaque clarity.</p>\n<p>Enhanced by 0.47 carats of round accent diamonds, the Gravastar boasts a total carat weight of 5.14, perfectly balancing grandeur with refined elegance.\u00a0</p>\n<p>Designed for those who seek a unique expression of love, the Gravastar is a statement piece that embodies both strength and beauty.</p>",
+"tags": "Round",
+"handle": "gravastar-5-14-carats-natural-black-diamond-round-engagement-ring",
+"id": 8252103688361,
+"translations": {},
+"title": "5.14 Carats Natural Black Diamond Round Engagement Ring",
+"variant": {
+"sku": "R058-Y-BI-5-14-16",
+"title": "6.5 / Yellow Gold",
+"images": [
+{
+"height": 3078,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/729c208b-2c36-5ea7-887e-cc8597b0a8e2.jpg?v=1724832053",
+"alt": null,
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/729c208b-2c36-5ea7-887e-cc8597b0a8e2_x240.jpg?v=1724832053",
+"width": 3078
+}
+],
+"id": 44581175165097,
+"translations": {
+"presentment_variant_title": ""
+},
+"options": {
+"Color": "Yellow Gold",
+"Size": "6.5"
+}
+},
+"properties": {},
+"variant_options": {
+"Color": "Yellow Gold",
+"Size": "6.5"
+},
+"product_type": "Black_Ice - Diamond Rings",
+"vendor": "Diana Rafael",
+"images": [
+{
+"height": 2568,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/55d0ac2c-d5b0-5cdd-9c58-15cbf6fd2bb6.jpg?v=1724832039",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/55d0ac2c-d5b0-5cdd-9c58-15cbf6fd2bb6_x240.jpg?v=1724832039",
+"width": 2568
+},
+{
+"height": 666,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/R058-Y-BI-5_21__2.jpg?v=1729395258",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/R058-Y-BI-5_21__2_x240.jpg?v=1729395258",
+"width": 1000
+},
+{
+"height": 2252,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/ea8c3290-737e-5374-a6d1-ef2d14d2d733.jpg?v=1724832042",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/ea8c3290-737e-5374-a6d1-ef2d14d2d733_x240.jpg?v=1724832042",
+"width": 2252
+},
+{
+"height": 2691,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/26d9a00c-1faf-5f86-bfd8-436eb8ba5e61.jpg?v=1724832051",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/26d9a00c-1faf-5f86-bfd8-436eb8ba5e61_x240.jpg?v=1724832051",
+"width": 2691
+},
+{
+"height": 1127,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/b83e09eb-45ad-5369-9d25-9555c73801f1.jpg?v=1744296344",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/b83e09eb-45ad-5369-9d25-9555c73801f1_x240.jpg?v=1744296344",
+"width": 2003
+},
+{
+"height": 3078,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/729c208b-2c36-5ea7-887e-cc8597b0a8e2.jpg?v=1724832053",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/729c208b-2c36-5ea7-887e-cc8597b0a8e2_x240.jpg?v=1724832053",
+"width": 3078
+},
+{
+"height": 1000,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/R058-Y-BI-5_24__2.jpg?v=1725781247",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/R058-Y-BI-5_24__2_x240.jpg?v=1725781247",
+"width": 1000
+},
+{
+"height": 3078,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/a7346662-3c96-5185-88db-c263c2e73cc8.jpg?v=1724832045",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/a7346662-3c96-5185-88db-c263c2e73cc8_x240.jpg?v=1724832045",
+"width": 3078
+},
+{
+"height": 1000,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/IMG20240820165050_2.jpg?v=1725781247",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/IMG20240820165050_2_x240.jpg?v=1725781247",
+"width": 1000
+},
+{
+"height": 2453,
+"src": "https://cdn.shopify.com/s/files/1/2469/5441/files/9acfcf76-79cd-5386-9210-643b97419e3d.jpg?v=1724832056",
+"alt": "",
+"thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/9acfcf76-79cd-5386-9210-643b97419e3d_x240.jpg?v=1724832056",
+"width": 2453
+}
+]
+},
+"price": 3600.0,
+"fulfillment_service": "manual",
+"requires_shipping": true,
+"sku": "R058-Y-BI-5-14-16",
+"variant_title": "6.5 / Yellow Gold",
+"title": "5.14 Carats Natural Black Diamond Round Engagement Ring",
+"total_discount": "720.00",
+"current_quantity": 1
+}
+],
+"current_total_discounts": "720.00",
+"total_shipping_price_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"total_cash_rounding_refund_adjustment_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"total_tip_received": "0.00",
+"fulfillment_status": "fulfilled",
+"estimated_taxes": false,
+"confirmed": true,
+"original_total_additional_fees_set": null,
+"taxes_included": false,
+"current_total_price": "2880.00",
+"full_landing_site": "http://diana-rafael.myshopify.com/products/gravastar-black-white-natural-black-diamond-round-engagement-ring-in-white-gold?srsltid=AfmBOoqDZASZvVM7pqPe5_W1zSGdxTwstNh6KCRcDAWoyn3Fy2uIcNpp",
+"total_line_items_price_set": {
+"shop_money": {
+"amount": "3600.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "3600.00",
+"currency_code": "USD"
+}
+},
+"current_total_tax_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"fulfillments": [
+{
+"created_at": "2026-02-26T13:18:20+02:00",
+"location_id": 3104833564,
+"id": 6343027490985,
+"shipment_status": null,
+"admin_graphql_api_id": "gid://shopify/Fulfillment/6343027490985",
+"tracking_number": "TRK-SAMPLE",
+"order_id": 6828685328553,
+"updated_at": "2026-02-26T13:18:21+02:00",
+"tracking_urls": [
+"https://www.fedex.com/fedextrack/?trknbr=889098800730"
+],
+"status": "success",
+"origin_address": {},
+"name": "#1250.1",
+"receipt": {},
+"line_items": [
+{
+"fulfillment_status": "fulfilled",
+"fulfillable_quantity": 0,
+"gift_card": false,
+"price_set": {
+"shop_money": {
+"amount": "3600.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "3600.00",
+"currency_code": "USD"
+}
+},
+"name": "5.14 Carats Natural Black Diamond Round Engagement Ring - 6.5 / Yellow Gold",
+"taxable": false,
+"grams": 0,
+"product_id": 8252103688361,
+"pre_tax_price_set": {
+"shop_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+}
+},
+"discount_allocations": [
+{
+"amount_set": {
+"shop_money": {
+"amount": "720.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "720.00",
+"currency_code": "USD"
+}
+},
+"discount_application_index": 0,
+"amount": "720.00"
+}
+],
+"variant_id": 44581175165097,
+"vendor": "Diana Rafael",
+"tax_lines": [],
+"quantity": 1,
+"id": 16155366293673,
+"admin_graphql_api_id": "gid://shopify/LineItem/16155366293673",
+"total_discount_set": {
+"shop_money": {
+"amount": "720.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "720.00",
+"currency_code": "USD"
+}
+},
+"product_exists": true,
+"duties": [],
+"properties": [],
+"pre_tax_price": "2880.00",
+"variant_inventory_management": "shopify",
+"price": "3600.00",
+"fulfillment_service": "manual",
+"requires_shipping": true,
+"sku": "R058-Y-BI-5-14-16",
+"variant_title": "6.5 / Yellow Gold",
+"title": "5.14 Carats Natural Black Diamond Round Engagement Ring",
+"total_discount": "720.00",
+"current_quantity": 1
+}
+],
+"service": "manual",
+"tracking_company": "FedEx",
+"tracking_url": "https://www.fedex.com/fedextrack/?trknbr=889098800730",
+"tracking_numbers": [
+"TRK-SAMPLE"
+]
+}
+],
+"checkout_id": 30513386193065,
+"note_attributes": [],
+"subtotal_price_set": {
+"shop_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "2880.00",
+"currency_code": "USD"
+}
+},
+"original_total_duties_set": null,
+"discount_applications": [
+{
+"value": "20.0",
+"type": "automatic",
+"target_selection": "entitled",
+"target_type": "line_item",
+"title": "20off2026",
+"allocation_method": "each",
+"value_type": "percentage"
+}
+],
+"total_weight": 0,
+"webhook_id": "1b4e2c46-4db2-5997-83ad-613178bf4113",
+"total_price": "2880.00",
+"tax_exempt": false,
+"tax_lines": [],
+"total_line_items_price": "3600.00",
+"closed_at": "2026-02-26T13:18:21+02:00",
+"app_id": 580111,
+"current_total_duties_set": null,
+"subtotal_price": "2880.00",
+"current_shipping_price_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"admin_graphql_api_id": "gid://shopify/Order/6828685328553",
+"sms_order_updates_details": {
+"created_at": "2026-02-20T16:23:56+02:00",
+"order_id": 6828685328553
+},
+"duties_included": false,
+"refunds": [],
+"customer_locale": "en-US",
+"number": 250,
+"total_tax_set": {
+"shop_money": {
+"amount": "0.00",
+"currency_code": "USD"
+},
+"presentment_money": {
+"amount": "0.00",
+"currency_code": "USD"
+}
+},
+"confirmation_number": "3E81FDRQM",
+"current_subtotal_price": "2880.00",
+"payment_gateway_names": [
+"Affirm"
+],
+"test": false,
+"financial_status": "paid",
+"landing_site": "/products/gravastar-black-white-natural-black-diamond-round-engagement-ring-in-white-gold?srsltid=AfmBOoqDZASZvVM7pqPe5_W1zSGdxTwstNh6KCRcDAWoyn3Fy2uIcNpp"
+}
+}
+}
