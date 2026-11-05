@@ -60,6 +60,7 @@ def kicker(t, text, align="center", pad="22px 40px 0"):
 
 def logo(t, pad="22px 40px 22px", width=200, align="center"):
     th = THEMES[t]
+    width = round(width * 1.3)   # round 2 (Daniel 4.11): bigger logo in every email
     return (f'<tr><td align="{align}" class="pad" style="padding:{pad};"><a href="https://dianarafael.com/" target="_blank">'
             f'<img src="{IMG[th["logo"]]}" width="{width}" alt="Diana Rafael" style="display:block;width:{width}px;height:auto;border:0;"/></a></td></tr>')
 

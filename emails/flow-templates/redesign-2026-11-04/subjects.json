@@ -1,0 +1,263 @@
+{
+ "TLp5wQ": {
+  "flow": "RRcbwY",
+  "flow_name": "2026-11 | VIP confirmation",
+  "status": "live",
+  "msg": "V5gEYq",
+  "name": "VIP confirm",
+  "subject": "You're on the VIP list",
+  "preview": ""
+ },
+ "WtYdde": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "UFyjGK",
+  "name": "Checkout 1/8 Reminder",
+  "subject": "Is this the one? 💍",
+  "preview": "Your order is saved, exactly as you left it."
+ },
+ "VdW7XY": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "Trwetv",
+  "name": "Checkout 2/8 What stopped you",
+  "subject": "Can I ask what stopped you?",
+  "preview": "One tap is enough. I read every answer myself."
+ },
+ "SNvbQS": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "R25ikp",
+  "name": "Checkout 3/8 Natural diamond",
+  "subject": "Is it really a natural diamond?",
+  "preview": "What's in your piece, and the certificate that proves it."
+ },
+ "VLjUfd": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "YbLQnj",
+  "name": "Checkout 4/8 Reviews",
+  "subject": "530+ reviews from people who hesitated too",
+  "preview": "Read what they wrote once the box was open."
+ },
+ "WiHGws": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "SHRVvu",
+  "name": "Checkout 5/8 Fit and care",
+  "subject": "What if it doesn't fit?",
+  "preview": "Size, returns and care, answered in one minute."
+ },
+ "V4FBhc": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "Xu8xqi",
+  "name": "Checkout 6/8 Affirm",
+  "subject": "Wear it now, pay over time",
+  "preview": "Choose Affirm at checkout and see your plan before you commit."
+ },
+ "TNDw3W": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "S2dCxt",
+  "name": "Checkout 7/8 Daniel call",
+  "subject": "15 minutes with me?",
+  "preview": "Ask anything, see the stones on video, change what you like."
+ },
+ "SyBqNG": {
+  "flow": "X6ZfPR",
+  "flow_name": "2026-11 | Abandoned Checkout (8)",
+  "status": "draft",
+  "msg": "YyU7WL",
+  "name": "Checkout 8/8 Note and gift",
+  "subject": "A note from me",
+  "preview": "And a gift I wanted you to know about."
+ },
+ "U58x8u": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "YgZkL5",
+  "name": "Cart 1/8 Reminder",
+  "subject": "Still thinking about it?",
+  "preview": "Your piece is saved, exactly as you chose it."
+ },
+ "UBwjpH": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "SP6rTe",
+  "name": "Cart 2/8 Natural diamond",
+  "subject": "Is it really a natural diamond?",
+  "preview": "What's in your piece, and the certificate that proves it."
+ },
+ "Xzm3N4": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "Sc5pgB",
+  "name": "Cart 3/8 Reviews",
+  "subject": "530+ reviews from people who hesitated too",
+  "preview": "Read what they wrote once the box was open."
+ },
+ "Y7JQ5h": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "UwT54j",
+  "name": "Cart 4/8 Made to order",
+  "subject": "Made by hand, for you",
+  "preview": "How your piece is made, and how it gets to you."
+ },
+ "WRGJQ3": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "TgQXP5",
+  "name": "Cart 5/8 Fit and care",
+  "subject": "What if it doesn't fit?",
+  "preview": "Size, returns and care, answered in one minute."
+ },
+ "TPeL6i": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "Y37zHT",
+  "name": "Cart 6/8 Affirm",
+  "subject": "Wear it now, pay over time",
+  "preview": "Choose Affirm at checkout and see your plan before you commit."
+ },
+ "UmCymx": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "YzvmZ8",
+  "name": "Cart 7/8 Daniel call",
+  "subject": "15 minutes with me?",
+  "preview": "Ask anything, see the stones on video, change what you like."
+ },
+ "XjtgKS": {
+  "flow": "VWbEYm",
+  "flow_name": "2026-11 | Abandoned Cart (8)",
+  "status": "draft",
+  "msg": "TJBvJU",
+  "name": "Cart 8/8 Note and gift",
+  "subject": "A note from me",
+  "preview": "And a gift I wanted you to know about."
+ },
+ "WwmdnE": {
+  "flow": "XLpiBU",
+  "flow_name": "2026-11 | Browse abandonment (4)",
+  "status": "draft",
+  "msg": "SVvsmG",
+  "name": "Browse 1/4 The piece you viewed",
+  "subject": "Still thinking about the {{ event.Name }}?",
+  "preview": "Made to order for you, shipped insured on us, with lifetime care."
+ },
+ "UDi5wM": {
+  "flow": "XLpiBU",
+  "flow_name": "2026-11 | Browse abandonment (4)",
+  "status": "draft",
+  "msg": "X4JZDT",
+  "name": "Browse 2/4 Why us",
+  "subject": "Why 530+ customers trusted a studio they'd never visited",
+  "preview": "Natural diamonds, solid gold, made by hand since 2014."
+ },
+ "XB8MV8": {
+  "flow": "XLpiBU",
+  "flow_name": "2026-11 | Browse abandonment (4)",
+  "status": "draft",
+  "msg": "SdR9pF",
+  "name": "Browse 3/4 Studs gift",
+  "subject": "A gift with the {{ event.Name }}: 1 ct studs",
+  "preview": "Free 1 ct natural black diamond studs, now from $2,000 (was $3,000)."
+ },
+ "QXP4ar": {
+  "flow": "XLpiBU",
+  "flow_name": "2026-11 | Browse abandonment (4)",
+  "status": "draft",
+  "msg": "WY7Kiv",
+  "name": "Browse 4/4 Daniel call",
+  "subject": "Questions about the {{ event.Name }}? 15 minutes with Daniel",
+  "preview": "Size, gold, stone, budget: ask a person, not a chatbot."
+ },
+ "WHCJdX": {
+  "flow": "VydTk7",
+  "flow_name": "2026-11 | Post-purchase: order confirmed + studio",
+  "status": "draft",
+  "msg": "XkDLQA",
+  "name": "PP 1/4 Order confirmed",
+  "subject": "Your order is confirmed. Here's what happens now.",
+  "preview": "Made by hand in our studio, checked, and shipped insured within 10 business days."
+ },
+ "Xg2wvc": {
+  "flow": "VydTk7",
+  "flow_name": "2026-11 | Post-purchase: order confirmed + studio",
+  "status": "draft",
+  "msg": "VtACYH",
+  "name": "PP 2/4 Inside the studio",
+  "subject": "Inside the studio while your piece is made",
+  "preview": "A look at the bench: setting, polishing and the final check."
+ },
+ "RCR6Vz": {
+  "flow": "R6tiEk",
+  "flow_name": "2026-11 | Post-purchase: shipped + tracking + customs",
+  "status": "draft",
+  "msg": "XD9N5D",
+  "name": "PP 3/4 Shipped",
+  "subject": "Your piece has shipped. Tracking inside.",
+  "preview": "Your tracking number, a short note on customs, and how to care for your piece."
+ },
+ "V4smfK": {
+  "flow": "Y6UjZu",
+  "flow_name": "2026-11 | Delivered: Google review + cross-sell (60d)",
+  "status": "draft",
+  "msg": "RtAAeM",
+  "name": "PP 4/4 Google review",
+  "subject": "How does it feel to wear it?",
+  "preview": "One minute on Google helps the next person trust a studio they've never met."
+ },
+ "RZYnw2": {
+  "flow": "Y6UjZu",
+  "flow_name": "2026-11 | Delivered: Google review + cross-sell (60d)",
+  "status": "draft",
+  "msg": "WdRc9B",
+  "name": "CrossSell 1/3 Made to go with yours",
+  "subject": "Made to go with yours",
+  "preview": "A few pieces we'd pair with what you're already wearing."
+ },
+ "TbpdpS": {
+  "flow": "Y6UjZu",
+  "flow_name": "2026-11 | Delivered: Google review + cross-sell (60d)",
+  "status": "draft",
+  "msg": "Xpg33t",
+  "name": "CrossSell 2/3 Worn together",
+  "subject": "How our customers wear theirs",
+  "preview": "Same gold, same diamonds, worn together."
+ },
+ "W9dVNd": {
+  "flow": "Y6UjZu",
+  "flow_name": "2026-11 | Delivered: Google review + cross-sell (60d)",
+  "status": "draft",
+  "msg": "SynaMf",
+  "name": "CrossSell 3/3 Designed to match",
+  "subject": "Want it designed to match? 15 minutes with Daniel",
+  "preview": "We can make the second piece to fit the first exactly."
+ },
+ "TLpfRY": {
+  "flow": "XrShek",
+  "flow_name": "2026-11 | JEWELVERSARY (order +365d)",
+  "status": "draft",
+  "msg": "WbQbZ6",
+  "name": "JEWELVERSARY",
+  "subject": "Happy JEWELVERSARY, {{ first_name|default:'friend' }}",
+  "preview": "One year ago today, you chose a piece from our studio."
+ }
+}
