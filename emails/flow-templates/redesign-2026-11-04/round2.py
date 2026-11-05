@@ -5,7 +5,7 @@ What changes against build_all.py (round 1):
 2. CTAs high: the buttons sit right under the headline, more than one per email.
 3. The gift is shown: every email that mentions the free studs shows the studs (photo strip; big in the gift emails,
    with the "black or white?" question as WhatsApp buttons).
-4. Trust icons from the first email of every flow: 530+ reviews · talk to Daniel · free gift · pay over time ·
+4. Trust icons from the first email of every flow: 450+ reviews · talk to Daniel · free gift · pay over time ·
    natural diamonds (last). Natural-diamond copy moves to the bottom; in the flow order the natural-diamond email
    swaps places with the 15-minutes-with-Daniel email (consultation earlier, diamonds late) -> SWAP below, subjects too.
 5. Bigger logo (rd.logo, all emails).
@@ -71,7 +71,7 @@ def answer_buttons(t, answers, pad="14px 48px 6px"):
     return (f'<tr><td class="pad" style="padding:{pad};"><table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">{rows}</table></td></tr>')
 
 
-ICONS = [("icon-reviews", "530+ reviews", REVIEWS), ("icon-consult", "Talk to Daniel", BOOK), ("icon-gift", "Free gift", None),
+ICONS = [("icon-reviews", "450+ reviews", REVIEWS), ("icon-consult", "Talk to Daniel", BOOK), ("icon-gift", "Free gift", None),
          ("icon-pay", "Pay over time", None), ("icon-diamond", "Natural diamonds", None)]
 
 
@@ -175,7 +175,7 @@ def role_call(t, url, thumb, browse=False):
 def role_reviews(t, url, back, top_extra):
     top = top_extra + [B.kicker(t, "In their words", pad="26px 40px 0")]
     return sales_page(t, "Read what they wrote once the box was open.", top, "Don't take my word for it.",
-                      "530+ reviews on Etsy and Google, from people who hesitated too, written after the box was open.",
+                      "450+ reviews on Etsy and Google, from people who hesitated too, written after the box was open.",
                       [("Read the reviews", REVIEWS, True), (back, url, False)], url=url)
 
 
@@ -296,7 +296,7 @@ def _browse2():
     t = "noir"
     top = [logo(t, pad="24px 40px 20px"), B.hero(IMG["studio"], "A jeweler setting a black diamond at the bench"), kicker(t, "Why Diana Rafael", pad="28px 40px 0")]
     return sales_page(t, "Natural diamonds, solid gold, made by hand since 2014.", top, "Why people trust us with the big ones.",
-                      "Since 2014, in the Diamond Trading Center in Ramat Gan. Made by hand to order. 530+ reviews.",
+                      "Since 2014, in the Diamond Trading Center in Ramat Gan. Made by hand to order. 450+ reviews.",
                       [("Read the reviews", REVIEWS, True), ("Back to the {{ event.Name }}", VIEW_URL, False)],
                       extra=[B.browse_thumb_row(t, "The piece you looked at")], url=VIEW_URL)
 
