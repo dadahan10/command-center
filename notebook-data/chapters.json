@@ -439,8 +439,8 @@
   "group": "remnant",
   "kind": "business",
   "status": "active",
-  "last_update": "2026-10-29",
-  "where_we_stand": "שגרה קבועה מ-19.10: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. לוח 1–7.11 (גרסה 3) אושר ונמצא בתור; ראשון 1.11 עלה במלואו (12/12, כולל 5 סטוריז ACCRETION). התור מלא עד שבת 7.11. הבא: לוח 8–14.11 יוצג לאישור ביום רביעי 4.11 — שום דבר לא נכנס לתור לפני שאישרת.",
+  "last_update": "2026-11-05",
+  "where_we_stand": "שגרה קבועה: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. לוח 1–7.11 בתור ועולה כסדרו (עד 4.11 הכול פורסם, בלי תקלות). ברביעי 4.11 הלוח של 8–14.11 לא הוצג, ולכן הוא נבנה היום (5.11) ומחכה כאן לאישורך: 18 סטוריז ו-2 פוסטים לפיד. מ-8.11 התור ריק עד שתאשר. שום דבר לא נכנס לתור לפני האישור.",
   "rules": {
    "title": "כללי התוכן",
    "items": [
@@ -451,13 +451,14 @@
    ]
   },
   "next_tasks": [
-   "דניאל בוחר 2 מתוך רשימת הרעיונות של 2.11 (לשבוע 15–21.11); רביעי 4.11: לוח 8–14.11 לאישור",
-   "דניאל מאשר/פוסל את לוח 1–7.11 גרסה 3 (כל כרטיס בנפרד) — לפני ראשון 1.11 10:30",
-   "אחרי האישור: להכניס לתור רק את מה שאושר (queue_social.py: batch 2026-11-01-week + batch 2026-10-29-accretion) ולסמן 'בתור'",
-   "לפני ראשון 1.11: לקבע את 10 הטבעות החדשות בראש עמוד New Arrivals, או להחליף את הקישור בכיתוב בפייסבוק (דורש את אישורך)",
-   "שלדי המאמרים (מידת טבעת, טיפוח יהלום שחור) — לאשר, ואז ייכתבו בלילה דרך seo-growth (F17, F15)"
+   "דניאל מאשר/פוסל את לוח 8–14.11 (כל כרטיס בנפרד) — עדיף עד שבת 7.11, הסטורי הראשון בראשון 8.11 12:00",
+   "לפני ראשון 8.11: לשים בביו של האינסטגרם את הקישור dianarafael.com/?vip=join, ולוודא שיש טופס VIP שנפתח מהקישור הזה (4 סטוריז VIP מפנים אליו)",
+   "אחרי האישור: להכניס לתור רק את מה שאושר (batch 2026-11-08-week) ולסמן 'בתור'",
+   "שני הפוסטים בעברית (ראשון ורביעי) — לפרסם גם בפרופיל הפרטי; הנוסח מוכן בתיקיית השבוע",
+   "דניאל בוחר 2 מתוך רשימת הרעיונות של 2.11 (לשבוע 15–21.11); רביעי 11.11: לוח 15–21.11 לאישור"
   ],
   "recent_changes": [
+   "5.11 — לוח 8–14.11 נבנה (רביעי דולג): VIP לבלאק פריידי ×4, Disturbed לראשונה, Gravitational Wave עם טבעות הנישואין, 3 תמונות לקוחות חדשות, 4 ביקורות, Alnilam; מחירים לפי האתר אחרי עדכון 4.11",
    "3.11 — ההתראות הישנות (אישור לוח 1–7.11 ו-ACCRETION) נוקו: שניהם אושרו ופורסמו",
    "2.11 — רשימת רעיונות לתוכן מועיל #2 (לשבוע 15–21.11), ממתינה לבחירה; תור 1–7.11 תקין, 12/12 של 1.11 פורסמו",
    "29.10 ערב — לוח 1–7.11 גרסה 3: מגוון בתוך כל יום; 8 סטוריז מחיר עם צילומי מוצר במקום ידיים; ACCRETION עברה לראשון 15:00 עם פאקשוט ערוך, סרטון 1080 עם מוזיקה, $1,960, בלי מדבקה; אלגול+מלוזינה לשבת 16:00",
@@ -668,7 +669,7 @@
     ]
    },
    {
-    "title": "יומן המסרים (143)",
+    "title": "יומן המסרים (163)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -679,6 +680,166 @@
      "מצב"
     ],
     "rows": [
+     [
+      "14.11",
+      "Instagram story (EN)",
+      "VIP early access (4/4) · Gravitational Wave engagement (white) on hand",
+      "Black Friday comes early / to the VIP list. -> Join the VIP list: link in bio",
+      "VIP 4/4: סגירת השבוע",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "14.11",
+      "Instagram story (EN)",
+      "Review (Ashlee) + invite",
+      "“This ring is so much better than I imagined…” / Saturday night question? Message us.",
+      "ביקורת אמיתית (Ashlee) במוצאי שבת + הזמנה לשיחה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "13.11",
+      "Instagram story (EN)",
+      "Review (Haleigh) + proposal invite",
+      "“Wonderful! Better in person! I love it.” / Planning a yes this weekend? Message us.",
+      "ביקורת אמיתית (Haleigh) לפני סוף השבוע + הזמנה למי שמתכנן הצעה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "13.11",
+      "Instagram story (EN)",
+      "Gravitational Wave band, black diamond (yellow), on hand + price",
+      "GRAVITATIONAL WAVE BAND / $1,870 · 14K gold -> Yellow, rose or white gold · link in bio",
+      "סטורי מחיר: טבעת הנישואין השחורה של Gravitational Wave על יד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "12.11",
+      "Instagram story (EN)",
+      "Real customers' photo: couple, she shows the ring (Meir)",
+      "Two people. / One yes. -> Customers' photo. Thank you for sharing it.",
+      "תמונת לקוחות אמיתית: זוג, כן אחד",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "12.11",
+      "Instagram story (EN)",
+      "Ready to ship: Alnilam men's black diamond band + price",
+      "ALNILAM / $722 · ready to ship -> For him. Black diamonds all the way around.",
+      "מוכן למשלוח: טבעת גבר Alnilam, מחיר בסטורי",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "12.11",
+      "Instagram story (EN)",
+      "VIP early access (3/4) · Starz pair packshot (yellow)",
+      "Gifts are coming / with orders above certain amounts. -> VIPs see them first. Join the VIP list: link in bio",
+      "VIP 3/4: רמז למתנות (לפי תוכנית המיילים: המדרגות נחשפות ב-VIP)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "11.11",
+      "Instagram story (EN)",
+      "Real customer photo: ring on a boat by the Golden Gate",
+      "Wherever / she said yes. -> A customer's photo. Thank you for sharing it.",
+      "תמונת לקוח אמיתית: איפה שהיא אמרה כן",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "11.11",
+      "Instagram carousel + Facebook album",
+      "REMNANT: Gravitational Wave engagement + matching bands (black and white) carousel",
+      "A black diamond engagement ring, and two bands that carry its wave.",
+      "פוסט פיד + אלבום פייסבוק: טבעת אירוסין + טבעות נישואין עם אותו גל; ההצעה ערב אחד, הטבעת לכל הבקרים שאחריו",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "11.11",
+      "Instagram story (EN)",
+      "Kintsugi huggies (pair packshot) + verbatim earring review",
+      "“This earring is a lot fancier than I imagined, I love it!” -> Want something changed? / Ask. Almost anything can be.",
+      "תכשיט שאינו טבעת + שינויים לפי בקשה (הביקורת על עגיל שצופה ברודיום שחור לבקשת הלקוחה)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "10.11",
+      "Instagram story (EN)",
+      "Review (Sharon) + invite",
+      "“This is the second ring I have ordered from this seller…” / Questions before you choose? A real person answers.",
+      "ביקורת אמיתית (Sharon): לקוחה חוזרת + דניאל קשוב; בן אדם אמיתי עונה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "10.11",
+      "Instagram story (EN)",
+      "REMNANT: Smoothen R116 (white), on hand, tight crop",
+      "Every step back to yourself / counts. -> Smoothen, from REMNANT · link in bio",
+      "Smoothen כחזרה לעצמך (ציר הלידה מחדש), בלי 'Time softens the edges'",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "10.11",
+      "Instagram story (EN)",
+      "VIP early access (2/4) · Gravitational Wave band packshot (yellow)",
+      "The VIP list / is open. -> Black Friday reaches you days before everyone else. Join the VIP list: link in bio",
+      "VIP 2/4: הרשימה פתוחה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "09.11",
+      "Instagram story (EN)",
+      "Real customer photo: pear engagement ring on her hand (Bradly)",
+      "From our bench / to her hand. -> A customer's photo. Thank you for sharing it.",
+      "תמונת לקוח אמיתית שלא הופיעה עדיין: מהשולחן של הצורף ליד שלה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "09.11",
+      "Instagram story (EN)",
+      "Gravitational Wave engagement R112 (rose, 3/4 packshot) + price",
+      "GRAVITATIONAL WAVE / $2,975 · 14K gold -> A wave rises once and travels all the way around.",
+      "סטורי מחיר (רק בסטורי): טבעת האירוסין Gravitational Wave במחיר הנוכחי באתר",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "09.11",
+      "Instagram story (EN)",
+      "REMNANT: Starz band, his (yellow), on hand",
+      "Light passes / where the gold is missing. -> Starz band, from REMNANT · link in bio",
+      "Starz על יד של גבר: האור עובר איפה שהזהב חסר (מתוך שורת הקולקציה)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "08.11",
+      "Instagram story (EN)",
+      "VIP early access (1/4) · Gravitational Wave engagement packshot (yellow)",
+      "Black Friday starts early / for some people. -> VIPs get every offer days before everyone else. Join the VIP list: link in bio",
+      "VIP 1/4: פתיחת רשימת ה-VIP לבלאק פריידי (בלי לחשוף את גובה ההנחה); קישור בביו dianarafael.com/?vip=join",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "08.11",
+      "Instagram story (EN)",
+      "REMNANT: Disturbed R115 (yellow), on hand, tight crop",
+      "It kept every mark / and it still shines. -> Disturbed, from REMNANT · link in bio",
+      "פעם ראשונה של Disturbed בסושיאל: הטבעת שחצי ממנה נשאר מחוספס; הסימנים נשארים והיא עדיין מבריקה (מרים, לא אפל)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "08.11",
+      "Instagram carousel + Facebook album",
+      "REMNANT: Disturbed R115 carousel (3 on-hand + 2 product shots)",
+      "A black diamond ring that kept every mark.",
+      "פוסט פיד + אלבום פייסבוק: Disturbed, חצי מלוטש וחצי מחוספס; לא מלטשים את מה שעברנו, עונדים אותו",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "08.11",
+      "Instagram story (EN)",
+      "Review (Brianna) + invite",
+      "“I absolutely love this ring. It’s even more beautiful in person…” / Thinking about one of your own? Message us.",
+      "ביקורת אמיתית (Brianna, מילה במילה) + הזמנה לשיחה; 530+ ביקורות",
+      "מתוכנן, ממתין לאישור"
+     ],
      [
       "07.11",
       "Instagram story (EN)",
@@ -1827,7 +1988,13 @@
     "empty": "עוד לא נרשם כלום"
    }
   ],
-  "attention": [],
+  "attention": [
+   {
+    "text": "לוח הסושיאל 8–14.11 מחכה לאישור",
+    "note": "מ-8.11 אין שום דבר בתור. 18 סטוריז + 2 פוסטים, כל כרטיס לאישור בנפרד. גם: קישור VIP בביו.",
+    "since": "2026-11-05"
+   }
+  ],
   "social": {
    "weeks": [
     {
@@ -4061,9 +4228,554 @@
        "video": "2026-11-01-week/sat-07-story-c.mp4"
       }
      ]
+    },
+    {
+     "week_of": "2026-11-08",
+     "label": "שבוע 8–14.11 (נבנה 5.11, רביעי דולג): רשימת ה-VIP לבלאק פריידי (4 סטוריז), Disturbed לראשונה, Gravitational Wave עם טבעות הנישואין, תמונות לקוחות חדשות, ביקורות (530+), Alnilam מוכנה למשלוח. 2 פוסטים לפיד + 18 סטוריז, 2–3 ביום, כל יום מגוון (יד / צילום מוצר / לקוח / ביקורת)",
+     "approved": "ממתין לאישור דניאל · שום דבר לא בתור",
+     "items": [
+      {
+       "id": "w1108-sun-08-vip",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-08",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "VIP early access (1/4) · Gravitational Wave engagement packshot (yellow)",
+       "hook": "Black Friday starts early / for some people. -> VIPs get every offer days before everyone else. Join the VIP list: link in bio",
+       "angle": "VIP 1/4: פתיחת רשימת ה-VIP לבלאק פריידי (בלי לחשוף את גובה ההנחה); קישור בביו dianarafael.com/?vip=join",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/sun-08-vip.jpg",
+        "2026-11-08-week/sun-08-vip-f1.jpg",
+        "2026-11-08-week/sun-08-vip-f2.jpg",
+        "2026-11-08-week/sun-08-vip-f3.jpg",
+        "2026-11-08-week/sun-08-vip-f4.jpg",
+        "2026-11-08-week/sun-08-vip-f5.jpg",
+        "2026-11-08-week/sun-08-vip-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/sun-08-vip.mp4"
+      },
+      {
+       "id": "w1108-sun-08-story-b",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-08",
+       "time": "15:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT: Disturbed R115 (yellow), on hand, tight crop",
+       "hook": "It kept every mark / and it still shines. -> Disturbed, from REMNANT · link in bio",
+       "angle": "פעם ראשונה של Disturbed בסושיאל: הטבעת שחצי ממנה נשאר מחוספס; הסימנים נשארים והיא עדיין מבריקה (מרים, לא אפל)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/sun-08-story-b.jpg",
+        "2026-11-08-week/sun-08-story-b-f1.jpg",
+        "2026-11-08-week/sun-08-story-b-f2.jpg",
+        "2026-11-08-week/sun-08-story-b-f3.jpg",
+        "2026-11-08-week/sun-08-story-b-f4.jpg",
+        "2026-11-08-week/sun-08-story-b-f5.jpg",
+        "2026-11-08-week/sun-08-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/sun-08-story-b.mp4"
+      },
+      {
+       "id": "w1108-sun-08-post",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-08",
+       "time": "18:00",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "REMNANT: Disturbed R115 carousel (3 on-hand + 2 product shots)",
+       "hook": "A black diamond ring that kept every mark.",
+       "angle": "פוסט פיד + אלבום פייסבוק: Disturbed, חצי מלוטש וחצי מחוספס; לא מלטשים את מה שעברנו, עונדים אותו",
+       "music": "",
+       "thumbs": [
+        "2026-11-08-week/sun-08-post-1.jpg",
+        "2026-11-08-week/sun-08-post-2.jpg",
+        "2026-11-08-week/sun-08-post-3.jpg",
+        "2026-11-08-week/sun-08-post-4.jpg",
+        "2026-11-08-week/sun-08-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "A black diamond ring that kept every mark. It still shines.\n\nDisturbed is No. 4 in REMNANT. One marquise black diamond, set low in 14K gold. We polished half the band to a mirror and left the other half hammered, scarred, exactly as the tools made it.\n\nWhy leave it? Because most of us carry a year like that. A diagnosis, a breakup, a winter in 2019 that didn't end. You don't have to sand it away to be whole. You wear it.\n\nYellow, rose or white gold, made by hand in your size. It ships within 10 business days. Questions about sizing? Write to us, a real person answers.\n\nDisturbed: link in bio.\n\n#blackdiamondring #blackdiamondengagementring #dianarafael"
+      },
+      {
+       "id": "w1108-sun-08-post-fb",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-08",
+       "time": "18:00",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "REMNANT: Disturbed R115 carousel (3 on-hand + 2 product shots)",
+       "hook": "A black diamond ring that kept every mark.",
+       "angle": "פוסט פיד + אלבום פייסבוק: Disturbed, חצי מלוטש וחצי מחוספס; לא מלטשים את מה שעברנו, עונדים אותו",
+       "music": "",
+       "thumbs": [
+        "2026-11-08-week/sun-08-post-1.jpg",
+        "2026-11-08-week/sun-08-post-2.jpg",
+        "2026-11-08-week/sun-08-post-3.jpg",
+        "2026-11-08-week/sun-08-post-4.jpg",
+        "2026-11-08-week/sun-08-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "A black diamond ring that kept every mark. It still shines.\n\nDisturbed is No. 4 in REMNANT. One marquise black diamond, set low in 14K gold. We polished half the band to a mirror and left the other half hammered, scarred, exactly as the tools made it.\n\nWhy leave it? Because most of us carry a year like that. A diagnosis, a breakup, a winter in 2019 that didn't end. You don't have to sand it away to be whole. You wear it.\n\nYellow, rose or white gold, made by hand in your size. It ships within 10 business days. Questions about sizing? Write to us, a real person answers.\n\nDisturbed: https://dianarafael.com/products/disturbed-natural-black-diamond-engagement-ring\n\n#blackdiamondring #blackdiamondengagementring #dianarafael"
+      },
+      {
+       "id": "w1108-sun-08-story-c",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-08",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Brianna) + invite",
+       "hook": "“I absolutely love this ring. It’s even more beautiful in person…” / Thinking about one of your own? Message us.",
+       "angle": "ביקורת אמיתית (Brianna, מילה במילה) + הזמנה לשיחה; 530+ ביקורות",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/sun-08-story-c.jpg",
+        "2026-11-08-week/sun-08-story-c-f1.jpg",
+        "2026-11-08-week/sun-08-story-c-f2.jpg",
+        "2026-11-08-week/sun-08-story-c-f3.jpg",
+        "2026-11-08-week/sun-08-story-c-f4.jpg",
+        "2026-11-08-week/sun-08-story-c-f5.jpg",
+        "2026-11-08-week/sun-08-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/sun-08-story-c.mp4"
+      },
+      {
+       "id": "w1108-mon-09-story-a",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-09",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customer photo: pear engagement ring on her hand (Bradly)",
+       "hook": "From our bench / to her hand. -> A customer's photo. Thank you for sharing it.",
+       "angle": "תמונת לקוח אמיתית שלא הופיעה עדיין: מהשולחן של הצורף ליד שלה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/mon-09-story-a.jpg",
+        "2026-11-08-week/mon-09-story-a-f1.jpg",
+        "2026-11-08-week/mon-09-story-a-f2.jpg",
+        "2026-11-08-week/mon-09-story-a-f3.jpg",
+        "2026-11-08-week/mon-09-story-a-f4.jpg",
+        "2026-11-08-week/mon-09-story-a-f5.jpg",
+        "2026-11-08-week/mon-09-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/mon-09-story-a.mp4"
+      },
+      {
+       "id": "w1108-mon-09-story-b",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-09",
+       "time": "17:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Gravitational Wave engagement R112 (rose, 3/4 packshot) + price",
+       "hook": "GRAVITATIONAL WAVE / $2,975 · 14K gold -> A wave rises once and travels all the way around.",
+       "angle": "סטורי מחיר (רק בסטורי): טבעת האירוסין Gravitational Wave במחיר הנוכחי באתר",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/mon-09-story-b.jpg",
+        "2026-11-08-week/mon-09-story-b-f1.jpg",
+        "2026-11-08-week/mon-09-story-b-f2.jpg",
+        "2026-11-08-week/mon-09-story-b-f3.jpg",
+        "2026-11-08-week/mon-09-story-b-f4.jpg",
+        "2026-11-08-week/mon-09-story-b-f5.jpg",
+        "2026-11-08-week/mon-09-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/mon-09-story-b.mp4"
+      },
+      {
+       "id": "w1108-mon-09-story-c",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-09",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT: Starz band, his (yellow), on hand",
+       "hook": "Light passes / where the gold is missing. -> Starz band, from REMNANT · link in bio",
+       "angle": "Starz על יד של גבר: האור עובר איפה שהזהב חסר (מתוך שורת הקולקציה)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/mon-09-story-c.jpg",
+        "2026-11-08-week/mon-09-story-c-f1.jpg",
+        "2026-11-08-week/mon-09-story-c-f2.jpg",
+        "2026-11-08-week/mon-09-story-c-f3.jpg",
+        "2026-11-08-week/mon-09-story-c-f4.jpg",
+        "2026-11-08-week/mon-09-story-c-f5.jpg",
+        "2026-11-08-week/mon-09-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/mon-09-story-c.mp4"
+      },
+      {
+       "id": "w1108-tue-10-story-a",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-10",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Sharon) + invite",
+       "hook": "“This is the second ring I have ordered from this seller…” / Questions before you choose? A real person answers.",
+       "angle": "ביקורת אמיתית (Sharon): לקוחה חוזרת + דניאל קשוב; בן אדם אמיתי עונה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/tue-10-story-a.jpg",
+        "2026-11-08-week/tue-10-story-a-f1.jpg",
+        "2026-11-08-week/tue-10-story-a-f2.jpg",
+        "2026-11-08-week/tue-10-story-a-f3.jpg",
+        "2026-11-08-week/tue-10-story-a-f4.jpg",
+        "2026-11-08-week/tue-10-story-a-f5.jpg",
+        "2026-11-08-week/tue-10-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/tue-10-story-a.mp4"
+      },
+      {
+       "id": "w1108-tue-10-story-b",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-10",
+       "time": "17:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT: Smoothen R116 (white), on hand, tight crop",
+       "hook": "Every step back to yourself / counts. -> Smoothen, from REMNANT · link in bio",
+       "angle": "Smoothen כחזרה לעצמך (ציר הלידה מחדש), בלי 'Time softens the edges'",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/tue-10-story-b.jpg",
+        "2026-11-08-week/tue-10-story-b-f1.jpg",
+        "2026-11-08-week/tue-10-story-b-f2.jpg",
+        "2026-11-08-week/tue-10-story-b-f3.jpg",
+        "2026-11-08-week/tue-10-story-b-f4.jpg",
+        "2026-11-08-week/tue-10-story-b-f5.jpg",
+        "2026-11-08-week/tue-10-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/tue-10-story-b.mp4"
+      },
+      {
+       "id": "w1108-tue-10-vip",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-10",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "VIP early access (2/4) · Gravitational Wave band packshot (yellow)",
+       "hook": "The VIP list / is open. -> Black Friday reaches you days before everyone else. Join the VIP list: link in bio",
+       "angle": "VIP 2/4: הרשימה פתוחה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/tue-10-vip.jpg",
+        "2026-11-08-week/tue-10-vip-f1.jpg",
+        "2026-11-08-week/tue-10-vip-f2.jpg",
+        "2026-11-08-week/tue-10-vip-f3.jpg",
+        "2026-11-08-week/tue-10-vip-f4.jpg",
+        "2026-11-08-week/tue-10-vip-f5.jpg",
+        "2026-11-08-week/tue-10-vip-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/tue-10-vip.mp4"
+      },
+      {
+       "id": "w1108-wed-11-story-a",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-11",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customer photo: ring on a boat by the Golden Gate",
+       "hook": "Wherever / she said yes. -> A customer's photo. Thank you for sharing it.",
+       "angle": "תמונת לקוח אמיתית: איפה שהיא אמרה כן",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/wed-11-story-a.jpg",
+        "2026-11-08-week/wed-11-story-a-f1.jpg",
+        "2026-11-08-week/wed-11-story-a-f2.jpg",
+        "2026-11-08-week/wed-11-story-a-f3.jpg",
+        "2026-11-08-week/wed-11-story-a-f4.jpg",
+        "2026-11-08-week/wed-11-story-a-f5.jpg",
+        "2026-11-08-week/wed-11-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/wed-11-story-a.mp4"
+      },
+      {
+       "id": "w1108-wed-11-post",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-11",
+       "time": "18:00",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "REMNANT: Gravitational Wave engagement + matching bands (black and white) carousel",
+       "hook": "A black diamond engagement ring, and two bands that carry its wave.",
+       "angle": "פוסט פיד + אלבום פייסבוק: טבעת אירוסין + טבעות נישואין עם אותו גל; ההצעה ערב אחד, הטבעת לכל הבקרים שאחריו",
+       "music": "",
+       "thumbs": [
+        "2026-11-08-week/wed-11-post-1.jpg",
+        "2026-11-08-week/wed-11-post-2.jpg",
+        "2026-11-08-week/wed-11-post-3.jpg",
+        "2026-11-08-week/wed-11-post-4.jpg",
+        "2026-11-08-week/wed-11-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "A black diamond engagement ring, and two bands that carry its wave.\n\nGravitational Wave is No. 1 in REMNANT. The black diamond sits inside 3 rings of 14K gold that rise like a ripple, the way a wave moves through space. The wedding bands take that same wave around the finger, with black diamonds or white ones.\n\nThe proposal's one night. The band's for every ordinary Tuesday after it.\n\nEach design comes 3 ways: engagement ring, wedding band, earrings. Yellow, rose or white gold, we make each one by hand, to order. Planning both? Message us. A real person answers.\n\nThe black diamond ring and the bands: link in bio.\n\n#blackdiamondengagementring #weddingband #dianarafael"
+      },
+      {
+       "id": "w1108-wed-11-post-fb",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-11",
+       "time": "18:00",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "REMNANT: Gravitational Wave engagement + matching bands (black and white) carousel",
+       "hook": "A black diamond engagement ring, and two bands that carry its wave.",
+       "angle": "פוסט פיד + אלבום פייסבוק: טבעת אירוסין + טבעות נישואין עם אותו גל; ההצעה ערב אחד, הטבעת לכל הבקרים שאחריו",
+       "music": "",
+       "thumbs": [
+        "2026-11-08-week/wed-11-post-1.jpg",
+        "2026-11-08-week/wed-11-post-2.jpg",
+        "2026-11-08-week/wed-11-post-3.jpg",
+        "2026-11-08-week/wed-11-post-4.jpg",
+        "2026-11-08-week/wed-11-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "A black diamond engagement ring, and two bands that carry its wave.\n\nGravitational Wave is No. 1 in REMNANT. The black diamond sits inside 3 rings of 14K gold that rise like a ripple, the way a wave moves through space. The wedding bands take that same wave around the finger, with black diamonds or white ones.\n\nThe proposal's one night. The band's for every ordinary Tuesday after it.\n\nEach design comes 3 ways: engagement ring, wedding band, earrings. Yellow, rose or white gold, we make each one by hand, to order. Planning both? Message us. A real person answers.\n\nThe black diamond ring and the bands: https://dianarafael.com/products/gravitational-wave-natural-black-diamond-engagement-ring\n\n#blackdiamondengagementring #weddingband #dianarafael"
+      },
+      {
+       "id": "w1108-wed-11-story-c",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-11",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Kintsugi huggies (pair packshot) + verbatim earring review",
+       "hook": "“This earring is a lot fancier than I imagined, I love it!” -> Want something changed? / Ask. Almost anything can be.",
+       "angle": "תכשיט שאינו טבעת + שינויים לפי בקשה (הביקורת על עגיל שצופה ברודיום שחור לבקשת הלקוחה)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/wed-11-story-c.jpg",
+        "2026-11-08-week/wed-11-story-c-f1.jpg",
+        "2026-11-08-week/wed-11-story-c-f2.jpg",
+        "2026-11-08-week/wed-11-story-c-f3.jpg",
+        "2026-11-08-week/wed-11-story-c-f4.jpg",
+        "2026-11-08-week/wed-11-story-c-f5.jpg",
+        "2026-11-08-week/wed-11-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/wed-11-story-c.mp4"
+      },
+      {
+       "id": "w1108-thu-12-story-a",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-12",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customers' photo: couple, she shows the ring (Meir)",
+       "hook": "Two people. / One yes. -> Customers' photo. Thank you for sharing it.",
+       "angle": "תמונת לקוחות אמיתית: זוג, כן אחד",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/thu-12-story-a.jpg",
+        "2026-11-08-week/thu-12-story-a-f1.jpg",
+        "2026-11-08-week/thu-12-story-a-f2.jpg",
+        "2026-11-08-week/thu-12-story-a-f3.jpg",
+        "2026-11-08-week/thu-12-story-a-f4.jpg",
+        "2026-11-08-week/thu-12-story-a-f5.jpg",
+        "2026-11-08-week/thu-12-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/thu-12-story-a.mp4"
+      },
+      {
+       "id": "w1108-thu-12-story-b",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-12",
+       "time": "17:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Ready to ship: Alnilam men's black diamond band + price",
+       "hook": "ALNILAM / $722 · ready to ship -> For him. Black diamonds all the way around.",
+       "angle": "מוכן למשלוח: טבעת גבר Alnilam, מחיר בסטורי",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/thu-12-story-b.jpg",
+        "2026-11-08-week/thu-12-story-b-f1.jpg",
+        "2026-11-08-week/thu-12-story-b-f2.jpg",
+        "2026-11-08-week/thu-12-story-b-f3.jpg",
+        "2026-11-08-week/thu-12-story-b-f4.jpg",
+        "2026-11-08-week/thu-12-story-b-f5.jpg",
+        "2026-11-08-week/thu-12-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/thu-12-story-b.mp4"
+      },
+      {
+       "id": "w1108-thu-12-vip",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-12",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "VIP early access (3/4) · Starz pair packshot (yellow)",
+       "hook": "Gifts are coming / with orders above certain amounts. -> VIPs see them first. Join the VIP list: link in bio",
+       "angle": "VIP 3/4: רמז למתנות (לפי תוכנית המיילים: המדרגות נחשפות ב-VIP)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/thu-12-vip.jpg",
+        "2026-11-08-week/thu-12-vip-f1.jpg",
+        "2026-11-08-week/thu-12-vip-f2.jpg",
+        "2026-11-08-week/thu-12-vip-f3.jpg",
+        "2026-11-08-week/thu-12-vip-f4.jpg",
+        "2026-11-08-week/thu-12-vip-f5.jpg",
+        "2026-11-08-week/thu-12-vip-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/thu-12-vip.mp4"
+      },
+      {
+       "id": "w1108-fri-13-story-a",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-13",
+       "time": "12:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Haleigh) + proposal invite",
+       "hook": "“Wonderful! Better in person! I love it.” / Planning a yes this weekend? Message us.",
+       "angle": "ביקורת אמיתית (Haleigh) לפני סוף השבוע + הזמנה למי שמתכנן הצעה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/fri-13-story-a.jpg",
+        "2026-11-08-week/fri-13-story-a-f1.jpg",
+        "2026-11-08-week/fri-13-story-a-f2.jpg",
+        "2026-11-08-week/fri-13-story-a-f3.jpg",
+        "2026-11-08-week/fri-13-story-a-f4.jpg",
+        "2026-11-08-week/fri-13-story-a-f5.jpg",
+        "2026-11-08-week/fri-13-story-a-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/fri-13-story-a.mp4"
+      },
+      {
+       "id": "w1108-fri-13-story-b",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-13",
+       "time": "18:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Gravitational Wave band, black diamond (yellow), on hand + price",
+       "hook": "GRAVITATIONAL WAVE BAND / $1,870 · 14K gold -> Yellow, rose or white gold · link in bio",
+       "angle": "סטורי מחיר: טבעת הנישואין השחורה של Gravitational Wave על יד",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/fri-13-story-b.jpg",
+        "2026-11-08-week/fri-13-story-b-f1.jpg",
+        "2026-11-08-week/fri-13-story-b-f2.jpg",
+        "2026-11-08-week/fri-13-story-b-f3.jpg",
+        "2026-11-08-week/fri-13-story-b-f4.jpg",
+        "2026-11-08-week/fri-13-story-b-f5.jpg",
+        "2026-11-08-week/fri-13-story-b-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/fri-13-story-b.mp4"
+      },
+      {
+       "id": "w1108-sat-14-vip",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-14",
+       "time": "13:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "VIP early access (4/4) · Gravitational Wave engagement (white) on hand",
+       "hook": "Black Friday comes early / to the VIP list. -> Join the VIP list: link in bio",
+       "angle": "VIP 4/4: סגירת השבוע",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/sat-14-vip.jpg",
+        "2026-11-08-week/sat-14-vip-f1.jpg",
+        "2026-11-08-week/sat-14-vip-f2.jpg",
+        "2026-11-08-week/sat-14-vip-f3.jpg",
+        "2026-11-08-week/sat-14-vip-f4.jpg",
+        "2026-11-08-week/sat-14-vip-f5.jpg",
+        "2026-11-08-week/sat-14-vip-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/sat-14-vip.mp4"
+      },
+      {
+       "id": "w1108-sat-14-story-c",
+       "batch": "2026-11-08-week",
+       "date": "2026-11-14",
+       "time": "20:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Ashlee) + invite",
+       "hook": "“This ring is so much better than I imagined…” / Saturday night question? Message us.",
+       "angle": "ביקורת אמיתית (Ashlee) במוצאי שבת + הזמנה לשיחה",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-08-week/sat-14-story-c.jpg",
+        "2026-11-08-week/sat-14-story-c-f1.jpg",
+        "2026-11-08-week/sat-14-story-c-f2.jpg",
+        "2026-11-08-week/sat-14-story-c-f3.jpg",
+        "2026-11-08-week/sat-14-story-c-f4.jpg",
+        "2026-11-08-week/sat-14-story-c-f5.jpg",
+        "2026-11-08-week/sat-14-story-c-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-08-week/sat-14-story-c.mp4"
+      }
+     ]
     }
    ],
-   "next": "השבוע שאחרי (8–14.11) יוצג ביום רביעי 4.11",
+   "next": "השבוע שאחרי (15–21.11) יוצג ביום רביעי 11.11",
    "ig": {
     "fetched": "2026-10-19",
     "username": "dianarafaeljewelry",
