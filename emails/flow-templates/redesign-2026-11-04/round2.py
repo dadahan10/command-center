@@ -201,6 +201,23 @@ def role_made(t, url, back, thumb):
                       [(back, url, True), ("Ask Daniel", WA, False)], extra=[thumb], url=url)
 
 
+def linked_cart_piece(t, url, w=460):
+    th = THEMES[t]
+    name = (f'<a href="{url}" target="_blank" style="color:{th["text"]};text-decoration:none;">'
+            "{{ event|lookup:'Product Name'|default:'Your piece' }}</a>")
+    return ("{% if event.ImageURL %}" + B.frame_img(t, "{{ event.ImageURL }}", "{{ event|lookup:'Product Name' }}", url, w=w) + "{% endif %}"
+            + B.caption(t, name, "{{ event|lookup:'Variant Name' }}"))
+
+
+def role_made_piece(t, url, piece):
+    """Cart 4/8: the chosen piece big at the top (image + name link to its product page), the bench photo below."""
+    top = [logo(t, pad="24px 40px 18px"), kicker(t, "The piece we'd make for you", pad="0 40px 16px"), piece]
+    bench = [B.hero(IMG["studio"], "A jeweler setting a black diamond at the bench", pad="10px 32px 0")]
+    return sales_page(t, "Your piece, made by hand after you order.", top, "Made by hand, after you order.",
+                      "In your size and your gold, set stone by stone, shipped within 10 business days, insured, on us.",
+                      [("See my piece", url, True), ("Ask Daniel", WA, False)], extra=bench, url=url)
+
+
 def role_diamond(t, url, back, top, thumb):
     """Now late in the flow. Short, both branches (Black Ice / REMNANT vs everything else) kept."""
     th = THEMES[t]
@@ -236,7 +253,7 @@ R2["WtYdde"] = lambda: role_reminder("chk", "bone", CHK_URL, B.chk_piece("bone",
 R2["VdW7XY"] = lambda: role_question("paper", CHK_URL, B.chk_thumb_row("paper", "Your order"))
 R2["SNvbQS"] = lambda: role_call("paper", CHK_URL, B.chk_thumb_row("paper", "We can talk about"))           # 3/8 now: talk
 R2["VLjUfd"] = lambda: role_reviews("bone", CHK_URL, "Return to my order",
-                                    [logo("bone", pad="22px 40px 18px"), B.hero(IMG["unbox"], "Hands with black nails opening a black jewelry box")])
+                                    [logo("bone", pad="22px 40px 18px"), B.hero(IMG["reviews-oval"], "A natural black diamond oval ring with two white diamonds, in its box")])
 R2["WiHGws"] = lambda: role_fit("ink", CHK_URL, "Return to my order",
                                 [logo("ink", pad="24px 40px 20px"), B.hero(IMG["fit"], "A ring mandrel and ring size gauges on a jeweler's bench"),
                                  kicker("ink", "Size and peace of mind", pad="28px 40px 0")], B.chk_thumb_row("ink", "Your piece, kept as you chose it"))
@@ -251,8 +268,9 @@ R2["U58x8u"] = lambda: role_reminder("cart", "paper", CART_URL, B.cart_piece("pa
 R2["UBwjpH"] = lambda: role_call("ink", CART_URL, B.cart_thumb_row("ink", "We can talk about"))              # 2/8 now: talk
 R2["Xzm3N4"] = lambda: role_reviews("paper", CART_URL, "Back to my piece",
                                     [logo("paper", pad="24px 40px 20px"),
-                                     B.hero(IMG["unbox"], "Hands with black nails opening a black jewelry box", pad="0 32px")])
-R2["Y7JQ5h"] = lambda: role_made("ink", CART_URL, "Back to my piece", B.cart_thumb_row("ink", "The piece we'd make for you"))
+                                     B.hero(IMG["reviews-emerald"], "A natural black diamond emerald-cut ring in rose gold, in its box", pad="0 32px")])
+# 4/8 (Daniel 5.11): the piece the customer chose leads the email and every CTA goes to its product page
+R2["Y7JQ5h"] = lambda: role_made_piece("ink", CART_URL, linked_cart_piece("ink", CART_URL, w=460))
 R2["WRGJQ3"] = lambda: role_fit("bone", CART_URL, "Back to my piece",
                                 [logo("bone", pad="22px 40px 18px"), B.hero(IMG["fit"], "A ring mandrel and ring size gauges on a jeweler's bench"),
                                  kicker("bone", "Size and peace of mind", pad="26px 40px 0")], B.cart_thumb_row("bone", "Your piece"))

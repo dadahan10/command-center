@@ -13,6 +13,7 @@ FLOWS = [
     ("after", "אחרי רכישה ומשלוח", "VydTk7 · R6tiEk · Y6UjZu · 7 מיילים · טיוטה", ["WHCJdX", "Xg2wvc", "RCR6Vz", "V4smfK", "RZYnw2", "TbpdpS", "W9dVNd"], False),
     ("other", "VIP ו-JEWELVERSARY", "RRcbwY פעיל · XrShek טיוטה", ["TLp5wQ", "TLpfRY"], False),
 ]
+FIXED = {"Y7JQ5h": "תוקן 5.11: התכשיט שנבחר למעלה + קישור אליו", "VLjUfd": "תוקן 5.11: תמונה חדשה", "Xzm3N4": "תוקן 5.11: תמונה חדשה"}
 SWAPPED = {"SNvbQS": "הוקדם מ-7/8", "TNDw3W": "נדחה מ-3/8", "UBwjpH": "הוקדם מ-7/8", "UmCymx": "נדחה מ-2/8"}
 
 CSS = """
@@ -53,6 +54,8 @@ def card(i, tid, r2):
     subj = round2.SUBJECT_OVERRIDE.get(tid, s.get("subject") or "")
     pre = s.get("preview") or ""
     tags = ""
+    if tid in FIXED:
+        tags += f'<span class="tag r2">{FIXED[tid]}</span> '
     if tid in SWAPPED:
         tags += f'<span class="tag r2">{SWAPPED[tid]}</span> '
     tags += f'<span class="tag{" r2" if r2 else ""}">{"סבב 2" if r2 else "לוגו גדול בלבד"}</span>'
@@ -75,6 +78,7 @@ def main():
 <style>{CSS}</style>
 <main dir="rtl">
 <h1>מיילי פלואו — סבב 2</h1>
+<p class="sub"><b>עדכון 5.11:</b> עגלה 4/8 נפתח עכשיו בתכשיט שהלקוח בחר (תמונה + שם + "See my piece" — כולם מקשרים לדף המוצר שלו); במיילי "530+ ביקורות" (קופה 4/8, עגלה 3/8) התמונה הוחלפה בטבעות אמיתיות בקופסה.</p>
 <p class="sub">29 מיילים, מרונדרים ע"י Klaviyo עם אירוע אמיתי (Sarah). שום דבר לא נדחף ל-Klaviyo — הכול מחכה לאישור שלך.</p>
 <ul class="changes">
 <li><b>פחות טקסט</b>כותרת + שורה-שתיים בכל 20 מיילי המכירה</li>
