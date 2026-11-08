@@ -39,29 +39,43 @@ def nxt(): return {"type": "next_step", "submit": False}
 
 def submit(): return {"type": "next_step", "submit": True, "properties": {"list_id": LIST}}
 
+# 8.11 (Daniel): step 1 = the choice only, the email on a separate step. Klaviyo has no "go to step X"
+# (neither the API nor the UI), so this is the quiz pattern: each choice button submits the hidden field
+# gift_preference (no email yet) and moves to the email step. Klaviyo carries step-1 fields into the final submit.
+def choice_submit(): return submit()  # API requires list_id on any submit; no email yet, so nobody is subscribed here
+
 step1 = {"name": "Choose", "columns": [{"rows": [
     {"blocks": [html(p("A gift with your first order", 11, GOLD, bold=True, ls="3px", upper=True), (26, 24, 0, 24))]},
     {"blocks": [html(p("Black or white?", 34, TXT, serif=True), (4, 24, 0, 24))]},
     {"blocks": [html(p("Free natural diamond studs with orders from $2,000.<br>Which pair would you choose?", 15, MUTED), (2, 28, 4, 28))]},
     {"blocks": [choice_image(BLACK, "Black diamond studs", "black"), choice_image(WHITE, "White diamond studs", "white")]},
-    {"blocks": [{"type": "email", "properties": {"placeholder": "Your email, to reserve them", "required": True,
+    {"blocks": [button("BLACK", choice_submit(), [{"name": "gift_preference", "value": "black"}]),
+                button("WHITE", choice_submit(), [{"name": "gift_preference", "value": "white"}], filled=False)]},
+    {"blocks": [html("", (0, 0, 22, 0))]},
+]}]}
+
+step2 = {"name": "Email", "columns": [{"rows": [
+    {"blocks": [html(p("Great choice.", 30, TXT, serif=True), (28, 24, 0, 24))]},
+    {"blocks": [html(p("Where should we send it? Your studs are reserved with your first order.", 15, MUTED), (6, 28, 6, 28))]},
+    {"blocks": [{"type": "email", "properties": {"placeholder": "Your email", "required": True,
                  "property_name": "$email", "show_label": False}}]},
-    {"blocks": [button("I'D CHOOSE BLACK", submit(), [{"name": "gift_preference", "value": "black"}]),
-                button("I'D CHOOSE WHITE", submit(), [{"name": "gift_preference", "value": "white"}], filled=False)]},
+    {"blocks": [button("RESERVE MY STUDS", submit())]},
     {"blocks": [html(p("Reserved for your first order from $2,000. No spam, unsubscribe anytime.", 11, MUTED), (4, 24, 22, 24))]},
 ]}]}
 
-step2 = {"name": "Success", "columns": [{"rows": [
+step3 = {"name": "Success", "columns": [{"rows": [
     {"blocks": [html(p("You're in", 11, GOLD, bold=True, ls="3px", upper=True), (34, 24, 0, 24))]},
     {"blocks": [html(p("Your studs are reserved.", 30, TXT, serif=True), (4, 24, 0, 24))]},
-    {"blocks": [html(p("Great choice. Watch your inbox, Daniel will write to you personally.", 15, MUTED), (2, 28, 8, 28))]},
+    {"blocks": [html(p("Watch your inbox, Daniel will write to you personally.", 15, MUTED), (2, 28, 8, 28))]},
     {"blocks": [button("CONTINUE BROWSING", {"type": "close", "submit": False})]},
     {"blocks": [html("", (0, 0, 24, 0))]},
 ]}]}
 
+STEPS = [step1, step2, step3]
+
 version = {
-    "name": "Gift choice v1", "type": "popup", "status": "draft", "ab_test": False, "channel": "WEB",
-    "steps": [step1, step2],
+    "name": "Gift choice v2 (choice first)", "type": "popup", "status": "draft", "ab_test": False, "channel": "WEB",
+    "steps": STEPS,
     "properties": {"show_close_button": True, "click_outside_to_close": ["both"], "record_utm_params_on_submit": True,
                    "accessible_name": "Choose your free diamond studs"},
     "styles": {"width": "medium", "background_color": BG,
@@ -76,7 +90,7 @@ version = {
         {"type": "after_close_or_submit_timeout", "properties": {"timeout_days": 5}},
     ],
 }
-body = {"data": {"type": "form", "attributes": {"name": "Gift choice — black or white studs", "status": "draft",
+body = {"data": {"type": "form", "attributes": {"name": "Gift choice — black or white studs (v2)", "status": "draft",
                                                  "ab_test": False, "definition": {"versions": [version]}}}}
 
 if __name__ == "__main__":
