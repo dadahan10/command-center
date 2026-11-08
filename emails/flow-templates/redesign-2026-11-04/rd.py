@@ -115,7 +115,7 @@ def trust(t, pad="20px 40px 6px"):
     a = f'style="color:{th["accent"]};text-decoration:underline;"'
     return (f'<tr><td align="center" class="pad" style="padding:{pad};font-family:{SANS};font-size:12px;line-height:1.8;color:{th["muted"]};">'
             f'Insured express shipping, paid by us · <a {a} href="https://dianarafael.com/pages/new-website-jewelry-care-program" target="_blank">Lifetime care</a>'
-            f' · Diamond &amp; gold certificate · <a {a} href="https://dianarafael.com/pages/our-customers-reviews" target="_blank">450+ reviews</a></td></tr>'
+            f' · Diamond &amp; gold certificate · <a {a} href="https://dianarafael.com/pages/our-customers-reviews" target="_blank">550+ reviews</a></td></tr>'
             f'<tr><td align="center" class="pad" style="padding:2px 40px 24px;font-family:{SANS};font-size:13px;color:{th["text"]};">Questions? '
             f'<a {a} href="https://dianarafael.com/pages/new-website-book-online-appointment" target="_blank">15 minutes with Daniel</a> or '
             f'<a {a} href="https://wa.me/97235755066" target="_blank">WhatsApp</a></td></tr>')
