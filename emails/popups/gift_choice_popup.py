@@ -68,8 +68,9 @@ version = {
                "input_styles": {"background_color": "#1A1A1A", "text_color": TXT, "placeholder_color": MUTED, "border_color": "#3A3A3A", "border_focus_color": GOLD, "corner_radius": 2, "field_height": 46}, "overlay_color": "rgba(0,0,0,0.6)",
                "border_styles": {"radius": 4, "style": "solid", "color": "#2A2A2A", "thickness": 1}},
     "triggers": [
-        {"type": "delay", "properties": {"seconds": 9}},
-        {"type": "url_patterns", "properties": {"deny_list": ["*vip=join*", "*/checkout*", "*/checkouts/*", "*/cart*"]}},
+        {"type": "delay", "properties": {"seconds": 20}},
+        {"type": "page_visits", "properties": {"pages": 2}},  # UI: "Only display if all selected conditions are met" ON (8.11, Daniel)
+        {"type": "url_patterns", "properties": {"allow_list": ["*/products/*"], "deny_list": ["*vip=join*", "*/checkout*", "*/checkouts/*", "*/cart*"]}},
         {"type": "unidentified_profiles"},
         {"type": "previously_submitted"},
         {"type": "after_close_or_submit_timeout", "properties": {"timeout_days": 5}},
