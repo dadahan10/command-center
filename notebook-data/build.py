@@ -1,15 +1,27 @@
 """Build the notebook: merge chapter parts, apply CSS, stage into the scratchpad dir for publishing.
-Usage: python -I build.py <stage_dir>
+Usage: python -I -X utf8 build.py <stage_dir> [--force]
+EDIT parts/part*.json ONLY - chapters.json is this script's output. The build refuses to run if
+chapters.json was hand-edited since the last build (port the edit into parts, then --force).
 """
-import json, glob, os, re, shutil, sys, datetime
+import json, glob, os, re, shutil, sys, datetime, hashlib
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-stage = sys.argv[1]
+FORCE = "--force" in sys.argv
+stage = [a for a in sys.argv[1:] if a != "--force"][0]
 
 def load(p):
     with open(p, encoding="utf-8") as f:
         return json.load(f)
+
+# 0. guard: chapters.json is a build output - a hand edit there would be silently overwritten (obs 0116/0118)
+CH, SIG = os.path.join(HERE, "chapters.json"), os.path.join(HERE, ".chapters.sig")
+def sig(obj):
+    return hashlib.sha256(json.dumps(obj, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
+if not FORCE and os.path.exists(CH) and os.path.exists(SIG):
+    if sig(load(CH)) != open(SIG, encoding="utf-8").read().strip():
+        sys.exit("STOP: notebook-data/chapters.json was edited by hand since the last build. It is a build OUTPUT "
+                 "(rebuilt from parts/part*.json). Port the edit into parts/part*.json, then rerun with --force.")
 
 # 1. chapters = all parts, minus topics Daniel asked not to track as status
 SKIP = {"month-closing"}  # shown as a flow (agents.json), not as a status chapter
@@ -58,8 +70,10 @@ for c in chapters:
     c["tables"] = c.get("tables", []) + tables  # chapter-authored tables (e.g. Monday ideas) stay on top
 
 assert len({c["id"] for c in chapters}) == len(chapters)
-with open(os.path.join(HERE, "chapters.json"), "w", encoding="utf-8") as f:
+with open(CH, "w", encoding="utf-8") as f:
     json.dump(chapters, f, ensure_ascii=False, indent=1)
+with open(SIG, "w", encoding="utf-8") as f:
+    f.write(sig(load(CH)))
 
 extras["generated"] = datetime.date.today().strftime("%d.%m.%Y")
 
