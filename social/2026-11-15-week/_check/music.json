@@ -1,0 +1,170 @@
+{
+ "sun-15-vip": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 6.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "sun-15-rts": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 31.15,
+  "duration_s": 7.0,
+  "hit_score": 32.32,
+  "lufs": -13.9
+ },
+ "sun-15-cust": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 114.37,
+  "duration_s": 6.0,
+  "hit_score": 17.8,
+  "lufs": -13.8
+ },
+ "sun-15-review": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 72.75,
+  "duration_s": 6.0,
+  "hit_score": 20.37,
+  "lufs": -14.0
+ },
+ "gift-1": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 101.55,
+  "duration_s": 6.0,
+  "hit_score": 16.29,
+  "lufs": -13.8
+ },
+ "gift-2": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 28.85,
+  "duration_s": 6.5,
+  "hit_score": 13.57,
+  "lufs": -13.8
+ },
+ "gift-3": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 9.64,
+  "duration_s": 6.0,
+  "hit_score": 13.56,
+  "lufs": -13.9
+ },
+ "gift-4": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 86.44,
+  "duration_s": 6.0,
+  "hit_score": 13.06,
+  "lufs": -13.8
+ },
+ "gift-5": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 48.05,
+  "duration_s": 7.0,
+  "hit_score": 12.04,
+  "lufs": -13.8
+ },
+ "tue-17-review": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 82.36,
+  "duration_s": 6.0,
+  "hit_score": 17.6,
+  "lufs": -13.9
+ },
+ "tue-17-vip": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 19.25,
+  "duration_s": 6.0,
+  "hit_score": 11.81,
+  "lufs": -13.7
+ },
+ "wed-18-starz": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 39.56,
+  "duration_s": 6.0,
+  "hit_score": 14.49,
+  "lufs": -13.7
+ },
+ "wed-18-rts": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 61.96,
+  "duration_s": 7.0,
+  "hit_score": 14.19,
+  "lufs": -13.8
+ },
+ "wed-18-review": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 50.35,
+  "duration_s": 6.5,
+  "hit_score": 10.53,
+  "lufs": -14.0
+ },
+ "band-1": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 6.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "band-2": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 7.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "band-3": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 6.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "band-4": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 6.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "band-5": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 7.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "thu-19-review": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 0.0,
+  "duration_s": 6.0,
+  "hit_score": 6.45,
+  "lufs": -14.0
+ },
+ "fri-20-bench": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 22.96,
+  "duration_s": 6.0,
+  "hit_score": 5.79,
+  "lufs": -14.0
+ },
+ "fri-20-vip": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 6.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "sat-21-cust": {
+  "track": "musinova-minimal-underscore-piano-pulse-518251.mp3",
+  "offset_s": 37.55,
+  "duration_s": 6.0,
+  "hit_score": 20.9,
+  "lufs": -13.8
+ },
+ "sat-21-review": {
+  "track": "musinova-minimal-underscore-piano-pulse-drumless-518249.mp3",
+  "offset_s": 12.76,
+  "duration_s": 6.0,
+  "hit_score": 5.05,
+  "lufs": -13.9
+ }
+}

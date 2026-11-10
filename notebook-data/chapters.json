@@ -440,7 +440,7 @@
   "kind": "business",
   "status": "active",
   "last_update": "2026-11-10",
-  "where_we_stand": "שגרה קבועה: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. לוח 1–7.11 בתור ועולה כסדרו (עד 4.11 הכול פורסם, בלי תקלות). ברביעי 4.11 הלוח של 8–14.11 לא הוצג, ולכן הוא נבנה היום (5.11) ומחכה כאן לאישורך: 18 סטוריז ו-2 פוסטים לפיד. מ-8.11 התור ריק עד שתאשר. שום דבר לא נכנס לתור לפני האישור.",
+  "where_we_stand": "שגרה קבועה: בכל יום רביעי אני מציג כאן את לוח השבוע הבא לאישורך. לוח 8–14.11 אושר, ונמצא בתור ועולה כסדרו (עד 10.11 הכול פורסם). לוח 15–21.11 נבנה ב-10.11 ומחכה כאן לאישורך ברביעי 11.11: 24 סטוריז, 2 קרוסלות וריל אחד לפיד, ו-3 פוסטים בעברית. שתי הסדרות שבחרת (מתנה, טבעת נישואין) בפנים. עולם החורף לא נוצר: הקרדיט של Gemini נגמר. שום דבר לא נכנס לתור לפני האישור.",
   "rules": {
    "title": "כללי התוכן",
    "items": [
@@ -452,14 +452,15 @@
    ]
   },
   "next_tasks": [
-   "רביעי 11.11: לייצר 5 פריימים מעולם החורף (טבלה למטה) ולהציג אותם בלוח 15–21.11 לאישור. CTA: 'DM us GIFT' כי אין לנו כלי auto-DM (ManyChat), ולכן תגובה עם מילה לא תשלח קישור אוטומטית",
-   "דניאל מאשר/פוסל את לוח 8–14.11 (כל כרטיס בנפרד) — עדיף עד שבת 7.11, הסטורי הראשון בראשון 8.11 12:00",
-   "לפני ראשון 8.11: לשים בביו של האינסטגרם את הקישור dianarafael.com/?vip=join, ולוודא שיש טופס VIP שנפתח מהקישור הזה (4 סטוריז VIP מפנים אליו)",
-   "אחרי האישור: להכניס לתור רק את מה שאושר (batch 2026-11-08-week) ולסמן 'בתור'",
-   "שני הפוסטים בעברית (ראשון ורביעי) — לפרסם גם בפרופיל הפרטי; הנוסח מוכן בתיקיית השבוע",
-   "דניאל בוחר 2 מתוך רשימת הרעיונות של 2.11 (לשבוע 15–21.11); רביעי 11.11: לוח 15–21.11 לאישור"
+   "רביעי 11.11: דניאל מאשר/פוסל את לוח 15–21.11 (כל כרטיס בנפרד; לוח ויזואלי: command-center/social/2026-11-15-week/board.jpg). הסטורי הראשון בראשון 15.11 11:00",
+   "אחרי האישור: להכניס לתור רק את מה שאושר (batch 2026-11-15-week, schedule.json בתיקיית השבוע) ולסמן 'בתור'",
+   "שלושת הפוסטים בעברית (שני, שלישי, חמישי 13:00): לפרסם גם בפרופיל הפרטי; הנוסח ב-פייסבוק-פרטי-עברית.txt",
+   "עולם החורף: לטעון קרדיט Gemini (ai.studio, prepay נגמר 10.11) ואז לייצר את 5 הפריימים ללוח 22–28.11 (רביעי 18.11), עם ai-image-qa",
+   "נתוני סטוריז: אינסטגרם שומר insights של סטורי 24 שעות בלבד. להוסיף snapshot יומי (reach לכל סטורי) כדי לבחור שעות סטוריז לפי נתונים",
+   "שני 16.11: רשימת רעיונות לתוכן מועיל #3 (לשבוע 22–28.11)"
   ],
   "recent_changes": [
+   "10.11 — לוח 15–21.11 נבנה לאישור: סדרת מתנה (שני) וסדרת טבעת נישואין (חמישי) מתמונות 2026 DROP אמיתיות, ריל אחד מהשולחן, 3 טיזרים לבלאק פריידי בלי מספרים, Portal ו-Pera Scura מוכנים למשלוח, 5 ביקורות חדשות; פיד ב-13:00 לפי נתוני reach של 143 פוסטים",
    "10.11 — יישום הפוסט של Aluna 'Christmas content that looks like the brand made it': עולם חורף אחד לכל עונת החגים, 5 פריימים, כלל התכשיט האמיתי, CTA במילה",
    "5.11 — לוח 8–14.11 נבנה (רביעי דולג): VIP לבלאק פריידי ×4, Disturbed לראשונה, Gravitational Wave עם טבעות הנישואין, 3 תמונות לקוחות חדשות, 4 ביקורות, Alnilam; מחירים לפי האתר אחרי עדכון 4.11",
    "3.11 — ההתראות הישנות (אישור לוח 1–7.11 ו-ACCRETION) נוקו: שניהם אושרו ופורסמו",
@@ -714,7 +715,7 @@
     ]
    },
    {
-    "title": "יומן המסרים (169)",
+    "title": "יומן המסרים (196)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -725,6 +726,222 @@
      "מצב"
     ],
     "rows": [
+     [
+      "21.11",
+      "Instagram story (EN)",
+      "Real customer photo (edited): solitaire, two hands",
+      "Two hands. / One promise. -> A customer's photo. Thank you for sharing it.",
+      "תמונת לקוחות שלא הופיעה: שתי ידיים, הבטחה אחת",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "21.11",
+      "Instagram story (EN)",
+      "Review (Etsy buyer, earring) + invite",
+      "“Very cool and unique design, I will enjoy this beautiful earring!” / A question about a piece? Message us.",
+      "ביקורת חדשה על עגיל במוצאי שבת + הזמנה לשיחה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "20.11",
+      "Instagram story (EN)",
+      "2026 DROP: white diamond starburst in a blue box",
+      "Some pieces take weeks / to look effortless. -> Made at our bench, 2026 · message us to make yours.",
+      "מהשולחן 2026: העבודה שמאחורי מה שנראה קל",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "20.11",
+      "Instagram story (EN)",
+      "Black Friday tease (3/3) · 2026 DROP: white diamond halo ring, white gold",
+      "One week / until Black Friday. -> VIPs hear first. Join the VIP list: link in bio",
+      "בלאק פריידי 3/3: שבוע לבלאק פריידי (עובדה, לא דדליין מזויף)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "19.11",
+      "Instagram story (EN)",
+      "Series: the wedding band (1/5) · 2026 DROP: black cushion engagement ring + band set in its box",
+      "She said yes. / Now, the band that goes with it. -> Save this one.",
+      "סדרה: טבעת הנישואין לטבעת האירוסין 1/5 (פתיח)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "19.11",
+      "Instagram story (EN)",
+      "Series: the wedding band (2/5) · 2026 DROP: the same set, video still",
+      "1. Curved or straight? / A curved band hugs the stone. A straight one sits beside it.",
+      "סדרה 2/5: מעוקלת או ישרה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "19.11",
+      "Instagram story (EN)",
+      "Series: the wedding band (3/5) · 2026 DROP: two bands, rose and black pavé",
+      "2. Match the metal, / or mix it on purpose.",
+      "סדרה 3/5: אותו זהב או שילוב מכוון",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "19.11",
+      "Instagram story (EN)",
+      "Series: the wedding band (4/5) · 2026 DROP: emerald-cut ring with an engraving inside",
+      "3. Add a word inside. / Only the two of you will read it.",
+      "סדרה 4/5: חריטה בפנים",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "19.11",
+      "Instagram story (EN)",
+      "Series: the wedding band (5/5) · 2026 DROP: white diamond eternity band",
+      "Already have the ring? / Send us a photo. We'll design the band around it. -> Message us.",
+      "סדרה 5/5: שולחים תמונה של הטבעת, מתכננים סביבה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "19.11",
+      "Instagram carousel + Facebook album",
+      "Bands carousel: customer's bridal stack, two bands, eternity band, heart band, Starz hers",
+      "The second ring has a harder job than the first.",
+      "פוסט פיד + אלבום פייסבוק: טבעות נישואין (תומך בסדרת הבוקר)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "19.11",
+      "Instagram story (EN)",
+      "Review (Etsy buyer, custom band) + invite",
+      "“I love this band! The seller helped me customize it with ease, and it turned out just as I’d hoped.” / Want a band made for yours? Message us.",
+      "ביקורת חדשה על טבעת נישואין בהתאמה אישית",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "18.11",
+      "Instagram story (EN)",
+      "REMNANT: Starz band, hers (rose), on hand, tight crop",
+      "Whole, / not perfect. -> Starz band, from REMNANT · link in bio",
+      "ערך הקולקציה מעמוד המסרים: שלם, לא מושלם (מרים, לא אפל)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "18.11",
+      "Instagram story (EN)",
+      "Ready to ship: Pera Scura elongated black pear ring (guarded cutout on a dark ground)",
+      "PERA SCURA / $1,190 · was $2,349 -> Elongated black pear, semi bezel / One piece. Ready to ship.",
+      "מוכן למשלוח שלא הוצג עדיין, מחיר עכשיו/לפני",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "18.11",
+      "Instagram story (EN)",
+      "Review (Jilandrel) + tomorrow's band series",
+      "“I cannot even describe the perfection that is this ring! Now it’s time to order wedding band(s) and fiancé’s band!” / Tomorrow: the band that goes with the ring.",
+      "ביקורת חדשה שמזמינה את סדרת מחר (טבעת נישואין)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "17.11",
+      "Instagram story (EN)",
+      "Review (Etsy buyer, 'looks like a tattoo') + custom invite",
+      "“This ring looks like a tattoo and sparkles in the right lighting. Very unique.” / Something unusual in mind? Tell us.",
+      "ביקורת חדשה: עיצוב יוצא דופן + הזמנה לעיצוב אישי",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "17.11",
+      "Instagram reel + Facebook reel",
+      "Reel · 2026 DROP: focus pull, light breaks up, then a pear diamond in tweezers (one shot)",
+      "(no text: the reveal is the hook)",
+      "ריל פיד + פייסבוק: שוט אחד מהשולחן, האור מתפרק ואז האבן בפוקוס; ככה מתחילה טבעת",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "17.11",
+      "Instagram story (EN)",
+      "Black Friday tease (2/3) · 2026 DROP: black diamond ring, rose gold, in its box",
+      "Black Friday is for the pieces / you've been saving for. -> VIPs see everything first. Join the VIP list: link in bio",
+      "בלאק פריידי 2/3: לתכשיט שחיכיתם לו, VIP רואים ראשונים",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "16.11",
+      "Instagram story (EN)",
+      "Series: jewelry as a gift (1/5) · 2026 DROP: black pear drop earrings in the palm",
+      "Buying jewelry as a gift? / Four things that make it easy. -> Save this one.",
+      "סדרה: מתנה בלי לנחש 1/5 (פתיח)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "16.11",
+      "Instagram story (EN)",
+      "Series: jewelry as a gift (2/5) · customer photo, her hand",
+      "1. Look at what she wears. / Then follow her gold.",
+      "סדרה 2/5: צבע הזהב שהיא כבר עונדת",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "16.11",
+      "Instagram story (EN)",
+      "Series: jewelry as a gift (3/5) · 2026 DROP: the pear drop earring worn",
+      "2. Not sure of her size? / Earrings and necklaces need none.",
+      "סדרה 3/5: בלי מידה, עגילים ושרשראות",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "16.11",
+      "Instagram story (EN)",
+      "Series: jewelry as a gift (4/5) · 2026 DROP: yellow gold band with a heart-cut diamond",
+      "3. Personal beats big. / A detail that is only about her.",
+      "סדרה 4/5: פרט אישי שווה יותר מגודל",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "16.11",
+      "Instagram story (EN)",
+      "Series: jewelry as a gift (5/5) · 2026 DROP: sunburst ring in the setter's vise",
+      "4. Made to order takes time. / Up to 10 business days before it ships. -> A gift question? Message us.",
+      "סדרה 5/5: עד 10 ימי עבודה עד המשלוח (משלוח, לא הגעה) + הזמנה לשיחה",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "16.11",
+      "Instagram carousel + Facebook album",
+      "Gift carousel: 2026 DROP white starburst, black rose-gold ring, white marquise + customer photo",
+      "A gift that gets opened once and worn for years.",
+      "פוסט פיד + אלבום פייסבוק: תכשיט כמתנה (תומך בסדרת הבוקר)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "15.11",
+      "Instagram story (EN)",
+      "Black Friday tease (1/3) · 2026 DROP: white marquise ring, white gold, in its box",
+      "Black Friday is November 27. / VIPs hear about it first. -> Join the VIP list: link in bio",
+      "בלאק פריידי 1/3: התאריך האמיתי + רשימת VIP, בלי מספרים ובלי דדליין מזויף",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "15.11",
+      "Instagram story (EN)",
+      "Ready to ship: Portal black diamond cushion ring (packshot on a new ground)",
+      "PORTAL / $1,190 · was $2,588 -> Black diamond cushion, compass setting / One piece. Ready to ship.",
+      "מוכן למשלוח שלא הוצג עדיין (Archive Sale, במלאי 10.11), מחיר עכשיו/לפני, בלי 'החיסול ממשיך'",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "15.11",
+      "Instagram story (EN)",
+      "Real customer photo (edited): white diamond ring, hand among pinecones",
+      "Some gifts / stay. -> A customer's photo. Thank you for sharing it.",
+      "פתיח לשבוע המתנות: תכשיט שנשאר (תמונת לקוחה שלא הופיעה)",
+      "מתוכנן, ממתין לאישור"
+     ],
+     [
+      "15.11",
+      "Instagram story (EN)",
+      "Review (Etsy buyer, fiancee) + invite",
+      "“The ring is beautiful, my fiancee loves it. Daniel was very helpful when I had questions.” / Buying for someone you love? Message us.",
+      "ביקורת חדשה מילה במילה: קנה למישהי אחרת + הזמנה למי שקונה מתנה",
+      "מתוכנן, ממתין לאישור"
+     ],
      [
       "14.11",
       "Instagram story (EN)",
@@ -2083,9 +2300,9 @@
   ],
   "attention": [
    {
-    "text": "לוח הסושיאל 8–14.11 מחכה לאישור",
-    "note": "מ-8.11 אין שום דבר בתור. 18 סטוריז + 2 פוסטים, כל כרטיס לאישור בנפרד. גם: קישור VIP בביו.",
-    "since": "2026-11-05"
+    "text": "לוח הסושיאל 15–21.11 מחכה לאישור",
+    "note": "24 סטוריז + 3 פיד + 3 פוסטים בעברית, כל כרטיס לאישור בנפרד. עולם החורף נדחה: הקרדיט של Gemini נגמר.",
+    "since": "2026-11-10"
    }
   ],
   "social": {
@@ -4920,9 +5137,694 @@
        "video": "2026-11-08-week/sat-14-story-c.mp4"
       }
      ]
+    },
+    {
+     "week_of": "2026-11-15",
+     "label": "שבוע 15–21.11 (נבנה 10.11 לאישור ברביעי 11.11): שתי הסדרות שבחרת ב-5.11, מתנה (שני) וטבעת נישואין לטבעת האירוסין (חמישי), 5 סטוריז כל אחת + פוסט פיד תומך; ריל אחד מהשולחן (שלישי); 3 טיזרים לבלאק פריידי 27.11 בלי מספרים; 2 פריטים מוכנים למשלוח שלא הוצגו; 5 ביקורות חדשות מילה במילה (550+). כל התמונות אמיתיות: 2026 DROP, תמונות לקוחות ערוכות שלא הופיעו, Starz מהפיילוט. 24 סטוריז + 3 פיד + 3 פוסטים בעברית. פיד ב-13:00 לפי נתוני reach",
+     "approved": "ממתין לאישור דניאל · שום דבר לא בתור",
+     "items": [
+      {
+       "id": "w1115-sun-15-vip",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-15",
+       "time": "11:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Black Friday tease (1/3) · 2026 DROP: white marquise ring, white gold, in its box",
+       "hook": "Black Friday is November 27. / VIPs hear about it first. -> Join the VIP list: link in bio",
+       "angle": "בלאק פריידי 1/3: התאריך האמיתי + רשימת VIP, בלי מספרים ובלי דדליין מזויף",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/sun-15-vip.jpg",
+        "2026-11-15-week/sun-15-vip-f1.jpg",
+        "2026-11-15-week/sun-15-vip-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/sun-15-vip.mp4"
+      },
+      {
+       "id": "w1115-sun-15-rts",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-15",
+       "time": "15:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Ready to ship: Portal black diamond cushion ring (packshot on a new ground)",
+       "hook": "PORTAL / $1,190 · was $2,588 -> Black diamond cushion, compass setting / One piece. Ready to ship.",
+       "angle": "מוכן למשלוח שלא הוצג עדיין (Archive Sale, במלאי 10.11), מחיר עכשיו/לפני, בלי 'החיסול ממשיך'",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/sun-15-rts.jpg",
+        "2026-11-15-week/sun-15-rts-f1.jpg",
+        "2026-11-15-week/sun-15-rts-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/sun-15-rts.mp4"
+      },
+      {
+       "id": "w1115-sun-15-cust",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-15",
+       "time": "19:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customer photo (edited): white diamond ring, hand among pinecones",
+       "hook": "Some gifts / stay. -> A customer's photo. Thank you for sharing it.",
+       "angle": "פתיח לשבוע המתנות: תכשיט שנשאר (תמונת לקוחה שלא הופיעה)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/sun-15-cust.jpg",
+        "2026-11-15-week/sun-15-cust-f1.jpg",
+        "2026-11-15-week/sun-15-cust-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/sun-15-cust.mp4"
+      },
+      {
+       "id": "w1115-sun-15-review",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-15",
+       "time": "21:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Etsy buyer, fiancee) + invite",
+       "hook": "“The ring is beautiful, my fiancee loves it. Daniel was very helpful when I had questions.” / Buying for someone you love? Message us.",
+       "angle": "ביקורת חדשה מילה במילה: קנה למישהי אחרת + הזמנה למי שקונה מתנה",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/sun-15-review.jpg",
+        "2026-11-15-week/sun-15-review-f1.jpg",
+        "2026-11-15-week/sun-15-review-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/sun-15-review.mp4"
+      },
+      {
+       "id": "w1115-gift-1",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "10:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry as a gift (1/5) · 2026 DROP: black pear drop earrings in the palm",
+       "hook": "Buying jewelry as a gift? / Four things that make it easy. -> Save this one.",
+       "angle": "סדרה: מתנה בלי לנחש 1/5 (פתיח)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/gift-1.jpg",
+        "2026-11-15-week/gift-1-f1.jpg",
+        "2026-11-15-week/gift-1-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/gift-1.mp4"
+      },
+      {
+       "id": "w1115-gift-2",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "10:15",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry as a gift (2/5) · customer photo, her hand",
+       "hook": "1. Look at what she wears. / Then follow her gold.",
+       "angle": "סדרה 2/5: צבע הזהב שהיא כבר עונדת",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/gift-2.jpg",
+        "2026-11-15-week/gift-2-f1.jpg",
+        "2026-11-15-week/gift-2-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/gift-2.mp4"
+      },
+      {
+       "id": "w1115-gift-3",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "10:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry as a gift (3/5) · 2026 DROP: the pear drop earring worn",
+       "hook": "2. Not sure of her size? / Earrings and necklaces need none.",
+       "angle": "סדרה 3/5: בלי מידה, עגילים ושרשראות",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/gift-3.jpg",
+        "2026-11-15-week/gift-3-f1.jpg",
+        "2026-11-15-week/gift-3-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/gift-3.mp4"
+      },
+      {
+       "id": "w1115-gift-4",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "10:45",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry as a gift (4/5) · 2026 DROP: yellow gold band with a heart-cut diamond",
+       "hook": "3. Personal beats big. / A detail that is only about her.",
+       "angle": "סדרה 4/5: פרט אישי שווה יותר מגודל",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/gift-4.jpg",
+        "2026-11-15-week/gift-4-f1.jpg",
+        "2026-11-15-week/gift-4-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/gift-4.mp4"
+      },
+      {
+       "id": "w1115-gift-5",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "11:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: jewelry as a gift (5/5) · 2026 DROP: sunburst ring in the setter's vise",
+       "hook": "4. Made to order takes time. / Up to 10 business days before it ships. -> A gift question? Message us.",
+       "angle": "סדרה 5/5: עד 10 ימי עבודה עד המשלוח (משלוח, לא הגעה) + הזמנה לשיחה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/gift-5.jpg",
+        "2026-11-15-week/gift-5-f1.jpg",
+        "2026-11-15-week/gift-5-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/gift-5.mp4"
+      },
+      {
+       "id": "w1115-mon-16-post",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "13:00",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "Gift carousel: 2026 DROP white starburst, black rose-gold ring, white marquise + customer photo",
+       "hook": "A gift that gets opened once and worn for years.",
+       "angle": "פוסט פיד + אלבום פייסבוק: תכשיט כמתנה (תומך בסדרת הבוקר)",
+       "music": "",
+       "thumbs": [
+        "2026-11-15-week/mon-16-post-1.jpg",
+        "2026-11-15-week/mon-16-post-2.jpg",
+        "2026-11-15-week/mon-16-post-3.jpg",
+        "2026-11-15-week/mon-16-post-4.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "A gift that gets opened once and worn for years.\n\nMost gifts get used up. A jewelry gift is the one she keeps reaching for, and every time she does, it carries a little of the person who chose it.\n\nEvery piece in this post was made at our bench this year: a white diamond starburst, a black diamond ring in rose gold, a marquise in white gold, and one customer's ring photographed where she wears it.\n\nMade to order pieces take up to 10 business days before they ship. If it's a holiday gift, start the conversation early.\n\nNot sure what she would love? DM us. A real person answers.\n\n#finejewelry #jewelrygift #blackdiamond #handmadejewelry #dianarafael"
+      },
+      {
+       "id": "w1115-mon-16-post-fb",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "13:00",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "Gift carousel: 2026 DROP white starburst, black rose-gold ring, white marquise + customer photo",
+       "hook": "A gift that gets opened once and worn for years.",
+       "angle": "פוסט פיד + אלבום פייסבוק: תכשיט כמתנה (תומך בסדרת הבוקר)",
+       "music": "",
+       "thumbs": [
+        "2026-11-15-week/mon-16-post-1.jpg",
+        "2026-11-15-week/mon-16-post-2.jpg",
+        "2026-11-15-week/mon-16-post-3.jpg",
+        "2026-11-15-week/mon-16-post-4.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "A gift that gets opened once and worn for years.\n\nMost gifts get used up. A jewelry gift is the one she keeps reaching for, and every time she does, it carries a little of the person who chose it.\n\nEvery piece in this post was made at our bench this year: a white diamond starburst, a black diamond ring in rose gold, a marquise in white gold, and one customer's ring photographed where she wears it.\n\nMade to order pieces take up to 10 business days before they ship. If it's a holiday gift, start the conversation early.\n\nNot sure what she would love? DM us. A real person answers.\n\nhttps://dianarafael.com\n\n#finejewelry #jewelrygift #blackdiamond #handmadejewelry #dianarafael"
+      },
+      {
+       "id": "w1115-tue-17-review",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-17",
+       "time": "11:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Etsy buyer, 'looks like a tattoo') + custom invite",
+       "hook": "“This ring looks like a tattoo and sparkles in the right lighting. Very unique.” / Something unusual in mind? Tell us.",
+       "angle": "ביקורת חדשה: עיצוב יוצא דופן + הזמנה לעיצוב אישי",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/tue-17-review.jpg",
+        "2026-11-15-week/tue-17-review-f1.jpg",
+        "2026-11-15-week/tue-17-review-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/tue-17-review.mp4"
+      },
+      {
+       "id": "w1115-tue-17-reel",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-17",
+       "time": "13:00",
+       "platform": "ig_reel",
+       "format": "9:16",
+       "piece": "Reel · 2026 DROP: focus pull, light breaks up, then a pear diamond in tweezers (one shot)",
+       "hook": "(no text: the reveal is the hook)",
+       "angle": "ריל פיד + פייסבוק: שוט אחד מהשולחן, האור מתפרק ואז האבן בפוקוס; ככה מתחילה טבעת",
+       "music": "",
+       "thumbs": [
+        "2026-11-15-week/tue-17-reel.jpg",
+        "2026-11-15-week/tue-17-reel-f1.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "Before it becomes a ring, it's a stone between two tweezers, turning in the light.\n\nMany of our pieces start exactly like this at the bench: one stone, looked at from every side, until it's clear what it should become.\n\nThat's how custom jewelry should begin. Have a stone, an idea or a story you want to wear? DM us and we'll design around it.\n\n#diamond #customjewelry #finejewelry #handmadejewelry #dianarafael",
+       "video": "2026-11-15-week/tue-17-reel.mp4"
+      },
+      {
+       "id": "w1115-tue-17-reel-fb",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-17",
+       "time": "13:00",
+       "platform": "fb_reel",
+       "format": "9:16",
+       "piece": "Reel · 2026 DROP: focus pull, light breaks up, then a pear diamond in tweezers (one shot)",
+       "hook": "(no text: the reveal is the hook)",
+       "angle": "ריל פיד + פייסבוק: שוט אחד מהשולחן, האור מתפרק ואז האבן בפוקוס; ככה מתחילה טבעת",
+       "music": "",
+       "thumbs": [
+        "2026-11-15-week/tue-17-reel.jpg",
+        "2026-11-15-week/tue-17-reel-f1.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "Before it becomes a ring, it's a stone between two tweezers, turning in the light.\n\nMany of our pieces start exactly like this at the bench: one stone, looked at from every side, until it's clear what it should become.\n\nThat's how custom jewelry should begin. Have a stone, an idea or a story you want to wear? DM us and we'll design around it.\n\n#diamond #customjewelry https://dianarafael.com\n\n#finejewelry #handmadejewelry #dianarafael",
+       "video": "2026-11-15-week/tue-17-reel.mp4"
+      },
+      {
+       "id": "w1115-tue-17-vip",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-17",
+       "time": "20:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Black Friday tease (2/3) · 2026 DROP: black diamond ring, rose gold, in its box",
+       "hook": "Black Friday is for the pieces / you've been saving for. -> VIPs see everything first. Join the VIP list: link in bio",
+       "angle": "בלאק פריידי 2/3: לתכשיט שחיכיתם לו, VIP רואים ראשונים",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/tue-17-vip.jpg",
+        "2026-11-15-week/tue-17-vip-f1.jpg",
+        "2026-11-15-week/tue-17-vip-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/tue-17-vip.mp4"
+      },
+      {
+       "id": "w1115-wed-18-starz",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-18",
+       "time": "11:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "REMNANT: Starz band, hers (rose), on hand, tight crop",
+       "hook": "Whole, / not perfect. -> Starz band, from REMNANT · link in bio",
+       "angle": "ערך הקולקציה מעמוד המסרים: שלם, לא מושלם (מרים, לא אפל)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/wed-18-starz.jpg",
+        "2026-11-15-week/wed-18-starz-f1.jpg",
+        "2026-11-15-week/wed-18-starz-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/wed-18-starz.mp4"
+      },
+      {
+       "id": "w1115-wed-18-rts",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-18",
+       "time": "15:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Ready to ship: Pera Scura elongated black pear ring (guarded cutout on a dark ground)",
+       "hook": "PERA SCURA / $1,190 · was $2,349 -> Elongated black pear, semi bezel / One piece. Ready to ship.",
+       "angle": "מוכן למשלוח שלא הוצג עדיין, מחיר עכשיו/לפני",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/wed-18-rts.jpg",
+        "2026-11-15-week/wed-18-rts-f1.jpg",
+        "2026-11-15-week/wed-18-rts-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/wed-18-rts.mp4"
+      },
+      {
+       "id": "w1115-wed-18-review",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-18",
+       "time": "20:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Jilandrel) + tomorrow's band series",
+       "hook": "“I cannot even describe the perfection that is this ring! Now it’s time to order wedding band(s) and fiancé’s band!” / Tomorrow: the band that goes with the ring.",
+       "angle": "ביקורת חדשה שמזמינה את סדרת מחר (טבעת נישואין)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/wed-18-review.jpg",
+        "2026-11-15-week/wed-18-review-f1.jpg",
+        "2026-11-15-week/wed-18-review-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/wed-18-review.mp4"
+      },
+      {
+       "id": "w1115-band-1",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "10:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: the wedding band (1/5) · 2026 DROP: black cushion engagement ring + band set in its box",
+       "hook": "She said yes. / Now, the band that goes with it. -> Save this one.",
+       "angle": "סדרה: טבעת הנישואין לטבעת האירוסין 1/5 (פתיח)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/band-1.jpg",
+        "2026-11-15-week/band-1-f1.jpg",
+        "2026-11-15-week/band-1-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/band-1.mp4"
+      },
+      {
+       "id": "w1115-band-2",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "10:15",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: the wedding band (2/5) · 2026 DROP: the same set, video still",
+       "hook": "1. Curved or straight? / A curved band hugs the stone. A straight one sits beside it.",
+       "angle": "סדרה 2/5: מעוקלת או ישרה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/band-2.jpg",
+        "2026-11-15-week/band-2-f1.jpg",
+        "2026-11-15-week/band-2-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/band-2.mp4"
+      },
+      {
+       "id": "w1115-band-3",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "10:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: the wedding band (3/5) · 2026 DROP: two bands, rose and black pavé",
+       "hook": "2. Match the metal, / or mix it on purpose.",
+       "angle": "סדרה 3/5: אותו זהב או שילוב מכוון",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/band-3.jpg",
+        "2026-11-15-week/band-3-f1.jpg",
+        "2026-11-15-week/band-3-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/band-3.mp4"
+      },
+      {
+       "id": "w1115-band-4",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "10:45",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: the wedding band (4/5) · 2026 DROP: emerald-cut ring with an engraving inside",
+       "hook": "3. Add a word inside. / Only the two of you will read it.",
+       "angle": "סדרה 4/5: חריטה בפנים",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/band-4.jpg",
+        "2026-11-15-week/band-4-f1.jpg",
+        "2026-11-15-week/band-4-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/band-4.mp4"
+      },
+      {
+       "id": "w1115-band-5",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "11:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Series: the wedding band (5/5) · 2026 DROP: white diamond eternity band",
+       "hook": "Already have the ring? / Send us a photo. We'll design the band around it. -> Message us.",
+       "angle": "סדרה 5/5: שולחים תמונה של הטבעת, מתכננים סביבה",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/band-5.jpg",
+        "2026-11-15-week/band-5-f1.jpg",
+        "2026-11-15-week/band-5-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/band-5.mp4"
+      },
+      {
+       "id": "w1115-thu-19-post",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "13:00",
+       "platform": "ig_carousel",
+       "format": "4:5",
+       "piece": "Bands carousel: customer's bridal stack, two bands, eternity band, heart band, Starz hers",
+       "hook": "The second ring has a harder job than the first.",
+       "angle": "פוסט פיד + אלבום פייסבוק: טבעות נישואין (תומך בסדרת הבוקר)",
+       "music": "",
+       "thumbs": [
+        "2026-11-15-week/thu-19-post-1.jpg",
+        "2026-11-15-week/thu-19-post-2.jpg",
+        "2026-11-15-week/thu-19-post-3.jpg",
+        "2026-11-15-week/thu-19-post-4.jpg",
+        "2026-11-15-week/thu-19-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "The second ring has a harder job than the first.\n\nA wedding band sits right next to the engagement ring for years. It has to follow its shape, match or answer its gold, and still look good on its own.\n\nHere are bands from our bench and from our customers: a stack built around an engagement ring, two bands in two golds, a white diamond eternity band, a yellow gold band with a heart-cut diamond, and Starz from REMNANT.\n\nAlready have the engagement ring? DM us a photo and we'll design the wedding band around it.\n\n#weddingband #engagementring #blackdiamond #finejewelry #dianarafael"
+      },
+      {
+       "id": "w1115-thu-19-post-fb",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "13:00",
+       "platform": "fb_album",
+       "format": "4:5",
+       "piece": "Bands carousel: customer's bridal stack, two bands, eternity band, heart band, Starz hers",
+       "hook": "The second ring has a harder job than the first.",
+       "angle": "פוסט פיד + אלבום פייסבוק: טבעות נישואין (תומך בסדרת הבוקר)",
+       "music": "",
+       "thumbs": [
+        "2026-11-15-week/thu-19-post-1.jpg",
+        "2026-11-15-week/thu-19-post-2.jpg",
+        "2026-11-15-week/thu-19-post-3.jpg",
+        "2026-11-15-week/thu-19-post-4.jpg",
+        "2026-11-15-week/thu-19-post-5.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "The second ring has a harder job than the first.\n\nA wedding band sits right next to the engagement ring for years. It has to follow its shape, match or answer its gold, and still look good on its own.\n\nHere are bands from our bench and from our customers: a stack built around an engagement ring, two bands in two golds, a white diamond eternity band, a yellow gold band with a heart-cut diamond, and Starz from REMNANT.\n\nAlready have the engagement ring? DM us a photo and we'll design the wedding band around it.\n\n#weddingband #engagementring #blackdiamond https://dianarafael.com\n\n#finejewelry #dianarafael"
+      },
+      {
+       "id": "w1115-thu-19-review",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "20:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Etsy buyer, custom band) + invite",
+       "hook": "“I love this band! The seller helped me customize it with ease, and it turned out just as I’d hoped.” / Want a band made for yours? Message us.",
+       "angle": "ביקורת חדשה על טבעת נישואין בהתאמה אישית",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/thu-19-review.jpg",
+        "2026-11-15-week/thu-19-review-f1.jpg",
+        "2026-11-15-week/thu-19-review-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/thu-19-review.mp4"
+      },
+      {
+       "id": "w1115-fri-20-bench",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-20",
+       "time": "11:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "2026 DROP: white diamond starburst in a blue box",
+       "hook": "Some pieces take weeks / to look effortless. -> Made at our bench, 2026 · message us to make yours.",
+       "angle": "מהשולחן 2026: העבודה שמאחורי מה שנראה קל",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/fri-20-bench.jpg",
+        "2026-11-15-week/fri-20-bench-f1.jpg",
+        "2026-11-15-week/fri-20-bench-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/fri-20-bench.mp4"
+      },
+      {
+       "id": "w1115-fri-20-vip",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-20",
+       "time": "16:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Black Friday tease (3/3) · 2026 DROP: white diamond halo ring, white gold",
+       "hook": "One week / until Black Friday. -> VIPs hear first. Join the VIP list: link in bio",
+       "angle": "בלאק פריידי 3/3: שבוע לבלאק פריידי (עובדה, לא דדליין מזויף)",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/fri-20-vip.jpg",
+        "2026-11-15-week/fri-20-vip-f1.jpg",
+        "2026-11-15-week/fri-20-vip-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/fri-20-vip.mp4"
+      },
+      {
+       "id": "w1115-sat-21-cust",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-21",
+       "time": "14:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Real customer photo (edited): solitaire, two hands",
+       "hook": "Two hands. / One promise. -> A customer's photo. Thank you for sharing it.",
+       "angle": "תמונת לקוחות שלא הופיעה: שתי ידיים, הבטחה אחת",
+       "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/sat-21-cust.jpg",
+        "2026-11-15-week/sat-21-cust-f1.jpg",
+        "2026-11-15-week/sat-21-cust-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/sat-21-cust.mp4"
+      },
+      {
+       "id": "w1115-sat-21-review",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-21",
+       "time": "19:30",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "Review (Etsy buyer, earring) + invite",
+       "hook": "“Very cool and unique design, I will enjoy this beautiful earring!” / A question about a piece? Message us.",
+       "angle": "ביקורת חדשה על עגיל במוצאי שבת + הזמנה לשיחה",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-15-week/sat-21-review.jpg",
+        "2026-11-15-week/sat-21-review-f1.jpg",
+        "2026-11-15-week/sat-21-review-f6.jpg"
+       ],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "",
+       "video": "2026-11-15-week/sat-21-review.mp4"
+      },
+      {
+       "id": "w1115-he-mon-16",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-16",
+       "time": "13:00",
+       "platform": "fb_post",
+       "format": "text",
+       "piece": "פוסט בעברית: פייסבוק פרטי של דניאל + X + לינקדאין",
+       "hook": "בתקופה הזאת של השנה הרבה מהפניות שמגיעות אליי נשמעות אותו דבר: \"אני רוצה לקנות לה תכשיט ואין לי מושג מאיפה להתחיל\".",
+       "angle": "עברית, בלי מחירים, בקול של דניאל",
+       "music": "",
+       "thumbs": [],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "בתקופה הזאת של השנה הרבה מהפניות שמגיעות אליי נשמעות אותו דבר: \"אני רוצה לקנות לה תכשיט ואין לי מושג מאיפה להתחיל\".\n\nאז הנה מה שאני עונה לכולם:\nתסתכלו מה היא כבר עונדת. זהב צהוב, אדום או לבן, היא כבר בחרה. לכו איתה.\nלא בטוחים במידה? עגילים ושרשראות לא צריכים מידה.\nופרט אישי שווה יותר מגודל. משהו שקשור רק אליה.\n\nועוד דבר: מה שאנחנו מכינים לפי הזמנה לוקח עד 10 ימי עבודה עד שהוא נשלח. אז אם זו מתנה לחג, כדאי להתחיל לדבר מוקדם.\n\nhttps://dianarafael.com"
+      },
+      {
+       "id": "w1115-he-tue-17",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-17",
+       "time": "13:00",
+       "platform": "fb_post",
+       "format": "text",
+       "piece": "פוסט בעברית: פייסבוק פרטי של דניאל + X + לינקדאין",
+       "hook": "ככה מתחילות הרבה מהטבעות שלנו: יהלום אחד בין שתי פינצטות, ליד השולחן של הצורף, מסתובב מול האור עד שמבינים מה הוא צריך להיות.",
+       "angle": "עברית, בלי מחירים, בקול של דניאל",
+       "music": "",
+       "thumbs": [],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "ככה מתחילות הרבה מהטבעות שלנו: יהלום אחד בין שתי פינצטות, ליד השולחן של הצורף, מסתובב מול האור עד שמבינים מה הוא צריך להיות.\n\nרק אחרי זה מגיעים השרטוט, הזהב והשיבוץ.\n\nיש לכם אבן, רעיון או סיפור שאתם רוצים לענוד? תכתבו לי, ונתכנן סביבו.\n\nhttps://dianarafael.com"
+      },
+      {
+       "id": "w1115-he-thu-19",
+       "batch": "2026-11-15-week",
+       "date": "2026-11-19",
+       "time": "13:00",
+       "platform": "fb_post",
+       "format": "text",
+       "piece": "פוסט בעברית: פייסבוק פרטי של דניאל + X + לינקדאין",
+       "hook": "זוגות מתלבטים על טבעת האירוסין חודשים, ועל טבעת הנישואין לפעמים כמה דקות. ודווקא היא זו שצריכה להסתדר עם הראשונה כל יום.",
+       "angle": "עברית, בלי מחירים, בקול של דניאל",
+       "music": "",
+       "thumbs": [],
+       "images": [],
+       "status": "ממתין לאישור",
+       "caption": "זוגות מתלבטים על טבעת האירוסין חודשים, ועל טבעת הנישואין לפעמים כמה דקות. ודווקא היא זו שצריכה להסתדר עם הראשונה כל יום.\n\nשלושה דברים שאני בודק עם כל זוג:\nמעוקלת או ישרה. טבעת מעוקלת מחבקת את האבן, ישרה יושבת לידה.\nאותו צבע זהב, או שילוב של שני צבעים בכוונה.\nומילה בפנים, שרק שניכם תדעו שהיא שם.\n\nכבר יש לכם טבעת אירוסין? תשלחו לי תמונה, ונתכנן את הטבעת סביבה.\n\nhttps://dianarafael.com"
+      }
+     ]
     }
    ],
-   "next": "השבוע שאחרי (15–21.11) יוצג ביום רביעי 11.11",
+   "next": "השבוע שאחרי (22–28.11, עולם החורף + VIP/בלאק פריידי) יוצג ביום רביעי 18.11",
    "ig": {
     "fetched": "2026-10-19",
     "username": "dianarafaeljewelry",
