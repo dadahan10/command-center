@@ -180,7 +180,7 @@ def role_reviews(t, url, back, top_extra):
 
 
 def role_fit(t, url, back, top, thumb=None):
-    lead_html = (f'Not sure of your size? I help you measure at home. One resizing is included, and you have 14 days '
+    lead_html = (f'Not sure of your size? I help you measure at home. One resizing is included, and you have 30 days '
                  f'(<a class="l" href="{REFUND}" target="_blank">return policy</a>).')
     return sales_page(t, "Size, returns and care, answered in one minute.", top, "What if it doesn't fit?", lead_html,
                       [(back, url, True), ("Help me with my size", wa("Hi Daniel, can you help me with my ring size?"), False)],
