@@ -21,6 +21,16 @@ def row(size, bg, fg, ring):
 
 full = ''.join(f'<figure><img src="covers/{k}.png"><figcaption><b>{t}</b> &middot; {s}<br><small>{JEWEL[k]}</small>'
                f'</figcaption></figure>' for k, t, s in ORDER)
+QA = {
+ 'gifts': 'Pass. Real pendant re-pasted where the model put it; one faint gold squiggle top-left of the bail is AI residue (invisible below 300px).',
+ 'sale': 'Pass with note. The model had recoloured and moved the bracelet; its copy was erased (snow inpainted) and the real yellow-gold King Cobra laid on the bed. Inside the loop the snow is slightly smoother than the rest.',
+ 'remnant': 'Pass. Disturbed ring 480px wide (was 330 in v2), nested in the shard heap - no floating.',
+ 'bd': 'Pass. Real Abyssal hoops; black pave on salt-and-pepper snow is low-contrast at 64px.',
+ 'reviews': 'Pass. Heart ring rests on the burgundy drift; no pink cast.',
+ 'mto': 'Pass. Silver filings regraded to rose-gold filings (snow only) so it does not read as Black Diamonds at 64px.',
+ 'care': 'Pass. Split-shank openings kept open (no marble fill); milky glow is the brightest globe in the set.',
+}
+qa = ''.join(f'<tr><td style="padding:4px 12px 4px 0;color:#cfb288;vertical-align:top">{t}</td><td style="padding:4px 0">{QA[k]}</td></tr>' for k, t, _ in ORDER)
 html = f"""<!doctype html><html><head><meta charset="utf-8"><title>Highlight covers v3</title>
 <style>
 body{{margin:0;background:#141414;color:#e9e4da;font:14px/1.4 -apple-system,Segoe UI,Helvetica,Arial,sans-serif;padding:28px}}
@@ -41,8 +51,11 @@ The rows below are the true on-profile sizes (64px phone, 110px desktop), croppe
 <div class="pair">{row(64, '#ffffff', '#262626', '#dbdbdb')}{row(64, '#000000', '#f5f5f5', '#363636')}</div>
 <h2>At 110px</h2>
 <div class="pair">{row(110, '#ffffff', '#262626', '#dbdbdb')}{row(110, '#000000', '#f5f5f5', '#363636')}</div>
+<h2>REMNANT motion (3 s) &mdash; black-diamond shards falling</h2>
+<video src="covers/remnant-shards.mp4" autoplay loop muted playsinline style="width:360px;border-radius:6px"></video>
 <h2>Full size (1080 &times; 1080)</h2>
 <div class="full">{full}</div>
+<h2>QA (ai-image-qa)</h2><table style="border-collapse:collapse;max-width:1100px">{qa}</table>
 </body></html>"""
 open(os.path.join(HERE, 'board.html'), 'w', encoding='utf8').write(html)
 chrome = r'C:\Program Files\Google\Chrome\Application\chrome.exe'
