@@ -291,6 +291,8 @@ def paste(cid):
             O = cv2.seamlessClone(L[:, :, :3], O, m, ctr, cv2.NORMAL_CLONE)
             out = Image.fromarray(O).convert('RGBA')
             continue
+        elif cid == 'B' and i == 0:   # the model shrank the huggies to ~half and set them on the snow
+            lay = locate(img, place((2176, H), PIECES['huggie'](), 300, (582, 935)), np.arange(0.44, 0.62, 0.02), 90)
         elif cid in ('B',) or cid.startswith('C'):
             lay = locate(img, lay, np.arange(0.5, 1.26, 0.03), 320)
         else:
