@@ -1,0 +1,60 @@
+            {%- if dr_gift_on -%}
+            {%- assign dr_gift_style = section.settings.xmas_gift_style | default: 'eve' -%}
+            {%- capture dr_star -%}<svg class="dr-xg__star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0c.6 6.2 2.3 9.9 4.9 11.1 2 .9 4.4 1 7.1.9-2.7.1-5.1.4-7.1 1.3C14.3 14.6 12.6 18.1 12 24c-.6-5.9-2.3-9.4-4.9-10.7C5.1 12.4 2.7 12.1 0 12c2.7.1 5.1 0 7.1-.9C9.7 9.9 11.4 6.2 12 0z" fill="currentColor"/></svg>{%- endcapture -%}
+            {%- if dr_gift_style == 'box' -%}
+            <div class="dr-xg dr-xg--box">
+              <div class="dr-xg__media"><img src="{{ 'dr-xmas-gift-box.jpg' | asset_url }}" alt="Natural black diamond stud earrings in an open gift box on burgundy felt" width="1024" height="1024" loading="lazy"></div>
+              <div class="dr-xg__panel">
+                <span class="dr-xg__ribbon" aria-hidden="true"></span>
+                {{ dr_star }}
+                <p class="dr-xg__eyebrow">Christmas, from us</p>
+                <p class="dr-xg__title">A gift for her.<br>A gift from us.</p>
+                <p class="dr-xg__sub">Natural black diamond studs, free with orders from $2,000.</p>
+              </div>
+            </div>
+            {%- else -%}
+            <div class="dr-xg dr-xg--eve">
+              <img class="dr-xg__bg" src="{{ 'dr-xmas-gift-eve.jpg' | asset_url }}" alt="Natural black diamond stud earrings on slate under Christmas tree lights" width="1536" height="1024" loading="lazy">
+              <div class="dr-xg__copy">
+                <p class="dr-xg__eyebrow">{{ dr_star }}Christmas Eve</p>
+                <p class="dr-xg__title">A gift for her.<br>A gift from us.</p>
+                <p class="dr-xg__sub">Natural black diamond studs,<br>free with orders from $2,000.</p>
+              </div>
+            </div>
+            {%- endif -%}
+            <style>
+              .dr-xg{position:relative;overflow:hidden;margin-top:4px;color:#F4EFE6;text-align:left;font-family:var(--text-font-family)}
+              .dr-xg p{margin:0}
+              .dr-xg__star{width:11px;height:11px;color:#CFB288;display:inline-block;vertical-align:-1px}
+              .dr-xg__eyebrow{font-family:var(--heading-font-family);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#CFB288}
+              .dr-xg__title{font-family:var(--heading-font-family);font-weight:300;font-size:21px;line-height:1.22;letter-spacing:.02em;color:#F4EFE6;margin-top:10px!important}
+              .dr-xg__sub{font-size:12.5px;line-height:1.5;letter-spacing:.01em;color:rgba(244,239,230,.74);margin-top:10px!important}
+              /* A - Christmas Eve, full-bleed */
+              .dr-xg--eve{background:#050505;aspect-ratio:3/2;min-height:230px}
+              .dr-xg--eve .dr-xg__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%;display:block}
+              .dr-xg--eve::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.86) 0%,rgba(5,5,5,.55) 38%,rgba(5,5,5,0) 62%)}
+              .dr-xg--eve::before{content:"";position:absolute;z-index:2;inset:7px;border:1px solid rgba(207,178,136,.28);pointer-events:none}
+              .dr-xg--eve .dr-xg__copy{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 22px 20px;max-width:58%}
+              .dr-xg--eve .dr-xg__eyebrow .dr-xg__star{margin-right:8px}
+              /* B - The opened gift, split */
+              .dr-xg--box{display:grid;grid-template-columns:46% 1fr;background:#7a1f2e;min-height:210px}
+              .dr-xg--box .dr-xg__media{position:relative;min-height:100%}
+              .dr-xg--box .dr-xg__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 46%;display:block}
+              .dr-xg--box .dr-xg__panel{position:relative;padding:22px 20px 20px 26px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(120% 90% at 100% 0%,#8d2a3a 0%,#7a1f2e 45%,#5e1622 100%)}
+              .dr-xg--box .dr-xg__ribbon{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(90deg,#0b0b0b 0 2px,#CFB288 2px 3px,#0b0b0b 3px 4px,#CFB288 4px 5px,transparent 5px)}
+              .dr-xg--box .dr-xg__star{width:14px;height:14px;margin-bottom:10px}
+              .dr-xg--box .dr-xg__eyebrow{color:#E6CFA6}
+              .dr-xg--box .dr-xg__sub{color:rgba(244,239,230,.82)}
+              @media (max-width:699px){
+                .dr-xg__title{font-size:19px}
+                .dr-xg--eve{aspect-ratio:auto;min-height:250px}
+                .dr-xg--eve .dr-xg__bg{object-position:80% 50%}
+                .dr-xg--eve::after{background:linear-gradient(90deg,rgba(5,5,5,.9) 0%,rgba(5,5,5,.62) 45%,rgba(5,5,5,0) 72%)}
+                .dr-xg--eve .dr-xg__copy{max-width:64%;padding:20px 18px 18px;min-height:250px}
+                .dr-xg--box{grid-template-columns:1fr;min-height:0}
+                .dr-xg--box .dr-xg__media{aspect-ratio:16/10}
+                .dr-xg--box .dr-xg__media img{object-position:50% 52%}
+                .dr-xg--box .dr-xg__panel{padding:22px 20px 22px;align-items:center;text-align:center}
+                .dr-xg--box .dr-xg__ribbon{left:0;right:0;top:0;bottom:auto;width:auto;height:5px;background:linear-gradient(180deg,#0b0b0b 0 1px,#CFB288 1px 2px,#0b0b0b 2px 3px,#CFB288 3px 4px,transparent 4px)}
+              }
+            </style>
