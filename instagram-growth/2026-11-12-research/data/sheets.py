@@ -40,6 +40,13 @@ for c in codes:
         sheet([a for a,_ in fr], [b for _,b in fr], out / f"{H}-{c}.jpg", w=220, cols=8)
     else:
         ch = m.get("children", {}).get("data", []) or [m]
-        fs = [get(x["media_url"], tmp / f"{c}-{i}.jpg") for i, x in enumerate(ch) if x.get("media_type") != "VIDEO" and x.get("media_url")]
+        fs = []
+        for i, x in enumerate(ch):
+            if not x.get("media_url"): continue
+            if x.get("media_type") != "VIDEO": fs.append(get(x["media_url"], tmp / f"{c}-{i}.jpg")); continue
+            v = get(x["media_url"], tmp / f"{c}-{i}.mp4"); f = tmp / f"{c}-{i}-f.jpg"
+            dur = float(subprocess.run(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",str(v)],capture_output=True,text=True).stdout.strip() or 0)
+            subprocess.run(["ffmpeg","-y","-v","error","-ss",str(round(dur*0.6,1)),"-i",str(v),"-frames:v","1",str(f)])
+            if f.exists(): fs.append(f)
         sheet(fs, [str(i+1) for i in range(len(fs))], out / f"{H}-{c}.jpg", w=300, cols=5)
     print("ok", c)
