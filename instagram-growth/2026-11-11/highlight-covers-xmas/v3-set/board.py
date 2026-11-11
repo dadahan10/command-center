@@ -3,7 +3,7 @@ the way Instagram crops a highlight) on a light and a dark profile background, s
 Writes board.html (+ board.png via headless Chrome)."""
 import os, subprocess, json
 HERE = os.path.dirname(os.path.abspath(__file__))
-ORDER = [('gifts', 'Gifts', 'gold-leaf flakes'), ('sale', 'Sale', 'snow settled, deep white bed'),
+ORDER = [('gifts', 'Gifts', 'gold-leaf flakes'), ('sale', 'Sale', 'snow settled high, cool silver glow'),
          ('remnant', 'REMNANT', 'black-diamond shards'), ('bd', 'Black Diamonds', 'black + white snow'),
          ('reviews', 'Reviews', 'burgundy glitter + star sparkles'), ('mto', 'Made to Order', 'rose-gold bench filings'),
          ('care', 'Ring Care', 'fine white powder mist')]
@@ -23,7 +23,7 @@ full = ''.join(f'<figure><img src="covers/{k}.png"><figcaption><b>{t}</b> &middo
                f'</figcaption></figure>' for k, t, s in ORDER)
 QA = {
  'gifts': 'Pass. Real pendant re-pasted where the model put it; one faint gold squiggle top-left of the bail is AI residue (invisible below 300px).',
- 'sale': 'Pass with note. The model had recoloured and moved the bracelet; its copy was erased (snow inpainted) and the real yellow-gold King Cobra laid on the bed. Inside the loop the snow is slightly smoother than the rest.',
+ 'sale': 'Pass (reworked 11.11 in code - OpenAI out of credit). Bed raised to 60% of the globe (procedural powder), cool silver glow inside so it no longer reads as a dark globe, real yellow-gold King Cobra enlarged to 620px and sunk into the bed with a contact shadow. Globe and base are the shared plate pixels.',
  'remnant': 'Pass. Disturbed ring 480px wide (was 330 in v2), nested in the shard heap - no floating.',
  'bd': 'Pass. Real Abyssal hoops; black pave on salt-and-pepper snow is low-contrast at 64px.',
  'reviews': 'Pass. Heart ring rests on the burgundy drift; no pink cast.',

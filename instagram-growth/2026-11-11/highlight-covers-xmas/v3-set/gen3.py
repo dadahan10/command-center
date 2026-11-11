@@ -42,7 +42,7 @@ COVERS = {
         "the snow is GOLD: hundreds of thin flakes of beaten 24k gold leaf, crinkled, catching the light, drifting "
         "through the liquid around the jewel, densest in the upper half, and a low glittering drift of gold flakes on "
         "the floor of the globe (the floor sits at 74% of the sphere height). The whole globe glows warm gold. ")),
-    'sale': dict(piece='king-cobra-yg', w=500, floor=0.62, force=((560, 640), 1.0), erase=(310, 584, 820, 722), fill=False, snow=(
+    'sale': dict(piece='king-cobra-yg', w=620, floor=0.60, force=((546, 492), 1.0), shadow=0.5, fill=False, snow=(
         "the snow has almost all SETTLED: a deep, smooth bed of fine white powder snow fills the lower part of the "
         "globe, and its flat surface is exactly level with the lower edge of the tennis bracelet, which lies on top of "
         "the bed where it already is; only a handful of last flakes still drift in the clear dark liquid above. ")),
