@@ -1,0 +1,4 @@
+C-gifts raw (1088, 1920)
+  match 0.969 scale 1.01 at (654, 1042)
+  match 0.853 scale 0.8 at (568, 692)
+C-gifts final

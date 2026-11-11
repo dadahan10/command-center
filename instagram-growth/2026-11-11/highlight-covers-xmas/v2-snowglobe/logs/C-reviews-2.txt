@@ -1,0 +1,4 @@
+C-reviews raw (1088, 1920)
+  match 0.931 scale 1.06 at (620, 922)
+  match 0.947 scale 1.25 at (508, 610)
+C-reviews final

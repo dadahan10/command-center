@@ -1,0 +1,4 @@
+B raw (2176, 1920)
+  match 0.916 scale 0.8 at (598, 1106)
+  match 0.866 scale 0.86 at (1567, 1060)
+B final

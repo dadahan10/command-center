@@ -1,0 +1,3 @@
+A-remnant raw (1088, 1920)
+  match 0.992 scale 0.95 at (551, 896)
+A-remnant final

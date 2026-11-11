@@ -1,0 +1,3 @@
+A-bd raw (1088, 1920)
+  match 0.983 scale 1.01 at (544, 850)
+A-bd final
