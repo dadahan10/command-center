@@ -1,0 +1,3 @@
+night-remnant raw (1088, 1920)
+night-remnant match 0.962 435 (np.int64(539), np.int64(1074))
+night-remnant final
