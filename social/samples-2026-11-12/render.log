@@ -1,0 +1,19 @@
+band-4 -> C:\Users\USER\OneDrive\Desktop\CLAUDE CODE PROJECTS\command-center\social\samples-2026-11-12\band-4.mp4
+Traceback (most recent call last):
+  File "C:\Users\USER\OneDrive\Desktop\CLAUDE CODE PROJECTS\command-center\social\samples-2026-11-12\render.py", line 307, in <module>
+    {"gift": story_gift, "engrave": story_engrave, "bench": story_bench}[w]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\USER\OneDrive\Desktop\CLAUDE CODE PROJECTS\command-center\social\samples-2026-11-12\render.py", line 301, in story_bench
+    encode("fri-20-bench", frames(), n)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\OneDrive\Desktop\CLAUDE CODE PROJECTS\command-center\social\samples-2026-11-12\render.py", line 133, in encode
+    for i, fr in enumerate(frames_iter):
+                 ~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\USER\OneDrive\Desktop\CLAUDE CODE PROJECTS\command-center\social\samples-2026-11-12\render.py", line 284, in frames
+    im = cover_crop(vise, VA["cx"], cy, w)
+  File "C:\Users\USER\OneDrive\Desktop\CLAUDE CODE PROJECTS\command-center\social\samples-2026-11-12\render.py", line 111, in cover_crop
+    return im.resize((W, H), Image.LANCZOS, box=box)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\OneDrive\Desktop\CLAUDE CODE PROJECTS\TradingAgents\.venv\Lib\site-packages\PIL\Image.py", line 2438, in resize
+    im = self.im.resize(size, resample, box)
+ValueError: box offset can't be negative
