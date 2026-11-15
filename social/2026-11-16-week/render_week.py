@@ -193,7 +193,7 @@ def price_card(name, cutname, old, new, title, sub, extra=None, track=1):
             lines = [(old, "LIGHT", sz_o, (150, 140, 128), y_old, 3, -1),
                      (new, "BOLD", sz_n, SAND, y_new, 4, .55)]
             if t > 1.9:
-                lines += [("ALREADY 15% OFF", "MEDIUM", 44, CREAM, 290 - 0 * mv, 8, 1.9)]
+                lines += [("ALREADY 15% OFF", "MEDIUM", 44, CREAM, 610, 8, 1.9)]
             lines += [(title, "BOLD", 70, CREAM, 1440, 6, 3.0), (sub, "LIGHT", 52, CREAM, 1528, 1, 3.2)]
             if extra:
                 lines += [(extra, "MEDIUM", 40, SAND, 1612, 5, 4.0)]
@@ -283,7 +283,7 @@ def zodiac():
     def frames():
         for i in range(n):
             t = i / FPS
-            base = bg.copy(); lines = []
+            base = bg.copy(); lines = []; labs = []
             for j, (el, _) in enumerate(items):
                 t0 = j * .6
                 if t < t0:
@@ -292,13 +292,17 @@ def zodiac():
                 c = cs[j]; s = min(400 / c.width, 330 / c.height) * (1.35 - .35 * p)
                 base, al = R.paste_cut(base, c, pos[j][0], pos[j][1], s, blur=(1 - p) * 6)
                 base = base + glint(al, t, 4.4 + j * .15, .8)[..., None] * 255
-                lines.append((el, "MEDIUM", 40, SAND, pos[j][1] + 175, 9, t0 + .2))
+                lab = text([(el, "MEDIUM", 40, SAND, pos[j][1] + 175, 9, t0 + .2)], t)
+                labs.append((lab, int(pos[j][0] - W / 2)))
             base = base * vig
             lines = [("Fire, earth,", "LIGHT", 76, CREAM, 300, 2, -1),
                      ("AIR OR WATER?", "BOLD", 104, SAND, 392, 5, .1)] + lines + \
                     [("Tell us her sign.", "LIGHT", 60, CREAM, 1500, 1, 3.0),
                      ("We'll tell you her ring.", "BOLD", 66, CREAM, 1576, 1, 3.3)]
             lay = text(lines, t)
+            for lab, dx in labs:
+                L = Image.new("RGBA", (W, H), (0, 0, 0, 0)); L.alpha_composite(lab, (dx, 0)) if dx >= 0 else L.alpha_composite(lab.crop((-dx, 0, W, H)), (0, 0))
+                lay.alpha_composite(L)
             yield np.clip(comp(base, lay), 0, 255).astype(np.uint8)
     run("thu-19-zodiac", frames, n, 1)
 
@@ -454,7 +458,7 @@ def fphoto(fname, cx, cy, w, out, lines, veil_top=.0, veil_bottom=.0, col=INK):
 
 def feed():
     # MON 16 carousel: the gift that comes with a gift (studs + three pieces over $2,000)
-    fstuds("mon-16-post-1.jpg", [("THE STUDS ARE ON US.", "BOLD", 74, SAND, 120, 4),
+    fstuds("mon-16-post-1.jpg", [("THE STUDS", "BOLD", 104, SAND, 70, 6), ("ARE ON US.", "BOLD", 104, SAND, 190, 6),
                                  ("Every order over $2,000 comes", "LIGHT", 50, CREAM, 1140, 1),
                                  ("with black diamond studs. Free.", "LIGHT", 50, CREAM, 1204, 1)])
     fcut("centauri-r34", out="mon-16-post-2.jpg", lines=[("CENTAURI", "BOLD", 60, CREAM, 1110, 12),
@@ -518,14 +522,14 @@ STORIES = {
                                  ("Made for her hand,", "LIGHT", 60, INK, 1450, 1, 3.4),
                                  ("15% off already.", "BOLD", 70, INK, 1526, 1, 3.7),
                                  ("WHITE DIAMONDS TOO, NOT ONLY BLACK", "MEDIUM", 38, (120, 92, 52), 1636, 5, 4.4)], track=0),
-    "sat-21-review": lambda: push("sat-21-review", "IMG20261001124943.jpg", dict(cx=930, cy=1250, w=700),
-                                  dict(cx=940, cy=1700, w=1880),
+    "sat-21-review": lambda: push("sat-21-review", "IMG20261001124943.jpg", dict(cx=930, cy=1300, w=760),
+                                  dict(cx=940, cy=1671, w=1880),
                                   [("550+ REVIEWS.", "BOLD", 110, INK, 300, 6, .3),
                                    ("Here is one of them.", "LIGHT", 62, INK, 430, 1, .7),
-                                   ("“Very cool and unique design,", "LIGHT", 56, INK, 1420, 1, 2.6),
-                                   ("I will enjoy this beautiful", "LIGHT", 56, INK, 1488, 1, 2.9),
-                                   ("earring for years to come.”", "LIGHT", 56, INK, 1556, 1, 3.2),
-                                   ("15% OFF EVERY PIECE, NOW", "MEDIUM", 40, (120, 92, 52), 1650, 7, 4.2)], track=1),
+                                   ("“The ring is beautiful, my fiancee loves it.", "LIGHT", 50, INK, 1330, 1, 2.6),
+                                   ("Daniel was very helpful", "LIGHT", 50, INK, 1392, 1, 2.9),
+                                   ("when I had questions.”", "LIGHT", 50, INK, 1454, 1, 3.2),
+                                   ("15% OFF EVERY PIECE, NOW", "MEDIUM", 40, (120, 92, 52), 1540, 7, 4.2)], track=1),
     "sun-22-bf": bf_reveal,
     "sun-22-all": lambda: push("sun-22-all", "IMG20260907095037.jpg", dict(cx=1500, cy=1620, w=760),
                                dict(cx=1520, cy=1900, w=2900),
