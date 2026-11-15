@@ -1,0 +1,41 @@
+{
+ "id": "73974045",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "completed",
+  "main_action": {
+   "id": "27953568",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": null,
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "Did you see something you like?",
+     "preview_text": "Ready to make it yours? \ud83d\udecd\ufe0f",
+     "template_id": "RsYy37",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": false,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Browse Abandonment Email+ SMS- Email #1",
+     "id": "S6GMed"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": null,
+  "concluded_experiment_id": "01JFEYF7HAM0AN7SCKAEGT9YJA",
+  "winning_variation_id": "73974046"
+ },
+ "links": {
+  "next": "64122346"
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "id": "73974378",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "completed",
+  "main_action": {
+   "id": "27953569",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": null,
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "Why You Should Count on Us? \ud83d\udc8d",
+     "preview_text": "Over 400 5-star reviews!",
+     "template_id": "T69UQN",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": false,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Browse Abandonment Email+ SMS- Email #2",
+     "id": "VFyyfb"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": null,
+  "concluded_experiment_id": "01JFEZ8SNZ8WEKDYFJDBQR9G1Z",
+  "winning_variation_id": "73974379"
+ },
+ "links": {
+  "next": "59309265"
+ }
+}

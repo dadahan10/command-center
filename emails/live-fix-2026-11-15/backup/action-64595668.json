@@ -1,0 +1,27 @@
+{
+ "id": "64595668",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": null,
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Exclusive Offer: Shop Now with Affirm & Save 10%!",
+   "preview_text": "",
+   "template_id": "UBbzpM",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandoned Checkout Reminder Email #7",
+   "id": "Rru67M"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": null
+ }
+}

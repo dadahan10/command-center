@@ -1,0 +1,27 @@
+{
+ "id": "51611253",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Daniel of Diana Rafael",
+   "reply_to_email": null,
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Your Sparkle is About to Fade Away \ud83d\udcab\ud83d\udc8e",
+   "preview_text": "Ignite your spark abd take that big step you been wanting. It's time",
+   "template_id": "USZ7dd",
+   "smart_sending_enabled": false,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandoned Checkout Reminder Email #4",
+   "id": "TExD4m"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "40359483"
+ }
+}

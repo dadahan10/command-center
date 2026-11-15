@@ -1,0 +1,27 @@
+{
+ "id": "40359483",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "customercare@dianarafael.com",
+   "from_label": "Daniel - Diana Rafael",
+   "reply_to_email": null,
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Have Any Questions? Let's Meet!",
+   "preview_text": "We take it you might have a question or two.",
+   "template_id": "XWZA4z",
+   "smart_sending_enabled": false,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandoned Checkout Reminder Email #5",
+   "id": "SP9bMD"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "40358964"
+ }
+}

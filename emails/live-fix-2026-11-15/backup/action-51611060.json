@@ -1,0 +1,27 @@
+{
+ "id": "51611060",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": null,
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Why DIana Rafael?",
+   "preview_text": "You should only choose your jewelrt once. Here is why you should consider Diana Rafael",
+   "template_id": "QNZb92",
+   "smart_sending_enabled": false,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandoned Checkout Reminder Email #3",
+   "id": "R4hG8Q"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "55474450"
+ }
+}
