@@ -28,10 +28,23 @@ MUSIC_DIR = os.path.dirname(R.MUSIC)
 TRACKS = [R.MUSIC, os.path.join(MUSIC_DIR, "musinova-minimal-underscore-piano-pulse-518251.mp3")]
 STUDS = os.path.join(HERE, "..", "..", "emails", "flow-templates", "redesign-2026-11-04", "images", "studs.jpg")
 seg, ease, eout, comp, glint = R.seg, R.ease, R.eout, R.comp, R.glint
+sys.path.insert(0, HERE)
+from sky import Sky, plate  # noqa: E402  15.11 fix: night-sky world instead of flat black (Daniel)
+
+_SKY = {}
+
+
+def skybg(t, T, seed=7, cy=.5, amt=.10):
+    """the night-sky world, drifting slowly (the world moves, the jewel stays), with a soft warm halo behind the jewel."""
+    if seed not in _SKY:
+        _SKY[seed] = (Sky("story", seed=seed), R.glow_bg(color=(0, 0, 0), glow=SAND, cy=cy, amt=amt))
+    sk, halo = _SKY[seed]
+    return sk.frame(t, T) + halo
 
 
 def cut(name):
-    im = Image.open(os.path.join(SRC, name + "-cut.png")).convert("RGBA")
+    clean = os.path.join(SRC, name + "-cut-clean.png")   # hand-checked re-cut (15.11: Algol leftover)
+    im = Image.open(clean if os.path.exists(clean) else os.path.join(SRC, name + "-cut.png")).convert("RGBA")
     a = np.asarray(im.split()[3])
     # keep only the main blob (drops the stray reflection rembg keeps under some renders)
     from scipy import ndimage
@@ -124,7 +137,7 @@ def run(name, frames, n, track=0):
 def mon_studs():
     T = 7.0; n = int(T * FPS)
     src = R.grade(Image.open(STUDS).convert("RGB"), warm=1.02, sat=1.0, con=1.08, bri=.95)
-    bg = R.glow_bg(cy=.5, amt=.14); vig = R.vignette(.5)
+    vig = R.vignette(.5)
     yy = np.arange(H)[:, None]
     # band of the studs photo, feathered top/bottom so it sits inside the ink world
     def band(scale, cx_off):
@@ -147,7 +160,7 @@ def mon_studs():
             s = 2.1 - (2.1 - .95) * k + .04 * seg(t, 1.6, T)          # tight on the left stud's facets -> pull back
             off = (1 - k) * 380                                         # start centred on the left stud
             L, (x, y, w, h) = band(s, off)
-            base = R.comp(bg.copy(), L)
+            base = R.comp(skybg(t, T, 3), L)
             # light sweep over the stones (hook at frame 0, again at 4.2 s)
             a = np.zeros((H, W)); a[max(0, y):min(H, y + h), max(0, x):min(W, x + w)] = 1
             base = base + (glint(a, t, -.1, .9, 160, .35) + glint(a, t, 4.2, 1.1, 160, .28))[..., None] * 255
@@ -171,13 +184,14 @@ def price_card(name, cutname, old, new, title, sub, extra=None, track=1):
     c = R.grade(c.convert("RGB"), warm=1.02, sat=1.04, con=1.08, bri=1.03).convert("RGBA")
     c.putalpha(cut(cutname).split()[3])
     s_fit = 820 / max(c.width, c.height * .9)
-    bg = R.glow_bg(cy=.52, amt=.18); vig = R.vignette(.5)
+    vig = R.vignette(.5)
     wo = text_width(old, "LIGHT", 150, 3)
 
     def frames():
         for i in range(n):
             t = i / FPS
             mv = ease(seg(t, 1.5, 2.3))                   # prices travel up, ring arrives
+            bg = skybg(t, T, 5, .52, .12)
             if t < 1.5:
                 base = bg.copy()
                 al = np.zeros((H, W))
@@ -185,7 +199,7 @@ def price_card(name, cutname, old, new, title, sub, extra=None, track=1):
                 k = ease(seg(t, 1.5, 3.0))
                 sc = s_fit * (1.25 - .25 * k)
                 blur = (1 - seg(t, 1.5, 2.2)) * 10
-                base, al = R.paste_cut(bg.copy(), c, W / 2, 1000 - 8 * math.sin(t * 1.2), sc, blur)
+                base, al = R.paste_cut(bg, c, W / 2, 1000 - 8 * math.sin(t * 1.2), sc, blur)
                 base = base + glint(al, t, 3.6, 1.0)[..., None] * 255
             base = base * vig
             y_old = 640 - 330 * mv; y_new = 820 - 360 * mv
@@ -213,7 +227,7 @@ def many(name, cuts, top, bottom, track=0):
         c = cut(cn)
         g = R.grade(c.convert("RGB"), warm=1.02, sat=1.03, con=1.08, bri=1.03).convert("RGBA"); g.putalpha(c.split()[3])
         cs.append(g)
-    bg = R.glow_bg(cy=.5, amt=.16); vig = R.vignette(.5)
+    vig = R.vignette(.5)
     beat = .42
     cols, rows = 2, 3
     cell_w, cell_h = 430, 300
@@ -222,7 +236,7 @@ def many(name, cuts, top, bottom, track=0):
     def frames():
         for i in range(n):
             t = i / FPS
-            base = bg.copy()
+            base = skybg(t, T, 11)
             if t < beat * len(cs):
                 j = int(t / beat); tt = t - j * beat
                 c = cs[j]; s = 780 / max(c.width, c.height)
@@ -277,13 +291,13 @@ def zodiac():
     T = 8.0; n = int(T * FPS)
     items = [("FIRE", "corcaroli-r34"), ("EARTH", "pleiades-y"), ("AIR", "polaris-y"), ("WATER", "selkie-w")]
     cs = [cut(c) for _, c in items]
-    bg = R.glow_bg(cy=.52, amt=.14); vig = R.vignette(.5)
+    vig = R.vignette(.5)
     pos = [(W * .28, 800), (W * .72, 800), (W * .28, 1190), (W * .72, 1190)]
 
     def frames():
         for i in range(n):
             t = i / FPS
-            base = bg.copy(); lines = []; labs = []
+            base = skybg(t, T, 13, .52, .08); lines = []; labs = []
             for j, (el, _) in enumerate(items):
                 t0 = j * .6
                 if t < t0:
@@ -311,7 +325,7 @@ def zodiac():
 def algol():
     T = 7.5; n = int(T * FPS)
     c = cut("algol-y")
-    bg = R.glow_bg(cy=.5, amt=.2); vig = R.vignette(.5)
+    vig = R.vignette(.5)
     s_fit = 820 / c.width
     s_native = 1.0
     wo = text_width("$3,600", "LIGHT", 96, 3)
@@ -322,7 +336,7 @@ def algol():
             k = ease(seg(t, 0, 2.2))
             sc = s_native * (1 - k) + s_fit * k
             cy = 1000 + (1 - k) * 60
-            base, al = R.paste_cut(bg.copy(), c, W / 2, cy, sc, shadow=k > .5)
+            base, al = R.paste_cut(skybg(t, T, 17, .5, .12), c, W / 2, cy, sc, shadow=False)
             base = base + (glint(al, t, .05, .8, 150, .5) + glint(al, t, 4.6, 1.0))[..., None] * 255
             base = base * vig
             lay = text([("ALGOL", "BOLD", 110, CREAM, 300, 14, 2.0),
@@ -339,7 +353,7 @@ def algol():
 def pendant():
     T = 7.5; n = int(T * FPS)
     c = cut("noireclipse")
-    bg = R.glow_bg(cy=.46, amt=.16); vig = R.vignette(.5)
+    vig = R.vignette(.5)
     s = 1080 / c.height
     wo = text_width("$1,400", "LIGHT", 70, 3)
 
@@ -350,7 +364,7 @@ def pendant():
             ang = 9 * math.exp(-1.1 * t) * math.cos(5.2 * t)
             r = c.rotate(ang, resample=Image.BICUBIC, expand=True)
             cy = -700 + (860 + 700) * drop
-            base, al = R.paste_cut(bg.copy(), r, W / 2, cy, s)
+            base, al = R.paste_cut(skybg(t, T, 19, .46, .10), r, W / 2, cy, s)
             base = base + glint(al, t, 3.2, 1.0, 120, .5)[..., None] * 255
             base = base * vig
             head = text([("For under the tree:", "LIGHT", 70, CREAM, 1380, 1, 1.4),
@@ -401,6 +415,15 @@ FW, FH = 1080, 1350
 
 
 def fglow(cy=.5, amt=.18):
+    """15.11: the feed sits in the same night sky as the stories (no flat black)."""
+    import cv2
+    p = cv2.resize(plate("feed", 1280, 1600), (FW, FH), interpolation=cv2.INTER_AREA).astype(float)
+    y, x = np.ogrid[:FH, :FW]
+    r = np.sqrt(((x - FW / 2) / FW) ** 2 + ((y - FH * cy) / FW) ** 2) / .45
+    return p + np.array(SAND, float)[None, None] * (np.clip(1 - r, 0, 1) ** 2 * amt * .5)[..., None]
+
+
+def _fglow_flat(cy=.5, amt=.18):
     y, x = np.ogrid[:FH, :FW]
     r = np.sqrt(((x - FW / 2) / FW) ** 2 + ((y - FH * cy) / FW) ** 2) / .45
     g = np.clip(1 - r, 0, 1) ** 2 * amt
@@ -474,9 +497,7 @@ def feed():
                                                               ("Chevron band, black diamonds", "LIGHT", 44, CREAM, 1226, 1)])
     fcut("noireclipse", out="wed-18-post-2.jpg", cy=640, maxh=900, lines=[("NOIR ECLIPSE", "BOLD", 56, CREAM, 1150, 12),
                                                                            ("Halo pendant on its chain", "LIGHT", 44, CREAM, 1226, 1)])
-    fcut("algol-r34", out="wed-18-post-3.jpg", lines=[("ALGOL", "BOLD", 56, CREAM, 1150, 12),
-                                                       ("East-west oval, rose gold", "LIGHT", 44, CREAM, 1226, 1)])
-    fcut("umbra", out="wed-18-post-4.jpg", lines=[("UMBRA", "BOLD", 56, CREAM, 1150, 12),
+    fcut("umbra", out="wed-18-post-3.jpg", lines=[("UMBRA", "BOLD", 56, CREAM, 1150, 12),
                                                    ("Faceted pear drops", "LIGHT", 44, CREAM, 1226, 1)])
     # SUN 22: Black Friday announcement (real photo, black emerald ring in its box)
     fphoto("IMG20260907095037.jpg", 1520, 1800, 2000, "sun-22-post.jpg",
@@ -485,20 +506,194 @@ def feed():
             ("NO CODE · AUTOMATIC AT CHECKOUT", "MEDIUM", 36, SAND, 1250, 6)], veil_top=.82, veil_bottom=.7)
 
 
+# ============================================================ MON 16 — the earring on her: black that reflects (15.11 rebuild)
+EAR = "IMG20260901233401.jpg"          # 2026 DROP, black pear sunburst earring, worn (3072x4096)
+STONE = dict(x0=1570, x1=1812, y0=2060, y1=2395)   # the black pear, source px
+
+
+def stone_mask(src):
+    """the black pear centre stone: dark pixels inside its bezel, largest blob, holes filled, soft 2px edge."""
+    from scipy import ndimage
+    g = np.asarray(src.convert("L"), float)
+    m = np.zeros(g.shape, bool)
+    sub = g[STONE["y0"]:STONE["y1"], STONE["x0"]:STONE["x1"]] < 70
+    lab, n = ndimage.label(sub)
+    sizes = ndimage.sum(np.ones_like(lab), lab, range(1, n + 1))
+    sub = ndimage.binary_fill_holes(lab == (np.argmax(sizes) + 1))
+    sub = ndimage.binary_erosion(sub, iterations=3)
+    m[STONE["y0"]:STONE["y1"], STONE["x0"]:STONE["x1"]] = sub
+    return Image.fromarray((ndimage.gaussian_filter(m.astype(float), 2) * 255).astype(np.uint8))
+
+
+def mon_earring():
+    """ONE idea, ONE photo: a black diamond does not throw fire, it reflects like a mirror.
+    Beat 1: tight on the black pear, a mirror reflection slides across its facets (the lustre, not sparkle).
+    Beat 2: the same frame pulls back to the earring on her ear; the reflection passes once more. No white-diamond footage."""
+    T = 8.0; n = int(T * FPS)
+    raw = photo(EAR)
+    src = R.grade(raw, warm=1.03, sat=1.02, con=1.10, bri=1.0).filter(ImageFilter.UnsharpMask(2, 60, 3))
+    msk = stone_mask(raw)
+    a = np.asarray(src, float); mm = np.asarray(msk, float)[..., None] / 255
+    a = a * (1 - mm) + (a * .78 + np.array((2, 4, 9), float)) * mm      # richer black, a whisper of cool depth
+    src = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
+    gl = raw.convert("L")
+    detail = Image.fromarray(np.clip(128 + (np.asarray(gl, float) - np.asarray(gl.filter(ImageFilter.GaussianBlur(6)), float)) * 6,
+                                     0, 255).astype(np.uint8))
+    A = dict(cx=1690, cy=2540, w=880)      # tight: the stone high in frame, clear skin below for the type
+    B = dict(cx=1650, cy=1850, w=1700)     # her ear and the earring, the necklace stays right of the type
+    vig = R.vignette(.42)
+    yy = np.arange(H)[:, None, None]
+
+    def win(t):
+        k = ease(seg(t, 1.9, 5.0))
+        w = A["w"] * (B["w"] / A["w"]) ** k * (1 - .03 * seg(t, 0, 1.9))
+        return A["cx"] + (B["cx"] - A["cx"]) * k, A["cy"] + (B["cy"] - A["cy"]) * k, w, k
+
+    def reflection(m, d, t, t0, dur, amt):
+        p = seg(t, t0, t0 + dur)
+        if p <= 0 or p >= 1:
+            return None
+        ys, xs = np.nonzero(m > .5)
+        if len(xs) == 0:
+            return None
+        x = np.arange(W)[None, :]; y = np.arange(H)[:, None]
+        span = (xs.max() - xs.min()) + (ys.max() - ys.min()) * .5
+        pos = xs.min() + ys.min() * .5 - span * .4 + p * span * 1.8
+        dd = (x + y * .5) - pos
+        wide = np.exp(-(dd / (span * .16)) ** 2)                            # the soft mirror band
+        edge = np.exp(-((dd - span * .10) / (span * .016)) ** 2) * 1.3       # its crisp leading edge
+        fac = .55 + 1.1 * np.clip((d - 128) / 60, -.4, 1)                   # facets break it like planes of a mirror
+        return (wide * .65 + edge) * fac * m * amt
+
+    def frames():
+        for i in range(n):
+            t = i / FPS
+            cx, cy, w, k = win(t)
+            base = np.asarray(R.cover_crop(src, cx, cy, w), float)
+            m = np.asarray(R.cover_crop(msk.convert("RGB"), cx, cy, w), float)[..., 0] / 255
+            d = np.asarray(R.cover_crop(detail.convert("RGB"), cx, cy, w), float)[..., 0]
+            for r in (reflection(m, d, t, .10, 1.35, .62), reflection(m, d, t, 5.5, 1.2, .55)):
+                if r is not None:
+                    base = base + r[..., None] * np.array((222, 228, 238), float)
+            v = np.clip((yy - 1300) / 440, 0, 1) * .55
+            base = base * (1 - v) + np.array(CREAM, float) * v
+            base = base * vig
+            top = 1 - seg(t, 1.7, 2.1)
+            out = base
+            if top > 0:
+                out = comp(out, text_layer([("It doesn't sparkle.", "LIGHT", 74, INK, 1440, 2, .25),
+                                            ("IT REFLECTS.", "BOLD", 120, INK, 1522, 7, .6)], top, t))
+            out = comp(out, text([("Light, held", "LIGHT", 74, INK, 1440, 2, 4.6),
+                                  ("IN THE DARK.", "BOLD", 104, INK, 1526, 6, 4.9),
+                                  ("FOR HER, THIS SEASON · 15% OFF", "MEDIUM", 40, (110, 84, 46), 1650, 6, 5.4)], t))
+            yield np.clip(out, 0, 255).astype(np.uint8)
+    run("mon-16-earring", frames, n, 1)
+
+
+# ============================================================ SUN 22 — Black Friday, in the night sky (15.11 rebuild)
+def bf_sky():
+    """No white-diamond footage, no flat black: the night sky moves, 30% is uncovered by a light sweep,
+    then the black jewels rise into the sky together (many jewels at once = 'everything')."""
+    T = 8.0; n = int(T * FPS)
+    names = ["centauri-y", "hyades-y", "corcaroli-y", "selkie-y", "spindle-y", "umbra"]
+    cs = []
+    for cn in names:
+        c = cut(cn)
+        g = R.grade(c.convert("RGB"), warm=1.02, sat=1.03, con=1.08, bri=1.03).convert("RGBA"); g.putalpha(c.split()[3])
+        cs.append(g)
+    pos = [(W * .17, 1200), (W * .39, 1150), (W * .61, 1150), (W * .83, 1200), (W * .30, 1365), (W * .70, 1365)]
+    vig = R.vignette(.5)
+
+    def frames():
+        for i in range(n):
+            t = i / FPS
+            base = skybg(t, T, 23, .36, .10)
+            L = text([("30%", "BOLD", 380, SAND, 520, 8, -5)], t)
+            a = np.asarray(L, float)
+            x = np.arange(W)[None, :]
+            front = -200 + eout(seg(t, .05, 1.0)) * (W + 400)
+            a[..., 3] *= np.clip((front - x) / 160, 0, 1)
+            base = comp(base, Image.fromarray(a.astype(np.uint8), "RGBA"))
+            base = base + glint(a[..., 3] / 255, t, 1.0, .8, 120, .4)[..., None] * 255
+            for j, c in enumerate(cs):
+                t0 = 1.9 + j * .14
+                p = eout(seg(t, t0, t0 + .7))
+                if p <= 0:
+                    continue
+                s = min(300 / c.width, 230 / c.height)
+                base, al = R.paste_cut(base, c, pos[j][0], pos[j][1] + (1 - p) * 120, s * (.92 + .08 * p),
+                                       blur=(1 - p) * 5, shadow=False)
+                base = base + glint(al, t, 4.6 + j * .12, .8, 110, .45)[..., None] * 255
+            base = base * vig
+            lay = text([("Black Friday", "LIGHT", 70, CREAM, 300, 3, .3),
+                        ("OFF EVERYTHING", "BOLD", 92, CREAM, 940, 6, 1.1),
+                        ("From Friday, November 27", "LIGHT", 58, CREAM, 1500, 1, 3.0),
+                        ("through January.", "LIGHT", 58, CREAM, 1570, 1, 3.2),
+                        ("NO CODE · AUTOMATIC AT CHECKOUT", "MEDIUM", 40, SAND, 1660, 6, 3.9)], t)
+            yield np.clip(comp(base, lay), 0, 255).astype(np.uint8)
+    run("sun-22-bf", frames, n, 0)
+
+
+# ============================================================ FRI 20 — the bench reel Daniel kept + a closing image (15.11)
+ONHAND = r"C:\Users\USER\Dropbox\שיווק Marketing\On-body AI\2026-10-21 scale fix\approved\R541-R-S7-closeup-LARGE-3ct.jpg"
+
+
+def fri_bench():
+    """12.11 sample (kept by Daniel) unchanged up to 6.4 s; the ending no longer fades to ink: it lands on an APPROVED
+    on-hand render (Algol, rose gold, 21.10 'approved' folder), slow push-in, with the bench line on a soft scrim."""
+    T = 9.6; n = int(T * FPS)
+    blue = Image.open(os.path.join(HERE, "..", "samples-2026-11-12", "src", "blue.jpg")).convert("RGB")
+    vise = Image.open(os.path.join(DROP, "IMG20260610140233.jpg")).convert("RGB")
+    blue = R.grade(blue, warm=.98, sat=.9, con=1.15, bri=.82).filter(ImageFilter.UnsharpMask(2, 120, 2))
+    vise = R.grade(vise, warm=1.03, sat=.92, con=1.12, bri=.92).filter(ImageFilter.UnsharpMask(2, 110, 2))
+    hand = R.grade(Image.open(ONHAND).convert("RGB"), warm=1.0, sat=1.0, con=1.04, bri=1.0)
+    BA = dict(cx=950, cy=1864, w0=900, w1=760)
+    VA = dict(cx=1043, cy=2604, w0=1050, w1=2700)
+    HA = dict(cx=2080, cy=2900, w0=2400, w1=2050)
+    vig = R.vignette(.6)
+    yy = np.arange(H)[:, None, None]
+    SCRIM = np.clip((620 - yy) / 520, 0, 1) ** 1.3 * .78 + np.clip((yy - 1300) / 480, 0, 1) ** 1.3 * .78
+    END = np.clip((yy - 1250) / 520, 0, 1) ** 1.2 * .80
+
+    def frames():
+        for i in range(n):
+            t = i / FPS
+            if t < 2.4:
+                k = ease(t / 2.4)
+                base = np.asarray(R.cover_crop(blue, BA["cx"], BA["cy"], BA["w0"] + (BA["w1"] - BA["w0"]) * k), float)
+                lines = [("Some pieces take", "LIGHT", 74, CREAM, 300, 2, -1), ("WEEKS", "BOLD", 150, SAND, 392, 14, .1)]
+            elif t < 6.4:
+                k = ease(seg(t, 2.4, 6.2))
+                w = VA["w0"] * (VA["w1"] / VA["w0"]) ** k
+                base = np.asarray(R.cover_crop(vise, VA["cx"], VA["cy"] - 300 * k, w), float)
+                fl = 1 - seg(t, 2.4, 2.62)
+                base = base * (1 - .5 * fl) + 255 * .5 * fl
+                lines = [("Some pieces take", "LIGHT", 74, CREAM, 300, 2, -1), ("WEEKS", "BOLD", 150, SAND, 392, 14, -1),
+                         ("to look", "LIGHT", 74, CREAM, 1440, 2, 3.4), ("EFFORTLESS.", "BOLD", 120, CREAM, 1524, 6, 3.65)]
+            else:
+                k = ease(seg(t, 6.4, T))
+                base = np.asarray(R.cover_crop(hand, HA["cx"], HA["cy"], HA["w0"] + (HA["w1"] - HA["w0"]) * k), float)
+                fl = 1 - seg(t, 6.4, 6.62)
+                base = base * (1 - .5 * fl) + 255 * .5 * fl
+                base = base * (1 - END) + np.array(INK, float) * END
+                lines = [("MADE AT OUR BENCH", "MEDIUM", 50, SAND, 1500, 10, 7.0),
+                         ("Message us to make yours.", "LIGHT", 62, CREAM, 1580, 1, 7.3)]
+            base = base * vig
+            if t < 6.4:
+                base = base * (1 - SCRIM) + np.array(INK, float) * SCRIM
+            yield np.clip(comp(base, text(lines, t)), 0, 255).astype(np.uint8)
+    run("fri-20-bench", frames, n, 0)
+
+
 STORIES = {
     "mon-16-studs": mon_studs,
-    "mon-16-centauri": lambda: price_card("mon-16-centauri", "centauri-y", "$2,600", "$2,210", "CENTAURI",
+    "mon-16-earring": mon_earring,
+    "tue-17-centauri": lambda: price_card("tue-17-centauri", "centauri-y", "$2,600", "$2,210", "CENTAURI",
                                           "Black oval, two side stones", "OVER $2,000: FREE STUDS INCLUDED", 1),
     "tue-17-gifts": lambda: many("tue-17-gifts", ["spindle-y", "hyades-r34", "corcaroli-r34", "pleiades-y", "polaris-y", "umbra"],
                                  [("Gift season.", "LIGHT", 80, CREAM, 300, 2, 2.7), ("ALREADY 15% OFF.", "BOLD", 100, SAND, 392, 5, 2.9)],
                                  [("Every piece on the site.", "LIGHT", 58, CREAM, 1530, 1, 3.6),
                                   ("MADE TO ORDER, FOR HER", "MEDIUM", 40, SAND, 1620, 7, 4.2)], 0),
-    "tue-17-earring": lambda: push("tue-17-earring", "IMG20260901233401.jpg", dict(cx=1650, cy=2150, w=700),
-                                   dict(cx=1500, cy=1900, w=2300),
-                                   [("No ring size", "LIGHT", 80, INK, 300, 2, .6), ("NEEDED.", "BOLD", 130, INK, 392, 8, .9),
-                                    ("Earrings: the gift", "LIGHT", 62, INK, 1440, 1, 3.4),
-                                    ("that always fits.", "BOLD", 70, INK, 1516, 1, 3.7),
-                                    ("15% OFF · EVERY PIECE", "MEDIUM", 42, (120, 92, 52), 1626, 7, 4.4)], track=1),
     "wed-18-eternity": lambda: push("wed-18-eternity", "IMG20260617173617.jpg", dict(cx=1330, cy=1560, w=950),
                                     dict(cx=1620, cy=1650, w=2700),
                                     [("One stone", "LIGHT", 84, INK, 300, 2, -1), ("AT A TIME.", "BOLD", 124, INK, 396, 6, .2),
@@ -528,7 +723,8 @@ STORIES = {
                                    ("“The ring is beautiful, my fiancee loves it.", "LIGHT", 48, INK, 422, 1, .8),
                                    ("Daniel was very helpful when I had questions.”", "LIGHT", 48, INK, 478, 1, 1.1),
                                    ], track=1),
-    "sun-22-bf": bf_reveal,
+    "sun-22-bf": bf_sky,
+    "fri-20-bench": fri_bench,
     "sun-22-all": lambda: push("sun-22-all", "IMG20260907095037.jpg", dict(cx=1500, cy=1620, w=760),
                                dict(cx=1520, cy=1900, w=2900),
                                [("Engagement rings. Bands.", "LIGHT", 64, CREAM, 300, 1, .3),
