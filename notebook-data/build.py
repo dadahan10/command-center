@@ -57,7 +57,9 @@ for c in chapters:
     if os.path.exists(wp_path):
         wp = load(wp_path)
         ig_path = os.path.join(SOCIAL, "ig-recent.json")
-        c["social"] = {"weeks": wp.get("weeks", []), "next": wp.get("next_placeholder", ""),
+        # rejected / superseded items stay in the marketing repo (week.removed / week.superseded), never in the published notebook
+        weeks = [{k: v for k, v in w.items() if k not in ("removed", "superseded")} for w in wp.get("weeks", [])]
+        c["social"] = {"weeks": weeks, "next": wp.get("next_placeholder", ""),
                        "ig": load(ig_path) if os.path.exists(ig_path) else {"items": []}}
     if os.path.exists(lg_path):
         lg = sorted(load(lg_path).get("entries", []), key=lambda x: x.get("date", ""), reverse=True)
