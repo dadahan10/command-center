@@ -1,0 +1,41 @@
+{
+ "id": "71212902",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "completed",
+  "main_action": {
+   "id": "71212903",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": null,
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "Extra 5% Off Inside\u2014Just for You!",
+     "preview_text": "Your Cart Is About To Expire...",
+     "template_id": "U3FYQZ",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": true,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Abandonment Black Ice Email #2",
+     "id": "T7d4aD"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": null,
+  "concluded_experiment_id": "01JBE4FJ328YKT9FS0FH1J41BS",
+  "winning_variation_id": "71212905"
+ },
+ "links": {
+  "next": "71212906"
+ }
+}

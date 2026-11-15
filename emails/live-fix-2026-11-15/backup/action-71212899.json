@@ -1,0 +1,30 @@
+{
+ "id": "71212899",
+ "type": "send-sms",
+ "data": {
+  "message": {
+   "body": "{{ first_name|default:'' }} We noticed you left some fabulous items in your cart. Don\u2019t miss out! Complete your purchase now and enjoy 15% OFF. {{ event.extra.checkout_url|default:'' }}",
+   "image_id": null,
+   "dynamic_image": null,
+   "shorten_links": true,
+   "include_contact_card": false,
+   "add_org_prefix": true,
+   "add_info_link": true,
+   "add_opt_out_language": true,
+   "smart_sending_enabled": true,
+   "sms_quiet_hours_enabled": true,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "template_id": null,
+   "additional_filters": null,
+   "name": "SMS #1",
+   "id": "RiMaEa",
+   "personalization_enabled": false
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "71212901"
+ }
+}

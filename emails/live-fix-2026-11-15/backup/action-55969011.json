@@ -1,0 +1,41 @@
+{
+ "id": "55969011",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "completed",
+  "main_action": {
+   "id": "55687198",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": null,
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "\ud83d\udc8d\ud83d\udc8e Book Now for a Sparkling Experience!",
+     "preview_text": "",
+     "template_id": "TTiY7x",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": false,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Email #1- Open email, zero orders",
+     "id": "TZxsWE"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": null,
+  "concluded_experiment_id": "01HG87GDV5VD9RR6BEH8FXMKW1",
+  "winning_variation_id": "55969012"
+ },
+ "links": {
+  "next": "56242282"
+ }
+}

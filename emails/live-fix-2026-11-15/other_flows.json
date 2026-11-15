@@ -1,0 +1,389 @@
+{
+ "VB4v4q": {
+  "name": "Abandoned Checkout - NOT Black Ice",
+  "trigger": [
+   "UgasKH"
+  ],
+  "rows": [
+   [
+    "51551198",
+    "send-email",
+    "UqT2bc",
+    "live",
+    "Is This the One? 💍"
+   ],
+   [
+    "27201099",
+    "send-email",
+    "XRRZDZ",
+    "live",
+    "Your cart is about to expire."
+   ],
+   [
+    "55966974",
+    "sms",
+    "",
+    "live",
+    "Hey, {{ person|lookup:\"first_name\"|default:'' }}! Your selected items are patiently waitin"
+   ],
+   [
+    "51611060",
+    "send-email",
+    "QNZb92",
+    "live",
+    "Why DIana Rafael?"
+   ],
+   [
+    "51611253",
+    "send-email",
+    "USZ7dd",
+    "live",
+    "Your Sparkle is About to Fade Away 💫💎"
+   ],
+   [
+    "40359483",
+    "send-email",
+    "XWZA4z",
+    "live",
+    "Have Any Questions? Let's Meet!"
+   ],
+   [
+    "64595493",
+    "send-email",
+    "VMxqpr",
+    "live",
+    "Enjoy Flexible Layaway Options with Affirm"
+   ],
+   [
+    "64595668",
+    "send-email",
+    "UBbzpM",
+    "live",
+    "Exclusive Offer: Shop Now with Affirm & Save 10%!"
+   ]
+  ]
+ },
+ "UrfQ29": {
+  "name": "Add to Cart- (Not Black Ice)",
+  "trigger": [
+   "RjxRum"
+  ],
+  "rows": [
+   [
+    "73853711",
+    "sms",
+    "",
+    "live",
+    "Love it? Need it? Gotta have it? Your cart is waiting! Click to checkout now. {{ event.ext"
+   ],
+   [
+    "26543456",
+    "send-email",
+    "XJ7Ydx",
+    "live",
+    "Will You Leave All That Sparkle In Your Cart?"
+   ],
+   [
+    "74735484",
+    "send-email",
+    "X6KkU5",
+    "live",
+    "Will You Leave All That Sparkle In Your Cart?"
+   ],
+   [
+    "61792629",
+    "send-email",
+    "V4NWgJ",
+    "live",
+    "Leaving all this SPARKLE 💎?"
+   ],
+   [
+    "61792414",
+    "sms",
+    "",
+    "live",
+    "Still thinking about that SPARKLE? ✨💍 Your cart's patiently waiting for you!\nTo your cart:"
+   ],
+   [
+    "76624309",
+    "ab-test",
+    "WLfYuk",
+    "live",
+    "Enjoy Flexible Layaway Options with Affirm"
+   ],
+   [
+    "64595726",
+    "send-email",
+    "RvS6rJ",
+    "live",
+    "Exclusive Offer: Shop Now with Affirm & Save 10%!"
+   ]
+  ]
+ },
+ "Y3ZV7x": {
+  "name": "Add to Cart - (Black Ice)",
+  "trigger": [
+   "RjxRum"
+  ],
+  "rows": [
+   [
+    "73853058",
+    "sms",
+    "",
+    "live",
+    "Love it? Need it? Gotta have it? Your cart is waiting! 💍 Click to checkout now. {{ event.e"
+   ],
+   [
+    "71209026",
+    "send-email",
+    "TQ97tW",
+    "live",
+    "Will You Leave All That Black Ice Beauty In Your Cart?"
+   ],
+   [
+    "74733249",
+    "send-email",
+    "WkPMWa",
+    "live",
+    "Will You Leave All That Black Ice Beauty In Your Cart?"
+   ],
+   [
+    "73970119",
+    "ab-test",
+    "VQ7Smu",
+    "live",
+    "Extra 5% Inside Just For you!"
+   ],
+   [
+    "76534848",
+    "ab-test",
+    "SA72eG",
+    "live",
+    "Enjoy Flexible Layaway Options with Affirm"
+   ],
+   [
+    "71209033",
+    "send-email",
+    "WaWMfE",
+    "live",
+    "Exclusive Offer: Shop Now with Affirm & Save 15%!"
+   ]
+  ]
+ },
+ "R8UpBY": {
+  "name": "Abandoned Cart Reminder - Ice Black  pop up",
+  "trigger": [
+   "XTkTVu"
+  ],
+  "rows": [
+   [
+    "62504506",
+    "send-email",
+    "R6Tptt",
+    "live",
+    "Your Style Shines!✨"
+   ],
+   [
+    "62504514",
+    "send-email",
+    "R9vDEk",
+    "live",
+    "Missed You Already!🌟"
+   ]
+  ]
+ },
+ "V3x2q7": {
+  "name": "Book Appointment Flow ATC",
+  "trigger": [
+   "SUMEg2"
+  ],
+  "rows": [
+   [
+    "57947536",
+    "ab-test",
+    "SqwC3i",
+    "live",
+    "It's Daniel! Let's Schedule Your Exclusive Jewelry Consultation With Me! 📆"
+   ]
+  ]
+ },
+ "Y6Zunh": {
+  "name": "Viewed product (Browse Abandonment)",
+  "trigger": [
+   "RdGtZY"
+  ],
+  "rows": [
+   [
+    "73974045",
+    "ab-test",
+    "RsYy37",
+    "live",
+    "Did you see something you like?"
+   ],
+   [
+    "74306065",
+    "ab-test",
+    "RZnkik",
+    "live",
+    "Did you see something you like?"
+   ],
+   [
+    "73974378",
+    "ab-test",
+    "T69UQN",
+    "live",
+    "Why You Should Count on Us? 💍"
+   ],
+   [
+    "64122317",
+    "sms",
+    "",
+    "live",
+    "We love that you love the {{ event.Name }}! Don't leave it behind. Click to shop now: {{ e"
+   ],
+   [
+    "76623944",
+    "ab-test",
+    "SKB5nN",
+    "live",
+    "Enjoy Flexible Layaway Options with Affirm at Diana Rafael!"
+   ],
+   [
+    "27953570",
+    "send-email",
+    "SuEEbM",
+    "live",
+    "✨ Last Chance for 10% Off - Claim Now!"
+   ]
+  ]
+ },
+ "Y9u9DF": {
+  "name": "Viewed Page flow- Browse Abandonment",
+  "trigger": [
+   "Tt7p6A"
+  ],
+  "rows": [
+   [
+    "74080750",
+    "ab-test",
+    "SWUqix",
+    "live",
+    "Ready to make it yours?"
+   ],
+   [
+    "74080788",
+    "ab-test",
+    "TX4JvB",
+    "live",
+    "Why You Should Count on Us 💍🤝"
+   ],
+   [
+    "58191965",
+    "send-email",
+    "UtZ8hj",
+    "live",
+    "Don't Give Up on the One You Want! 💖✨"
+   ]
+  ]
+ },
+ "YqVvEY": {
+  "name": "Active on site (All Category Flow)",
+  "trigger": [
+   "VrzhDz"
+  ],
+  "rows": [
+   [
+    "27953918",
+    "send-email",
+    "WAMud8",
+    "live",
+    "Looking for the one? 💍"
+   ],
+   [
+    "27953947",
+    "send-email",
+    "W2fFLh",
+    "live",
+    "Black is The New Black 🖤"
+   ],
+   [
+    "27953960",
+    "send-email",
+    "Y9FkEH",
+    "live",
+    "Why Doesn't All Jewelry Come in Pairs? 💠"
+   ],
+   [
+    "27953969",
+    "send-email",
+    "XftwTd",
+    "live",
+    "We Can Already Hear The Wedding Bells! What About The Rings?"
+   ],
+   [
+    "27954165",
+    "send-email",
+    "TwTKh6",
+    "live",
+    "Isn't It So Much Fun Being A Woman?"
+   ],
+   [
+    "27954224",
+    "send-email",
+    "SseUJ6",
+    "live",
+    "Can't Wait Too Long For Your Order to Arrive?"
+   ],
+   [
+    "27954234",
+    "send-email",
+    null,
+    "draft",
+    "Email"
+   ],
+   [
+    "27954242",
+    "send-email",
+    null,
+    "draft",
+    "Email"
+   ],
+   [
+    "27954251",
+    "send-email",
+    null,
+    "draft",
+    "Email"
+   ],
+   [
+    "73973553",
+    "send-email",
+    "W6RpmE",
+    "live",
+    "Can't Wait Too Long For Your Order to Arrive?"
+   ]
+  ]
+ },
+ "TZKZjQ": {
+  "name": "Pop up 2nd visit no ATC ot Checkout",
+  "trigger": [
+   "TZDqyy"
+  ],
+  "rows": [
+   [
+    "60078158",
+    "send-email",
+    "TXvK9S",
+    "live",
+    "We've Noticed Your Interest: Book Your Online Appointment Now!💍💎"
+   ],
+   [
+    "60109746",
+    "send-email",
+    "WbdmQk",
+    "live",
+    "Create Your Dream Piece: Start with Our Custom Design Questionnaire!"
+   ]
+  ]
+ }
+}

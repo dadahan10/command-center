@@ -1,0 +1,27 @@
+{
+ "id": "71212907",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": null,
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Last Chance to Save on Your Favorite Items! Find",
+   "preview_text": "Your Special Discount Inside!",
+   "template_id": "TDAQrS",
+   "smart_sending_enabled": false,
+   "transactional": false,
+   "add_tracking_params": true,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandonment Black Ice Email #3",
+   "id": "RRaWVp"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "71212908"
+ }
+}
