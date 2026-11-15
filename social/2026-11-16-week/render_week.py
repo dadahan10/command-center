@@ -147,8 +147,8 @@ def mon_studs():
         x = int(W / 2 - w / 2 + cx_off); y = int(980 - h / 2)
         mask = Image.new("L", (w, h), 255)
         m = np.asarray(mask, float)
-        fy = np.clip(np.minimum(np.arange(h), h - 1 - np.arange(h)) / (h * .18), 0, 1)[:, None]
-        fx = np.clip(np.minimum(np.arange(w), w - 1 - np.arange(w)) / (w * .10), 0, 1)[None, :]
+        fy = (np.clip(np.minimum(np.arange(h), h - 1 - np.arange(h)) / (h * .34), 0, 1) ** 1.6)[:, None]
+        fx = (np.clip(np.minimum(np.arange(w), w - 1 - np.arange(w)) / (w * .20), 0, 1) ** 1.6)[None, :]
         im.putalpha(Image.fromarray((m * fy * fx).astype(np.uint8)))
         L.paste(im, (x, y), im)
         return L, (x, y, w, h)
@@ -340,7 +340,7 @@ def algol():
             base = base + (glint(al, t, .05, .8, 150, .5) + glint(al, t, 4.6, 1.0))[..., None] * 255
             base = base * vig
             lay = text([("ALGOL", "BOLD", 110, CREAM, 300, 14, 2.0),
-                        ("East-west black oval, set in gold", "LIGHT", 50, CREAM, 430, 1, 2.3),
+                        ("Named for a star of light and dark.", "LIGHT", 50, CREAM, 430, 1, 2.3),
                         ("$3,600", "LIGHT", 96, (150, 140, 128), 1290, 3, 2.9),
                         ("$3,060", "BOLD", 120, SAND, 1390, 4, 3.5),
                         ("+ FREE STUDS IN THE BOX", "MEDIUM", 42, CREAM, 1545, 6, 4.2)], t)
@@ -484,21 +484,15 @@ def feed():
     fstuds("mon-16-post-1.jpg", [("THE STUDS", "BOLD", 104, SAND, 70, 6), ("ARE ON US.", "BOLD", 104, SAND, 190, 6),
                                  ("Every order over $2,000 comes", "LIGHT", 50, CREAM, 1140, 1),
                                  ("with black diamond studs. Free.", "LIGHT", 50, CREAM, 1204, 1)])
-    fcut("centauri-r34", out="mon-16-post-2.jpg", lines=[("CENTAURI", "BOLD", 60, CREAM, 1110, 12),
-                                                          ("Black oval, two side stones", "LIGHT", 46, CREAM, 1190, 1)])
-    fcut("selkie-y", out="mon-16-post-3.jpg", lines=[("SELKIE", "BOLD", 60, CREAM, 1110, 12),
-                                                      ("A bypass that holds the oval", "LIGHT", 46, CREAM, 1190, 1)])
-    fcut("spindle-y", out="mon-16-post-4.jpg", maxh=700, lines=[("SPINDLE", "BOLD", 60, CREAM, 1110, 12),
-                                                                ("Pavé black diamond cones", "LIGHT", 46, CREAM, 1190, 1)])
+    fcut("centauri-r34", out="mon-16-post-2.jpg", lines=[("CENTAURI", "BOLD", 60, CREAM, 1110, 12)])
+    fcut("selkie-y", out="mon-16-post-3.jpg", lines=[("SELKIE", "BOLD", 60, CREAM, 1110, 12)])
+    fcut("spindle-y", out="mon-16-post-4.jpg", maxh=700, lines=[("SPINDLE", "BOLD", 60, CREAM, 1110, 12)])
     # WED 18 carousel: 15% off, every piece
     fcut("hyades-y", out="wed-18-post-1.jpg", cy=740, lines=[("15% OFF.", "BOLD", 120, SAND, 110, 6),
                                                               ("EVERY PIECE.", "BOLD", 74, CREAM, 250, 8),
-                                                              ("HYADES", "BOLD", 56, CREAM, 1150, 12),
-                                                              ("Chevron band, black diamonds", "LIGHT", 44, CREAM, 1226, 1)])
-    fcut("noireclipse", out="wed-18-post-2.jpg", cy=640, maxh=900, lines=[("NOIR ECLIPSE", "BOLD", 56, CREAM, 1150, 12),
-                                                                           ("Halo pendant on its chain", "LIGHT", 44, CREAM, 1226, 1)])
-    fcut("umbra", out="wed-18-post-3.jpg", lines=[("UMBRA", "BOLD", 56, CREAM, 1150, 12),
-                                                   ("Faceted pear drops", "LIGHT", 44, CREAM, 1226, 1)])
+                                                              ("HYADES", "BOLD", 56, CREAM, 1150, 12)])
+    fcut("noireclipse", out="wed-18-post-2.jpg", cy=640, maxh=900, lines=[("NOIR ECLIPSE", "BOLD", 56, CREAM, 1150, 12)])
+    fcut("umbra", out="wed-18-post-3.jpg", lines=[("UMBRA", "BOLD", 56, CREAM, 1150, 12)])
     # SUN 22: Black Friday announcement (real photo, black emerald ring in its box)
     fphoto("IMG20260907095037.jpg", 1520, 1800, 2000, "sun-22-post.jpg",
            [("30% OFF EVERYTHING", "BOLD", 84, CREAM, 110, 4),
@@ -540,7 +534,7 @@ def mon_earring():
     detail = Image.fromarray(np.clip(128 + (np.asarray(gl, float) - np.asarray(gl.filter(ImageFilter.GaussianBlur(6)), float)) * 6,
                                      0, 255).astype(np.uint8))
     A = dict(cx=1690, cy=2540, w=880)      # tight: the stone high in frame, clear skin below for the type
-    B = dict(cx=1650, cy=1850, w=1700)     # her ear and the earring, the necklace stays right of the type
+    B = dict(cx=1650, cy=2080, w=1700)     # her ear and the earring, the necklace stays right of the type
     vig = R.vignette(.42)
     yy = np.arange(H)[:, None, None]
 
@@ -601,14 +595,14 @@ def bf_sky():
         c = cut(cn)
         g = R.grade(c.convert("RGB"), warm=1.02, sat=1.03, con=1.08, bri=1.03).convert("RGBA"); g.putalpha(c.split()[3])
         cs.append(g)
-    pos = [(W * .17, 1200), (W * .39, 1150), (W * .61, 1150), (W * .83, 1200), (W * .30, 1365), (W * .70, 1365)]
+    pos = [(W * .20, 1050), (W * .50, 1030), (W * .80, 1050), (W * .20, 1250), (W * .50, 1240), (W * .80, 1250)]
     vig = R.vignette(.5)
 
     def frames():
         for i in range(n):
             t = i / FPS
             base = skybg(t, T, 23, .36, .10)
-            L = text([("30%", "BOLD", 380, SAND, 520, 8, -5)], t)
+            L = text([("30%", "BOLD", 360, SAND, 430, 8, -5)], t)
             a = np.asarray(L, float)
             x = np.arange(W)[None, :]
             front = -200 + eout(seg(t, .05, 1.0)) * (W + 400)
@@ -620,13 +614,13 @@ def bf_sky():
                 p = eout(seg(t, t0, t0 + .7))
                 if p <= 0:
                     continue
-                s = min(300 / c.width, 230 / c.height)
+                s = min(270 / c.width, 165 / c.height)
                 base, al = R.paste_cut(base, c, pos[j][0], pos[j][1] + (1 - p) * 120, s * (.92 + .08 * p),
                                        blur=(1 - p) * 5, shadow=False)
                 base = base + glint(al, t, 4.6 + j * .12, .8, 110, .45)[..., None] * 255
             base = base * vig
-            lay = text([("Black Friday", "LIGHT", 70, CREAM, 300, 3, .3),
-                        ("OFF EVERYTHING", "BOLD", 92, CREAM, 940, 6, 1.1),
+            lay = text([("Black Friday", "LIGHT", 70, CREAM, 280, 3, .3),
+                        ("OFF EVERYTHING", "BOLD", 92, CREAM, 830, 6, 1.1),
                         ("From Friday, November 27", "LIGHT", 58, CREAM, 1500, 1, 3.0),
                         ("through January.", "LIGHT", 58, CREAM, 1570, 1, 3.2),
                         ("NO CODE · AUTOMATIC AT CHECKOUT", "MEDIUM", 40, SAND, 1660, 6, 3.9)], t)
@@ -689,7 +683,7 @@ STORIES = {
     "mon-16-studs": mon_studs,
     "mon-16-earring": mon_earring,
     "tue-17-centauri": lambda: price_card("tue-17-centauri", "centauri-y", "$2,600", "$2,210", "CENTAURI",
-                                          "Black oval, two side stones", "OVER $2,000: FREE STUDS INCLUDED", 1),
+                                          "The closest star. Yours to keep.", "OVER $2,000: FREE STUDS INCLUDED", 1),
     "tue-17-gifts": lambda: many("tue-17-gifts", ["spindle-y", "hyades-r34", "corcaroli-r34", "pleiades-y", "polaris-y", "umbra"],
                                  [("Gift season.", "LIGHT", 80, CREAM, 300, 2, 2.7), ("ALREADY 15% OFF.", "BOLD", 100, SAND, 392, 5, 2.9)],
                                  [("Every piece on the site.", "LIGHT", 58, CREAM, 1530, 1, 3.6),
@@ -715,8 +709,7 @@ STORIES = {
                                 dict(cx=940, cy=1950, w=1880),
                                 [("A white diamond", "LIGHT", 76, INK, 300, 2, .4), ("FOR THE HOLIDAYS.", "BOLD", 100, INK, 392, 5, .7),
                                  ("Made for her hand,", "LIGHT", 60, INK, 1450, 1, 3.4),
-                                 ("15% off already.", "BOLD", 70, INK, 1526, 1, 3.7),
-                                 ("WHITE DIAMONDS TOO, NOT ONLY BLACK", "MEDIUM", 38, (120, 92, 52), 1636, 5, 4.4)], track=0),
+                                 ("15% off already.", "BOLD", 70, INK, 1526, 1, 3.7)], track=0),
     "sat-21-review": lambda: push("sat-21-review", "IMG20261001124943.jpg", dict(cx=930, cy=1300, w=760),
                                   dict(cx=940, cy=1333, w=1500),
                                   [("550+ REVIEWS.", "BOLD", 110, INK, 300, 6, .3),

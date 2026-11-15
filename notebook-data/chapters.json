@@ -440,10 +440,11 @@
   "kind": "business",
   "status": "active",
   "last_update": "2026-11-15",
-  "where_we_stand": "ניקיתי מהלוח את כל מה שפסלת: 18 פריטים (13 משבוע 15–21.11, כולל הריל של שלישי 17 והפריימים שלו, ועוד 5 ישנים מ-21.10). הם יצאו מהלוח, והסיבה של כל אחד נשמרה ברשימת הדברים שנפסלו כדי שלא יחזרו. מה שלא פסלת מאותו שבוע הוחלף בשבוע המבצעים. 3 הדוגמאות מ-12.11 (מתנה, חריטה, שולחן העבודה) נשארו ומחכות להכרעה שלך. לוח 16–22.11 נבנה מחדש לפי מה שלמדנו בשבוע שעבר, והמבצעים הם המסר הראשי: 13 סטוריז, 3 פוסטים לפיד ו-3 פוסטים בעברית, כולם לאישורך. כלום לא נכנס לתור.",
+  "where_we_stand": "שבוע המבצעים 16–22.11: מתוקן — מאושר לפרסום, ונכנס לתור (batch 2026-11-16-week, 20 שורות). תוקן לפי ההערות שלך מ-15.11, עם Aluna כרף: הריל של העגיל (שני 19:00) נבנה מחדש כרעיון אחד מצילום אחד — השתקפות שעוברת על האבן השחורה כמו על מראה ואז נסוגים לאוזן ('It doesn't sparkle. IT REFLECTS.' → 'Light, held IN THE DARK.'), בלי הפוטאג' של היהלום הלבן ובלי 'No ring size needed'. כל הרקעים השחורים השטוחים הוחלפו בשמי לילה שזזים לאט (שלישי, ראשון, וגם שני/חמישי/שישי והפיד). Algol נחתך מחדש ונבדק ב-200%. ריל שולחן העבודה של שישי (14:00) נוחת עכשיו על הדמיה על-יד שאושרה (R541 Algol). שורות מפרט ('Black oval, two side stones' וכו') הוחלפו בשורות השראה או הוסרו. Centauri עבר לשלישי 20:00. הפוסטים בעברית נשארים ידניים כמו תמיד.",
   "rules": {
    "title": "כללי התוכן",
    "items": [
+    "רף Aluna (דניאל 15.11): רעיון אחד ועולם אחד בכל פריט; יהלום שחור = ברק ועומק כמו מראה, לא אש; אין רקע שחור שטוח — שמי לילה או עולם העונה; תנועה וחשיפה מהפריים הראשון; כל שורה השראה או קריאה לפעולה אמיתית, בלי מפרט; חיתוכים נבדקים ב-200%; סיום על תמונה מאושרת; הרבה תכשיטים יחד כשזה מתאים.",
     "מבצעים (מ-15.11, דניאל: 'אנחנו במאני טיים'): כל תוכן מדבר על מבצע אמיתי שקיים באתר באותו יום. לא ממציאים מבצע, לא מוסיפים דדליין מזויף, לא מציגים שתי הנחות אחת על השנייה, ולא מזכירים את הארכיון לפני 27.11.",
     "סטורי שמראה רק תכשיט חייב להתחבר לחוויה האנושית דרך המילים: שבר, החלמה, לאסוף את עצמך מחדש. תכשיט לבד, בלי משפט שנוגע באדם, לא עולה.",
     "לא חוזרים על מסר. לפני כל פוסט בודקים ביומן המסרים שה-hook והזווית עוד לא יצאו.",
@@ -453,15 +454,14 @@
    ]
   },
   "next_tasks": [
-   "דניאל: לאשר או לפסול כל כרטיס בלוח 16–22.11. הסטורי הראשון בשני 16.11 ב-11:00",
-   "אחרי האישור: להכניס לתור רק את מה שאושר (הקבוצה 2026-11-16-week) ולסמן 'בתור'",
-   "דניאל: הכרעה על 3 הדוגמאות מ-12.11 (מתנה / חריטה / שולחן העבודה)",
-   "דניאל: לבדוק קנייה של לקוח חוזר עם אותו אימייל, שה-25% באמת יורד בקופה, לפני הסטורי של רביעי 18.11",
-   "שלושת הפוסטים בעברית (שני, רביעי, ראשון 13:00): לפרסם גם בפרופיל הפרטי; הנוסח בקובץ פייסבוק-פרטי-עברית.txt",
-   "רביעי 18.11: לוח 23–29.11 (בלאק פריידי + עולם החורף)",
-   "נתוני סטוריז: אינסטגרם שומר insights של סטורי 24 שעות בלבד. להוסיף snapshot יומי (reach לכל סטורי) כדי לבחור שעות סטוריז לפי נתונים"
+   "דניאל: להוסיף ידנית באפליקציה את מדבקת הקישור בסטוריז (ה-API לא מוסיף)",
+   "שלושת הפוסטים בעברית (שני, רביעי, ראשון 13:00): פייסבוק פרטי / X / לינקדאין ידנית; הנוסח בקובץ פייסבוק-פרטי-עברית.txt",
+   "דוגמת החריטה מ-12.11 (band-4, חמישי) לא בתור — לא הוזכרה בהערות; להחליט אם לבנות מחדש לפי רף Aluna",
+   "רביעי 18.11: לוח 23–29.11 (בלאק פריידי + עולם החורף) — לפתוח מצ'קליסט 'Aluna quality bar' בזיכרון",
+   "דניאל: לבדוק קנייה של לקוח חוזר עם אותו אימייל, שה-25% באמת יורד בקופה, לפני הסטורי של רביעי 18.11"
   ],
   "recent_changes": [
+   "15.11 (אחה\"צ) — תיקוני דניאל לשבוע 16–22.11: עגיל = רעיון אחד של ברק ועומק (לא אש), שמי לילה במקום רקע שחור, Algol נחתך מחדש, ריל שולחן העבודה עם תמונת סיום על יד, בלי שורות מפרט. סטטוס: מתוקן — מאושר לפרסום, בתור",
    "15.11 — ניקוי: 18 פריטים שפסלת הוסרו מהלוח (הריל של שלישי 17 נמחק גם מהקבצים), הסיבות נשמרו. לוח חדש 16–22.11 עם המבצעים במרכז: 15% על הכול, עגילים במתנה מעל $2,000, קונים חוזרים 25%, טיזר בלאק פריידי 30% מ-22.11. סגנון הדוגמאות מ-12.11: הוק בשנייה הראשונה, Champie, צילומים אמיתיים ערוכים",
    "10.11 — לוח 15–21.11 נבנה לאישור: סדרת מתנה (שני) וסדרת טבעת נישואין (חמישי) מתמונות 2026 DROP אמיתיות, ריל אחד מהשולחן, 3 טיזרים לבלאק פריידי בלי מספרים, Portal ו-Pera Scura מוכנים למשלוח, 5 ביקורות חדשות; פיד ב-13:00 לפי נתוני reach של 143 פוסטים",
    "10.11 — יישום הפוסט של Aluna 'Christmas content that looks like the brand made it': עולם חורף אחד לכל עונת החגים, 5 פריימים, כלל התכשיט האמיתי, CTA במילה",
@@ -799,7 +799,7 @@
     ]
    },
    {
-    "title": "יומן המסרים (215)",
+    "title": "יומן המסרים (216)",
     "note": "כל מה שיצא או הוכן. בודקים כאן לפני כל פוסט חדש, כדי לא לחזור על מסר.",
     "cols": [
      "תאריך",
@@ -813,10 +813,10 @@
      [
       "22.11",
       "Instagram story (EN)",
-      "Diamond light from the bench (tweezers footage, defocused) + 30% reveal",
+      "Night sky + 30% reveal, then six black-diamond pieces rise together (Centauri, Hyades, Cor Caroli, Selkie, Spindle, Umbra)",
       "Black Friday / 30% / OFF EVERYTHING -> From Friday, November 27 through January.",
-      "טיזר בלאק פריידי: 30% על הכול מ-27.11 עד סוף ינואר, בלי קוד",
-      "מתוכנן, ממתין לאישור"
+      "טיזר בלאק פריידי: 30% על הכול מ-27.11 עד סוף ינואר, בלי קוד. תיקון 15.11: שמי לילה + הרבה תכשיטים יחד במקום פוטאג' של יהלום לבן על רקע כהה",
+      "queued"
      ],
      [
       "22.11",
@@ -824,7 +824,7 @@
       "2026 DROP: black emerald-cut ring in its box",
       "Engagement rings. Bands. Earrings. Pendants. / ALL OF IT. -> 30% off from Nov 27 through January.",
       "טיזר בלאק פריידי 2: מה נכלל (הכול) + עד אז 15%",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "22.11",
@@ -832,7 +832,7 @@
       "Single image: black emerald-cut ring in its box + 30% announcement",
       "30% off everything. From Black Friday, through January.",
       "פיד: הכרזת הבלאק פריידי",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "22.11",
@@ -864,7 +864,7 @@
       "2026 DROP: white marquise ring + verbatim review",
       "550+ REVIEWS. -> “The ring is beautiful, my fiancee loves it. Daniel was very helpful when I had questions.”",
       "הוכחה חברתית (550+, ציטוט מילה במילה); בלי שורת מבצע כדי שהטקסט לא יעלה על הטבעת",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "20.11",
@@ -888,7 +888,15 @@
       "Noir Eclipse pendant swings in on its chain (floating display)",
       "For under the tree: / SOMETHING THAT STAYS. -> $1,400 struck -> $1,190",
       "מתנה לחג + מחיר מבצע (תנועת מטוטלת מהפריים הראשון)",
-      "מתוכנן, ממתין לאישור"
+      "queued"
+     ],
+     [
+      "20.11",
+      "Instagram story (EN)",
+      "2026 DROP: match cut — loose stones laid out -> the starburst in the vise -> APPROVED on-hand render (Algol, rose gold)",
+      "Some pieces take WEEKS / to look EFFORTLESS. -> MADE AT OUR BENCH · Message us to make yours.",
+      "הריל מ-12.11 שדניאל השאיר + תמונת סיום: הדמיה על יד שאושרה (R541 Algol, 21.10 approved)",
+      "queued"
      ],
      [
       "20.11",
@@ -896,7 +904,7 @@
       "2026 DROP: white diamond halo ring in its box, macro pull-back",
       "A white diamond / FOR THE HOLIDAYS. -> 15% off already.",
       "לא רק יהלומים שחורים: לבן לחג + המבצע",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "19.11",
@@ -960,7 +968,7 @@
       "Four rings, four elements: Cor Caroli, Pleiades, Polaris, Selkie (white)",
       "Fire, earth, / AIR OR WATER? -> Tell us her sign. We'll tell you her ring.",
       "עונת ההצעות: טבעת לפי המזל (תומך במייל של חמישי)",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "19.11",
@@ -968,7 +976,7 @@
       "Algol R541 (yellow): the stone fills the frame, pull back",
       "ALGOL -> $3,600 struck -> $3,060 + FREE STUDS IN THE BOX",
       "מבצע: 15% + עגילים (הוק: האבן ממלאת את המסך)",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "18.11",
@@ -1000,7 +1008,7 @@
       "2026 DROP: white cushion eternity band, macro pull-back",
       "One stone / AT A TIME. -> Made to order. Still 15% off.",
       "עבודת יד + המבצע (לא מקצרים את העבודה, רק את המחיר)",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "18.11",
@@ -1008,15 +1016,15 @@
       "2026 DROP: black cushion ring + black pavé bands in the box",
       "Ordered from us before? -> 25% OFF. That's your total. Use the email you ordered with.",
       "מבצע: קונים חוזרים 25% בסך הכול",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "18.11",
       "Instagram carousel + Facebook album",
-      "Carousel: Hyades, Noir Eclipse, Algol (rose), Umbra",
+      "Carousel: Hyades, Noir Eclipse, Umbra (night sky)",
       "15% off. Every piece.",
       "פיד: מחיר המבצע על כל האתר + קונים חוזרים בכיתוב",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "18.11",
@@ -1056,15 +1064,15 @@
       "Six pieces in one ink world: Spindle, Hyades, Cor Caroli, Pleiades, Polaris, Umbra",
       "Gift season. / ALREADY 15% OFF. -> Every piece on the site.",
       "הרבה תכשיטים יחד (הדפוס החזק שלנו), קצב חיתוכים מהפריים הראשון",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "17.11",
       "Instagram story (EN)",
-      "2026 DROP: black pear drop earring, worn (macro to ear)",
-      "No ring size / NEEDED. -> Earrings: the gift that always fits. 15% off.",
-      "מתנה בלי מידה, צילום אמיתי ערוך (מאקרו לאוזן)",
-      "מתוכנן, ממתין לאישור"
+      "Centauri R513 (yellow) cutout in the night sky, price card",
+      "$2,600 struck -> $2,210 · ALREADY 15% OFF -> CENTAURI · over $2,000: free studs included",
+      "מבצע: מחיר המבצע 15% עם המחיר המקורי מחוק (עבר משני לשלישי; רקע שמי לילה במקום שחור)",
+      "queued"
      ],
      [
       "16.11",
@@ -1120,15 +1128,15 @@
       "Free 1 ct black diamond studs (render), macro pull-back",
       "Over $2,000? / THE STUDS ARE ON US.",
       "מבצע: עגילים במתנה מעל $2,000 (הוק: אור שעובר על פאות היהלום מהפריים הראשון)",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "16.11",
       "Instagram story (EN)",
-      "Centauri R513 (yellow) cutout on ink, price card",
-      "$2,600 struck -> $2,210 · ALREADY 15% OFF -> CENTAURI · over $2,000: free studs included",
-      "מבצע: מחיר המבצע 15% עם המחיר המקורי מחוק (הוק: הקו שמוחק את המחיר בשנייה הראשונה)",
-      "מתוכנן, ממתין לאישור"
+      "2026 DROP: black pear sunburst earring, worn — one photo, macro on the stone -> her ear",
+      "It doesn't sparkle. / IT REFLECTS. -> Light, held / IN THE DARK. · for her, this season, 15% off",
+      "תיקון 15.11: רעיון אחד, צילום אחד. היהלום השחור לא זורק אש, הוא מחזיר אור כמו מראה (ברק ועומק); השתקפות עוברת על האבן ואז נסוגים לאוזן. בלי פוטאג' של יהלום לבן ובלי שורת-מפרט",
+      "queued"
      ],
      [
       "16.11",
@@ -1136,7 +1144,7 @@
       "Carousel: studs + Centauri, Selkie, Spindle (all over $2,000)",
       "The studs are on us.",
       "פיד: שתי מתנות בקופסה אחת, בלי מחירים בפיד",
-      "מתוכנן, ממתין לאישור"
+      "queued"
      ],
      [
       "16.11",
@@ -2535,11 +2543,6 @@
    }
   ],
   "attention": [
-   {
-    "text": "לוח הסושיאל 16–22.11 מחכה לאישור",
-    "note": "13 סטוריז, 3 פוסטים לפיד, 3 פוסטים בעברית. כל כרטיס לאישור בנפרד. הסטורי הראשון בשני 11:00.",
-    "since": "2026-11-15"
-   },
    {
     "text": "שני מיילים בקלאביו מחכים לאישור: ג' 17.11 ו-ה' 19.11, 19:00",
     "note": "טיוטות, לא מתוזמנות. התצוגה בגלריית המיילים. השעה נקבעת בלחיצה על Schedule.",
@@ -5300,28 +5303,6 @@
      "approved": "נוקה 15.11: 13 פריטים שנפסלו הוסרו (כולל הריל של שלישי 17)",
      "items": [
       {
-       "id": "w1115-gift-1-v2",
-       "batch": "2026-11-12-samples",
-       "date": "2026-11-16",
-       "time": "10:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "Series: jewelry as a gift (1/5) · NEW SAMPLE 12.11: diamond-light hook → earrings cut out on ink",
-       "hook": "Buying jewelry AS A GIFT? / Four things that make it easy. -> SAVE THIS ONE",
-       "angle": "דוגמה לרף האיכות (12.11, משרד): הוק ויזואלי בשנייה 0, Champie Bold/Light, תמונה אמיתית ערוכה, מתנגן",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License)",
-       "thumbs": [
-        "2026-11-12-samples/gift-1-f1.jpg",
-        "2026-11-12-samples/gift-1-f2.jpg",
-        "2026-11-12-samples/gift-1-f3.jpg"
-       ],
-       "images": [],
-       "status": "דוגמה חדשה — לבחינת דניאל",
-       "caption": "",
-       "video": "2026-11-12-samples/gift-1.mp4",
-       "note": "מחליף את הגרסה שנפסלה אם דניאל מאשר את הכיוון; אחריו נבנה את שאר הסדרה באותו סגנון"
-      },
-      {
        "id": "w1115-band-4-v2",
        "batch": "2026-11-12-samples",
        "date": "2026-11-19",
@@ -5342,35 +5323,13 @@
        "caption": "",
        "video": "2026-11-12-samples/band-4.mp4",
        "note": "מחליף את הגרסה שנפסלה אם דניאל מאשר את הכיוון; אחריו נבנה את שאר הסדרה באותו סגנון"
-      },
-      {
-       "id": "w1115-fri-20-bench-v2",
-       "batch": "2026-11-12-samples",
-       "date": "2026-11-20",
-       "time": "11:00",
-       "platform": "ig_story",
-       "format": "9:16",
-       "piece": "2026 DROP · NEW SAMPLE 12.11: match cut — loose stones laid out → the same starburst being set in the vise",
-       "hook": "Some pieces take WEEKS / to look EFFORTLESS. -> Made at our bench · message us",
-       "angle": "דוגמה לרף האיכות (12.11, משרד): הוק ויזואלי בשנייה 0, Champie Bold/Light, תמונה אמיתית ערוכה, מתנגן",
-       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License)",
-       "thumbs": [
-        "2026-11-12-samples/fri-20-bench-f1.jpg",
-        "2026-11-12-samples/fri-20-bench-f2.jpg",
-        "2026-11-12-samples/fri-20-bench-f3.jpg"
-       ],
-       "images": [],
-       "status": "דוגמה חדשה — לבחינת דניאל",
-       "caption": "",
-       "video": "2026-11-12-samples/fri-20-bench.mp4",
-       "note": "מחליף את הגרסה שנפסלה אם דניאל מאשר את הכיוון; אחריו נבנה את שאר הסדרה באותו סגנון"
       }
      ]
     },
     {
      "week_of": "2026-11-16",
-     "label": "שבוע המבצעים 16–22.11 (נבנה 15.11): 13 סטוריז, 3 פוסטים לפיד, 3 פוסטים בעברית. המבצעים במרכז: 15% על הכול, עגילים במתנה מעל $2,000, קונים חוזרים 25%, וטיזר בלאק פריידי 30% מ-22.11. בסגנון הדוגמאות מ-12.11: הוק בשנייה הראשונה, Champie, צילומים אמיתיים ערוכים, בלי AI",
-     "approved": "לאישור דניאל · כלום לא בתור",
+     "label": "שבוע המבצעים 16–22.11 (נבנה 15.11, תוקן 15.11 לפי דניאל: עגיל שני = רעיון אחד של ברק ועומק, שמי לילה במקום רקע שחור, Algol נחתך מחדש, ריל שולחן העבודה עם תמונת סיום על יד): 13 סטוריז, 3 פוסטים לפיד, 3 פוסטים בעברית. המבצעים במרכז: 15% על הכול, עגילים במתנה מעל $2,000, קונים חוזרים 25%, וטיזר בלאק פריידי 30% מ-22.11. בסגנון הדוגמאות מ-12.11: הוק בשנייה הראשונה, Champie, צילומים אמיתיים ערוכים, בלי AI",
+     "approved": "מתוקן — מאושר לפרסום (דניאל 15.11) · בתור batch 2026-11-16-week",
      "items": [
       {
        "id": "w1116-mon-16-studs",
@@ -5389,30 +5348,30 @@
         "2026-11-16-week/mon-16-studs-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/mon-16-studs.mp4"
       },
       {
-       "id": "w1116-mon-16-centauri",
+       "id": "w1116-mon-16-earring",
        "batch": "2026-11-16-week",
        "date": "2026-11-16",
        "time": "19:00",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "Centauri R513 (yellow) cutout on ink, price card",
-       "hook": "$2,600 struck -> $2,210 · ALREADY 15% OFF -> CENTAURI · over $2,000: free studs included",
-       "angle": "מבצע: מחיר המבצע 15% עם המחיר המקורי מחוק (הוק: הקו שמוחק את המחיר בשנייה הראשונה)",
+       "piece": "2026 DROP: black pear sunburst earring, worn — one photo, macro on the stone -> her ear",
+       "hook": "It doesn't sparkle. / IT REFLECTS. -> Light, held / IN THE DARK. · for her, this season, 15% off",
+       "angle": "תיקון 15.11: רעיון אחד, צילום אחד. היהלום השחור לא זורק אש, הוא מחזיר אור כמו מראה (ברק ועומק); השתקפות עוברת על האבן ואז נסוגים לאוזן. בלי פוטאג' של יהלום לבן ובלי שורת-מפרט",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-16-week/mon-16-centauri.jpg",
-        "2026-11-16-week/mon-16-centauri-f1.jpg",
-        "2026-11-16-week/mon-16-centauri-f2.jpg"
+        "2026-11-16-week/mon-16-earring.jpg",
+        "2026-11-16-week/mon-16-earring-f1.jpg",
+        "2026-11-16-week/mon-16-earring-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
-       "video": "2026-11-16-week/mon-16-centauri.mp4"
+       "video": "2026-11-16-week/mon-16-earring.mp4"
       },
       {
        "id": "w1116-mon-16-post",
@@ -5432,7 +5391,7 @@
         "2026-11-16-week/mon-16-post-4.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "The studs are on us.\n\nEvery order over $2,000 comes with a pair of black diamond studs, set in gold. We'll add them to the box by hand. There's no code and nothing to remember.\n\nCentauri, Selkie and the Spindle earrings are all over that line, and they're already 15% off.\n\nTwo gifts, one box. Link in bio."
       },
       {
@@ -5453,7 +5412,7 @@
         "2026-11-16-week/mon-16-post-4.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "The studs are on us.\n\nEvery order over $2,000 comes with a pair of black diamond studs, set in gold. We'll add them to the box by hand. There's no code and nothing to remember.\n\nCentauri, Selkie and the Spindle earrings are all over that line, and they're already 15% off.\n\nTwo gifts, one box. Link in bio."
       },
       {
@@ -5471,9 +5430,10 @@
         "2026-11-16-week/mon-16-post-2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "מתוקן — מאושר לפרסום",
        "caption": "עונת המתנות התחילה אצלנו, ויש בה שני דברים שכדאי לדעת.\n\nהראשון: כל התכשיטים באתר כבר ב-15% הנחה. המחיר הישן מופיע מחוק ליד המחיר החדש, בלי קוד ובלי תנאים.\nהשני: בהזמנות הגדולות מצרפים לקופסה זוג עגילי יהלום שחור משובצים בזהב, במתנה. אנחנו מכניסים אותם ביד, לא צריך לבקש.\n\nשתי מתנות בקופסה אחת.\n\nhttps://dianarafael.com",
-       "fb_caption": "לפרופיל הפרטי של דניאל (בגוף ראשון):\n\nשאלו אותי השבוע מה אני מציע למי שקונה תכשיט במתנה. אז ככה:\n\nקודם כל, הכול באתר כבר ב-15% הנחה. רואים את המחיר הישן מחוק, בלי קודים ובלי משחקים.\nודבר שני, בהזמנות הגדולות אני מכניס לקופסה זוג עגילי יהלום שחור, במתנה. אני שם אותם בעצמי לפני שהחבילה נסגרת.\n\nאם אתם מתלבטים מה לקנות למישהי, תכתבו לי. אני עונה לכל הודעה בעצמי.\n\nhttps://dianarafael.com"
+       "fb_caption": "לפרופיל הפרטי של דניאל (בגוף ראשון):\n\nשאלו אותי השבוע מה אני מציע למי שקונה תכשיט במתנה. אז ככה:\n\nקודם כל, הכול באתר כבר ב-15% הנחה. רואים את המחיר הישן מחוק, בלי קודים ובלי משחקים.\nודבר שני, בהזמנות הגדולות אני מכניס לקופסה זוג עגילי יהלום שחור, במתנה. אני שם אותם בעצמי לפני שהחבילה נסגרת.\n\nאם אתם מתלבטים מה לקנות למישהי, תכתבו לי. אני עונה לכל הודעה בעצמי.\n\nhttps://dianarafael.com",
+       "note": "ידני: פייסבוק פרטי / X / לינקדאין (לא בתור Meta)"
       },
       {
        "id": "w1116-tue-17-gifts",
@@ -5492,30 +5452,30 @@
         "2026-11-16-week/tue-17-gifts-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/tue-17-gifts.mp4"
       },
       {
-       "id": "w1116-tue-17-earring",
+       "id": "w1116-tue-17-centauri",
        "batch": "2026-11-16-week",
        "date": "2026-11-17",
        "time": "20:00",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "2026 DROP: black pear drop earring, worn (macro to ear)",
-       "hook": "No ring size / NEEDED. -> Earrings: the gift that always fits. 15% off.",
-       "angle": "מתנה בלי מידה, צילום אמיתי ערוך (מאקרו לאוזן)",
+       "piece": "Centauri R513 (yellow) cutout in the night sky, price card",
+       "hook": "$2,600 struck -> $2,210 · ALREADY 15% OFF -> CENTAURI · over $2,000: free studs included",
+       "angle": "מבצע: מחיר המבצע 15% עם המחיר המקורי מחוק (עבר משני לשלישי; רקע שמי לילה במקום שחור)",
        "music": "Musinova - Minimal Underscore Piano Pulse (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
-        "2026-11-16-week/tue-17-earring.jpg",
-        "2026-11-16-week/tue-17-earring-f1.jpg",
-        "2026-11-16-week/tue-17-earring-f2.jpg"
+        "2026-11-16-week/tue-17-centauri.jpg",
+        "2026-11-16-week/tue-17-centauri-f1.jpg",
+        "2026-11-16-week/tue-17-centauri-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
-       "video": "2026-11-16-week/tue-17-earring.mp4"
+       "video": "2026-11-16-week/tue-17-centauri.mp4"
       },
       {
        "id": "w1116-wed-18-eternity",
@@ -5534,7 +5494,7 @@
         "2026-11-16-week/wed-18-eternity-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/wed-18-eternity.mp4"
       },
@@ -5555,7 +5515,7 @@
         "2026-11-16-week/wed-18-returning-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/wed-18-returning.mp4"
       },
@@ -5566,19 +5526,18 @@
        "time": "13:00",
        "platform": "ig_carousel",
        "format": "4:5",
-       "piece": "Carousel: Hyades, Noir Eclipse, Algol (rose), Umbra",
+       "piece": "Carousel: Hyades, Noir Eclipse, Umbra (night sky)",
        "hook": "15% off. Every piece.",
        "angle": "פיד: מחיר המבצע על כל האתר + קונים חוזרים בכיתוב",
        "music": "",
        "thumbs": [
         "2026-11-16-week/wed-18-post-1.jpg",
         "2026-11-16-week/wed-18-post-2.jpg",
-        "2026-11-16-week/wed-18-post-3.jpg",
-        "2026-11-16-week/wed-18-post-4.jpg"
+        "2026-11-16-week/wed-18-post-3.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
-       "caption": "15% off. Every piece, every day until Black Friday.\n\nThe price you'll see on the site is already the sale price, with the old one crossed out next to it. Hyades, Noir Eclipse, Algol, Umbra: made to order in our studio, in the gold you pick.\n\nOrdered from us before? Use the same email at checkout and you'll get 25% off in total. We're glad you're back."
+       "status": "בתור",
+       "caption": "15% off. Every piece, every day until Black Friday.\n\nThe price you'll see on the site is already the sale price, with the old one crossed out next to it. Hyades, Noir Eclipse, Umbra: made to order in our studio, in the gold you pick.\n\nOrdered from us before? Use the same email at checkout and you'll get 25% off in total. We're glad you're back."
       },
       {
        "id": "w1116-wed-18-post-fb",
@@ -5587,19 +5546,18 @@
        "time": "13:00",
        "platform": "fb_album",
        "format": "4:5",
-       "piece": "Carousel: Hyades, Noir Eclipse, Algol (rose), Umbra",
+       "piece": "Carousel: Hyades, Noir Eclipse, Umbra (night sky)",
        "hook": "15% off. Every piece.",
        "angle": "פיד: מחיר המבצע על כל האתר + קונים חוזרים בכיתוב",
        "music": "",
        "thumbs": [
         "2026-11-16-week/wed-18-post-1.jpg",
         "2026-11-16-week/wed-18-post-2.jpg",
-        "2026-11-16-week/wed-18-post-3.jpg",
-        "2026-11-16-week/wed-18-post-4.jpg"
+        "2026-11-16-week/wed-18-post-3.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
-       "caption": "15% off. Every piece, every day until Black Friday.\n\nThe price you'll see on the site is already the sale price, with the old one crossed out next to it. Hyades, Noir Eclipse, Algol, Umbra: made to order in our studio, in the gold you pick.\n\nOrdered from us before? Use the same email at checkout and you'll get 25% off in total. We're glad you're back."
+       "status": "בתור",
+       "caption": "15% off. Every piece, every day until Black Friday.\n\nThe price you'll see on the site is already the sale price, with the old one crossed out next to it. Hyades, Noir Eclipse, Umbra: made to order in our studio, in the gold you pick.\n\nOrdered from us before? Use the same email at checkout and you'll get 25% off in total. We're glad you're back."
       },
       {
        "id": "w1116-he-wed-18",
@@ -5616,9 +5574,10 @@
         "2026-11-16-week/wed-18-post-1.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "מתוקן — מאושר לפרסום",
        "caption": "יהלום אחד בכל פעם. ככה נבנית טבעת נצח: כל אבן נבחרת, נבדקת ונקבעת ביד, עד שהשורה סוגרת מעגל.\n\nשום דבר מזה לא מתקצר בגלל מבצע. מה שכן השתנה: כל התכשיטים באתר עכשיו ב-15% הנחה.\n\nומי שכבר קנה אצלנו? מקבל 25% הנחה בסך הכול, כשמזמינים עם אותו אימייל. תודה שחזרתם.\n\nhttps://dianarafael.com",
-       "fb_caption": "לפרופיל הפרטי של דניאל (בגוף ראשון):\n\nלפעמים שואלים אותי איך אפשר לעשות מבצע על תכשיט שנעשה ביד. התשובה: את העבודה אני לא מקצר. כל אבן נבחרת ונקבעת ביד, כמו תמיד.\n\nמה שאני כן יכול לעשות זה לוותר על חלק מהרווח בעונה הזאת. אז הכול באתר ב-15% הנחה.\n\nולמי שכבר קנה אצלי פעם: אתם מקבלים 25% בסך הכול. רק תזמינו עם אותו אימייל. תודה שחזרתם, זה הדבר הכי טוב שיכול לקרות לעסק קטן.\n\nhttps://dianarafael.com"
+       "fb_caption": "לפרופיל הפרטי של דניאל (בגוף ראשון):\n\nלפעמים שואלים אותי איך אפשר לעשות מבצע על תכשיט שנעשה ביד. התשובה: את העבודה אני לא מקצר. כל אבן נבחרת ונקבעת ביד, כמו תמיד.\n\nמה שאני כן יכול לעשות זה לוותר על חלק מהרווח בעונה הזאת. אז הכול באתר ב-15% הנחה.\n\nולמי שכבר קנה אצלי פעם: אתם מקבלים 25% בסך הכול. רק תזמינו עם אותו אימייל. תודה שחזרתם, זה הדבר הכי טוב שיכול לקרות לעסק קטן.\n\nhttps://dianarafael.com",
+       "note": "ידני: פייסבוק פרטי / X / לינקדאין (לא בתור Meta)"
       },
       {
        "id": "w1116-thu-19-zodiac",
@@ -5637,7 +5596,7 @@
         "2026-11-16-week/thu-19-zodiac-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/thu-19-zodiac.mp4"
       },
@@ -5658,7 +5617,7 @@
         "2026-11-16-week/thu-19-algol-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/thu-19-algol.mp4"
       },
@@ -5679,9 +5638,30 @@
         "2026-11-16-week/fri-20-pendant-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/fri-20-pendant.mp4"
+      },
+      {
+       "id": "w1116-fri-20-bench",
+       "batch": "2026-11-16-week",
+       "date": "2026-11-20",
+       "time": "14:00",
+       "platform": "ig_story",
+       "format": "9:16",
+       "piece": "2026 DROP: match cut — loose stones laid out -> the starburst in the vise -> APPROVED on-hand render (Algol, rose gold)",
+       "hook": "Some pieces take WEEKS / to look EFFORTLESS. -> MADE AT OUR BENCH · Message us to make yours.",
+       "angle": "הריל מ-12.11 שדניאל השאיר + תמונת סיום: הדמיה על יד שאושרה (R541 Algol, 21.10 approved)",
+       "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
+       "thumbs": [
+        "2026-11-16-week/fri-20-bench.jpg",
+        "2026-11-16-week/fri-20-bench-f1.jpg",
+        "2026-11-16-week/fri-20-bench-f2.jpg"
+       ],
+       "images": [],
+       "status": "בתור",
+       "caption": "",
+       "video": "2026-11-16-week/fri-20-bench.mp4"
       },
       {
        "id": "w1116-fri-20-halo",
@@ -5700,7 +5680,7 @@
         "2026-11-16-week/fri-20-halo-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/fri-20-halo.mp4"
       },
@@ -5721,7 +5701,7 @@
         "2026-11-16-week/sat-21-review-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/sat-21-review.mp4"
       },
@@ -5732,9 +5712,9 @@
        "time": "11:00",
        "platform": "ig_story",
        "format": "9:16",
-       "piece": "Diamond light from the bench (tweezers footage, defocused) + 30% reveal",
+       "piece": "Night sky + 30% reveal, then six black-diamond pieces rise together (Centauri, Hyades, Cor Caroli, Selkie, Spindle, Umbra)",
        "hook": "Black Friday / 30% / OFF EVERYTHING -> From Friday, November 27 through January.",
-       "angle": "טיזר בלאק פריידי: 30% על הכול מ-27.11 עד סוף ינואר, בלי קוד",
+       "angle": "טיזר בלאק פריידי: 30% על הכול מ-27.11 עד סוף ינואר, בלי קוד. תיקון 15.11: שמי לילה + הרבה תכשיטים יחד במקום פוטאג' של יהלום לבן על רקע כהה",
        "music": "Musinova - Minimal Underscore Piano Pulse, Drumless (Pixabay Content License, not Content-ID registered)",
        "thumbs": [
         "2026-11-16-week/sun-22-bf.jpg",
@@ -5742,7 +5722,7 @@
         "2026-11-16-week/sun-22-bf-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/sun-22-bf.mp4"
       },
@@ -5763,7 +5743,7 @@
         "2026-11-16-week/sun-22-all-f2.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "",
        "video": "2026-11-16-week/sun-22-all.mp4"
       },
@@ -5782,7 +5762,7 @@
         "2026-11-16-week/sun-22-post.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "30% off everything. From Black Friday, November 27, through January.\n\nEngagement rings, wedding bands, earrings, pendants. All of it. There's no code. It comes off automatically at checkout.\n\nUntil then, everything's already 15% off."
       },
       {
@@ -5800,7 +5780,7 @@
         "2026-11-16-week/sun-22-post.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "בתור",
        "caption": "30% off everything. From Black Friday, November 27, through January.\n\nEngagement rings, wedding bands, earrings, pendants. All of it. There's no code. It comes off automatically at checkout.\n\nUntil then, everything's already 15% off."
       },
       {
@@ -5818,9 +5798,10 @@
         "2026-11-16-week/sun-22-post.jpg"
        ],
        "images": [],
-       "status": "לאישור דניאל",
+       "status": "מתוקן — מאושר לפרסום",
        "caption": "ביום שישי הקרוב, 27 בנובמבר, מתחיל אצלנו הבלאק פריידי: 30% הנחה על כל האתר.\n\nטבעות אירוסין, טבעות נישואין, עגילים, תליונים. הכול. בלי קוד, ההנחה יורדת לבד בקופה.\n\nוהפעם זה לא נגמר אחרי סוף השבוע: המבצע נמשך עד סוף ינואר.\n\nhttps://dianarafael.com",
-       "fb_caption": "לפרופיל הפרטי של דניאל (בגוף ראשון):\n\nהחלטתי השנה לעשות בלאק פריידי קצת אחרת.\n\nמיום שישי, 27.11, הכול באתר ב-30% הנחה. טבעות אירוסין, טבעות נישואין, עגילים, תליונים. בלי קוד.\nובמקום ארבעה ימים של לחץ, המבצע נמשך עד סוף ינואר. מי שמתכנן הצעה או מתנה יכול לעשות את זה בשקט.\n\nשאלות? אני כאן, כמו תמיד.\n\nhttps://dianarafael.com"
+       "fb_caption": "לפרופיל הפרטי של דניאל (בגוף ראשון):\n\nהחלטתי השנה לעשות בלאק פריידי קצת אחרת.\n\nמיום שישי, 27.11, הכול באתר ב-30% הנחה. טבעות אירוסין, טבעות נישואין, עגילים, תליונים. בלי קוד.\nובמקום ארבעה ימים של לחץ, המבצע נמשך עד סוף ינואר. מי שמתכנן הצעה או מתנה יכול לעשות את זה בשקט.\n\nשאלות? אני כאן, כמו תמיד.\n\nhttps://dianarafael.com",
+       "note": "ידני: פייסבוק פרטי / X / לינקדאין (לא בתור Meta)"
       }
      ]
     }

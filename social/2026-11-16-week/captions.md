@@ -1,4 +1,4 @@
-# Week Mon 16.11 - Sun 22.11.2026 · promotions week · for Daniel's approval (nothing queued)
+# Week Mon 16.11 - Sun 22.11.2026 · promotions week · fixed 15.11 per Daniel, approved, queued (batch 2026-11-16-week)
 
 Offers used (checked in Shopify 15.11): 15% sale price with a real compare-at strikethrough on every piece;
 free black diamond studs with every order over $2,000 (added by hand); returning buyers 25% total;
@@ -15,10 +15,10 @@ Centauri, Selkie and the Spindle earrings are all over that line, and they're al
 
 Two gifts, one box. Link in bio.
 
-### Wed 18.11 13:00 · carousel (wed-18-post-1..4)
+### Wed 18.11 13:00 · carousel (wed-18-post-1..3)
 15% off. Every piece, every day until Black Friday.
 
-The price you'll see on the site is already the sale price, with the old one crossed out next to it. Hyades, Noir Eclipse, Algol, Umbra: made to order in our studio, in the gold you pick.
+The price you'll see on the site is already the sale price, with the old one crossed out next to it. Hyades, Noir Eclipse, Umbra: made to order in our studio, in the gold you pick.
 
 Ordered from us before? Use the same email at checkout and you'll get 25% off in total. We're glad you're back.
 
@@ -30,11 +30,11 @@ Engagement rings, wedding bands, earrings, pendants. All of it. There's no code.
 Until then, everything's already 15% off.
 
 ## Stories (EN, Instagram; Facebook gets them through the Accounts Center share)
-Mon 16 11:00 mon-16-studs · Mon 16 19:00 mon-16-centauri
-Tue 17 10:30 tue-17-gifts · Tue 17 20:00 tue-17-earring
+Mon 16 11:00 mon-16-studs · Mon 16 19:00 mon-16-earring
+Tue 17 10:30 tue-17-gifts · Tue 17 20:00 tue-17-centauri
 Wed 18 11:00 wed-18-eternity · Wed 18 19:30 wed-18-returning
 Thu 19 11:00 thu-19-zodiac · Thu 19 20:00 thu-19-algol
-Fri 20 11:00 fri-20-pendant · Fri 20 18:30 fri-20-halo
+Fri 20 11:00 fri-20-pendant · Fri 20 14:00 fri-20-bench · Fri 20 18:30 fri-20-halo
 Sat 21 20:00 sat-21-review
 Sun 22 11:00 sun-22-bf · Sun 22 19:00 sun-22-all
 Link sticker (added by hand in the app, the API cannot add it): dianarafael.com, or the product page named in the story.

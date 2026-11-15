@@ -716,7 +716,7 @@ function swCross(items){ // the same post on IG and on the FB Page -> ONE card w
     const c={...it,pfs:[it.platform],nets:[net]};seen[k]=c;out.push(c);}
   return out;
 }
-const SW_ST={'ממתין לאישור':'wait','אושר':'ok','בתור':'queue','פורסם':'done','נפסל':'no'};
+const SW_ST={'ממתין לאישור':'wait','אושר':'ok','מתוקן — מאושר לפרסום':'ok','בתור':'queue','פורסם':'done','נפסל':'no'};
 const SW_DAYS=['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
 let SW_CARDS=[];
 function swDate(s){const [y,m,d]=s.split('-').map(Number);return new Date(Date.UTC(y,m-1,d))}
