@@ -144,6 +144,21 @@ def btn(t, label, href, primary=True):
             f'text-transform:uppercase;color:{th["text"]};text-decoration:none;">{label}</a></td>')
 
 
+def cbtn(t, label, href, primary=False):
+    """Compact button that fits inside a 282px product card."""
+    th = T[t]
+    if primary:
+        return (f'<td align="center" bgcolor="{th["btn_bg"]}" style="background:{th["btn_bg"]};border-radius:2px;"><a href="{href}" target="_blank" '
+                f'style="display:inline-block;padding:11px 16px;font-family:{SANS};font-size:11px;font-weight:700;letter-spacing:.12em;'
+                f'text-transform:uppercase;color:{th["btn_fg"]};text-decoration:none;">{label}</a></td>')
+    return (f'<td align="center" style="border:1px solid {th["accent"]};border-radius:2px;"><a href="{href}" target="_blank" '
+            f'style="display:inline-block;padding:10px 15px;font-family:{SANS};font-size:11px;font-weight:700;letter-spacing:.12em;'
+            f'text-transform:uppercase;color:{th["text"]};text-decoration:none;">{label}</a></td>')
+
+
+STUDS = "1-carats-round-diamond-earrings-1"   # Classic Martini 1 ct natural black diamond studs = the free gift
+
+
 def buttons(t, items, pad="18px 32px 8px"):
     cells = "".join(f'<td class="col" style="padding:5px;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center"><tr>'
                     f'{btn(t, l, h, p)}</tr></table></td>' for l, h, p in items)
@@ -170,7 +185,7 @@ def img_row(src, alt, href, w=600):
             f'style="display:block;width:100%;max-width:{w}px;height:auto;border:0;"/></a></td></tr>')
 
 
-def card(t, key, img, camp, note=None):
+def card(t, key, img, camp, note=None, cta=None):
     th = T[t]; name, handle, desc, was, now = P[key]
     href = u(f"/products/{handle}", camp, f"card_{key}")
     n = (f'<div style="font-family:{SANS};font-size:11px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;color:{th["accent"]};margin-top:6px;">{note}</div>'
@@ -182,7 +197,8 @@ def card(t, key, img, camp, note=None):
             f'<div style="font-family:{SANS};font-size:13px;line-height:19px;color:{th["muted"]};margin-top:2px;">{desc}</div>'
             f'<div style="font-family:{SANS};font-size:16px;line-height:24px;color:{th["text"]};margin-top:8px;">'
             f'<span style="text-decoration:line-through;opacity:.55;">{money(was)}</span>&nbsp;&nbsp;<strong style="color:{th["accent"]};font-size:19px;">{money(now)}</strong></div>'
-            f'{n}</td></tr></table></td>')
+            f'{n}<table role="presentation" align="center" cellpadding="0" cellspacing="0" style="margin-top:14px;"><tr>'
+            f'{cbtn(t, cta or "See " + name, u(f"/products/{handle}", camp, f"btn_{key}"))}</tr></table></td></tr></table></td>')
 
 
 def grid(cells):
@@ -243,21 +259,29 @@ def e1():
     t, camp = "dark", "2026-11-17-gift"
     body = "".join([
         img_row(BASE + "e1-hero.jpg", "Free 1 ct natural black diamond studs in yellow gold, with every order over $2,000", u("/collections/new-arrivals", camp, "hero")),
-        h1(t, "The gift that comes<br/>with a gift.", pad="30px 40px 6px"),
+        buttons(t, [("See the free studs", u(f"/products/{STUDS}", camp, "btn_studs"), False)], "22px 32px 0"),
+        h1(t, "The gift that comes<br/>with a gift.", pad="26px 40px 6px"),
         para(t, "Everything on dianarafael.com is already <strong>15% off</strong>, with the old price crossed out next to the new one.<br/>"
                 "Spend $2,000 or more and we add a pair of <strong>1&nbsp;ct black diamond studs</strong> to the box, by hand. No code, nothing to remember."),
         buttons(t, [("Shop the gift edit", u("/collections/new-arrivals", camp, "cta_top"), True),
                     ("Ask us anything", WA + "?text=Hi%2C%20I%27m%20looking%20for%20a%20gift", False)]),
         eyebrow(t, "Over $2,000 · studs included", "34px 40px 14px"),
-        grid([card(t, "centauri", "e1-centauri-y.jpg", camp, "+ free studs"), card(t, "selkie", "e1-selkie-y.jpg", camp, "+ free studs"),
-              card(t, "algol", "e1-algol-r34.jpg", camp, "+ free studs"), card(t, "spindle", "e1-spindle-y.jpg", camp, "+ free studs")]),
+        grid([card(t, "centauri", "e1-centauri-y.jpg", camp, "+ free studs", "See the Centauri ring"),
+              card(t, "selkie", "e1-selkie-y.jpg", camp, "+ free studs", "See the Selkie ring"),
+              card(t, "algol", "e1-algol-r34.jpg", camp, "+ free studs", "See the Algol ring"),
+              card(t, "spindle", "e1-spindle-y.jpg", camp, "+ free studs", "See the earrings")]),
+        buttons(t, [("Choose your gift", u("/collections/new-arrivals", camp, "cta_over2000"), True)], "20px 32px 4px"),
         eyebrow(t, "Under $2,000 · still 15% off", "30px 40px 14px"),
-        grid([card(t, "noireclipse", "e1-noireclipse.jpg", camp), card(t, "hyades", "e1-hyades-r34.jpg", camp)]),
+        grid([card(t, "noireclipse", "e1-noireclipse.jpg", camp, None, "See the pendant"),
+              card(t, "hyades", "e1-hyades-r34.jpg", camp, None, "See the Hyades band")]),
         eyebrow(t, "Quick question", "34px 40px 0"),
         h1(t, "A ring, or something that needs no size?", 28),
         buttons(t, [("A ring", u("/collections/all-engagement-rings", camp, "style_pick-ring", "style_pick=ring&amp;"), False),
                     ("Earrings or a pendant", u("/collections/black-ice-earring-collection", camp, "style_pick-nosize", "style_pick=nosize&amp;"), False)], "10px 32px 20px"),
         vip(t, camp),
+        buttons(t, [("Shop the gift edit", u("/collections/new-arrivals", camp, "cta_bottom"), True),
+                    ("Talk to Daniel", BOOK + "?utm_source=klaviyo&amp;utm_medium=email&amp;utm_campaign=" + camp + "&amp;utm_content=cta_book", False)],
+                "22px 32px 4px"),
     ])
     return page(t, "The gift that comes with a gift",
                 "Every piece is already 15% off. Over $2,000, black diamond studs come in the box, free.",
@@ -285,20 +309,25 @@ def e2():
             f'<div style="font-family:{SERIF};font-size:20px;line-height:1.3;color:{th["text"]};margin-top:10px;">{line}</div>'
             f'<div style="font-family:{SANS};font-size:14px;color:{th["text"]};margin-top:12px;"><strong>{name}</strong> &nbsp;<span style="text-decoration:line-through;opacity:.55;">{money(was)}</span>'
             f'&nbsp; <strong style="color:{th["accent"]};">{money(now)}</strong></div>{extra}'
-            f'<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:14px;"><tr>{btn(t, "See " + name, href, False)}</tr></table></td></tr></table></td></tr>')
+            f'<table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:14px;"><tr>{btn(t, "See the " + el + " ring", href, True)}</tr></table>'
+            f'<div style="margin-top:10px;font-family:{SANS};font-size:12px;"><a href="{u(f"/products/{handle}", camp, f"link_{k}")}" target="_blank" style="color:{th["accent"]};">{name}: choose gold &amp; size &rarr;</a></div></td></tr></table></td></tr>')
     body = "".join([
         img_row(BASE + "e2-hero.jpg", "Four black diamond rings for fire, earth, air and water signs", u("/collections/new-arrivals", camp, "hero")),
         eyebrow(t, "Proposal season", "30px 40px 0"),
         h1(t, "Which ring is her sign?"),
         para(t, "The question we hear most this time of year: <em>which one is her?</em> Start with her element. "
                 "Every ring here is already <strong>15% off</strong>, and two of them come with free black diamond studs."),
-        buttons(t, [("Find her ring", u("/collections/new-arrivals", camp, "cta_top"), True)]),
+        buttons(t, [("Find her ring", u("/collections/new-arrivals", camp, "cta_top"), True),
+                    ("All engagement rings", u("/collections/all-engagement-rings", camp, "cta_top_rings"), False)]),
         "".join(blocks),
+        buttons(t, [("Shop the collection", u("/collections/new-arrivals", camp, "cta_after_elements"), True),
+                    ("See the free studs", u(f"/products/{STUDS}", camp, "btn_studs"), False)], "18px 32px 4px"),
         para(t, "Not sure of her sign, or her size? Every ring is made to order in the gold you choose, and we can change the stone, the band or the finish.",
              pad="24px 48px 4px"),
         buttons(t, [("Book 15 minutes with Daniel", BOOK + "?utm_source=klaviyo&amp;utm_medium=email&amp;utm_campaign=" + camp, True),
                     ("WhatsApp us", WA + "?text=Hi%2C%20she%27s%20a%20", False)]),
         vip(t, camp),
+        buttons(t, [("Choose her ring", u("/collections/all-engagement-rings", camp, "cta_bottom"), True)], "22px 32px 4px"),
     ])
     return page(t, "Which ring is her sign?",
                 "Fire, earth, air or water. Four rings, four characters, all 15% off now.",
