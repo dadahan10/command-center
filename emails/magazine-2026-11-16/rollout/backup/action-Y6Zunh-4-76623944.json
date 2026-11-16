@@ -1,0 +1,111 @@
+{
+ "id": "76623944",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "draft",
+  "main_action": {
+   "id": "64123418",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": "daniel@dianarafael.com",
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "Enjoy Flexible Layaway Options with Affirm at Diana Rafael!",
+     "preview_text": "Choose Affirm at checkout, plus two gifts with your order.",
+     "template_id": "XFcSP2",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": false,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Browse Abandonment Email+ SMS- Email #4",
+     "id": "SQtzKD"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": {
+   "id": "01JMC0HQS1KHJGCV8TV55AD52J",
+   "name": null,
+   "variations": [
+    {
+     "id": "76623945",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Enjoy Flexible Layaway Options with Affirm at Diana Rafael!",
+       "preview_text": "",
+       "template_id": "Tpsu6t",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Browse Abandonment Email+ SMS- Email #4 Test #1 February 18, 2025 Variation A",
+       "id": "RB2AzY"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    },
+    {
+     "id": "76623946",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Enjoy Flexible Layaway Options with Affirm at Diana Rafael!",
+       "preview_text": "",
+       "template_id": "RbSiR2",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Browse Abandonment Email+ SMS- Email #4 Test #1 February 18, 2025 Variation B",
+       "id": "VbSmAW"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    }
+   ],
+   "allocations": {
+    "76623945": 0.5,
+    "76623946": 0.5
+   },
+   "started": null,
+   "winner_metric": "unique-clicks",
+   "automatic_winner_selection_settings": {
+    "enabled": true,
+    "automatic_end_date": null,
+    "automatic_end_statistical_certainty": true
+   }
+  },
+  "concluded_experiment_id": null,
+  "winning_variation_id": null
+ },
+ "links": {
+  "next": "64123439"
+ }
+}

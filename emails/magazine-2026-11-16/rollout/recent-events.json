@@ -1,0 +1,2226 @@
+{
+ "UgasKH": [
+  {
+   "dt": "2026-11-15T10:11:48+00:00",
+   "first_name": "Joseph",
+   "props": {
+    "Total Discounts": "0.00",
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "Source Name": "web",
+    "Customer Locale": "en-US",
+    "Item Count": 1,
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Discount Codes": [],
+    "$currency_code": "USD",
+    "$event_id": "67385228329129",
+    "$value": 212.0,
+    "$extra": {
+     "webhook_topic": "checkouts/update",
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJAi918OJwJmYLWF5lSDAp/recover?key=9e63b6494942f755442655b1181622b9&locale=en-US",
+     "presentment_currency": "USD",
+     "full_landing_site": "",
+     "note_attributes": [],
+     "line_items": [
+      {
+       "properties": {},
+       "presentment_variant_title": "",
+       "variant_price": "212.00",
+       "destination_location_id": null,
+       "compare_at_price": "297.00",
+       "taxable": true,
+       "requires_shipping": true,
+       "parent_relationship": null,
+       "grams": 0,
+       "user_id": null,
+       "line_price": 212.0,
+       "fulfillment_service": "manual",
+       "tax_lines": [],
+       "variant_title": "",
+       "line_price_set": {
+        "presentment_money": {
+         "amount": 212.0
+        },
+        "shop_money": {
+         "amount": 212.0
+        }
+       },
+       "key": "50486433153193",
+       "gift_card": false,
+       "variant_id": 50486433153193,
+       "unit_price_measurement": {
+        "quantity_unit": null,
+        "reference_value": null,
+        "quantity_value": null,
+        "reference_unit": null,
+        "measured_type": null
+       },
+       "price": 212.0,
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "sku": null,
+       "origin_location_id": null,
+       "product_id": 10299723350185,
+       "product": {
+        "variant_options": {
+         "Title": "Default Title"
+        },
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "properties": {},
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship",
+        "product_type": "Black_Ice - Stud Earrings",
+        "id": 10299723350185,
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "variant": {
+         "sku": 50486433153193,
+         "id": 50486433153193,
+         "title": "Default Title",
+         "images": [],
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "options": {
+          "Title": "Default Title"
+         }
+        },
+        "vendor": "Diana Rafael",
+        "images": [
+         {
+          "alt": "Monochrome earrings",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300",
+          "height": 2000,
+          "width": 2000
+         }
+        ],
+        "translations": {}
+       },
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "rank": null,
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "quantity": 1.0,
+       "vendor": "Diana Rafael",
+       "applied_discounts": []
+      }
+     ],
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJAi918OJwJmYLWF5lSDAp/recover?key=9e63b6494942f755442655b1181622b9&locale=en-US",
+     "token": "da0652f3fa34d8624a2045a1d82df563",
+     "webhook_id": "0dd9ffce-2cdb-5a49-bc9e-321953150fd0",
+     "referring_site": ""
+    }
+   }
+  },
+  {
+   "dt": "2026-11-12T00:14:38+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "Discount Codes": [],
+    "$currency_code": "USD",
+    "Total Discounts": "0.00",
+    "Source Name": "web",
+    "Customer Locale": "en-US",
+    "Collections": [
+     "ALL ENGAGEMENT RINGS",
+     "ALL WEDDING BANDS",
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Pear Engagement Rings",
+     "White Fire  - Round Wedding Bands",
+     "White Fire - Eternity Wedding Bands",
+     "White Fire - Round Wedding Bangs",
+     "White Fire - Wedding Bands",
+     "all"
+    ],
+    "Items": [
+     "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+     "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold"
+    ],
+    "Item Count": 2,
+    "$event_id": "67315347685545",
+    "$value": 4208.0,
+    "$extra": {
+     "token": "3e954d86029c50f5eeb602c81909cb93",
+     "referring_site": "",
+     "webhook_topic": "checkouts/update",
+     "presentment_currency": "USD",
+     "webhook_id": "b8848d1d-ff1a-5b3e-aab3-8e4c4c062ace",
+     "note_attributes": [],
+     "full_landing_site": "http://diana-rafael.myshopify.com/products/forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold?utm_source=chatgpt.com",
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ2byyleNoOSoDoWWLBsg6/recover?key=6f221ab6b8ca912e27c5727e08b78f79&locale=en-US",
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ2byyleNoOSoDoWWLBsg6/recover?key=6f221ab6b8ca912e27c5727e08b78f79&locale=en-US",
+     "line_items": [
+      {
+       "line_price_set": {
+        "shop_money": {
+         "amount": 1530.0
+        },
+        "presentment_money": {
+         "amount": 1530.0
+        }
+       },
+       "title": "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+       "destination_location_id": null,
+       "vendor": "Diana Rafael",
+       "presentment_variant_title": "14K / 9",
+       "user_id": null,
+       "presentment_title": "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+       "properties": {},
+       "fulfillment_service": "manual",
+       "product_id": 7030779412649,
+       "unit_price_measurement": {
+        "quantity_unit": null,
+        "reference_value": null,
+        "measured_type": null,
+        "reference_unit": null,
+        "quantity_value": null
+       },
+       "parent_relationship": null,
+       "taxable": false,
+       "variant_price": "1530.00",
+       "line_price": 1530.0,
+       "sku": "R199-W-0.8-14",
+       "tax_lines": [],
+       "grams": 0,
+       "applied_discounts": [],
+       "quantity": 1.0,
+       "variant_id": 40649513369769,
+       "compare_at_price": "1800.00",
+       "requires_shipping": true,
+       "gift_card": false,
+       "variant_title": "14K / 9",
+       "product": {
+        "translations": {},
+        "body_html": "This unique diamond wedding band showcases 0.9 carats of striking Round natural diamonds in a 14k White  delicate setting. With its bold and modern look, this band is perfect for someone who wants a wedding band that is anything but traditional. Diana Rafael specializes in customizing this band to your engagement ring.",
+        "variant": {
+         "id": 40649513369769,
+         "options": {
+          "Gold Purity": "14K",
+          "Ring Size": "9"
+         },
+         "sku": "R199-W-0.8-14",
+         "title": "14K / 9",
+         "images": [
+          {
+           "alt": null,
+           "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/20276ad6-b6f0-5a57-812d-15167ae25360.jpg?v=1680509762",
+           "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/20276ad6-b6f0-5a57-812d-15167ae25360_x240.jpg?v=1680509762",
+           "width": 2000,
+           "height": 2000
+          }
+         ],
+         "translations": {
+          "presentment_variant_title": ""
+         }
+        },
+        "title": "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+        "id": 7030779412649,
+        "handle": "0-9-carats-round-diamond-wedding-band-2",
+        "vendor": "Diana Rafael",
+        "product_type": "Jewelry > Rings > Wedding & Engagement > Wedding Bands",
+        "variant_options": {
+         "Gold Purity": "14K",
+         "Ring Size": "9"
+        },
+        "properties": {},
+        "tags": "ETERNITY, Fishtail, Round",
+        "images": [
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/20276ad6-b6f0-5a57-812d-15167ae25360.jpg?v=1680509762",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/20276ad6-b6f0-5a57-812d-15167ae25360_x240.jpg?v=1680509762",
+          "width": 2000,
+          "height": 2000
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/7697c837-ca37-5125-baec-68ad8fca825a.jpg?v=1680509765",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/7697c837-ca37-5125-baec-68ad8fca825a_x240.jpg?v=1680509765",
+          "width": 2000,
+          "height": 2000
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/f9423fbc-ddba-5d0e-a997-61ecf396a83a.jpg?v=1680509767",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/f9423fbc-ddba-5d0e-a997-61ecf396a83a_x240.jpg?v=1680509767",
+          "width": 2000,
+          "height": 2000
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/ed7b3cad-5b8b-57e2-9182-073d19df1a1b.jpg?v=1680509770",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/ed7b3cad-5b8b-57e2-9182-073d19df1a1b_x240.jpg?v=1680509770",
+          "width": 2000,
+          "height": 2000
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/1bc07168-48ae-57b9-a23a-4d2a2f88aece.jpg?v=1680509772",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/1bc07168-48ae-57b9-a23a-4d2a2f88aece_x240.jpg?v=1680509772",
+          "width": 2000,
+          "height": 2000
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/763cfbae-57e9-5633-b193-fe044a5ebaeb.jpg?v=1680509775",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/763cfbae-57e9-5633-b193-fe044a5ebaeb_x240.jpg?v=1680509775",
+          "width": 2000,
+          "height": 2000
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1566_4804c686-5b0d-4421-be7d-3e76e6c72587.jpg?v=1713943566",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1566_4804c686-5b0d-4421-be7d-3e76e6c72587_x240.jpg?v=1713943566",
+          "width": 1551,
+          "height": 1551
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-15692_6f66e9ab-4d8d-420e-928f-12638099a043.jpg?v=1713943568",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-15692_6f66e9ab-4d8d-420e-928f-12638099a043_x240.jpg?v=1713943568",
+          "width": 1899,
+          "height": 1899
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1577_7a81713e-2bf1-4cf1-bfb0-40a83f1f02c9.jpg?v=1713943564",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1577_7a81713e-2bf1-4cf1-bfb0-40a83f1f02c9_x240.jpg?v=1713943564",
+          "width": 1852,
+          "height": 1852
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1588_f78dd332-6407-474a-8297-ac564d897808.jpg?v=1713943564",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1588_f78dd332-6407-474a-8297-ac564d897808_x240.jpg?v=1713943564",
+          "width": 1617,
+          "height": 1617
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1591_37a84f8e-d023-4a72-a511-953b32c0527a.jpg?v=1713943567",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1591_37a84f8e-d023-4a72-a511-953b32c0527a_x240.jpg?v=1713943567",
+          "width": 2183,
+          "height": 2183
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1621_3d0f05f9-545a-479e-baa0-9c93c39ac332.jpg?v=1713943568",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1621_3d0f05f9-545a-479e-baa0-9c93c39ac332_x240.jpg?v=1713943568",
+          "width": 2474,
+          "height": 2474
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1622_4da474ed-cd34-495e-9f2e-c2ebedd93845.jpg?v=1713943567",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1622_4da474ed-cd34-495e-9f2e-c2ebedd93845_x240.jpg?v=1713943567",
+          "width": 2246,
+          "height": 2246
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1634_c4da93f1-1554-4d69-af86-59886cef0d34.jpg?v=1713943566",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1634_c4da93f1-1554-4d69-af86-59886cef0d34_x240.jpg?v=1713943566",
+          "width": 2562,
+          "height": 2562
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1748_f9142051-3e9c-42f1-834e-105e00e754ba.jpg?v=1713943564",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-1748_f9142051-3e9c-42f1-834e-105e00e754ba_x240.jpg?v=1713943564",
+          "width": 1990,
+          "height": 1990
+         },
+         {
+          "alt": "",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-2025_0c65bd3d-4a6d-4d06-a530-7e61ee1279f7.jpg?v=1713943565",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/DmitriyGreen-2025_0c65bd3d-4a6d-4d06-a530-7e61ee1279f7_x240.jpg?v=1713943565",
+          "width": 4890,
+          "height": 3180
+         }
+        ]
+       },
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "origin_location_id": null,
+       "key": "40649513369769",
+       "rank": null,
+       "price": 1530.0
+      },
+      {
+       "line_price_set": {
+        "shop_money": {
+         "amount": 2678.0
+        },
+        "presentment_money": {
+         "amount": 2678.0
+        }
+       },
+       "title": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+       "destination_location_id": null,
+       "vendor": "Diana Rafael",
+       "presentment_variant_title": "9 / White Gold",
+       "user_id": null,
+       "presentment_title": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+       "properties": {},
+       "fulfillment_service": "manual",
+       "product_id": 8222844649641,
+       "unit_price_measurement": {
+        "quantity_unit": null,
+        "reference_value": null,
+        "measured_type": null,
+        "reference_unit": null,
+        "quantity_value": null
+       },
+       "parent_relationship": null,
+       "taxable": false,
+       "variant_price": "2678.00",
+       "line_price": 2678.0,
+       "sku": "R042-W-BI-3-14",
+       "tax_lines": [],
+       "grams": 0,
+       "applied_discounts": [],
+       "quantity": 1.0,
+       "variant_id": 46009279348905,
+       "compare_at_price": "3150.00",
+       "requires_shipping": true,
+       "gift_card": false,
+       "variant_title": "9 / White Gold",
+       "product": {
+        "translations": {},
+        "body_html": "<p>Forbidden Fruit – an enchanting engagement ring that exudes mystery and allure. Crafted in luxurious yellow gold, this captivating piece features a 3-carat pear-shaped black diamond, enhanced to reveal its deep, opaque beauty.</p>\n<p>The Forbidden Fruit is adorned with a hidden halo of 0.49 carats of round accent diamonds, adding a touch of brilliance that perfectly complements the bold centerpiece. With a total carat weight of 35, this ring combines elegance with a daring edge.</p>\n<p>A symbol of love that defies convention, the Forbidden Fruit is perfect for those who embrace uniqueness and timeless style.</p>",
+        "variant": {
+         "id": 46009279348905,
+         "options": {
+          "Size": "9",
+          "Color": "White Gold"
+         },
+         "sku": "R042-W-BI-3-14",
+         "title": "9 / White Gold",
+         "images": [],
+         "translations": {
+          "presentment_variant_title": ""
+         }
+        },
+        "title": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+        "id": 8222844649641,
+        "handle": "forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold",
+        "vendor": "Diana Rafael",
+        "product_type": "Black_Ice - Diamond Rings",
+        "variant_options": {
+         "Size": "9",
+         "Color": "White Gold"
+        },
+        "properties": {},
+        "tags": "BLACK ENGAGEMENT RING, Black Engagement Rings, Black Ice, PEAR",
+        "images": [
+         {
+          "alt": "Forbidden Fruit Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf.jpg?v=1723112726",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf_x240.jpg?v=1723112726",
+          "width": 2574,
+          "height": 2574
+         },
+         {
+          "alt": "Forbidden Fruit Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold, view 2",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/bfa4cb9c-eceb-533d-b61a-8b5b9ac8d48f.jpg?v=1723112734",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/bfa4cb9c-eceb-533d-b61a-8b5b9ac8d48f_x240.jpg?v=1723112734",
+          "width": 2198,
+          "height": 2198
+         },
+         {
+          "alt": "Forbidden Fruit Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold, view 3",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/15a98dfd-3dc1-5af9-aaf9-2a2e98ecfcb0.jpg?v=1723112728",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/15a98dfd-3dc1-5af9-aaf9-2a2e98ecfcb0_x240.jpg?v=1723112728",
+          "width": 2003,
+          "height": 2003
+         },
+         {
+          "alt": "Forbidden Fruit Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold, view 4",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/2a6f23a3-ec3d-5e5e-9f2c-eb34a7bef9ae.jpg?v=1723112730",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/2a6f23a3-ec3d-5e5e-9f2c-eb34a7bef9ae_x240.jpg?v=1723112730",
+          "width": 2358,
+          "height": 2358
+         },
+         {
+          "alt": "Forbidden Fruit Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold, view 5",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/df975983-8ce9-58de-a2c1-b340247ebc11.jpg?v=1723112732",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/df975983-8ce9-58de-a2c1-b340247ebc11_x240.jpg?v=1723112732",
+          "width": 2250,
+          "height": 2250
+         },
+         {
+          "alt": "Forbidden Fruit Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold, view 6",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/09656202-afab-5237-8300-0bab5e719c1d.jpg?v=1723112735",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/09656202-afab-5237-8300-0bab5e719c1d_x240.jpg?v=1723112735",
+          "width": 2638,
+          "height": 2638
+         },
+         {
+          "alt": "Forbidden Fruit Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold, view 7",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/e5d37368-39d3-57f3-aef5-653dbb419b37.jpg?v=1723112737",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/e5d37368-39d3-57f3-aef5-653dbb419b37_x240.jpg?v=1723112737",
+          "width": 2417,
+          "height": 2417
+         }
+        ]
+       },
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "origin_location_id": null,
+       "key": "46009279348905",
+       "rank": null,
+       "price": 2678.0
+      }
+     ]
+    }
+   }
+  },
+  {
+   "dt": "2026-11-11T16:19:19+00:00",
+   "first_name": null,
+   "props": {
+    "Item Count": 1,
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Discount Codes": [],
+    "Customer Locale": "en-GB",
+    "$currency_code": "USD",
+    "Total Discounts": "0.00",
+    "Source Name": "web",
+    "$event_id": "67309216596137",
+    "$value": 212.0,
+    "$extra": {
+     "presentment_currency": "USD",
+     "referring_site": "https://dianarafael.com/",
+     "webhook_topic": "checkouts/update",
+     "line_items": [
+      {
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "rank": null,
+       "taxable": true,
+       "properties": {},
+       "origin_location_id": null,
+       "variant_title": "",
+       "presentment_variant_title": "",
+       "variant_price": "212.00",
+       "key": "50486433153193",
+       "line_price_set": {
+        "presentment_money": {
+         "amount": 212.0
+        },
+        "shop_money": {
+         "amount": 212.0
+        }
+       },
+       "parent_relationship": null,
+       "grams": 0,
+       "tax_lines": [],
+       "line_price": 212.0,
+       "requires_shipping": true,
+       "translations": {
+        "presentment_variant_options": [],
+        "presentment_description": ""
+       },
+       "product": {
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "images": [
+         {
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300",
+          "width": 2000,
+          "alt": "Monochrome earrings",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300",
+          "height": 2000
+         }
+        ],
+        "variant": {
+         "title": "Default Title",
+         "images": [],
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "id": 50486433153193,
+         "sku": 50486433153193,
+         "options": {
+          "Title": "Default Title"
+         }
+        },
+        "id": 10299723350185,
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "variant_options": {
+         "Title": "Default Title"
+        },
+        "vendor": "Diana Rafael",
+        "properties": {},
+        "product_type": "Black_Ice - Stud Earrings",
+        "translations": {},
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship"
+       },
+       "sku": null,
+       "gift_card": false,
+       "applied_discounts": [],
+       "compare_at_price": "297.00",
+       "price": 212.0,
+       "destination_location_id": null,
+       "vendor": "Diana Rafael",
+       "unit_price_measurement": {
+        "quantity_value": null,
+        "reference_unit": null,
+        "measured_type": null,
+        "quantity_unit": null,
+        "reference_value": null
+       },
+       "fulfillment_service": "manual",
+       "variant_id": 50486433153193,
+       "product_id": 10299723350185,
+       "quantity": 1.0,
+       "user_id": null
+      }
+     ],
+     "note_attributes": [],
+     "webhook_id": "d3598976-3883-5ac7-b890-a9290bc7a18f",
+     "full_landing_site": "http://diana-rafael.myshopify.com/cart/add.js",
+     "token": "c4b3ec8083e46954e0da9addfb01e5d8",
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ1ticiqSVtFHqKq8puF5W/recover?key=5e88f49462489f55c47d355a40b50b06&locale=en-GB",
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ1ticiqSVtFHqKq8puF5W/recover?key=5e88f49462489f55c47d355a40b50b06&locale=en-GB"
+    }
+   }
+  },
+  {
+   "dt": "2026-11-10T21:38:27+00:00",
+   "first_name": "Kimberly",
+   "props": {
+    "$currency_code": "USD",
+    "Item Count": 1,
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "Customer Locale": "en-US",
+    "Source Name": "web",
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Discount Codes": [],
+    "Total Discounts": "0.00",
+    "$event_id": "67295140741289",
+    "$value": 212.0,
+    "$extra": {
+     "referring_site": "",
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ048nwnLHrHtP79eF8B1f/recover?key=5854c368380b7dcc0bda7aa4d1f17ad0&locale=en-US",
+     "token": "1657123484450e18e1517fd9cc59e9f0",
+     "full_landing_site": "",
+     "line_items": [
+      {
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "variant_id": 50486433153193,
+       "quantity": 1.0,
+       "presentment_variant_title": "",
+       "gift_card": false,
+       "parent_relationship": null,
+       "fulfillment_service": "manual",
+       "product": {
+        "id": 10299723350185,
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "variant": {
+         "id": 50486433153193,
+         "sku": 50486433153193,
+         "title": "Default Title",
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "options": {
+          "Title": "Default Title"
+         },
+         "images": []
+        },
+        "images": [
+         {
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300",
+          "alt": "Monochrome earrings",
+          "width": 2000,
+          "height": 2000
+         }
+        ],
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship",
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "variant_options": {
+         "Title": "Default Title"
+        },
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "translations": {},
+        "properties": {},
+        "vendor": "Diana Rafael",
+        "product_type": "Black_Ice - Stud Earrings"
+       },
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "vendor": "Diana Rafael",
+       "requires_shipping": true,
+       "price": 212.0,
+       "origin_location_id": null,
+       "user_id": null,
+       "line_price": 212.0,
+       "unit_price_measurement": {
+        "quantity_unit": null,
+        "reference_value": null,
+        "quantity_value": null,
+        "measured_type": null,
+        "reference_unit": null
+       },
+       "key": "50486433153193",
+       "applied_discounts": [],
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "compare_at_price": "297.00",
+       "grams": 0,
+       "rank": null,
+       "sku": null,
+       "tax_lines": [],
+       "destination_location_id": null,
+       "properties": {},
+       "taxable": true,
+       "product_id": 10299723350185,
+       "variant_title": "",
+       "line_price_set": {
+        "presentment_money": {
+         "amount": 212.0
+        },
+        "shop_money": {
+         "amount": 212.0
+        }
+       },
+       "variant_price": "212.00"
+      }
+     ],
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ048nwnLHrHtP79eF8B1f/recover?key=5854c368380b7dcc0bda7aa4d1f17ad0&locale=en-US",
+     "webhook_id": "5a58ef61-4ef1-566d-a7ca-d24d174d931b",
+     "note_attributes": [],
+     "presentment_currency": "USD",
+     "webhook_topic": "checkouts/update"
+    }
+   }
+  },
+  {
+   "dt": "2026-11-10T21:36:45+00:00",
+   "first_name": "Michelle",
+   "props": {
+    "Item Count": 1,
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Customer Locale": "en-GB",
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "Total Discounts": "0.00",
+    "Discount Codes": [],
+    "Source Name": "web",
+    "$currency_code": "USD",
+    "$event_id": "67295116624041",
+    "$value": 212.0,
+    "$extra": {
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ03yC8RsTeMziacSer2fr/recover?key=5950db5ca7a1f73c0e4383cc8d2de709&locale=en-GB",
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNJ03yC8RsTeMziacSer2fr/recover?key=5950db5ca7a1f73c0e4383cc8d2de709&locale=en-GB",
+     "webhook_topic": "checkouts/update",
+     "line_items": [
+      {
+       "applied_discounts": [],
+       "variant_id": 50486433153193,
+       "unit_price_measurement": {
+        "measured_type": null,
+        "reference_unit": null,
+        "reference_value": null,
+        "quantity_value": null,
+        "quantity_unit": null
+       },
+       "properties": {},
+       "sku": null,
+       "price": 212.0,
+       "taxable": true,
+       "variant_price": "212.00",
+       "grams": 0,
+       "destination_location_id": null,
+       "requires_shipping": true,
+       "vendor": "Diana Rafael",
+       "user_id": null,
+       "key": "50486433153193",
+       "fulfillment_service": "manual",
+       "presentment_variant_title": "",
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "rank": null,
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "product": {
+        "vendor": "Diana Rafael",
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship",
+        "properties": {},
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "variant": {
+         "options": {
+          "Title": "Default Title"
+         },
+         "id": 50486433153193,
+         "images": [],
+         "sku": 50486433153193,
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "title": "Default Title"
+        },
+        "id": 10299723350185,
+        "images": [
+         {
+          "height": 2000,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300",
+          "width": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300",
+          "alt": "Monochrome earrings"
+         }
+        ],
+        "translations": {},
+        "product_type": "Black_Ice - Stud Earrings",
+        "variant_options": {
+         "Title": "Default Title"
+        }
+       },
+       "compare_at_price": "297.00",
+       "tax_lines": [],
+       "line_price_set": {
+        "shop_money": {
+         "amount": 212.0
+        },
+        "presentment_money": {
+         "amount": 212.0
+        }
+       },
+       "quantity": 1.0,
+       "line_price": 212.0,
+       "variant_title": "",
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "gift_card": false,
+       "parent_relationship": null,
+       "product_id": 10299723350185,
+       "origin_location_id": null
+      }
+     ],
+     "note_attributes": [],
+     "referring_site": "",
+     "token": "94a9b71115d20194a2d279dc5b7dbcf1",
+     "full_landing_site": "",
+     "webhook_id": "3c699fd8-5e44-544d-832f-9c06f9123e30",
+     "presentment_currency": "USD"
+    }
+   }
+  },
+  {
+   "dt": "2026-11-10T20:55:49+00:00",
+   "first_name": "Stephen",
+   "props": {
+    "$currency_code": "USD",
+    "Total Discounts": "0.00",
+    "Customer Locale": "en-US",
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "Discount Codes": [],
+    "Source Name": "web",
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Item Count": 1,
+    "$event_id": "67294570610857",
+    "$value": 212.0,
+    "$extra": {
+     "full_landing_site": "",
+     "webhook_topic": "checkouts/update",
+     "line_items": [
+      {
+       "variant_title": "",
+       "vendor": "Diana Rafael",
+       "price": 212.0,
+       "compare_at_price": "297.00",
+       "fulfillment_service": "manual",
+       "tax_lines": [],
+       "unit_price_measurement": {
+        "reference_unit": null,
+        "reference_value": null,
+        "quantity_unit": null,
+        "quantity_value": null,
+        "measured_type": null
+       },
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "gift_card": false,
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "requires_shipping": true,
+       "variant_price": "212.00",
+       "parent_relationship": null,
+       "grams": 0,
+       "presentment_variant_title": "",
+       "properties": {},
+       "rank": null,
+       "user_id": null,
+       "line_price": 212.0,
+       "product": {
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "vendor": "Diana Rafael",
+        "id": 10299723350185,
+        "variant_options": {
+         "Title": "Default Title"
+        },
+        "product_type": "Black_Ice - Stud Earrings",
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "images": [
+         {
+          "width": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300",
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300",
+          "alt": "Monochrome earrings",
+          "height": 2000
+         }
+        ],
+        "translations": {},
+        "variant": {
+         "title": "Default Title",
+         "options": {
+          "Title": "Default Title"
+         },
+         "images": [],
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "id": 50486433153193,
+         "sku": 50486433153193
+        },
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship",
+        "properties": {}
+       },
+       "line_price_set": {
+        "presentment_money": {
+         "amount": 212.0
+        },
+        "shop_money": {
+         "amount": 212.0
+        }
+       },
+       "origin_location_id": null,
+       "destination_location_id": null,
+       "taxable": true,
+       "applied_discounts": [],
+       "sku": null,
+       "product_id": 10299723350185,
+       "key": "50486433153193",
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "variant_id": 50486433153193,
+       "quantity": 1.0
+      }
+     ],
+     "webhook_id": "e1c45d42-86a8-51e9-b4f8-a3ff170426c5",
+     "token": "5a9890d2905bbfbc2b59bea8cd222b34",
+     "referring_site": "",
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIzzp1clGKPjCnpP1WlaU7/recover?key=99ee2ac6db52aaf1c4a21d180516c3a6&locale=en-US",
+     "note_attributes": [],
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIzzp1clGKPjCnpP1WlaU7/recover?key=99ee2ac6db52aaf1c4a21d180516c3a6&locale=en-US",
+     "presentment_currency": "USD"
+    }
+   }
+  },
+  {
+   "dt": "2026-11-10T17:08:14+00:00",
+   "first_name": null,
+   "props": {
+    "Collections": [
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "all"
+    ],
+    "Total Discounts": "0.00",
+    "Items": [
+     "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut"
+    ],
+    "Item Count": 1,
+    "Source Name": "web",
+    "Customer Locale": "en-US",
+    "$currency_code": "USD",
+    "Discount Codes": [],
+    "$event_id": "67100078702761",
+    "$value": 2465.0,
+    "$extra": {
+     "referring_site": "",
+     "token": "c5bf11cb242940a125b8b3c57f0ad902",
+     "webhook_topic": "checkouts/update",
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIY27XlnocN2SUALOFck1C/recover?key=baca99eb361532d2b9da24fef45f2819&locale=en-US",
+     "note_attributes": [],
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIY27XlnocN2SUALOFck1C/recover?key=baca99eb361532d2b9da24fef45f2819&locale=en-US",
+     "line_items": [
+      {
+       "line_price": 2465.0,
+       "presentment_title": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut",
+       "sku": "R035-Y-BI-3.44-14",
+       "rank": null,
+       "requires_shipping": true,
+       "gift_card": false,
+       "origin_location_id": null,
+       "variant_price": "2465.00",
+       "product_id": 7546932822185,
+       "presentment_variant_title": "6.5 / Yellow Gold",
+       "applied_discounts": [],
+       "key": "44513006452905",
+       "compare_at_price": "2900.00",
+       "tax_lines": [],
+       "product": {
+        "handle": "black-magic-black-diamond-engagement-ring",
+        "body_html": "<div style=\"text-align: center;\" data-mce-style=\"text-align: center;\">\n<div class=\"react-scroll-to-bottom--css-mjger-1n7m0yu\">\n<div class=\"flex flex-col text-sm pb-9\">\n<div class=\"w-full text-token-text-primary sm:AIPRM__conversation__response\" data-testid=\"conversation-turn-126\">\n<div class=\"px-4 py-2 justify-center text-base md:gap-6 m-auto\">\n<div class=\"flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion\">\n<div class=\"relative flex w-full flex-col agent-turn\">\n<div class=\"flex-col gap-1 md:gap-3\">\n<div class=\"flex flex-grow flex-col max-w-full\">\n<div data-message-author-role=\"assistant\" data-message-id=\"d8f0e685-c16d-4cb2-bc18-3b3637b51b5f\" class=\"min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto\">\n<div class=\"markdown prose w-full break-words dark:prose-invert light AIPRM__conversation__response\">\n<p>Double Hidden Halo Three-Sided Band Black &amp; White Natural Diamond Cushion Cut Engagement Ring, a captivating masterpiece in rose gold. With a total carat weight of 3.44, this ring combines the allure of black and white diamonds.</p>\n<p>At its center gleams a stunning cushion-cut black diamond, enhanced to deepen its hue, totaling 2.24 carats. Surrounding it, a double hidden halo of round black diamonds, weighing 1.2 carats, adds to its enchanting brilliance.</p>\n<p>This ring symbolizes the fusion of elegance and mystery, perfect for those captivated by the secrets of the night sky.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+        "images": [
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/d268a725-432c-5dab-928b-959b1bd51aa9.jpg?v=1679921656",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/d268a725-432c-5dab-928b-959b1bd51aa9_x240.jpg?v=1679921656"
+         },
+         {
+          "alt": "",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/files/preview_images/163ab7b62fd547ddbd18c201407b8be9.thumbnail.0000000000.jpg?v=1701010657",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/files/preview_images/163ab7b62fd547ddbd18c201407b8be9.thumbnail.0000000000_x240.jpg?v=1701010657"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 2",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/b6c9d967-8cf7-5101-8600-11968dd07cbf.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/b6c9d967-8cf7-5101-8600-11968dd07cbf_x240.jpg?v=1701010637"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 3",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/08ff52e3-c851-594c-8301-9cd740cdf428.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/08ff52e3-c851-594c-8301-9cd740cdf428_x240.jpg?v=1701010637"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 4",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/e668cf9a-8848-52db-abef-693fb05cfcdd.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/e668cf9a-8848-52db-abef-693fb05cfcdd_x240.jpg?v=1701010637"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 5",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/11a8d6e1-542f-598b-8dee-92a78ec88eec.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/11a8d6e1-542f-598b-8dee-92a78ec88eec_x240.jpg?v=1701010637"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 6",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/1510800c-069a-5117-ad66-43c94dbf8d06.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/1510800c-069a-5117-ad66-43c94dbf8d06_x240.jpg?v=1701010637"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 7",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/fef0f8ac-d7c7-57b1-8636-994b7b599af8.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/fef0f8ac-d7c7-57b1-8636-994b7b599af8_x240.jpg?v=1701010637"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 8",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a1f83b9d-7a26-5c43-be1e-2d2292574082.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a1f83b9d-7a26-5c43-be1e-2d2292574082_x240.jpg?v=1701010637"
+         },
+         {
+          "alt": "Black Magic 3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut, view 9",
+          "width": 1080,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/042d8218-f5d4-57d5-95b6-4b112bcfe244_addc3321-b11d-4853-8ac3-f3d27f41e51b.jpg?v=1701010637",
+          "height": 1080,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/042d8218-f5d4-57d5-95b6-4b112bcfe244_addc3321-b11d-4853-8ac3-f3d27f41e51b_x240.jpg?v=1701010637"
+         }
+        ],
+        "product_type": "Black_Ice - Diamond Rings",
+        "tags": "Black & White Rings, Black Engagement Rings, Black Ice, CUSHION",
+        "vendor": "Diana Rafael",
+        "title": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut",
+        "variant": {
+         "images": [],
+         "sku": "R035-Y-BI-3.44-14",
+         "options": {
+          "Color": "Yellow Gold",
+          "Size": "6.5"
+         },
+         "title": "6.5 / Yellow Gold",
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "id": 44513006452905
+        },
+        "variant_options": {
+         "Color": "Yellow Gold",
+         "Size": "6.5"
+        },
+        "id": 7546932822185,
+        "translations": {},
+        "properties": {}
+       },
+       "title": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut",
+       "quantity": 1.0,
+       "unit_price_measurement": {
+        "quantity_value": null,
+        "measured_type": null,
+        "reference_value": null,
+        "quantity_unit": null,
+        "reference_unit": null
+       },
+       "destination_location_id": null,
+       "user_id": null,
+       "properties": {},
+       "fulfillment_service": "manual",
+       "parent_relationship": null,
+       "variant_id": 44513006452905,
+       "taxable": false,
+       "price": 2465.0,
+       "grams": 0,
+       "vendor": "Diana Rafael",
+       "variant_title": "6.5 / Yellow Gold",
+       "translations": {
+        "presentment_variant_options": [],
+        "presentment_description": ""
+       },
+       "line_price_set": {
+        "presentment_money": {
+         "amount": 2465.0
+        },
+        "shop_money": {
+         "amount": 2465.0
+        }
+       }
+      }
+     ],
+     "full_landing_site": "http://diana-rafael.myshopify.com/products/monoceros-pave-black-diamond-engagement-ringyellow-gold",
+     "presentment_currency": "USD",
+     "webhook_id": "cf39300b-4a6b-562c-a218-6328653c7b3c"
+    }
+   }
+  },
+  {
+   "dt": "2026-11-10T02:09:36+00:00",
+   "first_name": "Emma",
+   "props": {
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "Total Discounts": "0.00",
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Source Name": "web",
+    "$currency_code": "USD",
+    "Customer Locale": "en-US",
+    "Discount Codes": [],
+    "Item Count": 1,
+    "$event_id": "67282306138281",
+    "$value": 212.0,
+    "$extra": {
+     "referring_site": "https://dianarafael.com/",
+     "webhook_topic": "checkouts/update",
+     "webhook_id": "32a1e96e-9c0c-57ca-9a9d-8a2b475a2da6",
+     "note_attributes": [],
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIy9hTZqmXnzQt7ZVDmmVH/recover?key=7436c15c8fe9cc98360aea1df964f78f&locale=en-US",
+     "presentment_currency": "USD",
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIy9hTZqmXnzQt7ZVDmmVH/recover?key=7436c15c8fe9cc98360aea1df964f78f&locale=en-US",
+     "line_items": [
+      {
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "properties": {},
+       "line_price": 212.0,
+       "presentment_variant_title": "",
+       "quantity": 1.0,
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "parent_relationship": null,
+       "rank": null,
+       "variant_title": "",
+       "sku": null,
+       "price": 212.0,
+       "user_id": null,
+       "key": "50486433153193",
+       "grams": 0,
+       "fulfillment_service": "manual",
+       "compare_at_price": "297.00",
+       "product": {
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "properties": {},
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship",
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "id": 10299723350185,
+        "variant": {
+         "sku": 50486433153193,
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "title": "Default Title",
+         "options": {
+          "Title": "Default Title"
+         },
+         "images": [],
+         "id": 50486433153193
+        },
+        "variant_options": {
+         "Title": "Default Title"
+        },
+        "product_type": "Black_Ice - Stud Earrings",
+        "images": [
+         {
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300",
+          "alt": "Monochrome earrings",
+          "width": 2000,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300"
+         }
+        ],
+        "translations": {},
+        "vendor": "Diana Rafael"
+       },
+       "tax_lines": [],
+       "product_id": 10299723350185,
+       "unit_price_measurement": {
+        "reference_value": null,
+        "quantity_unit": null,
+        "reference_unit": null,
+        "measured_type": null,
+        "quantity_value": null
+       },
+       "translations": {
+        "presentment_variant_options": [],
+        "presentment_description": ""
+       },
+       "applied_discounts": [],
+       "origin_location_id": null,
+       "taxable": true,
+       "gift_card": false,
+       "variant_price": "212.00",
+       "requires_shipping": true,
+       "line_price_set": {
+        "shop_money": {
+         "amount": 212.0
+        },
+        "presentment_money": {
+         "amount": 212.0
+        }
+       },
+       "variant_id": 50486433153193,
+       "destination_location_id": null,
+       "vendor": "Diana Rafael"
+      }
+     ],
+     "full_landing_site": "http://diana-rafael.myshopify.com/cart/add.js",
+     "token": "cc3b6fedf5f45873e9688730d2dc77c0"
+    }
+   }
+  },
+  {
+   "dt": "2026-11-09T12:26:10+00:00",
+   "first_name": "Karen",
+   "props": {
+    "Customer Locale": "en-GB",
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "Source Name": "web",
+    "$currency_code": "USD",
+    "Discount Codes": [],
+    "Item Count": 1,
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Total Discounts": "0.00",
+    "$event_id": "67273216819369",
+    "$value": 212.0,
+    "$extra": {
+     "note_attributes": [],
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIwoGNKSLE93jeeOP2HfSV/recover?key=469b9ae703763ac3ea77309dd078cdc7&locale=en-GB",
+     "webhook_id": "0ebc6a1d-7ee0-5fb1-9e38-36aa783fa17c",
+     "full_landing_site": "",
+     "referring_site": "",
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIwoGNKSLE93jeeOP2HfSV/recover?key=469b9ae703763ac3ea77309dd078cdc7&locale=en-GB",
+     "presentment_currency": "USD",
+     "token": "83a78717409789593e0eb223371e3953",
+     "webhook_topic": "checkouts/update",
+     "line_items": [
+      {
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "price": 212.0,
+       "sku": null,
+       "unit_price_measurement": {
+        "reference_value": null,
+        "quantity_value": null,
+        "measured_type": null,
+        "reference_unit": null,
+        "quantity_unit": null
+       },
+       "gift_card": false,
+       "line_price": 212.0,
+       "requires_shipping": true,
+       "variant_id": 50486433153193,
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "fulfillment_service": "manual",
+       "destination_location_id": null,
+       "parent_relationship": null,
+       "properties": {},
+       "user_id": null,
+       "vendor": "Diana Rafael",
+       "key": "50486433153193",
+       "product": {
+        "product_type": "Black_Ice - Stud Earrings",
+        "images": [
+         {
+          "alt": "Monochrome earrings",
+          "height": 2000,
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300",
+          "width": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300"
+         }
+        ],
+        "id": 10299723350185,
+        "properties": {},
+        "variant": {
+         "sku": 50486433153193,
+         "images": [],
+         "id": 50486433153193,
+         "title": "Default Title",
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "options": {
+          "Title": "Default Title"
+         }
+        },
+        "vendor": "Diana Rafael",
+        "variant_options": {
+         "Title": "Default Title"
+        },
+        "translations": {},
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship"
+       },
+       "line_price_set": {
+        "presentment_money": {
+         "amount": 212.0
+        },
+        "shop_money": {
+         "amount": 212.0
+        }
+       },
+       "quantity": 1.0,
+       "rank": null,
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "compare_at_price": "297.00",
+       "applied_discounts": [],
+       "presentment_variant_title": "",
+       "grams": 0,
+       "variant_price": "212.00",
+       "variant_title": "",
+       "product_id": 10299723350185,
+       "origin_location_id": null,
+       "tax_lines": [],
+       "taxable": true
+      }
+     ]
+    }
+   }
+  },
+  {
+   "dt": "2026-11-09T05:50:52+00:00",
+   "first_name": null,
+   "props": {
+    "Item Count": 1,
+    "Source Name": "web",
+    "Customer Locale": "en-US",
+    "Collections": [
+     "Black Ice",
+     "Ready To Ship",
+     "all"
+    ],
+    "Discount Codes": [],
+    "Items": [
+     "Monochrome — 14K Yellow Gold Black Diamond Earrings"
+    ],
+    "$currency_code": "USD",
+    "Total Discounts": "0.00",
+    "$event_id": "67269225087145",
+    "$value": 212.0,
+    "$extra": {
+     "presentment_currency": "USD",
+     "line_items": [
+      {
+       "fulfillment_service": "manual",
+       "origin_location_id": null,
+       "variant_id": 50486433153193,
+       "rank": null,
+       "tax_lines": [],
+       "vendor": "Diana Rafael",
+       "product_id": 10299723350185,
+       "translations": {
+        "presentment_description": "",
+        "presentment_variant_options": []
+       },
+       "quantity": 1.0,
+       "taxable": true,
+       "variant_title": "",
+       "presentment_title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "compare_at_price": "297.00",
+       "product": {
+        "tags": "Archive Sale, Black Ice, Black Studs, Ready To Ship",
+        "id": 10299723350185,
+        "properties": {},
+        "images": [
+         {
+          "thumb_src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3_x240.jpg?v=1610716300",
+          "src": "https://cdn.shopify.com/s/files/1/2469/5441/products/a27750ce-7740-5613-9e61-577e15ac49b3.jpg?v=1610716300",
+          "width": 2000,
+          "height": 2000,
+          "alt": "Monochrome earrings"
+         }
+        ],
+        "variant": {
+         "options": {
+          "Title": "Default Title"
+         },
+         "translations": {
+          "presentment_variant_title": ""
+         },
+         "title": "Default Title",
+         "sku": 50486433153193,
+         "id": 50486433153193,
+         "images": []
+        },
+        "variant_options": {
+         "Title": "Default Title"
+        },
+        "body_html": "<p>Delicate black diamond stud earrings set in 14K yellow gold, perfect for everyday wear.</p><p><strong>Ready to ship · one of a kind.</strong> Part of the Diana Rafael Archive: this exact pair, offered once, until October 15.</p>",
+        "translations": {},
+        "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+        "vendor": "Diana Rafael",
+        "handle": "monochrome-14k-yellow-gold-black-diamond-earrings",
+        "product_type": "Black_Ice - Stud Earrings"
+       },
+       "line_price_set": {
+        "presentment_money": {
+         "amount": 212.0
+        },
+        "shop_money": {
+         "amount": 212.0
+        }
+       },
+       "parent_relationship": null,
+       "properties": {},
+       "gift_card": false,
+       "grams": 0,
+       "destination_location_id": null,
+       "requires_shipping": true,
+       "key": "50486433153193",
+       "user_id": null,
+       "applied_discounts": [],
+       "unit_price_measurement": {
+        "measured_type": null,
+        "quantity_unit": null,
+        "reference_unit": null,
+        "quantity_value": null,
+        "reference_value": null
+       },
+       "line_price": 212.0,
+       "title": "Monochrome — 14K Yellow Gold Black Diamond Earrings",
+       "variant_price": "212.00",
+       "price": 212.0,
+       "sku": null,
+       "presentment_variant_title": ""
+      }
+     ],
+     "note_attributes": [],
+     "checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIwACpJLIn4Or8ozLwR7Ux/recover?key=1a8d9d28c76cb4fba2e89cda79ef9c5d&locale=en-US",
+     "referring_site": "",
+     "token": "f82205ee45c7f95b422a2854005960dd",
+     "webhook_topic": "checkouts/update",
+     "responsive_checkout_url": "https://dianarafael.com/24695441/checkouts/ac/hWNIwACpJLIn4Or8ozLwR7Ux/recover?key=1a8d9d28c76cb4fba2e89cda79ef9c5d&locale=en-US",
+     "full_landing_site": "",
+     "webhook_id": "6cb20f71-9fd2-5f42-83ff-c0bd3b0549d7"
+    }
+   }
+  }
+ ],
+ "WT7SJV": [
+  {
+   "dt": "2026-11-12T22:35:19+00:00",
+   "first_name": null,
+   "props": {
+    "Product Name": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut - 6.5 / Yellow Gold",
+    "Variant Name": "6.5 / Yellow Gold",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/products/d268a725-432c-5dab-928b-959b1bd51aa9.jpg?v=1679921656",
+    "Quantity": 1.0,
+    "$currency": "USD",
+    "_ip": "68.152.78.74",
+    "_ip_region_code": "NY",
+    "OS": "iOS",
+    "Price": 2465.0,
+    "Product Type": "Black_Ice - Diamond Rings",
+    "_ip_country_code": "US",
+    "Client ID": "37676bcc-1cda-4704-9b52-c5815a904eb3",
+    "URL": "https://diana-rafael.myshopify.com/products/black-magic-black-diamond-engagement-ring",
+    "VariantID": "44513006452905",
+    "Brand": "Diana Rafael",
+    "CompareAtPrice": 2900.0,
+    "ProductID": "7546932822185",
+    "Variant SKU": "R035-Y-BI-3.44-14",
+    "Browser": "Chrome Mobile iOS",
+    "Categories": [
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "all"
+    ],
+    "$event_id": "sh-d1e9285c-A243-4BD1-FA80-E57B43C763E5.44513006452905",
+    "$value": 2465.0,
+    "$extra": {
+     "standard": {
+      "phone_inferred": true,
+      "shop_id": 24695441,
+      "event_type": "product_added_to_cart",
+      "event_date_time": "2026-11-12T22:35:19Z",
+      "limit_data_use": false,
+      "customer_phone_sha256": "49f21bc5359450fcf3b0c544b5cbbac13972d6b829cc7b706f7173e77a2220e8"
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-12T22:35:17+00:00",
+   "first_name": null,
+   "props": {
+    "_ip_region_code": "NY",
+    "Price": 2465.0,
+    "CompareAtPrice": 2900.0,
+    "Browser": "Chrome Mobile iOS",
+    "Product Name": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut - 6.5 / Yellow Gold",
+    "_ip": "68.152.78.74",
+    "ProductID": "7546932822185",
+    "_ip_country_code": "US",
+    "Categories": [
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "all"
+    ],
+    "URL": "https://diana-rafael.myshopify.com/products/black-magic-black-diamond-engagement-ring",
+    "Quantity": 1.0,
+    "Product Type": "Black_Ice - Diamond Rings",
+    "VariantID": "44513006452905",
+    "$currency": "USD",
+    "Brand": "Diana Rafael",
+    "Variant Name": "6.5 / Yellow Gold",
+    "OS": "iOS",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/products/d268a725-432c-5dab-928b-959b1bd51aa9.jpg?v=1679921656",
+    "Client ID": "37676bcc-1cda-4704-9b52-c5815a904eb3",
+    "Variant SKU": "R035-Y-BI-3.44-14",
+    "$event_id": "sh-d1e91f96-DF6A-4BD3-94BC-C180FC278D2F.44513006452905",
+    "$value": 2465.0,
+    "$extra": {
+     "standard": {
+      "shop_id": 24695441,
+      "event_type": "product_added_to_cart",
+      "event_date_time": "2026-11-12T22:35:17Z",
+      "limit_data_use": false,
+      "phone_inferred": true,
+      "customer_phone_sha256": "49f21bc5359450fcf3b0c544b5cbbac13972d6b829cc7b706f7173e77a2220e8"
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-12T21:53:08+00:00",
+   "first_name": null,
+   "props": {
+    "Browser": "Chrome Mobile iOS",
+    "Product Type": "Black_Ice - Diamond Rings",
+    "Price": 2465.0,
+    "_ip": "68.152.78.74",
+    "_ip_region_code": "NY",
+    "Categories": [
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "all"
+    ],
+    "OS": "iOS",
+    "Quantity": 1.0,
+    "CompareAtPrice": 2900.0,
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/products/d268a725-432c-5dab-928b-959b1bd51aa9.jpg?v=1679921656",
+    "Client ID": "37676bcc-1cda-4704-9b52-c5815a904eb3",
+    "ProductID": "7546932822185",
+    "Product Name": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut - 6.5 / Yellow Gold",
+    "Brand": "Diana Rafael",
+    "$currency": "USD",
+    "URL": "https://diana-rafael.myshopify.com/products/black-magic-black-diamond-engagement-ring",
+    "_ip_country_code": "US",
+    "Variant Name": "6.5 / Yellow Gold",
+    "Variant SKU": "R035-Y-BI-3.44-14",
+    "VariantID": "44513006452905",
+    "$event_id": "sh-d1c0c88f-AD32-4C1E-20F8-3057EE487BEB.44513006452905",
+    "$value": 2465.0,
+    "$extra": {
+     "standard": {
+      "event_type": "product_added_to_cart",
+      "shop_id": 24695441,
+      "phone_inferred": true,
+      "limit_data_use": false,
+      "event_date_time": "2026-11-12T21:53:08Z",
+      "customer_phone_sha256": "49f21bc5359450fcf3b0c544b5cbbac13972d6b829cc7b706f7173e77a2220e8"
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-12T21:53:06+00:00",
+   "first_name": null,
+   "props": {
+    "Product Type": "Black_Ice - Diamond Rings",
+    "$currency": "USD",
+    "Categories": [
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "all"
+    ],
+    "OS": "iOS",
+    "_ip_region_code": "NY",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/products/d268a725-432c-5dab-928b-959b1bd51aa9.jpg?v=1679921656",
+    "CompareAtPrice": 2900.0,
+    "Variant SKU": "R035-Y-BI-3.44-14",
+    "Quantity": 1.0,
+    "ProductID": "7546932822185",
+    "Product Name": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut - 6.5 / Yellow Gold",
+    "Variant Name": "6.5 / Yellow Gold",
+    "Price": 2465.0,
+    "_ip_country_code": "US",
+    "Client ID": "37676bcc-1cda-4704-9b52-c5815a904eb3",
+    "Brand": "Diana Rafael",
+    "VariantID": "44513006452905",
+    "_ip": "68.152.78.74",
+    "Browser": "Chrome Mobile iOS",
+    "URL": "https://diana-rafael.myshopify.com/products/black-magic-black-diamond-engagement-ring",
+    "$event_id": "sh-d1c0b3a6-9E32-471F-1DD9-AFC431C4B457.44513006452905",
+    "$value": 2465.0,
+    "$extra": {
+     "standard": {
+      "phone_inferred": true,
+      "event_type": "product_added_to_cart",
+      "limit_data_use": false,
+      "customer_phone_sha256": "49f21bc5359450fcf3b0c544b5cbbac13972d6b829cc7b706f7173e77a2220e8",
+      "shop_id": 24695441,
+      "event_date_time": "2026-11-12T21:53:06Z"
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-12T00:07:51+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "Price": 1530.0,
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/products/20276ad6-b6f0-5a57-812d-15167ae25360.jpg?v=1680509762",
+    "Categories": [
+     "ALL WEDDING BANDS",
+     "Black Friday 30",
+     "White Fire  - Round Wedding Bands",
+     "White Fire - Eternity Wedding Bands",
+     "White Fire - Round Wedding Bangs",
+     "White Fire - Wedding Bands",
+     "all"
+    ],
+    "Product Type": "Jewelry > Rings > Wedding & Engagement > Wedding Bands",
+    "URL": "https://diana-rafael.myshopify.com/products/0-9-carats-round-diamond-wedding-band-2",
+    "_ip": "2a09:bac3:9d35:2828::400:37",
+    "Variant SKU": "R199-W-0.8-14",
+    "ProductID": "7030779412649",
+    "Variant Name": "14K / 9",
+    "_ip_region_code": "NC",
+    "Quantity": 1.0,
+    "VariantID": "40649513369769",
+    "OS": "iOS",
+    "Brand": "Diana Rafael",
+    "CompareAtPrice": 1800.0,
+    "_ip_country_code": "US",
+    "Client ID": "cf761792-4648-4eb5-9d33-266fec27e2fb",
+    "$currency": "USD",
+    "Product Name": "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+    "Browser": "Mobile Safari",
+    "$event_id": "sh-cd17cbf6-1725-412D-E4D4-7A6C82AF9F0A.40649513369769",
+    "$value": 1530.0,
+    "$extra": {
+     "standard": {
+      "shop_id": 24695441,
+      "event_type": "product_added_to_cart",
+      "anonymous_backfill_source": "web_pixel_product_added_to_cart",
+      "event_date_time": "2026-11-12T00:07:51.067Z"
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-12T00:07:49+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "VariantID": "40649513369769",
+    "Brand": "Diana Rafael",
+    "Product Name": "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+    "Quantity": 1.0,
+    "Variant Name": "14K / 9",
+    "Browser": "Mobile Safari",
+    "URL": "https://diana-rafael.myshopify.com/products/0-9-carats-round-diamond-wedding-band-2",
+    "Variant SKU": "R199-W-0.8-14",
+    "Categories": [
+     "ALL WEDDING BANDS",
+     "Black Friday 30",
+     "White Fire  - Round Wedding Bands",
+     "White Fire - Eternity Wedding Bands",
+     "White Fire - Round Wedding Bangs",
+     "White Fire - Wedding Bands",
+     "all"
+    ],
+    "_ip_region_code": "NC",
+    "CompareAtPrice": 1800.0,
+    "_ip": "2a09:bac3:9d35:2828::400:37",
+    "ProductID": "7030779412649",
+    "OS": "iOS",
+    "Product Type": "Jewelry > Rings > Wedding & Engagement > Wedding Bands",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/products/20276ad6-b6f0-5a57-812d-15167ae25360.jpg?v=1680509762",
+    "_ip_country_code": "US",
+    "Price": 1530.0,
+    "$currency": "USD",
+    "Client ID": "cf761792-4648-4eb5-9d33-266fec27e2fb",
+    "$event_id": "sh-cd17bff2-723B-4BC8-F831-39DE9EAA32FF.40649513369769",
+    "$value": 1530.0,
+    "$extra": {
+     "standard": {
+      "event_date_time": "2026-11-12T00:07:49.531Z",
+      "anonymous_backfill_source": "web_pixel_product_added_to_cart",
+      "event_type": "product_added_to_cart",
+      "shop_id": 24695441
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-11T23:36:04+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "URL": "https://diana-rafael.myshopify.com/products/forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold",
+    "Brand": "Diana Rafael",
+    "_ip_country_code": "US",
+    "Price": 2678.0,
+    "Variant Name": "9 / White Gold",
+    "VariantID": "46009279348905",
+    "$currency": "USD",
+    "Quantity": 1.0,
+    "CompareAtPrice": 3150.0,
+    "OS": "iOS",
+    "Categories": [
+     "ALL ENGAGEMENT RINGS",
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Pear Engagement Rings",
+     "all"
+    ],
+    "Product Name": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+    "Variant SKU": "R042-W-BI-3-14",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf.jpg?v=1723112726",
+    "Browser": "Mobile Safari",
+    "Product Type": "Black_Ice - Diamond Rings",
+    "Client ID": "cf761792-4648-4eb5-9d33-266fec27e2fb",
+    "ProductID": "8222844649641",
+    "_ip_region_code": "NC",
+    "_ip": "2a09:bac3:9d35:2828::400:37",
+    "$event_id": "sh-ccff4317-4C34-4422-A0E7-960A23190B37.46009279348905",
+    "$value": 2678.0,
+    "$extra": {
+     "standard": {
+      "anonymous_backfill_source": "web_pixel_product_added_to_cart",
+      "event_date_time": "2026-11-11T23:36:04.844Z",
+      "shop_id": 24695441,
+      "event_type": "product_added_to_cart"
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-11T23:36:03+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "Quantity": 1.0,
+    "Variant Name": "9 / White Gold",
+    "OS": "iOS",
+    "Categories": [
+     "ALL ENGAGEMENT RINGS",
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Pear Engagement Rings",
+     "all"
+    ],
+    "Product Type": "Black_Ice - Diamond Rings",
+    "Product Name": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+    "_ip": "2a09:bac3:9d35:2828::400:37",
+    "Browser": "Mobile Safari",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf.jpg?v=1723112726",
+    "CompareAtPrice": 3150.0,
+    "_ip_country_code": "US",
+    "URL": "https://diana-rafael.myshopify.com/products/forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold",
+    "VariantID": "46009279348905",
+    "Brand": "Diana Rafael",
+    "ProductID": "8222844649641",
+    "Price": 2678.0,
+    "$currency": "USD",
+    "Client ID": "cf761792-4648-4eb5-9d33-266fec27e2fb",
+    "Variant SKU": "R042-W-BI-3-14",
+    "_ip_region_code": "NC",
+    "$event_id": "sh-ccff3ab2-595B-4C41-8C42-27DB80FF2C22.46009279348905",
+    "$value": 2678.0,
+    "$extra": {
+     "standard": {
+      "event_type": "product_added_to_cart",
+      "event_date_time": "2026-11-11T23:36:03.773Z",
+      "anonymous_backfill_source": "web_pixel_product_added_to_cart",
+      "shop_id": 24695441
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-11T18:05:14+00:00",
+   "first_name": null,
+   "props": {
+    "Variant Name": "Yellow / 4",
+    "$currency": "USD",
+    "CompareAtPrice": 2800.0,
+    "Variant SKU": "R114-Y-0.25-14",
+    "Client ID": "2c24a634-62f4-41c8-a359-1f5ecab7405e",
+    "URL": "https://diana-rafael.myshopify.com/products/accretion-black-diamond-shard-wedding-band",
+    "Product Type": "Black_Ice - Diamond Rings",
+    "Browser": "Chrome",
+    "ProductID": "10339706372265",
+    "_ip_region_code": "OR",
+    "OS": "Windows",
+    "Brand": "Diana Rafael",
+    "Product Name": "Natural Black Diamond Shard Wedding Band in 14K Gold",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/files/R114-R-pack-front-sq.jpg?v=1793193292",
+    "Quantity": 1.0,
+    "_ip": "2a01:4ff:1f0:5717::1",
+    "_ip_country_code": "US",
+    "Price": 2380.0,
+    "Categories": [
+     "ALL WEDDING BANDS",
+     "BLACK RINGS",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice - Round Wedding Bands",
+     "New Arrivals",
+     "REMNANT",
+     "all"
+    ],
+    "VariantID": "51471286173865",
+    "$event_id": "sh-cbc92d1c-C2FC-4DB9-FB27-819BD1B7D299.51471286173865",
+    "$value": 2380.0,
+    "$extra": {
+     "standard": {
+      "event_date_time": "2026-11-11T18:05:14.491Z",
+      "event_type": "product_added_to_cart",
+      "shop_id": 24695441
+     }
+    }
+   }
+  },
+  {
+   "dt": "2026-11-10T17:06:58+00:00",
+   "first_name": null,
+   "props": {
+    "Variant Name": "6.5 / Yellow Gold",
+    "_ip_region_code": "MA",
+    "_ip": "12.74.45.77",
+    "CompareAtPrice": 2900.0,
+    "Product Name": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut - 6.5 / Yellow Gold",
+    "Client ID": "37676bcc-1cda-4704-9b52-c5815a904eb3",
+    "URL": "https://diana-rafael.myshopify.com/products/black-magic-black-diamond-engagement-ring",
+    "Quantity": 1.0,
+    "Product Type": "Black_Ice - Diamond Rings",
+    "Browser": "Chrome Mobile iOS",
+    "OS": "iOS",
+    "ProductID": "7546932822185",
+    "ImageURL": "https://cdn.shopify.com/s/files/1/2469/5441/products/d268a725-432c-5dab-928b-959b1bd51aa9.jpg?v=1679921656",
+    "_ip_country_code": "US",
+    "Price": 2465.0,
+    "Categories": [
+     "BLACK ICE - Engagement Rings",
+     "BLACK RINGS",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Friday 30",
+     "Black Ice",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "all"
+    ],
+    "Brand": "Diana Rafael",
+    "Variant SKU": "R035-Y-BI-3.44-14",
+    "$currency": "USD",
+    "VariantID": "44513006452905",
+    "$event_id": "sh-c66e0b2d-68E3-41A2-36D9-3F8AA3B365E8.44513006452905",
+    "$value": 2465.0,
+    "$extra": {
+     "standard": {
+      "shop_id": 24695441,
+      "event_type": "product_added_to_cart",
+      "customer_phone_sha256": "49f21bc5359450fcf3b0c544b5cbbac13972d6b829cc7b706f7173e77a2220e8",
+      "phone_inferred": true,
+      "event_date_time": "2026-11-10T17:06:58Z",
+      "limit_data_use": false
+     }
+    }
+   }
+  }
+ ],
+ "RdGtZY": [
+  {
+   "dt": "2026-11-15T17:08:19+00:00",
+   "first_name": "Morgan",
+   "props": {
+    "URL": "https://dianarafael.com/products/forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold",
+    "Price": "$2,508.00",
+    "Name": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+    "$is_session_activity": true,
+    "ImageURL": "https://dianarafael.com/cdn/shop/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf_grande.jpg?v=1723112726",
+    "Brand": "Diana Rafael",
+    "_ip": "68.75.140.90",
+    "Categories": [
+     "all",
+     "ALL ENGAGEMENT RINGS",
+     "Black Ice",
+     "BLACK ICE - Engagement Rings",
+     "Black Ice- Pear Engagement Rings",
+     "BLACK RINGS"
+    ],
+    "Value": "2,508.00",
+    "ProductID": 8222844649641,
+    "CompareAtPrice": "$3,150.00",
+    "$event_id": "1794762499"
+   }
+  },
+  {
+   "dt": "2026-11-15T17:06:16+00:00",
+   "first_name": "Blake",
+   "props": {
+    "URL": "https://dianarafael.com/products/disturbed-natural-black-diamond-engagement-ring",
+    "Brand": "Diana Rafael",
+    "Categories": [
+     "all",
+     "ALL ENGAGEMENT RINGS",
+     "Black Ice",
+     "BLACK RINGS",
+     "REMNANT"
+    ],
+    "Price": "$1,700.00",
+    "ProductID": 10328736465065,
+    "CompareAtPrice": "$2,000.00",
+    "Name": "Marquise Natural Black Diamond Engagement Ring with Textured Band in 14K Gold",
+    "Value": "1,700.00",
+    "ImageURL": "https://dianarafael.com/cdn/shop/files/r115-disturbed-front-yg_grande.png?v=1792332421",
+    "$event_id": "1794762376"
+   }
+  },
+  {
+   "dt": "2026-11-15T10:22:16+00:00",
+   "first_name": "PopTest",
+   "props": {
+    "$is_session_activity": true,
+    "_ip": "2a06:c701:4ba3:9c00:f956:8a85:4d35:550a",
+    "ProductID": 8107803410601,
+    "Categories": [
+     "all",
+     "ALL ENGAGEMENT RINGS",
+     "Black & White rings",
+     "Black Diamond Eternitiy",
+     "Black Ice",
+     "BLACK ICE - Engagement Rings",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Magic",
+     "BLACK RINGS"
+    ],
+    "Name": "4 Carats Double Hidden Halo Natural Black Diamond Cushion Engagement Ring in White Gold",
+    "URL": "https://dianarafael.com/products/black-magic-double-hidden-halo-natural-black-diamond-cushion-engagement-ring-in-white-gold",
+    "ImageURL": "https://dianarafael.com/cdn/shop/files/df6c8c58-1681-5f4c-a733-d2c8d9367a24_grande.jpg?v=1716287387",
+    "Value": "2,210.00",
+    "Price": "$2,210.00",
+    "Brand": "Diana Rafael",
+    "CompareAtPrice": "$2,800.00",
+    "$event_id": "1794738136"
+   }
+  },
+  {
+   "dt": "2026-11-12T22:33:00+00:00",
+   "first_name": null,
+   "props": {
+    "Categories": [
+     "all",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Ice",
+     "BLACK ICE - Engagement Rings",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "BLACK RINGS"
+    ],
+    "Price": "$2,465.00",
+    "Name": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut",
+    "anonymous_backfill_source": "checkout_pixel_payment_info_submitted",
+    "ImageURL": "https://dianarafael.com/cdn/shop/products/d268a725-432c-5dab-928b-959b1bd51aa9_grande.jpg?v=1679921656",
+    "ProductID": 7546932822185,
+    "Brand": "Diana Rafael",
+    "Value": "2,465.00",
+    "URL": "https://dianarafael.com/products/black-magic-black-diamond-engagement-ring",
+    "CompareAtPrice": "$3,100.00",
+    "$event_id": "1794522780"
+   }
+  },
+  {
+   "dt": "2026-11-12T21:52:33+00:00",
+   "first_name": null,
+   "props": {
+    "anonymous_backfill_source": "checkout_pixel_checkout_contact_info_submitted",
+    "CompareAtPrice": "$3,100.00",
+    "Price": "$2,465.00",
+    "Name": "3.44 Carats Double Hidden Halo Three-Sided Black & White Natural Diamond Cushion Cut",
+    "URL": "https://dianarafael.com/products/black-magic-black-diamond-engagement-ring",
+    "Categories": [
+     "all",
+     "Best Sellers Black Ice",
+     "Black Diamond Eternitiy",
+     "Black Ice",
+     "BLACK ICE - Engagement Rings",
+     "Black Ice- Cushion Engagement Rings",
+     "Black Ice-Rose Gold Engagement Rings",
+     "Black Magic",
+     "BLACK RINGS"
+    ],
+    "ProductID": 7546932822185,
+    "ImageURL": "https://dianarafael.com/cdn/shop/products/d268a725-432c-5dab-928b-959b1bd51aa9_grande.jpg?v=1679921656",
+    "Brand": "Diana Rafael",
+    "Value": "2,465.00",
+    "$event_id": "1794520353"
+   }
+  },
+  {
+   "dt": "2026-11-12T00:10:41+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "ProductID": 7030779412649,
+    "Value": "1,530.00",
+    "Price": "$1,530.00",
+    "ImageURL": "https://dianarafael.com/cdn/shop/products/20276ad6-b6f0-5a57-812d-15167ae25360_grande.jpg?v=1680509762",
+    "CompareAtPrice": "$2,100.00",
+    "anonymous_backfill_source": "checkout_pixel_checkout_contact_info_submitted",
+    "Brand": "Diana Rafael",
+    "URL": "https://dianarafael.com/products/0-9-carats-round-diamond-wedding-band-2",
+    "Name": "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+    "Categories": [
+     "all",
+     "ALL WEDDING BANDS",
+     "White Fire  - Round Wedding Bands",
+     "White Fire - Eternity Wedding Bands",
+     "White Fire - Round Wedding Bangs",
+     "White Fire - Wedding Bands"
+    ],
+    "$event_id": "1794442241"
+   }
+  },
+  {
+   "dt": "2026-11-12T00:10:33+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "Value": "2,508.00",
+    "Price": "$2,508.00",
+    "ProductID": 8222844649641,
+    "ImageURL": "https://dianarafael.com/cdn/shop/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf_grande.jpg?v=1723112726",
+    "URL": "https://dianarafael.com/products/forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold",
+    "CompareAtPrice": "$3,150.00",
+    "Name": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+    "anonymous_backfill_source": "checkout_pixel_checkout_contact_info_submitted",
+    "Brand": "Diana Rafael",
+    "Categories": [
+     "all",
+     "ALL ENGAGEMENT RINGS",
+     "Black Ice",
+     "BLACK ICE - Engagement Rings",
+     "Black Ice- Pear Engagement Rings",
+     "BLACK RINGS"
+    ],
+    "$event_id": "1794442233"
+   }
+  },
+  {
+   "dt": "2026-11-12T00:08:53+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "Value": "2,508.00",
+    "ProductID": 8222844649641,
+    "CompareAtPrice": "$3,150.00",
+    "Categories": [
+     "all",
+     "ALL ENGAGEMENT RINGS",
+     "Black Ice",
+     "BLACK ICE - Engagement Rings",
+     "Black Ice- Pear Engagement Rings",
+     "BLACK RINGS"
+    ],
+    "Brand": "Diana Rafael",
+    "URL": "https://dianarafael.com/products/forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold",
+    "Price": "$2,508.00",
+    "ImageURL": "https://dianarafael.com/cdn/shop/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf_grande.jpg?v=1723112726",
+    "anonymous_backfill_source": "checkout_pixel_checkout_contact_info_submitted",
+    "Name": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+    "$event_id": "1794442133"
+   }
+  },
+  {
+   "dt": "2026-11-12T00:08:17+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "Price": "$2,508.00",
+    "ImageURL": "https://dianarafael.com/cdn/shop/files/5f71a449-1651-5de6-b6b7-1d9d8aa6bdcf_grande.jpg?v=1723112726",
+    "ProductID": 8222844649641,
+    "Brand": "Diana Rafael",
+    "Name": "Hidden Halo Natural Black Diamond Pear Engagement Ring in Yellow Gold",
+    "Value": "2,508.00",
+    "CompareAtPrice": "$3,150.00",
+    "URL": "https://dianarafael.com/products/forbidden-fruit-hidden-halo-natural-black-diamond-pear-engagement-ring-in-yellow-gold",
+    "anonymous_backfill_source": "checkout_pixel_checkout_contact_info_submitted",
+    "Categories": [
+     "all",
+     "ALL ENGAGEMENT RINGS",
+     "Black Ice",
+     "BLACK ICE - Engagement Rings",
+     "Black Ice- Pear Engagement Rings",
+     "BLACK RINGS"
+    ],
+    "$event_id": "1794442097"
+   }
+  },
+  {
+   "dt": "2026-11-12T00:04:51+00:00",
+   "first_name": "Katherine",
+   "props": {
+    "Categories": [
+     "all",
+     "ALL WEDDING BANDS",
+     "White Fire  - Round Wedding Bands",
+     "White Fire - Eternity Wedding Bands",
+     "White Fire - Round Wedding Bangs",
+     "White Fire - Wedding Bands"
+    ],
+    "Value": "1,530.00",
+    "ProductID": 7030779412649,
+    "CompareAtPrice": "$2,100.00",
+    "URL": "https://dianarafael.com/products/0-9-carats-round-diamond-wedding-band-2",
+    "ImageURL": "https://dianarafael.com/cdn/shop/products/20276ad6-b6f0-5a57-812d-15167ae25360_grande.jpg?v=1680509762",
+    "Price": "$1,530.00",
+    "anonymous_backfill_source": "checkout_pixel_checkout_contact_info_submitted",
+    "Brand": "Diana Rafael",
+    "Name": "Sparks - Eternity Natural Round cut Diamond Wedding Band",
+    "$event_id": "1794441891"
+   }
+  }
+ ]
+}

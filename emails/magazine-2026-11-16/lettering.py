@@ -59,6 +59,24 @@ SPECS = {
     "h-wear": dict(lines=[("Wear it now.", "light", CREAM), ("Pay over time.", "bold", SAND)], bg=INK, width=520, size=70),
     # letter: on bone
     "h-letter": dict(lines=[("My best", "light", INK), ("offer.", "bold", INK)], bg=BONE, width=300, size=64, pad_bottom=6),
+    # ---- rollout 16.11: the other three flows
+    # covers (A) on ink
+    "h-thinking": dict(lines=[("Still thinking", "light", SAND), ("about it?", "bold", CREAM)], bg=INK, width=520, size=84),
+    "h-see": dict(lines=[("Did you see", "light", SAND), ("something", "bold", CREAM), ("you like?", "bold", CREAM)], bg=INK, width=520, size=84),
+    # pull quote (C) on sand
+    "h-natural": dict(lines=[("Is it really", "light", INK), ("natural?", "bold", INK)], bg=SAND, width=520, size=100, align="center", leading=0.94),
+    # letters page (H) on bone
+    "h-word": dict(lines=[("Don't take", "light", INK), ("my word for it.", "bold", INK)], bg=BONE, width=520, size=72),
+    "h-trust": dict(lines=[("Why people", "light", INK), ("trust us.", "bold", INK)], bg=BONE, width=520, size=80),
+    # photo essay (F) on ink
+    "h-made": dict(lines=[("Made by hand,", "light", SAND), ("for you.", "bold", CREAM)], bg=INK, width=520, size=80),
+    "h-count": dict(lines=[("Why count", "light", SAND), ("on us?", "bold", CREAM)], bg=INK, width=520, size=88),
+    # Q&A (G) on paper
+    "h-fit": dict(lines=[("What if it", "light", INK), ("doesn't fit?", "bold", INK)], bg=PAPER, width=520, size=80),
+    "h-meet": dict(lines=[("Any questions?", "light", INK), ("Let's meet.", "bold", INK)], bg=PAPER, width=520, size=76),
+    "h-talk": dict(lines=[("Let's talk", "light", INK), ("it through.", "bold", INK)], bg=PAPER, width=520, size=84),
+    # editor's letter (E) on bone, cart flow
+    "h-note": dict(lines=[("One last note", "light", INK), ("from me.", "bold", INK)], bg=BONE, width=300, size=54, pad_bottom=6),
 }
 
 def flat_logo():
@@ -67,7 +85,7 @@ def flat_logo():
     import io, urllib.request
     src = "https://cdn.klaviyomail.com/company/UEHusj/images/e5b28035-6172-4da3-aa10-3e6c4c63e266.png"
     logo = Image.open(io.BytesIO(urllib.request.urlopen(src).read())).convert("RGBA")
-    for name, bg in (("logo-on-bone", BONE), ("logo-on-sand", SAND)):
+    for name, bg in (("logo-on-bone", BONE), ("logo-on-sand", SAND), ("logo-on-paper", PAPER)):
         im = Image.new("RGBA", logo.size, bg)
         im.alpha_composite(logo)
         im.convert("RGB").save(os.path.join(ASSETS, name + ".png"), optimize=True)

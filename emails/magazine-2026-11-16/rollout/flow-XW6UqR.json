@@ -1,0 +1,623 @@
+{
+ "data": {
+  "type": "flow",
+  "id": "XW6UqR",
+  "attributes": {
+   "name": "Checkout started (Abandoned Cart - Black Ice)",
+   "status": "live",
+   "archived": false,
+   "created": "2024-10-30T07:15:37+00:00",
+   "updated": "2026-09-27T13:29:15+00:00",
+   "trigger_type": "Metric",
+   "definition": {
+    "triggers": [
+     {
+      "type": "metric",
+      "id": "UgasKH",
+      "trigger_filter": {
+       "condition_groups": [
+        {
+         "conditions": [
+          {
+           "type": "metric-property",
+           "metric_id": "UgasKH",
+           "field": "Collections",
+           "filter": {
+            "type": "list",
+            "operator": "contains",
+            "value": "Black Ice"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "profile_filter": {
+     "condition_groups": [
+      {
+       "conditions": [
+        {
+         "type": "profile-metric",
+         "metric_id": "T6KBRR",
+         "measurement": "count",
+         "measurement_filter": {
+          "type": "numeric",
+          "operator": "equals",
+          "value": 0
+         },
+         "timeframe_filter": {
+          "type": "date",
+          "operator": "flow-start"
+         },
+         "metric_filters": null
+        }
+       ]
+      }
+     ]
+    },
+    "actions": [
+     {
+      "id": "71212895",
+      "type": "time-delay",
+      "data": {
+       "unit": "hours",
+       "value": 2,
+       "secondary_value": 0,
+       "timezone": "profile"
+      },
+      "links": {
+       "next": "74304490"
+      }
+     },
+     {
+      "id": "74304490",
+      "type": "ab-test",
+      "data": {
+       "status": "live",
+       "experiment_status": "draft",
+       "main_action": {
+        "id": "71212896",
+        "type": "send-email",
+        "data": {
+         "message": {
+          "from_email": "daniel@dianarafael.com",
+          "from_label": "Diana Rafael",
+          "reply_to_email": "daniel@dianarafael.com",
+          "cc_email": null,
+          "bcc_email": null,
+          "subject_line": "Is This the One? 💍",
+          "preview_text": "Saved exactly as you left it, with an extra 5% and two gifts.",
+          "template_id": "Xiy7ht",
+          "smart_sending_enabled": false,
+          "transactional": false,
+          "add_tracking_params": false,
+          "custom_tracking_params": null,
+          "additional_filters": null,
+          "name": "Abandonment Black Ice Email #1",
+          "id": "TJe6Mg"
+         },
+         "status": "live"
+        },
+        "links": {
+         "next": null
+        }
+       },
+       "current_experiment": {
+        "id": "01M7FVE9JP38SYJF6W37XMYQ4N",
+        "name": null,
+        "variations": [
+         {
+          "id": "125161129",
+          "type": "send-email",
+          "data": {
+           "message": {
+            "from_email": "daniel@dianarafael.com",
+            "from_label": "Diana Rafael",
+            "reply_to_email": "daniel@dianarafael.com",
+            "cc_email": null,
+            "bcc_email": null,
+            "subject_line": "Is This the One? 💍",
+            "preview_text": "Saved exactly as you left it, with an extra 5% and two gifts.",
+            "template_id": "T6FhDS",
+            "smart_sending_enabled": false,
+            "transactional": false,
+            "add_tracking_params": false,
+            "custom_tracking_params": null,
+            "additional_filters": null,
+            "name": "Abandonment Black Ice Email #1 Test #1 January 01, 2025 Variation A",
+            "id": "Rifq9p"
+           },
+           "status": "live"
+          },
+          "links": {
+           "next": null
+          }
+         },
+         {
+          "id": "125161130",
+          "type": "send-email",
+          "data": {
+           "message": {
+            "from_email": "daniel@dianarafael.com",
+            "from_label": "Diana Rafael",
+            "reply_to_email": "daniel@dianarafael.com",
+            "cc_email": null,
+            "bcc_email": null,
+            "subject_line": "Is This the One? 💍",
+            "preview_text": "Saved exactly as you left it, with an extra 5% and two gifts.",
+            "template_id": "WFx4EQ",
+            "smart_sending_enabled": false,
+            "transactional": false,
+            "add_tracking_params": false,
+            "custom_tracking_params": null,
+            "additional_filters": null,
+            "name": "Abandonment Black Ice Email #1 Test #1 January 01, 2025 Variation B",
+            "id": "UT7bam"
+           },
+           "status": "live"
+          },
+          "links": {
+           "next": null
+          }
+         }
+        ],
+        "allocations": {
+         "125161129": 0.5,
+         "125161130": 0.5
+        },
+        "started": null,
+        "winner_metric": "unique-clicks",
+        "automatic_winner_selection_settings": {
+         "enabled": true,
+         "automatic_end_date": null,
+         "automatic_end_statistical_certainty": true
+        }
+       },
+       "concluded_experiment_id": null,
+       "winning_variation_id": null
+      },
+      "links": {
+       "next": "71212897"
+      }
+     },
+     {
+      "id": "71212897",
+      "type": "time-delay",
+      "data": {
+       "unit": "hours",
+       "value": 20,
+       "secondary_value": 0,
+       "timezone": "profile"
+      },
+      "links": {
+       "next": "71212898"
+      }
+     },
+     {
+      "id": "71212898",
+      "type": "conditional-split",
+      "data": {
+       "profile_filter": {
+        "condition_groups": [
+         {
+          "conditions": [
+           {
+            "type": "profile-marketing-consent",
+            "consent": {
+             "channel": "sms",
+             "can_receive_marketing": true,
+             "consent_status": {
+              "subscription": "subscribed",
+              "filters": null
+             }
+            }
+           }
+          ]
+         }
+        ]
+       }
+      },
+      "links": {
+       "next_if_true": "71212899",
+       "next_if_false": "71212900"
+      }
+     },
+     {
+      "id": "71212899",
+      "type": "send-sms",
+      "data": {
+       "message": {
+        "body": "{% if first_name %}{{ first_name }}, your{% else %}Your{% endif %} Diana Rafael order is saved. Code CART5 = an extra 5% off, plus free diamond studs + engraving from $2,000: {{ event.extra.responsive_checkout_url|default:'https://dianarafael.com/cart' }}",
+        "image_id": null,
+        "dynamic_image": null,
+        "shorten_links": true,
+        "include_contact_card": false,
+        "add_org_prefix": true,
+        "add_info_link": true,
+        "add_opt_out_language": true,
+        "smart_sending_enabled": true,
+        "sms_quiet_hours_enabled": true,
+        "transactional": false,
+        "add_tracking_params": false,
+        "custom_tracking_params": null,
+        "template_id": null,
+        "additional_filters": null,
+        "name": "SMS #1",
+        "id": "RiMaEa",
+        "personalization_enabled": false
+       },
+       "status": "live"
+      },
+      "links": {
+       "next": "71212901"
+      }
+     },
+     {
+      "id": "71212900",
+      "type": "time-delay",
+      "data": {
+       "unit": "days",
+       "value": 1,
+       "secondary_value": null,
+       "timezone": "profile"
+      },
+      "links": {
+       "next": "71212901"
+      }
+     },
+     {
+      "id": "71212901",
+      "type": "time-delay",
+      "data": {
+       "unit": "days",
+       "value": 1,
+       "secondary_value": null,
+       "timezone": "profile"
+      },
+      "links": {
+       "next": "71212902"
+      }
+     },
+     {
+      "id": "71212902",
+      "type": "ab-test",
+      "data": {
+       "status": "live",
+       "experiment_status": "draft",
+       "main_action": {
+        "id": "71212903",
+        "type": "send-email",
+        "data": {
+         "message": {
+          "from_email": "daniel@dianarafael.com",
+          "from_label": "Diana Rafael",
+          "reply_to_email": "daniel@dianarafael.com",
+          "cc_email": null,
+          "bcc_email": null,
+          "subject_line": "Extra 5% Off Inside—Just for You!",
+          "preview_text": "Your code CART5 is inside, plus two gifts with your order.",
+          "template_id": "UyA9LM",
+          "smart_sending_enabled": false,
+          "transactional": false,
+          "add_tracking_params": true,
+          "custom_tracking_params": null,
+          "additional_filters": null,
+          "name": "Abandonment Black Ice Email #2",
+          "id": "T7d4aD"
+         },
+         "status": "live"
+        },
+        "links": {
+         "next": null
+        }
+       },
+       "current_experiment": {
+        "id": "01M7FVEP1D2NHMXGAS9HZ55X3Q",
+        "name": null,
+        "variations": [
+         {
+          "id": "125161131",
+          "type": "send-email",
+          "data": {
+           "message": {
+            "from_email": "daniel@dianarafael.com",
+            "from_label": "Diana Rafael",
+            "reply_to_email": "daniel@dianarafael.com",
+            "cc_email": null,
+            "bcc_email": null,
+            "subject_line": "Extra 5% Off Inside—Just for You!",
+            "preview_text": "Your code CART5 is inside, plus two gifts with your order.",
+            "template_id": "S99dDF",
+            "smart_sending_enabled": false,
+            "transactional": false,
+            "add_tracking_params": true,
+            "custom_tracking_params": null,
+            "additional_filters": null,
+            "name": "Abandonment Black Ice Email #2 Test #1 October 30, 2024 Variation A",
+            "id": "Y9rUMK"
+           },
+           "status": "live"
+          },
+          "links": {
+           "next": null
+          }
+         },
+         {
+          "id": "125161132",
+          "type": "send-email",
+          "data": {
+           "message": {
+            "from_email": "daniel@dianarafael.com",
+            "from_label": "Diana Rafael",
+            "reply_to_email": "daniel@dianarafael.com",
+            "cc_email": null,
+            "bcc_email": null,
+            "subject_line": "Extra 5% Off Inside—Just for You!",
+            "preview_text": "Your code CART5 is inside, plus two gifts with your order.",
+            "template_id": "XwqSb8",
+            "smart_sending_enabled": false,
+            "transactional": false,
+            "add_tracking_params": true,
+            "custom_tracking_params": null,
+            "additional_filters": null,
+            "name": "Abandonment Black Ice Email #2 Test #1 October 30, 2024 Variation B",
+            "id": "VHYYED"
+           },
+           "status": "live"
+          },
+          "links": {
+           "next": null
+          }
+         }
+        ],
+        "allocations": {
+         "125161131": 0.5,
+         "125161132": 0.5
+        },
+        "started": null,
+        "winner_metric": "unique-clicks",
+        "automatic_winner_selection_settings": {
+         "enabled": true,
+         "automatic_end_date": null,
+         "automatic_end_statistical_certainty": true
+        }
+       },
+       "concluded_experiment_id": null,
+       "winning_variation_id": null
+      },
+      "links": {
+       "next": "71212906"
+      }
+     },
+     {
+      "id": "71212906",
+      "type": "time-delay",
+      "data": {
+       "unit": "days",
+       "value": 1,
+       "secondary_value": null,
+       "timezone": "profile"
+      },
+      "links": {
+       "next": "71212907"
+      }
+     },
+     {
+      "id": "71212907",
+      "type": "send-email",
+      "data": {
+       "message": {
+        "from_email": "daniel@dianarafael.com",
+        "from_label": "Diana Rafael",
+        "reply_to_email": "daniel@dianarafael.com",
+        "cc_email": null,
+        "bcc_email": null,
+        "subject_line": "Your piece is still waiting, with your extra 5%",
+        "preview_text": "Your code CART5 is still here, and so are your gifts.",
+        "template_id": "WfMwTw",
+        "smart_sending_enabled": false,
+        "transactional": false,
+        "add_tracking_params": true,
+        "custom_tracking_params": null,
+        "additional_filters": null,
+        "name": "Abandonment Black Ice Email #3",
+        "id": "RRaWVp"
+       },
+       "status": "live"
+      },
+      "links": {
+       "next": "71212908"
+      }
+     },
+     {
+      "id": "71212908",
+      "type": "time-delay",
+      "data": {
+       "unit": "days",
+       "value": 2,
+       "secondary_value": null,
+       "timezone": "profile"
+      },
+      "links": {
+       "next": "76533513"
+      }
+     },
+     {
+      "id": "76533513",
+      "type": "ab-test",
+      "data": {
+       "status": "live",
+       "experiment_status": "draft",
+       "main_action": {
+        "id": "71212909",
+        "type": "send-email",
+        "data": {
+         "message": {
+          "from_email": "daniel@dianarafael.com",
+          "from_label": "Diana Rafael",
+          "reply_to_email": "daniel@dianarafael.com",
+          "cc_email": null,
+          "bcc_email": null,
+          "subject_line": "Enjoy Flexible Layaway Options with Affirm",
+          "preview_text": "Choose Affirm at checkout, keep your extra 5%, and your gifts.",
+          "template_id": "W2uZTG",
+          "smart_sending_enabled": true,
+          "transactional": false,
+          "add_tracking_params": false,
+          "custom_tracking_params": null,
+          "additional_filters": null,
+          "name": "Abandonment Black Ice Email #4",
+          "id": "XesBsQ"
+         },
+         "status": "live"
+        },
+        "links": {
+         "next": null
+        }
+       },
+       "current_experiment": {
+        "id": "01JM6QHSB7RKF9YA9M56W92SD5",
+        "name": null,
+        "variations": [
+         {
+          "id": "76533514",
+          "type": "send-email",
+          "data": {
+           "message": {
+            "from_email": "daniel@dianarafael.com",
+            "from_label": "Diana Rafael",
+            "reply_to_email": "daniel@dianarafael.com",
+            "cc_email": null,
+            "bcc_email": null,
+            "subject_line": "Enjoy Flexible Layaway Options with Affirm",
+            "preview_text": "",
+            "template_id": "WdVxTg",
+            "smart_sending_enabled": true,
+            "transactional": false,
+            "add_tracking_params": false,
+            "custom_tracking_params": null,
+            "additional_filters": null,
+            "name": "Abandonment Black Ice Email #4 Test #1 February 16, 2025 Variation A",
+            "id": "UrvEnM"
+           },
+           "status": "live"
+          },
+          "links": {
+           "next": null
+          }
+         },
+         {
+          "id": "76533515",
+          "type": "send-email",
+          "data": {
+           "message": {
+            "from_email": "daniel@dianarafael.com",
+            "from_label": "Diana Rafael",
+            "reply_to_email": "daniel@dianarafael.com",
+            "cc_email": null,
+            "bcc_email": null,
+            "subject_line": "Enjoy Flexible Layaway Options with Affirm",
+            "preview_text": "",
+            "template_id": "U6YCZd",
+            "smart_sending_enabled": true,
+            "transactional": false,
+            "add_tracking_params": false,
+            "custom_tracking_params": null,
+            "additional_filters": null,
+            "name": "Abandonment Black Ice Email #4 Test #1 February 16, 2025 Variation B",
+            "id": "Y2mrpK"
+           },
+           "status": "live"
+          },
+          "links": {
+           "next": null
+          }
+         }
+        ],
+        "allocations": {
+         "76533514": 0.5,
+         "76533515": 0.5
+        },
+        "started": null,
+        "winner_metric": "unique-clicks",
+        "automatic_winner_selection_settings": {
+         "enabled": true,
+         "automatic_end_date": null,
+         "automatic_end_statistical_certainty": true
+        }
+       },
+       "concluded_experiment_id": null,
+       "winning_variation_id": null
+      },
+      "links": {
+       "next": "71291263"
+      }
+     },
+     {
+      "id": "71291263",
+      "type": "time-delay",
+      "data": {
+       "unit": "days",
+       "value": 1,
+       "secondary_value": null,
+       "timezone": "profile"
+      },
+      "links": {
+       "next": "71212911"
+      }
+     },
+     {
+      "id": "71212911",
+      "type": "send-email",
+      "data": {
+       "message": {
+        "from_email": "daniel@dianarafael.com",
+        "from_label": "Diana Rafael",
+        "reply_to_email": "daniel@dianarafael.com",
+        "cc_email": null,
+        "bcc_email": null,
+        "subject_line": "Unlock 10% Off – Shop Now & Pay Over Time!",
+        "preview_text": "Your code CART10 is inside: an extra 10% off, plus your gifts.",
+        "template_id": "XD58F3",
+        "smart_sending_enabled": true,
+        "transactional": false,
+        "add_tracking_params": false,
+        "custom_tracking_params": null,
+        "additional_filters": null,
+        "name": "Abandonment Black Ice Email #5",
+        "id": "T2zMPf"
+       },
+       "status": "live"
+      },
+      "links": {
+       "next": null
+      }
+     }
+    ],
+    "entry_action_id": "71212895"
+   }
+  },
+  "relationships": {
+   "flow-actions": {
+    "links": {
+     "self": "https://a.klaviyo.com/api/flows/XW6UqR/relationships/flow-actions/",
+     "related": "https://a.klaviyo.com/api/flows/XW6UqR/flow-actions/"
+    }
+   },
+   "tags": {
+    "links": {
+     "self": "https://a.klaviyo.com/api/flows/XW6UqR/relationships/tags/",
+     "related": "https://a.klaviyo.com/api/flows/XW6UqR/tags/"
+    }
+   }
+  },
+  "links": {
+   "self": "https://a.klaviyo.com/api/flows/XW6UqR/"
+  }
+ },
+ "links": {
+  "self": "https://a.klaviyo.com/api/flows/XW6UqR?additional-fields[flow]=definition"
+ }
+}

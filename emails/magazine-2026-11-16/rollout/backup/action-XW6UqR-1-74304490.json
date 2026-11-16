@@ -1,0 +1,111 @@
+{
+ "id": "74304490",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "draft",
+  "main_action": {
+   "id": "71212896",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": "daniel@dianarafael.com",
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "Is This the One? 💍",
+     "preview_text": "Saved exactly as you left it, with an extra 5% and two gifts.",
+     "template_id": "Xiy7ht",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": false,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Abandonment Black Ice Email #1",
+     "id": "TJe6Mg"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": {
+   "id": "01M7FVE9JP38SYJF6W37XMYQ4N",
+   "name": null,
+   "variations": [
+    {
+     "id": "125161129",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Is This the One? 💍",
+       "preview_text": "Saved exactly as you left it, with an extra 5% and two gifts.",
+       "template_id": "T6FhDS",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Abandonment Black Ice Email #1 Test #1 January 01, 2025 Variation A",
+       "id": "Rifq9p"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    },
+    {
+     "id": "125161130",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Is This the One? 💍",
+       "preview_text": "Saved exactly as you left it, with an extra 5% and two gifts.",
+       "template_id": "WFx4EQ",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Abandonment Black Ice Email #1 Test #1 January 01, 2025 Variation B",
+       "id": "UT7bam"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    }
+   ],
+   "allocations": {
+    "125161129": 0.5,
+    "125161130": 0.5
+   },
+   "started": null,
+   "winner_metric": "unique-clicks",
+   "automatic_winner_selection_settings": {
+    "enabled": true,
+    "automatic_end_date": null,
+    "automatic_end_statistical_certainty": true
+   }
+  },
+  "concluded_experiment_id": null,
+  "winning_variation_id": null
+ },
+ "links": {
+  "next": "71212897"
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "id": "74306065",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "draft",
+  "main_action": {
+   "id": "74306066",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": "daniel@dianarafael.com",
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "Did you see something you like?",
+     "preview_text": "15 minutes on video with Daniel, plus two gifts with your order.",
+     "template_id": "TSukUp",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": false,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Copy of Browse Abandonment Email+ SMS- Email #1",
+     "id": "WG6TBv"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": {
+   "id": "01M7FVMEW5BNBPKM0ZMCYW60N8",
+   "name": null,
+   "variations": [
+    {
+     "id": "125161356",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Did you see something you like?",
+       "preview_text": "15 minutes on video with Daniel, plus two gifts with your order.",
+       "template_id": "Rt3qMh",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Copy of Browse Abandonment Email+ SMS- Email #1 Test #1 January 01, 2025 Variation A",
+       "id": "Xtk7Vm"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    },
+    {
+     "id": "125161357",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Did you see something you like?",
+       "preview_text": "15 minutes on video with Daniel, plus two gifts with your order.",
+       "template_id": "V3TbNf",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Copy of Browse Abandonment Email+ SMS- Email #1 Test #1 January 01, 2025 Variation B",
+       "id": "TftihL"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    }
+   ],
+   "allocations": {
+    "125161356": 0.5,
+    "125161357": 0.5
+   },
+   "started": null,
+   "winner_metric": "unique-clicks",
+   "automatic_winner_selection_settings": {
+    "enabled": true,
+    "automatic_end_date": null,
+    "automatic_end_statistical_certainty": true
+   }
+  },
+  "concluded_experiment_id": null,
+  "winning_variation_id": null
+ },
+ "links": {
+  "next": "76623677"
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "71212911",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Unlock 10% Off – Shop Now & Pay Over Time!",
+   "preview_text": "Your code CART10 is inside: an extra 10% off, plus your gifts.",
+   "template_id": "XD58F3",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandonment Black Ice Email #5",
+   "id": "T2zMPf"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": null
+ }
+}

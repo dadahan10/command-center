@@ -1,0 +1,27 @@
+{
+ "id": "123488082",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Made by hand, for you",
+   "preview_text": "Your piece, made by hand after you order. Your extra 5% is still on it.",
+   "template_id": "RbjPap",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": true,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Cart 4/8 Made to order",
+   "id": "UwT54j"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "123488083"
+ }
+}

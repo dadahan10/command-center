@@ -1,0 +1,266 @@
+{
+ "XW6UqR": {
+  "name": "Checkout started (Abandoned Cart - Black Ice)",
+  "status": "live",
+  "steps": [
+   {
+    "aid": "74304490",
+    "type": "ab-test",
+    "status": "live",
+    "tid": "Xz2hFL",
+    "subject": "Is This the One? 💍",
+    "preview": "Saved exactly as you left it, with an extra 5% and two gifts.",
+    "exp": "draft"
+   },
+   {
+    "aid": "71212899",
+    "type": "sms",
+    "status": "live"
+   },
+   {
+    "aid": "71212902",
+    "type": "ab-test",
+    "status": "live",
+    "tid": "XpKLYY",
+    "subject": "Extra 5% Off Inside—Just for You!",
+    "preview": "Your code CART5 is inside, plus two gifts with your order.",
+    "exp": "draft"
+   },
+   {
+    "aid": "71212907",
+    "type": "send-email",
+    "status": "live",
+    "tid": "YpU7c4",
+    "subject": "Your piece is still waiting, with your extra 5%",
+    "preview": "Your code CART5 is still here, and so are your gifts.",
+    "exp": null
+   },
+   {
+    "aid": "76533513",
+    "type": "ab-test",
+    "status": "live",
+    "tid": "UDMPui",
+    "subject": "Enjoy Flexible Layaway Options with Affirm",
+    "preview": "Choose Affirm at checkout, keep your extra 5%, and your gifts.",
+    "exp": "draft"
+   },
+   {
+    "aid": "71212911",
+    "type": "send-email",
+    "status": "live",
+    "tid": "WTYeUC",
+    "subject": "Unlock 10% Off – Shop Now & Pay Over Time!",
+    "preview": "Your code CART10 is inside: an extra 10% off, plus your gifts.",
+    "exp": null
+   }
+  ]
+ },
+ "VB4v4q": {
+  "name": "Abandoned Checkout - NOT Black Ice",
+  "status": "live",
+  "steps": [
+   {
+    "aid": "51551198",
+    "type": "send-email",
+    "status": "live",
+    "tid": "Vjr8hN",
+    "subject": "Is This the One? 💍",
+    "preview": "Saved exactly as you left it, with an extra 5% and two gifts.",
+    "exp": null
+   },
+   {
+    "aid": "27201099",
+    "type": "send-email",
+    "status": "live",
+    "tid": "Th7tK9",
+    "subject": "Your cart is saved, with an extra 5%",
+    "preview": "Your code CART5 is inside, plus two gifts with your order.",
+    "exp": null
+   },
+   {
+    "aid": "55966974",
+    "type": "sms",
+    "status": "live"
+   },
+   {
+    "aid": "51611060",
+    "type": "send-email",
+    "status": "live",
+    "tid": "UmT4hB",
+    "subject": "Why Diana Rafael?",
+    "preview": "550+ reviews, made by hand since 2014, plus an extra 5% and two gifts.",
+    "exp": null
+   },
+   {
+    "aid": "51611253",
+    "type": "send-email",
+    "status": "live",
+    "tid": "UcCxAP",
+    "subject": "Your piece is still waiting, with your extra 5%",
+    "preview": "Your code CART5 is still here, and so are your gifts.",
+    "exp": null
+   },
+   {
+    "aid": "40359483",
+    "type": "send-email",
+    "status": "live",
+    "tid": "Vhq89h",
+    "subject": "Have Any Questions? Let's Meet!",
+    "preview": "15 minutes on video with Daniel, plus an extra 5% and two gifts.",
+    "exp": null
+   },
+   {
+    "aid": "64595493",
+    "type": "send-email",
+    "status": "live",
+    "tid": "WZcKin",
+    "subject": "Enjoy Flexible Layaway Options with Affirm",
+    "preview": "Choose Affirm at checkout, keep your extra 5%, and your gifts.",
+    "exp": null
+   },
+   {
+    "aid": "64595668",
+    "type": "send-email",
+    "status": "live",
+    "tid": "XsXhed",
+    "subject": "Exclusive Offer: Shop Now with Affirm & Save 10%!",
+    "preview": "Your code CART10 is inside: an extra 10% off, plus your gifts.",
+    "exp": null
+   }
+  ]
+ },
+ "VWbEYm": {
+  "name": "2026-11 | Abandoned Cart (8)",
+  "status": "live",
+  "steps": [
+   {
+    "aid": "123488071",
+    "type": "send-email",
+    "status": "live",
+    "tid": "T5PWTQ",
+    "subject": "Still thinking about it?",
+    "preview": "Saved exactly as you left it, plus two gifts with your order.",
+    "exp": null
+   },
+   {
+    "aid": "123488075",
+    "type": "send-email",
+    "status": "live",
+    "tid": "SUzsd4",
+    "subject": "Is it really a natural diamond?",
+    "preview": "What's in your piece, the certificate that proves it, and two gifts.",
+    "exp": null
+   },
+   {
+    "aid": "123488078",
+    "type": "send-email",
+    "status": "live",
+    "tid": "S8hSTD",
+    "subject": "550+ reviews from people who hesitated too",
+    "preview": "Read what they wrote once the box was open, plus an extra 5% (CART5).",
+    "exp": null
+   },
+   {
+    "aid": "123488082",
+    "type": "send-email",
+    "status": "live",
+    "tid": "YAm7Xy",
+    "subject": "Made by hand, for you",
+    "preview": "Your piece, made by hand after you order. Your extra 5% is still on it.",
+    "exp": null
+   },
+   {
+    "aid": "123488084",
+    "type": "send-email",
+    "status": "live",
+    "tid": "VtfSSr",
+    "subject": "What if it doesn't fit?",
+    "preview": "Size, returns and care, answered in one minute. CART5 still applies.",
+    "exp": null
+   },
+   {
+    "aid": "123488087",
+    "type": "send-email",
+    "status": "live",
+    "tid": "RaKNTs",
+    "subject": "Wear it now, pay over time",
+    "preview": "Choose Affirm at checkout, keep your extra 5%, and your gifts.",
+    "exp": null
+   },
+   {
+    "aid": "123488094",
+    "type": "send-email",
+    "status": "live",
+    "tid": "XybMBX",
+    "subject": "15 minutes with me?",
+    "preview": "Ask anything on video, plus an extra 10% (CART10) and two gifts.",
+    "exp": null
+   },
+   {
+    "aid": "123488097",
+    "type": "send-email",
+    "status": "live",
+    "tid": "THsfyP",
+    "subject": "A note from me",
+    "preview": "My best offer, an extra 10% (CART10), and two gifts I wanted you to know about.",
+    "exp": null
+   }
+  ]
+ },
+ "Y6Zunh": {
+  "name": "Viewed product (Browse Abandonment)",
+  "status": "live",
+  "steps": [
+   {
+    "aid": "73974045",
+    "type": "ab-test",
+    "status": "live",
+    "tid": "UHAzKT",
+    "subject": "Did you see something you like?",
+    "preview": "Made to order for you, plus two gifts with your order.",
+    "exp": "draft"
+   },
+   {
+    "aid": "74306065",
+    "type": "ab-test",
+    "status": "live",
+    "tid": "QSR3GK",
+    "subject": "Did you see something you like?",
+    "preview": "15 minutes on video with Daniel, plus two gifts with your order.",
+    "exp": "draft"
+   },
+   {
+    "aid": "73974378",
+    "type": "ab-test",
+    "status": "live",
+    "tid": "RNn7yr",
+    "subject": "Why You Should Count on Us? 💍",
+    "preview": "Natural diamonds, solid gold, made by hand since 2014.",
+    "exp": "draft"
+   },
+   {
+    "aid": "64122317",
+    "type": "sms",
+    "status": "live"
+   },
+   {
+    "aid": "76623944",
+    "type": "ab-test",
+    "status": "live",
+    "tid": "SNwrKv",
+    "subject": "Enjoy Flexible Layaway Options with Affirm at Diana Rafael!",
+    "preview": "Choose Affirm at checkout, plus two gifts with your order.",
+    "exp": "draft"
+   },
+   {
+    "aid": "27953570",
+    "type": "send-email",
+    "status": "live",
+    "tid": "Y2xzAa",
+    "subject": "An extra 10% for you",
+    "preview": "Your code CART10 is inside, plus two gifts.",
+    "exp": null
+   }
+  ]
+ }
+}

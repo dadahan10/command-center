@@ -1,0 +1,111 @@
+{
+ "id": "73974378",
+ "type": "ab-test",
+ "data": {
+  "status": "live",
+  "experiment_status": "draft",
+  "main_action": {
+   "id": "27953569",
+   "type": "send-email",
+   "data": {
+    "message": {
+     "from_email": "daniel@dianarafael.com",
+     "from_label": "Diana Rafael",
+     "reply_to_email": "daniel@dianarafael.com",
+     "cc_email": null,
+     "bcc_email": null,
+     "subject_line": "Why You Should Count on Us? 💍",
+     "preview_text": "Natural diamonds, solid gold, made by hand since 2014.",
+     "template_id": "RhLU6v",
+     "smart_sending_enabled": false,
+     "transactional": false,
+     "add_tracking_params": false,
+     "custom_tracking_params": null,
+     "additional_filters": null,
+     "name": "Browse Abandonment Email+ SMS- Email #2",
+     "id": "VFyyfb"
+    },
+    "status": "live"
+   },
+   "links": {
+    "next": null
+   }
+  },
+  "current_experiment": {
+   "id": "01M7FVMKKD7Y1HRX55CPACRM67",
+   "name": null,
+   "variations": [
+    {
+     "id": "125161360",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Why You Should Count on Us? 💍",
+       "preview_text": "Natural diamonds, solid gold, made by hand since 2014.",
+       "template_id": "Ytus8r",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Browse Abandonment Email+ SMS- Email #2 Test #1 December 19, 2024 Variation A",
+       "id": "WF4yBW"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    },
+    {
+     "id": "125161361",
+     "type": "send-email",
+     "data": {
+      "message": {
+       "from_email": "daniel@dianarafael.com",
+       "from_label": "Diana Rafael",
+       "reply_to_email": "daniel@dianarafael.com",
+       "cc_email": null,
+       "bcc_email": null,
+       "subject_line": "Why You Should Count on Us? 💍",
+       "preview_text": "Natural diamonds, solid gold, made by hand since 2014.",
+       "template_id": "W43vZj",
+       "smart_sending_enabled": false,
+       "transactional": false,
+       "add_tracking_params": false,
+       "custom_tracking_params": null,
+       "additional_filters": null,
+       "name": "Browse Abandonment Email+ SMS- Email #2 Test #1 December 19, 2024 Variation B",
+       "id": "UfBCuQ"
+      },
+      "status": "live"
+     },
+     "links": {
+      "next": null
+     }
+    }
+   ],
+   "allocations": {
+    "125161360": 0.5,
+    "125161361": 0.5
+   },
+   "started": null,
+   "winner_metric": "unique-clicks",
+   "automatic_winner_selection_settings": {
+    "enabled": true,
+    "automatic_end_date": null,
+    "automatic_end_statistical_certainty": true
+   }
+  },
+  "concluded_experiment_id": null,
+  "winning_variation_id": null
+ },
+ "links": {
+  "next": "59309265"
+ }
+}

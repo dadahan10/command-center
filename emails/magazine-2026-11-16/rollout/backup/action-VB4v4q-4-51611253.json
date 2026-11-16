@@ -1,0 +1,27 @@
+{
+ "id": "51611253",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Daniel of Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Your piece is still waiting, with your extra 5%",
+   "preview_text": "Your code CART5 is still here, and so are your gifts.",
+   "template_id": "Tn7yMF",
+   "smart_sending_enabled": false,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandoned Checkout Reminder Email #4",
+   "id": "TExD4m"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "40359483"
+ }
+}

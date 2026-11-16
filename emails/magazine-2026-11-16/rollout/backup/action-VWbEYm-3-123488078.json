@@ -1,0 +1,27 @@
+{
+ "id": "123488078",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "550+ reviews from people who hesitated too",
+   "preview_text": "Read what they wrote once the box was open, plus an extra 5% (CART5).",
+   "template_id": "S4eCPc",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": true,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Cart 3/8 Reviews",
+   "id": "Sc5pgB"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "123488081"
+ }
+}

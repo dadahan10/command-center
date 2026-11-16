@@ -71,3 +71,20 @@ No family repeats back to back in any flow. A customer who gets two flows still 
 ## Before rollout
 - The Champie lettering PNGs and the flattened logos in `assets/` must be uploaded to the Klaviyo image library. Then set `ASSET_BASE` and rebuild.
 - Each live template is swapped with `live-fix-2026-11-15/swap.py` only after Daniel approves.
+
+## LIVE since 16.11.2026 (rollout/, Daniel approved 16.11 + "more buttons")
+All 25 email actions of the 4 flows were swapped onto new CODE templates (subjects/preview text unchanged, SMS untouched).
+Build: `rollout/mag.py` (families A-H) + `rollout/flows.py` (copy per email) -> `rollout/out/`; lettering + logos hosted in the
+Klaviyo image library (`rollout/assets-klaviyo.json`, `upload_assets.py`); check: `render_check.py` (Klaviyo template-render with
+real events, named + no-name) -> `rollout/preview/<flow>-contact.png`; swap: `swap_all.py` (backups in `rollout/backup/`, log in `swap-log.json`).
+Every email has 4 buttons: a primary near the top, one on her piece / the gifts block, and a closing button.
+
+| Flow | Sequence |
+|---|---|
+| XW6UqR checkout Black Ice | A B C D E |
+| VB4v4q checkout not Black Ice | A B H C G D E |
+| VWbEYm cart (order of 16.11: 2 natural diamond, 7 call) | A C H F G D B E |
+| Y6Zunh browse | A G F D B |
+
+H uses real reviews quoted verbatim from dianarafael.com/pages/our-customers-reviews (Nathan, Daina, Irma in VB4v4q; Emory, Craig, Molly in the cart flow).
+Rollback: `rollout/backup/action-<flow>-<n>-<aid>.json` holds each action's previous definition (old template id inside).

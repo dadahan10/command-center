@@ -1,0 +1,27 @@
+{
+ "id": "51551198",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Is This the One? 💍",
+   "preview_text": "Saved exactly as you left it, with an extra 5% and two gifts.",
+   "template_id": "SxdKhp",
+   "smart_sending_enabled": false,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandoned Checkout Reminder Email #1",
+   "id": "StMn7j"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "27854603"
+ }
+}

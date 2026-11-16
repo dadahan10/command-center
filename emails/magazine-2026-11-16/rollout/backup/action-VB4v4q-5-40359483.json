@@ -1,0 +1,27 @@
+{
+ "id": "40359483",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "customercare@dianarafael.com",
+   "from_label": "Daniel - Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Have Any Questions? Let's Meet!",
+   "preview_text": "15 minutes on video with Daniel, plus an extra 5% and two gifts.",
+   "template_id": "Y3JUm7",
+   "smart_sending_enabled": false,
+   "transactional": false,
+   "add_tracking_params": false,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Abandoned Checkout Reminder Email #5",
+   "id": "SP9bMD"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "40358964"
+ }
+}
