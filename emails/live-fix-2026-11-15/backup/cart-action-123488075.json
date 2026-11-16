@@ -1,0 +1,27 @@
+{
+ "id": "123488075",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "15 minutes with me?",
+   "preview_text": "Ask anything, see the stones on video, change what you like.",
+   "template_id": "UBwjpH",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": true,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Cart 2/8 Natural diamond",
+   "id": "SP6rTe"
+  },
+  "status": "draft"
+ },
+ "links": {
+  "next": "123488076"
+ }
+}

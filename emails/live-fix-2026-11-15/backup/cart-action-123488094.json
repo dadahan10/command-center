@@ -1,0 +1,27 @@
+{
+ "id": "123488094",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "Is it really a natural diamond?",
+   "preview_text": "What's in your piece, and the certificate that proves it.",
+   "template_id": "UmCymx",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": true,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Cart 7/8 Daniel call",
+   "id": "YzvmZ8"
+  },
+  "status": "draft"
+ },
+ "links": {
+  "next": "123488096"
+ }
+}
