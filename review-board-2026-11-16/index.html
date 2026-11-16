@@ -1,0 +1,73 @@
+<title>לוח סקירה 16.11</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Heebo:wght@400;500;700&display=swap">
+<style>
+/* Layout: one column of review sections, each a horizontal strip of screenshots that wraps on phones */
+:root{
+  --bg:#F3EFE8; --fg:#14181C; --muted:#5E5A52; --line:#D9D1C3; --accent:#A9864E; --card:#FFFFFF;
+  --display:"Cormorant Garamond",Georgia,serif; --body:"Heebo",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0F1418;--fg:#ECE6DA;--muted:#A39C8E;--line:#2A3138;--accent:#C9A66B;--card:#161C21;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1418;--fg:#ECE6DA;--muted:#A39C8E;--line:#2A3138;--accent:#C9A66B;--card:#161C21;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);direction:rtl;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:1200px;margin:0 auto;display:grid;gap:48px}
+h1{font-family:var(--display);font-weight:600;font-size:2.4rem;margin:0;text-wrap:balance}
+header p{color:var(--muted);margin:.4rem 0 0}
+section{display:grid;gap:14px;border-top:1px solid var(--line);padding-top:20px}
+h2{font-family:var(--display);font-weight:600;font-size:1.7rem;margin:0}
+.note{color:var(--muted);margin:0;max-width:65ch;line-height:1.6}
+.strip{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start}
+figure{margin:0;display:grid;gap:6px;min-width:0;flex:1 1 260px;max-width:420px}
+figure.wide{flex:2 1 520px;max-width:760px}
+figure img{width:100%;height:auto;display:block;border:1px solid var(--line);background:var(--card)}
+figcaption{font-size:.85rem;color:var(--muted)}
+figcaption b{color:var(--fg);font-weight:500}
+a{color:var(--accent)}
+</style>
+<main>
+<header>
+  <h1>לוח סקירה · 16.11</h1>
+  <p>שני המיילים של השבוע, כרטיס המתנה B, וחמשת המיילים המגזיניים. כל התמונות כאן, בלי קבצים מקומיים.</p>
+</header>
+
+<section>
+  <h2>מייל 17.11 · מתנה</h2>
+  <p class="note">טיוטה ב-Klaviyo, קהל מעורב. שליחה מתוכננת שלישי 19:00.</p>
+  <div class="strip">
+    <figure class="wide"><img src="e1-gift-desktop.png" alt="מייל מתנה, מחשב" loading="lazy"><figcaption><b>מחשב</b></figcaption></figure>
+    <figure><img src="e1-gift-mobile.png" alt="מייל מתנה, נייד" loading="lazy"><figcaption><b>נייד</b></figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>מייל 19.11 · מזלות</h2>
+  <p class="note">טיוטה ב-Klaviyo, קהל מעורב. שליחה מתוכננת חמישי.</p>
+  <div class="strip">
+    <figure class="wide"><img src="e2-zodiac-desktop.png" alt="מייל מזלות, מחשב" loading="lazy"><figcaption><b>מחשב</b></figcaption></figure>
+    <figure><img src="e2-zodiac-mobile.png" alt="מייל מזלות, נייד" loading="lazy"><figcaption><b>נייד</b></figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>כרטיס המתנה B · עמוד מוצר</h2>
+  <p class="note">קופסה שחורה פתוחה על לבד בורדו. מופיע בעמודי המוצר בין 1.12 ל-25.12. משמאל מוצר שמוכן למשלוח, מימין מוצר בהזמנה.</p>
+  <div class="strip">
+    <figure class="wide"><img src="b-desktop-rts.png" alt="כרטיס B, מחשב, מוכן למשלוח" loading="lazy"><figcaption><b>מחשב</b> · מוכן למשלוח</figcaption></figure>
+    <figure class="wide"><img src="b-desktop-mto.png" alt="כרטיס B, מחשב, בהזמנה" loading="lazy"><figcaption><b>מחשב</b> · בהזמנה</figcaption></figure>
+    <figure><img src="b-mobile-rts.png" alt="כרטיס B, נייד, מוכן למשלוח" loading="lazy"><figcaption><b>נייד</b> · מוכן למשלוח</figcaption></figure>
+    <figure><img src="b-mobile-mto.png" alt="כרטיס B, נייד, בהזמנה" loading="lazy"><figcaption><b>נייד</b> · בהזמנה</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>The Black &amp; White Issue · 5 מיילי צ'קאאוט</h2>
+  <p class="note">טיוטה בלבד, המיילים החיים לא השתנו. לפי הסדר שהלקוחה מקבלת: שער, עמוד חצוי, ציטוט ו-still life, תוכן עניינים, מכתב ממך.</p>
+  <div class="strip">
+    <figure><img src="m1.png" alt="מייל 1 שער" loading="lazy"><figcaption><b>1 · Is this the one?</b> שער</figcaption></figure>
+    <figure><img src="m2.png" alt="מייל 2 עמוד חצוי" loading="lazy"><figcaption><b>2 · Extra 5%</b> עמוד חצוי</figcaption></figure>
+    <figure><img src="m3.png" alt="מייל 3 ציטוט" loading="lazy"><figcaption><b>3 · Still waiting</b> ציטוט ו-still life</figcaption></figure>
+    <figure><img src="m4.png" alt="מייל 4 תוכן עניינים" loading="lazy"><figcaption><b>4 · Affirm</b> תוכן עניינים</figcaption></figure>
+    <figure><img src="m5.png" alt="מייל 5 מכתב" loading="lazy"><figcaption><b>5 · Extra 10%</b> מכתב ממך</figcaption></figure>
+  </div>
+</section>
+</main>
