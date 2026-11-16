@@ -43,7 +43,7 @@ for n, (aid, tid) in enumerate(ACTIONS, 1):
         txt = text(out)
         links = sorted(set(re.findall(r'href="([^"]+)"', out)))
         srcs = sorted(set(re.findall(r'src="([^"]+)"', out)))
-        bad = [l for l in links + srcs if "{" in l or "%" in l and "discount" not in l and "wa.me" not in l or "myshopify" in l or not l.startswith("http")]
+        bad = [l for l in links + srcs if l != "[unsubscribe_tag]" and ("{" in l or "%" in l and "discount" not in l and "wa.me" not in l or "myshopify" in l or not l.startswith("http"))]
         for k in ("{{", "{%", "AFFIRM10", "myshopify", "business days", "None"):
             if k in txt: bad.append("text contains " + k)
         if label == "A" and "Katherine" not in txt: bad.append("no first name")

@@ -1,0 +1,27 @@
+{
+ "id": "123488084",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "What if it doesn't fit?",
+   "preview_text": "Size, returns and care, answered in one minute.",
+   "template_id": "WRGJQ3",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": true,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Cart 5/8 Fit and care",
+   "id": "TgQXP5"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": "123488085"
+ }
+}

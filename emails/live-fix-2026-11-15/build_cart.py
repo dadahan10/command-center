@@ -46,10 +46,10 @@ def split_piece(t):
     return ("{% if event.ImageURL %}"
             f'<tr><td class="pad" style="padding:6px 40px 6px;"><table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" '
             f'style="border:1px solid {th["rule"]};"><tr>'
-            f'<td class="col colpad" width="50%" valign="middle" bgcolor="#f6f1e7" style="width:50%;background:#f6f1e7;padding:18px;">'
+            f'<td class="col colpad" width="50%" valign="middle" bgcolor="#f6f1e7" style="width:50%;background:#f6f1e7;padding:18px;box-sizing:border-box;">'
             f'<a href="{CART_URL}" target="_blank"><img src="{{{{ event.ImageURL }}}}" width="230" alt="{PNAME}" '
             f'style="display:block;width:100%;max-width:230px;height:auto;border:0;margin:0 auto;"/></a></td>'
-            f'<td class="col" width="50%" valign="middle" style="width:50%;padding:20px 22px;font-family:{SANS};">'
+            f'<td class="col" width="50%" valign="middle" style="width:50%;padding:20px 22px;box-sizing:border-box;font-family:{SANS};">'
             f'<div style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:{th["accent"]};">Your piece</div>'
             f'<div style="margin-top:8px;font-family:{SERIF};font-size:22px;line-height:1.2;color:{th["text"]};">{PNAME}</div>'
             "{% if event.Price %}"

@@ -1,0 +1,27 @@
+{
+ "id": "123488097",
+ "type": "send-email",
+ "data": {
+  "message": {
+   "from_email": "daniel@dianarafael.com",
+   "from_label": "Diana Rafael",
+   "reply_to_email": "daniel@dianarafael.com",
+   "cc_email": null,
+   "bcc_email": null,
+   "subject_line": "A note from me",
+   "preview_text": "And a gift I wanted you to know about.",
+   "template_id": "XjtgKS",
+   "smart_sending_enabled": true,
+   "transactional": false,
+   "add_tracking_params": true,
+   "custom_tracking_params": null,
+   "additional_filters": null,
+   "name": "Cart 8/8 Note and gift",
+   "id": "TJBvJU"
+  },
+  "status": "live"
+ },
+ "links": {
+  "next": null
+ }
+}

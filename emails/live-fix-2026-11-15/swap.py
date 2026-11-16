@@ -10,7 +10,7 @@ dfn = a["data"]["attributes"]["definition"]
 json.dump(dfn, open(f"backup/action-{aid}.json", "w", encoding="utf-8"), indent=1)
 html = open(f"out/{old}.html", encoding="utf-8").read()
 msgname = dfn["data"]["message"]["name"] if dfn["type"] == "send-email" else dfn["data"]["main_action"]["data"]["message"]["name"]
-s, t = kl.call("POST", "templates", {"data": {"type": "template", "attributes": {"name": f"LIVE 15.11 | {msgname}", "editor_type": "CODE", "html": html}}})
+s, t = kl.call("POST", "templates", {"data": {"type": "template", "attributes": {"name": f"LIVE {__import__('datetime').date.today():%d.%m} | {msgname}", "editor_type": "CODE", "html": html}}})
 assert s in (200, 201), t
 new = t["data"]["id"]
 msg = dfn["data"]["message"] if dfn["type"] == "send-email" else dfn["data"]["main_action"]["data"]["message"]
