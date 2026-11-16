@@ -12,7 +12,7 @@ async def main():
     async with async_playwright() as p:
         b = await p.chromium.launch()
         for dev, vp, mob in [("mobile", {"width": 390, "height": 844}, True),
-                             ("desktop", {"width": 1440, "height": 900}, False)]:
+                             ("desktop", {"width": 1280, "height": 800}, False)]:
             for k, h in P.items():
                 ctx = await b.new_context(viewport=vp, is_mobile=mob, has_touch=mob, device_scale_factor=2)
                 pg = await ctx.new_page()

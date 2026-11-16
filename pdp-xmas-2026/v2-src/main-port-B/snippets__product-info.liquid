@@ -164,6 +164,18 @@ Supported variables
                   {{- product.metafields.custom.short_title -}}
                 </h1>
               {%- endif -%}
+{%- comment -%}DR-HOLIDAY-EYEBROW BEGIN{%- endcomment -%}
+              {%- assign dr_today = 'now' | date: '%Y%m%d' | plus: 0 -%}
+              {%- if dr_today >= 20261112 and dr_today <= 20270131 -%}
+                <style>
+                  .dr-holiday-eyebrow{display:flex;align-items:center;gap:.5em;margin:0 0 .55rem;font-size:10.5px;line-height:1;letter-spacing:.32em;text-transform:uppercase;color:#a8874f;font-weight:500}
+                  .dr-holiday-eyebrow svg{width:11px;height:11px;flex:none;fill:currentColor}
+                  .dr-holiday-eyebrow::after{content:"";width:28px;height:1px;background:currentColor;opacity:.45}
+                  @media (max-width:999px){.dr-holiday-eyebrow{justify-content:center}.dr-holiday-eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.45;order:-1}}
+                </style>
+                <p class="dr-holiday-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg>Sale is now live</p>
+              {%- endif -%}
+              {%- comment -%}DR-HOLIDAY-EYEBROW END{%- endcomment -%}
               <h1 class="product-title {{ block.settings.heading_tag }}">
                 {{- product_title -}}
               </h1>
@@ -655,7 +667,7 @@ Supported variables
 
           {%- when 'free_gift' -%}
             {%- if dr_gift_on -%}
-            {%- assign dr_gift_style = section.settings.xmas_gift_style | default: 'eve' -%}
+            {%- assign dr_gift_style = section.settings.xmas_gift_style | default: 'box' -%}
             {%- capture dr_star -%}<svg class="dr-xg__star" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0c.6 6.2 2.3 9.9 4.9 11.1 2 .9 4.4 1 7.1.9-2.7.1-5.1.4-7.1 1.3C14.3 14.6 12.6 18.1 12 24c-.6-5.9-2.3-9.4-4.9-10.7C5.1 12.4 2.7 12.1 0 12c2.7.1 5.1 0 7.1-.9C9.7 9.9 11.4 6.2 12 0z" fill="currentColor"/></svg>{%- endcapture -%}
             {%- if dr_gift_style == 'box' -%}
             <div class="dr-xg dr-xg--box">
@@ -712,6 +724,16 @@ Supported variables
                 .dr-xg--box .dr-xg__media img{object-position:50% 52%}
                 .dr-xg--box .dr-xg__panel{padding:22px 20px 22px;align-items:center;text-align:center}
                 .dr-xg--box .dr-xg__ribbon{left:0;right:0;top:0;bottom:auto;width:auto;height:5px;background:linear-gradient(180deg,#0b0b0b 0 1px,#CFB288 1px 2px,#0b0b0b 2px 3px,#CFB288 3px 4px,transparent 4px)}
+              }
+              /* DR-XG-DESKTOP-16-11: desktop only - narrower card, studs zoomed (Daniel 16.11) */
+              @media (min-width:700px){
+                .dr-xg--box{max-width:380px;margin-left:auto;margin-right:auto;grid-template-columns:50% 1fr;min-height:236px}
+                .dr-xg--box .dr-xg__media{overflow:hidden}
+                .dr-xg--box .dr-xg__media img{object-position:56% 51%;transform:scale(1.6);transform-origin:57% 52%}
+                .dr-xg--box .dr-xg__panel{padding:20px 16px 18px 20px}
+                .dr-xg--box .dr-xg__title{font-size:19px}
+                .dr-xg--box .dr-xg__sub{font-size:12px}
+                .dr-xg--box .dr-xg__eyebrow{letter-spacing:.2em;white-space:nowrap}
               }
             </style>
             {%- else -%}
